@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory management classes &mdash; Imebra 5.3.3.0 changeset 2c706290 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="next" title="ACSE classes" href="acse_classes.html" />
+    <link rel="prev" title="Transforms classes" href="transforms_classes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Imebra
+          </a>
+              <div class="version">
+                5.3.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p><span class="caption-text">Download Imebra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Downloading Imebra</a></li>
+</ul>
+<p><span class="caption-text">Legal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gplv2.html">GNU General Public License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Commercial license</a></li>
+</ul>
+<p><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes_log.html">Changes log</a></li>
+</ul>
+<p><span class="caption-text">User documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="compiling_imebra.html">Compiling Imebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add_to_project.html">Adding Imebra to your project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_tour.html">Tutorial</a></li>
+</ul>
+<p><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="objects_lifecycle.html">Objects lifecycle and Object ownership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_data_classes.html">DICOM dataSet &amp; tags classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_uid_generation_classes.html">UID generation classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stream_classes.html">Stream classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imaging_classes.html">Imaging classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transforms_classes.html">Transforms classes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Memory management classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#memory-access">Memory access</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#memory">Memory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mutablememory">MutableMemory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#memory-allocation">Memory allocation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#memorypool">MemoryPool</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="acse_classes.html">ACSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dimse_classes.html">DIMSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicomdir_classes.html">DICOMDIR classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_dictionary_classes.html">DICOM dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definition_classes.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exception_classes.html">Exceptions</a></li>
+</ul>
+<p><span class="caption-text">Build distributions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html">Creating the source distribution from the code in the VCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html#versioning">Versioning</a></li>
+</ul>
+<p><span class="caption-text">Requirements &amp; Risks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html#risks">Risks</a></li>
+</ul>
+<p><span class="caption-text">Standard operating procedures</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sop.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sop.html#sops">SOPs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Memory management classes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/memory_management_classes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="memory-management-classes">
+<h1>Memory management classes<a class="headerlink" href="#memory-management-classes" title="Permalink to this headline">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This chapter describes the classes and methods responsible for allocating and accessing the memory used by the Imebra classes.</p>
+<p>The following classes are described in this chapter:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 37%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>C++ class</p></th>
+<th class="head"><p>Objective-C/Swift class</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra6MemoryE" title="imebra::Memory"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::Memory</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv412ImebraMemory" title="ImebraMemory"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraMemory</span></code></a></p></td>
+<td><p>Allows to read the memory
+content</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#_CPPv4N6imebra13MutableMemoryE" title="imebra::MutableMemory"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::MutableMemory</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv419ImebraMutableMemory" title="ImebraMutableMemory"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraMutableMemory</span></code></a></p></td>
+<td><p>Allows to read and write the
+memory content</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra10MemoryPoolE" title="imebra::MemoryPool"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::MemoryPool</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv416ImebraMemoryPool" title="ImebraMemoryPool"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraMemoryPool</span></code></a></p></td>
+<td><p>Allocatess or reuse a memory
+block</p></td>
+</tr>
+</tbody>
+</table>
+<p>The inner working classes of the Imebra library use the <a class="reference internal" href="#memorypool"><span class="std std-ref">MemoryPool</span></a> class to allocate blocks of memory.</p>
+<p>When a memory block allocated by <a class="reference internal" href="#memorypool"><span class="std std-ref">MemoryPool</span></a> is released then it is not deleted immediately but instead it is kept for
+a while so it can be reused by classes than need a similar amount of memory.</p>
+<figure class="align-default" id="id6" style="width: 100%">
+<a class="reference external image-reference" href="_images/memory.jpg"><img alt="Memory related classes" src="_images/memory.jpg" /></a>
+<figcaption>
+<p><span class="caption-text">Class diagram of the memory classes</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="memory-access">
+<h2>Memory access<a class="headerlink" href="#memory-access" title="Permalink to this headline">¶</a></h2>
+<section id="memory">
+<h3>Memory<a class="headerlink" href="#memory" title="Permalink to this headline">¶</a></h3>
+<section id="c">
+<h4>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra6MemoryE">
+<span id="_CPPv3N6imebra6MemoryE"></span><span id="_CPPv2N6imebra6MemoryE"></span><span id="imebra::Memory"></span><span class="target" id="classimebra_1_1_memory"></span><em class="property">class </em><code class="sig-name descname">Memory</code><a class="headerlink" href="#_CPPv4N6imebra6MemoryE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Manages a read-only buffer of memory. </p>
+<p>The buffer of memory is usually associated with a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_tag"><span class="std std-ref">Tag</span></a> buffer content.</p>
+<p>The memory used by <a class="reference internal" href="#classimebra_1_1_memory"><span class="std std-ref">Memory</span></a> and <a class="reference internal" href="#classimebra_1_1_mutable_memory"><span class="std std-ref">MutableMemory</span></a> is managed by <a class="reference internal" href="#classimebra_1_1_memory_pool"><span class="std std-ref">MemoryPool</span></a>. </p>
+<p>Subclassed by <a class="reference internal" href="#classimebra_1_1_mutable_memory"><span class="std std-ref">imebra::MutableMemory</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra6Memory6MemoryEv">
+<span id="_CPPv3N6imebra6Memory6MemoryEv"></span><span id="_CPPv2N6imebra6Memory6MemoryEv"></span><span id="imebra::Memory::Memory"></span><span class="target" id="classimebra_1_1_memory_1aa4a2193707d26ac94b55b405b286e11d"></span><code class="sig-name descname">Memory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra6Memory6MemoryEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct an empty buffer of memory. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra6Memory6MemoryEPKc6size_t">
+<span id="_CPPv3N6imebra6Memory6MemoryEPKc6size_t"></span><span id="_CPPv2N6imebra6Memory6MemoryEPKc6size_t"></span><span id="imebra::Memory::Memory__cCP.s"></span><span class="target" id="classimebra_1_1_memory_1a1d3ba2fe7c79584074e8fa0dac847740"></span><code class="sig-name descname">Memory</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>source</em>, size_t <em>sourceSize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra6Memory6MemoryEPKc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a buffer of memory and copy the specified content into it. </p>
+<p><strong>Java</strong></p>
+<p>In Java this method accepts a single parameter (a byte array).</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: a pointer to the source data </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceSize</span></code>: the amount of data to copy into the allocated memory </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra6Memory6MemoryERK6Memory">
+<span id="_CPPv3N6imebra6Memory6MemoryERK6Memory"></span><span id="_CPPv2N6imebra6Memory6MemoryERK6Memory"></span><span id="imebra::Memory::Memory__MemoryCR"></span><span class="target" id="classimebra_1_1_memory_1a9a8634a643d8ba0e3ce722c71d7f51c3"></span><code class="sig-name descname">Memory</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra6Memory6MemoryEv" title="imebra::Memory::Memory">Memory</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra6Memory6MemoryERK6Memory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source <a class="reference internal" href="#classimebra_1_1_memory"><span class="std std-ref">Memory</span></a> object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra6Memory4sizeEv">
+<span id="_CPPv3NK6imebra6Memory4sizeEv"></span><span id="_CPPv2NK6imebra6Memory4sizeEv"></span><span id="imebra::Memory::sizeC"></span><span class="target" id="classimebra_1_1_memory_1a83c0f30dab6b527da580c655bd780ada"></span>size_t <code class="sig-name descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra6Memory4sizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the memory size, in bytes. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the memory size in bytes </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra6Memory4dataEPc6size_t">
+<span id="_CPPv3NK6imebra6Memory4dataEPc6size_t"></span><span id="_CPPv2NK6imebra6Memory4dataEPc6size_t"></span><span id="imebra::Memory::data__cP.sC"></span><span class="target" id="classimebra_1_1_memory_1af603e7598db4d8a77ad291eb4628f77a"></span>size_t <code class="sig-name descname">data</code><span class="sig-paren">(</span>char *<em>destination</em>, size_t <em>destinationSize</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra6Memory4dataEPc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copies the raw memory content into the specified buffer. </p>
+<p>If the allocated buffer is not large enough then the method doesn’t copy any data and just returns the required buffer’ size.</p>
+<p><strong>Java</strong></p>
+<p>In Java this method accepts a single parameter (a byte array). The size of the byte array must be equal or greater than the number of bytes stored by the data handler.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the number of bytes copied into the pre-allocated buffer, or the desired size of destination if destinationSize is smaller than the return value </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code>: a pointer to the allocated buffer </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationSize</span></code>: the size of the allocated buffer, in bytes </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra6Memory10regionDataEPc6size_t6size_t">
+<span id="_CPPv3NK6imebra6Memory10regionDataEPc6size_t6size_t"></span><span id="_CPPv2NK6imebra6Memory10regionDataEPc6size_t6size_t"></span><span id="imebra::Memory::regionData__cP.s.sC"></span><span class="target" id="classimebra_1_1_memory_1ab9db52ebce284ddd7908e60324f3e9f4"></span>void <code class="sig-name descname">regionData</code><span class="sig-paren">(</span>char *<em>destination</em>, size_t <em>destinationSize</em>, size_t <em>sourceOffset</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra6Memory10regionDataEPc6size_t6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copies the raw memory region into the specified buffer. </p>
+<p>If the memory’s size is too small to extract the requested region then throws <a class="reference internal" href="exception_classes.html#classimebra_1_1_memory_size_error"><span class="std std-ref">MemorySizeError</span></a>.</p>
+<p><strong>Java</strong></p>
+<p>In Java this method accepts two parameters:<ul class="simple">
+<li><p>a byte array</p></li>
+<li><p>a long integer (sourceOffset)</p></li>
+</ul>
+</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code>: a pointer to the allocated buffer </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationSize</span></code>: the size of the allocated buffer, in bytes </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceOffset</span></code>: the offset </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra6Memory4dataEP6size_t">
+<span id="_CPPv3NK6imebra6Memory4dataEP6size_t"></span><span id="_CPPv2NK6imebra6Memory4dataEP6size_t"></span><span id="imebra::Memory::data__sPC"></span><span class="target" id="classimebra_1_1_memory_1ab53d6788ad78bcc8855ddada10187e5b"></span><em class="property">const</em> char *<code class="sig-name descname">data</code><span class="sig-paren">(</span>size_t *<em>pDataSize</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra6Memory4dataEP6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return a pointer to the constant referenced memory. </p>
+<p>The referenced buffer is owned by the ReadMemory object and must not be freed by the client.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a pointer to the referenced memory. The referenced buffer is owned by the <a class="reference internal" href="#classimebra_1_1_memory"><span class="std std-ref">Memory</span></a> object and must not be freed by the client. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pDataSize</span></code>: pointer to a variable that will be filled with the memory size, in bytes </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra6Memory5emptyEv">
+<span id="_CPPv3NK6imebra6Memory5emptyEv"></span><span id="_CPPv2NK6imebra6Memory5emptyEv"></span><span id="imebra::Memory::emptyC"></span><span class="target" id="classimebra_1_1_memory_1a77551abe26ca2e29915f711b076f950d"></span>bool <code class="sig-name descname">empty</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra6Memory5emptyEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return true if the referenced memory is zero bytes long or hasn’t been allocated yet. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>true if the referenced memory does not exist or is empty </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="objective-c-swift">
+<h4>Objective-C/Swift<a class="headerlink" href="#objective-c-swift" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv412ImebraMemory">
+<span id="_CPPv312ImebraMemory"></span><span id="_CPPv212ImebraMemory"></span><span id="ImebraMemory"></span><span class="target" id="interface_imebra_memory"></span><em class="property">class </em><code class="sig-name descname">ImebraMemory</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv412ImebraMemory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Manages a read-only buffer of memory. </p>
+<p>The buffer of memory is usually associated with a <a class="reference internal" href="dicom_data_classes.html#interface_imebra_tag"><span class="std std-ref">ImebraTag</span></a> buffer content.</p>
+<p>The memory used by ImebraReadMemory and <a class="reference internal" href="#interface_imebra_mutable_memory"><span class="std std-ref">ImebraMutableMemory</span></a> is managed by ImebraMemoryPool. </p>
+<p>Subclassed by <a class="reference internal" href="#interface_imebra_mutable_memory"><span class="std std-ref">ImebraMutableMemory</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_memory_1a18ab8b350bed79683a757327d7a2b247"></span><code class="sig-name descname">id ImebraMemory::initWithData:(NSData * source)</code></dt>
+<dd><p>Construct a buffer of memory and copy the specified content into it. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: a pointer to the source data </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N12ImebraMemory4dataEv">
+<span id="_CPPv3N12ImebraMemory4dataEv"></span><span id="_CPPv2N12ImebraMemory4dataEv"></span><span id="ImebraMemory::data"></span><span class="target" id="interface_imebra_memory_1a075c7785ecee5896354b02297f3fe651"></span>NSData *<code class="sig-name descname">data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ImebraMemory4dataEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copies the raw memory content into a NSData object and returns it. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a NSData containing a copy of the memory managed by ImebraReadMemory </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Property</p>
+<dl class="member">
+<dt>
+<span class="target" id="interface_imebra_memory_1a29ae70dac25ee1b062a8a02ed79887c9"></span><em class="property">property </em><code class="sig-name descname">ImebraMemory::empty</code></dt>
+<dd><p>Return true if the referenced memory is zero bytes long or hasn’t been allocated yet. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="mutablememory">
+<h3>MutableMemory<a class="headerlink" href="#mutablememory" title="Permalink to this headline">¶</a></h3>
+<section id="id1">
+<h4>C++<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra13MutableMemoryE">
+<span id="_CPPv3N6imebra13MutableMemoryE"></span><span id="_CPPv2N6imebra13MutableMemoryE"></span><span id="imebra::MutableMemory"></span><span class="target" id="classimebra_1_1_mutable_memory"></span><em class="property">class </em><code class="sig-name descname">MutableMemory</code> : <em class="property">public</em> imebra::<a class="reference internal" href="#_CPPv4N6imebra6MemoryE" title="imebra::Memory">Memory</a><a class="headerlink" href="#_CPPv4N6imebra13MutableMemoryE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Manages a writable buffer of memory. </p>
+<p>The buffer of memory is usually associated with a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_tag"><span class="std std-ref">Tag</span></a> buffer content.</p>
+<p>The memory used by <a class="reference internal" href="#classimebra_1_1_memory"><span class="std std-ref">Memory</span></a> and <a class="reference internal" href="#classimebra_1_1_mutable_memory"><span class="std std-ref">MutableMemory</span></a> is managed by <a class="reference internal" href="#classimebra_1_1_memory_pool"><span class="std std-ref">MemoryPool</span></a>. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra13MutableMemory13MutableMemoryEv">
+<span id="_CPPv3N6imebra13MutableMemory13MutableMemoryEv"></span><span id="_CPPv2N6imebra13MutableMemory13MutableMemoryEv"></span><span id="imebra::MutableMemory::MutableMemory"></span><span class="target" id="classimebra_1_1_mutable_memory_1a8a1614953f698552669efea4a234f3c7"></span><code class="sig-name descname">MutableMemory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra13MutableMemory13MutableMemoryEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct an empty buffer of memory. </p>
+<p>The memory can be resized later with <a class="reference internal" href="#classimebra_1_1_mutable_memory_1ab28ed461ae10fbfea26247684d8080af"><span class="std std-ref">resize()</span></a>. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra13MutableMemory13MutableMemoryE6size_t">
+<span id="_CPPv3N6imebra13MutableMemory13MutableMemoryE6size_t"></span><span id="_CPPv2N6imebra13MutableMemory13MutableMemoryE6size_t"></span><span id="imebra::MutableMemory::MutableMemory__s"></span><span class="target" id="classimebra_1_1_mutable_memory_1a9671a4c6a0a78d745d3b4c594f134a26"></span><code class="sig-name descname">MutableMemory</code><span class="sig-paren">(</span>size_t <em>initialSize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra13MutableMemory13MutableMemoryE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a buffer of memory of the specified size. </p>
+<p>The memory can be resized later with <a class="reference internal" href="#classimebra_1_1_mutable_memory_1ab28ed461ae10fbfea26247684d8080af"><span class="std std-ref">resize()</span></a>.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">initialSize</span></code>: the initial memory’s size, in bytes </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra13MutableMemory13MutableMemoryERK6Memory">
+<span id="_CPPv3N6imebra13MutableMemory13MutableMemoryERK6Memory"></span><span id="_CPPv2N6imebra13MutableMemory13MutableMemoryERK6Memory"></span><span id="imebra::MutableMemory::MutableMemory__MemoryCR"></span><span class="target" id="classimebra_1_1_mutable_memory_1acdb97f848b4c3784a9b411dd0a4ae49b"></span><code class="sig-name descname">MutableMemory</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra6MemoryE" title="imebra::Memory">Memory</a> &amp;<em>sourceMemory</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra13MutableMemory13MutableMemoryERK6Memory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a buffer of memory and copy the specified content into it. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceMemory</span></code>: the object containing the initial memory’s content </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra13MutableMemory13MutableMemoryERK13MutableMemory">
+<span id="_CPPv3N6imebra13MutableMemory13MutableMemoryERK13MutableMemory"></span><span id="_CPPv2N6imebra13MutableMemory13MutableMemoryERK13MutableMemory"></span><span id="imebra::MutableMemory::MutableMemory__MutableMemoryCR"></span><span class="target" id="classimebra_1_1_mutable_memory_1ac5278aa710671cd70c821c9cec432e5f"></span><code class="sig-name descname">MutableMemory</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra13MutableMemory13MutableMemoryEv" title="imebra::MutableMemory::MutableMemory">MutableMemory</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra13MutableMemory13MutableMemoryERK13MutableMemory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source <a class="reference internal" href="#classimebra_1_1_mutable_memory"><span class="std std-ref">MutableMemory</span></a> object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra13MutableMemory13MutableMemoryEPKc6size_t">
+<span id="_CPPv3N6imebra13MutableMemory13MutableMemoryEPKc6size_t"></span><span id="_CPPv2N6imebra13MutableMemory13MutableMemoryEPKc6size_t"></span><span id="imebra::MutableMemory::MutableMemory__cCP.s"></span><span class="target" id="classimebra_1_1_mutable_memory_1a9b2b334196d3a9285167598d5d0e6903"></span><code class="sig-name descname">MutableMemory</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>source</em>, size_t <em>sourceSize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra13MutableMemory13MutableMemoryEPKc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a buffer of memory and copy the specified content into it. </p>
+<p><strong>Java</strong></p>
+<p>In Java this method accepts a single parameter (a byte array).</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: a pointer to the source data </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceSize</span></code>: the amount of data to copy into the allocated memory </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra13MutableMemory8copyFromERK6Memory">
+<span id="_CPPv3N6imebra13MutableMemory8copyFromERK6Memory"></span><span id="_CPPv2N6imebra13MutableMemory8copyFromERK6Memory"></span><span id="imebra::MutableMemory::copyFrom__MemoryCR"></span><span class="target" id="classimebra_1_1_mutable_memory_1aac9892367e2c0d997ead531e394f1a4f"></span>void <code class="sig-name descname">copyFrom</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra6MemoryE" title="imebra::Memory">Memory</a> &amp;<em>sourceMemory</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra13MutableMemory8copyFromERK6Memory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy the content from another memory object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceMemory</span></code>: the source memory object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra13MutableMemory5clearEv">
+<span id="_CPPv3N6imebra13MutableMemory5clearEv"></span><span id="_CPPv2N6imebra13MutableMemory5clearEv"></span><span id="imebra::MutableMemory::clear"></span><span class="target" id="classimebra_1_1_mutable_memory_1acd25b6b7027e6a3be72423fca4bc9c3b"></span>void <code class="sig-name descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra13MutableMemory5clearEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Resize the memory to zero bytes. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra13MutableMemory6resizeE6size_t">
+<span id="_CPPv3N6imebra13MutableMemory6resizeE6size_t"></span><span id="_CPPv2N6imebra13MutableMemory6resizeE6size_t"></span><span id="imebra::MutableMemory::resize__s"></span><span class="target" id="classimebra_1_1_mutable_memory_1ab28ed461ae10fbfea26247684d8080af"></span>void <code class="sig-name descname">resize</code><span class="sig-paren">(</span>size_t <em>newSize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra13MutableMemory6resizeE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Resize the memory. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">newSize</span></code>: the new memory size, in bytes </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra13MutableMemory7reserveE6size_t">
+<span id="_CPPv3N6imebra13MutableMemory7reserveE6size_t"></span><span id="_CPPv2N6imebra13MutableMemory7reserveE6size_t"></span><span id="imebra::MutableMemory::reserve__s"></span><span class="target" id="classimebra_1_1_mutable_memory_1ad5b8d8ab5382bb20532db01e4e84c8bb"></span>void <code class="sig-name descname">reserve</code><span class="sig-paren">(</span>size_t <em>reserveSize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra13MutableMemory7reserveE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reserve the specified amount of bytes, without changing the memory size. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">reserveSize</span></code>: the number of bytes to reserve </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra13MutableMemory4dataEP6size_t">
+<span id="_CPPv3NK6imebra13MutableMemory4dataEP6size_t"></span><span id="_CPPv2NK6imebra13MutableMemory4dataEP6size_t"></span><span id="imebra::MutableMemory::data__sPC"></span><span class="target" id="classimebra_1_1_mutable_memory_1a2d7dc35cd258e03eca94b172585251fb"></span>char *<code class="sig-name descname">data</code><span class="sig-paren">(</span>size_t *<em>pDataSize</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra13MutableMemory4dataEP6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return a pointer to the referenced memory. </p>
+<p>The referenced buffer is owned by the <a class="reference internal" href="#classimebra_1_1_mutable_memory"><span class="std std-ref">MutableMemory</span></a> object and must not be freed by the client.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a pointer to the referenced memory. The referenced buffer is owned by the <a class="reference internal" href="#classimebra_1_1_mutable_memory"><span class="std std-ref">MutableMemory</span></a> object and must not be freed by the client. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pDataSize</span></code>: pointer to a variable that will be filled with the memory size, in bytes </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra13MutableMemory6assignEPKc6size_t">
+<span id="_CPPv3N6imebra13MutableMemory6assignEPKc6size_t"></span><span id="_CPPv2N6imebra13MutableMemory6assignEPKc6size_t"></span><span id="imebra::MutableMemory::assign__cCP.s"></span><span class="target" id="classimebra_1_1_mutable_memory_1a3346869825c8295c50da7b4c5354e5b8"></span>void <code class="sig-name descname">assign</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>source</em>, size_t <em>sourceSize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra13MutableMemory6assignEPKc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy the content of the specified buffer into the <a class="reference internal" href="#classimebra_1_1_mutable_memory"><span class="std std-ref">MutableMemory</span></a> object. </p>
+<p><strong>Java</strong></p>
+<p>In Java this method accepts a single parameter (a byte array).</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: a pointer to the source memory buffer </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceSize</span></code>: the number of bytes to copy and the new memory size </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra13MutableMemory12assignRegionEPKc6size_t6size_t">
+<span id="_CPPv3N6imebra13MutableMemory12assignRegionEPKc6size_t6size_t"></span><span id="_CPPv2N6imebra13MutableMemory12assignRegionEPKc6size_t6size_t"></span><span id="imebra::MutableMemory::assignRegion__cCP.s.s"></span><span class="target" id="classimebra_1_1_mutable_memory_1ab28f96afa58bdf510a11ca278bda279b"></span>void <code class="sig-name descname">assignRegion</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>source</em>, size_t <em>sourceSize</em>, size_t <em>destinationOffset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra13MutableMemory12assignRegionEPKc6size_t6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy the content of the specified buffer into a region of the <a class="reference internal" href="#classimebra_1_1_mutable_memory"><span class="std std-ref">MutableMemory</span></a>. </p>
+<p>The memory size remains unchanged.</p>
+<p><strong>Java</strong></p>
+<p>In Java this method accepts two parameters:<ul class="simple">
+<li><p>a byte array</p></li>
+<li><p>a long integer (destinationOffset)</p></li>
+</ul>
+</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: a pointer to the source memory buffer </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceSize</span></code>: the number of bytes to copy </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationOffset</span></code>: the offset into the <a class="reference internal" href="#classimebra_1_1_mutable_memory"><span class="std std-ref">MutableMemory</span></a> at which the data must be copied </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id2">
+<h4>Objective-C/Swift<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv419ImebraMutableMemory">
+<span id="_CPPv319ImebraMutableMemory"></span><span id="_CPPv219ImebraMutableMemory"></span><span id="ImebraMutableMemory"></span><span class="target" id="interface_imebra_mutable_memory"></span><em class="property">class </em><code class="sig-name descname">ImebraMutableMemory</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv412ImebraMemory" title="ImebraMemory">ImebraMemory</a><a class="headerlink" href="#_CPPv419ImebraMutableMemory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Manages a writable buffer of memory. </p>
+<p>The buffer of memory is usually associated with a tag buffer content.</p>
+<p>The memory used by ImebraReadMemory and <a class="reference internal" href="#interface_imebra_mutable_memory"><span class="std std-ref">ImebraMutableMemory</span></a> is managed by ImebraMemoryPool. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N19ImebraMutableMemory4initEv">
+<span id="_CPPv3N19ImebraMutableMemory4initEv"></span><span id="_CPPv2N19ImebraMutableMemory4initEv"></span><span id="ImebraMutableMemory::init"></span><span class="target" id="interface_imebra_mutable_memory_1ac0483b8adec63c0bf8336ad1b116913b"></span>id <code class="sig-name descname">init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19ImebraMutableMemory4initEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct an empty buffer of memory. </p>
+<p>The memory can be resized later with resize(). </p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_mutable_memory_1a33693089bb16078ca65930245588dd47"></span><code class="sig-name descname">id ImebraMutableMemory::initWithSize:(unsigned int size)</code></dt>
+<dd><p>Construct a buffer of memory of the specified size. </p>
+<p>The memory can be resized later with resize().</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code>: the initial memory’s size, in bytes </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_mutable_memory_1aa4745c852520952323e0021d0836e066"></span><code class="sig-name descname">id ImebraMutableMemory::initWithMemory:(ImebraMemory  * source)</code></dt>
+<dd><p>Construct a buffer of memory and copy the specified content into it. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: the object containing the initial memory’s content </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_mutable_memory_1ac73c409983e2d5d35352ea899cd70f92"></span><code class="sig-name descname">id ImebraMutableMemory::initWithData:(NSData * pSource)</code></dt>
+<dd><p>Construct a buffer of memory and copy the specified content into it. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pSource</span></code>: the object containing the initial memory’s content </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_mutable_memory_1a6659d5c94dd739dcccc101245922fcc9"></span><code class="sig-name descname">void ImebraMutableMemory::copyFrom:error:(ImebraMemory  * source, (swift_error(nonnull_error)) __attribute__)</code></dt>
+<dd><p>Copy the content from another memory object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: the source memory object </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a NSError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_mutable_memory_1a8abb93f772a23e93fa0090a3c3a88ff0"></span><code class="sig-name descname">void ImebraMutableMemory::clear:((swift_error(nonnull_error)) __attribute__)</code></dt>
+<dd><p>Resize the memory to zero bytes. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a NSError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_mutable_memory_1ac9d5eca76352f9f1a692f41ab4ebad25"></span><code class="sig-name descname">void ImebraMutableMemory::resize:error:(unsigned int newSize, (swift_error(nonnull_error)) __attribute__)</code></dt>
+<dd><p>Resize the memory. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">newSize</span></code>: the new memory size, in bytes </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a NSError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N19ImebraMutableMemory7reserveE6size_t">
+<span id="_CPPv3N19ImebraMutableMemory7reserveE6size_t"></span><span id="_CPPv2N19ImebraMutableMemory7reserveE6size_t"></span><span id="ImebraMutableMemory::reserve__s"></span><span class="target" id="interface_imebra_mutable_memory_1aab6aaeaba13bcd90c5d0df0f70026087"></span>void <code class="sig-name descname">reserve</code><span class="sig-paren">(</span>size_t <em>reserveSize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19ImebraMutableMemory7reserveE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reserve the specified amount of bytes, without changing the memory size. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">reserveSize</span></code>: the number of bytes to reserve </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a NSError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_mutable_memory_1a747b8ddf3fdf8cca91410b5341e03783"></span><code class="sig-name descname">void ImebraMutableMemory::assign:error:(NSData * pSource, (swift_error(nonnull_error)) __attribute__)</code></dt>
+<dd><p>Copy the content of the specified buffer into the ReadWriteMemory object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pSource</span></code>: a pointer to the source memory buffer </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a NSError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_mutable_memory_1a2a2276d234de1486b952dba4cd0d8355"></span><code class="sig-name descname">void ImebraMutableMemory::assignRegion:offset:error:(NSData * pSource, unsigned int destinationOffset, (swift_error(nonnull_error)) __attribute__)</code></dt>
+<dd><p>Copy the content of the specified buffer into a region of the ReadWriteMemory. </p>
+<p>The memory size remains unchanged.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pSource</span></code>: a pointer to the source memory buffer </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationOffset</span></code>: the offset into the ReadWriteMemory at which the data must be copied </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a NSError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+</section>
+<section id="memory-allocation">
+<h2>Memory allocation<a class="headerlink" href="#memory-allocation" title="Permalink to this headline">¶</a></h2>
+<section id="memorypool">
+<span id="id3"></span><h3>MemoryPool<a class="headerlink" href="#memorypool" title="Permalink to this headline">¶</a></h3>
+<section id="id4">
+<h4>C++<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra10MemoryPoolE">
+<span id="_CPPv3N6imebra10MemoryPoolE"></span><span id="_CPPv2N6imebra10MemoryPoolE"></span><span id="imebra::MemoryPool"></span><span class="target" id="classimebra_1_1_memory_pool"></span><em class="property">class </em><code class="sig-name descname">MemoryPool</code><a class="headerlink" href="#_CPPv4N6imebra10MemoryPoolE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Used by Imebra to allocate memory. </p>
+<p><a class="reference internal" href="#classimebra_1_1_memory_pool"><span class="std std-ref">MemoryPool</span></a> keeps around recently deleted memory regions so they can be repurposed quickly when new memory regions are requested.</p>
+<p>Each thread has its own <a class="reference internal" href="#classimebra_1_1_memory_pool"><span class="std std-ref">MemoryPool</span></a> object. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra10MemoryPool5flushEv">
+<span id="_CPPv3N6imebra10MemoryPool5flushEv"></span><span id="_CPPv2N6imebra10MemoryPool5flushEv"></span><span id="imebra::MemoryPool::flush"></span><span class="target" id="classimebra_1_1_memory_pool_1acf0307339a81f9b479318787312145c8"></span><em class="property">static</em> void <code class="sig-name descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra10MemoryPool5flushEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Release all the unused memory regions. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra10MemoryPool19getUnusedMemorySizeEv">
+<span id="_CPPv3N6imebra10MemoryPool19getUnusedMemorySizeEv"></span><span id="_CPPv2N6imebra10MemoryPool19getUnusedMemorySizeEv"></span><span id="imebra::MemoryPool::getUnusedMemorySize"></span><span class="target" id="classimebra_1_1_memory_pool_1aa7ffb0e044a69dcfa27776d018a8fcca"></span><em class="property">static</em> size_t <code class="sig-name descname">getUnusedMemorySize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra10MemoryPool19getUnusedMemorySizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the total size of the memory that has been released but not yet freed. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the total size of the memory released but not yet freed </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra10MemoryPool17setMemoryPoolSizeE6size_t6size_t">
+<span id="_CPPv3N6imebra10MemoryPool17setMemoryPoolSizeE6size_t6size_t"></span><span id="_CPPv2N6imebra10MemoryPool17setMemoryPoolSizeE6size_t6size_t"></span><span id="imebra::MemoryPool::setMemoryPoolSize__s.s"></span><span class="target" id="classimebra_1_1_memory_pool_1ae85f45f5b21e0816705b085e1ce8d212"></span><em class="property">static</em> void <code class="sig-name descname">setMemoryPoolSize</code><span class="sig-paren">(</span>size_t <em>minMemoryBlockSize</em>, size_t <em>maxMemoryPoolSize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra10MemoryPool17setMemoryPoolSizeE6size_t6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the maximum size of the kept unused memory. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">minMemoryBlockSize</span></code>: if a memory region is smaller than this size then when it is released it is deleted immediately, otherwise it is kept in the memory pool </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxMemoryPoolSize</span></code>: the maximum size of the sum of all the unused memory regions. When the total size of the unused memory regions is greater than this parameter then the oldest memory regions are deleted permanently </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id5">
+<h4>Objective-C/Swift<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv416ImebraMemoryPool">
+<span id="_CPPv316ImebraMemoryPool"></span><span id="_CPPv216ImebraMemoryPool"></span><span id="ImebraMemoryPool"></span><span class="target" id="interface_imebra_memory_pool"></span><em class="property">class </em><code class="sig-name descname">ImebraMemoryPool</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv416ImebraMemoryPool" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv4N16ImebraMemoryPool5flushEv">
+<span id="_CPPv3N16ImebraMemoryPool5flushEv"></span><span id="_CPPv2N16ImebraMemoryPool5flushEv"></span><span id="ImebraMemoryPool::flush"></span><span class="target" id="interface_imebra_memory_pool_1a48b0e9941ac805638bbea97f53e4cc82"></span>void <code class="sig-name descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16ImebraMemoryPool5flushEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Release all the unused memory regions. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N16ImebraMemoryPool19getUnusedMemorySizeEv">
+<span id="_CPPv3N16ImebraMemoryPool19getUnusedMemorySizeEv"></span><span id="_CPPv2N16ImebraMemoryPool19getUnusedMemorySizeEv"></span><span id="ImebraMemoryPool::getUnusedMemorySize"></span><span class="target" id="interface_imebra_memory_pool_1a138577ac4778d29dc38977f9c9ee01e6"></span>unsigned int <code class="sig-name descname">getUnusedMemorySize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16ImebraMemoryPool19getUnusedMemorySizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the total size of the memory that has been released but not yet freed. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the total size of the memory released but not yet freed </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_memory_pool_1a6906d12af47d237356d05ea61a9bdc6b"></span><code class="sig-name descname">void ImebraMemoryPool::setMemoryPoolSize:maxSize:(unsigned int minMemoryBlockSize, unsigned int maxMemoryPoolSize)</code></dt>
+<dd><p>Set the maximum size of the kept unused memory. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">minMemoryBlockSize</span></code>: if a memory region is smaller than this size then when it is released it is deleted immediately, otherwise it is kept in the memory pool </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxMemoryPoolSize</span></code>: the maximum size of the sum of all the unused memory regions. When the total size of the unused memory regions is greater than this parameter then the oldest memory regions are deleted permanently </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="transforms_classes.html" class="btn btn-neutral float-left" title="Transforms classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="acse_classes.html" class="btn btn-neutral float-right" title="ACSE classes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="copyright.html">Copyright</a> 2019, Paolo Brandoli.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

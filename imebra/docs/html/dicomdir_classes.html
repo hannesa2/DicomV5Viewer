@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DICOMDIR classes &mdash; Imebra 5.3.3.0 changeset 2c706290 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="next" title="DICOM dictionary" href="dicom_dictionary_classes.html" />
+    <link rel="prev" title="DIMSE classes" href="dimse_classes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Imebra
+          </a>
+              <div class="version">
+                5.3.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p><span class="caption-text">Download Imebra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Downloading Imebra</a></li>
+</ul>
+<p><span class="caption-text">Legal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gplv2.html">GNU General Public License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Commercial license</a></li>
+</ul>
+<p><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes_log.html">Changes log</a></li>
+</ul>
+<p><span class="caption-text">User documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="compiling_imebra.html">Compiling Imebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add_to_project.html">Adding Imebra to your project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_tour.html">Tutorial</a></li>
+</ul>
+<p><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="objects_lifecycle.html">Objects lifecycle and Object ownership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_data_classes.html">DICOM dataSet &amp; tags classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_uid_generation_classes.html">UID generation classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stream_classes.html">Stream classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imaging_classes.html">Imaging classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transforms_classes.html">Transforms classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="memory_management_classes.html">Memory management classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acse_classes.html">ACSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dimse_classes.html">DIMSE classes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DICOMDIR classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">DICOMDIR classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dicomdir">DicomDir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mutabledicomdir">MutableDicomDir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dicomdirentry">DicomDirEntry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mutabledicomdirentry">MutableDicomDirEntry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_dictionary_classes.html">DICOM dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definition_classes.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exception_classes.html">Exceptions</a></li>
+</ul>
+<p><span class="caption-text">Build distributions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html">Creating the source distribution from the code in the VCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html#versioning">Versioning</a></li>
+</ul>
+<p><span class="caption-text">Requirements &amp; Risks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html#risks">Risks</a></li>
+</ul>
+<p><span class="caption-text">Standard operating procedures</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sop.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sop.html#sops">SOPs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>DICOMDIR classes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/dicomdir_classes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dicomdir-classes">
+<h1>DICOMDIR classes<a class="headerlink" href="#dicomdir-classes" title="Permalink to this headline">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This chapter describes the classes and methods used to read and write DICOMDIR files.</p>
+<p>The following classes are described in this chapter:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 34%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>C++ class</p></th>
+<th class="head"><p>Objective-C/Swift class</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra8DicomDirE" title="imebra::DicomDir"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::DicomDir</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv414ImebraDicomDir" title="ImebraDicomDir"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraDicomDir</span></code></a></p></td>
+<td><p>Allows to access the DICOMDIR
+entries stored in a <a class="reference internal" href="dicom_data_classes.html#dataset"><span class="std std-ref">DataSet</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#_CPPv4N6imebra15MutableDicomDirE" title="imebra::MutableDicomDir"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::MutableDicomDir</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv421ImebraMutableDicomDir" title="ImebraMutableDicomDir"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraMutableDicomDir</span></code></a></p></td>
+<td><p>Allows to create a DICOMDIR
+dataset</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra13DicomDirEntryE" title="imebra::DicomDirEntry"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::DicomDirEntry</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv419ImebraDicomDirEntry" title="ImebraDicomDirEntry"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraDicomDirEntry</span></code></a></p></td>
+<td><p>Represents a single DICOMDIR
+entry</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#_CPPv4N6imebra20MutableDicomDirEntryE" title="imebra::MutableDicomDirEntry"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::MutableDicomDirEntry</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv426ImebraMutableDicomDirEntry" title="ImebraMutableDicomDirEntry"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraMutableDicomDirEntry</span></code></a></p></td>
+<td><p>Creates a single DICOMDIR entry</p></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-default" id="id8" style="width: 100%">
+<a class="reference external image-reference" href="_images/dicomdir.jpg"><img alt="DICOMDIR related classes" src="_images/dicomdir.jpg" /></a>
+<figcaption>
+<p><span class="caption-text">Class diagram of the DICOMDIR related classes</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id1">
+<h2>DICOMDIR classes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="dicomdir">
+<h3>DicomDir<a class="headerlink" href="#dicomdir" title="Permalink to this headline">¶</a></h3>
+<section id="c">
+<h4>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra8DicomDirE">
+<span id="_CPPv3N6imebra8DicomDirE"></span><span id="_CPPv2N6imebra8DicomDirE"></span><span id="imebra::DicomDir"></span><span class="target" id="classimebra_1_1_dicom_dir"></span><em class="property">class </em><code class="sig-name descname">DicomDir</code><a class="headerlink" href="#_CPPv4N6imebra8DicomDirE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents an immutable DICOMDIR structure. </p>
+<p>In order to work <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a> needs a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a>, which embeds the <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a>’s entries. </p>
+<p>Subclassed by <a class="reference internal" href="#classimebra_1_1_mutable_dicom_dir"><span class="std std-ref">imebra::MutableDicomDir</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra8DicomDir8DicomDirERK7DataSet">
+<span id="_CPPv3N6imebra8DicomDir8DicomDirERK7DataSet"></span><span id="_CPPv2N6imebra8DicomDir8DicomDirERK7DataSet"></span><span id="imebra::DicomDir::DicomDir__DataSetCR"></span><span class="target" id="classimebra_1_1_dicom_dir_1a9c7b819bb961a4bd55629b2b53d64bcf"></span><code class="sig-name descname">DicomDir</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet">DataSet</a> &amp;<em>fromDataSet</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra8DicomDir8DicomDirERK7DataSet" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a> from a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fromDataSet</span></code>: the <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> created from reading a DICOMDIR file </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra8DicomDir8DicomDirERK8DicomDir">
+<span id="_CPPv3N6imebra8DicomDir8DicomDirERK8DicomDir"></span><span id="_CPPv2N6imebra8DicomDir8DicomDirERK8DicomDir"></span><span id="imebra::DicomDir::DicomDir__DicomDirCR"></span><span class="target" id="classimebra_1_1_dicom_dir_1a3a21b16965a3a55d6f767c1b72521d49"></span><code class="sig-name descname">DicomDir</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra8DicomDir8DicomDirERK7DataSet" title="imebra::DicomDir::DicomDir">DicomDir</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra8DicomDir8DicomDirERK8DicomDir" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source DICOMDIR </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra8DicomDirD0Ev">
+<span id="_CPPv3N6imebra8DicomDirD0Ev"></span><span id="_CPPv2N6imebra8DicomDirD0Ev"></span><span id="imebra::DicomDir::~DicomDir"></span><span class="target" id="classimebra_1_1_dicom_dir_1a126a3cbeca32cb354513161b8d39c691"></span><em class="property">virtual</em> <code class="sig-name descname">~DicomDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra8DicomDirD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra8DicomDir12hasRootEntryEv">
+<span id="_CPPv3NK6imebra8DicomDir12hasRootEntryEv"></span><span id="_CPPv2NK6imebra8DicomDir12hasRootEntryEv"></span><span id="imebra::DicomDir::hasRootEntryC"></span><span class="target" id="classimebra_1_1_dicom_dir_1a37fd1da6203c17628d67f65c53673cce"></span>bool <code class="sig-name descname">hasRootEntry</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra8DicomDir12hasRootEntryEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns true if the DICOMDIR has a root entry. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>true if the DICOMDIR has a root entry, false otherwise </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra8DicomDir17getFirstRootEntryEv">
+<span id="_CPPv3NK6imebra8DicomDir17getFirstRootEntryEv"></span><span id="_CPPv2NK6imebra8DicomDir17getFirstRootEntryEv"></span><span id="imebra::DicomDir::getFirstRootEntryC"></span><span class="target" id="classimebra_1_1_dicom_dir_1acc382ffa5d8b6883eb845d7b1857d104"></span><a class="reference internal" href="#_CPPv4N6imebra13DicomDirEntryE" title="imebra::DicomDirEntry">DicomDirEntry</a> <code class="sig-name descname">getFirstRootEntry</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra8DicomDir17getFirstRootEntryEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieve the first <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a>’s root entry. </p>
+<p>If the root entry is missing then return a null pointer.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the root <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> or a null pointer if the root <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> does noot exist </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="objective-c-swift">
+<h4>Objective-C/Swift<a class="headerlink" href="#objective-c-swift" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv414ImebraDicomDir">
+<span id="_CPPv314ImebraDicomDir"></span><span id="_CPPv214ImebraDicomDir"></span><span id="ImebraDicomDir"></span><span class="target" id="interface_imebra_dicom_dir"></span><em class="property">class </em><code class="sig-name descname">ImebraDicomDir</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv414ImebraDicomDir" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents a DICOMDIR structure. </p>
+<p>In order to work <a class="reference internal" href="#interface_imebra_dicom_dir"><span class="std std-ref">ImebraDicomDir</span></a> needs a <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a>, which embeds the DICOMDIR’s entries.</p>
+<p>If the <a class="reference internal" href="#interface_imebra_dicom_dir"><span class="std std-ref">ImebraDicomDir</span></a>’s content is modified then the method updateDataSet() has to be called to obtain a dataset that can be stored as a DICOMDIR file. </p>
+<p>Subclassed by <a class="reference internal" href="#interface_imebra_mutable_dicom_dir"><span class="std std-ref">ImebraMutableDicomDir</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_dicom_dir_1abe2e20c5c4c99376d6c871dd6d389286"></span><code class="sig-name descname">id ImebraDicomDir::initWithDataSet:error:(ImebraDataSet  * pDataSet, NSError ** pError)</code></dt>
+<dd><p>Construct an <a class="reference internal" href="#interface_imebra_dicom_dir"><span class="std std-ref">ImebraDicomDir</span></a> from an <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pDataSet</span></code>: the <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> created from reading a DICOMDIR file </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to an NSError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_dicom_dir_1a46a9c6405934ab72bc5752589a8d44d5"></span><code class="sig-name descname">ImebraDicomDirEntry* ImebraDicomDir::getFirstRootEntry:(NSError ** pError)</code></dt>
+<dd><p>Retrieve the first <a class="reference internal" href="#interface_imebra_dicom_dir"><span class="std std-ref">ImebraDicomDir</span></a>’s root entry. </p>
+<p>If the root entry is missing then return a null pointer.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the root <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> or a null pointer if the root <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> does noot exist </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a NSError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="mutabledicomdir">
+<h3>MutableDicomDir<a class="headerlink" href="#mutabledicomdir" title="Permalink to this headline">¶</a></h3>
+<section id="id2">
+<h4>C++<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra15MutableDicomDirE">
+<span id="_CPPv3N6imebra15MutableDicomDirE"></span><span id="_CPPv2N6imebra15MutableDicomDirE"></span><span id="imebra::MutableDicomDir"></span><span class="target" id="classimebra_1_1_mutable_dicom_dir"></span><em class="property">class </em><code class="sig-name descname">MutableDicomDir</code> : <em class="property">public</em> imebra::<a class="reference internal" href="#_CPPv4N6imebra8DicomDirE" title="imebra::DicomDir">DicomDir</a><a class="headerlink" href="#_CPPv4N6imebra15MutableDicomDirE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents a mutable DICOMDIR structure. </p>
+<p>In order to work <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a> needs a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a>, which embeds the <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a>’s entries.</p>
+<p>If the <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a>’s content is modified then the method <a class="reference internal" href="#classimebra_1_1_mutable_dicom_dir_1a1eb1c6015abc410fbc128d94120b898b"><span class="std std-ref">updateDataSet()</span></a> has to be called before the managed <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> can be stored as a DICOMDIR file. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra15MutableDicomDir15MutableDicomDirEv">
+<span id="_CPPv3N6imebra15MutableDicomDir15MutableDicomDirEv"></span><span id="_CPPv2N6imebra15MutableDicomDir15MutableDicomDirEv"></span><span id="imebra::MutableDicomDir::MutableDicomDir"></span><span class="target" id="classimebra_1_1_mutable_dicom_dir_1aa2d1e06acf54c950159c08f74453b2c9"></span><code class="sig-name descname">MutableDicomDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15MutableDicomDir15MutableDicomDirEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct an empty <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a>. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra15MutableDicomDir15MutableDicomDirER14MutableDataSet">
+<span id="_CPPv3N6imebra15MutableDicomDir15MutableDicomDirER14MutableDataSet"></span><span id="_CPPv2N6imebra15MutableDicomDir15MutableDicomDirER14MutableDataSet"></span><span id="imebra::MutableDicomDir::MutableDicomDir__MutableDataSetR"></span><span class="target" id="classimebra_1_1_mutable_dicom_dir_1a110d6346189b32c80dbaf7ec7e79c123"></span><code class="sig-name descname">MutableDicomDir</code><span class="sig-paren">(</span><a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra14MutableDataSetE" title="imebra::MutableDataSet">MutableDataSet</a> &amp;<em>fromDataSet</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15MutableDicomDir15MutableDicomDirER14MutableDataSet" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a> from a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fromDataSet</span></code>: the <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> created from reading a DICOMDIR file </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra15MutableDicomDir15MutableDicomDirERK15MutableDicomDir">
+<span id="_CPPv3N6imebra15MutableDicomDir15MutableDicomDirERK15MutableDicomDir"></span><span id="_CPPv2N6imebra15MutableDicomDir15MutableDicomDirERK15MutableDicomDir"></span><span id="imebra::MutableDicomDir::MutableDicomDir__MutableDicomDirCR"></span><span class="target" id="classimebra_1_1_mutable_dicom_dir_1a0fc428049d9be8fd272579a44bdcba9a"></span><code class="sig-name descname">MutableDicomDir</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra15MutableDicomDir15MutableDicomDirEv" title="imebra::MutableDicomDir::MutableDicomDir">MutableDicomDir</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15MutableDicomDir15MutableDicomDirERK15MutableDicomDir" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source Mutable <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a> </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra15MutableDicomDir11getNewEntryERKNSt6stringE">
+<span id="_CPPv3N6imebra15MutableDicomDir11getNewEntryERKNSt6stringE"></span><span id="_CPPv2N6imebra15MutableDicomDir11getNewEntryERKNSt6stringE"></span><span id="imebra::MutableDicomDir::getNewEntry__ssCR"></span><span class="target" id="classimebra_1_1_mutable_dicom_dir_1a2fe65f8fac59b1ae0d66cfa341ad13f8"></span><a class="reference internal" href="#_CPPv4N6imebra20MutableDicomDirEntryE" title="imebra::MutableDicomDirEntry">MutableDicomDirEntry</a> <code class="sig-name descname">getNewEntry</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>recordType</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15MutableDicomDir11getNewEntryERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return a new <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> record and insert it into the <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a>’s <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a new <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> object that can be inserted into the <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a> object or one of its children <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> entries. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">recordType</span></code>: the type of the new entry </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra15MutableDicomDir17setFirstRootEntryERK13DicomDirEntry">
+<span id="_CPPv3N6imebra15MutableDicomDir17setFirstRootEntryERK13DicomDirEntry"></span><span id="_CPPv2N6imebra15MutableDicomDir17setFirstRootEntryERK13DicomDirEntry"></span><span id="imebra::MutableDicomDir::setFirstRootEntry__DicomDirEntryCR"></span><span class="target" id="classimebra_1_1_mutable_dicom_dir_1a7ccb1287fad7c435a2009e1120b299de"></span>void <code class="sig-name descname">setFirstRootEntry</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra13DicomDirEntryE" title="imebra::DicomDirEntry">DicomDirEntry</a> &amp;<em>firstEntryRecord</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15MutableDicomDir17setFirstRootEntryERK13DicomDirEntry" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the specified entry as the first <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a>’s root record. </p>
+<p>After the <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a>’s content has been modified it is necessary to call <a class="reference internal" href="#classimebra_1_1_mutable_dicom_dir_1a1eb1c6015abc410fbc128d94120b898b"><span class="std std-ref">updateDataSet()</span></a> before the <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> managed by <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a> can be used.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">firstEntryRecord</span></code>: the <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> object to set as the first root entry </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra15MutableDicomDir13updateDataSetEv">
+<span id="_CPPv3N6imebra15MutableDicomDir13updateDataSetEv"></span><span id="_CPPv2N6imebra15MutableDicomDir13updateDataSetEv"></span><span id="imebra::MutableDicomDir::updateDataSet"></span><span class="target" id="classimebra_1_1_mutable_dicom_dir_1a1eb1c6015abc410fbc128d94120b898b"></span><a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet">DataSet</a> <code class="sig-name descname">updateDataSet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15MutableDicomDir13updateDataSetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This method has to be called to update the managed <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> after the <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a>’s content has been updated. </p>
+<p>It is not necessary to call <a class="reference internal" href="#classimebra_1_1_mutable_dicom_dir_1a1eb1c6015abc410fbc128d94120b898b"><span class="std std-ref">updateDataSet()</span></a> after every <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a> update, just call it when the updated <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> object is needed.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the updated managed <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> object </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id3">
+<h4>Objective-C/Swift<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv421ImebraMutableDicomDir">
+<span id="_CPPv321ImebraMutableDicomDir"></span><span id="_CPPv221ImebraMutableDicomDir"></span><span id="ImebraMutableDicomDir"></span><span class="target" id="interface_imebra_mutable_dicom_dir"></span><em class="property">class </em><code class="sig-name descname">ImebraMutableDicomDir</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv414ImebraDicomDir" title="ImebraDicomDir">ImebraDicomDir</a><a class="headerlink" href="#_CPPv421ImebraMutableDicomDir" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents a DICOMDIR structure. </p>
+<p>In order to work <a class="reference internal" href="#interface_imebra_dicom_dir"><span class="std std-ref">ImebraDicomDir</span></a> needs a <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a>, which embeds the DICOMDIR’s entries.</p>
+<p>If the <a class="reference internal" href="#interface_imebra_dicom_dir"><span class="std std-ref">ImebraDicomDir</span></a>’s content is modified then the method updateDataSet() has to be called to obtain a dataset that can be stored as a DICOMDIR file. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N21ImebraMutableDicomDir4initEv">
+<span id="_CPPv3N21ImebraMutableDicomDir4initEv"></span><span id="_CPPv2N21ImebraMutableDicomDir4initEv"></span><span id="ImebraMutableDicomDir::init"></span><span class="target" id="interface_imebra_mutable_dicom_dir_1a9178b0289c0ec0b451f909965b7fef9d"></span>id <code class="sig-name descname">init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21ImebraMutableDicomDir4initEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct an empty DicomDir. </p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_mutable_dicom_dir_1a376b854ed926b365ff3b961787cf3d94"></span><code class="sig-name descname">ImebraMutableDicomDirEntry* ImebraMutableDicomDir::getNewEntry:error:(NSString * recordType, NSError ** pError)</code></dt>
+<dd><p>Return a new <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> record for the DICOMDIR. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a new <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> object that can be inserted into the <a class="reference internal" href="#interface_imebra_dicom_dir"><span class="std std-ref">ImebraDicomDir</span></a> object or one of its children <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> entries. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">recordType</span></code>: the type of the new entry </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a NSError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_mutable_dicom_dir_1a92bd3a2fe16c1bcd26a78c0e577282a8"></span><code class="sig-name descname">void ImebraMutableDicomDir::setFirstRootEntry:error:(ImebraDicomDirEntry  * firstEntryRecord, (swift_error(nonnull_error)) __attribute__)</code></dt>
+<dd><p>Set the specified entry as the first <a class="reference internal" href="#interface_imebra_dicom_dir"><span class="std std-ref">ImebraDicomDir</span></a>’s root record. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">firstEntryRecord</span></code>: the DicomDirEntry object to set as the first root entry </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_mutable_dicom_dir_1ab4299caabe8cef48575cb34874f751e6"></span><code class="sig-name descname">ImebraDataSet* ImebraMutableDicomDir::updateDataSet:(NSError ** pError)</code></dt>
+<dd><p>This method has to be called to update the managed DataSet after the <a class="reference internal" href="#interface_imebra_dicom_dir"><span class="std std-ref">ImebraDicomDir</span></a>’s content has been updated. </p>
+<p>It is not necessary to call updateDataSet() after every <a class="reference internal" href="#interface_imebra_dicom_dir"><span class="std std-ref">ImebraDicomDir</span></a> update, just call it when the updated <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> object is needed.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the updated managed <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> object </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="dicomdirentry">
+<h3>DicomDirEntry<a class="headerlink" href="#dicomdirentry" title="Permalink to this headline">¶</a></h3>
+<section id="id4">
+<h4>C++<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra13DicomDirEntryE">
+<span id="_CPPv3N6imebra13DicomDirEntryE"></span><span id="_CPPv2N6imebra13DicomDirEntryE"></span><span id="imebra::DicomDirEntry"></span><span class="target" id="classimebra_1_1_dicom_dir_entry"></span><em class="property">class </em><code class="sig-name descname">DicomDirEntry</code><a class="headerlink" href="#_CPPv4N6imebra13DicomDirEntryE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents a single immutable DICOMDIR entry. </p>
+<p>Each entry can be followed by a sibling entry (on the same depth level) or can point to its first child entry (one level deeper).</p>
+<p>Each <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> object manages a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> which is used to store the entry’s data. The <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> objects managed by <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> objects are inserted as sequence items into the <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a>’s <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a>. </p>
+<p>Subclassed by <a class="reference internal" href="#classimebra_1_1_mutable_dicom_dir_entry"><span class="std std-ref">imebra::MutableDicomDirEntry</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra13DicomDirEntry13DicomDirEntryERK13DicomDirEntry">
+<span id="_CPPv3N6imebra13DicomDirEntry13DicomDirEntryERK13DicomDirEntry"></span><span id="_CPPv2N6imebra13DicomDirEntry13DicomDirEntryERK13DicomDirEntry"></span><span id="imebra::DicomDirEntry::DicomDirEntry__DicomDirEntryCR"></span><span class="target" id="classimebra_1_1_dicom_dir_entry_1a2b725963c556a8c9c78315a05e43349a"></span><code class="sig-name descname">DicomDirEntry</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra13DicomDirEntry13DicomDirEntryERK13DicomDirEntry" title="imebra::DicomDirEntry::DicomDirEntry">DicomDirEntry</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra13DicomDirEntry13DicomDirEntryERK13DicomDirEntry" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source DICOMDIR entry </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra13DicomDirEntry15getEntryDataSetEv">
+<span id="_CPPv3NK6imebra13DicomDirEntry15getEntryDataSetEv"></span><span id="_CPPv2NK6imebra13DicomDirEntry15getEntryDataSetEv"></span><span id="imebra::DicomDirEntry::getEntryDataSetC"></span><span class="target" id="classimebra_1_1_dicom_dir_entry_1acedb01dac264104115ecd055ab11018b"></span><a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet">DataSet</a> <code class="sig-name descname">getEntryDataSet</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra13DicomDirEntry15getEntryDataSetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> managed by the <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> managed by the <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> object </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra13DicomDirEntry12getNextEntryEv">
+<span id="_CPPv3NK6imebra13DicomDirEntry12getNextEntryEv"></span><span id="_CPPv2NK6imebra13DicomDirEntry12getNextEntryEv"></span><span id="imebra::DicomDirEntry::getNextEntryC"></span><span class="target" id="classimebra_1_1_dicom_dir_entry_1a9a6a4b09960aca9a4d8bdace14e2d27c"></span><a class="reference internal" href="#_CPPv4N6imebra13DicomDirEntryE" title="imebra::DicomDirEntry">DicomDirEntry</a> <code class="sig-name descname">getNextEntry</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra13DicomDirEntry12getNextEntryEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the next sibling entry (on the same depth level). </p>
+<p>If the next <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> is missing (this is the last entry) then return a null pointer.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the next sibling <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> object, or a null pointer if the next sibling <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> does not exist </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra13DicomDirEntry18getFirstChildEntryEv">
+<span id="_CPPv3NK6imebra13DicomDirEntry18getFirstChildEntryEv"></span><span id="_CPPv2NK6imebra13DicomDirEntry18getFirstChildEntryEv"></span><span id="imebra::DicomDirEntry::getFirstChildEntryC"></span><span class="target" id="classimebra_1_1_dicom_dir_entry_1a7e1dbc899e99c53d386c6af5d24c9d87"></span><a class="reference internal" href="#_CPPv4N6imebra13DicomDirEntryE" title="imebra::DicomDirEntry">DicomDirEntry</a> <code class="sig-name descname">getFirstChildEntry</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra13DicomDirEntry18getFirstChildEntryEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the first child entry (one level deeper). </p>
+<p>If the first child <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> is missing then return a null pointer.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the first child <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> object, or a null pointer if there aren’t any children </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra13DicomDirEntry12getFilePartsEv">
+<span id="_CPPv3NK6imebra13DicomDirEntry12getFilePartsEv"></span><span id="_CPPv2NK6imebra13DicomDirEntry12getFilePartsEv"></span><span id="imebra::DicomDirEntry::getFilePartsC"></span><span class="target" id="classimebra_1_1_dicom_dir_entry_1a7bcf88816c8562e0dda9df5d231b66ac"></span><a class="reference internal" href="definition_classes.html#_CPPv4N6imebra11fileParts_tE" title="imebra::fileParts_t">fileParts_t</a> <code class="sig-name descname">getFileParts</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra13DicomDirEntry12getFilePartsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the parts that form the name of the file referenced by the <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a list of strings that form the name of the file referenced by the <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> object. The last item in the list is the file name, while the preceding items contain the folders names. For instance, on Linux the parts “folder0”, “folder1”, “fileName” represent the path “folder0/folder1/fileName” </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id5">
+<h4>Objective-C/Swift<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv419ImebraDicomDirEntry">
+<span id="_CPPv319ImebraDicomDirEntry"></span><span id="_CPPv219ImebraDicomDirEntry"></span><span id="ImebraDicomDirEntry"></span><span class="target" id="interface_imebra_dicom_dir_entry"></span><em class="property">class </em><code class="sig-name descname">ImebraDicomDirEntry</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv419ImebraDicomDirEntry" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents a single DICOMDIR entry. </p>
+<p>Each entry can be followed by a sibling entry (on the same depth level) and/or can point to its first child entry (one level deeper).</p>
+<p>Each <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> object manages a <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> which is used to store the entry’s data. The <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> objects managed by <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> objects are inserted as sequence items into the <a class="reference internal" href="#interface_imebra_dicom_dir"><span class="std std-ref">ImebraDicomDir</span></a>’s dataSet. </p>
+<p>Subclassed by <a class="reference internal" href="#interface_imebra_mutable_dicom_dir_entry"><span class="std std-ref">ImebraMutableDicomDirEntry</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N19ImebraDicomDirEntry15getEntryDataSetEv">
+<span id="_CPPv3N19ImebraDicomDirEntry15getEntryDataSetEv"></span><span id="_CPPv2N19ImebraDicomDirEntry15getEntryDataSetEv"></span><span id="ImebraDicomDirEntry::getEntryDataSet"></span><span class="target" id="interface_imebra_dicom_dir_entry_1ae5e76b5115f3e29b34cc3593a63ec89e"></span><a class="reference internal" href="dicom_data_classes.html#_CPPv413ImebraDataSet" title="ImebraDataSet">ImebraDataSet</a> *<code class="sig-name descname">getEntryDataSet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19ImebraDicomDirEntry15getEntryDataSetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> managed by the <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> managed by the <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> object </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N19ImebraDicomDirEntry12getNextEntryEv">
+<span id="_CPPv3N19ImebraDicomDirEntry12getNextEntryEv"></span><span id="_CPPv2N19ImebraDicomDirEntry12getNextEntryEv"></span><span id="ImebraDicomDirEntry::getNextEntry"></span><span class="target" id="interface_imebra_dicom_dir_entry_1a90d5664bafdd1657d8b0ce3c8f78a0b9"></span><a class="reference internal" href="#_CPPv419ImebraDicomDirEntry" title="ImebraDicomDirEntry">ImebraDicomDirEntry</a> *<code class="sig-name descname">getNextEntry</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19ImebraDicomDirEntry12getNextEntryEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the next sibling entry (on the same depth level). </p>
+<p>If the next <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> is missing (this is the last entry) then return a null pointer.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the next sibling <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> object, or a null pointer if the next sibling does not exist </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N19ImebraDicomDirEntry18getFirstChildEntryEv">
+<span id="_CPPv3N19ImebraDicomDirEntry18getFirstChildEntryEv"></span><span id="_CPPv2N19ImebraDicomDirEntry18getFirstChildEntryEv"></span><span id="ImebraDicomDirEntry::getFirstChildEntry"></span><span class="target" id="interface_imebra_dicom_dir_entry_1a953b8f9409455949a37de6e1e6b9207d"></span><a class="reference internal" href="#_CPPv419ImebraDicomDirEntry" title="ImebraDicomDirEntry">ImebraDicomDirEntry</a> *<code class="sig-name descname">getFirstChildEntry</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19ImebraDicomDirEntry18getFirstChildEntryEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the first child entry (one level deeper). </p>
+<p>If the first child <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> is missing then return a null pointer.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the first child <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> object, or a null pointer if there aren’t any children </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_dicom_dir_entry_1a6368fb767ba3bb3de44849bbe7a76f30"></span><code class="sig-name descname">NSArray* ImebraDicomDirEntry::getFileParts:(NSError ** pError)</code></dt>
+<dd><p>Returns the parts that form the name of the file referenced by the <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a NSArray of NSString objects that form the name of the file referenced by the <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> object. The last item in the array is the file name, while the preceding items contain the folders names. For instance, the parts “folder0”, “folder1”, “fileName” represent the path “folder0/folder1/fileName” </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="mutabledicomdirentry">
+<h3>MutableDicomDirEntry<a class="headerlink" href="#mutabledicomdirentry" title="Permalink to this headline">¶</a></h3>
+<section id="id6">
+<h4>C++<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra20MutableDicomDirEntryE">
+<span id="_CPPv3N6imebra20MutableDicomDirEntryE"></span><span id="_CPPv2N6imebra20MutableDicomDirEntryE"></span><span id="imebra::MutableDicomDirEntry"></span><span class="target" id="classimebra_1_1_mutable_dicom_dir_entry"></span><em class="property">class </em><code class="sig-name descname">MutableDicomDirEntry</code> : <em class="property">public</em> imebra::<a class="reference internal" href="#_CPPv4N6imebra13DicomDirEntryE" title="imebra::DicomDirEntry">DicomDirEntry</a><a class="headerlink" href="#_CPPv4N6imebra20MutableDicomDirEntryE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents a single mutable DICOMDIR entry. </p>
+<p>Each entry can be followed by a sibling entry (on the same depth level) or can point to its first child entry (one level deeper).</p>
+<p>Each <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> object manages a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> which is used to store the entry’s data. The <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> objects managed by <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> objects are inserted as sequence items into the <a class="reference internal" href="#classimebra_1_1_dicom_dir"><span class="std std-ref">DicomDir</span></a>’s <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a>. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra20MutableDicomDirEntry20MutableDicomDirEntryERK20MutableDicomDirEntry">
+<span id="_CPPv3N6imebra20MutableDicomDirEntry20MutableDicomDirEntryERK20MutableDicomDirEntry"></span><span id="_CPPv2N6imebra20MutableDicomDirEntry20MutableDicomDirEntryERK20MutableDicomDirEntry"></span><span id="imebra::MutableDicomDirEntry::MutableDicomDirEntry__MutableDicomDirEntryCR"></span><span class="target" id="classimebra_1_1_mutable_dicom_dir_entry_1a30c404331880f7a080bc3cde49724873"></span><code class="sig-name descname">MutableDicomDirEntry</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra20MutableDicomDirEntry20MutableDicomDirEntryERK20MutableDicomDirEntry" title="imebra::MutableDicomDirEntry::MutableDicomDirEntry">MutableDicomDirEntry</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra20MutableDicomDirEntry20MutableDicomDirEntryERK20MutableDicomDirEntry" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source mutable DICOMDIR entry </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra20MutableDicomDirEntry15getEntryDataSetEv">
+<span id="_CPPv3N6imebra20MutableDicomDirEntry15getEntryDataSetEv"></span><span id="_CPPv2N6imebra20MutableDicomDirEntry15getEntryDataSetEv"></span><span id="imebra::MutableDicomDirEntry::getEntryDataSet"></span><span class="target" id="classimebra_1_1_mutable_dicom_dir_entry_1af58576cd4fb52dead6b2185f2d9ef6db"></span><a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra14MutableDataSetE" title="imebra::MutableDataSet">MutableDataSet</a> <code class="sig-name descname">getEntryDataSet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra20MutableDicomDirEntry15getEntryDataSetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_mutable_data_set"><span class="std std-ref">MutableDataSet</span></a> managed by the <a class="reference internal" href="#classimebra_1_1_mutable_dicom_dir_entry"><span class="std std-ref">MutableDicomDirEntry</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_mutable_data_set"><span class="std std-ref">MutableDataSet</span></a> managed by the <a class="reference internal" href="#classimebra_1_1_mutable_dicom_dir_entry"><span class="std std-ref">MutableDicomDirEntry</span></a> object </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra20MutableDicomDirEntry12setNextEntryERK13DicomDirEntry">
+<span id="_CPPv3N6imebra20MutableDicomDirEntry12setNextEntryERK13DicomDirEntry"></span><span id="_CPPv2N6imebra20MutableDicomDirEntry12setNextEntryERK13DicomDirEntry"></span><span id="imebra::MutableDicomDirEntry::setNextEntry__DicomDirEntryCR"></span><span class="target" id="classimebra_1_1_mutable_dicom_dir_entry_1ab1e36ea2fa84d50de458ca8b4fa923be"></span>void <code class="sig-name descname">setNextEntry</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra13DicomDirEntryE" title="imebra::DicomDirEntry">DicomDirEntry</a> &amp;<em>nextEntry</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra20MutableDicomDirEntry12setNextEntryERK13DicomDirEntry" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the next sibling entry (one the same depth level). </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">nextEntry</span></code>: the next sibling <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra20MutableDicomDirEntry18setFirstChildEntryERK13DicomDirEntry">
+<span id="_CPPv3N6imebra20MutableDicomDirEntry18setFirstChildEntryERK13DicomDirEntry"></span><span id="_CPPv2N6imebra20MutableDicomDirEntry18setFirstChildEntryERK13DicomDirEntry"></span><span id="imebra::MutableDicomDirEntry::setFirstChildEntry__DicomDirEntryCR"></span><span class="target" id="classimebra_1_1_mutable_dicom_dir_entry_1aec25baab82c5b4543d4098a5a51fd547"></span>void <code class="sig-name descname">setFirstChildEntry</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra13DicomDirEntryE" title="imebra::DicomDirEntry">DicomDirEntry</a> &amp;<em>firstChildEntry</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra20MutableDicomDirEntry18setFirstChildEntryERK13DicomDirEntry" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the first child entry (one level deeper). </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">firstChildEntry</span></code>: the first child <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra20MutableDicomDirEntry12setFilePartsERK11fileParts_t">
+<span id="_CPPv3N6imebra20MutableDicomDirEntry12setFilePartsERK11fileParts_t"></span><span id="_CPPv2N6imebra20MutableDicomDirEntry12setFilePartsERK11fileParts_t"></span><span id="imebra::MutableDicomDirEntry::setFileParts__fileParts_tCR"></span><span class="target" id="classimebra_1_1_mutable_dicom_dir_entry_1a4ac22f6dfce53447ced83f607dae8659"></span>void <code class="sig-name descname">setFileParts</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="definition_classes.html#_CPPv4N6imebra11fileParts_tE" title="imebra::fileParts_t">fileParts_t</a> &amp;<em>fileParts</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra20MutableDicomDirEntry12setFilePartsERK11fileParts_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the parts that form the name of the file referenced by the <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fileParts</span></code>: a list of strings that form the name of the file referenced by the <a class="reference internal" href="#classimebra_1_1_dicom_dir_entry"><span class="std std-ref">DicomDirEntry</span></a> object. The last item in the list is the file name, while the preceding items contain the folders names. For instance, on Linux the parts “folder0”, “folder1”, “fileName” represent the path “folder0/folder1/fileName” </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id7">
+<h4>Objective-C/Swift<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv426ImebraMutableDicomDirEntry">
+<span id="_CPPv326ImebraMutableDicomDirEntry"></span><span id="_CPPv226ImebraMutableDicomDirEntry"></span><span id="ImebraMutableDicomDirEntry"></span><span class="target" id="interface_imebra_mutable_dicom_dir_entry"></span><em class="property">class </em><code class="sig-name descname">ImebraMutableDicomDirEntry</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv419ImebraDicomDirEntry" title="ImebraDicomDirEntry">ImebraDicomDirEntry</a><a class="headerlink" href="#_CPPv426ImebraMutableDicomDirEntry" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents a single DICOMDIR entry. </p>
+<p>Each entry can be followed by a sibling entry (on the same depth level) and/or can point to its first child entry (one level deeper).</p>
+<p>Each <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> object manages a <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> which is used to store the entry’s data. The <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> objects managed by <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> objects are inserted as sequence items into the <a class="reference internal" href="#interface_imebra_dicom_dir"><span class="std std-ref">ImebraDicomDir</span></a>’s dataSet. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N26ImebraMutableDicomDirEntry15getEntryDataSetEv">
+<span id="_CPPv3N26ImebraMutableDicomDirEntry15getEntryDataSetEv"></span><span id="_CPPv2N26ImebraMutableDicomDirEntry15getEntryDataSetEv"></span><span id="ImebraMutableDicomDirEntry::getEntryDataSet"></span><span class="target" id="interface_imebra_mutable_dicom_dir_entry_1a1d46d834bf3377173455a2af6fc3a874"></span><a class="reference internal" href="dicom_data_classes.html#_CPPv420ImebraMutableDataSet" title="ImebraMutableDataSet">ImebraMutableDataSet</a> *<code class="sig-name descname">getEntryDataSet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N26ImebraMutableDicomDirEntry15getEntryDataSetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the <a class="reference internal" href="dicom_data_classes.html#interface_imebra_mutable_data_set"><span class="std std-ref">ImebraMutableDataSet</span></a> managed by the <a class="reference internal" href="#interface_imebra_mutable_dicom_dir_entry"><span class="std std-ref">ImebraMutableDicomDirEntry</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the <a class="reference internal" href="dicom_data_classes.html#interface_imebra_mutable_data_set"><span class="std std-ref">ImebraMutableDataSet</span></a> managed by the <a class="reference internal" href="#interface_imebra_mutable_dicom_dir_entry"><span class="std std-ref">ImebraMutableDicomDirEntry</span></a> object </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_mutable_dicom_dir_entry_1a1cf32bf710b5d7e5d78d0b68b10c0334"></span><code class="sig-name descname">void ImebraMutableDicomDirEntry::setNextEntry:error:(ImebraDicomDirEntry  * pNextEntry, (swift_error(nonnull_error)) __attribute__)</code></dt>
+<dd><p>Set the next sibling entry (one the same depth level). </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">nextEntry</span></code>: the next sibling <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> object </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a NSError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_mutable_dicom_dir_entry_1a2ac80761606a4e603cb2afdf0d3ad5bc"></span><code class="sig-name descname">void ImebraMutableDicomDirEntry::setFirstChildEntry:error:(ImebraDicomDirEntry  * pFirstChildEntry, (swift_error(nonnull_error)) __attribute__)</code></dt>
+<dd><p>Set the first child entry (one level deeper). </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">firstChildEntry</span></code>: the first child <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> object </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a NSError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_mutable_dicom_dir_entry_1a717956af8be5bcfd36ee485ce4ebb0f5"></span><code class="sig-name descname">void ImebraMutableDicomDirEntry::setFileParts:error:(NSArray * pFileParts, (swift_error(nonnull_error)) __attribute__)</code></dt>
+<dd><p>Set the parts that form the name of the file referenced by the DicomDirEntry object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fileParts</span></code>: a NSArray of NSString objects that form the name of the file referenced by the <a class="reference internal" href="#interface_imebra_dicom_dir_entry"><span class="std std-ref">ImebraDicomDirEntry</span></a> object. The last item in the list is the file name, while the preceding items contain the folders names. For instance, the parts “folder0”, “folder1”, “fileName” represent the path “folder0/folder1/fileName” </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dimse_classes.html" class="btn btn-neutral float-left" title="DIMSE classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dicom_dictionary_classes.html" class="btn btn-neutral float-right" title="DICOM dictionary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="copyright.html">Copyright</a> 2019, Paolo Brandoli.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

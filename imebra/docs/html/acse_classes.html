@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACSE classes &mdash; Imebra 5.3.3.0 changeset 2c706290 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="next" title="DIMSE classes" href="dimse_classes.html" />
+    <link rel="prev" title="Memory management classes" href="memory_management_classes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Imebra
+          </a>
+              <div class="version">
+                5.3.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p><span class="caption-text">Download Imebra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Downloading Imebra</a></li>
+</ul>
+<p><span class="caption-text">Legal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gplv2.html">GNU General Public License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Commercial license</a></li>
+</ul>
+<p><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes_log.html">Changes log</a></li>
+</ul>
+<p><span class="caption-text">User documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="compiling_imebra.html">Compiling Imebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add_to_project.html">Adding Imebra to your project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_tour.html">Tutorial</a></li>
+</ul>
+<p><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="objects_lifecycle.html">Objects lifecycle and Object ownership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_data_classes.html">DICOM dataSet &amp; tags classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_uid_generation_classes.html">UID generation classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stream_classes.html">Stream classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imaging_classes.html">Imaging classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transforms_classes.html">Transforms classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="memory_management_classes.html">Memory management classes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ACSE classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#presentation-context-classes">Presentation context classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#presentationcontext">PresentationContext</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#presentationcontexts">PresentationContexts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#association-classes">Association classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#associationbase">AssociationBase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#associationscu">AssociationSCU</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id7">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#associationscp">AssociationSCP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id9">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#message-payload-class">Message payload class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#associationmessage">AssociationMessage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id11">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mutableassociationmessage">MutableAssociationMessage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dimse_classes.html">DIMSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicomdir_classes.html">DICOMDIR classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_dictionary_classes.html">DICOM dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definition_classes.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exception_classes.html">Exceptions</a></li>
+</ul>
+<p><span class="caption-text">Build distributions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html">Creating the source distribution from the code in the VCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html#versioning">Versioning</a></li>
+</ul>
+<p><span class="caption-text">Requirements &amp; Risks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html#risks">Risks</a></li>
+</ul>
+<p><span class="caption-text">Standard operating procedures</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sop.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sop.html#sops">SOPs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>ACSE classes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/acse_classes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="acse-classes">
+<h1>ACSE classes<a class="headerlink" href="#acse-classes" title="Permalink to this headline">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This chapter describes the ACSE related classes and methods. ACSE stands for (Association Control Service Element).</p>
+<p>The following classes are described in this chapter:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 37%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>C++ class</p></th>
+<th class="head"><p>Objective-C/Swift class</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra19PresentationContextE" title="imebra::PresentationContext"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::PresentationContext</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv425ImebraPresentationContext" title="ImebraPresentationContext"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraPresentationContext</span></code></a></p></td>
+<td><p>Stores an abstract syntax and
+the list of allowed transfer
+syntaxes</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#_CPPv4N6imebra20PresentationContextsE" title="imebra::PresentationContexts"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::PresentationContexts</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv426ImebraPresentationContexts" title="ImebraPresentationContexts"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraPresentationContexts</span></code></a></p></td>
+<td><p>Stores a list of Presentation
+contexts</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra18AssociationMessageE" title="imebra::AssociationMessage"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::AssociationMessage</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv424ImebraAssociationMessage" title="ImebraAssociationMessage"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraAssociationMessage</span></code></a></p></td>
+<td><p>Stores a message sent through
+an association</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#_CPPv4N6imebra25MutableAssociationMessageE" title="imebra::MutableAssociationMessage"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::MutableAssociationMessage</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv431ImebraMutableAssociationMessage" title="ImebraMutableAssociationMessage"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraMutableAssociationMessage</span></code></a></p></td>
+<td><p>A mutable message (used to
+create a message)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra15AssociationBaseE" title="imebra::AssociationBase"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::AssociationBase</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv421ImebraAssociationBase" title="ImebraAssociationBase"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraAssociationBase</span></code></a></p></td>
+<td><p>Base class for the associations</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#_CPPv4N6imebra14AssociationSCUE" title="imebra::AssociationSCU"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::AssociationSCU</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv420ImebraAssociationSCU" title="ImebraAssociationSCU"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraAssociationSCU</span></code></a></p></td>
+<td><p>An SCU association (Service
+user)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra14AssociationSCPE" title="imebra::AssociationSCP"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::AssociationSCP</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv420ImebraAssociationSCP" title="ImebraAssociationSCP"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraAssociationSCP</span></code></a></p></td>
+<td><p>An SCP association (service
+provider)</p></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-default" id="id15" style="width: 100%">
+<a class="reference external image-reference" href="_images/acse.jpg"><img alt="ACSE related classes" src="_images/acse.jpg" /></a>
+<figcaption>
+<p><span class="caption-text">Class diagram of the ACSE related classes</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The ACSE classes (Association Control Service Element) take care of negotiating a DICOM association and transporting DICOM
+messages between DICOM entities connected through the association.</p>
+<p>The client (Service User or SCU) must use <span class="xref std std-ref">AssociationSCU</span> to connect, while the server (Service Provider or SCP) must
+use <span class="xref std std-ref">AssociationSCP</span> to connect with a client.</p>
+<p>The association usually transmits and receive data via a <a class="reference internal" href="stream_classes.html#tcpstream"><span class="std std-ref">TCPStream</span></a>, therefore the sequence of operations needed to
+connect an SCU to a remote SCP are as follow:</p>
+<ul class="simple">
+<li><p>Create a <a class="reference internal" href="stream_classes.html#tcpstream"><span class="std std-ref">TCPStream</span></a> which connects to the remote SCP</p></li>
+<li><p>Allocate a <span class="xref std std-ref">StreamReader</span> and a <span class="xref std std-ref">StreamWriter</span> connected to the <a class="reference internal" href="stream_classes.html#tcpstream"><span class="std std-ref">TCPStream</span></a> input and output streams
+(use <code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getStreamInput</span></code> and <code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getStreamOutput</span></code>)</p></li>
+<li><p>Allocate a <span class="xref std std-ref">PresentationContexts</span> and fill it with <a class="reference internal" href="#presentationcontext"><span class="std std-ref">PresentationContext</span></a> objects that represent the requested
+presentation contexts (abstract syntaxes and supported transfer syntaxes)</p></li>
+<li><p>Allocate a <span class="xref std std-ref">AssociationSCU</span> which in the constructor will perform the association negotiation through the
+<span class="xref std std-ref">StreamReader</span> and <span class="xref std std-ref">StreamWriter</span></p></li>
+</ul>
+<figure class="align-default" id="id16" style="width: 100%">
+<a class="reference external image-reference" href="_images/sequence_instantiateSCU.jpg"><img alt="Sequence diagram that shows how to instantiate an SCU" src="_images/sequence_instantiateSCU.jpg" /></a>
+<figcaption>
+<p><span class="caption-text">Sequence diagram that shows how to instantiate an SCU</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Once the association has been allocated, the client should use a DimseService in order to send and receive DICOM commands
+and responses.</p>
+</section>
+<section id="presentation-context-classes">
+<h2>Presentation context classes<a class="headerlink" href="#presentation-context-classes" title="Permalink to this headline">¶</a></h2>
+<section id="presentationcontext">
+<span id="id1"></span><h3>PresentationContext<a class="headerlink" href="#presentationcontext" title="Permalink to this headline">¶</a></h3>
+<section id="c">
+<h4>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra19PresentationContextE">
+<span id="_CPPv3N6imebra19PresentationContextE"></span><span id="_CPPv2N6imebra19PresentationContextE"></span><span id="imebra::PresentationContext"></span><span class="target" id="classimebra_1_1_presentation_context"></span><em class="property">class </em><code class="sig-name descname">PresentationContext</code><a class="headerlink" href="#_CPPv4N6imebra19PresentationContextE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A presentation context defines which transfer syntaxes are supported for a specific abstract syntax. </p>
+<p>Add the <a class="reference internal" href="#classimebra_1_1_presentation_context"><span class="std std-ref">PresentationContext</span></a> to the <a class="reference internal" href="#classimebra_1_1_presentation_contexts"><span class="std std-ref">PresentationContexts</span></a> list to build a list of <a class="reference internal" href="#classimebra_1_1_presentation_context"><span class="std std-ref">PresentationContext</span></a> objects that can be managed by the client application. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra19PresentationContext19PresentationContextERKNSt6stringE">
+<span id="_CPPv3N6imebra19PresentationContext19PresentationContextERKNSt6stringE"></span><span id="_CPPv2N6imebra19PresentationContext19PresentationContextERKNSt6stringE"></span><span id="imebra::PresentationContext::PresentationContext__ssCR"></span><span class="target" id="classimebra_1_1_presentation_context_1a56d64f079592c2b8810113e632f92dfb"></span><code class="sig-name descname">PresentationContext</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>abstractSyntax</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra19PresentationContext19PresentationContextERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p>The SCU will act as SCU and the SCP will act as SCP when using this presentation context. To specify the roles of the SCU and the SCP use the other constructor which includes the roles parameters.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">abstractSyntax</span></code>: the abstract syntax described by this presentation context </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra19PresentationContext19PresentationContextERKNSt6stringEbb">
+<span id="_CPPv3N6imebra19PresentationContext19PresentationContextERKNSt6stringEbb"></span><span id="_CPPv2N6imebra19PresentationContext19PresentationContextERKNSt6stringEbb"></span><span id="imebra::PresentationContext::PresentationContext__ssCR.b.b"></span><span class="target" id="classimebra_1_1_presentation_context_1a6090bdbbc377603dfc89cf849e25e5e5"></span><code class="sig-name descname">PresentationContext</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>abstractSyntax</em>, bool <em>bSCURole</em>, bool <em>bSCPRole</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra19PresentationContext19PresentationContextERKNSt6stringEbb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">abstractSyntax</span></code>: the abstract syntax described by this presentation context </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bSCURole</span></code>: if true then the SCU will act as an SCU. The SCU and SCP can be both an SCU and an SCP for the same abstract syntax </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bSCPRole</span></code>: if true then the SCU will act as an SCP The SCU and SCP can be both an SCU and an SCP for the same abstract syntax </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra19PresentationContext19PresentationContextERK19PresentationContext">
+<span id="_CPPv3N6imebra19PresentationContext19PresentationContextERK19PresentationContext"></span><span id="_CPPv2N6imebra19PresentationContext19PresentationContextERK19PresentationContext"></span><span id="imebra::PresentationContext::PresentationContext__PresentationContextCR"></span><span class="target" id="classimebra_1_1_presentation_context_1a2178c13bec890ec945e418472f39fbd7"></span><code class="sig-name descname">PresentationContext</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra19PresentationContext19PresentationContextERKNSt6stringE" title="imebra::PresentationContext::PresentationContext">PresentationContext</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra19PresentationContext19PresentationContextERK19PresentationContext" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source presentation context </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra19PresentationContext17addTransferSyntaxERKNSt6stringE">
+<span id="_CPPv3N6imebra19PresentationContext17addTransferSyntaxERKNSt6stringE"></span><span id="_CPPv2N6imebra19PresentationContext17addTransferSyntaxERKNSt6stringE"></span><span id="imebra::PresentationContext::addTransferSyntax__ssCR"></span><span class="target" id="classimebra_1_1_presentation_context_1a6ceed595db72930e2310721fd2a9b724"></span>void <code class="sig-name descname">addTransferSyntax</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>transferSyntax</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra19PresentationContext17addTransferSyntaxERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add a supported transfer syntax to the presentation context. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">transferSyntax</span></code>: the transfer syntax to add </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="objective-c-swift">
+<h4>Objective-C/Swift<a class="headerlink" href="#objective-c-swift" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv425ImebraPresentationContext">
+<span id="_CPPv325ImebraPresentationContext"></span><span id="_CPPv225ImebraPresentationContext"></span><span id="ImebraPresentationContext"></span><span class="target" id="interface_imebra_presentation_context"></span><em class="property">class </em><code class="sig-name descname">ImebraPresentationContext</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv425ImebraPresentationContext" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A presentation context defines which transfer syntaxes are supported for a specific abstract syntax. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_presentation_context_1a6e1845723c4f4da5bc2d214fbc05e527"></span><code class="sig-name descname">id ImebraPresentationContext::initWithAbstractSyntax:(NSString * abstractSyntax)</code></dt>
+<dd><p>Initializer. </p>
+<p>The SCU will act as SCU and the SCP will act as SCP when using this presentation context. To specify the roles of the SCU and the SCP use the initializer which includes the roles parameters.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">abstractSyntax</span></code>: the abstract syntax described by this presentation context </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_presentation_context_1a37acaf8bc68c7d0961886084c54a2bda"></span><code class="sig-name descname">id ImebraPresentationContext::initWithAbstractSyntax:scuRole:scpRole:(NSString * abstractSyntax, BOOL bSCURole, BOOL bSCPRole)</code></dt>
+<dd><p>Initializer that specifies the SCU/SCP roles. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">abstractSyntax</span></code>: the abstract syntax described by this presentation context </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bSCURole</span></code>: if true then the SCU will act as an SCU. The SCU and SCP can be both an SCU and an SCP for the same abstract syntax </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bSCPRole</span></code>: if true then the SCU will act as an SCP The SCU and SCP can be both an SCU and an SCP for the same abstract syntax </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_presentation_context_1a744e8691b8dcbf497e6efe8ac20ef098"></span><code class="sig-name descname">void ImebraPresentationContext::addTransferSyntax:(NSString * transferSyntax)</code></dt>
+<dd><p>Add a supported transfer syntax to the presentation context. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">transferSyntax</span></code>: the transfer syntax to add </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="presentationcontexts">
+<h3>PresentationContexts<a class="headerlink" href="#presentationcontexts" title="Permalink to this headline">¶</a></h3>
+<section id="id2">
+<h4>C++<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra20PresentationContextsE">
+<span id="_CPPv3N6imebra20PresentationContextsE"></span><span id="_CPPv2N6imebra20PresentationContextsE"></span><span id="imebra::PresentationContexts"></span><span class="target" id="classimebra_1_1_presentation_contexts"></span><em class="property">class </em><code class="sig-name descname">PresentationContexts</code><a class="headerlink" href="#_CPPv4N6imebra20PresentationContextsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A collection of <a class="reference internal" href="#classimebra_1_1_presentation_context"><span class="std std-ref">PresentationContext</span></a> objects. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra20PresentationContexts20PresentationContextsEv">
+<span id="_CPPv3N6imebra20PresentationContexts20PresentationContextsEv"></span><span id="_CPPv2N6imebra20PresentationContexts20PresentationContextsEv"></span><span id="imebra::PresentationContexts::PresentationContexts"></span><span class="target" id="classimebra_1_1_presentation_contexts_1a123eba477fa1e25248aa9c8bbafd9650"></span><code class="sig-name descname">PresentationContexts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra20PresentationContexts20PresentationContextsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Default constructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra20PresentationContexts20PresentationContextsERK20PresentationContexts">
+<span id="_CPPv3N6imebra20PresentationContexts20PresentationContextsERK20PresentationContexts"></span><span id="_CPPv2N6imebra20PresentationContexts20PresentationContextsERK20PresentationContexts"></span><span id="imebra::PresentationContexts::PresentationContexts__PresentationContextsCR"></span><span class="target" id="classimebra_1_1_presentation_contexts_1a90995727b385a1efff61605d5848e001"></span><code class="sig-name descname">PresentationContexts</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra20PresentationContexts20PresentationContextsEv" title="imebra::PresentationContexts::PresentationContexts">PresentationContexts</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra20PresentationContexts20PresentationContextsERK20PresentationContexts" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source presentation contexts </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra20PresentationContexts22addPresentationContextERK19PresentationContext">
+<span id="_CPPv3N6imebra20PresentationContexts22addPresentationContextERK19PresentationContext"></span><span id="_CPPv2N6imebra20PresentationContexts22addPresentationContextERK19PresentationContext"></span><span id="imebra::PresentationContexts::addPresentationContext__PresentationContextCR"></span><span class="target" id="classimebra_1_1_presentation_contexts_1a51dc40623024ec8e59eb2c25869423af"></span>void <code class="sig-name descname">addPresentationContext</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra19PresentationContextE" title="imebra::PresentationContext">PresentationContext</a> &amp;<em>presentationContext</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra20PresentationContexts22addPresentationContextERK19PresentationContext" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add a presentation context to the collection. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">presentationContext</span></code>: the presentation context to add to the collection </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id3">
+<h4>Objective-C/Swift<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv426ImebraPresentationContexts">
+<span id="_CPPv326ImebraPresentationContexts"></span><span id="_CPPv226ImebraPresentationContexts"></span><span id="ImebraPresentationContexts"></span><span class="target" id="interface_imebra_presentation_contexts"></span><em class="property">class </em><code class="sig-name descname">ImebraPresentationContexts</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv426ImebraPresentationContexts" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A collection of presentation contexts. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N26ImebraPresentationContexts4initEv">
+<span id="_CPPv3N26ImebraPresentationContexts4initEv"></span><span id="_CPPv2N26ImebraPresentationContexts4initEv"></span><span id="ImebraPresentationContexts::init"></span><span class="target" id="interface_imebra_presentation_contexts_1a1f0b3cf06e0230904c4a9ccd1c205de4"></span>id <code class="sig-name descname">init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N26ImebraPresentationContexts4initEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initializer. </p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_presentation_contexts_1a6d905117ad8fb79c046e5a3b2eceeafc"></span><code class="sig-name descname">void ImebraPresentationContexts::addPresentationContext:(ImebraPresentationContext  * pPresentationContext)</code></dt>
+<dd><p>Add a presentation context to the collection. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pPresentationContext</span></code>: the presentation context to add to the collection </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+</section>
+<section id="association-classes">
+<h2>Association classes<a class="headerlink" href="#association-classes" title="Permalink to this headline">¶</a></h2>
+<section id="associationbase">
+<span id="id4"></span><h3>AssociationBase<a class="headerlink" href="#associationbase" title="Permalink to this headline">¶</a></h3>
+<section id="id5">
+<h4>C++<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra15AssociationBaseE">
+<span id="_CPPv3N6imebra15AssociationBaseE"></span><span id="_CPPv2N6imebra15AssociationBaseE"></span><span id="imebra::AssociationBase"></span><span class="target" id="classimebra_1_1_association_base"></span><em class="property">class </em><code class="sig-name descname">AssociationBase</code><a class="headerlink" href="#_CPPv4N6imebra15AssociationBaseE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The <a class="reference internal" href="#classimebra_1_1_association_base"><span class="std std-ref">AssociationBase</span></a> class. </p>
+<p>Subclassed by <a class="reference internal" href="#classimebra_1_1_association_s_c_p"><span class="std std-ref">imebra::AssociationSCP</span></a>, <a class="reference internal" href="#classimebra_1_1_association_s_c_u"><span class="std std-ref">imebra::AssociationSCU</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra15AssociationBaseD0Ev">
+<span id="_CPPv3N6imebra15AssociationBaseD0Ev"></span><span id="_CPPv2N6imebra15AssociationBaseD0Ev"></span><span id="imebra::AssociationBase::~AssociationBase"></span><span class="target" id="classimebra_1_1_association_base_1a8bf9bdbfcfecfee52a147889cdd4f47a"></span><em class="property">virtual</em> <code class="sig-name descname">~AssociationBase</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15AssociationBaseD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra15AssociationBase10getCommandEv">
+<span id="_CPPv3N6imebra15AssociationBase10getCommandEv"></span><span id="_CPPv2N6imebra15AssociationBase10getCommandEv"></span><span id="imebra::AssociationBase::getCommand"></span><span class="target" id="classimebra_1_1_association_base_1a9588ff1a584eeee6e85942a8de3e3dfb"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra18AssociationMessageE" title="imebra::AssociationMessage">AssociationMessage</a> <code class="sig-name descname">getCommand</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15AssociationBase10getCommandEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Read a command dataset and its payload (if any). </p>
+<p>Throws <a class="reference internal" href="exception_classes.html#classimebra_1_1_stream_closed_error"><span class="std std-ref">StreamClosedError</span></a> if the association has been released or aborted.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an AssociationDataSet containing a command and its payload. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra15AssociationBase11getResponseENSt8uint16_tE">
+<span id="_CPPv3N6imebra15AssociationBase11getResponseENSt8uint16_tE"></span><span id="_CPPv2N6imebra15AssociationBase11getResponseENSt8uint16_tE"></span><span id="imebra::AssociationBase::getResponse__std::uint16_t"></span><span class="target" id="classimebra_1_1_association_base_1a9a9d63541be97647b92fc6ca8ff8030f"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra18AssociationMessageE" title="imebra::AssociationMessage">AssociationMessage</a> <code class="sig-name descname">getResponse</code><span class="sig-paren">(</span>std::uint16_t <em>messageId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15AssociationBase11getResponseENSt8uint16_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Read a response dataset and its payload (if any). </p>
+<p>Throws <a class="reference internal" href="exception_classes.html#classimebra_1_1_stream_closed_error"><span class="std std-ref">StreamClosedError</span></a> if the association has been released or aborted.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an AssociationDataSet containing a response and its payload. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra15AssociationBase11sendMessageERK18AssociationMessage">
+<span id="_CPPv3N6imebra15AssociationBase11sendMessageERK18AssociationMessage"></span><span id="_CPPv2N6imebra15AssociationBase11sendMessageERK18AssociationMessage"></span><span id="imebra::AssociationBase::sendMessage__AssociationMessageCR"></span><span class="target" id="classimebra_1_1_association_base_1aba8d6af65ed44f9b8ba1c35135df6c0b"></span>void <code class="sig-name descname">sendMessage</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra18AssociationMessageE" title="imebra::AssociationMessage">AssociationMessage</a> &amp;<em>messageDataSet</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15AssociationBase11sendMessageERK18AssociationMessage" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Send a DICOM message to the connected peer. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">messageDataSet</span></code>: the DICOM message to send </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra15AssociationBase7releaseEv">
+<span id="_CPPv3N6imebra15AssociationBase7releaseEv"></span><span id="_CPPv2N6imebra15AssociationBase7releaseEv"></span><span id="imebra::AssociationBase::release"></span><span class="target" id="classimebra_1_1_association_base_1a4402737e9de84180e3d010d71ccaef72"></span>void <code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15AssociationBase7releaseEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Releases the association. </p>
+<p>The method blocks until the other party acknowledges the release command or until the ACSE timout expires. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra15AssociationBase5abortEv">
+<span id="_CPPv3N6imebra15AssociationBase5abortEv"></span><span id="_CPPv2N6imebra15AssociationBase5abortEv"></span><span id="imebra::AssociationBase::abort"></span><span class="target" id="classimebra_1_1_association_base_1a86b351c1c25e60eeb4c7f43b68c19806"></span>void <code class="sig-name descname">abort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15AssociationBase5abortEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Aborts the association. </p>
+<p>The association will be aborted as soon as possible. The other party will not acknowledge the abort command. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra15AssociationBase10getThisAETEv">
+<span id="_CPPv3NK6imebra15AssociationBase10getThisAETEv"></span><span id="_CPPv2NK6imebra15AssociationBase10getThisAETEv"></span><span id="imebra::AssociationBase::getThisAETC"></span><span class="target" id="classimebra_1_1_association_base_1a5ad892cd04f7fc35cbc7ac2883f11b44"></span>std::string <code class="sig-name descname">getThisAET</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra15AssociationBase10getThisAETEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns our AET. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>our AET </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra15AssociationBase11getOtherAETEv">
+<span id="_CPPv3NK6imebra15AssociationBase11getOtherAETEv"></span><span id="_CPPv2NK6imebra15AssociationBase11getOtherAETEv"></span><span id="imebra::AssociationBase::getOtherAETC"></span><span class="target" id="classimebra_1_1_association_base_1a2f8cd151e6807b31ed451188e3d692ba"></span>std::string <code class="sig-name descname">getOtherAET</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra15AssociationBase11getOtherAETEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the other party’s AET. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the connected peer’s AET </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra15AssociationBase17getTransferSyntaxERKNSt6stringE">
+<span id="_CPPv3NK6imebra15AssociationBase17getTransferSyntaxERKNSt6stringE"></span><span id="_CPPv2NK6imebra15AssociationBase17getTransferSyntaxERKNSt6stringE"></span><span id="imebra::AssociationBase::getTransferSyntax__ssCRC"></span><span class="target" id="classimebra_1_1_association_base_1ae72495699368fbc10a0e5fa45f971847"></span>std::string <code class="sig-name descname">getTransferSyntax</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>abstractSyntax</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra15AssociationBase17getTransferSyntaxERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the transfer syntax negotiated for a specific abstract syntax. </p>
+<p>This method has been deprecated: use <a class="reference internal" href="#classimebra_1_1_association_base_1a240df131feb05ff0699614b3b70d6a66"><span class="std std-ref">getTransferSyntaxes()</span></a> instead.</p>
+<p>Throws:<ul class="simple">
+<li><p><a class="reference internal" href="exception_classes.html#classimebra_1_1_acse_no_transfer_syntax_error"><span class="std std-ref">AcseNoTransferSyntaxError</span></a> if no transfer syntax is available for the requested abstract syntax or</p></li>
+<li><p><a class="reference internal" href="exception_classes.html#classimebra_1_1_acse_presentation_context_not_requested_error"><span class="std std-ref">AcsePresentationContextNotRequestedError</span></a> if the abstract syntax was not negotiated at all.</p></li>
+</ul>
+</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the negotiated transfer syntax for the specified abstract syntax </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">abstractSyntax</span></code>: the abstract syntax for which the transfer syntax is requested </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra15AssociationBase19getTransferSyntaxesERKNSt6stringE">
+<span id="_CPPv3NK6imebra15AssociationBase19getTransferSyntaxesERKNSt6stringE"></span><span id="_CPPv2NK6imebra15AssociationBase19getTransferSyntaxesERKNSt6stringE"></span><span id="imebra::AssociationBase::getTransferSyntaxes__ssCRC"></span><span class="target" id="classimebra_1_1_association_base_1a240df131feb05ff0699614b3b70d6a66"></span>std::vector&lt;std::string&gt; <code class="sig-name descname">getTransferSyntaxes</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>abstractSyntax</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra15AssociationBase19getTransferSyntaxesERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the transfer syntaxes negotiated for a specific abstract syntax. </p>
+<p>Throws:<ul class="simple">
+<li><p><a class="reference internal" href="exception_classes.html#classimebra_1_1_acse_no_transfer_syntax_error"><span class="std std-ref">AcseNoTransferSyntaxError</span></a> if no transfer syntax is available for the requested abstract syntax or</p></li>
+<li><p><a class="reference internal" href="exception_classes.html#classimebra_1_1_acse_presentation_context_not_requested_error"><span class="std std-ref">AcsePresentationContextNotRequestedError</span></a> if the abstract syntax was not negotiated at all.</p></li>
+</ul>
+</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the negotiated transfer syntaxes for the specified abstract syntax </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">abstractSyntax</span></code>: the abstract syntax for which the transfer syntax is requested </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id6">
+<h4>Objective-C/Swift<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv421ImebraAssociationBase">
+<span id="_CPPv321ImebraAssociationBase"></span><span id="_CPPv221ImebraAssociationBase"></span><span id="ImebraAssociationBase"></span><span class="target" id="interface_imebra_association_base"></span><em class="property">class </em><code class="sig-name descname">ImebraAssociationBase</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv421ImebraAssociationBase" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The association base class. </p>
+<p>Subclassed by <a class="reference internal" href="#interface_imebra_association_s_c_p"><span class="std std-ref">ImebraAssociationSCP</span></a>, <a class="reference internal" href="#interface_imebra_association_s_c_u"><span class="std std-ref">ImebraAssociationSCU</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_association_base_1a374e4804f531760c2cc04943a1aa1d27"></span><code class="sig-name descname">ImebraAssociationMessage* ImebraAssociationBase::getCommand:(NSError ** pError)</code></dt>
+<dd><p>Read a command dataset and its payload (if any). </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an <a class="reference internal" href="#interface_imebra_association_message"><span class="std std-ref">ImebraAssociationMessage</span></a> containing a command and its payload. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to ImebraStreamClosedError if the association has been released or aborted.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_association_base_1ab57c03d74557ec99b46280a3e354080e"></span><code class="sig-name descname">ImebraAssociationMessage* ImebraAssociationBase::getResponse:error:(unsigned int messageId, NSError ** pError)</code></dt>
+<dd><p>Read a response dataset and its payload (if any). </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an AssociationDataSet containing a response and its payload. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">messageId</span></code>: the message ID for which the response is expected </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to ImebraStreamClosedError if the association has been released or aborted.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_association_base_1a5478791bcf87d0422d62e86a4af9d9db"></span><code class="sig-name descname">void ImebraAssociationBase::sendMessage:error:(ImebraAssociationMessage  * pMessage, (swift_error(nonnull_error)) __attribute__)</code></dt>
+<dd><p>Send a DICOM message to the connected peer. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pMessage</span></code>: the DICOM message to send </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a subclass of NSError in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_association_base_1ada9e89650355889ddf3cd2d50155174a"></span><code class="sig-name descname">void ImebraAssociationBase::release:((swift_error(nonnull_error)) __attribute__)</code></dt>
+<dd><p>Releases the association. </p>
+<p>The method blocks until the other party acknowledges the release command or until the ACSE timout expires.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a subclass of NSError in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_association_base_1a05e15202a974b7ec8939fa9887293fd2"></span><code class="sig-name descname">void ImebraAssociationBase::abort:((swift_error(nonnull_error)) __attribute__)</code></dt>
+<dd><p>Aborts the association. </p>
+<p>The association will be aborted as soon as possible. The other party will not acknowledge the abort command.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a subclass of NSError in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_association_base_1a9393dc8f17a6f02efc7f27501acd4258"></span><code class="sig-name descname">NSString* ImebraAssociationBase::getTransferSyntax:error:(NSString * abstractSyntax, NSError ** pError)</code></dt>
+<dd><p>Returns the transfer syntax negotiated for a specific abstract syntax. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the negotiated transfer syntax for the specified abstract syntax </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">abstractSyntax</span></code>: the abstract syntax for which the transfer syntax is requested </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to ImebraAcseNoTransferSyntaxError if no transfer syntax is available or ImebraAcsePresentationContextNotRequestedError if the abstract syntax was not negotiated at all </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Property</p>
+<dl class="member">
+<dt>
+<span class="target" id="interface_imebra_association_base_1aeb75b8bd39f9433a4820c6dc6d310e80"></span><em class="property">property </em><code class="sig-name descname">ImebraAssociationBase::thisAET</code></dt>
+<dd><p>Returns our AET. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="interface_imebra_association_base_1a3c2338a80f0b62792c3ebfadb98e57cf"></span><em class="property">property </em><code class="sig-name descname">ImebraAssociationBase::otherAET</code></dt>
+<dd><p>Returns the other party’s AET. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="associationscu">
+<h3>AssociationSCU<a class="headerlink" href="#associationscu" title="Permalink to this headline">¶</a></h3>
+<section id="id7">
+<h4>C++<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra14AssociationSCUE">
+<span id="_CPPv3N6imebra14AssociationSCUE"></span><span id="_CPPv2N6imebra14AssociationSCUE"></span><span id="imebra::AssociationSCU"></span><span class="target" id="classimebra_1_1_association_s_c_u"></span><em class="property">class </em><code class="sig-name descname">AssociationSCU</code> : <em class="property">public</em> imebra::<a class="reference internal" href="#_CPPv4N6imebra15AssociationBaseE" title="imebra::AssociationBase">AssociationBase</a><a class="headerlink" href="#_CPPv4N6imebra14AssociationSCUE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents the SCU part of an association. </p>
+<p>The constructor tries to create an association with an SCP via the <a class="reference internal" href="stream_classes.html#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> and the <a class="reference internal" href="stream_classes.html#classimebra_1_1_stream_writer"><span class="std std-ref">StreamWriter</span></a> passed as parameter; when communicating through the <a class="reference internal" href="stream_classes.html#classimebra_1_1_t_c_p_stream"><span class="std std-ref">TCPStream</span></a> then the same object is used as reader and writer. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra14AssociationSCU14AssociationSCUERKNSt6stringERKNSt6stringENSt8uint32_tENSt8uint32_tERK20PresentationContextsR12StreamReaderR12StreamWriterNSt8uint32_tE">
+<span id="_CPPv3N6imebra14AssociationSCU14AssociationSCUERKNSt6stringERKNSt6stringENSt8uint32_tENSt8uint32_tERK20PresentationContextsR12StreamReaderR12StreamWriterNSt8uint32_tE"></span><span id="_CPPv2N6imebra14AssociationSCU14AssociationSCUERKNSt6stringERKNSt6stringENSt8uint32_tENSt8uint32_tERK20PresentationContextsR12StreamReaderR12StreamWriterNSt8uint32_tE"></span><span id="imebra::AssociationSCU::AssociationSCU__ssCR.ssCR.std::uint32_t.std::uint32_t.PresentationContextsCR.StreamReaderR.StreamWriterR.std::uint32_t"></span><span class="target" id="classimebra_1_1_association_s_c_u_1a9ccaa2377044577a31a8e0ce99d7922f"></span><code class="sig-name descname">AssociationSCU</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>thisAET</em>, <em class="property">const</em> std::string &amp;<em>otherAET</em>, std::uint32_t <em>invokedOperations</em>, std::uint32_t <em>performedOperations</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra20PresentationContextsE" title="imebra::PresentationContexts">PresentationContexts</a> &amp;<em>presentationContexts</em>, <a class="reference internal" href="stream_classes.html#_CPPv4N6imebra12StreamReaderE" title="imebra::StreamReader">StreamReader</a> &amp;<em>pInput</em>, <a class="reference internal" href="stream_classes.html#_CPPv4N6imebra12StreamWriterE" title="imebra::StreamWriter">StreamWriter</a> &amp;<em>pOutput</em>, std::uint32_t <em>dimseTimeoutSeconds</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra14AssociationSCU14AssociationSCUERKNSt6stringERKNSt6stringENSt8uint32_tENSt8uint32_tERK20PresentationContextsR12StreamReaderR12StreamWriterNSt8uint32_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initiates an association request. </p>
+<p>Blocks until the association has been negotiated successfully or an error occurs (an exception is thrown).</p>
+<p><p>The constructor blocks until an association has been successfully negotiated or until an error happens (an exception is thrown).</p>
+<dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">thisAET</span></code>: the AET of the SCU </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">otherAET</span></code>: the AET of the SCP with wich the association is negotiated </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invokedOperations</span></code>: maximum number of parallel operations we intend to invoke when acting as a SCU </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">performedOperations</span></code>: maximum number of parallel operations we can perform when acting as a SCP </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">presentationContexts</span></code>: list of proposed presentation contexts </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pInput</span></code>: input stream from which the SCP receives data. When using a <a class="reference internal" href="stream_classes.html#classimebra_1_1_t_c_p_stream"><span class="std std-ref">TCPStream</span></a> the same object can act as both input and output </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pOutput</span></code>: output stream into which the SCP writes data. When using a <a class="reference internal" href="stream_classes.html#classimebra_1_1_t_c_p_stream"><span class="std std-ref">TCPStream</span></a> the same object can act as both input and output </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dimseTimeoutSeconds</span></code>: DIMSE timeout, in seconds. 0 means infinite</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+<p>Throws:<ul class="simple">
+<li><p>CorruptedAcseMessageError</p></li>
+<li><p><a class="reference internal" href="exception_classes.html#classimebra_1_1_acse_s_c_u_application_context_name_not_supported_error"><span class="std std-ref">AcseSCUApplicationContextNameNotSupportedError</span></a></p></li>
+<li><p><a class="reference internal" href="exception_classes.html#classimebra_1_1_acse_s_c_u_called_a_e_t_not_recognized_error"><span class="std std-ref">AcseSCUCalledAETNotRecognizedError</span></a></p></li>
+<li><p><a class="reference internal" href="exception_classes.html#classimebra_1_1_codec_wrong_format_error"><span class="std std-ref">CodecWrongFormatError</span></a></p></li>
+<li><p><a class="reference internal" href="exception_classes.html#classimebra_1_1_dicom_codec_depth_limit_reached_error"><span class="std std-ref">DicomCodecDepthLimitReachedError</span></a> </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra14AssociationSCU14AssociationSCUERK14AssociationSCU">
+<span id="_CPPv3N6imebra14AssociationSCU14AssociationSCUERK14AssociationSCU"></span><span id="_CPPv2N6imebra14AssociationSCU14AssociationSCUERK14AssociationSCU"></span><span id="imebra::AssociationSCU::AssociationSCU__AssociationSCUCR"></span><span class="target" id="classimebra_1_1_association_s_c_u_1ab4b31fe5f22ba34b25f2138bd2f5250a"></span><code class="sig-name descname">AssociationSCU</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra14AssociationSCU14AssociationSCUERKNSt6stringERKNSt6stringENSt8uint32_tENSt8uint32_tERK20PresentationContextsR12StreamReaderR12StreamWriterNSt8uint32_tE" title="imebra::AssociationSCU::AssociationSCU">AssociationSCU</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra14AssociationSCU14AssociationSCUERK14AssociationSCU" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source SCU association </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id8">
+<h4>Objective-C/Swift<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv420ImebraAssociationSCU">
+<span id="_CPPv320ImebraAssociationSCU"></span><span id="_CPPv220ImebraAssociationSCU"></span><span id="ImebraAssociationSCU"></span><span class="target" id="interface_imebra_association_s_c_u"></span><em class="property">class </em><code class="sig-name descname">ImebraAssociationSCU</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv421ImebraAssociationBase" title="ImebraAssociationBase">ImebraAssociationBase</a><a class="headerlink" href="#_CPPv420ImebraAssociationSCU" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents the SCU part of an association. </p>
+<p>The initializer tries to create an association with an SCP via the <a class="reference internal" href="stream_classes.html#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> and the <a class="reference internal" href="stream_classes.html#interface_imebra_stream_writer"><span class="std std-ref">ImebraStreamWriter</span></a> passed as parameter; when communicating through the <a class="reference internal" href="stream_classes.html#interface_imebra_t_c_p_stream"><span class="std std-ref">ImebraTCPStream</span></a> then the same object is used as reader and writer. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_association_s_c_u_1add0f0514e0d847aa0606f80e536856ae"></span><code class="sig-name descname">id ImebraAssociationSCU::initWithThisAET:otherAET:maxInvokedOperations:maxPerformedOperations:presentationContexts:reader:writer:dimseTimeoutSeconds:error:(NSString * thisAET, NSString * otherAET, unsigned int invokedOperations, unsigned int performedOperations, ImebraPresentationContexts  * presentationContexts, ImebraStreamReader  * pInput, ImebraStreamWriter  * pOutput, unsigned int dimseTimeoutSeconds, NSError ** pError)</code></dt>
+<dd><p>Initiates an association request. </p>
+<p>Blocks until the association has been negotiated successfully or an error occurs (pError is set).</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">thisAET</span></code>: the AET of the SCU </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">otherAET</span></code>: the AET of the SCP with wich the association is negotiated </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invokedOperations</span></code>: maximum number of parallel operations we intend to invoke when acting as a SCU </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">performedOperations</span></code>: maximum number of parallel operations we can perform when acting as a SCP </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">presentationContexts</span></code>: list of proposed presentation contexts </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pInput</span></code>: input stream from which the SCP receives data. When using a TCPStream the same object can act as both input and output </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pOutput</span></code>: output stream into which the SCP writes data. When using a TCPStream the same object can act as both input and output </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dimseTimeoutSeconds</span></code>: DIMSE timeout, in seconds. 0 means infinite </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: may be set to one of the following errors:<ul>
+<li><p>ImebraCorruptedAcseMessageError</p></li>
+<li><p>ImebraAcseSCUApplicationContextNameNotSupportedError</p></li>
+<li><p>ImebraAcseSCUCalledAETNotRecognizedError</p></li>
+<li><p>ImebraCodecWrongFormatError</p></li>
+<li><p>ImebraDicomCodecDepthLimitReachedError </p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="associationscp">
+<h3>AssociationSCP<a class="headerlink" href="#associationscp" title="Permalink to this headline">¶</a></h3>
+<section id="id9">
+<h4>C++<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra14AssociationSCPE">
+<span id="_CPPv3N6imebra14AssociationSCPE"></span><span id="_CPPv2N6imebra14AssociationSCPE"></span><span id="imebra::AssociationSCP"></span><span class="target" id="classimebra_1_1_association_s_c_p"></span><em class="property">class </em><code class="sig-name descname">AssociationSCP</code> : <em class="property">public</em> imebra::<a class="reference internal" href="#_CPPv4N6imebra15AssociationBaseE" title="imebra::AssociationBase">AssociationBase</a><a class="headerlink" href="#_CPPv4N6imebra14AssociationSCPE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents the SCP part of an association. </p>
+<p>The constructor waits for an incoming DICOM association request (a-request-rq) and then returns once the association has been established, or throws CorruptedAcseMessageError if the SCU sends a wrong message type.</p>
+<p><strong><a class="reference internal" href="#classimebra_1_1_association_s_c_p"><span class="std std-ref">AssociationSCP</span></a> lifecycle</strong></p>
+<p>Only create an <a class="reference internal" href="#classimebra_1_1_association_s_c_p"><span class="std std-ref">AssociationSCP</span></a> object AFTER the <a class="reference internal" href="stream_classes.html#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> and <a class="reference internal" href="stream_classes.html#classimebra_1_1_stream_writer"><span class="std std-ref">StreamWriter</span></a> parameters have been successfully connected to their peer, then keep it alive and poll the data via readCommand() and readPayload() until a <a class="reference internal" href="exception_classes.html#classimebra_1_1_stream_closed_error"><span class="std std-ref">StreamClosedError</span></a> or a CorruptedAcseMessageError are thrown.</p>
+<p><a class="reference internal" href="exception_classes.html#classimebra_1_1_stream_closed_error"><span class="std std-ref">StreamClosedError</span></a> means that the association has been released or aborted.</p>
+<p>If you call the <a class="reference internal" href="#classimebra_1_1_association_base_1a86b351c1c25e60eeb4c7f43b68c19806"><span class="std std-ref">abort()</span></a> method on the <a class="reference internal" href="#classimebra_1_1_association_s_c_p"><span class="std std-ref">AssociationSCP</span></a> you should still wait for the <a class="reference internal" href="exception_classes.html#classimebra_1_1_stream_closed_error"><span class="std std-ref">StreamClosedError</span></a> exception to be thrown by readCommand() or readPayload(). </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra14AssociationSCP14AssociationSCPERKNSt6stringENSt8uint32_tENSt8uint32_tERK20PresentationContextsR12StreamReaderR12StreamWriterNSt8uint32_tENSt8uint32_tE">
+<span id="_CPPv3N6imebra14AssociationSCP14AssociationSCPERKNSt6stringENSt8uint32_tENSt8uint32_tERK20PresentationContextsR12StreamReaderR12StreamWriterNSt8uint32_tENSt8uint32_tE"></span><span id="_CPPv2N6imebra14AssociationSCP14AssociationSCPERKNSt6stringENSt8uint32_tENSt8uint32_tERK20PresentationContextsR12StreamReaderR12StreamWriterNSt8uint32_tENSt8uint32_tE"></span><span id="imebra::AssociationSCP::AssociationSCP__ssCR.std::uint32_t.std::uint32_t.PresentationContextsCR.StreamReaderR.StreamWriterR.std::uint32_t.std::uint32_t"></span><span class="target" id="classimebra_1_1_association_s_c_p_1a150ed4023603ebe2aa5c379111d94b5f"></span><code class="sig-name descname">AssociationSCP</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>thisAET</em>, std::uint32_t <em>invokedOperations</em>, std::uint32_t <em>performedOperations</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra20PresentationContextsE" title="imebra::PresentationContexts">PresentationContexts</a> &amp;<em>presentationContexts</em>, <a class="reference internal" href="stream_classes.html#_CPPv4N6imebra12StreamReaderE" title="imebra::StreamReader">StreamReader</a> &amp;<em>pInput</em>, <a class="reference internal" href="stream_classes.html#_CPPv4N6imebra12StreamWriterE" title="imebra::StreamWriter">StreamWriter</a> &amp;<em>pOutput</em>, std::uint32_t <em>dimseTimeoutSeconds</em>, std::uint32_t <em>artimTimeoutSeconds</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra14AssociationSCP14AssociationSCPERKNSt6stringENSt8uint32_tENSt8uint32_tERK20PresentationContextsR12StreamReaderR12StreamWriterNSt8uint32_tENSt8uint32_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Listens for an association request. </p>
+<p>Blocks until the association has been negotiated successfully or an error occurs (an exception is thrown).</p>
+<p><p>The constructor blocks until an association has been successfully negotiated or until an error happens (an exception is thrown).</p>
+<dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">thisAET</span></code>: the AET of the SCP. If empty then the SCP will accept associations for any called AET, otherwise it will reject the association when the called AET does not match this one </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invokedOperations</span></code>: maximum number of parallel operations we intend to invoke when acting as a SCU </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">performedOperations</span></code>: maximum number of parallel operations we can perform when acting as a SCP </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">presentationContexts</span></code>: list of accepted presentation contexts. If several transfer syntaxes are associated to an abstract syntax in a single presentation context then the SCP will accept each transfer syntax even when the SCU spreads them on different presentation contexts (for the same abstract syntax) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pInput</span></code>: input stream from which the SCP receives data. When using a <a class="reference internal" href="stream_classes.html#classimebra_1_1_t_c_p_stream"><span class="std std-ref">TCPStream</span></a> the same object can act as both input and output </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pOutput</span></code>: output stream into which the SCP writes data. When using a <a class="reference internal" href="stream_classes.html#classimebra_1_1_t_c_p_stream"><span class="std std-ref">TCPStream</span></a> the same object can act as both input and output </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dimseTimeoutSeconds</span></code>: DIMSE timeout, in seconds. 0 means infinite </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">artimTimeoutSeconds</span></code>: ARTIM timeout, in seconds. Amount of time that is allowed to pass before an association request arrives</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+<p>Throws:<ul class="simple">
+<li><p>CorruptedAcseMessageError</p></li>
+<li><p><a class="reference internal" href="exception_classes.html#classimebra_1_1_acse_s_c_u_application_context_name_not_supported_error"><span class="std std-ref">AcseSCUApplicationContextNameNotSupportedError</span></a></p></li>
+<li><p><a class="reference internal" href="exception_classes.html#classimebra_1_1_acse_s_c_u_called_a_e_t_not_recognized_error"><span class="std std-ref">AcseSCUCalledAETNotRecognizedError</span></a></p></li>
+<li><p><a class="reference internal" href="exception_classes.html#classimebra_1_1_codec_wrong_format_error"><span class="std std-ref">CodecWrongFormatError</span></a></p></li>
+<li><p><a class="reference internal" href="exception_classes.html#classimebra_1_1_dicom_codec_depth_limit_reached_error"><span class="std std-ref">DicomCodecDepthLimitReachedError</span></a> </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra14AssociationSCP14AssociationSCPERK14AssociationSCP">
+<span id="_CPPv3N6imebra14AssociationSCP14AssociationSCPERK14AssociationSCP"></span><span id="_CPPv2N6imebra14AssociationSCP14AssociationSCPERK14AssociationSCP"></span><span id="imebra::AssociationSCP::AssociationSCP__AssociationSCPCR"></span><span class="target" id="classimebra_1_1_association_s_c_p_1a45eb05633a262f1957aba987a40642aa"></span><code class="sig-name descname">AssociationSCP</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra14AssociationSCP14AssociationSCPERKNSt6stringENSt8uint32_tENSt8uint32_tERK20PresentationContextsR12StreamReaderR12StreamWriterNSt8uint32_tENSt8uint32_tE" title="imebra::AssociationSCP::AssociationSCP">AssociationSCP</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra14AssociationSCP14AssociationSCPERK14AssociationSCP" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source SCP association </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id10">
+<h4>Objective-C/Swift<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv420ImebraAssociationSCP">
+<span id="_CPPv320ImebraAssociationSCP"></span><span id="_CPPv220ImebraAssociationSCP"></span><span id="ImebraAssociationSCP"></span><span class="target" id="interface_imebra_association_s_c_p"></span><em class="property">class </em><code class="sig-name descname">ImebraAssociationSCP</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv421ImebraAssociationBase" title="ImebraAssociationBase">ImebraAssociationBase</a><a class="headerlink" href="#_CPPv420ImebraAssociationSCP" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents the SCP part of an association. </p>
+<p>The initializer waits for an incoming DICOM association request (a-request-rq) and then returns once the association has been established, or set pError to ImebraCorruptedAcseMessageError if the SCU sends a wrong message type.</p>
+<p><strong><a class="reference internal" href="#interface_imebra_association_s_c_p"><span class="std std-ref">ImebraAssociationSCP</span></a> lifecycle</strong></p>
+<p>Only create an <a class="reference internal" href="#interface_imebra_association_s_c_p"><span class="std std-ref">ImebraAssociationSCP</span></a> object AFTER the <a class="reference internal" href="stream_classes.html#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> and <a class="reference internal" href="stream_classes.html#interface_imebra_stream_writer"><span class="std std-ref">ImebraStreamWriter</span></a> parameters have been successfully connected to their peer, then keep it alive and poll the data via readCommand() and readPayload() until pError is set to ImebraStreamClosedError or ImebraCorruptedAcseMessageError.</p>
+<p>pError set to ImebraStreamClosedError means that the association has been released or aborted.</p>
+<p>If you call the abort() method on the <a class="reference internal" href="#interface_imebra_association_s_c_p"><span class="std std-ref">ImebraAssociationSCP</span></a> you should still wait for pError set to ImebraStreamClosedError by getCommand(). </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_association_s_c_p_1a71801e18e86cd8ffe13f8051c529ab8a"></span><code class="sig-name descname">id ImebraAssociationSCP::initWithThisAET:maxInvokedOperations:maxPerformedOperations:presentationContexts:reader:writer:dimseTimeoutSeconds:artimTimeoutSeconds:error:(NSString * thisAET, unsigned int invokedOperations, unsigned int performedOperations, ImebraPresentationContexts  * presentationContexts, ImebraStreamReader  * pInput, ImebraStreamWriter  * pOutput, unsigned int dimseTimeoutSeconds, unsigned int artimTimeoutSeconds, NSError ** pError)</code></dt>
+<dd><p>Listens for an association request. </p>
+<p>Blocks until the association has been negotiated successfully or an error occurs (pError is set).</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">thisAET</span></code>: the AET of the SCP. If empty then the SCP will accept associations for any called AET, otherwise it will reject the association when the called AET does not match this one </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invokedOperations</span></code>: maximum number of parallel operations we intend to invoke when acting as a SCU </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">performedOperations</span></code>: maximum number of parallel operations we can perform when acting as a SCP </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">presentationContexts</span></code>: list of accepted presentation contexts </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pInput</span></code>: input stream from which the SCP receives data. When using a TCPStream the same object can act as both input and output </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pOutput</span></code>: output stream into which the SCP writes data. When using a TCPStream the same object can act as both input and output </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dimseTimeoutSeconds</span></code>: DIMSE timeout, in seconds. 0 means infinite </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">artimTimeoutSeconds</span></code>: ARTIM timeout, in seconds. Amount of time that is allowed to pass before an association request arrives </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: may be set to one of the following errors:<ul>
+<li><p>ImebraCorruptedAcseMessageError</p></li>
+<li><p>ImebraAcseSCUApplicationContextNameNotSupportedError</p></li>
+<li><p>ImebraAcseSCUCalledAETNotRecognizedError</p></li>
+<li><p>ImebraCodecWrongFormatError</p></li>
+<li><p>ImebraDicomCodecDepthLimitReachedError </p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+</section>
+<section id="message-payload-class">
+<h2>Message payload class<a class="headerlink" href="#message-payload-class" title="Permalink to this headline">¶</a></h2>
+<section id="associationmessage">
+<h3>AssociationMessage<a class="headerlink" href="#associationmessage" title="Permalink to this headline">¶</a></h3>
+<section id="id11">
+<h4>C++<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra18AssociationMessageE">
+<span id="_CPPv3N6imebra18AssociationMessageE"></span><span id="_CPPv2N6imebra18AssociationMessageE"></span><span id="imebra::AssociationMessage"></span><span class="target" id="classimebra_1_1_association_message"></span><em class="property">class </em><code class="sig-name descname">AssociationMessage</code><a class="headerlink" href="#_CPPv4N6imebra18AssociationMessageE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An immutable ACSE message composed by one or two datasets. </p>
+<p>Use <a class="reference internal" href="#classimebra_1_1_association_message_1aa19f9131451678f014e1d101391189d1"><span class="std std-ref">getCommand()</span></a> and <a class="reference internal" href="#classimebra_1_1_association_message_1a10d2ce41d136986d63b45fd3ff8c4d9d"><span class="std std-ref">getPayload()</span></a> to retrieve the command and the payload <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> objects.</p>
+<p>If you need a mutable ACSE message then use <a class="reference internal" href="#classimebra_1_1_mutable_association_message"><span class="std std-ref">MutableAssociationMessage</span></a>. </p>
+<p>Subclassed by <a class="reference internal" href="#classimebra_1_1_mutable_association_message"><span class="std std-ref">imebra::MutableAssociationMessage</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra18AssociationMessage18AssociationMessageERK18AssociationMessage">
+<span id="_CPPv3N6imebra18AssociationMessage18AssociationMessageERK18AssociationMessage"></span><span id="_CPPv2N6imebra18AssociationMessage18AssociationMessageERK18AssociationMessage"></span><span id="imebra::AssociationMessage::AssociationMessage__AssociationMessageCR"></span><span class="target" id="classimebra_1_1_association_message_1ac2a324401df1042143abd70ac2f51d03"></span><code class="sig-name descname">AssociationMessage</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra18AssociationMessage18AssociationMessageERK18AssociationMessage" title="imebra::AssociationMessage::AssociationMessage">AssociationMessage</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra18AssociationMessage18AssociationMessageERK18AssociationMessage" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source association message </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra18AssociationMessage17getAbstractSyntaxEv">
+<span id="_CPPv3NK6imebra18AssociationMessage17getAbstractSyntaxEv"></span><span id="_CPPv2NK6imebra18AssociationMessage17getAbstractSyntaxEv"></span><span id="imebra::AssociationMessage::getAbstractSyntaxC"></span><span class="target" id="classimebra_1_1_association_message_1a80e1013154cf5b8469b82e7e5fbb95d7"></span>std::string <code class="sig-name descname">getAbstractSyntax</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra18AssociationMessage17getAbstractSyntaxEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieve the message’s abstract syntax. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the message’s abstract syntax </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra18AssociationMessage10getCommandEv">
+<span id="_CPPv3NK6imebra18AssociationMessage10getCommandEv"></span><span id="_CPPv2NK6imebra18AssociationMessage10getCommandEv"></span><span id="imebra::AssociationMessage::getCommandC"></span><span class="target" id="classimebra_1_1_association_message_1aa19f9131451678f014e1d101391189d1"></span><em class="property">const</em> <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet">DataSet</a> <code class="sig-name descname">getCommand</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra18AssociationMessage10getCommandEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the command stored in the message. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the command <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra18AssociationMessage10getPayloadEv">
+<span id="_CPPv3NK6imebra18AssociationMessage10getPayloadEv"></span><span id="_CPPv2NK6imebra18AssociationMessage10getPayloadEv"></span><span id="imebra::AssociationMessage::getPayloadC"></span><span class="target" id="classimebra_1_1_association_message_1a10d2ce41d136986d63b45fd3ff8c4d9d"></span><em class="property">const</em> <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet">DataSet</a> <code class="sig-name descname">getPayload</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra18AssociationMessage10getPayloadEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the payload stored in the message. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the payload <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra18AssociationMessage10hasPayloadEv">
+<span id="_CPPv3NK6imebra18AssociationMessage10hasPayloadEv"></span><span id="_CPPv2NK6imebra18AssociationMessage10hasPayloadEv"></span><span id="imebra::AssociationMessage::hasPayloadC"></span><span class="target" id="classimebra_1_1_association_message_1aefedfced43c49147704b0600bcee4cdf"></span>bool <code class="sig-name descname">hasPayload</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra18AssociationMessage10hasPayloadEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return true if the message has a payload. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>true if the message has a payload, false otherwise </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id12">
+<h4>Objective-C/Swift<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv424ImebraAssociationMessage">
+<span id="_CPPv324ImebraAssociationMessage"></span><span id="_CPPv224ImebraAssociationMessage"></span><span id="ImebraAssociationMessage"></span><span class="target" id="interface_imebra_association_message"></span><em class="property">class </em><code class="sig-name descname">ImebraAssociationMessage</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv424ImebraAssociationMessage" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A message composed by one or two datasets. </p>
+<p>When sending a message through an <a class="reference internal" href="#interface_imebra_association_base"><span class="std std-ref">ImebraAssociationBase</span></a> derived object then up to two dataset can be included into the message: the first dataset is the command dataset, while the optional second one is the command’s payload. </p>
+<p>Subclassed by <a class="reference internal" href="#interface_imebra_mutable_association_message"><span class="std std-ref">ImebraMutableAssociationMessage</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_association_message_1aa4a7f15f0b9a3078f2d359dae0f452bd"></span><code class="sig-name descname">ImebraDataSet* ImebraAssociationMessage::getCommand:(NSError ** pError)</code></dt>
+<dd><p>Return the command stored in the message. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the command <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_association_message_1aad7ddf3a4dea4914637f9bc286b37c73"></span><code class="sig-name descname">ImebraDataSet* ImebraAssociationMessage::getPayload:(NSError ** pError)</code></dt>
+<dd><p>Return the payload stored in the message. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the payload <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N24ImebraAssociationMessage10hasPayloadEv">
+<span id="_CPPv3N24ImebraAssociationMessage10hasPayloadEv"></span><span id="_CPPv2N24ImebraAssociationMessage10hasPayloadEv"></span><span id="ImebraAssociationMessage::hasPayload"></span><span class="target" id="interface_imebra_association_message_1a787906711db21c35a94c2e97cd14be3d"></span>BOOL <code class="sig-name descname">hasPayload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N24ImebraAssociationMessage10hasPayloadEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return true if the message has a payload. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>true if the message has a payload, false otherwise </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Property</p>
+<dl class="member">
+<dt>
+<span class="target" id="interface_imebra_association_message_1a3c8827721db711627a8f71f906e54d9f"></span><em class="property">property </em><code class="sig-name descname">ImebraAssociationMessage::abstractSyntax</code></dt>
+<dd><p>The message’s abstract syntax. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="mutableassociationmessage">
+<h3>MutableAssociationMessage<a class="headerlink" href="#mutableassociationmessage" title="Permalink to this headline">¶</a></h3>
+<section id="id13">
+<h4>C++<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra25MutableAssociationMessageE">
+<span id="_CPPv3N6imebra25MutableAssociationMessageE"></span><span id="_CPPv2N6imebra25MutableAssociationMessageE"></span><span id="imebra::MutableAssociationMessage"></span><span class="target" id="classimebra_1_1_mutable_association_message"></span><em class="property">class </em><code class="sig-name descname">MutableAssociationMessage</code> : <em class="property">public</em> imebra::<a class="reference internal" href="#_CPPv4N6imebra18AssociationMessageE" title="imebra::AssociationMessage">AssociationMessage</a><a class="headerlink" href="#_CPPv4N6imebra25MutableAssociationMessageE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A mutable ACSE message composed by one or two datasets. </p>
+<p>When sending a message through an <a class="reference internal" href="#classimebra_1_1_association_base"><span class="std std-ref">AssociationBase</span></a> derived object then up to two dataset can be included into the message: the first dataset is be the command dataset, while the optional second one is the command’s payload.</p>
+<p>If you need an immutable ACSE message then use <a class="reference internal" href="#classimebra_1_1_association_message"><span class="std std-ref">AssociationMessage</span></a>. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra25MutableAssociationMessage25MutableAssociationMessageERKNSt6stringE">
+<span id="_CPPv3N6imebra25MutableAssociationMessage25MutableAssociationMessageERKNSt6stringE"></span><span id="_CPPv2N6imebra25MutableAssociationMessage25MutableAssociationMessageERKNSt6stringE"></span><span id="imebra::MutableAssociationMessage::MutableAssociationMessage__ssCR"></span><span class="target" id="classimebra_1_1_mutable_association_message_1a4ce8746acf51f97f6a4f77f9a22d0994"></span><code class="sig-name descname">MutableAssociationMessage</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>abstractSyntax</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra25MutableAssociationMessage25MutableAssociationMessageERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">abstractSyntax</span></code>: the abstract syntax of the message. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra25MutableAssociationMessage25MutableAssociationMessageERK25MutableAssociationMessage">
+<span id="_CPPv3N6imebra25MutableAssociationMessage25MutableAssociationMessageERK25MutableAssociationMessage"></span><span id="_CPPv2N6imebra25MutableAssociationMessage25MutableAssociationMessageERK25MutableAssociationMessage"></span><span id="imebra::MutableAssociationMessage::MutableAssociationMessage__MutableAssociationMessageCR"></span><span class="target" id="classimebra_1_1_mutable_association_message_1a98239282cb5e3470610805ada09f81ac"></span><code class="sig-name descname">MutableAssociationMessage</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra25MutableAssociationMessage25MutableAssociationMessageERKNSt6stringE" title="imebra::MutableAssociationMessage::MutableAssociationMessage">MutableAssociationMessage</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra25MutableAssociationMessage25MutableAssociationMessageERK25MutableAssociationMessage" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source mutable association message </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra25MutableAssociationMessage10addDataSetERK7DataSet">
+<span id="_CPPv3N6imebra25MutableAssociationMessage10addDataSetERK7DataSet"></span><span id="_CPPv2N6imebra25MutableAssociationMessage10addDataSetERK7DataSet"></span><span id="imebra::MutableAssociationMessage::addDataSet__DataSetCR"></span><span class="target" id="classimebra_1_1_mutable_association_message_1affe2f4896297bcc6f8d951f739b7538b"></span>void <code class="sig-name descname">addDataSet</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet">DataSet</a> &amp;<em>dataSet</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra25MutableAssociationMessage10addDataSetERK7DataSet" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add a command <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> to the message. </p>
+<p>Two datasets can be transmitted at once: the first <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> is the DICOM command, while the second optional one is the command payload.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataSet</span></code>: a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> to add to the message </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id14">
+<h4>Objective-C/Swift<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv431ImebraMutableAssociationMessage">
+<span id="_CPPv331ImebraMutableAssociationMessage"></span><span id="_CPPv231ImebraMutableAssociationMessage"></span><span id="ImebraMutableAssociationMessage"></span><span class="target" id="interface_imebra_mutable_association_message"></span><em class="property">class </em><code class="sig-name descname">ImebraMutableAssociationMessage</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv424ImebraAssociationMessage" title="ImebraAssociationMessage">ImebraAssociationMessage</a><a class="headerlink" href="#_CPPv431ImebraMutableAssociationMessage" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A message composed by one or two datasets. </p>
+<p>When sending a message through an <a class="reference internal" href="#interface_imebra_association_base"><span class="std std-ref">ImebraAssociationBase</span></a> derived object then up to two dataset can be included into the message: the first dataset is the command dataset, while the optional second one is the command’s payload. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_mutable_association_message_1a1ee71e2c8a653631c43d4dcf2fbc3540"></span><code class="sig-name descname">id ImebraMutableAssociationMessage::initWithAbstractSyntax:(NSString * abstractSyntax)</code></dt>
+<dd><p>Initializer. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">abstractSyntax</span></code>: the abstract syntax of the message. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_mutable_association_message_1afe58c69b4ab2cdac95134199b31fee8b"></span><code class="sig-name descname">void ImebraMutableAssociationMessage::addDataSet:error:(ImebraDataSet  * pDataSet, (swift_error(nonnull_error)) __attribute__)</code></dt>
+<dd><p>Add a command <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> to the message. </p>
+<p>Two datasets can be transmitted at once: the first data set is the DICOM command, while the second optional one is the command payload.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataSet</span></code>: a <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> to add to the message </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="memory_management_classes.html" class="btn btn-neutral float-left" title="Memory management classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dimse_classes.html" class="btn btn-neutral float-right" title="DIMSE classes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="copyright.html">Copyright</a> 2019, Paolo Brandoli.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

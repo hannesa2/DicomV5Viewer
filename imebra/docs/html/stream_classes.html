@@ -1,0 +1,2046 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stream classes &mdash; Imebra 5.3.3.0 changeset 2c706290 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="next" title="Imaging classes" href="imaging_classes.html" />
+    <link rel="prev" title="UID generation classes" href="dicom_uid_generation_classes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Imebra
+          </a>
+              <div class="version">
+                5.3.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p><span class="caption-text">Download Imebra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Downloading Imebra</a></li>
+</ul>
+<p><span class="caption-text">Legal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gplv2.html">GNU General Public License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Commercial license</a></li>
+</ul>
+<p><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes_log.html">Changes log</a></li>
+</ul>
+<p><span class="caption-text">User documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="compiling_imebra.html">Compiling Imebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add_to_project.html">Adding Imebra to your project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_tour.html">Tutorial</a></li>
+</ul>
+<p><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="objects_lifecycle.html">Objects lifecycle and Object ownership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_data_classes.html">DICOM dataSet &amp; tags classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_uid_generation_classes.html">UID generation classes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Stream classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Stream classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#codecfactory">CodecFactory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#basestreaminput">BaseStreamInput</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#basestreamoutput">BaseStreamOutput</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#streamreader">StreamReader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#streamwriter">StreamWriter</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#filestreaminput">FileStreamInput</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id10">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#filestreamoutput">FileStreamOutput</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id12">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#memorystreaminput">MemoryStreamInput</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id14">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#memorystreamoutput">MemoryStreamOutput</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id16">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#streamtimeout">StreamTimeout</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id18">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pipe-classes">Pipe classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pipe">Pipe</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id20">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tcp-classes">TCP classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tcpstream">TCPStream</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id23">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id24">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tcplistener">TCPListener</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id25">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id26">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tcpaddress">TCPAddress</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id27">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id28">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tcppassiveaddress">TCPPassiveAddress</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id29">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id30">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tcpactiveaddress">TCPActiveAddress</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id31">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id32">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="imaging_classes.html">Imaging classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transforms_classes.html">Transforms classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="memory_management_classes.html">Memory management classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acse_classes.html">ACSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dimse_classes.html">DIMSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicomdir_classes.html">DICOMDIR classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_dictionary_classes.html">DICOM dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definition_classes.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exception_classes.html">Exceptions</a></li>
+</ul>
+<p><span class="caption-text">Build distributions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html">Creating the source distribution from the code in the VCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html#versioning">Versioning</a></li>
+</ul>
+<p><span class="caption-text">Requirements &amp; Risks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html#risks">Risks</a></li>
+</ul>
+<p><span class="caption-text">Standard operating procedures</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sop.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sop.html#sops">SOPs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Stream classes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/stream_classes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="stream-classes">
+<h1>Stream classes<a class="headerlink" href="#stream-classes" title="Permalink to this headline">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The classes described in this chapter are used to load and store DICOM data structures (represented by a <a class="reference internal" href="dicom_data_classes.html#dataset"><span class="std std-ref">DataSet</span></a>)
+and to send and receive DICOM messages.</p>
+<p>The following classes are described in this chapter:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 35%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>C++ class</p></th>
+<th class="head"><p>Objective-C/Swift class</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra12CodecFactoryE" title="imebra::CodecFactory"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::CodecFactory</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv418ImebraCodecFactory" title="ImebraCodecFactory"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraCodecFactory</span></code></a></p></td>
+<td><p>Load/Save a DICOM structure</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#_CPPv4N6imebra15BaseStreamInputE" title="imebra::BaseStreamInput"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::BaseStreamInput</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv421ImebraBaseStreamInput" title="ImebraBaseStreamInput"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraBaseStreamInput</span></code></a></p></td>
+<td><p>Base class for input streams</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra16BaseStreamOutputE" title="imebra::BaseStreamOutput"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::BaseStreamOutput</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv422ImebraBaseStreamOutput" title="ImebraBaseStreamOutput"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraBaseStreamOutput</span></code></a></p></td>
+<td><p>Base class for output streams</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#_CPPv4N6imebra12StreamReaderE" title="imebra::StreamReader"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::StreamReader</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv418ImebraStreamReader" title="ImebraStreamReader"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraStreamReader</span></code></a></p></td>
+<td><p>Read from an input stream</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra12StreamWriterE" title="imebra::StreamWriter"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::StreamWriter</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv418ImebraStreamWriter" title="ImebraStreamWriter"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraStreamWriter</span></code></a></p></td>
+<td><p>Write into an output stream</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#_CPPv4N6imebra15FileStreamInputE" title="imebra::FileStreamInput"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::FileStreamInput</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv421ImebraFileStreamInput" title="ImebraFileStreamInput"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraFileStreamInput</span></code></a></p></td>
+<td><p>File input stream</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra16FileStreamOutputE" title="imebra::FileStreamOutput"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::FileStreamOutput</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv422ImebraFileStreamOutput" title="ImebraFileStreamOutput"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraFileStreamOutput</span></code></a></p></td>
+<td><p>File output stream</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#_CPPv4N6imebra17MemoryStreamInputE" title="imebra::MemoryStreamInput"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::MemoryStreamInput</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv423ImebraMemoryStreamInput" title="ImebraMemoryStreamInput"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraMemoryStreamInput</span></code></a></p></td>
+<td><p>Memory input stream</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra18MemoryStreamOutputE" title="imebra::MemoryStreamOutput"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::MemoryStreamOutput</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv424ImebraMemoryStreamOutput" title="ImebraMemoryStreamOutput"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraMemoryStreamOutput</span></code></a></p></td>
+<td><p>Memory output stream</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#_CPPv4N6imebra13StreamTimeoutE" title="imebra::StreamTimeout"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::StreamTimeout</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv419ImebraStreamTimeout" title="ImebraStreamTimeout"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraStreamTimeout</span></code></a></p></td>
+<td><p>Causes a stream to fail after
+a timeout has expired</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra10PipeStreamE" title="imebra::PipeStream"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::PipeStream</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv416ImebraPipeStream" title="ImebraPipeStream"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraPipeStream</span></code></a></p></td>
+<td><p>Allow to implement custom
+input and output streams</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#_CPPv4N6imebra9TCPStreamE" title="imebra::TCPStream"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::TCPStream</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv415ImebraTCPStream" title="ImebraTCPStream"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraTCPStream</span></code></a></p></td>
+<td><p>Implement an input and output
+stream on a TCP connection</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra11TCPListenerE" title="imebra::TCPListener"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::TCPListener</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv417ImebraTCPListener" title="ImebraTCPListener"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraTCPListener</span></code></a></p></td>
+<td><p>Listen for incoming TCP
+connections</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#_CPPv4N6imebra10TCPAddressE" title="imebra::TCPAddress"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::TCPAddress</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv416ImebraTCPAddress" title="ImebraTCPAddress"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraTCPAddress</span></code></a></p></td>
+<td><p>Represents a TCP address</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra17TCPPassiveAddressE" title="imebra::TCPPassiveAddress"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::TCPPassiveAddress</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv423ImebraTCPPassiveAddress" title="ImebraTCPPassiveAddress"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraTCPPassiveAddress</span></code></a></p></td>
+<td><p>Represents a passive TCP
+address (used by the connection
+listener)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#_CPPv4N6imebra16TCPActiveAddressE" title="imebra::TCPActiveAddress"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::TCPActiveAddress</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv422ImebraTCPActiveAddress" title="ImebraTCPActiveAddress"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraTCPActiveAddress</span></code></a></p></td>
+<td><p>Represents an active TCP
+address (used to connect to
+a peer)</p></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-default" id="id33" style="width: 100%">
+<a class="reference external image-reference" href="_images/streams.jpg"><img alt="Stream related classes" src="_images/streams.jpg" /></a>
+<figcaption>
+<p><span class="caption-text">Class diagram of the stream related classes</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The easiest way to load or store a <a class="reference internal" href="dicom_data_classes.html#dataset"><span class="std std-ref">DataSet</span></a> object is by using the static methods of the <a class="reference internal" href="#codecfactory">CodecFactory</a> class.</p>
+<p>All the Imebra Stream Classes (file, memory, tcp, pipe) derive from <a class="reference internal" href="#basestreaminput">BaseStreamInput</a> or/and <a class="reference internal" href="#basestreamoutput">BaseStreamOutput</a>.</p>
+<p><a class="reference internal" href="#basestreaminput">BaseStreamInput</a> represents an input stream (you can read from it) while <a class="reference internal" href="#basestreamoutput">BaseStreamOutput</a> represents an output
+stream (you can write into it). However, both classes don’t expose reading and writing methods: in order to read or
+write from/to a stream the client application must use the <a class="reference internal" href="#streamreader">StreamReader</a> or <a class="reference internal" href="#streamwriter">StreamWriter</a>.</p>
+<p>Several <a class="reference internal" href="#streamreader">StreamReader</a> or <a class="reference internal" href="#streamwriter">StreamWriter</a> can share a single <a class="reference internal" href="#basestreaminput">BaseStreamInput</a> or <a class="reference internal" href="#basestreamoutput">BaseStreamOutput</a>.</p>
+</section>
+<section id="id1">
+<h2>Stream classes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="codecfactory">
+<h3>CodecFactory<a class="headerlink" href="#codecfactory" title="Permalink to this headline">¶</a></h3>
+<section id="c">
+<h4>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra12CodecFactoryE">
+<span id="_CPPv3N6imebra12CodecFactoryE"></span><span id="_CPPv2N6imebra12CodecFactoryE"></span><span id="imebra::CodecFactory"></span><span class="target" id="classimebra_1_1_codec_factory"></span><em class="property">class </em><code class="sig-name descname">CodecFactory</code><a class="headerlink" href="#_CPPv4N6imebra12CodecFactoryE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The <a class="reference internal" href="#classimebra_1_1_codec_factory"><span class="std std-ref">CodecFactory</span></a> class can load or save a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> or an <a class="reference internal" href="imaging_classes.html#classimebra_1_1_image"><span class="std std-ref">Image</span></a> object using one of the codecs supplied by the Imebra library. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra12CodecFactory4loadER12StreamReader6size_t">
+<span id="_CPPv3N6imebra12CodecFactory4loadER12StreamReader6size_t"></span><span id="_CPPv2N6imebra12CodecFactory4loadER12StreamReader6size_t"></span><span id="imebra::CodecFactory::load__StreamReaderR.s"></span><span class="target" id="classimebra_1_1_codec_factory_1a408a8ab14e6ef691bae727b395030fde"></span><em class="property">static</em> <em class="property">const</em> <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet">DataSet</a> <code class="sig-name descname">load</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N6imebra12StreamReaderE" title="imebra::StreamReader">StreamReader</a> &amp;<em>reader</em>, size_t <em>maxSizeBufferLoad</em> = std::numeric_limits&lt;size_t&gt;::max()<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12CodecFactory4loadER12StreamReader6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Parses the content of the input stream and returns a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> representing it. </p>
+<p>If none of the codecs supplied by Imebra is able to decode the stream’s content then it throws a <a class="reference internal" href="exception_classes.html#classimebra_1_1_codec_wrong_format_error"><span class="std std-ref">CodecWrongFormatError</span></a> exception.</p>
+<p>The read position of the <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> is undefined when this method returns.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> object representing the input stream’s content </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">reader</span></code>: a <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> connected to the input stream </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSizeBufferLoad</span></code>: the maximum size of the tags that are loaded immediately. Tags larger than maxSizeBufferLoad are left on the input stream and loaded only when a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_reading_data_handler"><span class="std std-ref">ReadingDataHandler</span></a> or a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_writing_data_handler"><span class="std std-ref">WritingDataHandler</span></a> reference them. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12CodecFactory4loadERKNSt7wstringE6size_t">
+<span id="_CPPv3N6imebra12CodecFactory4loadERKNSt7wstringE6size_t"></span><span id="_CPPv2N6imebra12CodecFactory4loadERKNSt7wstringE6size_t"></span><span id="imebra::CodecFactory::load__std::wstringCR.s"></span><span class="target" id="classimebra_1_1_codec_factory_1aaafaefdeb727139c75d7d868a30265e4"></span><em class="property">static</em> <em class="property">const</em> <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet">DataSet</a> <code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="property">const</em> std::wstring &amp;<em>fileName</em>, size_t <em>maxSizeBufferLoad</em> = std::numeric_limits&lt;size_t&gt;::max()<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12CodecFactory4loadERKNSt7wstringE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Parses the content of the input file and returns a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> representing it. </p>
+<p>If none of the codecs supplied by Imebra is able to decode the file’s content then it throws a <a class="reference internal" href="exception_classes.html#classimebra_1_1_codec_wrong_format_error"><span class="std std-ref">CodecWrongFormatError</span></a> exception.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> object representing the input file’s content </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fileName</span></code>: the Unicode name of the input file to read </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSizeBufferLoad</span></code>: the maximum size of the tags that are loaded immediately. Tags larger than maxSizeBufferLoad are left on the input stream and loaded only when a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_reading_data_handler"><span class="std std-ref">ReadingDataHandler</span></a> or a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_writing_data_handler"><span class="std std-ref">WritingDataHandler</span></a> reference them. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12CodecFactory4loadERKNSt6stringE6size_t">
+<span id="_CPPv3N6imebra12CodecFactory4loadERKNSt6stringE6size_t"></span><span id="_CPPv2N6imebra12CodecFactory4loadERKNSt6stringE6size_t"></span><span id="imebra::CodecFactory::load__ssCR.s"></span><span class="target" id="classimebra_1_1_codec_factory_1a41023ed1d2c5e463eb8359ff383fc414"></span><em class="property">static</em> <em class="property">const</em> <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet">DataSet</a> <code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>fileName</em>, size_t <em>maxSizeBufferLoad</em> = std::numeric_limits&lt;size_t&gt;::max()<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12CodecFactory4loadERKNSt6stringE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Parses the content of the input file and returns a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> representing it. </p>
+<p>If none of the codecs supplied by Imebra is able to decode the file’s content then it throws a <a class="reference internal" href="exception_classes.html#classimebra_1_1_codec_wrong_format_error"><span class="std std-ref">CodecWrongFormatError</span></a> exception.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> object representing the input file’s content </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fileName</span></code>: the Utf8 name of the input file to read </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSizeBufferLoad</span></code>: the maximum size of the tags that are loaded immediately. Tags larger than maxSizeBufferLoad are left on the input stream and loaded only when a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_reading_data_handler"><span class="std std-ref">ReadingDataHandler</span></a> or a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_writing_data_handler"><span class="std std-ref">WritingDataHandler</span></a> reference them. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12CodecFactory4saveERK7DataSetR12StreamWriter11codecType_t">
+<span id="_CPPv3N6imebra12CodecFactory4saveERK7DataSetR12StreamWriter11codecType_t"></span><span id="_CPPv2N6imebra12CodecFactory4saveERK7DataSetR12StreamWriter11codecType_t"></span><span id="imebra::CodecFactory::save__DataSetCR.StreamWriterR.codecType_t"></span><span class="target" id="classimebra_1_1_codec_factory_1ac7b5fa45cb5450133fff02b48f70261f"></span><em class="property">static</em> void <code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet">DataSet</a> &amp;<em>dataSet</em>, <a class="reference internal" href="#_CPPv4N6imebra12StreamWriterE" title="imebra::StreamWriter">StreamWriter</a> &amp;<em>writer</em>, <a class="reference internal" href="definition_classes.html#_CPPv4N6imebra11codecType_tE" title="imebra::codecType_t">codecType_t</a> <em>codecType</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12CodecFactory4saveERK7DataSetR12StreamWriter11codecType_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Saves the content of a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> object to an output stream using the requested codec. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataSet</span></code>: the <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> object to save </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">writer</span></code>: a <a class="reference internal" href="#classimebra_1_1_stream_writer"><span class="std std-ref">StreamWriter</span></a> connected to the output stream </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codecType</span></code>: the codec to use to save the <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12CodecFactory4saveERK7DataSetRKNSt7wstringE11codecType_t">
+<span id="_CPPv3N6imebra12CodecFactory4saveERK7DataSetRKNSt7wstringE11codecType_t"></span><span id="_CPPv2N6imebra12CodecFactory4saveERK7DataSetRKNSt7wstringE11codecType_t"></span><span id="imebra::CodecFactory::save__DataSetCR.std::wstringCR.codecType_t"></span><span class="target" id="classimebra_1_1_codec_factory_1aed3a71f57d9da9918c1250d2fb53eb8a"></span><em class="property">static</em> void <code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet">DataSet</a> &amp;<em>dataSet</em>, <em class="property">const</em> std::wstring &amp;<em>fileName</em>, <a class="reference internal" href="definition_classes.html#_CPPv4N6imebra11codecType_tE" title="imebra::codecType_t">codecType_t</a> <em>codecType</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12CodecFactory4saveERK7DataSetRKNSt7wstringE11codecType_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Saves the content of a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> object to an output file using the requested codec. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataSet</span></code>: the <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> object to save </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileName</span></code>: the Unicode name of the output file to create </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codecType</span></code>: the codec to use to save the <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12CodecFactory4saveERK7DataSetRKNSt6stringE11codecType_t">
+<span id="_CPPv3N6imebra12CodecFactory4saveERK7DataSetRKNSt6stringE11codecType_t"></span><span id="_CPPv2N6imebra12CodecFactory4saveERK7DataSetRKNSt6stringE11codecType_t"></span><span id="imebra::CodecFactory::save__DataSetCR.ssCR.codecType_t"></span><span class="target" id="classimebra_1_1_codec_factory_1ae53c83cdf47609b8b4facc6d24f943a5"></span><em class="property">static</em> void <code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet">DataSet</a> &amp;<em>dataSet</em>, <em class="property">const</em> std::string &amp;<em>fileName</em>, <a class="reference internal" href="definition_classes.html#_CPPv4N6imebra11codecType_tE" title="imebra::codecType_t">codecType_t</a> <em>codecType</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12CodecFactory4saveERK7DataSetRKNSt6stringE11codecType_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Saves the content of a <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> object to an output file using the requested codec. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataSet</span></code>: the <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> object to save </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileName</span></code>: the Utf8 name of the output file to create </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codecType</span></code>: the codec to use to save the <a class="reference internal" href="dicom_data_classes.html#classimebra_1_1_data_set"><span class="std std-ref">DataSet</span></a> </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12CodecFactory19setMaximumImageSizeEKNSt8uint32_tEKNSt8uint32_tE">
+<span id="_CPPv3N6imebra12CodecFactory19setMaximumImageSizeEKNSt8uint32_tEKNSt8uint32_tE"></span><span id="_CPPv2N6imebra12CodecFactory19setMaximumImageSizeEKNSt8uint32_tEKNSt8uint32_tE"></span><span id="imebra::CodecFactory::setMaximumImageSize__std::uint32_tC.std::uint32_tC"></span><span class="target" id="classimebra_1_1_codec_factory_1a0ca01e0fd5619fef09e20a51f55870a1"></span><em class="property">static</em> void <code class="sig-name descname">setMaximumImageSize</code><span class="sig-paren">(</span><em class="property">const</em> std::uint32_t <em>maximumWidth</em>, <em class="property">const</em> std::uint32_t <em>maximumHeight</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12CodecFactory19setMaximumImageSizeEKNSt8uint32_tEKNSt8uint32_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the maximum image’s width &amp; height accepted by Imebra. </p>
+<p>By default both the maximum width and height are set to 4096 pixels.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumWidth</span></code>: the maximum image’s width accepted by Imebra </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumHeight</span></code>: the maximum image’s height accepted by Imebra </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="objective-c-swift">
+<h4>Objective-C/Swift<a class="headerlink" href="#objective-c-swift" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv418ImebraCodecFactory">
+<span id="_CPPv318ImebraCodecFactory"></span><span id="_CPPv218ImebraCodecFactory"></span><span id="ImebraCodecFactory"></span><span class="target" id="interface_imebra_codec_factory"></span><em class="property">class </em><code class="sig-name descname">ImebraCodecFactory</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv418ImebraCodecFactory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The <a class="reference internal" href="#interface_imebra_codec_factory"><span class="std std-ref">ImebraCodecFactory</span></a> class can load or save a DataSet or an Image object using one of the codecs supplied by the Imebra library. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_codec_factory_1ac1523dad5c97564ec605caff20c2a9be"></span><code class="sig-name descname">ImebraDataSet* ImebraCodecFactory::loadFromFile:error:(NSString * fileName, NSError ** pError)</code></dt>
+<dd><p>Parses the content of the input file and returns a <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> object representing it. </p>
+<p>If none of the codecs supplied by Imebra is able to decode the file’s content then sets the pError parameter and returns nil.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> object representing the input file’s content </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fileName</span></code>: the name of the input file </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: pointer to a NSError pointer that will be set in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_codec_factory_1a0ebad3f894c4a888c965eea27d262fc7"></span><code class="sig-name descname">ImebraDataSet* ImebraCodecFactory::loadFromFileMaxSize:maxBufferSize:error:(NSString * fileName, unsigned int maxBufferSize, NSError ** pError)</code></dt>
+<dd><p>Parses the content of the input file and returns a <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> object representing it. </p>
+<p>If none of the codecs supplied by Imebra is able to decode the file’s content then sets the pError parameter and returns nil.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> object representing the input file’s content </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fileName</span></code>: the name of the input file </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSizeBufferLoad</span></code>: the maximum size of the tags that are loaded immediately. Tags larger than maxSizeBufferLoad are left on the input stream and loaded only when a <a class="reference internal" href="dicom_data_classes.html#interface_imebra_reading_data_handler"><span class="std std-ref">ImebraReadingDataHandler</span></a> object or a <a class="reference internal" href="dicom_data_classes.html#interface_imebra_writing_data_handler"><span class="std std-ref">ImebraWritingDataHandler</span></a> object reference them. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: pointer to a NSError pointer that will be set in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_codec_factory_1a3f9d9e007cd3ada4e59873583a547aaa"></span><code class="sig-name descname">ImebraDataSet* ImebraCodecFactory::loadFromStream:error:(ImebraStreamReader  * pReader, NSError ** pError)</code></dt>
+<dd><p>Parses the content of the input stream and returns a <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> representing it. </p>
+<p>If none of the codecs supplied by Imebra is able to decode the stream’s content then sets the pError parameter and returns nil.</p>
+<p>The read position of the <a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> object is undefined when this method returns.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> object representing the input stream’s content </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pReader</span></code>: a <a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> object connected to the input stream </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: pointer to a NSError pointer that will be set in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_codec_factory_1a95e41969d3d8ff4250cd89cc02d55569"></span><code class="sig-name descname">ImebraDataSet* ImebraCodecFactory::loadFromStreamMaxSize:maxBufferSize:error:(ImebraStreamReader  * pReader, unsigned int maxBufferSize, NSError ** pError)</code></dt>
+<dd><p>Parses the content of the input stream and returns a <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> representing it. </p>
+<p>If none of the codecs supplied by Imebra is able to decode the stream’s content then sets the pError parameter and returns nil.</p>
+<p>The read position of the <a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> object is undefined when this method returns.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> object representing the input stream’s content </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pReader</span></code>: a <a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> object connected to the input stream </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSizeBufferLoad</span></code>: the maximum size of the tags that are loaded immediately. Tags larger than maxSizeBufferLoad are left on the input stream and loaded only when an <a class="reference internal" href="dicom_data_classes.html#interface_imebra_reading_data_handler"><span class="std std-ref">ImebraReadingDataHandler</span></a> or an <a class="reference internal" href="dicom_data_classes.html#interface_imebra_writing_data_handler"><span class="std std-ref">ImebraWritingDataHandler</span></a> object reference sthem. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: pointer to a NSError pointer that will be set in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_codec_factory_1a658c8c43fa01dfbb5196cb7eb2c0b560"></span><code class="sig-name descname">void ImebraCodecFactory::saveToFile:dataSet:codecType:error:(NSString * fileName, ImebraDataSet  * pDataSet, ImebraCodecType codecType, (swift_error(nonnull_error)) __attribute__)</code></dt>
+<dd><p>Saves the content of a <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> object to a file. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fileName</span></code>: the name of the output file </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pDataSet</span></code>: the <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> object to save </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codecType</span></code>: the codec to use to save the <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: pointer to a NSError pointer that will be set in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_codec_factory_1a39263a2faccc928182a2b936cdf8baa3"></span><code class="sig-name descname">void ImebraCodecFactory::saveToStream:dataSet:codecType:error:(ImebraStreamWriter  * pWriter, ImebraDataSet  * pDataSet, ImebraCodecType codecType, (swift_error(nonnull_error)) __attribute__)</code></dt>
+<dd><p>Saves the content of a <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> object to an output stream using the requested codec. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pWriter</span></code>: an <a class="reference internal" href="#interface_imebra_stream_writer"><span class="std std-ref">ImebraStreamWriter</span></a> connected to the output stream </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pDataSet</span></code>: the <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> object to save </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codecType</span></code>: the codec to use to save the <a class="reference internal" href="dicom_data_classes.html#interface_imebra_data_set"><span class="std std-ref">ImebraDataSet</span></a> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: pointer to a NSError pointer that will be set in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_codec_factory_1a0d830a59b325e20b1ba8d337123407e3"></span><code class="sig-name descname">void ImebraCodecFactory::setMaximumImageSize:maxHeight:(unsigned int maximumWidth, unsigned int maximumHeight)</code></dt>
+<dd><p>Set the maximum image’s width &amp; height accepted by Imebra. </p>
+<p>By default both the maximum width and height are set to 4096 pixels.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumWidth</span></code>: the maximum image’s width accepted by Imebra </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumHeight</span></code>: the maximum image’s height accepted by Imebra </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="basestreaminput">
+<h3>BaseStreamInput<a class="headerlink" href="#basestreaminput" title="Permalink to this headline">¶</a></h3>
+<section id="id2">
+<h4>C++<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra15BaseStreamInputE">
+<span id="_CPPv3N6imebra15BaseStreamInputE"></span><span id="_CPPv2N6imebra15BaseStreamInputE"></span><span id="imebra::BaseStreamInput"></span><span class="target" id="classimebra_1_1_base_stream_input"></span><em class="property">class </em><code class="sig-name descname">BaseStreamInput</code><a class="headerlink" href="#_CPPv4N6imebra15BaseStreamInputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This class represents a generic input stream. </p>
+<p>Specialized classes derived from this one can read data from files stored on the computer’s disks (<a class="reference internal" href="#classimebra_1_1_file_stream_input"><span class="std std-ref">FileStreamInput</span></a>) or from memory (<a class="reference internal" href="#classimebra_1_1_memory_stream_input"><span class="std std-ref">MemoryStreamInput</span></a>).</p>
+<p>The client application cannot read the data directly from a <a class="reference internal" href="#classimebra_1_1_base_stream_input"><span class="std std-ref">BaseStreamInput</span></a> but must use a <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a>. Several <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> objects can read data from the same <a class="reference internal" href="#classimebra_1_1_base_stream_input"><span class="std std-ref">BaseStreamInput</span></a> object.</p>
+<p>The <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> class is not thread-safe, but different <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> objects in different threads can access the same <a class="reference internal" href="#classimebra_1_1_base_stream_input"><span class="std std-ref">BaseStreamInput</span></a> object. </p>
+<p>Subclassed by <a class="reference internal" href="#classimebra_1_1_file_stream_input"><span class="std std-ref">imebra::FileStreamInput</span></a>, <a class="reference internal" href="#classimebra_1_1_memory_stream_input"><span class="std std-ref">imebra::MemoryStreamInput</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra15BaseStreamInput15BaseStreamInputERK15BaseStreamInput">
+<span id="_CPPv3N6imebra15BaseStreamInput15BaseStreamInputERK15BaseStreamInput"></span><span id="_CPPv2N6imebra15BaseStreamInput15BaseStreamInputERK15BaseStreamInput"></span><span id="imebra::BaseStreamInput::BaseStreamInput__BaseStreamInputCR"></span><span class="target" id="classimebra_1_1_base_stream_input_1aafcd017cb75cc6a38b6df5824b7252d0"></span><code class="sig-name descname">BaseStreamInput</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra15BaseStreamInput15BaseStreamInputERK15BaseStreamInput" title="imebra::BaseStreamInput::BaseStreamInput">BaseStreamInput</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15BaseStreamInput15BaseStreamInputERK15BaseStreamInput" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source base input stream </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra15BaseStreamInputD0Ev">
+<span id="_CPPv3N6imebra15BaseStreamInputD0Ev"></span><span id="_CPPv2N6imebra15BaseStreamInputD0Ev"></span><span id="imebra::BaseStreamInput::~BaseStreamInput"></span><span class="target" id="classimebra_1_1_base_stream_input_1adda622357b82c8c44191bd3ccc9507bd"></span><em class="property">virtual</em> <code class="sig-name descname">~BaseStreamInput</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15BaseStreamInputD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id3">
+<h4>Objective-C/Swift<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv421ImebraBaseStreamInput">
+<span id="_CPPv321ImebraBaseStreamInput"></span><span id="_CPPv221ImebraBaseStreamInput"></span><span id="ImebraBaseStreamInput"></span><span class="target" id="interface_imebra_base_stream_input"></span><em class="property">class </em><code class="sig-name descname">ImebraBaseStreamInput</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv421ImebraBaseStreamInput" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This class represents a generic input stream. </p>
+<p>Specialized classes derived from this one can read data from files stored on the computer’s disks (<a class="reference internal" href="#interface_imebra_file_stream_input"><span class="std std-ref">ImebraFileStreamInput</span></a>) or from memory (<a class="reference internal" href="#interface_imebra_memory_stream_input"><span class="std std-ref">ImebraMemoryStreamInput</span></a>).</p>
+<p>The client application cannot read the data directly from a <a class="reference internal" href="#interface_imebra_base_stream_input"><span class="std std-ref">ImebraBaseStreamInput</span></a> but must use a <a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a>. Several <a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> objects can read data from the same <a class="reference internal" href="#interface_imebra_base_stream_input"><span class="std std-ref">ImebraBaseStreamInput</span></a> object.</p>
+<p>The <a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> class is not thread-safe, but different <a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> objects in different threads can access the same <a class="reference internal" href="#interface_imebra_base_stream_input"><span class="std std-ref">ImebraBaseStreamInput</span></a> object. </p>
+<p>Subclassed by <a class="reference internal" href="#interface_imebra_file_stream_input"><span class="std std-ref">ImebraFileStreamInput</span></a>, <a class="reference internal" href="#interface_imebra_memory_stream_input"><span class="std std-ref">ImebraMemoryStreamInput</span></a></p>
+</dd></dl>
+
+</section>
+</section>
+<section id="basestreamoutput">
+<h3>BaseStreamOutput<a class="headerlink" href="#basestreamoutput" title="Permalink to this headline">¶</a></h3>
+<section id="id4">
+<h4>C++<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra16BaseStreamOutputE">
+<span id="_CPPv3N6imebra16BaseStreamOutputE"></span><span id="_CPPv2N6imebra16BaseStreamOutputE"></span><span id="imebra::BaseStreamOutput"></span><span class="target" id="classimebra_1_1_base_stream_output"></span><em class="property">class </em><code class="sig-name descname">BaseStreamOutput</code><a class="headerlink" href="#_CPPv4N6imebra16BaseStreamOutputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This class represents a generic output stream. </p>
+<p>Specialized classes derived from this one can write into files on the computer’s disks (<a class="reference internal" href="#classimebra_1_1_file_stream_output"><span class="std std-ref">FileStreamOutput</span></a>) or to memory (<a class="reference internal" href="#classimebra_1_1_memory_stream_output"><span class="std std-ref">MemoryStreamOutput</span></a>).</p>
+<p>The application can write into the stream by using a <a class="reference internal" href="#classimebra_1_1_stream_writer"><span class="std std-ref">StreamWriter</span></a> object.</p>
+<p>While this class can be used across several threads, a <a class="reference internal" href="#classimebra_1_1_stream_writer"><span class="std std-ref">StreamWriter</span></a> can be used only in one thread.</p>
+<p>Several <a class="reference internal" href="#classimebra_1_1_stream_writer"><span class="std std-ref">StreamWriter</span></a> objects (also in different threads) can use the same <a class="reference internal" href="#classimebra_1_1_base_stream_output"><span class="std std-ref">BaseStreamOutput</span></a> object. </p>
+<p>Subclassed by <a class="reference internal" href="#classimebra_1_1_file_stream_output"><span class="std std-ref">imebra::FileStreamOutput</span></a>, <a class="reference internal" href="#classimebra_1_1_memory_stream_output"><span class="std std-ref">imebra::MemoryStreamOutput</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra16BaseStreamOutput16BaseStreamOutputERK16BaseStreamOutput">
+<span id="_CPPv3N6imebra16BaseStreamOutput16BaseStreamOutputERK16BaseStreamOutput"></span><span id="_CPPv2N6imebra16BaseStreamOutput16BaseStreamOutputERK16BaseStreamOutput"></span><span id="imebra::BaseStreamOutput::BaseStreamOutput__BaseStreamOutputCR"></span><span class="target" id="classimebra_1_1_base_stream_output_1a96d635d6fcb45eb7a445c851999ff97e"></span><code class="sig-name descname">BaseStreamOutput</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra16BaseStreamOutput16BaseStreamOutputERK16BaseStreamOutput" title="imebra::BaseStreamOutput::BaseStreamOutput">BaseStreamOutput</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra16BaseStreamOutput16BaseStreamOutputERK16BaseStreamOutput" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source base output stream </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra16BaseStreamOutputD0Ev">
+<span id="_CPPv3N6imebra16BaseStreamOutputD0Ev"></span><span id="_CPPv2N6imebra16BaseStreamOutputD0Ev"></span><span id="imebra::BaseStreamOutput::~BaseStreamOutput"></span><span class="target" id="classimebra_1_1_base_stream_output_1a69d1908a2eb7cb37f38b88520aee6573"></span><em class="property">virtual</em> <code class="sig-name descname">~BaseStreamOutput</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra16BaseStreamOutputD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id5">
+<h4>Objective-C/Swift<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv422ImebraBaseStreamOutput">
+<span id="_CPPv322ImebraBaseStreamOutput"></span><span id="_CPPv222ImebraBaseStreamOutput"></span><span id="ImebraBaseStreamOutput"></span><span class="target" id="interface_imebra_base_stream_output"></span><em class="property">class </em><code class="sig-name descname">ImebraBaseStreamOutput</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv422ImebraBaseStreamOutput" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This class represents a generic output stream. </p>
+<p>Specialized classes derived from this one can write into files on the computer’s disks (<a class="reference internal" href="#interface_imebra_file_stream_output"><span class="std std-ref">ImebraFileStreamOutput</span></a>) or to memory (<a class="reference internal" href="#interface_imebra_memory_stream_output"><span class="std std-ref">ImebraMemoryStreamOutput</span></a>).</p>
+<p>The application can write into the stream by using a <a class="reference internal" href="#interface_imebra_stream_writer"><span class="std std-ref">ImebraStreamWriter</span></a> object. </p>
+<p>Subclassed by <a class="reference internal" href="#interface_imebra_file_stream_output"><span class="std std-ref">ImebraFileStreamOutput</span></a>, <a class="reference internal" href="#interface_imebra_memory_stream_output"><span class="std std-ref">ImebraMemoryStreamOutput</span></a></p>
+</dd></dl>
+
+</section>
+</section>
+<section id="streamreader">
+<h3>StreamReader<a class="headerlink" href="#streamreader" title="Permalink to this headline">¶</a></h3>
+<section id="id6">
+<h4>C++<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra12StreamReaderE">
+<span id="_CPPv3N6imebra12StreamReaderE"></span><span id="_CPPv2N6imebra12StreamReaderE"></span><span id="imebra::StreamReader"></span><span class="target" id="classimebra_1_1_stream_reader"></span><em class="property">class </em><code class="sig-name descname">StreamReader</code><a class="headerlink" href="#_CPPv4N6imebra12StreamReaderE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> is used to read data from a <a class="reference internal" href="#classimebra_1_1_base_stream_input"><span class="std std-ref">BaseStreamInput</span></a> object. </p>
+<p>A <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> can be mapped to only a portion of the <a class="reference internal" href="#classimebra_1_1_base_stream_input"><span class="std std-ref">BaseStreamInput</span></a> it manages: for instance this is used by the Imebra classes to read Jpeg streams embedded into a DICOM stream.</p>
+<p><dl class="simple">
+<dt><strong>Warning</strong></dt><dd><p>The <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> object IS NOT THREAD-SAFE: however, several <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> objects from different threads can be connected to the same <a class="reference internal" href="#classimebra_1_1_base_stream_input"><span class="std std-ref">BaseStreamInput</span></a> object. </p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra12StreamReader12StreamReaderERK15BaseStreamInput">
+<span id="_CPPv3N6imebra12StreamReader12StreamReaderERK15BaseStreamInput"></span><span id="_CPPv2N6imebra12StreamReader12StreamReaderERK15BaseStreamInput"></span><span id="imebra::StreamReader::StreamReader__BaseStreamInputCR"></span><span class="target" id="classimebra_1_1_stream_reader_1abd6e70fc43cb09317cabd1b21d40401c"></span><code class="sig-name descname">StreamReader</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra15BaseStreamInputE" title="imebra::BaseStreamInput">BaseStreamInput</a> &amp;<em>stream</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12StreamReader12StreamReaderERK15BaseStreamInput" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">stream</span></code>: the <a class="reference internal" href="#classimebra_1_1_base_stream_input"><span class="std std-ref">BaseStreamInput</span></a> object from which the <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> will read </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12StreamReader12StreamReaderERK15BaseStreamInput6size_t6size_t">
+<span id="_CPPv3N6imebra12StreamReader12StreamReaderERK15BaseStreamInput6size_t6size_t"></span><span id="_CPPv2N6imebra12StreamReader12StreamReaderERK15BaseStreamInput6size_t6size_t"></span><span id="imebra::StreamReader::StreamReader__BaseStreamInputCR.s.s"></span><span class="target" id="classimebra_1_1_stream_reader_1a606c8127b3c8b56e7cdf7be43c9f25b1"></span><code class="sig-name descname">StreamReader</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra15BaseStreamInputE" title="imebra::BaseStreamInput">BaseStreamInput</a> &amp;<em>stream</em>, size_t <em>virtualStart</em>, size_t <em>virtualLength</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12StreamReader12StreamReaderERK15BaseStreamInput6size_t6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p>This version of the constructor limits the portion of the stream that the <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> will see.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">stream</span></code>: the <a class="reference internal" href="#classimebra_1_1_base_stream_input"><span class="std std-ref">BaseStreamInput</span></a> object from which the <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> will read </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualStart</span></code>: the first visible byte of the managed stream </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualLength</span></code>: the number of visible bytes in the managed stream </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12StreamReader12StreamReaderERK12StreamReader">
+<span id="_CPPv3N6imebra12StreamReader12StreamReaderERK12StreamReader"></span><span id="_CPPv2N6imebra12StreamReader12StreamReaderERK12StreamReader"></span><span id="imebra::StreamReader::StreamReader__StreamReaderCR"></span><span class="target" id="classimebra_1_1_stream_reader_1a7c1ac7c862427c8e956f8090b9b21a91"></span><code class="sig-name descname">StreamReader</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra12StreamReader12StreamReaderERK15BaseStreamInput" title="imebra::StreamReader::StreamReader">StreamReader</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12StreamReader12StreamReaderERK12StreamReader" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12StreamReader16getVirtualStreamE6size_t">
+<span id="_CPPv3N6imebra12StreamReader16getVirtualStreamE6size_t"></span><span id="_CPPv2N6imebra12StreamReader16getVirtualStreamE6size_t"></span><span id="imebra::StreamReader::getVirtualStream__s"></span><span class="target" id="classimebra_1_1_stream_reader_1a11992105b8ae70f150daa37163b38337"></span><a class="reference internal" href="#_CPPv4N6imebra12StreamReaderE" title="imebra::StreamReader">StreamReader</a> <code class="sig-name descname">getVirtualStream</code><span class="sig-paren">(</span>size_t <em>virtualStreamLength</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12StreamReader16getVirtualStreamE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns a virtual stream that has a restricted view into the stream. </p>
+<p>The reading position of this stream advances to the end of the virtual stream.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a virtual stream that sees a limited number of bytes of this stream </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualStreamLength</span></code>: the number of bytes that the virtual stream can read </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12StreamReader4readEPc6size_t">
+<span id="_CPPv3N6imebra12StreamReader4readEPc6size_t"></span><span id="_CPPv2N6imebra12StreamReader4readEPc6size_t"></span><span id="imebra::StreamReader::read__cP.s"></span><span class="target" id="classimebra_1_1_stream_reader_1aae14f99f9391b6efb3d833b1c84ea8a1"></span>void <code class="sig-name descname">read</code><span class="sig-paren">(</span>char *<em>destination</em>, size_t <em>destinationSize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12StreamReader4readEPc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Read data from the stream. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code>: pointer to the destination buffer </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationSize</span></code>: number of bytes to read </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12StreamReader8readSomeEPc6size_t">
+<span id="_CPPv3N6imebra12StreamReader8readSomeEPc6size_t"></span><span id="_CPPv2N6imebra12StreamReader8readSomeEPc6size_t"></span><span id="imebra::StreamReader::readSome__cP.s"></span><span class="target" id="classimebra_1_1_stream_reader_1ad756f0a07b88f74c557e9883c82e7677"></span>size_t <code class="sig-name descname">readSome</code><span class="sig-paren">(</span>char *<em>destination</em>, size_t <em>destinationSize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12StreamReader8readSomeEPc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Read data from the stream. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the number of bytes that have been read </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code>: pointer to the destination buffer </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationSize</span></code>: maximum number of bytes to read </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12StreamReader4readE6size_t">
+<span id="_CPPv3N6imebra12StreamReader4readE6size_t"></span><span id="_CPPv2N6imebra12StreamReader4readE6size_t"></span><span id="imebra::StreamReader::read__s"></span><span class="target" id="classimebra_1_1_stream_reader_1a4744a2b6ddbd11513e789b3d3fc93d51"></span><a class="reference internal" href="memory_management_classes.html#_CPPv4N6imebra6MemoryE" title="imebra::Memory">Memory</a> <code class="sig-name descname">read</code><span class="sig-paren">(</span>size_t <em>readSize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12StreamReader4readE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Read data from the stream. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>memory block containing the read data </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">readSize</span></code>: number of bytes to read </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12StreamReader8readSomeE6size_t">
+<span id="_CPPv3N6imebra12StreamReader8readSomeE6size_t"></span><span id="_CPPv2N6imebra12StreamReader8readSomeE6size_t"></span><span id="imebra::StreamReader::readSome__s"></span><span class="target" id="classimebra_1_1_stream_reader_1ad120d92a48848751b2659d279c630045"></span><a class="reference internal" href="memory_management_classes.html#_CPPv4N6imebra6MemoryE" title="imebra::Memory">Memory</a> <code class="sig-name descname">readSome</code><span class="sig-paren">(</span>size_t <em>readSize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12StreamReader8readSomeE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Read data from the stream. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>memory block containing the read data </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">readSize</span></code>: maximum number of bytes to read </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12StreamReader9terminateEv">
+<span id="_CPPv3N6imebra12StreamReader9terminateEv"></span><span id="_CPPv2N6imebra12StreamReader9terminateEv"></span><span id="imebra::StreamReader::terminate"></span><span class="target" id="classimebra_1_1_stream_reader_1aa0d80efa2ee294a67362377e33ed495d"></span>void <code class="sig-name descname">terminate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12StreamReader9terminateEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Cause the controlled stream to throw <a class="reference internal" href="exception_classes.html#classimebra_1_1_stream_closed_error"><span class="std std-ref">StreamClosedError</span></a> during the mext read operation. </p>
+<p>This can be used to cause reading threads to terminate. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id7">
+<h4>Objective-C/Swift<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv418ImebraStreamReader">
+<span id="_CPPv318ImebraStreamReader"></span><span id="_CPPv218ImebraStreamReader"></span><span id="ImebraStreamReader"></span><span class="target" id="interface_imebra_stream_reader"></span><em class="property">class </em><code class="sig-name descname">ImebraStreamReader</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv418ImebraStreamReader" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> is used to read data from a <a class="reference internal" href="#interface_imebra_base_stream_input"><span class="std std-ref">ImebraBaseStreamInput</span></a> object. </p>
+<p><a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> can be mapped to only a portion of the <a class="reference internal" href="#interface_imebra_base_stream_input"><span class="std std-ref">ImebraBaseStreamInput</span></a> it manages: for instance this is used by the Imebra classes to read Jpeg streams embedded into a DICOM stream.</p>
+<p><dl class="simple">
+<dt><strong>Warning</strong></dt><dd><p>The <a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> object IS NOT THREAD-SAFE: however, several <a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> objects from different threads can be connected to the same <a class="reference internal" href="#interface_imebra_base_stream_input"><span class="std std-ref">ImebraBaseStreamInput</span></a> object. </p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_stream_reader_1ac98c589cab9258c689d35881f6683ae8"></span><code class="sig-name descname">id ImebraStreamReader::initWithInputStream:(ImebraBaseStreamInput  * pInput)</code></dt>
+<dd><p>Initializer. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pInput</span></code>: the <a class="reference internal" href="#interface_imebra_base_stream_input"><span class="std std-ref">ImebraBaseStreamInput</span></a> object from which the ž <a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> will read </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_stream_reader_1a5c74be33601326a3c67d4f9acc3e3257"></span><code class="sig-name descname">id ImebraStreamReader::initWithInputStream:virtualStart:virtualEnd:(ImebraBaseStreamInput  * pInput, unsigned int virtualStart, unsigned int virtualEnd)</code></dt>
+<dd><p>Initializer. </p>
+<p>This version of the constructor limits the portion of the stream that the <a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> will see.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pInput</span></code>: the <a class="reference internal" href="#interface_imebra_base_stream_input"><span class="std std-ref">ImebraBaseStreamInput</span></a> object from which the ž <a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> will read </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualStart</span></code>: the first visible byte of the managed stream </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualLength</span></code>: the number of visible bytes in the managed stream </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_stream_reader_1a80944f0552b8aaa68ac9cee9431a5b8d"></span><code class="sig-name descname">ImebraStreamReader* ImebraStreamReader::getVirtualStream:error:(unsigned int virtualSize, NSError ** pError)</code></dt>
+<dd><p>Returns a virtual stream that has a restricted view into the stream. </p>
+<p>The reading position of this stream advances to the end of the virtual stream.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a virtual stream that sees a limited number of bytes of this stream </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualSize</span></code>: the number of bytes that the virtual stream can read </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a NSError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N18ImebraStreamReader9terminateEv">
+<span id="_CPPv3N18ImebraStreamReader9terminateEv"></span><span id="_CPPv2N18ImebraStreamReader9terminateEv"></span><span id="ImebraStreamReader::terminate"></span><span class="target" id="interface_imebra_stream_reader_1a7c63f5c93df1ebfa6095172648badb6b"></span>void <code class="sig-name descname">terminate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18ImebraStreamReader9terminateEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Cause the controlled stream to set the ImebraStreamClosedError during the next read operation. </p>
+<p>This can be used to cause reading threads to terminate. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="streamwriter">
+<h3>StreamWriter<a class="headerlink" href="#streamwriter" title="Permalink to this headline">¶</a></h3>
+<section id="id8">
+<h4>C++<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra12StreamWriterE">
+<span id="_CPPv3N6imebra12StreamWriterE"></span><span id="_CPPv2N6imebra12StreamWriterE"></span><span id="imebra::StreamWriter"></span><span class="target" id="classimebra_1_1_stream_writer"></span><em class="property">class </em><code class="sig-name descname">StreamWriter</code><a class="headerlink" href="#_CPPv4N6imebra12StreamWriterE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A <a class="reference internal" href="#classimebra_1_1_stream_writer"><span class="std std-ref">StreamWriter</span></a> is used to write data into a <a class="reference internal" href="#classimebra_1_1_base_stream_output"><span class="std std-ref">BaseStreamOutput</span></a> object. </p>
+<p>A <a class="reference internal" href="#classimebra_1_1_stream_writer"><span class="std std-ref">StreamWriter</span></a> can be mapped to only a portion of the <a class="reference internal" href="#classimebra_1_1_base_stream_output"><span class="std std-ref">BaseStreamOutput</span></a> it manages.</p>
+<p><dl class="simple">
+<dt><strong>Warning</strong></dt><dd><p>: The <a class="reference internal" href="#classimebra_1_1_stream_writer"><span class="std std-ref">StreamWriter</span></a> object IS NOT THREAD-SAFE: however, several <a class="reference internal" href="#classimebra_1_1_stream_writer"><span class="std std-ref">StreamWriter</span></a> objects from different threads can be connected to the same <a class="reference internal" href="#classimebra_1_1_base_stream_output"><span class="std std-ref">BaseStreamOutput</span></a> object. </p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra12StreamWriter12StreamWriterERK16BaseStreamOutput">
+<span id="_CPPv3N6imebra12StreamWriter12StreamWriterERK16BaseStreamOutput"></span><span id="_CPPv2N6imebra12StreamWriter12StreamWriterERK16BaseStreamOutput"></span><span id="imebra::StreamWriter::StreamWriter__BaseStreamOutputCR"></span><span class="target" id="classimebra_1_1_stream_writer_1a3021758d0c32f88f6ab832c6e721182c"></span><code class="sig-name descname">StreamWriter</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra16BaseStreamOutputE" title="imebra::BaseStreamOutput">BaseStreamOutput</a> &amp;<em>stream</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12StreamWriter12StreamWriterERK16BaseStreamOutput" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">stream</span></code>: the <a class="reference internal" href="#classimebra_1_1_base_stream_output"><span class="std std-ref">BaseStreamOutput</span></a> object on which the <a class="reference internal" href="#classimebra_1_1_stream_writer"><span class="std std-ref">StreamWriter</span></a> will write </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12StreamWriter12StreamWriterERK16BaseStreamOutput6size_t6size_t">
+<span id="_CPPv3N6imebra12StreamWriter12StreamWriterERK16BaseStreamOutput6size_t6size_t"></span><span id="_CPPv2N6imebra12StreamWriter12StreamWriterERK16BaseStreamOutput6size_t6size_t"></span><span id="imebra::StreamWriter::StreamWriter__BaseStreamOutputCR.s.s"></span><span class="target" id="classimebra_1_1_stream_writer_1a7dc71b268a117907a56a95e659b26f05"></span><code class="sig-name descname">StreamWriter</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra16BaseStreamOutputE" title="imebra::BaseStreamOutput">BaseStreamOutput</a> &amp;<em>stream</em>, size_t <em>virtualStart</em>, size_t <em>virtualLength</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12StreamWriter12StreamWriterERK16BaseStreamOutput6size_t6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p>This version of the constructor limits the portion of the stream that the <a class="reference internal" href="#classimebra_1_1_stream_writer"><span class="std std-ref">StreamWriter</span></a> will be able to use.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">stream</span></code>: the <a class="reference internal" href="#classimebra_1_1_base_stream_output"><span class="std std-ref">BaseStreamOutput</span></a> object on which the <a class="reference internal" href="#classimebra_1_1_stream_writer"><span class="std std-ref">StreamWriter</span></a> will write </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualStart</span></code>: the first visible byte of the managed stream </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualLength</span></code>: the number of visible bytes in the managed stream </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12StreamWriter12StreamWriterERK12StreamWriter">
+<span id="_CPPv3N6imebra12StreamWriter12StreamWriterERK12StreamWriter"></span><span id="_CPPv2N6imebra12StreamWriter12StreamWriterERK12StreamWriter"></span><span id="imebra::StreamWriter::StreamWriter__StreamWriterCR"></span><span class="target" id="classimebra_1_1_stream_writer_1a5f5be9a565d2079f2cdff81270ee742e"></span><code class="sig-name descname">StreamWriter</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra12StreamWriter12StreamWriterERK16BaseStreamOutput" title="imebra::StreamWriter::StreamWriter">StreamWriter</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12StreamWriter12StreamWriterERK12StreamWriter" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source <a class="reference internal" href="#classimebra_1_1_stream_writer"><span class="std std-ref">StreamWriter</span></a> object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12StreamWriter5writeEPKc6size_t">
+<span id="_CPPv3N6imebra12StreamWriter5writeEPKc6size_t"></span><span id="_CPPv2N6imebra12StreamWriter5writeEPKc6size_t"></span><span id="imebra::StreamWriter::write__cCP.s"></span><span class="target" id="classimebra_1_1_stream_writer_1aa0773f57531ce49b0300c993b57daebd"></span>void <code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>data</em>, size_t <em>dataSize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12StreamWriter5writeEPKc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write raw data into the stream. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code>: a pointer to the buffer which stores the data that must be written intothe stream </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bufferLength</span></code>: the number of bytes that must be written to the stream </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12StreamWriter5writeERK6Memory">
+<span id="_CPPv3N6imebra12StreamWriter5writeERK6Memory"></span><span id="_CPPv2N6imebra12StreamWriter5writeERK6Memory"></span><span id="imebra::StreamWriter::write__MemoryCR"></span><span class="target" id="classimebra_1_1_stream_writer_1a6350151afa475e4242fef75043731823"></span>void <code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="memory_management_classes.html#_CPPv4N6imebra6MemoryE" title="imebra::Memory">Memory</a> &amp;<em>memory</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12StreamWriter5writeERK6Memory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write raw data into the stream. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code>: a <a class="reference internal" href="memory_management_classes.html#classimebra_1_1_memory"><span class="std std-ref">Memory</span></a> object containing the data to write </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra12StreamWriter5flushEv">
+<span id="_CPPv3N6imebra12StreamWriter5flushEv"></span><span id="_CPPv2N6imebra12StreamWriter5flushEv"></span><span id="imebra::StreamWriter::flush"></span><span class="target" id="classimebra_1_1_stream_writer_1a48fc9390648ec1114e623fa170b010ce"></span>void <code class="sig-name descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra12StreamWriter5flushEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Flush all the unwritten data into the controlled stream. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id9">
+<h4>Objective-C/Swift<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv418ImebraStreamWriter">
+<span id="_CPPv318ImebraStreamWriter"></span><span id="_CPPv218ImebraStreamWriter"></span><span id="ImebraStreamWriter"></span><span class="target" id="interface_imebra_stream_writer"></span><em class="property">class </em><code class="sig-name descname">ImebraStreamWriter</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv418ImebraStreamWriter" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A <a class="reference internal" href="#interface_imebra_stream_writer"><span class="std std-ref">ImebraStreamWriter</span></a> is used to write data into a <a class="reference internal" href="#interface_imebra_base_stream_output"><span class="std std-ref">ImebraBaseStreamOutput</span></a> object. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_stream_writer_1a1a308505731db74ee572fbab7e7d8804"></span><code class="sig-name descname">id ImebraStreamWriter::initWithOutputStream:(ImebraBaseStreamOutput  * pOutput)</code></dt>
+<dd><p>Initializer. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pOutput</span></code>: the <a class="reference internal" href="#interface_imebra_base_stream_output"><span class="std std-ref">ImebraBaseStreamOutput</span></a> object on which the <a class="reference internal" href="#interface_imebra_stream_writer"><span class="std std-ref">ImebraStreamWriter</span></a> will write </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="filestreaminput">
+<h3>FileStreamInput<a class="headerlink" href="#filestreaminput" title="Permalink to this headline">¶</a></h3>
+<section id="id10">
+<h4>C++<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra15FileStreamInputE">
+<span id="_CPPv3N6imebra15FileStreamInputE"></span><span id="_CPPv2N6imebra15FileStreamInputE"></span><span id="imebra::FileStreamInput"></span><span class="target" id="classimebra_1_1_file_stream_input"></span><em class="property">class </em><code class="sig-name descname">FileStreamInput</code> : <em class="property">public</em> imebra::<a class="reference internal" href="#_CPPv4N6imebra15BaseStreamInputE" title="imebra::BaseStreamInput">BaseStreamInput</a><a class="headerlink" href="#_CPPv4N6imebra15FileStreamInputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents an input file stream. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra15FileStreamInput15FileStreamInputERKNSt7wstringE">
+<span id="_CPPv3N6imebra15FileStreamInput15FileStreamInputERKNSt7wstringE"></span><span id="_CPPv2N6imebra15FileStreamInput15FileStreamInputERKNSt7wstringE"></span><span id="imebra::FileStreamInput::FileStreamInput__std::wstringCR"></span><span class="target" id="classimebra_1_1_file_stream_input_1acb967e30d017d5bb28d57b35061e95a4"></span><code class="sig-name descname">FileStreamInput</code><span class="sig-paren">(</span><em class="property">const</em> std::wstring &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15FileStreamInput15FileStreamInputERKNSt7wstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: the path to the file to open in read mode </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra15FileStreamInput15FileStreamInputERKNSt6stringE">
+<span id="_CPPv3N6imebra15FileStreamInput15FileStreamInputERKNSt6stringE"></span><span id="_CPPv2N6imebra15FileStreamInput15FileStreamInputERKNSt6stringE"></span><span id="imebra::FileStreamInput::FileStreamInput__ssCR"></span><span class="target" id="classimebra_1_1_file_stream_input_1a2e46becfbbbe8f041fcd00341e99f56f"></span><code class="sig-name descname">FileStreamInput</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15FileStreamInput15FileStreamInputERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: the path to the file to open in read mode, in encoded in UTF8 </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra15FileStreamInput15FileStreamInputERK15FileStreamInput">
+<span id="_CPPv3N6imebra15FileStreamInput15FileStreamInputERK15FileStreamInput"></span><span id="_CPPv2N6imebra15FileStreamInput15FileStreamInputERK15FileStreamInput"></span><span id="imebra::FileStreamInput::FileStreamInput__FileStreamInputCR"></span><span class="target" id="classimebra_1_1_file_stream_input_1a0a47d0a16924f9bb31567e6df2448b7f"></span><code class="sig-name descname">FileStreamInput</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra15FileStreamInput15FileStreamInputERKNSt7wstringE" title="imebra::FileStreamInput::FileStreamInput">FileStreamInput</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15FileStreamInput15FileStreamInputERK15FileStreamInput" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source <a class="reference internal" href="#classimebra_1_1_file_stream_input"><span class="std std-ref">FileStreamInput</span></a> object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra15FileStreamInputD0Ev">
+<span id="_CPPv3N6imebra15FileStreamInputD0Ev"></span><span id="_CPPv2N6imebra15FileStreamInputD0Ev"></span><span id="imebra::FileStreamInput::~FileStreamInput"></span><span class="target" id="classimebra_1_1_file_stream_input_1affe590258aec186b8614954d5d08b641"></span><code class="sig-name descname">~FileStreamInput</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra15FileStreamInputD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destructor. Closes the file. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id11">
+<h4>Objective-C/Swift<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv421ImebraFileStreamInput">
+<span id="_CPPv321ImebraFileStreamInput"></span><span id="_CPPv221ImebraFileStreamInput"></span><span id="ImebraFileStreamInput"></span><span class="target" id="interface_imebra_file_stream_input"></span><em class="property">class </em><code class="sig-name descname">ImebraFileStreamInput</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv421ImebraBaseStreamInput" title="ImebraBaseStreamInput">ImebraBaseStreamInput</a><a class="headerlink" href="#_CPPv421ImebraFileStreamInput" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents an input file stream. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_file_stream_input_1a501ff4f1a3ec7e9e2ad96296d8cef794"></span><code class="sig-name descname">id ImebraFileStreamInput::initWithName:error:(NSString * fileName, NSError ** pError)</code></dt>
+<dd><p>Initializer. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fileName</span></code>: the path to the file to open in read mode </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a NSError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="filestreamoutput">
+<h3>FileStreamOutput<a class="headerlink" href="#filestreamoutput" title="Permalink to this headline">¶</a></h3>
+<section id="id12">
+<h4>C++<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra16FileStreamOutputE">
+<span id="_CPPv3N6imebra16FileStreamOutputE"></span><span id="_CPPv2N6imebra16FileStreamOutputE"></span><span id="imebra::FileStreamOutput"></span><span class="target" id="classimebra_1_1_file_stream_output"></span><em class="property">class </em><code class="sig-name descname">FileStreamOutput</code> : <em class="property">public</em> imebra::<a class="reference internal" href="#_CPPv4N6imebra16BaseStreamOutputE" title="imebra::BaseStreamOutput">BaseStreamOutput</a><a class="headerlink" href="#_CPPv4N6imebra16FileStreamOutputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents an output file stream. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra16FileStreamOutput16FileStreamOutputERKNSt7wstringE">
+<span id="_CPPv3N6imebra16FileStreamOutput16FileStreamOutputERKNSt7wstringE"></span><span id="_CPPv2N6imebra16FileStreamOutput16FileStreamOutputERKNSt7wstringE"></span><span id="imebra::FileStreamOutput::FileStreamOutput__std::wstringCR"></span><span class="target" id="classimebra_1_1_file_stream_output_1adf1e979c9acf582e180c65d798f73419"></span><code class="sig-name descname">FileStreamOutput</code><span class="sig-paren">(</span><em class="property">const</em> std::wstring &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra16FileStreamOutput16FileStreamOutputERKNSt7wstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: the path to the file to open in write mode </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra16FileStreamOutput16FileStreamOutputERKNSt6stringE">
+<span id="_CPPv3N6imebra16FileStreamOutput16FileStreamOutputERKNSt6stringE"></span><span id="_CPPv2N6imebra16FileStreamOutput16FileStreamOutputERKNSt6stringE"></span><span id="imebra::FileStreamOutput::FileStreamOutput__ssCR"></span><span class="target" id="classimebra_1_1_file_stream_output_1a4cbd206fd967e36bca356f4615b39b3e"></span><code class="sig-name descname">FileStreamOutput</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra16FileStreamOutput16FileStreamOutputERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: the path to the file to open in write mode </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra16FileStreamOutput16FileStreamOutputERK16FileStreamOutput">
+<span id="_CPPv3N6imebra16FileStreamOutput16FileStreamOutputERK16FileStreamOutput"></span><span id="_CPPv2N6imebra16FileStreamOutput16FileStreamOutputERK16FileStreamOutput"></span><span id="imebra::FileStreamOutput::FileStreamOutput__FileStreamOutputCR"></span><span class="target" id="classimebra_1_1_file_stream_output_1a418874e80739ffa9a1ebb7f795e43ac7"></span><code class="sig-name descname">FileStreamOutput</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra16FileStreamOutput16FileStreamOutputERKNSt7wstringE" title="imebra::FileStreamOutput::FileStreamOutput">FileStreamOutput</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra16FileStreamOutput16FileStreamOutputERK16FileStreamOutput" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source <a class="reference internal" href="#classimebra_1_1_file_stream_output"><span class="std std-ref">FileStreamOutput</span></a> object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra16FileStreamOutputD0Ev">
+<span id="_CPPv3N6imebra16FileStreamOutputD0Ev"></span><span id="_CPPv2N6imebra16FileStreamOutputD0Ev"></span><span id="imebra::FileStreamOutput::~FileStreamOutput"></span><span class="target" id="classimebra_1_1_file_stream_output_1ae3dea1d95614ccc0f4f1d064e6dd0020"></span><code class="sig-name descname">~FileStreamOutput</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra16FileStreamOutputD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destructor. Closes the file. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id13">
+<h4>Objective-C/Swift<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv422ImebraFileStreamOutput">
+<span id="_CPPv322ImebraFileStreamOutput"></span><span id="_CPPv222ImebraFileStreamOutput"></span><span id="ImebraFileStreamOutput"></span><span class="target" id="interface_imebra_file_stream_output"></span><em class="property">class </em><code class="sig-name descname">ImebraFileStreamOutput</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv422ImebraBaseStreamOutput" title="ImebraBaseStreamOutput">ImebraBaseStreamOutput</a><a class="headerlink" href="#_CPPv422ImebraFileStreamOutput" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents an output file stream. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_file_stream_output_1a3dcab29922b306a6df352d0520b7e19f"></span><code class="sig-name descname">id ImebraFileStreamOutput::initWithName:error:(NSString * fileName, NSError ** pError)</code></dt>
+<dd><p>Constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fileName</span></code>: the path to the file to open in write mode </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a NSError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="memorystreaminput">
+<h3>MemoryStreamInput<a class="headerlink" href="#memorystreaminput" title="Permalink to this headline">¶</a></h3>
+<section id="id14">
+<h4>C++<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra17MemoryStreamInputE">
+<span id="_CPPv3N6imebra17MemoryStreamInputE"></span><span id="_CPPv2N6imebra17MemoryStreamInputE"></span><span id="imebra::MemoryStreamInput"></span><span class="target" id="classimebra_1_1_memory_stream_input"></span><em class="property">class </em><code class="sig-name descname">MemoryStreamInput</code> : <em class="property">public</em> imebra::<a class="reference internal" href="#_CPPv4N6imebra15BaseStreamInputE" title="imebra::BaseStreamInput">BaseStreamInput</a><a class="headerlink" href="#_CPPv4N6imebra17MemoryStreamInputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An input stream that reads data from a memory region. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra17MemoryStreamInput17MemoryStreamInputERK6Memory">
+<span id="_CPPv3N6imebra17MemoryStreamInput17MemoryStreamInputERK6Memory"></span><span id="_CPPv2N6imebra17MemoryStreamInput17MemoryStreamInputERK6Memory"></span><span id="imebra::MemoryStreamInput::MemoryStreamInput__MemoryCR"></span><span class="target" id="classimebra_1_1_memory_stream_input_1a7d09575ae2ea2a6e5afd9c8a62bf827f"></span><code class="sig-name descname">MemoryStreamInput</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="memory_management_classes.html#_CPPv4N6imebra6MemoryE" title="imebra::Memory">Memory</a> &amp;<em>memory</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra17MemoryStreamInput17MemoryStreamInputERK6Memory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code>: the memory region from which the stream will read the data </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra17MemoryStreamInput17MemoryStreamInputERK17MemoryStreamInput">
+<span id="_CPPv3N6imebra17MemoryStreamInput17MemoryStreamInputERK17MemoryStreamInput"></span><span id="_CPPv2N6imebra17MemoryStreamInput17MemoryStreamInputERK17MemoryStreamInput"></span><span id="imebra::MemoryStreamInput::MemoryStreamInput__MemoryStreamInputCR"></span><span class="target" id="classimebra_1_1_memory_stream_input_1a5ea7ddcc0e17513a8f475d5f2c542367"></span><code class="sig-name descname">MemoryStreamInput</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra17MemoryStreamInput17MemoryStreamInputERK6Memory" title="imebra::MemoryStreamInput::MemoryStreamInput">MemoryStreamInput</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra17MemoryStreamInput17MemoryStreamInputERK17MemoryStreamInput" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source <a class="reference internal" href="#classimebra_1_1_memory_stream_input"><span class="std std-ref">MemoryStreamInput</span></a> object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id15">
+<h4>Objective-C/Swift<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv423ImebraMemoryStreamInput">
+<span id="_CPPv323ImebraMemoryStreamInput"></span><span id="_CPPv223ImebraMemoryStreamInput"></span><span id="ImebraMemoryStreamInput"></span><span class="target" id="interface_imebra_memory_stream_input"></span><em class="property">class </em><code class="sig-name descname">ImebraMemoryStreamInput</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv421ImebraBaseStreamInput" title="ImebraBaseStreamInput">ImebraBaseStreamInput</a><a class="headerlink" href="#_CPPv423ImebraMemoryStreamInput" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An input stream that reads data from a memory region. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_memory_stream_input_1a9724afa5e07043b57e323d61fd8c9d70"></span><code class="sig-name descname">id ImebraMemoryStreamInput::initWithReadMemory:(ImebraMemory  * pMemory)</code></dt>
+<dd><p>Initializer. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pMemory</span></code>: the memory region from which the stream will read the data </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="memorystreamoutput">
+<h3>MemoryStreamOutput<a class="headerlink" href="#memorystreamoutput" title="Permalink to this headline">¶</a></h3>
+<section id="id16">
+<h4>C++<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra18MemoryStreamOutputE">
+<span id="_CPPv3N6imebra18MemoryStreamOutputE"></span><span id="_CPPv2N6imebra18MemoryStreamOutputE"></span><span id="imebra::MemoryStreamOutput"></span><span class="target" id="classimebra_1_1_memory_stream_output"></span><em class="property">class </em><code class="sig-name descname">MemoryStreamOutput</code> : <em class="property">public</em> imebra::<a class="reference internal" href="#_CPPv4N6imebra16BaseStreamOutputE" title="imebra::BaseStreamOutput">BaseStreamOutput</a><a class="headerlink" href="#_CPPv4N6imebra18MemoryStreamOutputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An output stream that writes data into a memory region. </p>
+<p>When new data is written into the memory then it is resized as necessary. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra18MemoryStreamOutput18MemoryStreamOutputERK13MutableMemory">
+<span id="_CPPv3N6imebra18MemoryStreamOutput18MemoryStreamOutputERK13MutableMemory"></span><span id="_CPPv2N6imebra18MemoryStreamOutput18MemoryStreamOutputERK13MutableMemory"></span><span id="imebra::MemoryStreamOutput::MemoryStreamOutput__MutableMemoryCR"></span><span class="target" id="classimebra_1_1_memory_stream_output_1ac1432a2e4a262ced43e875b375073e62"></span><code class="sig-name descname">MemoryStreamOutput</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="memory_management_classes.html#_CPPv4N6imebra13MutableMemoryE" title="imebra::MutableMemory">MutableMemory</a> &amp;<em>memory</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra18MemoryStreamOutput18MemoryStreamOutputERK13MutableMemory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code>: the memory region into which the stream will write the data </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra18MemoryStreamOutput18MemoryStreamOutputERK18MemoryStreamOutput">
+<span id="_CPPv3N6imebra18MemoryStreamOutput18MemoryStreamOutputERK18MemoryStreamOutput"></span><span id="_CPPv2N6imebra18MemoryStreamOutput18MemoryStreamOutputERK18MemoryStreamOutput"></span><span id="imebra::MemoryStreamOutput::MemoryStreamOutput__MemoryStreamOutputCR"></span><span class="target" id="classimebra_1_1_memory_stream_output_1a983aecc9f637219b5ca5d4b087bfc6aa"></span><code class="sig-name descname">MemoryStreamOutput</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra18MemoryStreamOutput18MemoryStreamOutputERK13MutableMemory" title="imebra::MemoryStreamOutput::MemoryStreamOutput">MemoryStreamOutput</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra18MemoryStreamOutput18MemoryStreamOutputERK18MemoryStreamOutput" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source <a class="reference internal" href="#classimebra_1_1_memory_stream_output"><span class="std std-ref">MemoryStreamOutput</span></a> object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id17">
+<h4>Objective-C/Swift<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv424ImebraMemoryStreamOutput">
+<span id="_CPPv324ImebraMemoryStreamOutput"></span><span id="_CPPv224ImebraMemoryStreamOutput"></span><span id="ImebraMemoryStreamOutput"></span><span class="target" id="interface_imebra_memory_stream_output"></span><em class="property">class </em><code class="sig-name descname">ImebraMemoryStreamOutput</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv422ImebraBaseStreamOutput" title="ImebraBaseStreamOutput">ImebraBaseStreamOutput</a><a class="headerlink" href="#_CPPv424ImebraMemoryStreamOutput" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An output stream that writes data into a memory region. </p>
+<p>When new data is written into the memory then it is resized as necessary. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_memory_stream_output_1abeaa8777f6ed3ce921111520b9796dde"></span><code class="sig-name descname">id ImebraMemoryStreamOutput::initWithMutableMemory:(ImebraMutableMemory  * pMemory)</code></dt>
+<dd><p>Initializer. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pMemory</span></code>: the memory region into which the stream will write the data </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="streamtimeout">
+<h3>StreamTimeout<a class="headerlink" href="#streamtimeout" title="Permalink to this headline">¶</a></h3>
+<section id="id18">
+<h4>C++<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra13StreamTimeoutE">
+<span id="_CPPv3N6imebra13StreamTimeoutE"></span><span id="_CPPv2N6imebra13StreamTimeoutE"></span><span id="imebra::StreamTimeout"></span><span class="target" id="classimebra_1_1_stream_timeout"></span><em class="property">class </em><code class="sig-name descname">StreamTimeout</code><a class="headerlink" href="#_CPPv4N6imebra13StreamTimeoutE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Triggers a timeout on a selected stream if the class is not deallocated within the specified amount of time. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra13StreamTimeout13StreamTimeoutER15BaseStreamInputNSt8uint32_tE">
+<span id="_CPPv3N6imebra13StreamTimeout13StreamTimeoutER15BaseStreamInputNSt8uint32_tE"></span><span id="_CPPv2N6imebra13StreamTimeout13StreamTimeoutER15BaseStreamInputNSt8uint32_tE"></span><span id="imebra::StreamTimeout::StreamTimeout__BaseStreamInputR.std::uint32_t"></span><span class="target" id="classimebra_1_1_stream_timeout_1aba84b5e09736d83796d891d560bcb950"></span><code class="sig-name descname">StreamTimeout</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N6imebra15BaseStreamInputE" title="imebra::BaseStreamInput">BaseStreamInput</a> &amp;<em>stream</em>, std::uint32_t <em>timeoutSeconds</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra13StreamTimeout13StreamTimeoutER15BaseStreamInputNSt8uint32_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. Starts a separate thread that closes the stream in the parameter if this class destructor is not called before the timeout expires. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">stream</span></code>: stream that must be closed when the timeout expires </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code>: timeout in seconds </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra13StreamTimeout13StreamTimeoutERK13StreamTimeout">
+<span id="_CPPv3N6imebra13StreamTimeout13StreamTimeoutERK13StreamTimeout"></span><span id="_CPPv2N6imebra13StreamTimeout13StreamTimeoutERK13StreamTimeout"></span><span id="imebra::StreamTimeout::StreamTimeout__StreamTimeoutCR"></span><span class="target" id="classimebra_1_1_stream_timeout_1af56c738d11c97cb305647498247b253c"></span><code class="sig-name descname">StreamTimeout</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra13StreamTimeout13StreamTimeoutER15BaseStreamInputNSt8uint32_tE" title="imebra::StreamTimeout::StreamTimeout">StreamTimeout</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra13StreamTimeout13StreamTimeoutERK13StreamTimeout" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source stream timeout </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra13StreamTimeoutD0Ev">
+<span id="_CPPv3N6imebra13StreamTimeoutD0Ev"></span><span id="_CPPv2N6imebra13StreamTimeoutD0Ev"></span><span id="imebra::StreamTimeout::~StreamTimeout"></span><span class="target" id="classimebra_1_1_stream_timeout_1a84698bdd774fdc7d043b53639ad64d9f"></span><code class="sig-name descname">~StreamTimeout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra13StreamTimeoutD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destructor. If the timeout has not yet expired then terminates the thread that closes the stream, preventing it from closing the stream. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id19">
+<h4>Objective-C/Swift<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv419ImebraStreamTimeout">
+<span id="_CPPv319ImebraStreamTimeout"></span><span id="_CPPv219ImebraStreamTimeout"></span><span id="ImebraStreamTimeout"></span><span class="target" id="interface_imebra_stream_timeout"></span><em class="property">class </em><code class="sig-name descname">ImebraStreamTimeout</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv419ImebraStreamTimeout" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Triggers a timeout on a selected stream if the class is not deallocated within the specified amount of time. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_stream_timeout_1a3ab3748eec89ddc628a6788df65c0b4c"></span><code class="sig-name descname">id ImebraStreamTimeout::initWithInputStream:timeoutSeconds:(ImebraBaseStreamInput  * pStream, unsigned int timeoutSeconds)</code></dt>
+<dd><p>Initializer. Starts a separate thread that closes the stream in the parameter if this class destructor is not called before the timeout expires. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pStream</span></code>: stream that must be closed when the timeout expires </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code>: timeout in seconds </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+</section>
+<section id="pipe-classes">
+<h2>Pipe classes<a class="headerlink" href="#pipe-classes" title="Permalink to this headline">¶</a></h2>
+<p>The Pipe class can be used to provide custom streams for the ACSE and DIMSE services or for any operation that
+takes a <a class="reference internal" href="#streamreader">StreamReader</a> or <a class="reference internal" href="#streamwriter">StreamWriter</a> as parameter.</p>
+<p>An example of custom stream could be:</p>
+<ul class="simple">
+<li><p>a secure TCP connection</p></li>
+<li><p>a connection through a dedicated custom network</p></li>
+<li><p>etc.</p></li>
+</ul>
+<p>A separate thread must be used to feed a Pipe (to supply a custom reading stream) or to sink data from a Pipe
+(to provide a custom writing stream).</p>
+<figure class="align-default" id="id34" style="width: 100%">
+<a class="reference external image-reference" href="_images/sequence_customWritePipe.jpg"><img alt="Sequence diagram for the implementation of a custom write pipe" src="_images/sequence_customWritePipe.jpg" /></a>
+<figcaption>
+<p><span class="caption-text">Sequence diagram for the implementation of a custom output pipe</span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="pipe">
+<h3>Pipe<a class="headerlink" href="#pipe" title="Permalink to this headline">¶</a></h3>
+<section id="id20">
+<h4>C++<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra10PipeStreamE">
+<span id="_CPPv3N6imebra10PipeStreamE"></span><span id="_CPPv2N6imebra10PipeStreamE"></span><span id="imebra::PipeStream"></span><span class="target" id="classimebra_1_1_pipe_stream"></span><em class="property">class </em><code class="sig-name descname">PipeStream</code><a class="headerlink" href="#_CPPv4N6imebra10PipeStreamE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A Pipe can be used to push and pull data to/from an Imebra codec. </p>
+<p>This is useful when an Imebra codec must be used with a data source or a data sink not supported by the library (e.g. a TLS stream).</p>
+<p>In order to allow Imebra to read data from a custom data source:<ul class="simple">
+<li><p>allocate a Pipe class and use it as parameter for the <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> needed by the codec</p></li>
+<li><p>from a secondary thread feed the data to the data source by using a <a class="reference internal" href="#classimebra_1_1_stream_writer"><span class="std std-ref">StreamWriter</span></a></p></li>
+</ul>
+</p>
+<p>In order to allow Imebra to write data to a custom data source:<ul class="simple">
+<li><p>allocate a Pipe class and use it as parameter for the <a class="reference internal" href="#classimebra_1_1_stream_writer"><span class="std std-ref">StreamWriter</span></a> needed by the codec</p></li>
+<li><p>from a secondary thread read the data feed to Pipe by using a <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a> </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra10PipeStream10PipeStreamE6size_t">
+<span id="_CPPv3N6imebra10PipeStream10PipeStreamE6size_t"></span><span id="_CPPv2N6imebra10PipeStream10PipeStreamE6size_t"></span><span id="imebra::PipeStream::PipeStream__s"></span><span class="target" id="classimebra_1_1_pipe_stream_1a4865ac31efb6be52143cd0ee11dfba4f"></span><code class="sig-name descname">PipeStream</code><span class="sig-paren">(</span>size_t <em>circularBufferSize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra10PipeStream10PipeStreamE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">circularBufferSize</span></code>: the size of the buffer that stores the data fed to the Pipe until it is fetched </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra10PipeStream10PipeStreamERK10PipeStream">
+<span id="_CPPv3N6imebra10PipeStream10PipeStreamERK10PipeStream"></span><span id="_CPPv2N6imebra10PipeStream10PipeStreamERK10PipeStream"></span><span id="imebra::PipeStream::PipeStream__PipeStreamCR"></span><span class="target" id="classimebra_1_1_pipe_stream_1af77b8813de0c216cbf38f0925642a2d4"></span><code class="sig-name descname">PipeStream</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra10PipeStream10PipeStreamE6size_t" title="imebra::PipeStream::PipeStream">PipeStream</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra10PipeStream10PipeStreamERK10PipeStream" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source Pipe object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra10PipeStream5closeEj">
+<span id="_CPPv3N6imebra10PipeStream5closeEj"></span><span id="_CPPv2N6imebra10PipeStream5closeEj"></span><span id="imebra::PipeStream::close__unsigned-i"></span><span class="target" id="classimebra_1_1_pipe_stream_1a863b4b40dfa23e8bfbe30dbf4d86c8b9"></span>void <code class="sig-name descname">close</code><span class="sig-paren">(</span>unsigned int <em>timeoutMilliseconds</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra10PipeStream5closeEj" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Wait for the specified amount of time or until the internal buffer is empty (all the data fed has been retrieved by the <a class="reference internal" href="#classimebra_1_1_stream_reader"><span class="std std-ref">StreamReader</span></a>) then call terminate(). </p>
+<p>Subsequent read and write operations will fail by throwing the exception <a class="reference internal" href="exception_classes.html#classimebra_1_1_stream_closed_error"><span class="std std-ref">StreamClosedError</span></a>.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutMilliseconds</span></code>: the maximum time to wait until the internal buffer is empty, in milliseconds </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra10PipeStream14getStreamInputEv">
+<span id="_CPPv3N6imebra10PipeStream14getStreamInputEv"></span><span id="_CPPv2N6imebra10PipeStream14getStreamInputEv"></span><span id="imebra::PipeStream::getStreamInput"></span><span class="target" id="classimebra_1_1_pipe_stream_1a7557731067854635a94269d8e21a3bca"></span><a class="reference internal" href="#_CPPv4N6imebra15BaseStreamInputE" title="imebra::BaseStreamInput">BaseStreamInput</a> <code class="sig-name descname">getStreamInput</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra10PipeStream14getStreamInputEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return a <a class="reference internal" href="#classimebra_1_1_base_stream_input"><span class="std std-ref">BaseStreamInput</span></a> object able to read from the <a class="reference internal" href="#classimebra_1_1_pipe_stream"><span class="std std-ref">PipeStream</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a <a class="reference internal" href="#classimebra_1_1_base_stream_input"><span class="std std-ref">BaseStreamInput</span></a> object able to read from the <a class="reference internal" href="#classimebra_1_1_pipe_stream"><span class="std std-ref">PipeStream</span></a>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra10PipeStream15getStreamOutputEv">
+<span id="_CPPv3N6imebra10PipeStream15getStreamOutputEv"></span><span id="_CPPv2N6imebra10PipeStream15getStreamOutputEv"></span><span id="imebra::PipeStream::getStreamOutput"></span><span class="target" id="classimebra_1_1_pipe_stream_1ac1f489873dad0ef85bfef8e8ace6d963"></span><a class="reference internal" href="#_CPPv4N6imebra16BaseStreamOutputE" title="imebra::BaseStreamOutput">BaseStreamOutput</a> <code class="sig-name descname">getStreamOutput</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra10PipeStream15getStreamOutputEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return a <a class="reference internal" href="#classimebra_1_1_base_stream_output"><span class="std std-ref">BaseStreamOutput</span></a> object able to write into the <a class="reference internal" href="#classimebra_1_1_pipe_stream"><span class="std std-ref">PipeStream</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a <a class="reference internal" href="#classimebra_1_1_base_stream_output"><span class="std std-ref">BaseStreamOutput</span></a> object able to write into the <a class="reference internal" href="#classimebra_1_1_pipe_stream"><span class="std std-ref">PipeStream</span></a> </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id21">
+<h4>Objective-C/Swift<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv416ImebraPipeStream">
+<span id="_CPPv316ImebraPipeStream"></span><span id="_CPPv216ImebraPipeStream"></span><span id="ImebraPipeStream"></span><span class="target" id="interface_imebra_pipe_stream"></span><em class="property">class </em><code class="sig-name descname">ImebraPipeStream</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv416ImebraPipeStream" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A pipe can be used to push and pull data to/from an Imebra codec. </p>
+<p>This is useful when an Imebra codec must be used with a data source or a data sink not supported by the library (e.g. a TLS stream).</p>
+<p>In order to allow Imebra to read data from a custom data source:<ul class="simple">
+<li><p>allocate a ImebraPipe class and use it as parameter for the <a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> needed by the codec</p></li>
+<li><p>from a secondary thread feed the data to the data source by using an <a class="reference internal" href="#interface_imebra_stream_writer"><span class="std std-ref">ImebraStreamWriter</span></a></p></li>
+</ul>
+</p>
+<p>In order to allow Imebra to write data to a custom data source:<ul class="simple">
+<li><p>allocate a ImebraPipe class and use it as parameter for the <a class="reference internal" href="#interface_imebra_stream_writer"><span class="std std-ref">ImebraStreamWriter</span></a> needed by the codec</p></li>
+<li><p>from a secondary thread read the data by using an <a class="reference internal" href="#interface_imebra_stream_reader"><span class="std std-ref">ImebraStreamReader</span></a> </p></li>
+</ul>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_pipe_stream_1a1a4a5b6f44b8424154171366bfb09564"></span><code class="sig-name descname">id ImebraPipeStream::initWithBufferSize:(unsigned int circularBufferSize)</code></dt>
+<dd><p>Initializer. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">circularBufferSize</span></code>: the size of the buffer that stores the data fed to the Pipe until it is fetched </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_pipe_stream_1a57b3d33ed644b41aadd1b894e9a71c48"></span><code class="sig-name descname">void ImebraPipeStream::close:error:(unsigned int timeoutMilliseconds, (swift_error(nonnull_error)) __attribute__)</code></dt>
+<dd><p>Wait for the specified amount of time or until the internal buffer is empty (all the data fed has been retrieved by the StreamReader or by sink()), whichever comes first, then call terminate(). </p>
+<p>Subsequent read and write operations will fail by throwing the exception StreamClosedError.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutMilliseconds</span></code>: the maximum time to wait until the internal buffer is empty, in milliseconds </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+</section>
+<section id="tcp-classes">
+<h2>TCP classes<a class="headerlink" href="#tcp-classes" title="Permalink to this headline">¶</a></h2>
+<p>The TCP classes can be used with <a class="reference internal" href="#_CPPv4N6imebra12StreamWriterE" title="imebra::StreamWriter"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::StreamWriter</span></code></a> and <a class="reference internal" href="#_CPPv4N6imebra12StreamReaderE" title="imebra::StreamReader"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::StreamReader</span></code></a> to
+send and receive data through a TCP stream.</p>
+<p>A TCP server socket (a socket that listen for incoming connection) can be realized with the class
+<a class="reference internal" href="#_CPPv4N6imebra11TCPListenerE" title="imebra::TCPListener"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::TCPListener</span></code></a>, while a TCP client (a socket that initiates a connection with a
+server) can be realized with the class <a class="reference internal" href="#_CPPv4N6imebra9TCPStreamE" title="imebra::TCPStream"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::TCPStream</span></code></a>.</p>
+<p><a class="reference internal" href="#_CPPv4N6imebra11TCPListenerE" title="imebra::TCPListener"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::TCPListener</span></code></a> creates a new <a class="reference internal" href="#_CPPv4N6imebra9TCPStreamE" title="imebra::TCPStream"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::TCPStream</span></code></a> for each accepted incoming connection.</p>
+<p>Both <a class="reference internal" href="#_CPPv4N6imebra11TCPListenerE" title="imebra::TCPListener"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::TCPListener</span></code></a> and <a class="reference internal" href="#_CPPv4N6imebra9TCPStreamE" title="imebra::TCPStream"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::TCPStream</span></code></a> expose blocking methods (except for
+the constructors which connect to the peer in non-blocking mode).
+You can exit a blocking method by closing the socket or by calling the terminate() method.</p>
+<section id="tcpstream">
+<span id="id22"></span><h3>TCPStream<a class="headerlink" href="#tcpstream" title="Permalink to this headline">¶</a></h3>
+<section id="id23">
+<h4>C++<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra9TCPStreamE">
+<span id="_CPPv3N6imebra9TCPStreamE"></span><span id="_CPPv2N6imebra9TCPStreamE"></span><span id="imebra::TCPStream"></span><span class="target" id="classimebra_1_1_t_c_p_stream"></span><em class="property">class </em><code class="sig-name descname">TCPStream</code><a class="headerlink" href="#_CPPv4N6imebra9TCPStreamE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents a TCP stream. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra9TCPStream9TCPStreamERK16TCPActiveAddress">
+<span id="_CPPv3N6imebra9TCPStream9TCPStreamERK16TCPActiveAddress"></span><span id="_CPPv2N6imebra9TCPStream9TCPStreamERK16TCPActiveAddress"></span><span id="imebra::TCPStream::TCPStream__TCPActiveAddressCR"></span><span class="target" id="classimebra_1_1_t_c_p_stream_1a59ee831dcdfe0223b4f3cbbf0b769f2d"></span><code class="sig-name descname">TCPStream</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra16TCPActiveAddressE" title="imebra::TCPActiveAddress">TCPActiveAddress</a> &amp;<em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra9TCPStream9TCPStreamERK16TCPActiveAddress" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a TCP socket and connects it to the destination address. </p>
+<p>This is a non-blocking operation (the connection proceed after the constructor returns). Connection errors will be reported later while the communication happens.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code>: the address to which the socket has to be connected. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra9TCPStream9TCPStreamERK9TCPStream">
+<span id="_CPPv3N6imebra9TCPStream9TCPStreamERK9TCPStream"></span><span id="_CPPv2N6imebra9TCPStream9TCPStreamERK9TCPStream"></span><span id="imebra::TCPStream::TCPStream__TCPStreamCR"></span><span class="target" id="classimebra_1_1_t_c_p_stream_1af05ebc5f8f887466adeb2f5c3feb31c0"></span><code class="sig-name descname">TCPStream</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra9TCPStream9TCPStreamERK16TCPActiveAddress" title="imebra::TCPStream::TCPStream">TCPStream</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra9TCPStream9TCPStreamERK9TCPStream" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source <a class="reference internal" href="#classimebra_1_1_t_c_p_stream"><span class="std std-ref">TCPStream</span></a> object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra9TCPStream14getPeerAddressEv">
+<span id="_CPPv3NK6imebra9TCPStream14getPeerAddressEv"></span><span id="_CPPv2NK6imebra9TCPStream14getPeerAddressEv"></span><span id="imebra::TCPStream::getPeerAddressC"></span><span class="target" id="classimebra_1_1_t_c_p_stream_1a794974716d51a3dfd6fc8dbb37efe3de"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra10TCPAddressE" title="imebra::TCPAddress">TCPAddress</a> <code class="sig-name descname">getPeerAddress</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra9TCPStream14getPeerAddressEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the address of the connected peer. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the address of the connected peer </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra9TCPStream14getStreamInputEv">
+<span id="_CPPv3N6imebra9TCPStream14getStreamInputEv"></span><span id="_CPPv2N6imebra9TCPStream14getStreamInputEv"></span><span id="imebra::TCPStream::getStreamInput"></span><span class="target" id="classimebra_1_1_t_c_p_stream_1a65ab6885c580f9056d69ade46f76af2e"></span><a class="reference internal" href="#_CPPv4N6imebra15BaseStreamInputE" title="imebra::BaseStreamInput">BaseStreamInput</a> <code class="sig-name descname">getStreamInput</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra9TCPStream14getStreamInputEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return a <a class="reference internal" href="#classimebra_1_1_base_stream_input"><span class="std std-ref">BaseStreamInput</span></a> object able to read from the <a class="reference internal" href="#classimebra_1_1_t_c_p_stream"><span class="std std-ref">TCPStream</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a <a class="reference internal" href="#classimebra_1_1_base_stream_input"><span class="std std-ref">BaseStreamInput</span></a> object able to read from the <a class="reference internal" href="#classimebra_1_1_t_c_p_stream"><span class="std std-ref">TCPStream</span></a>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra9TCPStream15getStreamOutputEv">
+<span id="_CPPv3N6imebra9TCPStream15getStreamOutputEv"></span><span id="_CPPv2N6imebra9TCPStream15getStreamOutputEv"></span><span id="imebra::TCPStream::getStreamOutput"></span><span class="target" id="classimebra_1_1_t_c_p_stream_1a2ed8bed01b6664cff911510f70a4276b"></span><a class="reference internal" href="#_CPPv4N6imebra16BaseStreamOutputE" title="imebra::BaseStreamOutput">BaseStreamOutput</a> <code class="sig-name descname">getStreamOutput</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra9TCPStream15getStreamOutputEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return a <a class="reference internal" href="#classimebra_1_1_base_stream_output"><span class="std std-ref">BaseStreamOutput</span></a> object able to write into the <a class="reference internal" href="#classimebra_1_1_t_c_p_stream"><span class="std std-ref">TCPStream</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a <a class="reference internal" href="#classimebra_1_1_base_stream_output"><span class="std std-ref">BaseStreamOutput</span></a> object able to write into the <a class="reference internal" href="#classimebra_1_1_t_c_p_stream"><span class="std std-ref">TCPStream</span></a> </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id24">
+<h4>Objective-C/Swift<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv415ImebraTCPStream">
+<span id="_CPPv315ImebraTCPStream"></span><span id="_CPPv215ImebraTCPStream"></span><span id="ImebraTCPStream"></span><span class="target" id="interface_imebra_t_c_p_stream"></span><em class="property">class </em><code class="sig-name descname">ImebraTCPStream</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv415ImebraTCPStream" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents a TCP stream. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_t_c_p_stream_1a44d7a77d1df709594a2a9ee8308a66f5"></span><code class="sig-name descname">id ImebraTCPStream::initWithAddress:error:(ImebraTCPActiveAddress  * pAddress, NSError ** pError)</code></dt>
+<dd><p>Construct a TCP socket and connects it to the destination address. </p>
+<p>This is a non-blocking operation (the connection proceed after the constructor returns). Connection errors will be reported later while the communication happens.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pAddress</span></code>: the address to which the socket has to be connected. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a StreamError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_t_c_p_stream_1aecec4991c4acb37f144262503967f303"></span><code class="sig-name descname">ImebraTCPAddress* ImebraTCPStream::getPeerAddress:(NSError ** pError)</code></dt>
+<dd><p>Returns the address of the connected peer. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the address of the connected peer </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a StreamError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="tcplistener">
+<h3>TCPListener<a class="headerlink" href="#tcplistener" title="Permalink to this headline">¶</a></h3>
+<section id="id25">
+<h4>C++<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra11TCPListenerE">
+<span id="_CPPv3N6imebra11TCPListenerE"></span><span id="_CPPv2N6imebra11TCPListenerE"></span><span id="imebra::TCPListener"></span><span class="target" id="classimebra_1_1_t_c_p_listener"></span><em class="property">class </em><code class="sig-name descname">TCPListener</code><a class="headerlink" href="#_CPPv4N6imebra11TCPListenerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents listening TCP socket. </p>
+<p>Once allocated the socket starts listening at the address declared in the constructor.</p>
+<p>A loop in the client application should call <a class="reference internal" href="#classimebra_1_1_t_c_p_listener_1a2518258305bcd43a0d80856c73df2ff0"><span class="std std-ref">waitForConnection()</span></a> in order to retrieve all the connections accepted by the socket. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra11TCPListener11TCPListenerERK17TCPPassiveAddress">
+<span id="_CPPv3N6imebra11TCPListener11TCPListenerERK17TCPPassiveAddress"></span><span id="_CPPv2N6imebra11TCPListener11TCPListenerERK17TCPPassiveAddress"></span><span id="imebra::TCPListener::TCPListener__TCPPassiveAddressCR"></span><span class="target" id="classimebra_1_1_t_c_p_listener_1a7dcd48a26df5b5edcee26c21ae604d6e"></span><code class="sig-name descname">TCPListener</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra17TCPPassiveAddressE" title="imebra::TCPPassiveAddress">TCPPassiveAddress</a> &amp;<em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra11TCPListener11TCPListenerERK17TCPPassiveAddress" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p>Constructs a listening socket and starts listening for incoming connections.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code>: the address to which the listening socket must be bound </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra11TCPListener11TCPListenerERK11TCPListener">
+<span id="_CPPv3N6imebra11TCPListener11TCPListenerERK11TCPListener"></span><span id="_CPPv2N6imebra11TCPListener11TCPListenerERK11TCPListener"></span><span id="imebra::TCPListener::TCPListener__TCPListenerCR"></span><span class="target" id="classimebra_1_1_t_c_p_listener_1aadeeef0aa3df8974f589152614e9ca69"></span><code class="sig-name descname">TCPListener</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra11TCPListener11TCPListenerERK17TCPPassiveAddress" title="imebra::TCPListener::TCPListener">TCPListener</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra11TCPListener11TCPListenerERK11TCPListener" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source <a class="reference internal" href="#classimebra_1_1_t_c_p_listener"><span class="std std-ref">TCPListener</span></a> object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra11TCPListener17waitForConnectionEv">
+<span id="_CPPv3N6imebra11TCPListener17waitForConnectionEv"></span><span id="_CPPv2N6imebra11TCPListener17waitForConnectionEv"></span><span id="imebra::TCPListener::waitForConnection"></span><span class="target" id="classimebra_1_1_t_c_p_listener_1a2518258305bcd43a0d80856c73df2ff0"></span><a class="reference internal" href="#_CPPv4N6imebra9TCPStreamE" title="imebra::TCPStream">TCPStream</a> <code class="sig-name descname">waitForConnection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra11TCPListener17waitForConnectionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Waits for an incoming connection on the listening socket. </p>
+<p>The method blocks until a new connection is accepted or until the socket is closed, in which case it throws the exception <a class="reference internal" href="exception_classes.html#classimebra_1_1_stream_closed_error"><span class="std std-ref">StreamClosedError</span></a>.</p>
+<p>The socket is closed by the <a class="reference internal" href="#classimebra_1_1_t_c_p_stream"><span class="std std-ref">TCPStream</span></a>’s destructor or by a call to <a class="reference internal" href="#classimebra_1_1_t_c_p_listener_1ac1234c27a578250167627fdd3de78460"><span class="std std-ref">terminate()</span></a>.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a new <a class="reference internal" href="#classimebra_1_1_t_c_p_stream"><span class="std std-ref">TCPStream</span></a> object bound to the new accepted connection. the returned <a class="reference internal" href="#classimebra_1_1_t_c_p_stream"><span class="std std-ref">TCPStream</span></a> object will be owned by the caller </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra11TCPListener9terminateEv">
+<span id="_CPPv3N6imebra11TCPListener9terminateEv"></span><span id="_CPPv2N6imebra11TCPListener9terminateEv"></span><span id="imebra::TCPListener::terminate"></span><span class="target" id="classimebra_1_1_t_c_p_listener_1ac1234c27a578250167627fdd3de78460"></span>void <code class="sig-name descname">terminate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra11TCPListener9terminateEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Instruct the listener to terminate any pending action. </p>
+<p>If a thread is in the method <a class="reference internal" href="#classimebra_1_1_t_c_p_listener_1a2518258305bcd43a0d80856c73df2ff0"><span class="std std-ref">waitForConnection()</span></a> then it will receive the exception <a class="reference internal" href="exception_classes.html#classimebra_1_1_stream_closed_error"><span class="std std-ref">StreamClosedError</span></a>. <a class="reference internal" href="exception_classes.html#classimebra_1_1_stream_closed_error"><span class="std std-ref">StreamClosedError</span></a> will be also thrown for each subsequent call to <a class="reference internal" href="#classimebra_1_1_t_c_p_listener_1a2518258305bcd43a0d80856c73df2ff0"><span class="std std-ref">waitForConnection()</span></a>. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id26">
+<h4>Objective-C/Swift<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv417ImebraTCPListener">
+<span id="_CPPv317ImebraTCPListener"></span><span id="_CPPv217ImebraTCPListener"></span><span id="ImebraTCPListener"></span><span class="target" id="interface_imebra_t_c_p_listener"></span><em class="property">class </em><code class="sig-name descname">ImebraTCPListener</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv417ImebraTCPListener" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents listening TCP socket. </p>
+<p>Once allocated the socket starts listening at the address declared in the constructor.</p>
+<p>A loop in the client application should call waitForConnection() in order to retrieve all the connections accepted by the socket. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_t_c_p_listener_1ab81291e782fd6bf53684642286e26f7b"></span><code class="sig-name descname">id ImebraTCPListener::initWithAddress:error:(ImebraTCPPassiveAddress  * pAddress, NSError ** pError)</code></dt>
+<dd><p>Initializer. </p>
+<p>Constructs a listening socket and starts listening for incoming connections.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code>: the address to which the listening socket must be bound </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a NSError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_t_c_p_listener_1abb1c78102fdcd3308daf3d18450451bc"></span><code class="sig-name descname">ImebraTCPStream* ImebraTCPListener::waitForConnection:(NSError ** pError)</code></dt>
+<dd><p>Waits for an incoming connection on the listening socket. </p>
+<p>The method blocks until a new connection is accepted or until the socket is closed, in which case pError is set to StreamClosedError.</p>
+<p>The socket is closed by the <a class="reference internal" href="#interface_imebra_t_c_p_stream"><span class="std std-ref">ImebraTCPStream</span></a>’s destructor or by a call to <a class="reference internal" href="#interface_imebra_t_c_p_listener_1a6285776ffd433805fec1b2112cff1935"><span class="std std-ref">terminate</span></a>.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a new <a class="reference internal" href="#interface_imebra_t_c_p_stream"><span class="std std-ref">ImebraTCPStream</span></a> object bound to the new accepted connection. The returned <a class="reference internal" href="#interface_imebra_t_c_p_stream"><span class="std std-ref">ImebraTCPStream</span></a> object will be owned by the caller </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a ImebraStreamError derived class in case of error </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N17ImebraTCPListener9terminateEv">
+<span id="_CPPv3N17ImebraTCPListener9terminateEv"></span><span id="_CPPv2N17ImebraTCPListener9terminateEv"></span><span id="ImebraTCPListener::terminate"></span><span class="target" id="interface_imebra_t_c_p_listener_1a6285776ffd433805fec1b2112cff1935"></span>void <code class="sig-name descname">terminate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17ImebraTCPListener9terminateEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Instructs the listener to terminate any pending action. </p>
+<p>If a thread is in the method waitForConnection() then it will receive the exception StreamClosedError. StreamClosedError will be also be set for each subsequent call to waitForConnection(). </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="tcpaddress">
+<h3>TCPAddress<a class="headerlink" href="#tcpaddress" title="Permalink to this headline">¶</a></h3>
+<section id="id27">
+<h4>C++<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra10TCPAddressE">
+<span id="_CPPv3N6imebra10TCPAddressE"></span><span id="_CPPv2N6imebra10TCPAddressE"></span><span id="imebra::TCPAddress"></span><span class="target" id="classimebra_1_1_t_c_p_address"></span><em class="property">class </em><code class="sig-name descname">TCPAddress</code><a class="headerlink" href="#_CPPv4N6imebra10TCPAddressE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents a TCP address. </p>
+<p>Use <a class="reference internal" href="#classimebra_1_1_t_c_p_active_address"><span class="std std-ref">TCPActiveAddress</span></a> to manage an address of an active socket (a socket that initiates the connection) and <a class="reference internal" href="#classimebra_1_1_t_c_p_passive_address"><span class="std std-ref">TCPPassiveAddress</span></a> for a passive socket (a socket that listens for incoming connections). </p>
+<p>Subclassed by <a class="reference internal" href="#classimebra_1_1_t_c_p_active_address"><span class="std std-ref">imebra::TCPActiveAddress</span></a>, <a class="reference internal" href="#classimebra_1_1_t_c_p_passive_address"><span class="std std-ref">imebra::TCPPassiveAddress</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra10TCPAddress10TCPAddressERK10TCPAddress">
+<span id="_CPPv3N6imebra10TCPAddress10TCPAddressERK10TCPAddress"></span><span id="_CPPv2N6imebra10TCPAddress10TCPAddressERK10TCPAddress"></span><span id="imebra::TCPAddress::TCPAddress__TCPAddressCR"></span><span class="target" id="classimebra_1_1_t_c_p_address_1a50bff7d9eeee416d17d517faf5941b59"></span><code class="sig-name descname">TCPAddress</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra10TCPAddress10TCPAddressERK10TCPAddress" title="imebra::TCPAddress::TCPAddress">TCPAddress</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra10TCPAddress10TCPAddressERK10TCPAddress" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source <a class="reference internal" href="#classimebra_1_1_t_c_p_address"><span class="std std-ref">TCPAddress</span></a> object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra10TCPAddress7getNodeEv">
+<span id="_CPPv3NK6imebra10TCPAddress7getNodeEv"></span><span id="_CPPv2NK6imebra10TCPAddress7getNodeEv"></span><span id="imebra::TCPAddress::getNodeC"></span><span class="target" id="classimebra_1_1_t_c_p_address_1a97441aca4130d18dbd70f17b0674a2b6"></span>std::string <code class="sig-name descname">getNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra10TCPAddress7getNodeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the node part of the TCP address. </p>
+<p>The TCP address is composed by two parts:<ul class="simple">
+<li><p>the node which identifies the machine in the network</p></li>
+<li><p>the service which identifies one of the ports (services) in the machine</p></li>
+</ul>
+</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the node part of the TCP address </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6imebra10TCPAddress10getServiceEv">
+<span id="_CPPv3NK6imebra10TCPAddress10getServiceEv"></span><span id="_CPPv2NK6imebra10TCPAddress10getServiceEv"></span><span id="imebra::TCPAddress::getServiceC"></span><span class="target" id="classimebra_1_1_t_c_p_address_1a98f8658e64b839d25ff3ea1f8ab482d7"></span>std::string <code class="sig-name descname">getService</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6imebra10TCPAddress10getServiceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the service part of the TCP address. </p>
+<p>See <a class="reference internal" href="#classimebra_1_1_t_c_p_address_1a97441aca4130d18dbd70f17b0674a2b6"><span class="std std-ref">getNode()</span></a> for more information.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the service part of the TCP address </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id28">
+<h4>Objective-C/Swift<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv416ImebraTCPAddress">
+<span id="_CPPv316ImebraTCPAddress"></span><span id="_CPPv216ImebraTCPAddress"></span><span id="ImebraTCPAddress"></span><span class="target" id="interface_imebra_t_c_p_address"></span><em class="property">class </em><code class="sig-name descname">ImebraTCPAddress</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv416ImebraTCPAddress" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents a TCP address. </p>
+<p>Use <a class="reference internal" href="#interface_imebra_t_c_p_active_address"><span class="std std-ref">ImebraTCPActiveAddress</span></a> to manage an address of an active socket (a socket that initiates the connection) and <a class="reference internal" href="#interface_imebra_t_c_p_passive_address"><span class="std std-ref">ImebraTCPPassiveAddress</span></a> for a passive socket (a socket that listens for incoming connections). </p>
+<p>Subclassed by <a class="reference internal" href="#interface_imebra_t_c_p_active_address"><span class="std std-ref">ImebraTCPActiveAddress</span></a>, <a class="reference internal" href="#interface_imebra_t_c_p_passive_address"><span class="std std-ref">ImebraTCPPassiveAddress</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Property</p>
+<dl class="member">
+<dt>
+<span class="target" id="interface_imebra_t_c_p_address_1afde03c6692f349f28bacc4a195e3033e"></span><em class="property">property </em><code class="sig-name descname">ImebraTCPAddress::node</code></dt>
+<dd><p>Returns the node part of the TCP address. </p>
+<p>The TCP address is composed by two parts:<ul class="simple">
+<li><p>the node which identifies the machine in the network</p></li>
+<li><p>the service which identifies one of the ports (services) in the machine </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="interface_imebra_t_c_p_address_1a6df5c688396832b4ee3b32c0e661f5c6"></span><em class="property">property </em><code class="sig-name descname">ImebraTCPAddress::service</code></dt>
+<dd><p>Returns the service part of the TCP address (the port number or name, eg. “80” or “HTTP”). </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="tcppassiveaddress">
+<h3>TCPPassiveAddress<a class="headerlink" href="#tcppassiveaddress" title="Permalink to this headline">¶</a></h3>
+<section id="id29">
+<h4>C++<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra17TCPPassiveAddressE">
+<span id="_CPPv3N6imebra17TCPPassiveAddressE"></span><span id="_CPPv2N6imebra17TCPPassiveAddressE"></span><span id="imebra::TCPPassiveAddress"></span><span class="target" id="classimebra_1_1_t_c_p_passive_address"></span><em class="property">class </em><code class="sig-name descname">TCPPassiveAddress</code> : <em class="property">public</em> imebra::<a class="reference internal" href="#_CPPv4N6imebra10TCPAddressE" title="imebra::TCPAddress">TCPAddress</a><a class="headerlink" href="#_CPPv4N6imebra17TCPPassiveAddressE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents an address of a passive socket (a socket that listens for connections initiated by the peers). </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra17TCPPassiveAddress17TCPPassiveAddressERKNSt6stringERKNSt6stringE">
+<span id="_CPPv3N6imebra17TCPPassiveAddress17TCPPassiveAddressERKNSt6stringERKNSt6stringE"></span><span id="_CPPv2N6imebra17TCPPassiveAddress17TCPPassiveAddressERKNSt6stringERKNSt6stringE"></span><span id="imebra::TCPPassiveAddress::TCPPassiveAddress__ssCR.ssCR"></span><span class="target" id="classimebra_1_1_t_c_p_passive_address_1a75d3805d892f8e474d97347a692be2c7"></span><code class="sig-name descname">TCPPassiveAddress</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>node</em>, <em class="property">const</em> std::string &amp;<em>service</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra17TCPPassiveAddress17TCPPassiveAddressERKNSt6stringERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p>Constructs an active TCP address from a node and a service description.</p>
+<p>The node may be a host name or address (both IPv4 and IPv6) while the service name may be a port number (in string format) or name (e.g. “FTP”).</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code>: the host name or address (e.g. “192.168.10.20” or “example.com”). Use an empty string to refer to all the TCP devices on the local host. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code>: the service port (in string format) or name (e.g. “140” or “ftp”). </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id30">
+<h4>Objective-C/Swift<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv423ImebraTCPPassiveAddress">
+<span id="_CPPv323ImebraTCPPassiveAddress"></span><span id="_CPPv223ImebraTCPPassiveAddress"></span><span id="ImebraTCPPassiveAddress"></span><span class="target" id="interface_imebra_t_c_p_passive_address"></span><em class="property">class </em><code class="sig-name descname">ImebraTCPPassiveAddress</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv416ImebraTCPAddress" title="ImebraTCPAddress">ImebraTCPAddress</a><a class="headerlink" href="#_CPPv423ImebraTCPPassiveAddress" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents an address of a passive socket (a socket that listens for connections initiated by the peers). </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_t_c_p_passive_address_1a0273dd43fe8aacc1f3d05c4e895c9a3e"></span><code class="sig-name descname">id ImebraTCPPassiveAddress::initWithNode:service:error:(NSString * node, NSString * service, NSError ** pError)</code></dt>
+<dd><p>Initializer. </p>
+<p>Constructs a passive TCP address from a node and a service description.</p>
+<p>The node may be a host name or address (both IPv4 and IPv6) while the service name may be a port number (in string format) or name (e.g. “FTP”).</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code>: the host name or address (e.g. “192.168.10.20” or “example.com”). Use an empty string to refer to all the TCP devices on the local host. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code>: the service port (in string format) or name (e.g. “140” or “ftp”). </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a NSError derived class in case of errors </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="tcpactiveaddress">
+<h3>TCPActiveAddress<a class="headerlink" href="#tcpactiveaddress" title="Permalink to this headline">¶</a></h3>
+<section id="id31">
+<h4>C++<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra16TCPActiveAddressE">
+<span id="_CPPv3N6imebra16TCPActiveAddressE"></span><span id="_CPPv2N6imebra16TCPActiveAddressE"></span><span id="imebra::TCPActiveAddress"></span><span class="target" id="classimebra_1_1_t_c_p_active_address"></span><em class="property">class </em><code class="sig-name descname">TCPActiveAddress</code> : <em class="property">public</em> imebra::<a class="reference internal" href="#_CPPv4N6imebra10TCPAddressE" title="imebra::TCPAddress">TCPAddress</a><a class="headerlink" href="#_CPPv4N6imebra16TCPActiveAddressE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents an address of an active socket (a socket that initiates the connection with the peer). </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra16TCPActiveAddress16TCPActiveAddressERKNSt6stringERKNSt6stringE">
+<span id="_CPPv3N6imebra16TCPActiveAddress16TCPActiveAddressERKNSt6stringERKNSt6stringE"></span><span id="_CPPv2N6imebra16TCPActiveAddress16TCPActiveAddressERKNSt6stringERKNSt6stringE"></span><span id="imebra::TCPActiveAddress::TCPActiveAddress__ssCR.ssCR"></span><span class="target" id="classimebra_1_1_t_c_p_active_address_1a84b2ed0df56e5fe51792accf4c897e86"></span><code class="sig-name descname">TCPActiveAddress</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>node</em>, <em class="property">const</em> std::string &amp;<em>service</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra16TCPActiveAddress16TCPActiveAddressERKNSt6stringERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p>Constructs an active TCP address from a node and a service description.</p>
+<p>The node may be a host name or address (both IPv4 and IPv6) while the service name may be a port number (in string format) or name (e.g. “FTP”).</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code>: the host name or address (e.g. “192.168.10.20” or “example.com”). Use an empty string to refer to the local host. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code>: the service port (in string format) or name (e.g. “140” or “ftp”). </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id32">
+<h4>Objective-C/Swift<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv422ImebraTCPActiveAddress">
+<span id="_CPPv322ImebraTCPActiveAddress"></span><span id="_CPPv222ImebraTCPActiveAddress"></span><span id="ImebraTCPActiveAddress"></span><span class="target" id="interface_imebra_t_c_p_active_address"></span><em class="property">class </em><code class="sig-name descname">ImebraTCPActiveAddress</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv416ImebraTCPAddress" title="ImebraTCPAddress">ImebraTCPAddress</a><a class="headerlink" href="#_CPPv422ImebraTCPActiveAddress" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Represents an address of an active socket (a socket that initiates the connection with the peer). </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_t_c_p_active_address_1a449047548f67b12c8895c1326c2816e7"></span><code class="sig-name descname">id ImebraTCPActiveAddress::initWithNode:service:error:(NSString * node, NSString * service, NSError ** pError)</code></dt>
+<dd><p>Initializer. </p>
+<p>Constructs an active TCP address from a node and a service description.</p>
+<p>The node may be a host name or address (both IPv4 and IPv6) while the service name may be a port number (in string format) or name (e.g. “FTP”).</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code>: the host name or address (e.g. “192.168.10.20” or “example.com”). Use an empty string to refer to the local host. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code>: the service port (in string format) or name (e.g. “140” or “ftp”). </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pError</span></code>: set to a NSError derived class in case of errors </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dicom_uid_generation_classes.html" class="btn btn-neutral float-left" title="UID generation classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="imaging_classes.html" class="btn btn-neutral float-right" title="Imaging classes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="copyright.html">Copyright</a> 2019, Paolo Brandoli.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

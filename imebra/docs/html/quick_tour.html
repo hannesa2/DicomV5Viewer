@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial &mdash; Imebra 5.3.3.0 changeset 2c706290 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="next" title="Objects lifecycle and Object ownership" href="objects_lifecycle.html" />
+    <link rel="prev" title="Adding Imebra to your project" href="add_to_project.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Imebra
+          </a>
+              <div class="version">
+                5.3.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p><span class="caption-text">Download Imebra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Downloading Imebra</a></li>
+</ul>
+<p><span class="caption-text">Legal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gplv2.html">GNU General Public License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Commercial license</a></li>
+</ul>
+<p><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes_log.html">Changes log</a></li>
+</ul>
+<p><span class="caption-text">User documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="compiling_imebra.html">Compiling Imebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add_to_project.html">Adding Imebra to your project</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#include-files">Include files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-files">Loading files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reading-the-tag-s-values">Reading the tag’s values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#retrieving-an-image">Retrieving an image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#displaying-an-image">Displaying an image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-an-empty-dataset">Creating an empty DataSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modifying-the-dataset-s-content">Modifying the dataset’s content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#embedding-images-into-the-dataset">Embedding images into the dataSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#saving-a-dataset">Saving a DataSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sending-a-dicom-command-through-an-scu">Sending a DICOM command through an SCU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#implementign-a-dicom-scp">Implementign a DICOM SCP</a></li>
+</ul>
+</li>
+</ul>
+<p><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="objects_lifecycle.html">Objects lifecycle and Object ownership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_data_classes.html">DICOM dataSet &amp; tags classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_uid_generation_classes.html">UID generation classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stream_classes.html">Stream classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imaging_classes.html">Imaging classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transforms_classes.html">Transforms classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="memory_management_classes.html">Memory management classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acse_classes.html">ACSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dimse_classes.html">DIMSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicomdir_classes.html">DICOMDIR classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_dictionary_classes.html">DICOM dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definition_classes.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exception_classes.html">Exceptions</a></li>
+</ul>
+<p><span class="caption-text">Build distributions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html">Creating the source distribution from the code in the VCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html#versioning">Versioning</a></li>
+</ul>
+<p><span class="caption-text">Requirements &amp; Risks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html#risks">Risks</a></li>
+</ul>
+<p><span class="caption-text">Standard operating procedures</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sop.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sop.html#sops">SOPs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Tutorial</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/quick_tour.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
+<section id="include-files">
+<h2>Include files<a class="headerlink" href="#include-files" title="Permalink to this headline">¶</a></h2>
+<p>In C++ you have to include the file imebra/imebra.h:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">include</span><span class="w"> </span><span class="o">&lt;</span><span class="n">imebra</span><span class="o">/</span><span class="n">imebra</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>In Java, everything is in the package imebra:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.imebra.*</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>In Java, before using any Imebra class you have to load the native code contained in the jar:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">loadLibrary</span><span class="p">(</span><span class="s">&quot;imebra_lib&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="loading-files">
+<h2>Loading files<a class="headerlink" href="#loading-files" title="Permalink to this headline">¶</a></h2>
+<p>Imebra can read DICOM files and Jpeg files.</p>
+<p>Both the DICOM and the Jpeg codes generate an in-memory DICOM structure represented by the <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::DataSet</span></code></a> class
+(also the Jpeg codec produces a DICOM structure containing an embedded JPEG file).</p>
+<p>Imebra chooses the correct codec automatically according to the stream’s content.</p>
+<p>To create an <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::DataSet</span></code></a> from a stream use the class <a class="reference internal" href="stream_classes.html#_CPPv4N6imebra12CodecFactoryE" title="imebra::CodecFactory"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::CodecFactory</span></code></a>.</p>
+<p>In C++:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">imebra</span><span class="o">::</span><span class="n">DataSet</span><span class="w"> </span><span class="nf">loadedDataSet</span><span class="p">(</span><span class="n">imebra</span><span class="o">::</span><span class="n">CodecFactory</span><span class="o">::</span><span class="n">load</span><span class="p">(</span><span class="s">&quot;DicomFile.dcm&quot;</span><span class="p">));</span><span class="w"></span>
+</pre></div>
+</div>
+<p>In Java:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">DataSet</span> <span class="n">loadedDataSet</span> <span class="o">=</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">CodecFactory</span><span class="p">.</span><span class="na">load</span><span class="p">(</span><span class="s">&quot;DicomFile.dcm&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The previous code loads the file DicomFile.dcm.</p>
+<p>Imebra can perform a “lazy loading”, which leaves the data on the input stream and loads it into memory
+only when necessary; large tags that are not needed are loaded only when necessary and then discarded from memory
+until they are needed once again.</p>
+<p>This allows processing large DICOM files by loading large tags only when they are needed and is completely transparent
+to the client application.</p>
+<p>To enable the “lazy loading”, specify the maximum size of the tags that must be loaded immediately. The following line
+leaves all the tags bigger than 2048 bytes on the stream and loads them only when needed:</p>
+<p>Lazy loading in C++:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Load tags in memory only if their size is equal or smaller than 2048 bytes</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">DataSet</span><span class="w"> </span><span class="nf">loadedDataSet</span><span class="p">(</span><span class="n">imebra</span><span class="o">::</span><span class="n">CodecFactory</span><span class="o">::</span><span class="n">load</span><span class="p">(</span><span class="s">&quot;DicomFile.dcm&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2048</span><span class="p">));</span><span class="w"></span>
+</pre></div>
+</div>
+<p>in Java</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Load tags in memory only if their size is equal or smaller than 2048 bytes</span>
+<span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">DataSet</span> <span class="n">loadedDataSet</span> <span class="o">=</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">CodecFactory</span><span class="p">.</span><span class="na">load</span><span class="p">(</span><span class="s">&quot;DicomFile.dcm&quot;</span><span class="p">,</span> <span class="mi">2048</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="reading-the-tag-s-values">
+<h2>Reading the tag’s values<a class="headerlink" href="#reading-the-tag-s-values" title="Permalink to this headline">¶</a></h2>
+<p>Once the DataSet has been loaded your application can retrieve the tags stored in it.</p>
+<p>Tags’ values are converted automatically between different data types unless the conversion would cause a loss
+of the value (e.g. the conversion of the string “10” to the number 10 succeeds, but the conversion of the string “Hello” to a number
+fails).</p>
+<p>In order to retrieve a tag’s value, use one of the following methods</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet13getSignedLongERK5TagId6size_t" title="imebra::DataSet::getSignedLong"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getSignedLong</span></code></a></p></li>
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet15getUnsignedLongERK5TagId6size_t" title="imebra::DataSet::getUnsignedLong"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getUnsignedLong</span></code></a></p></li>
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet9getDoubleERK5TagId6size_t" title="imebra::DataSet::getDouble"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getDouble</span></code></a></p></li>
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet9getStringERK5TagId6size_t" title="imebra::DataSet::getString"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getString</span></code></a></p></li>
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet16getUnicodeStringERK5TagId6size_t" title="imebra::DataSet::getUnicodeString"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getUnicodeString</span></code></a> (C++ only)</p></li>
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet14getPatientNameERK5TagId6size_t" title="imebra::DataSet::getPatientName"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getPatientName</span></code></a></p></li>
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet21getUnicodePatientNameERK5TagId6size_t" title="imebra::DataSet::getUnicodePatientName"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getUnicodePatientName</span></code></a> (C++ only)</p></li>
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet6getAgeERK5TagId6size_t" title="imebra::DataSet::getAge"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getAge</span></code></a></p></li>
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet7getDateERK5TagId6size_t" title="imebra::DataSet::getDate"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getDate</span></code></a></p></li>
+</ul>
+<p>Alternatively, you can retrieve a <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra18ReadingDataHandlerE" title="imebra::ReadingDataHandler"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::ReadingDataHandler</span></code></a> (via <a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet21getReadingDataHandlerERK5TagId6size_t" title="imebra::DataSet::getReadingDataHandler"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getReadingDataHandler</span></code></a>) and
+call the methods it offers to read the tag’s values.</p>
+<p>If you are reading a tag containing numeric values then you can retrieve the Tag’s <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::ReadingNumericDataHandler</span></code>
+(via <a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet28getReadingDataHandlerNumericERK5TagId6size_t" title="imebra::DataSet::getReadingDataHandlerNumeric"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getReadingDataHandlerNumeric</span></code></a>) which exposes the raw memory that stores the actual data: in some cases
+this allow for faster information processing.</p>
+<p>In order to identify the tag to read you must use the class <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra5TagIdE" title="imebra::TagId"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::TagId</span></code></a> which takes as parameters the group ID and the tag ID or
+an <a class="reference internal" href="definition_classes.html#_CPPv4N6imebra7tagId_tE" title="imebra::tagId_t"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">imebra::tagId_t</span></code></a> enumeration.</p>
+<p>This is how you retrieve the patient’s name from the DataSet in C++:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">imebra</span><span class="o">::</span><span class="n">UnicodePatientName</span><span class="w"> </span><span class="n">patientName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loadedDataSet</span><span class="p">.</span><span class="n">getUnicodePatientName</span><span class="p">(</span><span class="n">imebra</span><span class="o">::</span><span class="n">TagId</span><span class="p">(</span><span class="n">imebra</span><span class="o">::</span><span class="n">tagId_t</span><span class="o">::</span><span class="n">PatientName_0010_0010</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// A patient&#39;s name contains 3 values, representing different interpretations of the same name</span>
+<span class="c1">// (alphabetic representation, ideographic representation and phonetic representation).</span>
+<span class="n">std</span><span class="o">::</span><span class="n">wstring</span><span class="w"> </span><span class="n">patientNameCharacter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">patientName</span><span class="p">.</span><span class="n">getAlphabeticRepresentation</span><span class="p">();</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">wstring</span><span class="w"> </span><span class="n">patientNameIdeographic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">patientName</span><span class="p">.</span><span class="n">getIdeographicRepresentation</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p>and in Java:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">PatientName</span> <span class="n">patientName</span> <span class="o">=</span> <span class="n">loadedDataSet</span><span class="p">.</span><span class="na">getPatientName</span><span class="p">(</span><span class="k">new</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">TagId</span><span class="p">(</span><span class="mh">0x10</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">),</span> <span class="mi">0</span><span class="p">);</span>
+
+<span class="c1">// A patient&#39;s name contains 3 values, representing different interpretations of the same name</span>
+<span class="c1">// (alphabetic representation, ideographic representation and phonetic representation).</span>
+<span class="n">String</span> <span class="n">patientNameCharacter</span> <span class="o">=</span> <span class="n">patientName</span><span class="p">.</span><span class="na">getAlphabeticRepresentation</span><span class="p">();</span>
+<span class="n">String</span> <span class="n">patientNameIdeographic</span> <span class="o">=</span> <span class="n">patientName</span><span class="p">.</span><span class="na">getIdeographicRepresentation</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Note that the previous code will throw one of the exceptions derived from <a class="reference internal" href="exception_classes.html#_CPPv4N6imebra23MissingDataElementErrorE" title="imebra::MissingDataElementError"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::MissingDataElementError</span></code></a>
+if the desidered patient name component is not present in the <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::DataSet</span></code></a> (in Golang a panic is raised).</p>
+<p>You can specify a return value that is returned when the value is not present in order to avoid throwing an exception when
+a tag’s value cannot be found in the DataSet :</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">imebra</span><span class="o">::</span><span class="n">UnicodePatientName</span><span class="w"> </span><span class="n">patientName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loadedDataSet</span><span class="p">.</span><span class="n">getUnicodePatientName</span><span class="p">(</span><span class="n">imebra</span><span class="o">::</span><span class="n">TagId</span><span class="p">(</span><span class="n">imebra</span><span class="o">::</span><span class="n">tagId_t</span><span class="o">::</span><span class="n">PatientName_0010_0010</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">imebra</span><span class="o">::</span><span class="n">UnicodePatientName</span><span class="p">(</span><span class="sa">L</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="sa">L</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="sa">L</span><span class="s">&quot;&quot;</span><span class="p">));</span><span class="w"></span>
+</pre></div>
+</div>
+<p>in Java:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">PatientName</span> <span class="n">patientName</span> <span class="o">=</span> <span class="n">loadedDataSet</span><span class="p">.</span><span class="na">getPatientName</span><span class="p">(</span><span class="k">new</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">TagId</span><span class="p">(</span><span class="mh">0x10</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="k">new</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">PatientName</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+</section>
+<section id="retrieving-an-image">
+<h2>Retrieving an image<a class="headerlink" href="#retrieving-an-image" title="Permalink to this headline">¶</a></h2>
+<p>Imebra exposes two methods to retrieve images from a <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::DataSet</span></code></a>:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet8getImageE6size_t" title="imebra::DataSet::getImage"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getImage</span></code></a></p></li>
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet30getImageApplyModalityTransformE6size_t" title="imebra::DataSet::getImageApplyModalityTransform"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getImageApplyModalityTransform</span></code></a></p></li>
+</ul>
+<p>The second method applies to the image the <code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::ModalityVOILUT</span></code> transform automatically if present
+and is the reccommended method.</p>
+<p>The retrieved image will have the color space &amp; bits per channel as defined in the DataSet.</p>
+<p>To retrieve an image in C++:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Retrieve the first image (index = 0)</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">Image</span><span class="w"> </span><span class="nf">image</span><span class="p">(</span><span class="n">loadedDataSet</span><span class="p">.</span><span class="n">getImageApplyModalityTransform</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span><span class="w"></span>
+
+<span class="c1">// Get the color space</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">colorSpace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">image</span><span class="p">.</span><span class="n">getColorSpace</span><span class="p">();</span><span class="w"></span>
+
+<span class="c1">// Get the size in pixels</span>
+<span class="n">std</span><span class="o">::</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">image</span><span class="p">.</span><span class="n">getWidth</span><span class="p">();</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">image</span><span class="p">.</span><span class="n">getHeight</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p>To retrieve an image in Java:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Retrieve the first image (index = 0)</span>
+<span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">Image</span> <span class="n">image</span> <span class="o">=</span> <span class="n">loadedDataSet</span><span class="p">.</span><span class="na">getImageApplyModalityTransform</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="c1">// Get the color space</span>
+<span class="n">String</span> <span class="n">colorSpace</span> <span class="o">=</span> <span class="n">image</span><span class="p">.</span><span class="na">getColorSpace</span><span class="p">();</span>
+
+<span class="c1">// Get the size in pixels</span>
+<span class="kt">long</span> <span class="n">width</span> <span class="o">=</span> <span class="n">image</span><span class="p">.</span><span class="na">getWidth</span><span class="p">();</span>
+<span class="kt">long</span> <span class="n">height</span> <span class="o">=</span> <span class="n">image</span><span class="p">.</span><span class="na">getHeight</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>In order to access the image’s pixels you can obtain a <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra25ReadingDataHandlerNumericE" title="imebra::ReadingDataHandlerNumeric"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::ReadingDataHandlerNumeric</span></code></a> and then
+access the individual pixels via <a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra18ReadingDataHandler13getSignedLongE6size_t" title="imebra::ReadingDataHandler::getSignedLong"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::ReadingDataHandler::getSignedLong</span></code></a> or
+<a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra18ReadingDataHandler15getUnsignedLongE6size_t" title="imebra::ReadingDataHandler::getUnsignedLong"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::ReadingDataHandler::getUnsignedLong</span></code></a>. For faster processing you could also access
+the raw memory containing the pixels.</p>
+<p>This is how you scan all the pixels in C++, the slow way</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// let&#39;s assume that we already have the image&#39;s size in the variables width and height</span>
+<span class="c1">// (see previous code snippet)</span>
+
+<span class="c1">// Retrieve the data handler</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">ReadingDataHandlerNumeric</span><span class="w"> </span><span class="nf">dataHandler</span><span class="p">(</span><span class="n">image</span><span class="p">.</span><span class="n">getReadingDataHandler</span><span class="p">());</span><span class="w"></span>
+
+<span class="k">for</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">uint32</span><span class="w"> </span><span class="n">scanY</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="n">scanY</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">scanY</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">uint32</span><span class="w"> </span><span class="n">scanX</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="n">scanX</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">width</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">scanX</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// For monochrome images</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="kt">int32_t</span><span class="w"> </span><span class="n">luminance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dataHandler</span><span class="p">.</span><span class="n">getSignedLong</span><span class="p">(</span><span class="n">scanY</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">scanX</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// For RGB images</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="kt">int32_t</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dataHandler</span><span class="p">.</span><span class="n">getSignedLong</span><span class="p">((</span><span class="n">scanY</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">scanX</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="kt">int32_t</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dataHandler</span><span class="p">.</span><span class="n">getSignedLong</span><span class="p">((</span><span class="n">scanY</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">scanX</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="kt">int32_t</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dataHandler</span><span class="p">.</span><span class="n">getSignedLong</span><span class="p">((</span><span class="n">scanY</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">scanX</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>How to access the pixels in Java:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// let&#39;s assume that we already have the image&#39;s size in the variables width and height</span>
+<span class="c1">// (see previous code snippet)</span>
+
+<span class="c1">// Retrieve the data handler</span>
+<span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">ReadingDataHandlerNumeric</span> <span class="n">dataHandler</span> <span class="o">=</span> <span class="n">image</span><span class="o">-&gt;</span><span class="n">getReadingDataHandler</span><span class="p">();</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kt">long</span> <span class="n">scanY</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">scanY</span> <span class="o">!=</span> <span class="n">height</span><span class="p">;</span> <span class="n">scanY</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">long</span> <span class="n">scanX</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">scanX</span> <span class="o">!=</span> <span class="n">width</span><span class="p">;</span> <span class="n">scanX</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// For monochrome images</span>
+        <span class="kt">int</span> <span class="n">luminance</span> <span class="o">=</span> <span class="n">dataHandler</span><span class="p">.</span><span class="na">getSignedLong</span><span class="p">(</span><span class="n">scanY</span> <span class="o">*</span> <span class="n">width</span> <span class="o">+</span> <span class="n">scanX</span><span class="p">);</span>
+
+        <span class="c1">// For RGB images</span>
+        <span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="n">dataHandler</span><span class="p">.</span><span class="na">getSignedLong</span><span class="p">((</span><span class="n">scanY</span> <span class="o">*</span> <span class="n">width</span> <span class="o">+</span> <span class="n">scanX</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">g</span> <span class="o">=</span> <span class="n">dataHandler</span><span class="p">.</span><span class="na">getSignedLong</span><span class="p">((</span><span class="n">scanY</span> <span class="o">*</span> <span class="n">width</span> <span class="o">+</span> <span class="n">scanX</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">dataHandler</span><span class="p">.</span><span class="na">getSignedLong</span><span class="p">((</span><span class="n">scanY</span> <span class="o">*</span> <span class="n">width</span> <span class="o">+</span> <span class="n">scanX</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In order to make things faster you can retrieve the memory containing the data in raw format from the <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra25ReadingDataHandlerNumericE" title="imebra::ReadingDataHandlerNumeric"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::ReadingDataHandlerNumeric</span></code></a>
+object:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Retrieve the data handler</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">ReadingDataHandlerNumeric</span><span class="w"> </span><span class="nf">dataHandler</span><span class="p">(</span><span class="n">image</span><span class="p">.</span><span class="n">getReadingDataHandler</span><span class="p">());</span><span class="w"></span>
+
+<span class="c1">// Get the memory pointer and the size (in bytes)</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">dataLength</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dataHandler</span><span class="p">.</span><span class="n">data</span><span class="p">(</span><span class="o">&amp;</span><span class="n">dataLength</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Get the number of bytes per each value (1, 2, or 4 for images)</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">bytesPerValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dataHandler</span><span class="p">.</span><span class="n">getUnitSize</span><span class="p">();</span><span class="w"></span>
+
+<span class="c1">// Are the values signed?</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">bIsSigned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dataHandler</span><span class="p">.</span><span class="n">isSigned</span><span class="p">();</span><span class="w"></span>
+
+<span class="c1">// Do something with the pixels...A template function would come handy</span>
+</pre></div>
+</div>
+</section>
+<section id="displaying-an-image">
+<h2>Displaying an image<a class="headerlink" href="#displaying-an-image" title="Permalink to this headline">¶</a></h2>
+<p>An image may have to undergo several transformations before it can be displayed on a computer (or mobile) screen.
+Usually, the computer monitor accepts 8 bit per channel RGB (or RGBA) images, while images retrieved from a DataSet
+may have more than 8 bits per channel (up to 32) and may have a different color space (for instance MONOCHROME1, MONOCHROME2,
+YBR_FULL, etc).</p>
+<p>While the necessary transforms are performed automatically by the <a class="reference internal" href="imaging_classes.html#_CPPv4N6imebra10DrawBitmapE" title="imebra::DrawBitmap"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::DrawBitmap</span></code></a> class, some
+transformations must still be performed by the client application.</p>
+<p>In particular, the <a class="reference internal" href="imaging_classes.html#_CPPv4N6imebra10DrawBitmapE" title="imebra::DrawBitmap"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::DrawBitmap</span></code></a> class takes care of:</p>
+<ul class="simple">
+<li><p>converting the color space</p></li>
+<li><p>shifting the channels values to 8 bit</p></li>
+</ul>
+<p>The client application must take care of applying the <a class="reference internal" href="transforms_classes.html#_CPPv4N6imebra14ModalityVOILUTE" title="imebra::ModalityVOILUT"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::ModalityVOILUT</span></code></a> transform (but this is easily done
+by calling <a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet30getImageApplyModalityTransformE6size_t" title="imebra::DataSet::getImageApplyModalityTransform"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getImageApplyModalityTransform</span></code></a> instead of <a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet8getImageE6size_t" title="imebra::DataSet::getImage"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getImage</span></code></a>)
+and the <a class="reference internal" href="transforms_classes.html#_CPPv4N6imebra6VOILUTE" title="imebra::VOILUT"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::VOILUT</span></code></a> transform.</p>
+<p>The <a class="reference internal" href="transforms_classes.html#_CPPv4N6imebra6VOILUTE" title="imebra::VOILUT"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::VOILUT</span></code></a> can be applied only to monochromatic images and changes the image’s contrast to enhance
+different portions of the image (for instance just the bones or the tissue).</p>
+<p>Usually, the dataSet contains a few tags that store some pre-defined VOILUT settings for the image: the client application should apply
+those values to the VOILUT transform.
+The pre-defined settings come as pairs of center/width values or as Lookup Tables stored in the DICOM sequence 0028,3010.</p>
+<p>To retrieve the pairs center/width use the method <a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet7getVOIsEv" title="imebra::DataSet::getVOIs"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getVOIs</span></code></a>, while to retrieve the LUTs use
+the method <a class="reference internal" href="dicom_data_classes.html#_CPPv4NK6imebra7DataSet6getLUTERK5TagId6size_t" title="imebra::DataSet::getLUT"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::DataSet::getLUT</span></code></a>.</p>
+<p>in C++</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// The transforms chain will contain all the transform that we want to</span>
+<span class="c1">// apply to the image before displaying it</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">TransformsChain</span><span class="w"> </span><span class="n">chain</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">imebra</span><span class="o">::</span><span class="n">ColorTransformsFactory</span><span class="o">::</span><span class="n">isMonochrome</span><span class="p">(</span><span class="n">image</span><span class="p">.</span><span class="n">getColorSpace</span><span class="p">()))</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Allocate a VOILUT transform. If the DataSet does not contain any pre-defined</span>
+<span class="w">    </span><span class="c1">//  settings then we will find the optimal ones.</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">imebra</span><span class="o">::</span><span class="n">VOILUT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pVoilutTransform</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Retrieve the VOIs (center/width pairs)</span>
+<span class="w">    </span><span class="n">imebra</span><span class="o">::</span><span class="n">vois_t</span><span class="w"> </span><span class="n">vois</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loadedDataSet</span><span class="p">.</span><span class="n">getVOIs</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Retrieve the LUTs</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">imebra</span><span class="o">::</span><span class="n">LUT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">luts</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">scanLUTs</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">scanLUTs</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">try</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">luts</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">loadedDataSet</span><span class="p">.</span><span class="n">getLUT</span><span class="p">(</span><span class="n">imebra</span><span class="o">::</span><span class="n">TagId</span><span class="p">(</span><span class="n">imebra</span><span class="o">::</span><span class="n">tagId_t</span><span class="o">::</span><span class="n">VOILUTSequence_0028_3010</span><span class="p">),</span><span class="w"> </span><span class="n">scanLUTs</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">catch</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">imebra</span><span class="o">::</span><span class="n">MissingDataElementError</span><span class="o">&amp;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">vois</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">pVoilutTransform</span><span class="p">.</span><span class="n">reset</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">imebra</span><span class="o">::</span><span class="n">VOILUT</span><span class="p">(</span><span class="n">vois</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">luts</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">pVoilutTransform</span><span class="p">.</span><span class="n">reset</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">imebra</span><span class="o">::</span><span class="n">VOILUT</span><span class="p">(</span><span class="n">luts</span><span class="p">.</span><span class="n">front</span><span class="p">()));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">pVoilutTransform</span><span class="p">.</span><span class="n">reset</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">imebra</span><span class="o">::</span><span class="n">VOILUT</span><span class="p">(</span><span class="n">imebra</span><span class="o">::</span><span class="n">VOILUT</span><span class="o">::</span><span class="n">getOptimalVOI</span><span class="p">(</span><span class="n">image</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">)));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">chain</span><span class="p">.</span><span class="n">addTransform</span><span class="p">(</span><span class="o">*</span><span class="n">pVoilutTransform</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// If the image is monochromatic then now chain contains the VOILUT transform</span>
+</pre></div>
+</div>
+<p>in Java</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// The transforms chain will contain all the transform that we want to</span>
+<span class="c1">// apply to the image before displaying it</span>
+<span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">TransformsChain</span> <span class="n">chain</span> <span class="o">=</span> <span class="k">new</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">TransformsChain</span><span class="p">();</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">ColorTransformsFactory</span><span class="p">.</span><span class="na">isMonochrome</span><span class="p">(</span><span class="n">image</span><span class="p">.</span><span class="na">getColorSpace</span><span class="p">()))</span>
+<span class="p">{</span>
+    <span class="c1">// Allocate a VOILUT transform. If the DataSet does not contain any pre-defined</span>
+    <span class="c1">//  settings then we will find the optimal ones.</span>
+    <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">VOILUT</span> <span class="n">voilutTransform</span> <span class="o">=</span> <span class="k">new</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">VOILUT</span><span class="p">();</span>
+
+    <span class="c1">// Retrieve the VOIs (center/width pairs)</span>
+    <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">vois_t</span> <span class="n">vois</span> <span class="o">=</span> <span class="n">loadedDataSet</span><span class="p">.</span><span class="na">getVOIs</span><span class="p">();</span>
+
+    <span class="c1">// Retrieve the LUTs</span>
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">LUT</span><span class="o">&gt;</span> <span class="n">luts</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">LUT</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">long</span> <span class="n">scanLUTs</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">;</span> <span class="n">scanLUTs</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">try</span>
+        <span class="p">{</span>
+            <span class="n">luts</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">loadedDataSet</span><span class="p">.</span><span class="na">getLUT</span><span class="p">(</span><span class="k">new</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">TagId</span><span class="p">(</span><span class="mh">0x0028</span><span class="p">,</span><span class="mh">0x3010</span><span class="p">),</span> <span class="n">scanLUTs</span><span class="p">));</span>
+        <span class="p">}</span>
+        <span class="k">catch</span><span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">vois</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="n">voilutTransform</span> <span class="o">=</span> <span class="k">new</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">VOILUT</span><span class="p">(</span><span class="n">vois</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">luts</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="n">voilutTransform</span> <span class="o">=</span> <span class="k">new</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">VOILUT</span><span class="p">(</span><span class="n">luts</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">voilutTransform</span> <span class="o">=</span> <span class="k">new</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">VOILUT</span><span class="p">(</span><span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">getOptimalVOI</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="n">chain</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">voilutTransform</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Now we can display the image. We use <a class="reference internal" href="imaging_classes.html#_CPPv4N6imebra10DrawBitmapE" title="imebra::DrawBitmap"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::DrawBitmap</span></code></a> to obtain an RGB image
+ready to be displayed.</p>
+<p>In C++</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// We create a DrawBitmap that always apply the chain transform before getting the RGB image</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">DrawBitmap</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="n">chain</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Ask for the size of the buffer (in bytes)</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">requestedBufferSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">draw</span><span class="p">.</span><span class="n">getBitmap</span><span class="p">(</span><span class="n">image</span><span class="p">,</span><span class="w"> </span><span class="n">imebra</span><span class="o">::</span><span class="n">drawBitmapType_t</span><span class="o">::</span><span class="n">drawBitmapRGBA</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Now we allocate the buffer and then ask DrawBitmap to fill it</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">buffer</span><span class="p">(</span><span class="n">requestedBufferSize</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span><span class="w"></span>
+<span class="n">draw</span><span class="p">.</span><span class="n">getBitmap</span><span class="p">(</span><span class="n">image</span><span class="p">,</span><span class="w"> </span><span class="n">imebra</span><span class="o">::</span><span class="n">drawBitmapType_t</span><span class="o">::</span><span class="n">drawBitmapRGBA</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="p">(</span><span class="n">buffer</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)),</span><span class="w"> </span><span class="n">requestedBufferSize</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>On OS-X or iOS you can use the provided method <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">imebra::getImebraImage()</span></code> to obtain a NSImage or an UIImage:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// We create a DrawBitmap that always apply the chain transform before getting the RGB image</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">DrawBitmap</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="n">chain</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Get an NSImage (or UIImage on iOS)</span>
+<span class="n">NSImage</span><span class="o">*</span><span class="w"> </span><span class="n">nsImage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getImebraImage</span><span class="p">(</span><span class="o">*</span><span class="n">ybrImage</span><span class="p">,</span><span class="w"> </span><span class="n">draw</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>In Java</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// We create a DrawBitmap that always apply the chain transform before getting the RGB image</span>
+<span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">DrawBitmap</span> <span class="n">draw</span> <span class="o">=</span> <span class="k">new</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">DrawBitmap</span><span class="p">(</span><span class="n">chain</span><span class="p">);</span>
+
+<span class="c1">// Ask for the size of the buffer (in bytes)</span>
+<span class="kt">long</span> <span class="n">requestedBufferSize</span> <span class="o">=</span> <span class="n">draw</span><span class="p">.</span><span class="na">getBitmap</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">imebra</span><span class="p">::</span><span class="n">drawBitmapType_t</span><span class="p">::</span><span class="n">drawBitmapRGBA</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+
+<span class="kt">byte</span> <span class="n">buffer</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">requestedBufferSize</span><span class="o">]</span><span class="p">;</span> <span class="c1">// Ideally you want to reuse this in subsequent calls to getBitmap()</span>
+<span class="n">ByteBuffer</span> <span class="n">byteBuffer</span> <span class="o">=</span> <span class="n">ByteBuffer</span><span class="p">.</span><span class="na">wrap</span><span class="p">(</span><span class="n">buffer</span><span class="p">);</span>
+
+<span class="c1">// Now fill the buffer with the image data and create a bitmap from it</span>
+<span class="n">drawBitmap</span><span class="p">.</span><span class="na">getBitmap</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">drawBitmapType_t</span><span class="p">.</span><span class="na">drawBitmapRGBA</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">buffer</span><span class="p">);</span>
+<span class="n">Bitmap</span> <span class="n">renderBitmap</span> <span class="o">=</span> <span class="n">Bitmap</span><span class="p">.</span><span class="na">createBitmap</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="n">image</span><span class="p">.</span><span class="na">getWidth</span><span class="p">(),</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">image</span><span class="p">.</span><span class="na">getHeight</span><span class="p">(),</span> <span class="n">Bitmap</span><span class="p">.</span><span class="na">Config</span><span class="p">.</span><span class="na">ARGB_8888</span><span class="p">);</span>
+<span class="n">renderBitmap</span><span class="p">.</span><span class="na">copyPixelsFromBuffer</span><span class="p">(</span><span class="n">byteBuffer</span><span class="p">);</span>
+
+<span class="c1">// The Bitmap can be assigned to an ImageView on Android</span>
+</pre></div>
+</div>
+</section>
+<section id="creating-an-empty-dataset">
+<h2>Creating an empty DataSet<a class="headerlink" href="#creating-an-empty-dataset" title="Permalink to this headline">¶</a></h2>
+<p>When creating an empty <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::DataSet</span></code></a> you have to specify the transfer syntax that will be used to encode it.
+The transfer syntax specifies also how the embedded images are compressed.</p>
+<p>The accepted transfer syntaxes are:</p>
+<ul class="simple">
+<li><p>“1.2.840.10008.1.2” (Implicit VR little endian)</p></li>
+<li><p>“1.2.840.10008.1.2.1” (Explicit VR little endian)</p></li>
+<li><p>“1.2.840.10008.1.2.2” (Explicit VR big endian)</p></li>
+<li><p>“1.2.840.10008.1.2.5” (RLE compression)</p></li>
+<li><p>“1.2.840.10008.1.2.4.50” (Jpeg baseline 8 bit lossy)</p></li>
+<li><p>“1.2.840.10008.1.2.4.51” (Jpeg extended 12 bit lossy)</p></li>
+<li><p>“1.2.840.10008.1.2.4.57” (Jpeg lossless NH)</p></li>
+<li><p>“1.2.840.10008.1.2.4.70” (Jpeg lossless NH first order prediction)</p></li>
+</ul>
+<p>To create an empty DataSet in C++:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// We specify the transfer syntax and the charset</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">MutableDataSet</span><span class="w"> </span><span class="nf">dataSet</span><span class="p">(</span><span class="s">&quot;1.2.840.10008.1.2.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ISO 2022 IR 6&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>In Java:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// We specify the transfer syntax and the charset</span>
+<span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">MutableDataSet</span> <span class="n">dataSet</span> <span class="o">=</span> <span class="k">new</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">MutableDataSet</span><span class="p">(</span><span class="s">&quot;1.2.840.10008.1.2.1&quot;</span><span class="p">,</span> <span class="s">&quot;ISO 2022 IR 6&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="modifying-the-dataset-s-content">
+<h2>Modifying the dataset’s content<a class="headerlink" href="#modifying-the-dataset-s-content" title="Permalink to this headline">¶</a></h2>
+<p>You can set the tags values by calling the setters on the DataSet or by retrieving a WritingDataHandler for
+a specific tag.</p>
+<p>WritingDataHandler objects allow modifying several tag’s buffers, while the DataSet setters allow setting only
+the element 0 of the first tag’s buffer.</p>
+<p>The available DataSet setters are:</p>
+<p>Once the DataSet has been loaded your application can retrieve the tags stored in it.</p>
+<p>In order to write a tag’s value, use one of the following methods</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra14MutableDataSet13setSignedLongERK5TagIdNSt7int32_tE7tagVR_t" title="imebra::MutableDataSet::setSignedLong"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::MutableDataSet::setSignedLong</span></code></a></p></li>
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra14MutableDataSet15setUnsignedLongERK5TagIdNSt8uint32_tE7tagVR_t" title="imebra::MutableDataSet::setUnsignedLong"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::MutableDataSet::setUnsignedLong</span></code></a></p></li>
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra14MutableDataSet9setDoubleERK5TagIdd7tagVR_t" title="imebra::MutableDataSet::setDouble"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::MutableDataSet::setDouble</span></code></a></p></li>
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra14MutableDataSet9setStringERK5TagIdRKNSt6stringE7tagVR_t" title="imebra::MutableDataSet::setString"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::MutableDataSet::setString</span></code></a></p></li>
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra14MutableDataSet16setUnicodeStringERK5TagIdRKNSt7wstringE7tagVR_t" title="imebra::MutableDataSet::setUnicodeString"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::MutableDataSet::setUnicodeString</span></code></a> (C++ only)</p></li>
+<li><p><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::MutableDataSet::setpatientName</span></code></p></li>
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra14MutableDataSet21setUnicodePatientNameERK5TagIdRK18UnicodePatientName" title="imebra::MutableDataSet::setUnicodePatientName"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::MutableDataSet::setUnicodePatientName</span></code></a> (C++ only)</p></li>
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra14MutableDataSet6setAgeERK5TagIdRK3Age" title="imebra::MutableDataSet::setAge"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::MutableDataSet::setAge</span></code></a></p></li>
+<li><p><a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra14MutableDataSet7setDateERK5TagIdRK4Date7tagVR_t" title="imebra::MutableDataSet::setDate"><code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">imebra::MutableDataSet::setDate</span></code></a></p></li>
+</ul>
+<p>The WritingDataHandler and WritingDataHandlerNumeric classes contain the same setters but allow to access all the tags’ elements, not just
+the first one.</p>
+<p>This is how you set the patient’s name using the DataSet setter:</p>
+<p>In C++:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">dataSet</span><span class="p">.</span><span class="n">setUnicodePatientName</span><span class="p">(</span><span class="n">TagId</span><span class="p">(</span><span class="n">imebra</span><span class="o">::</span><span class="n">tagId_t</span><span class="o">::</span><span class="n">PatientName_0010_0010</span><span class="p">),</span><span class="w"> </span><span class="n">UnicodePatientName</span><span class="p">(</span><span class="sa">L</span><span class="s">&quot;Patient^Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">));</span><span class="w"></span>
+</pre></div>
+</div>
+<p>In Java:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">dataSet</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="k">new</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">TagId</span><span class="p">(</span><span class="mh">0x10</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">),</span> <span class="k">new</span> <span class="n">PatientName</span><span class="p">(</span><span class="s">&quot;Patient^Name&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+</section>
+<section id="embedding-images-into-the-dataset">
+<h2>Embedding images into the dataSet<a class="headerlink" href="#embedding-images-into-the-dataset" title="Permalink to this headline">¶</a></h2>
+<p>When an image is stored in the dataSet then it is compressed according to the dataSet’s transfer syntax.</p>
+<p>in C++</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a 300 by 200 pixel image, 15 bits per color channel, RGB</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">MutableImage</span><span class="w"> </span><span class="nf">image</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">imebra</span><span class="o">::</span><span class="n">bitDepth_t</span><span class="o">::</span><span class="n">depthU16</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;RGB&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">);</span><span class="w"></span>
+
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">WritingDataHandlerNumeric</span><span class="w"> </span><span class="nf">dataHandler</span><span class="p">(</span><span class="n">image</span><span class="p">.</span><span class="n">getWritingDataHandler</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Set all the pixels to red</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">scanY</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="n">scanY</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">scanY</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">scanX</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="n">scanX</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">300</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">scanX</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">dataHandler</span><span class="p">.</span><span class="n">setUnsignedLong</span><span class="p">((</span><span class="n">scanY</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">scanX</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">65535</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">dataHandler</span><span class="p">.</span><span class="n">setUnsignedLong</span><span class="p">((</span><span class="n">scanY</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">scanX</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">dataHandler</span><span class="p">.</span><span class="n">setUnsignedLong</span><span class="p">((</span><span class="n">scanY</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">scanX</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// dataHandler will go out of scope and will commit the data into the image</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">dataSet</span><span class="p">.</span><span class="n">setImage</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>in Java</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a 300 by 200 pixel image, 15 bits per color channel, RGB</span>
+<span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">MutableImage</span> <span class="n">image</span> <span class="o">=</span> <span class="k">new</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">MutableImage</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">bitDepth_t</span><span class="p">.</span><span class="na">depthU16</span><span class="p">,</span> <span class="s">&quot;RGB&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">);</span>
+
+<span class="p">{</span>
+    <span class="n">WritingDataHandlerNumeric</span> <span class="n">dataHandler</span> <span class="o">=</span> <span class="n">image</span><span class="p">.</span><span class="na">getWritingDataHandler</span><span class="p">();</span>
+
+    <span class="c1">// Set all the pixels to red</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">long</span> <span class="n">scanY</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">scanY</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">;</span> <span class="n">scanY</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">long</span> <span class="n">scanX</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">scanX</span> <span class="o">!=</span> <span class="mi">300</span><span class="p">;</span> <span class="n">scanX</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">dataHandler</span><span class="p">.</span><span class="na">setUnsignedLong</span><span class="p">((</span><span class="n">scanY</span> <span class="o">*</span> <span class="mi">300</span> <span class="o">+</span> <span class="n">scanX</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">65535</span><span class="p">);</span>
+            <span class="n">dataHandler</span><span class="p">.</span><span class="na">setUnsignedLong</span><span class="p">((</span><span class="n">scanY</span> <span class="o">*</span> <span class="mi">300</span> <span class="o">+</span> <span class="n">scanX</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+            <span class="n">dataHandler</span><span class="p">.</span><span class="na">setUnsignedLong</span><span class="p">((</span><span class="n">scanY</span> <span class="o">*</span> <span class="mi">300</span> <span class="o">+</span> <span class="n">scanX</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Force the commit, don&#39;t wait for the garbage collector</span>
+    <span class="n">dataHandler</span><span class="p">.</span><span class="na">delete</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="n">dataSet</span><span class="p">.</span><span class="na">setImage</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">image</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="saving-a-dataset">
+<h2>Saving a DataSet<a class="headerlink" href="#saving-a-dataset" title="Permalink to this headline">¶</a></h2>
+<p>A DataSet can be saved using the CodecFactory:</p>
+<p>in C++</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">imebra</span><span class="o">::</span><span class="n">CodecFactory</span><span class="o">::</span><span class="n">save</span><span class="p">(</span><span class="n">dataSet</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;dicomFile.dcm&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">imebra</span><span class="o">::</span><span class="n">codecType_t</span><span class="o">::</span><span class="n">dicom</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>in Java</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">CodecFactory</span><span class="p">.</span><span class="na">save</span><span class="p">(</span><span class="n">dataSet</span><span class="p">,</span> <span class="s">&quot;dicomFile.dcm&quot;</span><span class="p">,</span> <span class="n">com</span><span class="p">.</span><span class="na">imebra</span><span class="p">.</span><span class="na">codecType_t</span><span class="p">.</span><span class="na">dicom</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="sending-a-dicom-command-through-an-scu">
+<h2>Sending a DICOM command through an SCU<a class="headerlink" href="#sending-a-dicom-command-through-an-scu" title="Permalink to this headline">¶</a></h2>
+<p>A SCU (Service User) acts as a client in a DICOM association (negotiated connection between 2 peers).</p>
+<p>A DICOM association uses a TCP connection to send and receive data.</p>
+<p>The DIMSE service (see <a class="reference internal" href="dimse_classes.html#_CPPv4N6imebra12DimseServiceE" title="imebra::DimseService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::DimseService</span></code></a>) communicates via an association, represented
+either by an AssociationSCU (see <a class="reference internal" href="acse_classes.html#_CPPv4N6imebra14AssociationSCUE" title="imebra::AssociationSCU"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::AssociationSCU</span></code></a>) or by an AssociationSCP (see <a class="reference internal" href="acse_classes.html#_CPPv4N6imebra14AssociationSCPE" title="imebra::AssociationSCP"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::AssociationSCP</span></code></a>).</p>
+<p>The AssociationSCU usually is the client of a DICOM service, but occasionally can act as an SCP if the SCP role for an abstractSyntax has been
+negotiated: this is useful to receive data via C-GET commands, where the SCP sends the requested data to the SCU via a separate C-STORE command.</p>
+<p>The following code sends a C-STORE command to an SCP: the C-STORE command instruct the SCP to take a DICOM DataSet. In the example
+we prepare the separate DataSet (see <a class="reference internal" href="dicom_data_classes.html#_CPPv4N6imebra7DataSetE" title="imebra::DataSet"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::DataSet</span></code></a>) and we initialize it with the transfer syntax that we negotiated
+in the association.</p>
+<p>We then send the command and wait for a response:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Allocate a TCP stream that connects to the DICOM SCP</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">TCPStream</span><span class="w"> </span><span class="nf">tcpStream</span><span class="p">(</span><span class="n">TCPActiveAddress</span><span class="p">(</span><span class="s">&quot;scpHost.company.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;104&quot;</span><span class="p">));</span><span class="w"></span>
+
+<span class="c1">// Allocate a stream reader and a writer that use the TCP stream.</span>
+<span class="c1">// If you need a more complex stream (e.g. a stream that uses your</span>
+<span class="c1">// own services to send and receive data) then use a Pipe</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">StreamReader</span><span class="w"> </span><span class="nf">readSCU</span><span class="p">(</span><span class="n">tcpStream</span><span class="p">.</span><span class="n">getInputStream</span><span class="p">());</span><span class="w"></span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">StreamWriter</span><span class="w"> </span><span class="nf">writeSCU</span><span class="p">(</span><span class="n">tcpStream</span><span class="p">.</span><span class="n">getOutputStream</span><span class="p">());</span><span class="w"></span>
+
+<span class="c1">// Add all the abstract syntaxes and the supported transfer</span>
+<span class="c1">// syntaxes for each abstract syntax (the pair abstract/transfer syntax is</span>
+<span class="c1">// called &quot;presentation context&quot;)</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">PresentationContext</span><span class="w"> </span><span class="nf">context</span><span class="p">(</span><span class="s">&quot;1.2.840.10008.5.1.4.1.1.4.1&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Enhanced MR Image Storage</span>
+<span class="n">context</span><span class="p">.</span><span class="n">addTransferSyntax</span><span class="p">(</span><span class="s">&quot;1.2.840.10008.1.2.1&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Explicit VR little endian</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">PresentationContexts</span><span class="w"> </span><span class="n">presentationContexts</span><span class="p">;</span><span class="w"></span>
+<span class="n">presentationContexts</span><span class="p">.</span><span class="n">addPresentationContext</span><span class="p">(</span><span class="n">context</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// The AssociationSCU constructor will negotiate a connection through</span>
+<span class="c1">// the readSCU and writeSCU stream reader and writer</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">AssociationSCU</span><span class="w"> </span><span class="nf">scu</span><span class="p">(</span><span class="s">&quot;SCU&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;SCP&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">presentationContexts</span><span class="p">,</span><span class="w"> </span><span class="n">readSCU</span><span class="p">,</span><span class="w"> </span><span class="n">writeSCU</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// The DIMSE service will use the negotiated association to send and receive</span>
+<span class="c1">// DICOM commands</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">DimseService</span><span class="w"> </span><span class="nf">dimse</span><span class="p">(</span><span class="n">scu</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Let&#39;s prepare a dataset to store on the SCP</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">MutableDataSet</span><span class="w"> </span><span class="nf">payload</span><span class="p">(</span><span class="n">dimse</span><span class="p">.</span><span class="n">getTransferSyntax</span><span class="p">(</span><span class="s">&quot;1.2.840.10008.5.1.4.1.1.4.1&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// We will use the negotiated transfer syntax</span>
+<span class="n">payload</span><span class="p">.</span><span class="n">setString</span><span class="p">(</span><span class="n">TagId</span><span class="p">(</span><span class="n">tagId_t</span><span class="o">::</span><span class="n">SOPInstanceUID_0008_0018</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;1.1.1.1&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">payload</span><span class="p">.</span><span class="n">setString</span><span class="p">(</span><span class="n">TagId</span><span class="p">(</span><span class="n">tagId_t</span><span class="o">::</span><span class="n">SOPClassUID_0008_0016</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;1.2.840.10008.5.1.4.1.1.4.1&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">payload</span><span class="p">.</span><span class="n">setString</span><span class="p">(</span><span class="n">TagId</span><span class="p">(</span><span class="n">tagId_t</span><span class="o">::</span><span class="n">PatientName_0010_0010</span><span class="p">),</span><span class="s">&quot;Patient^Test&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">//</span>
+<span class="c1">// Fill appropriately all the DataSet tag</span>
+<span class="c1">//</span>
+
+<span class="n">imebra</span><span class="o">::</span><span class="n">CStoreCommand</span><span class="w"> </span><span class="nf">command</span><span class="p">(</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;1.2.840.10008.5.1.4.1.1.4.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">//&lt; one of the negotiated abstract syntaxes</span>
+<span class="w">            </span><span class="n">dimse</span><span class="p">.</span><span class="n">getNextCommandID</span><span class="p">(),</span><span class="w"></span>
+<span class="w">            </span><span class="n">dimseCommandPriority_t</span><span class="o">::</span><span class="n">medium</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">payload</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="n">TagId</span><span class="p">(</span><span class="n">tagId_t</span><span class="o">::</span><span class="n">SOPClassUID_0008_0016</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"></span>
+<span class="w">            </span><span class="n">payload</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="n">TagId</span><span class="p">(</span><span class="n">tagId_t</span><span class="o">::</span><span class="n">SOPInstanceUID_0008_0018</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">payload</span><span class="p">);</span><span class="w"></span>
+<span class="n">dimse</span><span class="p">.</span><span class="n">sendCommandOrResponse</span><span class="p">(</span><span class="n">command</span><span class="p">);</span><span class="w"></span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">DimseResponse</span><span class="w"> </span><span class="nf">response</span><span class="p">(</span><span class="n">dimse</span><span class="p">.</span><span class="n">getCStoreResponse</span><span class="p">(</span><span class="n">command</span><span class="p">));</span><span class="w"></span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">getStatus</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">imebra</span><span class="o">::</span><span class="n">dimseStatus_t</span><span class="o">::</span><span class="n">success</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// SUCCESS!</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="implementign-a-dicom-scp">
+<h2>Implementign a DICOM SCP<a class="headerlink" href="#implementign-a-dicom-scp" title="Permalink to this headline">¶</a></h2>
+<p>A DICOM SCP listen for incoming connection and then communicate with the connected peer through a negotiated
+DICOM association.</p>
+<p>In this example we use the <a class="reference internal" href="stream_classes.html#_CPPv4N6imebra11TCPListenerE" title="imebra::TCPListener"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::TCPListener</span></code></a> to wait for incoming connections and then negotiate
+the association via a AssociationSCP (see <a class="reference internal" href="acse_classes.html#_CPPv4N6imebra14AssociationSCPE" title="imebra::AssociationSCP"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::AssociationSCP</span></code></a>).</p>
+<p>A <a class="reference internal" href="dimse_classes.html#_CPPv4N6imebra12DimseServiceE" title="imebra::DimseService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::DimseService</span></code></a> will be used on top of the <a class="reference internal" href="acse_classes.html#_CPPv4N6imebra14AssociationSCPE" title="imebra::AssociationSCP"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::AssociationSCP</span></code></a> in order to
+receive commands and send the responses.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Bind the port 104 to a listening socket</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">TCPListener</span><span class="w"> </span><span class="nf">tcpListener</span><span class="p">(</span><span class="n">TCPPassiveAddress</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;104&quot;</span><span class="p">));</span><span class="w"></span>
+
+<span class="c1">// Wait until a connection arrives or terminate() is called on the tcpListener</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">TCPStream</span><span class="w"> </span><span class="nf">tcpStream</span><span class="p">(</span><span class="n">tcpListener</span><span class="p">.</span><span class="n">waitForConnection</span><span class="p">());</span><span class="w"></span>
+
+<span class="c1">// tcpStream now represents the connected socket. Allocate a stream reader and a writer</span>
+<span class="c1">// to read and write on the connected socket</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">StreamReader</span><span class="w"> </span><span class="nf">readSCU</span><span class="p">(</span><span class="n">tcpStream</span><span class="p">.</span><span class="n">getInputStream</span><span class="p">());</span><span class="w"></span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">StreamWriter</span><span class="w"> </span><span class="nf">writeSCU</span><span class="p">(</span><span class="n">tcpStream</span><span class="p">.</span><span class="n">getOutputStream</span><span class="p">());</span><span class="w"></span>
+
+<span class="c1">// Specify which presentation contexts we accept</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">PresentationContext</span><span class="w"> </span><span class="nf">context</span><span class="p">(</span><span class="n">sopClassUid</span><span class="p">);</span><span class="w"></span>
+<span class="n">context</span><span class="p">.</span><span class="n">addTransferSyntax</span><span class="p">(</span><span class="n">transferSyntax</span><span class="p">);</span><span class="w"></span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">PresentationContexts</span><span class="w"> </span><span class="n">presentationContexts</span><span class="p">;</span><span class="w"></span>
+<span class="n">presentationContexts</span><span class="p">.</span><span class="n">addPresentationContext</span><span class="p">(</span><span class="n">context</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// The AssociationSCP constructor will negotiate the assocation</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">AssociationSCP</span><span class="w"> </span><span class="nf">scp</span><span class="p">(</span><span class="s">&quot;SCP&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">presentationContexts</span><span class="p">,</span><span class="w"> </span><span class="n">readSCU</span><span class="p">,</span><span class="w"> </span><span class="n">writeSCU</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Receive commands via the dimse service</span>
+<span class="n">imebra</span><span class="o">::</span><span class="n">DimseService</span><span class="w"> </span><span class="nf">dimse</span><span class="p">(</span><span class="n">scp</span><span class="p">);</span><span class="w"></span>
+
+<span class="k">try</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Receive commands until the association is closed</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(;;)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// We assume we are going to receive a C-Store. Normally you should check the command type</span>
+<span class="w">        </span><span class="c1">// (using DimseCommand::getCommandType()) and then cast to the proper class.</span>
+<span class="w">        </span><span class="n">imebra</span><span class="o">::</span><span class="n">CStoreCommand</span><span class="w"> </span><span class="nf">command</span><span class="p">(</span><span class="n">dimse</span><span class="p">.</span><span class="n">getCommand</span><span class="p">().</span><span class="n">getAsCStoreCommand</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// The store command has a payload. We can do something with it, or we can</span>
+<span class="w">        </span><span class="c1">// use the methods in CStoreCommand to get other data sent by the peer</span>
+<span class="w">        </span><span class="n">imebra</span><span class="o">::</span><span class="n">DataSet</span><span class="w"> </span><span class="n">payload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">getPayloadDataSet</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Do something with the payload</span>
+
+<span class="w">        </span><span class="c1">// Send a response</span>
+<span class="w">        </span><span class="n">dimse</span><span class="p">.</span><span class="n">sendCommandOrResponse</span><span class="p">(</span><span class="n">CStoreResponse</span><span class="p">(</span><span class="n">command</span><span class="p">,</span><span class="w"> </span><span class="n">dimseStatusCode_t</span><span class="o">::</span><span class="n">success</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">catch</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">StreamEOFError</span><span class="o">&amp;</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// The association has been closed</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="add_to_project.html" class="btn btn-neutral float-left" title="Adding Imebra to your project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="objects_lifecycle.html" class="btn btn-neutral float-right" title="Objects lifecycle and Object ownership" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="copyright.html">Copyright</a> 2019, Paolo Brandoli.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

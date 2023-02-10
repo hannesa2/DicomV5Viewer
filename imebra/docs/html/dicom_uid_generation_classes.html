@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UID generation classes &mdash; Imebra 5.3.3.0 changeset 2c706290 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="next" title="Stream classes" href="stream_classes.html" />
+    <link rel="prev" title="DICOM dataSet &amp; tags classes" href="dicom_data_classes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Imebra
+          </a>
+              <div class="version">
+                5.3.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p><span class="caption-text">Download Imebra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Downloading Imebra</a></li>
+</ul>
+<p><span class="caption-text">Legal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gplv2.html">GNU General Public License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Commercial license</a></li>
+</ul>
+<p><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes_log.html">Changes log</a></li>
+</ul>
+<p><span class="caption-text">User documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="compiling_imebra.html">Compiling Imebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add_to_project.html">Adding Imebra to your project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_tour.html">Tutorial</a></li>
+</ul>
+<p><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="objects_lifecycle.html">Objects lifecycle and Object ownership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_data_classes.html">DICOM dataSet &amp; tags classes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">UID generation classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#factory">Factory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#uidgeneratorfactory">UIDGeneratorFactory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#generators">Generators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#baseuidgenerator">BaseUIDGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#serialnumberuidgenerator">SerialNumberUIDGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#randomuidgenerator">RandomUIDGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id9">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="stream_classes.html">Stream classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imaging_classes.html">Imaging classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transforms_classes.html">Transforms classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="memory_management_classes.html">Memory management classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acse_classes.html">ACSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dimse_classes.html">DIMSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicomdir_classes.html">DICOMDIR classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_dictionary_classes.html">DICOM dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definition_classes.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exception_classes.html">Exceptions</a></li>
+</ul>
+<p><span class="caption-text">Build distributions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html">Creating the source distribution from the code in the VCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html#versioning">Versioning</a></li>
+</ul>
+<p><span class="caption-text">Requirements &amp; Risks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html#risks">Risks</a></li>
+</ul>
+<p><span class="caption-text">Standard operating procedures</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sop.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sop.html#sops">SOPs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>UID generation classes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/dicom_uid_generation_classes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="uid-generation-classes">
+<h1>UID generation classes<a class="headerlink" href="#uid-generation-classes" title="Permalink to this headline">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This section describes the classes and methods used to generate new UID (unique identifiers) to be used as instance UIDs.</p>
+<p>The following classes are described in this chapter:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 37%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>C++ class</p></th>
+<th class="head"><p>Objective-C/Swift class</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra19UIDGeneratorFactoryE" title="imebra::UIDGeneratorFactory"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::UIDGeneratorFactory</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv425ImebraUIDGeneratorFactory" title="ImebraUIDGeneratorFactory"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraUIDGeneratorFactory</span></code></a></p></td>
+<td><p>Stored a complete DICOM
+structure</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#_CPPv4N6imebra16BaseUIDGeneratorE" title="imebra::BaseUIDGenerator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::BaseUIDGenerator</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv422ImebraBaseUIDGenerator" title="ImebraBaseUIDGenerator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraBaseUIDGenerator</span></code></a></p></td>
+<td><p>Stores a single DICOM tag</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#_CPPv4N6imebra24SerialNumberUIDGeneratorE" title="imebra::SerialNumberUIDGenerator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::SerialNumberUIDGenerator</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv430ImebraSerialNumberUIDGenerator" title="ImebraSerialNumberUIDGenerator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraSerialNumberUIDGenerator</span></code></a></p></td>
+<td><p>Identifies a tag</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#_CPPv4N6imebra18RandomUIDGeneratorE" title="imebra::RandomUIDGenerator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">imebra::RandomUIDGenerator</span></code></a></p></td>
+<td><p><a class="reference internal" href="#_CPPv424ImebraRandomUIDGenerator" title="ImebraRandomUIDGenerator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ImebraRandomUIDGenerator</span></code></a></p></td>
+<td><p>Read data from a tag</p></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-default" id="id11" style="width: 100%">
+<a class="reference external image-reference" href="_images/uidgenerators.jpg"><img alt="UID generators related classes" src="_images/uidgenerators.jpg" /></a>
+<figcaption>
+<p><span class="caption-text">Class diagram of the UID generators related classes</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Imebra supplies two generators that are able to produce UIDs that can be used as SOP instances UID:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#serialnumberuidgenerator"><span class="std std-ref">SerialNumberUIDGenerator</span></a>, to be used when the software has a mean to know its own serial number</p></li>
+<li><p><a class="reference internal" href="#randomuidgenerator"><span class="std std-ref">RandomUIDGenerator</span></a>, to be used when the software is not able to retrieve its own serial number</p></li>
+</ul>
+<p>In any case, the developer must acquire a root UID from the ISO authority.</p>
+<p>Because the UID generators maintain an internal state which is necessary to generate unique IDs, the generators should
+be allocated once when the program starts and then reused for the generation of every new UID.
+<a class="reference internal" href="#uidgeneratorfactory"><span class="std std-ref">UIDGeneratorFactory</span></a> helps retrieving the generators allocated when the software started: register the allocated
+generators in the <a class="reference internal" href="#uidgeneratorfactory"><span class="std std-ref">UIDGeneratorFactory</span></a> when the software starts and then get them from the factory when a new
+UID is needed.</p>
+</section>
+<section id="factory">
+<h2>Factory<a class="headerlink" href="#factory" title="Permalink to this headline">¶</a></h2>
+<section id="uidgeneratorfactory">
+<span id="id1"></span><h3>UIDGeneratorFactory<a class="headerlink" href="#uidgeneratorfactory" title="Permalink to this headline">¶</a></h3>
+<section id="c">
+<h4>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra19UIDGeneratorFactoryE">
+<span id="_CPPv3N6imebra19UIDGeneratorFactoryE"></span><span id="_CPPv2N6imebra19UIDGeneratorFactoryE"></span><span id="imebra::UIDGeneratorFactory"></span><span class="target" id="classimebra_1_1_u_i_d_generator_factory"></span><em class="property">class </em><code class="sig-name descname">UIDGeneratorFactory</code><a class="headerlink" href="#_CPPv4N6imebra19UIDGeneratorFactoryE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The <a class="reference internal" href="#classimebra_1_1_u_i_d_generator_factory"><span class="std std-ref">UIDGeneratorFactory</span></a> class manages a global collection of DICOM UID generators. </p>
+<p>In order to generate different UIDs, the UID generators maintain an internal state that must be preserved between UID generations. Ideally, UID generators should be allocated when the application starts and should be reused every time a new UID is needed.</p>
+<p>The <a class="reference internal" href="#classimebra_1_1_u_i_d_generator_factory"><span class="std std-ref">UIDGeneratorFactory</span></a> class helps with the reuse of the allocated generators. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra19UIDGeneratorFactory20registerUIDGeneratorERKNSt6stringERK16BaseUIDGenerator">
+<span id="_CPPv3N6imebra19UIDGeneratorFactory20registerUIDGeneratorERKNSt6stringERK16BaseUIDGenerator"></span><span id="_CPPv2N6imebra19UIDGeneratorFactory20registerUIDGeneratorERKNSt6stringERK16BaseUIDGenerator"></span><span id="imebra::UIDGeneratorFactory::registerUIDGenerator__ssCR.BaseUIDGeneratorCR"></span><span class="target" id="classimebra_1_1_u_i_d_generator_factory_1a8a2e64d191c6e5ac5f4033f57f373930"></span><em class="property">static</em> void <code class="sig-name descname">registerUIDGenerator</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>name</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra16BaseUIDGeneratorE" title="imebra::BaseUIDGenerator">BaseUIDGenerator</a> &amp;<em>uidGenerator</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra19UIDGeneratorFactory20registerUIDGeneratorERKNSt6stringERK16BaseUIDGenerator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Register an UID generator. </p>
+<p>UID generators should be registered when the application starts.</p>
+<p>Registered UID generators can be retrieved using <a class="reference internal" href="#classimebra_1_1_u_i_d_generator_factory_1a22d6868f024294adbf4d1cfbe8094222"><span class="std std-ref">getUIDGenerator()</span></a> or <a class="reference internal" href="#classimebra_1_1_u_i_d_generator_factory_1a6e51550df52cec590032aaa7f39824f8"><span class="std std-ref">getDefaultUIDGenerator()</span></a>.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: the name under which the UID generator is registered </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uidGenerator</span></code>: the UID generator to register </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra19UIDGeneratorFactory15getUIDGeneratorERKNSt6stringE">
+<span id="_CPPv3N6imebra19UIDGeneratorFactory15getUIDGeneratorERKNSt6stringE"></span><span id="_CPPv2N6imebra19UIDGeneratorFactory15getUIDGeneratorERKNSt6stringE"></span><span id="imebra::UIDGeneratorFactory::getUIDGenerator__ssCR"></span><span class="target" id="classimebra_1_1_u_i_d_generator_factory_1a22d6868f024294adbf4d1cfbe8094222"></span><em class="property">static</em> <a class="reference internal" href="#_CPPv4N6imebra16BaseUIDGeneratorE" title="imebra::BaseUIDGenerator">BaseUIDGenerator</a> <code class="sig-name descname">getUIDGenerator</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra19UIDGeneratorFactory15getUIDGeneratorERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieved a registered UID generator. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the requested UID generator </p>
+</dd>
+<dt><strong>Exceptions</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">NonRegisteredUIDGenerator</span></code>: if the requested UID generator was not register via <a class="reference internal" href="#classimebra_1_1_u_i_d_generator_factory_1a8a2e64d191c6e5ac5f4033f57f373930"><span class="std std-ref">registerUIDGenerator()</span></a>.</p></li>
+</ul>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: the name of the generator to retrieve </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra19UIDGeneratorFactory22getDefaultUIDGeneratorEv">
+<span id="_CPPv3N6imebra19UIDGeneratorFactory22getDefaultUIDGeneratorEv"></span><span id="_CPPv2N6imebra19UIDGeneratorFactory22getDefaultUIDGeneratorEv"></span><span id="imebra::UIDGeneratorFactory::getDefaultUIDGenerator"></span><span class="target" id="classimebra_1_1_u_i_d_generator_factory_1a6e51550df52cec590032aaa7f39824f8"></span><em class="property">static</em> <a class="reference internal" href="#_CPPv4N6imebra16BaseUIDGeneratorE" title="imebra::BaseUIDGenerator">BaseUIDGenerator</a> <code class="sig-name descname">getDefaultUIDGenerator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra19UIDGeneratorFactory22getDefaultUIDGeneratorEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieve the first UID generator registered in the factory. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the first registered UID generator </p>
+</dd>
+<dt><strong>Exceptions</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">NonRegisteredUIDGenerator</span></code>: if no UID generator was not register via <a class="reference internal" href="#classimebra_1_1_u_i_d_generator_factory_1a8a2e64d191c6e5ac5f4033f57f373930"><span class="std std-ref">registerUIDGenerator()</span></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="objective-c-swift">
+<h4>Objective-C/Swift<a class="headerlink" href="#objective-c-swift" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv425ImebraUIDGeneratorFactory">
+<span id="_CPPv325ImebraUIDGeneratorFactory"></span><span id="_CPPv225ImebraUIDGeneratorFactory"></span><span id="ImebraUIDGeneratorFactory"></span><span class="target" id="interface_imebra_u_i_d_generator_factory"></span><em class="property">class </em><code class="sig-name descname">ImebraUIDGeneratorFactory</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv425ImebraUIDGeneratorFactory" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#interface_imebra_u_i_d_generator_factory"><span class="std std-ref">ImebraUIDGeneratorFactory</span></a> manages a global collection of DICOM UID generators. </p>
+<p>In order to generate different UIDs, the UID generators maintain an internal state that must be preserved between UID generations. Ideally, UID generators should be allocated when the application starts and should be reused every time a new UID is needed.</p>
+<p><a class="reference internal" href="#interface_imebra_u_i_d_generator_factory"><span class="std std-ref">ImebraUIDGeneratorFactory</span></a> helps with the reuse of the allocated generators. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_u_i_d_generator_factory_1a6573af87da8b50e13956e881f3735fd2"></span><code class="sig-name descname">void ImebraUIDGeneratorFactory::registerUIDGenerator:generator:error:(NSString * name, ImebraBaseUIDGenerator  * pGenerator, NSError ** pError)</code></dt>
+<dd><p>Register an UID generator. </p>
+<p>UID generators should be registered when the application starts.</p>
+<p>Registered UID generators can be retrieved using getUIDGenerator() or getDefaultUIDGenerator().</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: the name under which the UID generator is registered </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pGGenerator</span></code>: the UID generator to register </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_u_i_d_generator_factory_1ace62b6f61bb2b4b7b103ca2e21d5b7eb"></span><code class="sig-name descname">ImebraBaseUIDGenerator* ImebraUIDGeneratorFactory::getUIDGenerator:error:(NSString * name, NSError ** pError)</code></dt>
+<dd><p>Retrieved a registered UID generator. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the requested UID generator </p>
+</dd>
+<dt><strong>Exceptions</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ImebraNonRegisteredUIDGenerator</span></code>: if the requested UID generator was not register via registerUIDGenerator().</p></li>
+</ul>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: the name of the generator to retrieve </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_u_i_d_generator_factory_1aafc88a31ea883d67a5eef6eb0c68816c"></span><code class="sig-name descname">ImebraBaseUIDGenerator* ImebraUIDGeneratorFactory::getDefaultUIDGenerator:(NSError ** pError)</code></dt>
+<dd><p>Retrieve the first UID generator registered in the factory. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the first registered UID generator </p>
+</dd>
+<dt><strong>Exceptions</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ImebraNonRegisteredUIDGenerator</span></code>: if no UID generator was not register via registerUIDGenerator().</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+</section>
+<section id="generators">
+<h2>Generators<a class="headerlink" href="#generators" title="Permalink to this headline">¶</a></h2>
+<section id="baseuidgenerator">
+<span id="id2"></span><h3>BaseUIDGenerator<a class="headerlink" href="#baseuidgenerator" title="Permalink to this headline">¶</a></h3>
+<section id="id3">
+<h4>C++<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra16BaseUIDGeneratorE">
+<span id="_CPPv3N6imebra16BaseUIDGeneratorE"></span><span id="_CPPv2N6imebra16BaseUIDGeneratorE"></span><span id="imebra::BaseUIDGenerator"></span><span class="target" id="classimebra_1_1_base_u_i_d_generator"></span><em class="property">class </em><code class="sig-name descname">BaseUIDGenerator</code><a class="headerlink" href="#_CPPv4N6imebra16BaseUIDGeneratorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Base class for the DICOM UID generators. </p>
+<p>Subclassed by <a class="reference internal" href="#classimebra_1_1_random_u_i_d_generator"><span class="std std-ref">imebra::RandomUIDGenerator</span></a>, <a class="reference internal" href="#classimebra_1_1_serial_number_u_i_d_generator"><span class="std std-ref">imebra::SerialNumberUIDGenerator</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra16BaseUIDGenerator16BaseUIDGeneratorERK16BaseUIDGenerator">
+<span id="_CPPv3N6imebra16BaseUIDGenerator16BaseUIDGeneratorERK16BaseUIDGenerator"></span><span id="_CPPv2N6imebra16BaseUIDGenerator16BaseUIDGeneratorERK16BaseUIDGenerator"></span><span id="imebra::BaseUIDGenerator::BaseUIDGenerator__BaseUIDGeneratorCR"></span><span class="target" id="classimebra_1_1_base_u_i_d_generator_1a7f4e5a09e651e37c58b15f35c43c31ad"></span><code class="sig-name descname">BaseUIDGenerator</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra16BaseUIDGenerator16BaseUIDGeneratorERK16BaseUIDGenerator" title="imebra::BaseUIDGenerator::BaseUIDGenerator">BaseUIDGenerator</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra16BaseUIDGenerator16BaseUIDGeneratorERK16BaseUIDGenerator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source UID generator </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra16BaseUIDGenerator6getUIDEv">
+<span id="_CPPv3N6imebra16BaseUIDGenerator6getUIDEv"></span><span id="_CPPv2N6imebra16BaseUIDGenerator6getUIDEv"></span><span id="imebra::BaseUIDGenerator::getUID"></span><span class="target" id="classimebra_1_1_base_u_i_d_generator_1acc87dbb06acb7be3f2cc9b93a00e53a6"></span>std::string <code class="sig-name descname">getUID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra16BaseUIDGenerator6getUIDEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Generates a new UID. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a new UID. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id4">
+<h4>Objective-C/Swift<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv422ImebraBaseUIDGenerator">
+<span id="_CPPv322ImebraBaseUIDGenerator"></span><span id="_CPPv222ImebraBaseUIDGenerator"></span><span id="ImebraBaseUIDGenerator"></span><span class="target" id="interface_imebra_base_u_i_d_generator"></span><em class="property">class </em><code class="sig-name descname">ImebraBaseUIDGenerator</code> : <em class="property">public</em> NSObject<a class="headerlink" href="#_CPPv422ImebraBaseUIDGenerator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Base class for the DICOM UID generators. </p>
+<p>Subclassed by <a class="reference internal" href="#interface_imebra_random_u_i_d_generator"><span class="std std-ref">ImebraRandomUIDGenerator</span></a>, <a class="reference internal" href="#interface_imebra_serial_number_u_i_d_generator"><span class="std std-ref">ImebraSerialNumberUIDGenerator</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N22ImebraBaseUIDGenerator6getUIDEv">
+<span id="_CPPv3N22ImebraBaseUIDGenerator6getUIDEv"></span><span id="_CPPv2N22ImebraBaseUIDGenerator6getUIDEv"></span><span id="ImebraBaseUIDGenerator::getUID"></span><span class="target" id="interface_imebra_base_u_i_d_generator_1adb7125bd404e08c4c0c55d3d723ef1cb"></span>NSString *<code class="sig-name descname">getUID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N22ImebraBaseUIDGenerator6getUIDEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Generates a new UID. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a new UID. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="serialnumberuidgenerator">
+<span id="id5"></span><h3>SerialNumberUIDGenerator<a class="headerlink" href="#serialnumberuidgenerator" title="Permalink to this headline">¶</a></h3>
+<section id="id6">
+<h4>C++<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra24SerialNumberUIDGeneratorE">
+<span id="_CPPv3N6imebra24SerialNumberUIDGeneratorE"></span><span id="_CPPv2N6imebra24SerialNumberUIDGeneratorE"></span><span id="imebra::SerialNumberUIDGenerator"></span><span class="target" id="classimebra_1_1_serial_number_u_i_d_generator"></span><em class="property">class </em><code class="sig-name descname">SerialNumberUIDGenerator</code> : <em class="property">public</em> imebra::<a class="reference internal" href="#_CPPv4N6imebra16BaseUIDGeneratorE" title="imebra::BaseUIDGenerator">BaseUIDGenerator</a><a class="headerlink" href="#_CPPv4N6imebra24SerialNumberUIDGeneratorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An UID generator that uses the model serial number to create unique UIDs. </p>
+<p>The uniqueness of the generated UIDs is guaranteed by the fact that the machine serial number is correctly set. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra24SerialNumberUIDGenerator24SerialNumberUIDGeneratorERKNSt6stringENSt8uint32_tENSt8uint32_tENSt8uint32_tE">
+<span id="_CPPv3N6imebra24SerialNumberUIDGenerator24SerialNumberUIDGeneratorERKNSt6stringENSt8uint32_tENSt8uint32_tENSt8uint32_tE"></span><span id="_CPPv2N6imebra24SerialNumberUIDGenerator24SerialNumberUIDGeneratorERKNSt6stringENSt8uint32_tENSt8uint32_tENSt8uint32_tE"></span><span id="imebra::SerialNumberUIDGenerator::SerialNumberUIDGenerator__ssCR.std::uint32_t.std::uint32_t.std::uint32_t"></span><span class="target" id="classimebra_1_1_serial_number_u_i_d_generator_1a1bffab445bf4328c3aec3dd5e972a7f3"></span><code class="sig-name descname">SerialNumberUIDGenerator</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>root</em>, std::uint32_t <em>departmentId</em>, std::uint32_t <em>modelId</em>, std::uint32_t <em>serialNumber</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra24SerialNumberUIDGenerator24SerialNumberUIDGeneratorERKNSt6stringENSt8uint32_tENSt8uint32_tENSt8uint32_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">root</span></code>: the root UID assigned to the company </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">departmentId</span></code>: department ID (assigned by the company) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modelId</span></code>: model ID (assigned by the department) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serialNumber</span></code>: the model serial number (assigned by the department) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra24SerialNumberUIDGenerator24SerialNumberUIDGeneratorERK24SerialNumberUIDGenerator">
+<span id="_CPPv3N6imebra24SerialNumberUIDGenerator24SerialNumberUIDGeneratorERK24SerialNumberUIDGenerator"></span><span id="_CPPv2N6imebra24SerialNumberUIDGenerator24SerialNumberUIDGeneratorERK24SerialNumberUIDGenerator"></span><span id="imebra::SerialNumberUIDGenerator::SerialNumberUIDGenerator__SerialNumberUIDGeneratorCR"></span><span class="target" id="classimebra_1_1_serial_number_u_i_d_generator_1aaf48e9cf150e885f037a7f15ec9e187b"></span><code class="sig-name descname">SerialNumberUIDGenerator</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra24SerialNumberUIDGenerator24SerialNumberUIDGeneratorERKNSt6stringENSt8uint32_tENSt8uint32_tENSt8uint32_tE" title="imebra::SerialNumberUIDGenerator::SerialNumberUIDGenerator">SerialNumberUIDGenerator</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra24SerialNumberUIDGenerator24SerialNumberUIDGeneratorERK24SerialNumberUIDGenerator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source <a class="reference internal" href="#classimebra_1_1_serial_number_u_i_d_generator"><span class="std std-ref">SerialNumberUIDGenerator</span></a> object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id7">
+<h4>Objective-C/Swift<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv430ImebraSerialNumberUIDGenerator">
+<span id="_CPPv330ImebraSerialNumberUIDGenerator"></span><span id="_CPPv230ImebraSerialNumberUIDGenerator"></span><span id="ImebraSerialNumberUIDGenerator"></span><span class="target" id="interface_imebra_serial_number_u_i_d_generator"></span><em class="property">class </em><code class="sig-name descname">ImebraSerialNumberUIDGenerator</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv422ImebraBaseUIDGenerator" title="ImebraBaseUIDGenerator">ImebraBaseUIDGenerator</a><a class="headerlink" href="#_CPPv430ImebraSerialNumberUIDGenerator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An UID generator that uses the model serial number to create unique UIDs. </p>
+<p>The uniqueness of the generated UIDs is guaranteed by the fact that the machine serial number is correctly set. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_serial_number_u_i_d_generator_1a3d928ba3d0606f0cbf2b8937f6f24d3d"></span><code class="sig-name descname">id ImebraSerialNumberUIDGenerator::initWithRoot:departmentId:modelId:serialNumber:(NSString * root, unsigned int departmentId, unsigned int modelId, unsigned int serialNumber)</code></dt>
+<dd><p>Constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">root</span></code>: the root UID assigned to the company </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">departmentId</span></code>: department ID (assigned by the company) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modelId</span></code>: model ID (assigned by the department) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serialNumber</span></code>: the model serial number (assigned by the department) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="randomuidgenerator">
+<span id="id8"></span><h3>RandomUIDGenerator<a class="headerlink" href="#randomuidgenerator" title="Permalink to this headline">¶</a></h3>
+<section id="id9">
+<h4>C++<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv4N6imebra18RandomUIDGeneratorE">
+<span id="_CPPv3N6imebra18RandomUIDGeneratorE"></span><span id="_CPPv2N6imebra18RandomUIDGeneratorE"></span><span id="imebra::RandomUIDGenerator"></span><span class="target" id="classimebra_1_1_random_u_i_d_generator"></span><em class="property">class </em><code class="sig-name descname">RandomUIDGenerator</code> : <em class="property">public</em> imebra::<a class="reference internal" href="#_CPPv4N6imebra16BaseUIDGeneratorE" title="imebra::BaseUIDGenerator">BaseUIDGenerator</a><a class="headerlink" href="#_CPPv4N6imebra18RandomUIDGeneratorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An UID generator that uses a random number to generate unique UIDs. </p>
+<p>The uniqueness of the generated UIDs is guaranteed by the fact that the machine generates a long random number during the UID generator initialization. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6imebra18RandomUIDGenerator18RandomUIDGeneratorERKNSt6stringENSt8uint32_tENSt8uint32_tE">
+<span id="_CPPv3N6imebra18RandomUIDGenerator18RandomUIDGeneratorERKNSt6stringENSt8uint32_tENSt8uint32_tE"></span><span id="_CPPv2N6imebra18RandomUIDGenerator18RandomUIDGeneratorERKNSt6stringENSt8uint32_tENSt8uint32_tE"></span><span id="imebra::RandomUIDGenerator::RandomUIDGenerator__ssCR.std::uint32_t.std::uint32_t"></span><span class="target" id="classimebra_1_1_random_u_i_d_generator_1a7af91e0a383719541ecf7823f16a6958"></span><code class="sig-name descname">RandomUIDGenerator</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>root</em>, std::uint32_t <em>departmentId</em>, std::uint32_t <em>modelId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra18RandomUIDGenerator18RandomUIDGeneratorERKNSt6stringENSt8uint32_tENSt8uint32_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">root</span></code>: the root UID assigned to the company </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">departmentId</span></code>: department ID (assigned by the company) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modelId</span></code>: model ID (assigned by the department) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6imebra18RandomUIDGenerator18RandomUIDGeneratorERK18RandomUIDGenerator">
+<span id="_CPPv3N6imebra18RandomUIDGenerator18RandomUIDGeneratorERK18RandomUIDGenerator"></span><span id="_CPPv2N6imebra18RandomUIDGenerator18RandomUIDGeneratorERK18RandomUIDGenerator"></span><span id="imebra::RandomUIDGenerator::RandomUIDGenerator__RandomUIDGeneratorCR"></span><span class="target" id="classimebra_1_1_random_u_i_d_generator_1af62a231b4a1b5e0db7c61ea2264ef8dc"></span><code class="sig-name descname">RandomUIDGenerator</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6imebra18RandomUIDGenerator18RandomUIDGeneratorERKNSt6stringENSt8uint32_tENSt8uint32_tE" title="imebra::RandomUIDGenerator::RandomUIDGenerator">RandomUIDGenerator</a> &amp;<em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6imebra18RandomUIDGenerator18RandomUIDGeneratorERK18RandomUIDGenerator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: source <a class="reference internal" href="#classimebra_1_1_random_u_i_d_generator"><span class="std std-ref">RandomUIDGenerator</span></a> object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="id10">
+<h4>Objective-C/Swift<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<dl class="class">
+<dt id="_CPPv424ImebraRandomUIDGenerator">
+<span id="_CPPv324ImebraRandomUIDGenerator"></span><span id="_CPPv224ImebraRandomUIDGenerator"></span><span id="ImebraRandomUIDGenerator"></span><span class="target" id="interface_imebra_random_u_i_d_generator"></span><em class="property">class </em><code class="sig-name descname">ImebraRandomUIDGenerator</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv422ImebraBaseUIDGenerator" title="ImebraBaseUIDGenerator">ImebraBaseUIDGenerator</a><a class="headerlink" href="#_CPPv424ImebraRandomUIDGenerator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An UID generator that uses a random number to generate unique UIDs. </p>
+<p>The uniqueness of the generated UIDs is guaranteed by the fact that the machine generates a long random number during the UID generator initialization. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="interface_imebra_random_u_i_d_generator_1a0b57395652b468290f15c91f6b9be7b1"></span><code class="sig-name descname">id ImebraRandomUIDGenerator::initWithRoot:departmentId:modelId:(NSString * root, unsigned int departmentId, unsigned int modelId)</code></dt>
+<dd><p>Constructor. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">root</span></code>: the root UID assigned to the company </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">departmentId</span></code>: department ID (assigned by the company) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modelId</span></code>: model ID (assigned by the department) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dicom_data_classes.html" class="btn btn-neutral float-left" title="DICOM dataSet &amp; tags classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="stream_classes.html" class="btn btn-neutral float-right" title="Stream classes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="copyright.html">Copyright</a> 2019, Paolo Brandoli.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

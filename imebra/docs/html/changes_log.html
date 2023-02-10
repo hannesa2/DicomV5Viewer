@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changes log &mdash; Imebra 5.3.3.0 changeset 2c706290 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="next" title="Compiling Imebra" href="compiling_imebra.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Imebra
+          </a>
+              <div class="version">
+                5.3.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p><span class="caption-text">Download Imebra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Downloading Imebra</a></li>
+</ul>
+<p><span class="caption-text">Legal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gplv2.html">GNU General Public License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Commercial license</a></li>
+</ul>
+<p><span class="caption-text">Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changes log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#version-release-this-version">Version 5.3.3.0 changeset 2c706290 (this version)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-5-3-2-0">Version 5.3.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-5-3-1-0">Version 5.3.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-5-3-0-0">Version 5.3.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-5-2-1-2">Version 5.2.1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-5-2-1-1">Version 5.2.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-5-2-1-0">Version 5.2.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-5-2-0-0">Version 5.2.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-5-1-0-0">Version 5.1.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-5-0-1-1">Version 5.0.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-5-0-1-0">Version 5.0.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-5-0-0-0">Version 5.0.0.0</a></li>
+</ul>
+</li>
+</ul>
+<p><span class="caption-text">User documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="compiling_imebra.html">Compiling Imebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add_to_project.html">Adding Imebra to your project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_tour.html">Tutorial</a></li>
+</ul>
+<p><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="objects_lifecycle.html">Objects lifecycle and Object ownership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_data_classes.html">DICOM dataSet &amp; tags classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_uid_generation_classes.html">UID generation classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stream_classes.html">Stream classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imaging_classes.html">Imaging classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transforms_classes.html">Transforms classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="memory_management_classes.html">Memory management classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acse_classes.html">ACSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dimse_classes.html">DIMSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicomdir_classes.html">DICOMDIR classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_dictionary_classes.html">DICOM dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definition_classes.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exception_classes.html">Exceptions</a></li>
+</ul>
+<p><span class="caption-text">Build distributions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html">Creating the source distribution from the code in the VCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html#versioning">Versioning</a></li>
+</ul>
+<p><span class="caption-text">Requirements &amp; Risks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html#risks">Risks</a></li>
+</ul>
+<p><span class="caption-text">Standard operating procedures</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sop.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sop.html#sops">SOPs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Changes log</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/changes_log.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="changes-log">
+<span id="changes-log-label"></span><h1>Changes log<a class="headerlink" href="#changes-log" title="Permalink to this headline">¶</a></h1>
+<section id="version-release-this-version">
+<h2>Version 5.3.3.0 changeset 2c706290 (this version)<a class="headerlink" href="#version-release-this-version" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed bug #354 (Imebra switches transfer syntax to implicit when a tag in a sequence is not recognized) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+</ul>
+</section>
+<section id="version-5-3-2-0">
+<h2>Version 5.3.2.0<a class="headerlink" href="#version-5-3-2-0" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Implemented enhancement #351 (Compile also on macOS-bigsur and VisualStudio 2022 on Appveyor) as per SOP <a class="reference internal" href="sop.html#devenh-2"><span class="std std-ref">SOP DEVENH/2 Implementing a new enhancement</span></a></p></li>
+<li><p>Fixed bug #352 (In tcpBaseSocket::poll select (for Windows) returns 0 on time-out) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+<li><p>Implemented enhancement #353 (Imebra switches transfer syntax to implicit when a tag is not recognized) as per SOP <a class="reference internal" href="sop.html#devenh-2"><span class="std std-ref">SOP DEVENH/2 Implementing a new enhancement</span></a></p></li>
+</ul>
+</section>
+<section id="version-5-3-1-0">
+<h2>Version 5.3.1.0<a class="headerlink" href="#version-5-3-1-0" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed bug #350 (Cannot read old NEMA files) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+</ul>
+</section>
+<section id="version-5-3-0-0">
+<h2>Version 5.3.0.0<a class="headerlink" href="#version-5-3-0-0" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Implemented enhancement #315 (Add support for the VR SV, UV, OV) as per SOP <a class="reference internal" href="sop.html#devenh-2"><span class="std std-ref">SOP DEVENH/2 Implementing a new enhancement</span></a></p></li>
+<li><p>Fixed bug #341 (Some ISO 2022 conversions allow 2 escaping sequences, and some ICONV mappings are wrong) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+<li><p>Fixed bug #349 (The example “Displaying an image” in the documentation uses VOILUT in the wrong way) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+</ul>
+</section>
+<section id="version-5-2-1-2">
+<h2>Version 5.2.1.2<a class="headerlink" href="#version-5-2-1-2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed bug #337 (The IOS variable used in CMake conflicts with the same variable that CMake sets when the system is set to “iOS”) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+<li><p>Fixed bug #342 (The iosphone build on Xcode 12) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+<li><p>Implemented enhancement #344 (Run Java tests in the automatic build) as per SOP <a class="reference internal" href="sop.html#devenh-2"><span class="std std-ref">SOP DEVENH/2 Implementing a new enhancement</span></a></p></li>
+<li><p>Implemented enhancement #345 (Remove Python support) as per SOP <a class="reference internal" href="sop.html#devenh-2"><span class="std std-ref">SOP DEVENH/2 Implementing a new enhancement</span></a></p></li>
+</ul>
+</section>
+<section id="version-5-2-1-1">
+<h2>Version 5.2.1.1<a class="headerlink" href="#version-5-2-1-1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed bug #334 (The build of ImebraTests fails on some Windows machines) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+</ul>
+</section>
+<section id="version-5-2-1-0">
+<h2>Version 5.2.1.0<a class="headerlink" href="#version-5-2-1-0" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed bug #329 (Slow SCP connection when running on Windows 10) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+<li><p>Fixed bug #330 (memoryImpl.h should include &lt;string&gt;)</p></li>
+<li><p>Implemented enhancement #331 (Add example of C-FIND processing to scpexample) as per SOP <a class="reference internal" href="sop.html#devenh-2"><span class="std std-ref">SOP DEVENH/2 Implementing a new enhancement</span></a></p></li>
+</ul>
+</section>
+<section id="version-5-2-0-0">
+<h2>Version 5.2.0.0<a class="headerlink" href="#version-5-2-0-0" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed bug #323 (The PipeStream implementation throws StreamClosedError instead of returning 0 when the pipe has been closed) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+<li><p>Fixed bug #324 (The wrappers don’t have definitions for VOIDescription and VOIs) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+<li><p>Implemented enhancement #325 (Add an example that show the SCP feature) as per SOP <a class="reference internal" href="sop.html#devenh-2"><span class="std std-ref">SOP DEVENH/2 Implementing a new enhancement</span></a></p></li>
+<li><p>Fixed bug #327 (The build fails on VS2015 because two dataHandlerNumeric functions look the same to the compiler, even if they are not) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+<li><p>Implemented enhancement #328 (Move the macos build from bitrise to appveyor) as per SOP <a class="reference internal" href="sop.html#devenh-2"><span class="std std-ref">SOP DEVENH/2 Implementing a new enhancement</span></a></p></li>
+</ul>
+</section>
+<section id="version-5-1-0-0">
+<h2>Version 5.1.0.0<a class="headerlink" href="#version-5-1-0-0" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Implemented enhancement #316 (Add functions to retrieve floats, uint8, uint16, int8, int16) as per SOP <a class="reference internal" href="sop.html#devenh-2"><span class="std std-ref">SOP DEVENH/2 Implementing a new enhancement</span></a></p></li>
+<li><p>Fixed bug #317 (readingDataHandlerStringAS::getAge does not properly check for the age units) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+<li><p>Implemented enhancement #318 (The data handler for VR “AT” should provide a way to retrieve the group and the id) as per sop <a class="reference internal" href="sop.html#devenh-2"><span class="std std-ref">SOP DEVENH/2 Implementing a new enhancement</span></a></p></li>
+<li><p>Implemented enhancement #319 (Remove the compilation warnings on Windows) as per sop <a class="reference internal" href="sop.html#devenh-2"><span class="std std-ref">SOP DEVENH/2 Implementing a new enhancement</span></a></p></li>
+<li><p>Fixed bug #320 (CMake tries to build the mm implementation files also when objective-c is not available) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+<li><p>Fixed bug #321 (The test objectivec.stringToNSStringTest fails) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+</ul>
+</section>
+<section id="version-5-0-1-1">
+<h2>Version 5.0.1.1<a class="headerlink" href="#version-5-0-1-1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed bug #307 (Remove the build-tools folder from the source code) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+<li><p>Implemented enhancement #308 (Remove non necessary files imebra_android.iml and ant.properties from the javaWrapper folder) as per SOP <a class="reference internal" href="sop.html#devenh-2"><span class="std std-ref">SOP DEVENH/2 Implementing a new enhancement</span></a></p></li>
+<li><p>Implemented enhancement #309 (Add information about the commercial license in the user manual) as per SOP <a class="reference internal" href="sop.html#devenh-2"><span class="std std-ref">SOP DEVENH/2 Implementing a new enhancement</span></a></p></li>
+<li><p>Implemented enhancement #310 (Migration from Mercurial to Git: change the SOPs &amp; scripts to reflect the usage of Git instead of Mercurial) as per SOP <a class="reference internal" href="sop.html#devenh-2"><span class="std std-ref">SOP DEVENH/2 Implementing a new enhancement</span></a></p></li>
+<li><p>Implemented enhancement #311 (Use the bitbucket pipeline artifacts instead of uploading the generated file to dropbox) as per SOP <a class="reference internal" href="sop.html#devenh-2"><span class="std std-ref">SOP DEVENH/2 Implementing a new enhancement</span></a></p></li>
+<li><p>Implemented enhancement #312 (Add QtCreator .user files to gitignore) as per SOP <a class="reference internal" href="sop.html#devenh-2"><span class="std std-ref">SOP DEVENH/2 Implementing a new enhancement</span></a></p></li>
+<li><p>Fixed bug #313 (Fix the CMake install commands so the Cmake configuration is properly exported and reusable by other modules) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+<li><p>Fixed bug #314 (The identifier for the Apple compiler changed from clang to AppleClang, causing the compilation to fail) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+</ul>
+</section>
+<section id="version-5-0-1-0">
+<h2>Version 5.0.1.0<a class="headerlink" href="#version-5-0-1-0" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed bug #306 (The group length for groups 0 and 2 is mandatory) as per SOP <a class="reference internal" href="sop.html#fixbug-2"><span class="std std-ref">SOP FIXBUG/2 Fixing a bug</span></a></p></li>
+</ul>
+</section>
+<section id="version-5-0-0-0">
+<h2>Version 5.0.0.0<a class="headerlink" href="#version-5-0-0-0" title="Permalink to this headline">¶</a></h2>
+<p>First public release of Imebra V5.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="introduction.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="compiling_imebra.html" class="btn btn-neutral float-right" title="Compiling Imebra" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="copyright.html">Copyright</a> 2019, Paolo Brandoli.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
