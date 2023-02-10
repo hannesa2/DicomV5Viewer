@@ -13,13 +13,11 @@ buildscript {
 
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:3.2.1"
-
-        // Unit testing dependencies
+        classpath "com.android.tools.build:gradle:7.4.1"
     }
 }
 
@@ -42,7 +40,7 @@ dependencies {
 
 android {
     repositories {
-        maven { url 'http://repo1.maven.org/maven2' }
+        maven { url 'https://repo1.maven.org/maven2' }
     }
 
     compileSdkVersion 26
