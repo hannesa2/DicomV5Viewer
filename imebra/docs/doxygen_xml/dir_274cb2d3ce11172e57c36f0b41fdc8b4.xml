@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_274cb2d3ce11172e57c36f0b41fdc8b4" kind="dir">
+    <compoundname>scpExample</compoundname>
+    <innerfile refid="scp_example_8cpp">scpExample.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/examples/c++/scpExample/"/>
+  </compounddef>
+</doxygen>

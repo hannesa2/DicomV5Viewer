@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_acse_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::AcseError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::runtime_error</basecompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_acse_corrupted_message_error" prot="public" virt="non-virtual">dicomhero::AcseCorruptedMessageError</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_acse_no_payload_error" prot="public" virt="non-virtual">dicomhero::AcseNoPayloadError</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_acse_no_transfer_syntax_error" prot="public" virt="non-virtual">dicomhero::AcseNoTransferSyntaxError</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_acse_presentation_context_not_requested_error" prot="public" virt="non-virtual">dicomhero::AcsePresentationContextNotRequestedError</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_acse_rejected_association_error" prot="public" virt="non-virtual">dicomhero::AcseRejectedAssociationError</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_acse_too_many_operations_invoked_error" prot="public" virt="non-virtual">dicomhero::AcseTooManyOperationsInvokedError</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_acse_too_many_operations_performed_error" prot="public" virt="non-virtual">dicomhero::AcseTooManyOperationsPerformedError</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_acse_wrong_id_error" prot="public" virt="non-virtual">dicomhero::AcseWrongIdError</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_acse_wrong_role_error" prot="public" virt="non-virtual">dicomhero::AcseWrongRoleError</derivedcompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_acse_error_1adbb42aa40c7a143809c083a281f49e7d" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AcseError::AcseError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>AcseError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1496" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_error_1a6becca8ff22e9b1719d2856af94a8417" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AcseError::AcseError</definition>
+        <argsstring>(const AcseError &amp;source)</argsstring>
+        <name>AcseError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_acse_error" kindref="compound">AcseError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1498" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_error_1a4f961f17b47823241f64229459c21c50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_acse_error" kindref="compound">AcseError</ref> &amp;</type>
+        <definition>AcseError&amp; dicomhero::AcseError::operator=</definition>
+        <argsstring>(const AcseError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_acse_error" kindref="compound">AcseError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1500" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_error_1ab574eff3cad5081bbae7325330357201" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::AcseError::~AcseError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~AcseError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1502" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Exception thrown by the ACSE services (negotiation). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="17">
+        <label>dicomhero::AcseTooManyOperationsPerformedError</label>
+        <link refid="classdicomhero_1_1_acse_too_many_operations_performed_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>dicomhero::AcseWrongResponseIdError</label>
+        <link refid="classdicomhero_1_1_acse_wrong_response_id_error"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>dicomhero::AcseWrongCommandIdError</label>
+        <link refid="classdicomhero_1_1_acse_wrong_command_id_error"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>dicomhero::AcseTooManyOperationsInvokedError</label>
+        <link refid="classdicomhero_1_1_acse_too_many_operations_invoked_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dicomhero::AcsePresentationContextNotRequestedError</label>
+        <link refid="classdicomhero_1_1_acse_presentation_context_not_requested_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>dicomhero::AcseWrongIdError</label>
+        <link refid="classdicomhero_1_1_acse_wrong_id_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dicomhero::AcseSCPAcseProtocolVersionNotSupportedError</label>
+        <link refid="classdicomhero_1_1_acse_s_c_p_acse_protocol_version_not_supported_error"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dicomhero::AcseSCUApplicationContextNameNotSupportedError</label>
+        <link refid="classdicomhero_1_1_acse_s_c_u_application_context_name_not_supported_error"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::AcseCorruptedMessageError</label>
+        <link refid="classdicomhero_1_1_acse_corrupted_message_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>dicomhero::AcseSCUCallingAETNotRecognizedError</label>
+        <link refid="classdicomhero_1_1_acse_s_c_u_calling_a_e_t_not_recognized_error"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dicomhero::AcseSCPPresentationTemporaryCongestionError</label>
+        <link refid="classdicomhero_1_1_acse_s_c_p_presentation_temporary_congestion_error"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dicomhero::AcseSCUCalledAETNotRecognizedError</label>
+        <link refid="classdicomhero_1_1_acse_s_c_u_called_a_e_t_not_recognized_error"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dicomhero::AcseRejectedAssociationError</label>
+        <link refid="classdicomhero_1_1_acse_rejected_association_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dicomhero::AcseSCPPresentationLocalLimitExcededError</label>
+        <link refid="classdicomhero_1_1_acse_s_c_p_presentation_local_limit_exceded_error"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dicomhero::AcseError</label>
+        <link refid="classdicomhero_1_1_acse_error"/>
+      </node>
+      <node id="15">
+        <label>dicomhero::AcseSCUNoReasonGivenError</label>
+        <link refid="classdicomhero_1_1_acse_s_c_u_no_reason_given_error"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dicomhero::AcseNoTransferSyntaxError</label>
+        <link refid="classdicomhero_1_1_acse_no_transfer_syntax_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>dicomhero::AcseWrongRoleError</label>
+        <link refid="classdicomhero_1_1_acse_wrong_role_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dicomhero::AcseSCPPresentationReservedError</label>
+        <link refid="classdicomhero_1_1_acse_s_c_p_presentation_reserved_error"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dicomhero::AcseNoPayloadError</label>
+        <link refid="classdicomhero_1_1_acse_no_payload_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dicomhero::AcseSCPNoReasonGivenError</label>
+        <link refid="classdicomhero_1_1_acse_s_c_p_no_reason_given_error"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1488" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="1489" bodyend="1503"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_acse_error_1adbb42aa40c7a143809c083a281f49e7d" prot="public" virt="non-virtual"><scope>dicomhero::AcseError</scope><name>AcseError</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1a6becca8ff22e9b1719d2856af94a8417" prot="public" virt="non-virtual"><scope>dicomhero::AcseError</scope><name>AcseError</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1a4f961f17b47823241f64229459c21c50" prot="public" virt="non-virtual"><scope>dicomhero::AcseError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1ab574eff3cad5081bbae7325330357201" prot="public" virt="virtual"><scope>dicomhero::AcseError</scope><name>~AcseError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

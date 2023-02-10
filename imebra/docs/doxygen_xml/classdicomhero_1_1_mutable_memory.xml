@@ -1,0 +1,543 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_mutable_memory" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::MutableMemory</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_memory" prot="public" virt="non-virtual">dicomhero::Memory</basecompoundref>
+    <includes local="no">mutableMemory.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_mutable_memory_1afd056d06a47f75ed1c96a63a2f16f266" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class MemoryStreamOutput</definition>
+        <argsstring></argsstring>
+        <name>MemoryStreamOutput</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_memory_stream_output" kindref="compound">MemoryStreamOutput</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="46" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_mutable_memory_1a7ca74e22819a766e2c8903149e8e2fbe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class DrawBitmap</definition>
+        <argsstring></argsstring>
+        <name>DrawBitmap</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_draw_bitmap" kindref="compound">DrawBitmap</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="47" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_mutable_memory_1a6908ffd832093088e322471641ea59c3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class WritingDataHandlerNumeric</definition>
+        <argsstring></argsstring>
+        <name>WritingDataHandlerNumeric</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="48" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_mutable_memory_1a3f12d281d31d61677a2846db6ca2149c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::MutableMemory::MutableMemory</definition>
+        <argsstring>()</argsstring>
+        <name>MutableMemory</name>
+        <briefdescription>
+<para>Construct an empty buffer of memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The memory can be resized later with <ref refid="classdicomhero_1_1_mutable_memory_1a4814ff7cc52adf77d93b7de063526be3" kindref="member">resize()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="57" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_mutable_memory_1a2f69679bb0f3abc8febb29456346a86c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::MutableMemory::MutableMemory</definition>
+        <argsstring>(size_t initialSize)</argsstring>
+        <name>MutableMemory</name>
+        <param>
+          <type>size_t</type>
+          <declname>initialSize</declname>
+        </param>
+        <briefdescription>
+<para>Construct a buffer of memory of the specified size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The memory can be resized later with <ref refid="classdicomhero_1_1_mutable_memory_1a4814ff7cc52adf77d93b7de063526be3" kindref="member">resize()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initialSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the initial memory&apos;s size, in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="66" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_mutable_memory_1ac7395dc70032d671d4ca04555a998509" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::MutableMemory::MutableMemory</definition>
+        <argsstring>(const Memory &amp;sourceMemory)</argsstring>
+        <name>MutableMemory</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_memory" kindref="compound">Memory</ref> &amp;</type>
+          <declname>sourceMemory</declname>
+        </param>
+        <briefdescription>
+<para>Construct a buffer of memory and copy the specified content into it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sourceMemory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object containing the initial memory&apos;s content </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="73" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_mutable_memory_1aef3bd8cb4a7f3841a997e426b6bc39b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::MutableMemory::MutableMemory</definition>
+        <argsstring>(const MutableMemory &amp;source)</argsstring>
+        <name>MutableMemory</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_mutable_memory" kindref="compound">MutableMemory</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_mutable_memory" kindref="compound">MutableMemory</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="81" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_mutable_memory_1a9e47f5b92de3fb81cc7f76fc5bf2822c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_mutable_memory" kindref="compound">MutableMemory</ref> &amp;</type>
+        <definition>MutableMemory&amp; dicomhero::MutableMemory::operator=</definition>
+        <argsstring>(const MutableMemory &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_mutable_memory" kindref="compound">MutableMemory</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="83" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_mutable_memory_1af45491ed794ff79a42bbca77883684cd" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::MutableMemory::MutableMemory</definition>
+        <argsstring>(const char *source, size_t sourceSize)</argsstring>
+        <name>MutableMemory</name>
+        <param>
+          <type>const char *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sourceSize</declname>
+        </param>
+        <briefdescription>
+<para>Construct a buffer of memory and copy the specified content into it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><bold>Java</bold></para>
+<para>In Java this method accepts a single parameter (a byte array).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to the source data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sourceSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the amount of data to copy into the allocated memory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="95" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_mutable_memory_1acc8f3468bfa3f15d263a819a2cd10d85" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::MutableMemory::~MutableMemory</definition>
+        <argsstring>()</argsstring>
+        <name>~MutableMemory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="97" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_mutable_memory_1aafbbd9e442f70fdc687fa47d0f02150f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::MutableMemory::copyFrom</definition>
+        <argsstring>(const Memory &amp;sourceMemory)</argsstring>
+        <name>copyFrom</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_memory" kindref="compound">Memory</ref> &amp;</type>
+          <declname>sourceMemory</declname>
+        </param>
+        <briefdescription>
+<para>Copy the content from another memory object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sourceMemory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the source memory object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="104" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_mutable_memory_1a6716450115b4ffe870e77b799552efc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::MutableMemory::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+<para>Resize the memory to zero bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="109" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_mutable_memory_1a4814ff7cc52adf77d93b7de063526be3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::MutableMemory::resize</definition>
+        <argsstring>(size_t newSize)</argsstring>
+        <name>resize</name>
+        <param>
+          <type>size_t</type>
+          <declname>newSize</declname>
+        </param>
+        <briefdescription>
+<para>Resize the memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new memory size, in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="116" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_mutable_memory_1ade23db524ca8c6c5970f17164b98b178" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::MutableMemory::reserve</definition>
+        <argsstring>(size_t reserveSize)</argsstring>
+        <name>reserve</name>
+        <param>
+          <type>size_t</type>
+          <declname>reserveSize</declname>
+        </param>
+        <briefdescription>
+<para>Reserve the specified amount of bytes, without changing the memory size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reserveSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of bytes to reserve </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="124" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_mutable_memory_1adc4d7de6df1e0a6a36a5685dec373b00" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* dicomhero::MutableMemory::data</definition>
+        <argsstring>(size_t *pDataSize) const</argsstring>
+        <name>data</name>
+        <param>
+          <type>size_t *</type>
+          <declname>pDataSize</declname>
+        </param>
+        <briefdescription>
+<para>Return a pointer to the referenced memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The referenced buffer is owned by the <ref refid="classdicomhero_1_1_mutable_memory" kindref="compound">MutableMemory</ref> object and must not be freed by the client.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pDataSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to a variable that will be filled with the memory size, in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a pointer to the referenced memory. The referenced buffer is owned by the <ref refid="classdicomhero_1_1_mutable_memory" kindref="compound">MutableMemory</ref> object and must not be freed by the client. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="140" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_mutable_memory_1a329ca83a8edb5e46264e4e092f4d62fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::MutableMemory::assign</definition>
+        <argsstring>(const char *source, size_t sourceSize)</argsstring>
+        <name>assign</name>
+        <param>
+          <type>const char *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sourceSize</declname>
+        </param>
+        <briefdescription>
+<para>Copy the content of the specified buffer into the <ref refid="classdicomhero_1_1_mutable_memory" kindref="compound">MutableMemory</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><bold>Java</bold></para>
+<para>In Java this method accepts a single parameter (a byte array).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to the source memory buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sourceSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of bytes to copy and the new memory size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="154" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_mutable_memory_1aad071faf74dcf17a700b87d26e34c849" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::MutableMemory::assignRegion</definition>
+        <argsstring>(const char *source, size_t sourceSize, size_t destinationOffset)</argsstring>
+        <name>assignRegion</name>
+        <param>
+          <type>const char *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sourceSize</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>destinationOffset</declname>
+        </param>
+        <briefdescription>
+<para>Copy the content of the specified buffer into a region of the <ref refid="classdicomhero_1_1_mutable_memory" kindref="compound">MutableMemory</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The memory size remains unchanged.</para>
+<para><bold>Java</bold></para>
+<para>In Java this method accepts two parameters:<itemizedlist>
+<listitem><para>a byte array</para>
+</listitem><listitem><para>a long integer (destinationOffset)</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to the source memory buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sourceSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of bytes to copy </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destinationOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the offset into the <ref refid="classdicomhero_1_1_mutable_memory" kindref="compound">MutableMemory</ref> at which the data must be copied </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="173" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdicomhero_1_1_mutable_memory_1a8b569b572d3fbc19f98cd6688317f56e" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::MutableMemory::MutableMemory</definition>
+        <argsstring>(std::shared_ptr&lt; implementation::memory &gt; pMemory)</argsstring>
+        <name>MutableMemory</name>
+        <param>
+          <type>std::shared_ptr&lt; implementation::memory &gt;</type>
+          <declname>pMemory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="176" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Manages a writable buffer of memory. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The buffer of memory is usually associated with a <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref> buffer content.</para>
+<para>The memory used by <ref refid="classdicomhero_1_1_memory" kindref="compound">Memory</ref> and <ref refid="classdicomhero_1_1_mutable_memory" kindref="compound">MutableMemory</ref> is managed by <ref refid="classdicomhero_1_1_memory_pool" kindref="compound">MemoryPool</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dicomhero::Memory</label>
+        <link refid="classdicomhero_1_1_memory"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::MutableMemory</label>
+        <link refid="classdicomhero_1_1_mutable_memory"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dicomhero::Memory</label>
+        <link refid="classdicomhero_1_1_memory"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::MutableMemory</label>
+        <link refid="classdicomhero_1_1_mutable_memory"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" line="43" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/mutableMemory.h" bodystart="44" bodyend="177"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_mutable_memory_1a329ca83a8edb5e46264e4e092f4d62fb" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>assign</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1aad071faf74dcf17a700b87d26e34c849" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>assignRegion</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1a6716450115b4ffe870e77b799552efc9" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>clear</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1aafbbd9e442f70fdc687fa47d0f02150f" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>copyFrom</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1adc4d7de6df1e0a6a36a5685dec373b00" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>data</name></member>
+      <member refid="classdicomhero_1_1_memory_1ada7a51e2b2f86a9450bf5144d254e852" prot="public" virt="non-virtual" ambiguityscope="dicomhero::Memory::"><scope>dicomhero::MutableMemory</scope><name>data</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1a7ca74e22819a766e2c8903149e8e2fbe" prot="private" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>DrawBitmap</name></member>
+      <member refid="classdicomhero_1_1_memory_1a424efb3540d5b6bea81e3a68590c33c4" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>empty</name></member>
+      <member refid="classdicomhero_1_1_memory_1aac338d897b2b1f288b2136048648fb55" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>Memory</name></member>
+      <member refid="classdicomhero_1_1_memory_1a17c13e4e9d997f879d9062ffc34eb3c8" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>Memory</name></member>
+      <member refid="classdicomhero_1_1_memory_1a5b9d5f6132045439376990938462b75f" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>Memory</name></member>
+      <member refid="classdicomhero_1_1_memory_1a0bf84818849c5a2abead6a409787a247" prot="protected" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>Memory</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1afd056d06a47f75ed1c96a63a2f16f266" prot="private" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>MemoryStreamOutput</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1a3f12d281d31d61677a2846db6ca2149c" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>MutableMemory</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1a2f69679bb0f3abc8febb29456346a86c" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>MutableMemory</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1ac7395dc70032d671d4ca04555a998509" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>MutableMemory</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1aef3bd8cb4a7f3841a997e426b6bc39b0" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>MutableMemory</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1af45491ed794ff79a42bbca77883684cd" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>MutableMemory</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1a8b569b572d3fbc19f98cd6688317f56e" prot="protected" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>MutableMemory</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1a9e47f5b92de3fb81cc7f76fc5bf2822c" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_memory_1a030b2822a1e885086dd2645588a45928" prot="public" virt="non-virtual" ambiguityscope="dicomhero::Memory::"><scope>dicomhero::MutableMemory</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_memory_1a2a7a684085a9d225ec380fc021025873" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>regionData</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1ade23db524ca8c6c5970f17164b98b178" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>reserve</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1a4814ff7cc52adf77d93b7de063526be3" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>resize</name></member>
+      <member refid="classdicomhero_1_1_memory_1a3c28531a6e65e9bcf0774aa8a90d76df" prot="public" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>size</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1a6908ffd832093088e322471641ea59c3" prot="private" virt="non-virtual"><scope>dicomhero::MutableMemory</scope><name>WritingDataHandlerNumeric</name></member>
+      <member refid="classdicomhero_1_1_memory_1adb26f73e4d4438c7dc4182abd5d469c5" prot="public" virt="virtual"><scope>dicomhero::MutableMemory</scope><name>~Memory</name></member>
+      <member refid="classdicomhero_1_1_mutable_memory_1acc8f3468bfa3f15d263a819a2cd10d85" prot="public" virt="virtual"><scope>dicomhero::MutableMemory</scope><name>~MutableMemory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

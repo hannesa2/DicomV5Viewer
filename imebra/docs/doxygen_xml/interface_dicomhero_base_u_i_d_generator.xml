@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_base_u_i_d_generator" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroBaseUIDGenerator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_random_u_i_d_generator" prot="public" virt="non-virtual">DicomheroRandomUIDGenerator</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_serial_number_u_i_d_generator" prot="public" virt="non-virtual">DicomheroSerialNumberUIDGenerator</derivedcompoundref>
+    <includes local="no">dicomhero_baseUidGenerator.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_base_u_i_d_generator_1ad0fb837a616e7178df46b665dd6e7785" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroBaseUIDGenerator::m_BaseUIDGenerator</definition>
+        <argsstring></argsstring>
+        <name>m_BaseUIDGenerator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseUidGenerator.h" line="27" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseUidGenerator.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_base_u_i_d_generator_1a9107cf94865fb134ba1cdbdd8a0dfedf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroBaseUIDGenerator::initWithDicomheroBaseUidGenerator:</definition>
+        <argsstring>(void *parameter_BaseUIDGenerator)</argsstring>
+        <name>initWithDicomheroBaseUidGenerator:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_BaseUIDGenerator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseUidGenerator.h" line="27" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_base_u_i_d_generator_1ad5bd7dd782fc73c3c4c14b506d0a20bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroBaseUIDGenerator::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseUidGenerator.h" line="27" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_base_u_i_d_generator_1a38d449f90138e8d93681144364208d9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroBaseUIDGenerator::getUID</definition>
+        <argsstring>()</argsstring>
+        <name>getUID</name>
+        <briefdescription>
+<para>Generates a new UID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a new UID. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseUidGenerator.h" line="27" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class for the DICOM UID generators. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DicomheroBaseUIDGenerator</label>
+        <link refid="interface_dicomhero_base_u_i_d_generator"/>
+      </node>
+      <node id="2">
+        <label>DicomheroRandomUIDGenerator</label>
+        <link refid="interface_dicomhero_random_u_i_d_generator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DicomheroSerialNumberUIDGenerator</label>
+        <link refid="interface_dicomhero_serial_number_u_i_d_generator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseUidGenerator.h" line="24" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseUidGenerator.h" bodystart="25" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_base_u_i_d_generator_1ad5bd7dd782fc73c3c4c14b506d0a20bc" prot="public" virt="virtual"><scope>DicomheroBaseUIDGenerator</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_base_u_i_d_generator_1a38d449f90138e8d93681144364208d9a" prot="public" virt="virtual"><scope>DicomheroBaseUIDGenerator</scope><name>getUID</name></member>
+      <member refid="interface_dicomhero_base_u_i_d_generator_1a9107cf94865fb134ba1cdbdd8a0dfedf" prot="public" virt="virtual"><scope>DicomheroBaseUIDGenerator</scope><name>initWithDicomheroBaseUidGenerator:</name></member>
+      <member refid="interface_dicomhero_base_u_i_d_generator_1ad0fb837a616e7178df46b665dd6e7785" prot="public" virt="non-virtual"><scope>DicomheroBaseUIDGenerator</scope><name>m_BaseUIDGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

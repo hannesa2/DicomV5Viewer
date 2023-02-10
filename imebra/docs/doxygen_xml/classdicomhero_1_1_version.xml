@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_version" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::Version</compoundname>
+    <includes local="no">getVersion.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classdicomhero_1_1_version_1a6b1c7161921d46c14701d028d75b9c16" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string dicomhero::Version::getVersion</definition>
+        <argsstring>()</argsstring>
+        <name>getVersion</name>
+        <briefdescription>
+<para>Get the API version. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a std::string containing the API version </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/getVersion.h" line="45" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_version_1aa2fbfef03b311ed640fb895976c29445" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::wstring</type>
+        <definition>static std::wstring dicomhero::Version::getVersionW</definition>
+        <argsstring>()</argsstring>
+        <name>getVersionW</name>
+        <briefdescription>
+<para>Get the API version as a std::wstring. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a std::wstring containing the API version </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/getVersion.h" line="53" column="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Retrieve the DicomHero library&apos;s version. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/getVersion.h" line="36" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/getVersion.h" bodystart="37" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_version_1a6b1c7161921d46c14701d028d75b9c16" prot="public" virt="non-virtual"><scope>dicomhero::Version</scope><name>getVersion</name></member>
+      <member refid="classdicomhero_1_1_version_1aa2fbfef03b311ed640fb895976c29445" prot="public" virt="non-virtual"><scope>dicomhero::Version</scope><name>getVersionW</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_n_set_command" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroNSetCommand</compoundname>
+    <basecompoundref refid="interface_dicomhero_dimse_command" prot="public" virt="non-virtual">DicomheroDimseCommand</basecompoundref>
+    <includes local="no">dicomhero_dimse.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_n_set_command_1a17078239b2bdde93cd6f0ff6bb99b5b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroNSetCommand::initWithAbstractSyntax:messageID:requestedSopClassUid:requestedSopInstanceUid:modificationList:</definition>
+        <argsstring>(NSString *abstractSyntax,[messageID] unsigned short messageID,[requestedSopClassUid] NSString *requestedSopClassUid,[requestedSopInstanceUid] NSString *requestedSopInstanceUid,[modificationList] DicomheroDataSet *pModificationList)</argsstring>
+        <name>initWithAbstractSyntax:messageID:requestedSopClassUid:requestedSopInstanceUid:modificationList:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>abstractSyntax</declname>
+        </param>
+        <param>
+          <attributes>[messageID]</attributes>
+          <type>unsigned short</type>
+          <declname>messageID</declname>
+        </param>
+        <param>
+          <attributes>[requestedSopClassUid]</attributes>
+          <type>NSString *</type>
+          <declname>requestedSopClassUid</declname>
+        </param>
+        <param>
+          <attributes>[requestedSopInstanceUid]</attributes>
+          <type>NSString *</type>
+          <declname>requestedSopInstanceUid</declname>
+        </param>
+        <param>
+          <attributes>[modificationList]</attributes>
+          <type><ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> *</type>
+          <declname>pModificationList</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>abstractSyntax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message&apos;s abstract syntax (previously negotiated via the <ref refid="interface_dicomhero_presentation_contexts" kindref="compound">DicomheroPresentationContexts</ref> parameter of the <ref refid="interface_dicomhero_association_s_c_p" kindref="compound">DicomheroAssociationSCP</ref> or <ref refid="interface_dicomhero_association_s_c_u" kindref="compound">DicomheroAssociationSCU</ref> initializers) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>messageID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>message ID (can be retrieved with <ref refid="interface_dicomhero_dimse_service_1a89cba6d75cdef2b02e88bdba583808bc" kindref="member">getNextCommandID (DicomheroDimseService)</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>requestedSopClassUid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the requested SOP class UID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>requestedSopInstanceUid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the requested SOP instance UID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pModificationList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dataset containing the new attributes values </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="888" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents the N-SET command. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>DicomheroDimseCommand</label>
+        <link refid="interface_dicomhero_dimse_command"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DicomheroNSetCommand</label>
+        <link refid="interface_dicomhero_n_set_command"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DicomheroDimseCommandBase</label>
+        <link refid="interface_dicomhero_dimse_command_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>DicomheroDimseCommand</label>
+        <link refid="interface_dicomhero_dimse_command"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DicomheroNSetCommand</label>
+        <link refid="interface_dicomhero_n_set_command"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DicomheroDimseCommandBase</label>
+        <link refid="interface_dicomhero_dimse_command_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="931" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="932" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_dimse_command_1a76136966e014566dc921bf330a4ef335" prot="public" virt="non-virtual"><scope>DicomheroNSetCommand</scope><name>commandType</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1aa6e7648457444127f82ded7dd4aa891d" prot="public" virt="virtual"><scope>DicomheroNSetCommand</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a68d97c939e669901c372557fca25cf34" prot="public" virt="virtual"><scope>DicomheroNSetCommand</scope><name>getAbstractSyntax</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a77cfd3acdf766f5ec85c9075bfc68902" prot="public" virt="virtual"><scope>DicomheroNSetCommand</scope><name>getAffectedSopClassUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a960b3c03c3d2952f920977b6c45032b6" prot="public" virt="virtual"><scope>DicomheroNSetCommand</scope><name>getAffectedSopInstanceUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a478b7f0930cc6fad1fe0a12cb20f6193" prot="public" virt="virtual"><scope>DicomheroNSetCommand</scope><name>getCommandDataSet:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a62a22fdadc33eb68b0a87c2095acc239" prot="public" virt="virtual"><scope>DicomheroNSetCommand</scope><name>getPayloadDataSet:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a11da81e00cc6f99977de4a53d5573256" prot="public" virt="virtual"><scope>DicomheroNSetCommand</scope><name>getRequestedSopClassUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a3881cedfd1df5f2b0843763b15183adf" prot="public" virt="virtual"><scope>DicomheroNSetCommand</scope><name>getRequestedSopInstanceUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_1a4aaa4fa728da2426b7b15b9be68166c3" prot="public" virt="non-virtual"><scope>DicomheroNSetCommand</scope><name>ID</name></member>
+      <member refid="interface_dicomhero_n_set_command_1a17078239b2bdde93cd6f0ff6bb99b5b6" prot="public" virt="virtual"><scope>DicomheroNSetCommand</scope><name>initWithAbstractSyntax:messageID:requestedSopClassUid:requestedSopInstanceUid:modificationList:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1aee56566e403c56fe35de6057b9cafde7" prot="public" virt="virtual"><scope>DicomheroNSetCommand</scope><name>initWithDicomheroCommand:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1ae5022fe1e9373e80bc857936d1e03f39" prot="public" virt="non-virtual"><scope>DicomheroNSetCommand</scope><name>m_DimseCommandBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

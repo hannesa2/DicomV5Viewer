@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_dicom_dictionary" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroDicomDictionary</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_dicomDictionary.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_dicomhero_dicom_dictionary_1a7f51359b74f614e7a22192cccdbd574d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroDicomDictionary::getTagDescription:error:</definition>
+        <argsstring>(DicomheroTagId *tagId,[error] NSError **pError)</argsstring>
+        <name>getTagDescription:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref> *</type>
+          <declname>tagId</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a tag&apos;s description. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tagId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag&apos;s id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s description </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDictionary.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dicom_dictionary_1ae56707f33ed5b9292e129eb6043d0e5c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroDicomDictionary::getMultiplicityMin:error:</definition>
+        <argsstring>(DicomheroTagId *tagId,[error] NSError **pError)</argsstring>
+        <name>getMultiplicityMin:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref> *</type>
+          <declname>tagId</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a tag&apos;s minimum multiplicity value (the minimum number of values that should be stored in the tag). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tagId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag&apos;s id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the minimum multiplicity value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDictionary.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dicom_dictionary_1ac49ad9b0415982fbf8ad6f839e8f315a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroDicomDictionary::getMultiplicityMax:error:</definition>
+        <argsstring>(DicomheroTagId *tagId,[error] NSError **pError)</argsstring>
+        <name>getMultiplicityMax:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref> *</type>
+          <declname>tagId</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a tag&apos;s maximum multiplicity value (the maximum number of values that should be stored in the tag, 0=unlimited). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tagId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag&apos;s id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the maximum multiplicity value (0=unlimited) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDictionary.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dicom_dictionary_1a2cfa35489c3ccd6e1005754ecebc0a80" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroDicomDictionary::getMultiplicityStep:error:</definition>
+        <argsstring>(DicomheroTagId *tagId,[error] NSError **pError)</argsstring>
+        <name>getMultiplicityStep:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref> *</type>
+          <declname>tagId</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a tag&apos;s step multiplicity value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tagId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag&apos;s id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the step multiplicity value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDictionary.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dicom_dictionary_1afba9bb5f38d4ab4a95787b9353d5554d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>DicomheroTagType</type>
+        <definition>DicomheroTagType DicomheroDicomDictionary::getTagType:error:</definition>
+        <argsstring>(DicomheroTagId *tagId,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getTagType:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref> *</type>
+          <declname>tagId</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a tag&apos;s default data type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tagId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag&apos;s id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The tag&apos;s data type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDictionary.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dicom_dictionary_1a49d9c6d0712b5a188b8c8dc2f43b68e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroDicomDictionary::getWordSize:</definition>
+        <argsstring>(DicomheroTagType dataType)</argsstring>
+        <name>getWordSize:</name>
+        <param>
+          <type>DicomheroTagType</type>
+          <declname>dataType</declname>
+        </param>
+        <briefdescription>
+<para>Return the size (in bytes) of the data type&apos;s elements. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the data type for which the information is required </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the size of a single element, in bytes. 0 means that there isn&apos;t a fixed size for the element </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDictionary.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dicom_dictionary_1a10ebbc10b6da54f6cdb7bfef27ea3c0b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroDicomDictionary::getMaxSize:</definition>
+        <argsstring>(DicomheroTagType dataType)</argsstring>
+        <name>getMaxSize:</name>
+        <param>
+          <type>DicomheroTagType</type>
+          <declname>dataType</declname>
+        </param>
+        <briefdescription>
+<para>Return the maximum size of the tags with the specified data type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the data type for which the information is required </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the maximum tag&apos;s size in bytes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDictionary.h" line="1" column="0"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Provides information about the tag&apos;s description and their default data type (VR). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDictionary.h" line="28" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDictionary.h" bodystart="29" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_dicom_dictionary_1a10ebbc10b6da54f6cdb7bfef27ea3c0b" prot="public" virt="virtual"><scope>DicomheroDicomDictionary</scope><name>getMaxSize:</name></member>
+      <member refid="interface_dicomhero_dicom_dictionary_1ac49ad9b0415982fbf8ad6f839e8f315a" prot="public" virt="virtual"><scope>DicomheroDicomDictionary</scope><name>getMultiplicityMax:error:</name></member>
+      <member refid="interface_dicomhero_dicom_dictionary_1ae56707f33ed5b9292e129eb6043d0e5c" prot="public" virt="virtual"><scope>DicomheroDicomDictionary</scope><name>getMultiplicityMin:error:</name></member>
+      <member refid="interface_dicomhero_dicom_dictionary_1a2cfa35489c3ccd6e1005754ecebc0a80" prot="public" virt="virtual"><scope>DicomheroDicomDictionary</scope><name>getMultiplicityStep:error:</name></member>
+      <member refid="interface_dicomhero_dicom_dictionary_1a7f51359b74f614e7a22192cccdbd574d" prot="public" virt="virtual"><scope>DicomheroDicomDictionary</scope><name>getTagDescription:error:</name></member>
+      <member refid="interface_dicomhero_dicom_dictionary_1afba9bb5f38d4ab4a95787b9353d5554d" prot="public" virt="virtual"><scope>DicomheroDicomDictionary</scope><name>getTagType:error:</name></member>
+      <member refid="interface_dicomhero_dicom_dictionary_1a49d9c6d0712b5a188b8c8dc2f43b68e4" prot="public" virt="virtual"><scope>DicomheroDicomDictionary</scope><name>getWordSize:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

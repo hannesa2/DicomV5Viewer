@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_data_handler_invalid_data_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::DataHandlerInvalidDataError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_data_handler_error" prot="public" virt="non-virtual">dicomhero::DataHandlerError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_data_handler_invalid_data_error_1a15348ef05ec629684372b574d374f2b1" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DataHandlerInvalidDataError::DataHandlerInvalidDataError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>DataHandlerInvalidDataError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="788" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_data_handler_invalid_data_error_1a7db15a517227aff47d0e33f03f947d7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DataHandlerInvalidDataError::DataHandlerInvalidDataError</definition>
+        <argsstring>(const DataHandlerInvalidDataError &amp;source)</argsstring>
+        <name>DataHandlerInvalidDataError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_data_handler_invalid_data_error" kindref="compound">DataHandlerInvalidDataError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="790" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_data_handler_invalid_data_error_1ae2e440e84c67a5e70d1965c1b2bee841" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_data_handler_invalid_data_error" kindref="compound">DataHandlerInvalidDataError</ref> &amp;</type>
+        <definition>DataHandlerInvalidDataError&amp; dicomhero::DataHandlerInvalidDataError::operator=</definition>
+        <argsstring>(const DataHandlerInvalidDataError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_data_handler_invalid_data_error" kindref="compound">DataHandlerInvalidDataError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="792" column="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_data_handler_invalid_data_error_1adfd491434284f333c07db96856a2d652" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::DataHandlerInvalidDataError::~DataHandlerInvalidDataError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~DataHandlerInvalidDataError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="794" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This exception is thrown when the client tries to write invalid data into a data handler. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dicomhero::DataHandlerInvalidDataError</label>
+        <link refid="classdicomhero_1_1_data_handler_invalid_data_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::DataHandlerError</label>
+        <link refid="classdicomhero_1_1_data_handler_error"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dicomhero::DataHandlerInvalidDataError</label>
+        <link refid="classdicomhero_1_1_data_handler_invalid_data_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::DataHandlerError</label>
+        <link refid="classdicomhero_1_1_data_handler_error"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="780" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="781" bodyend="795"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_data_handler_error_1adecb87702fbd8acae50d022ff8e281fe" prot="public" virt="non-virtual"><scope>dicomhero::DataHandlerInvalidDataError</scope><name>DataHandlerError</name></member>
+      <member refid="classdicomhero_1_1_data_handler_error_1af3a6a0872282435613d7671251033dd0" prot="public" virt="non-virtual"><scope>dicomhero::DataHandlerInvalidDataError</scope><name>DataHandlerError</name></member>
+      <member refid="classdicomhero_1_1_data_handler_invalid_data_error_1a15348ef05ec629684372b574d374f2b1" prot="public" virt="non-virtual"><scope>dicomhero::DataHandlerInvalidDataError</scope><name>DataHandlerInvalidDataError</name></member>
+      <member refid="classdicomhero_1_1_data_handler_invalid_data_error_1a7db15a517227aff47d0e33f03f947d7a" prot="public" virt="non-virtual"><scope>dicomhero::DataHandlerInvalidDataError</scope><name>DataHandlerInvalidDataError</name></member>
+      <member refid="classdicomhero_1_1_data_handler_invalid_data_error_1ae2e440e84c67a5e70d1965c1b2bee841" prot="public" virt="non-virtual"><scope>dicomhero::DataHandlerInvalidDataError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_data_handler_error_1a26624f54b27f4e78fe1b65f11d22433e" prot="public" virt="non-virtual" ambiguityscope="dicomhero::DataHandlerError::"><scope>dicomhero::DataHandlerInvalidDataError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_data_handler_error_1ad805d9af2f35e1fb41cac34523979cb5" prot="public" virt="virtual"><scope>dicomhero::DataHandlerInvalidDataError</scope><name>~DataHandlerError</name></member>
+      <member refid="classdicomhero_1_1_data_handler_invalid_data_error_1adfd491434284f333c07db96856a2d652" prot="public" virt="virtual"><scope>dicomhero::DataHandlerInvalidDataError</scope><name>~DataHandlerInvalidDataError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

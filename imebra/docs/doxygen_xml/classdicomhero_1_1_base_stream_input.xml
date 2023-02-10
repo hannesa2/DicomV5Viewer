@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_base_stream_input" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::BaseStreamInput</compoundname>
+    <derivedcompoundref refid="classdicomhero_1_1_file_stream_input" prot="public" virt="non-virtual">dicomhero::FileStreamInput</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_memory_stream_input" prot="public" virt="non-virtual">dicomhero::MemoryStreamInput</derivedcompoundref>
+    <includes local="no">baseStreamInput.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_base_stream_input_1a563bc125d817afe66606fc82c9d9558e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class TCPStream</definition>
+        <argsstring></argsstring>
+        <name>TCPStream</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_t_c_p_stream" kindref="compound">TCPStream</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/baseStreamInput.h" line="50" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/baseStreamInput.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_base_stream_input_1a0a8107f1712c7c157dec98cc0d2ba035" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class PipeStream</definition>
+        <argsstring></argsstring>
+        <name>PipeStream</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_pipe_stream" kindref="compound">PipeStream</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/baseStreamInput.h" line="51" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/baseStreamInput.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_base_stream_input_1a213b5dfe42310515649c8cf8d4629763" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::shared_ptr&lt; implementation::baseStreamInput &gt; &amp;</type>
+        <definition>const std::shared_ptr&lt;implementation::baseStreamInput&gt;&amp; getBaseStreamInputImplementation</definition>
+        <argsstring>(const BaseStreamInput &amp;baseStreamInput)</argsstring>
+        <name>getBaseStreamInputImplementation</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_base_stream_input" kindref="compound">BaseStreamInput</ref> &amp;</type>
+          <declname>baseStreamInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/baseStreamInput.h" line="76" column="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdicomhero_1_1_base_stream_input_1aef5d8e76232d4c0171ea2ca1e29fc668" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; implementation::baseStreamInput &gt;</type>
+        <definition>std::shared_ptr&lt;implementation::baseStreamInput&gt; dicomhero::BaseStreamInput::m_pInputStream</definition>
+        <argsstring></argsstring>
+        <name>m_pInputStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/baseStreamInput.h" line="77" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/baseStreamInput.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_base_stream_input_1aa19a23918f4fe2bfea96edec9757f4f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::BaseStreamInput::BaseStreamInput</definition>
+        <argsstring>(const BaseStreamInput &amp;source)</argsstring>
+        <name>BaseStreamInput</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_base_stream_input" kindref="compound">BaseStreamInput</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source base input stream </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/baseStreamInput.h" line="60" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_base_stream_input_1a742a943e7b7b459a257e7b84f53c155d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_base_stream_input" kindref="compound">BaseStreamInput</ref> &amp;</type>
+        <definition>BaseStreamInput&amp; dicomhero::BaseStreamInput::operator=</definition>
+        <argsstring>(const BaseStreamInput &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_base_stream_input" kindref="compound">BaseStreamInput</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/baseStreamInput.h" line="62" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_base_stream_input_1adc18fbabe0aa6c027d6fae450b3e2c1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::BaseStreamInput::~BaseStreamInput</definition>
+        <argsstring>()</argsstring>
+        <name>~BaseStreamInput</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/baseStreamInput.h" line="68" column="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdicomhero_1_1_base_stream_input_1a24c2424f0cece4ddf37fdb650fa41db7" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::BaseStreamInput::BaseStreamInput</definition>
+        <argsstring>(const std::shared_ptr&lt; implementation::baseStreamInput &gt; &amp;pInputStream)</argsstring>
+        <name>BaseStreamInput</name>
+        <param>
+          <type>const std::shared_ptr&lt; implementation::baseStreamInput &gt; &amp;</type>
+          <declname>pInputStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/baseStreamInput.h" line="73" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents a generic input stream. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Specialized classes derived from this one can read data from files stored on the computer&apos;s disks (<ref refid="classdicomhero_1_1_file_stream_input" kindref="compound">FileStreamInput</ref>) or from memory (<ref refid="classdicomhero_1_1_memory_stream_input" kindref="compound">MemoryStreamInput</ref>).</para>
+<para>The client application cannot read the data directly from a <ref refid="classdicomhero_1_1_base_stream_input" kindref="compound">BaseStreamInput</ref> but must use a <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref>. Several <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> objects can read data from the same <ref refid="classdicomhero_1_1_base_stream_input" kindref="compound">BaseStreamInput</ref> object.</para>
+<para>The <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> class is not thread-safe, but different <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> objects in different threads can access the same <ref refid="classdicomhero_1_1_base_stream_input" kindref="compound">BaseStreamInput</ref> object. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dicomhero::BaseStreamInput</label>
+        <link refid="classdicomhero_1_1_base_stream_input"/>
+      </node>
+      <node id="2">
+        <label>dicomhero::FileStreamInput</label>
+        <link refid="classdicomhero_1_1_file_stream_input"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dicomhero::MemoryStreamInput</label>
+        <link refid="classdicomhero_1_1_memory_stream_input"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/baseStreamInput.h" line="48" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/baseStreamInput.h" bodystart="49" bodyend="79"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_base_stream_input_1aa19a23918f4fe2bfea96edec9757f4f1" prot="public" virt="non-virtual"><scope>dicomhero::BaseStreamInput</scope><name>BaseStreamInput</name></member>
+      <member refid="classdicomhero_1_1_base_stream_input_1a24c2424f0cece4ddf37fdb650fa41db7" prot="protected" virt="non-virtual"><scope>dicomhero::BaseStreamInput</scope><name>BaseStreamInput</name></member>
+      <member refid="classdicomhero_1_1_base_stream_input_1a213b5dfe42310515649c8cf8d4629763" prot="private" virt="non-virtual"><scope>dicomhero::BaseStreamInput</scope><name>getBaseStreamInputImplementation</name></member>
+      <member refid="classdicomhero_1_1_base_stream_input_1aef5d8e76232d4c0171ea2ca1e29fc668" prot="private" virt="non-virtual"><scope>dicomhero::BaseStreamInput</scope><name>m_pInputStream</name></member>
+      <member refid="classdicomhero_1_1_base_stream_input_1a742a943e7b7b459a257e7b84f53c155d" prot="public" virt="non-virtual"><scope>dicomhero::BaseStreamInput</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_base_stream_input_1a0a8107f1712c7c157dec98cc0d2ba035" prot="private" virt="non-virtual"><scope>dicomhero::BaseStreamInput</scope><name>PipeStream</name></member>
+      <member refid="classdicomhero_1_1_base_stream_input_1a563bc125d817afe66606fc82c9d9558e" prot="private" virt="non-virtual"><scope>dicomhero::BaseStreamInput</scope><name>TCPStream</name></member>
+      <member refid="classdicomhero_1_1_base_stream_input_1adc18fbabe0aa6c027d6fae450b3e2c1b" prot="public" virt="virtual"><scope>dicomhero::BaseStreamInput</scope><name>~BaseStreamInput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_dicom_dictionary" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::DicomDictionary</compoundname>
+    <includes local="no">dicomDictionary.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dictionary_1a2f358d3f308ce961e7c99c47a521df9b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::wstring</type>
+        <definition>static std::wstring dicomhero::DicomDictionary::getUnicodeTagDescription</definition>
+        <argsstring>(const TagId &amp;id)</argsstring>
+        <name>getUnicodeTagDescription</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_tag_id" kindref="compound">TagId</ref> &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a tag&apos;s description. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag&apos;s id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The tag&apos;s description </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDictionary.h" line="48" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dictionary_1a85adce185471a7014f7deb84948fc167" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string dicomhero::DicomDictionary::getTagDescription</definition>
+        <argsstring>(const TagId &amp;id)</argsstring>
+        <name>getTagDescription</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_tag_id" kindref="compound">TagId</ref> &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a tag&apos;s description. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag&apos;s id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The tag&apos;s description </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDictionary.h" line="57" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dictionary_1a53d3c811454e92571717944dfbaf7a22" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1" kindref="member">tagVR_t</ref></type>
+        <definition>static tagVR_t dicomhero::DicomDictionary::getTagType</definition>
+        <argsstring>(const TagId &amp;id)</argsstring>
+        <name>getTagType</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_tag_id" kindref="compound">TagId</ref> &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a tag&apos;s default data type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag&apos;s id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The tag&apos;s data type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDictionary.h" line="65" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dictionary_1a5a159006869b253d304dac2eb0b2a80d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>static std::uint32_t dicomhero::DicomDictionary::getMultiplicityMin</definition>
+        <argsstring>(const TagId &amp;id)</argsstring>
+        <name>getMultiplicityMin</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_tag_id" kindref="compound">TagId</ref> &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Return the minimum multiplicity value for the tag (the minimum number of values that should be stored in the tag). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag&apos;s id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the minimum multiplicity value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDictionary.h" line="74" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dictionary_1a9e9cff4abf963833ec0ab202eeca05a0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>static std::uint32_t dicomhero::DicomDictionary::getMultiplicityMax</definition>
+        <argsstring>(const TagId &amp;id)</argsstring>
+        <name>getMultiplicityMax</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_tag_id" kindref="compound">TagId</ref> &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Return the maximum multiplicity value for the tag (the maximum number of values that can be stored in the tag, 0=unlimited). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag&apos;s id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the maximum multiplicity value (0=unlimited) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDictionary.h" line="83" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dictionary_1aa44a049551350129c72f1ba1eed69530" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>static std::uint32_t dicomhero::DicomDictionary::getMultiplicityStep</definition>
+        <argsstring>(const TagId &amp;id)</argsstring>
+        <name>getMultiplicityStep</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_tag_id" kindref="compound">TagId</ref> &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Return the step multiplicity value for the tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag&apos;s id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the step multiplicity value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDictionary.h" line="91" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dictionary_1ade3366585821b6493e165cb05c39f893" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>static std::uint32_t dicomhero::DicomDictionary::getWordSize</definition>
+        <argsstring>(tagVR_t dataType)</argsstring>
+        <name>getWordSize</name>
+        <param>
+          <type><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1" kindref="member">tagVR_t</ref></type>
+          <declname>dataType</declname>
+        </param>
+        <briefdescription>
+<para>Return the size of the data type&apos;s elements. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the data type for which the information is required </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the size of a single element </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDictionary.h" line="99" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dictionary_1a4c79154fafabca315dd307b0aa881a91" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>static std::uint32_t dicomhero::DicomDictionary::getMaxSize</definition>
+        <argsstring>(tagVR_t dataType)</argsstring>
+        <name>getMaxSize</name>
+        <param>
+          <type><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1" kindref="member">tagVR_t</ref></type>
+          <declname>dataType</declname>
+        </param>
+        <briefdescription>
+<para>Return the maximum size of the tags with the specified data type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the data type for which the information is required </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the maximum tag&apos;s size in bytes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDictionary.h" line="107" column="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Provides information about the tag&apos;s description and their default data type (VR). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDictionary.h" line="38" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDictionary.h" bodystart="39" bodyend="109"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_dicom_dictionary_1a4c79154fafabca315dd307b0aa881a91" prot="public" virt="non-virtual"><scope>dicomhero::DicomDictionary</scope><name>getMaxSize</name></member>
+      <member refid="classdicomhero_1_1_dicom_dictionary_1a9e9cff4abf963833ec0ab202eeca05a0" prot="public" virt="non-virtual"><scope>dicomhero::DicomDictionary</scope><name>getMultiplicityMax</name></member>
+      <member refid="classdicomhero_1_1_dicom_dictionary_1a5a159006869b253d304dac2eb0b2a80d" prot="public" virt="non-virtual"><scope>dicomhero::DicomDictionary</scope><name>getMultiplicityMin</name></member>
+      <member refid="classdicomhero_1_1_dicom_dictionary_1aa44a049551350129c72f1ba1eed69530" prot="public" virt="non-virtual"><scope>dicomhero::DicomDictionary</scope><name>getMultiplicityStep</name></member>
+      <member refid="classdicomhero_1_1_dicom_dictionary_1a85adce185471a7014f7deb84948fc167" prot="public" virt="non-virtual"><scope>dicomhero::DicomDictionary</scope><name>getTagDescription</name></member>
+      <member refid="classdicomhero_1_1_dicom_dictionary_1a53d3c811454e92571717944dfbaf7a22" prot="public" virt="non-virtual"><scope>dicomhero::DicomDictionary</scope><name>getTagType</name></member>
+      <member refid="classdicomhero_1_1_dicom_dictionary_1a2f358d3f308ce961e7c99c47a521df9b" prot="public" virt="non-virtual"><scope>dicomhero::DicomDictionary</scope><name>getUnicodeTagDescription</name></member>
+      <member refid="classdicomhero_1_1_dicom_dictionary_1ade3366585821b6493e165cb05c39f893" prot="public" virt="non-virtual"><scope>dicomhero::DicomDictionary</scope><name>getWordSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

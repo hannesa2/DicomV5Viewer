@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_pipe_stream" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroPipeStream</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_pipe.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_pipe_stream_1a06dcdc148d3d70275b562961a48c2653" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroPipeStream::m_PipeStream</definition>
+        <argsstring></argsstring>
+        <name>m_PipeStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_pipe.h" line="44" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_pipe.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_pipe_stream_1aaa95c9c2db7f0eb6d107a4873a13187a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroPipeStream::initWithBufferSize:</definition>
+        <argsstring>(unsigned int circularBufferSize)</argsstring>
+        <name>initWithBufferSize:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>circularBufferSize</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>circularBufferSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the buffer that stores the data fed to the Pipe until it is fetched </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_pipe.h" line="44" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_pipe_stream_1a306418fcb9cf994da5bedc14c50076d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroPipeStream::close:error:</definition>
+        <argsstring>(unsigned int timeoutMilliseconds,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>close:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>timeoutMilliseconds</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the specified amount of time or until the internal buffer is empty (all the data fed has been retrieved by the StreamReader or by sink()), whichever comes first, then call terminate(). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Subsequent read and write operations will fail by throwing the exception StreamClosedError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timeoutMilliseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum time to wait until the internal buffer is empty, in milliseconds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_pipe.h" line="44" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_pipe_stream_1a75d54fb8b0040404e4871c9cd7b39e38" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_base_stream_input" kindref="compound">DicomheroBaseStreamInput</ref> *</type>
+        <definition>DicomheroBaseStreamInput* DicomheroPipeStream::getStreamInput</definition>
+        <argsstring>()</argsstring>
+        <name>getStreamInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_pipe.h" line="44" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_pipe_stream_1a61978477c57302395aeb1be21315665a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_base_stream_output" kindref="compound">DicomheroBaseStreamOutput</ref> *</type>
+        <definition>DicomheroBaseStreamOutput* DicomheroPipeStream::getStreamOutput</definition>
+        <argsstring>()</argsstring>
+        <name>getStreamOutput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_pipe.h" line="44" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A pipe can be used to push and pull data to/from an Imebra codec. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This is useful when an Imebra codec must be used with a data source or a data sink not supported by the library (e.g. a TLS stream).</para>
+<para>In order to allow Imebra to read data from a custom data source:<itemizedlist>
+<listitem><para>allocate a ImebraPipe class and use it as parameter for the <ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> needed by the codec</para>
+</listitem><listitem><para>from a secondary thread feed the data to the data source by using an <ref refid="interface_dicomhero_stream_writer" kindref="compound">DicomheroStreamWriter</ref></para>
+</listitem></itemizedlist>
+</para>
+<para>In order to allow Imebra to write data to a custom data source:<itemizedlist>
+<listitem><para>allocate a ImebraPipe class and use it as parameter for the <ref refid="interface_dicomhero_stream_writer" kindref="compound">DicomheroStreamWriter</ref> needed by the codec</para>
+</listitem><listitem><para>from a secondary thread read the data by using an <ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_pipe.h" line="41" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_pipe.h" bodystart="42" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_pipe_stream_1a306418fcb9cf994da5bedc14c50076d2" prot="public" virt="virtual"><scope>DicomheroPipeStream</scope><name>close:error:</name></member>
+      <member refid="interface_dicomhero_pipe_stream_1a75d54fb8b0040404e4871c9cd7b39e38" prot="public" virt="virtual"><scope>DicomheroPipeStream</scope><name>getStreamInput</name></member>
+      <member refid="interface_dicomhero_pipe_stream_1a61978477c57302395aeb1be21315665a" prot="public" virt="virtual"><scope>DicomheroPipeStream</scope><name>getStreamOutput</name></member>
+      <member refid="interface_dicomhero_pipe_stream_1aaa95c9c2db7f0eb6d107a4873a13187a" prot="public" virt="virtual"><scope>DicomheroPipeStream</scope><name>initWithBufferSize:</name></member>
+      <member refid="interface_dicomhero_pipe_stream_1a06dcdc148d3d70275b562961a48c2653" prot="public" virt="non-virtual"><scope>DicomheroPipeStream</scope><name>m_PipeStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

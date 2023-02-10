@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_memory" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::Memory</compoundname>
+    <derivedcompoundref refid="classdicomhero_1_1_mutable_memory" prot="public" virt="non-virtual">dicomhero::MutableMemory</derivedcompoundref>
+    <includes local="no">memory.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_memory_1a7ca74e22819a766e2c8903149e8e2fbe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class DrawBitmap</definition>
+        <argsstring></argsstring>
+        <name>DrawBitmap</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_draw_bitmap" kindref="compound">DrawBitmap</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="44" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_memory_1ad34c5492f4d294d0b49ca5a22333c792" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class ReadingDataHandlerNumeric</definition>
+        <argsstring></argsstring>
+        <name>ReadingDataHandlerNumeric</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_reading_data_handler_numeric" kindref="compound">ReadingDataHandlerNumeric</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="45" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_memory_1a4d85a7d064e7ed4c07eb081d9d73d75c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class StreamReader</definition>
+        <argsstring></argsstring>
+        <name>StreamReader</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="46" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_memory_1a59da7fa5fe83c79436264560ef96701f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::shared_ptr&lt; const implementation::memory &gt; &amp;</type>
+        <definition>const std::shared_ptr&lt;const implementation::memory&gt;&amp; getMemoryImplementation</definition>
+        <argsstring>(const Memory &amp;memory)</argsstring>
+        <name>getMemoryImplementation</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_memory" kindref="compound">Memory</ref> &amp;</type>
+          <declname>memory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="152" column="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdicomhero_1_1_memory_1ab30ef0f9935d9f11514b7c6d061df1e8" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; const implementation::memory &gt;</type>
+        <definition>std::shared_ptr&lt;const implementation::memory&gt; dicomhero::Memory::m_pMemory</definition>
+        <argsstring></argsstring>
+        <name>m_pMemory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="153" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_memory_1aac338d897b2b1f288b2136048648fb55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::Memory::Memory</definition>
+        <argsstring>()</argsstring>
+        <name>Memory</name>
+        <briefdescription>
+<para>Construct an empty buffer of memory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="52" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_1a17c13e4e9d997f879d9062ffc34eb3c8" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::Memory::Memory</definition>
+        <argsstring>(const char *source, size_t sourceSize)</argsstring>
+        <name>Memory</name>
+        <param>
+          <type>const char *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sourceSize</declname>
+        </param>
+        <briefdescription>
+<para>Construct a buffer of memory and copy the specified content into it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><bold>Java</bold></para>
+<para>In Java this method accepts a single parameter (a byte array).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to the source data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sourceSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the amount of data to copy into the allocated memory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="64" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_1a5b9d5f6132045439376990938462b75f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::Memory::Memory</definition>
+        <argsstring>(const Memory &amp;source)</argsstring>
+        <name>Memory</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_memory" kindref="compound">Memory</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_memory" kindref="compound">Memory</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="72" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_1a030b2822a1e885086dd2645588a45928" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_memory" kindref="compound">Memory</ref> &amp;</type>
+        <definition>Memory&amp; dicomhero::Memory::operator=</definition>
+        <argsstring>(const Memory &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_memory" kindref="compound">Memory</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="74" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_1adb26f73e4d4438c7dc4182abd5d469c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::Memory::~Memory</definition>
+        <argsstring>()</argsstring>
+        <name>~Memory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="76" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_1a3c28531a6e65e9bcf0774aa8a90d76df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t dicomhero::Memory::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>Return the memory size, in bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the memory size in bytes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="83" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_1ada7a51e2b2f86a9450bf5144d254e852" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t dicomhero::Memory::data</definition>
+        <argsstring>(char *destination, size_t destinationSize) const</argsstring>
+        <name>data</name>
+        <param>
+          <type>char *</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>destinationSize</declname>
+        </param>
+        <briefdescription>
+<para>Copies the raw memory content into the specified buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the allocated buffer is not large enough then the method doesn&apos;t copy any data and just returns the required buffer&apos; size.</para>
+<para><bold>Java</bold></para>
+<para>In Java this method accepts a single parameter (a byte array). The size of the byte array must be equal or greater than the number of bytes stored by the data handler.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>destination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to the allocated buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destinationSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the allocated buffer, in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the number of bytes copied into the pre-allocated buffer, or the desired size of destination if destinationSize is smaller than the return value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="103" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_1a2a7a684085a9d225ec380fc021025873" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::Memory::regionData</definition>
+        <argsstring>(char *destination, size_t destinationSize, size_t sourceOffset) const</argsstring>
+        <name>regionData</name>
+        <param>
+          <type>char *</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>destinationSize</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sourceOffset</declname>
+        </param>
+        <briefdescription>
+<para>Copies the raw memory region into the specified buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the memory&apos;s size is too small to extract the requested region then throws <ref refid="classdicomhero_1_1_memory_size_error" kindref="compound">MemorySizeError</ref>.</para>
+<para><bold>Java</bold></para>
+<para>In Java this method accepts two parameters:<itemizedlist>
+<listitem><para>a byte array</para>
+</listitem><listitem><para>a long integer (sourceOffset)</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>destination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to the allocated buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destinationSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the allocated buffer, in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sourceOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the offset </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="121" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_1afe141eaff059fbcb21219218e828eb2e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* dicomhero::Memory::data</definition>
+        <argsstring>(size_t *pDataSize) const</argsstring>
+        <name>data</name>
+        <param>
+          <type>size_t *</type>
+          <declname>pDataSize</declname>
+        </param>
+        <briefdescription>
+<para>Return a pointer to the constant referenced memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The referenced buffer is owned by the ReadMemory object and must not be freed by the client.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pDataSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to a variable that will be filled with the memory size, in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a pointer to the referenced memory. The referenced buffer is owned by the <ref refid="classdicomhero_1_1_memory" kindref="compound">Memory</ref> object and must not be freed by the client. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="136" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_1a424efb3540d5b6bea81e3a68590c33c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dicomhero::Memory::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+<para>Return true if the referenced memory is zero bytes long or hasn&apos;t been allocated yet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the referenced memory does not exist or is empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="145" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdicomhero_1_1_memory_1a0bf84818849c5a2abead6a409787a247" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::Memory::Memory</definition>
+        <argsstring>(const std::shared_ptr&lt; const implementation::memory &gt; &amp;pMemory)</argsstring>
+        <name>Memory</name>
+        <param>
+          <type>const std::shared_ptr&lt; const implementation::memory &gt; &amp;</type>
+          <declname>pMemory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="149" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Manages a read-only buffer of memory. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The buffer of memory is usually associated with a <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref> buffer content.</para>
+<para>The memory used by <ref refid="classdicomhero_1_1_memory" kindref="compound">Memory</ref> and <ref refid="classdicomhero_1_1_mutable_memory" kindref="compound">MutableMemory</ref> is managed by <ref refid="classdicomhero_1_1_memory_pool" kindref="compound">MemoryPool</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dicomhero::Memory</label>
+        <link refid="classdicomhero_1_1_memory"/>
+      </node>
+      <node id="2">
+        <label>dicomhero::MutableMemory</label>
+        <link refid="classdicomhero_1_1_mutable_memory"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" line="42" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memory.h" bodystart="43" bodyend="155"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_memory_1ada7a51e2b2f86a9450bf5144d254e852" prot="public" virt="non-virtual"><scope>dicomhero::Memory</scope><name>data</name></member>
+      <member refid="classdicomhero_1_1_memory_1afe141eaff059fbcb21219218e828eb2e" prot="public" virt="non-virtual"><scope>dicomhero::Memory</scope><name>data</name></member>
+      <member refid="classdicomhero_1_1_memory_1a7ca74e22819a766e2c8903149e8e2fbe" prot="private" virt="non-virtual"><scope>dicomhero::Memory</scope><name>DrawBitmap</name></member>
+      <member refid="classdicomhero_1_1_memory_1a424efb3540d5b6bea81e3a68590c33c4" prot="public" virt="non-virtual"><scope>dicomhero::Memory</scope><name>empty</name></member>
+      <member refid="classdicomhero_1_1_memory_1a59da7fa5fe83c79436264560ef96701f" prot="private" virt="non-virtual"><scope>dicomhero::Memory</scope><name>getMemoryImplementation</name></member>
+      <member refid="classdicomhero_1_1_memory_1ab30ef0f9935d9f11514b7c6d061df1e8" prot="private" virt="non-virtual"><scope>dicomhero::Memory</scope><name>m_pMemory</name></member>
+      <member refid="classdicomhero_1_1_memory_1aac338d897b2b1f288b2136048648fb55" prot="public" virt="non-virtual"><scope>dicomhero::Memory</scope><name>Memory</name></member>
+      <member refid="classdicomhero_1_1_memory_1a17c13e4e9d997f879d9062ffc34eb3c8" prot="public" virt="non-virtual"><scope>dicomhero::Memory</scope><name>Memory</name></member>
+      <member refid="classdicomhero_1_1_memory_1a5b9d5f6132045439376990938462b75f" prot="public" virt="non-virtual"><scope>dicomhero::Memory</scope><name>Memory</name></member>
+      <member refid="classdicomhero_1_1_memory_1a0bf84818849c5a2abead6a409787a247" prot="protected" virt="non-virtual"><scope>dicomhero::Memory</scope><name>Memory</name></member>
+      <member refid="classdicomhero_1_1_memory_1a030b2822a1e885086dd2645588a45928" prot="public" virt="non-virtual"><scope>dicomhero::Memory</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_memory_1ad34c5492f4d294d0b49ca5a22333c792" prot="private" virt="non-virtual"><scope>dicomhero::Memory</scope><name>ReadingDataHandlerNumeric</name></member>
+      <member refid="classdicomhero_1_1_memory_1a2a7a684085a9d225ec380fc021025873" prot="public" virt="non-virtual"><scope>dicomhero::Memory</scope><name>regionData</name></member>
+      <member refid="classdicomhero_1_1_memory_1a3c28531a6e65e9bcf0774aa8a90d76df" prot="public" virt="non-virtual"><scope>dicomhero::Memory</scope><name>size</name></member>
+      <member refid="classdicomhero_1_1_memory_1a4d85a7d064e7ed4c07eb081d9d73d75c" prot="private" virt="non-virtual"><scope>dicomhero::Memory</scope><name>StreamReader</name></member>
+      <member refid="classdicomhero_1_1_memory_1adb26f73e4d4438c7dc4182abd5d469c5" prot="public" virt="virtual"><scope>dicomhero::Memory</scope><name>~Memory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

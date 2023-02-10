@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_version" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroVersion</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_version.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_dicomhero_version_1aaef3cc0eae6f09ccb3ea00033a6d8841" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroVersion::DicomheroGetVersion</definition>
+        <argsstring>()</argsstring>
+        <name>DicomheroGetVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_version.h" line="1" column="0"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Return information about the library&apos;s version. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_version.h" line="23" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_version.h" bodystart="24" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_version_1aaef3cc0eae6f09ccb3ea00033a6d8841" prot="public" virt="virtual"><scope>DicomheroVersion</scope><name>DicomheroGetVersion</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

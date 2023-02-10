@@ -1,0 +1,1002 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dimse_8h" kind="file" language="C++">
+    <compoundname>dimse.h</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes refid="acse_8h" local="yes">acse.h</includes>
+    <includes refid="definitions_8h" local="yes">definitions.h</includes>
+    <includedby refid="library_2include_2dicomhero6_2dicomhero_8h" local="yes">dicomhero.h</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>acse.h</label>
+        <link refid="acse_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>dimse.h</label>
+        <link refid="dimse_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>definitions.h</label>
+        <link refid="definitions_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classdicomhero_1_1_dimse_command_base" prot="public">dicomhero::DimseCommandBase</innerclass>
+    <innerclass refid="classdicomhero_1_1_dimse_command" prot="public">dicomhero::DimseCommand</innerclass>
+    <innerclass refid="classdicomhero_1_1_dimse_response" prot="public">dicomhero::DimseResponse</innerclass>
+    <innerclass refid="classdicomhero_1_1_c_partial_response" prot="public">dicomhero::CPartialResponse</innerclass>
+    <innerclass refid="classdicomhero_1_1_c_store_command" prot="public">dicomhero::CStoreCommand</innerclass>
+    <innerclass refid="classdicomhero_1_1_c_store_response" prot="public">dicomhero::CStoreResponse</innerclass>
+    <innerclass refid="classdicomhero_1_1_c_get_command" prot="public">dicomhero::CGetCommand</innerclass>
+    <innerclass refid="classdicomhero_1_1_c_get_response" prot="public">dicomhero::CGetResponse</innerclass>
+    <innerclass refid="classdicomhero_1_1_c_find_command" prot="public">dicomhero::CFindCommand</innerclass>
+    <innerclass refid="classdicomhero_1_1_c_find_response" prot="public">dicomhero::CFindResponse</innerclass>
+    <innerclass refid="classdicomhero_1_1_c_move_command" prot="public">dicomhero::CMoveCommand</innerclass>
+    <innerclass refid="classdicomhero_1_1_c_move_response" prot="public">dicomhero::CMoveResponse</innerclass>
+    <innerclass refid="classdicomhero_1_1_c_echo_command" prot="public">dicomhero::CEchoCommand</innerclass>
+    <innerclass refid="classdicomhero_1_1_c_echo_response" prot="public">dicomhero::CEchoResponse</innerclass>
+    <innerclass refid="classdicomhero_1_1_c_cancel_command" prot="public">dicomhero::CCancelCommand</innerclass>
+    <innerclass refid="classdicomhero_1_1_n_event_report_command" prot="public">dicomhero::NEventReportCommand</innerclass>
+    <innerclass refid="classdicomhero_1_1_n_event_report_response" prot="public">dicomhero::NEventReportResponse</innerclass>
+    <innerclass refid="classdicomhero_1_1_n_get_command" prot="public">dicomhero::NGetCommand</innerclass>
+    <innerclass refid="classdicomhero_1_1_n_get_response" prot="public">dicomhero::NGetResponse</innerclass>
+    <innerclass refid="classdicomhero_1_1_n_set_command" prot="public">dicomhero::NSetCommand</innerclass>
+    <innerclass refid="classdicomhero_1_1_n_set_response" prot="public">dicomhero::NSetResponse</innerclass>
+    <innerclass refid="classdicomhero_1_1_n_action_command" prot="public">dicomhero::NActionCommand</innerclass>
+    <innerclass refid="classdicomhero_1_1_n_action_response" prot="public">dicomhero::NActionResponse</innerclass>
+    <innerclass refid="classdicomhero_1_1_n_create_command" prot="public">dicomhero::NCreateCommand</innerclass>
+    <innerclass refid="classdicomhero_1_1_n_create_response" prot="public">dicomhero::NCreateResponse</innerclass>
+    <innerclass refid="classdicomhero_1_1_n_delete_command" prot="public">dicomhero::NDeleteCommand</innerclass>
+    <innerclass refid="classdicomhero_1_1_n_delete_response" prot="public">dicomhero::NDeleteResponse</innerclass>
+    <innerclass refid="classdicomhero_1_1_dimse_service" prot="public">dicomhero::DimseService</innerclass>
+    <innernamespace refid="namespacedicomhero">dicomhero</innernamespace>
+    <innernamespace refid="namespacedicomhero_1_1implementation">dicomhero::implementation</innernamespace>
+    <briefdescription>
+<para>Declaration of the the DIMSE classes. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>2005<sp/>-<sp/>2021<sp/>by<sp/>Paolo<sp/>Brandoli/Binarno<sp/>s.p.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">DICOMHero/Imebra<sp/>is<sp/>available<sp/>for<sp/>free<sp/>under<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">The<sp/>full<sp/>text<sp/>of<sp/>the<sp/>license<sp/>is<sp/>available<sp/>in<sp/>the<sp/>file<sp/>license.rst</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>in<sp/>the<sp/>project<sp/>root<sp/>folder.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">If<sp/>you<sp/>do<sp/>not<sp/>want<sp/>to<sp/>be<sp/>bound<sp/>by<sp/>the<sp/>GPL<sp/>terms<sp/>(such<sp/>as<sp/>the<sp/>requirement</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>that<sp/>your<sp/>application<sp/>must<sp/>also<sp/>be<sp/>GPL),<sp/>you<sp/>may<sp/>purchase<sp/>a<sp/>commercial</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>license<sp/>for<sp/>DICOMHero/Imebra<sp/>from<sp/>the<sp/>DICOMHero’s<sp/>website<sp/>(https://dicomhero.com).</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(imebraDIMSE__INCLUDED_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>imebraDIMSE__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="acse_8h" kindref="compound">acse.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="definitions_8h" kindref="compound">definitions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">dicomhero</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">implementation</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">dimseCommandBase;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">dimseService;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">dimseNCommand;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">dimseCCommand;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">dimseResponse;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">cPartialResponse;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">cStoreResponse;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">cStoreCommand;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">cGetCommand;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">cGetResponse;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">cFindCommand;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">cFindResponse;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">cMoveCommand;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">cMoveResponse;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">cEchoCommand;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">cEchoResponse;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">cCancelCommand;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">nEventReportCommand;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">nEventReportResponse;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">nGetCommand;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">nGetResponse;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">nSetCommand;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">nSetResponse;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">nActionCommand;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">nActionResponse;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">nCreateCommand;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">nCreateResponse;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">nDeleteCommand;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">nDeleteResponse;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">DataSet;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CStoreCommand;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CMoveCommand;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CGetCommand;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CFindCommand;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CEchoCommand;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CCancelCommand;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">NActionCommand;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">NEventReportCommand;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">NCreateCommand;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">NDeleteCommand;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">NSetCommand;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">NGetCommand;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classdicomhero_1_1_dimse_command_base" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_dimse_command_base" kindref="compound">DimseCommandBase</ref></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_dimse_command_base" kindref="compound">DimseCommandBase</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_dimse_command_base" kindref="compound">DimseCommandBase</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command_base" kindref="compound">DimseCommandBase</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_dimse_command_base" kindref="compound">DimseCommandBase</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command_base" kindref="compound">DimseCommandBase</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref><sp/>getCommandDataSet()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref><sp/>getPayloadDataSet()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>getAbstractSyntax()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>getAffectedSopInstanceUid()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>getAffectedSopClassUid()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>getRequestedSopInstanceUid()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>getRequestedSopClassUid()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SWIG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command_base" kindref="compound">DimseCommandBase</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::dimseCommandBase&gt;&amp;<sp/>pCommand);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::dimseCommandBase&gt;&amp;<sp/>getDimseCommandBaseImplementation(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command_base" kindref="compound">DimseCommandBase</ref>&amp;<sp/>dimseCommandBase);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;implementation::dimseCommandBase&gt;<sp/>m_pCommand;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="classdicomhero_1_1_dimse_command" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command_base" kindref="compound">DimseCommandBase</ref></highlight></codeline>
+<codeline lineno="178"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint16_t<sp/>getID()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a7279e4e5761c3824449170ec61b0a95c" kindref="member">dimseCommandType_t</ref><sp/>getCommandType()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_store_command" kindref="compound">CStoreCommand</ref><sp/>getAsCStoreCommand()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_move_command" kindref="compound">CMoveCommand</ref><sp/>getAsCMoveCommand()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_get_command" kindref="compound">CGetCommand</ref><sp/>getAsCGetCommand()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_find_command" kindref="compound">CFindCommand</ref><sp/>getAsCFindCommand()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_echo_command" kindref="compound">CEchoCommand</ref><sp/>getAsCEchoCommand()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_cancel_command" kindref="compound">CCancelCommand</ref><sp/>getAsCCancelCommand()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref><sp/>getAsNActionCommand()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref><sp/>getAsNEventReportCommand()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref><sp/>getAsNCreateCommand()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_delete_command" kindref="compound">NDeleteCommand</ref><sp/>getAsNDeleteCommand()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref><sp/>getAsNSetCommand()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_get_command" kindref="compound">NGetCommand</ref><sp/>getAsNGetCommand()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::dimseNCommand&gt;&amp;<sp/>pCommand);</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"></highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="447" refid="classdicomhero_1_1_dimse_response" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command_base" kindref="compound">DimseCommandBase</ref></highlight></codeline>
+<codeline lineno="448"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"></highlight></codeline>
+<codeline lineno="450"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref>();</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"></highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"></highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a0e9647ca08c73851de0a7f5bd158584a" kindref="member">dimseStatus_t</ref><sp/>getStatus()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"></highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint16_t<sp/>getStatusCode()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"></highlight></codeline>
+<codeline lineno="479"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::dimseResponse&gt;&amp;<sp/>pResponse);</highlight></codeline>
+<codeline lineno="481"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"></highlight></codeline>
+<codeline lineno="483"><highlight class="normal"></highlight></codeline>
+<codeline lineno="489" refid="classdicomhero_1_1_c_partial_response" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_c_partial_response" kindref="compound">CPartialResponse</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref></highlight></codeline>
+<codeline lineno="490"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"></highlight></codeline>
+<codeline lineno="492"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_partial_response" kindref="compound">CPartialResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_partial_response" kindref="compound">CPartialResponse</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"></highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_c_partial_response" kindref="compound">CPartialResponse</ref>();</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"></highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_partial_response" kindref="compound">CPartialResponse</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_partial_response" kindref="compound">CPartialResponse</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"></highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint32_t<sp/>getRemainingSubOperations()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"></highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint32_t<sp/>getCompletedSubOperations()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"></highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint32_t<sp/>getFailedSubOperations()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"></highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint32_t<sp/>getWarningSubOperations()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"></highlight></codeline>
+<codeline lineno="539"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_partial_response" kindref="compound">CPartialResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::cPartialResponse&gt;&amp;<sp/>pResponse);</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"></highlight></codeline>
+<codeline lineno="542"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"></highlight></codeline>
+<codeline lineno="544"><highlight class="normal"></highlight></codeline>
+<codeline lineno="549" refid="classdicomhero_1_1_c_store_command" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_c_store_command" kindref="compound">CStoreCommand</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref></highlight></codeline>
+<codeline lineno="550"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>;</highlight></codeline>
+<codeline lineno="552"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="553"><highlight class="normal"></highlight></codeline>
+<codeline lineno="554"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="576"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_store_command" kindref="compound">CStoreCommand</ref>(</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>abstractSyntax,</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>messageID,</highlight></codeline>
+<codeline lineno="579"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a02923fa5fc1c9bbea4dae876b4fd5227" kindref="member">dimseCommandPriority_t</ref><sp/>priority,</highlight></codeline>
+<codeline lineno="580"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>affectedSopClassUid,</highlight></codeline>
+<codeline lineno="581"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>affectedSopInstanceUid,</highlight></codeline>
+<codeline lineno="582"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>originatorAET,</highlight></codeline>
+<codeline lineno="583"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>originatorMessageID,</highlight></codeline>
+<codeline lineno="584"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>&amp;<sp/>payload);</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"></highlight></codeline>
+<codeline lineno="592"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_store_command" kindref="compound">CStoreCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_store_command" kindref="compound">CStoreCommand</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"></highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_c_store_command" kindref="compound">CStoreCommand</ref>();</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"></highlight></codeline>
+<codeline lineno="596"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_store_command" kindref="compound">CStoreCommand</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_store_command" kindref="compound">CStoreCommand</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="597"><highlight class="normal"></highlight></codeline>
+<codeline lineno="607"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>getOriginatorAET()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="608"><highlight class="normal"></highlight></codeline>
+<codeline lineno="618"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint16_t<sp/>getOriginatorMessageID()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="619"><highlight class="normal"></highlight></codeline>
+<codeline lineno="620"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="621"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_store_command" kindref="compound">CStoreCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::cStoreCommand&gt;&amp;<sp/>pCommand);</highlight></codeline>
+<codeline lineno="622"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="623"><highlight class="normal"></highlight></codeline>
+<codeline lineno="624"><highlight class="normal"></highlight></codeline>
+<codeline lineno="629" refid="classdicomhero_1_1_c_store_response" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_c_store_response" kindref="compound">CStoreResponse</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref></highlight></codeline>
+<codeline lineno="630"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="631"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="632"><highlight class="normal"></highlight></codeline>
+<codeline lineno="633"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="642"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_store_response" kindref="compound">CStoreResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_store_command" kindref="compound">CStoreCommand</ref>&amp;<sp/>command,<sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref><sp/>responseCode);</highlight></codeline>
+<codeline lineno="643"><highlight class="normal"></highlight></codeline>
+<codeline lineno="650"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_store_response" kindref="compound">CStoreResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_store_response" kindref="compound">CStoreResponse</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="651"><highlight class="normal"></highlight></codeline>
+<codeline lineno="652"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_c_store_response" kindref="compound">CStoreResponse</ref>();</highlight></codeline>
+<codeline lineno="653"><highlight class="normal"></highlight></codeline>
+<codeline lineno="654"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_store_response" kindref="compound">CStoreResponse</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_store_response" kindref="compound">CStoreResponse</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="655"><highlight class="normal"></highlight></codeline>
+<codeline lineno="656"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="657"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_store_response" kindref="compound">CStoreResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::cStoreResponse&gt;&amp;<sp/>pResponse);</highlight></codeline>
+<codeline lineno="658"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="659"><highlight class="normal"></highlight></codeline>
+<codeline lineno="660"><highlight class="normal"></highlight></codeline>
+<codeline lineno="670" refid="classdicomhero_1_1_c_get_command" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_c_get_command" kindref="compound">CGetCommand</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref></highlight></codeline>
+<codeline lineno="671"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="672"><highlight class="normal"></highlight></codeline>
+<codeline lineno="673"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>;</highlight></codeline>
+<codeline lineno="675"><highlight class="normal"></highlight></codeline>
+<codeline lineno="676"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="694"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_get_command" kindref="compound">CGetCommand</ref>(</highlight></codeline>
+<codeline lineno="695"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>abstractSyntax,</highlight></codeline>
+<codeline lineno="696"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>messageID,</highlight></codeline>
+<codeline lineno="697"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a02923fa5fc1c9bbea4dae876b4fd5227" kindref="member">dimseCommandPriority_t</ref><sp/>priority,</highlight></codeline>
+<codeline lineno="698"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>affectedSopClassUid,</highlight></codeline>
+<codeline lineno="699"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>&amp;<sp/>identifier);</highlight></codeline>
+<codeline lineno="700"><highlight class="normal"></highlight></codeline>
+<codeline lineno="707"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_get_command" kindref="compound">CGetCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_get_command" kindref="compound">CGetCommand</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="708"><highlight class="normal"></highlight></codeline>
+<codeline lineno="709"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_c_get_command" kindref="compound">CGetCommand</ref>();</highlight></codeline>
+<codeline lineno="710"><highlight class="normal"></highlight></codeline>
+<codeline lineno="711"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_get_command" kindref="compound">CGetCommand</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_get_command" kindref="compound">CGetCommand</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="712"><highlight class="normal"></highlight></codeline>
+<codeline lineno="713"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="714"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_get_command" kindref="compound">CGetCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::cGetCommand&gt;&amp;<sp/>pCommand);</highlight></codeline>
+<codeline lineno="715"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="716"><highlight class="normal"></highlight></codeline>
+<codeline lineno="717"><highlight class="normal"></highlight></codeline>
+<codeline lineno="722" refid="classdicomhero_1_1_c_get_response" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_c_get_response" kindref="compound">CGetResponse</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_partial_response" kindref="compound">CPartialResponse</ref></highlight></codeline>
+<codeline lineno="723"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="724"><highlight class="normal"></highlight></codeline>
+<codeline lineno="725"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="726"><highlight class="normal"></highlight></codeline>
+<codeline lineno="727"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="728"><highlight class="normal"></highlight></codeline>
+<codeline lineno="755"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_get_response" kindref="compound">CGetResponse</ref>(</highlight></codeline>
+<codeline lineno="756"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_get_command" kindref="compound">CGetCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="757"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref><sp/>responseCode,</highlight></codeline>
+<codeline lineno="758"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint32_t<sp/>remainingSubOperations,</highlight></codeline>
+<codeline lineno="759"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint32_t<sp/>completedSubOperations,</highlight></codeline>
+<codeline lineno="760"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint32_t<sp/>failedSubOperations,</highlight></codeline>
+<codeline lineno="761"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint32_t<sp/>warningSubOperations,</highlight></codeline>
+<codeline lineno="762"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>&amp;<sp/>identifier);</highlight></codeline>
+<codeline lineno="763"><highlight class="normal"></highlight></codeline>
+<codeline lineno="782"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_get_response" kindref="compound">CGetResponse</ref>(</highlight></codeline>
+<codeline lineno="783"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_get_command" kindref="compound">CGetCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="784"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref><sp/>responseCode,</highlight></codeline>
+<codeline lineno="785"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint32_t<sp/>remainingSubOperations,</highlight></codeline>
+<codeline lineno="786"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint32_t<sp/>completedSubOperations,</highlight></codeline>
+<codeline lineno="787"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint32_t<sp/>failedSubOperations,</highlight></codeline>
+<codeline lineno="788"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint32_t<sp/>warningSubOperations);</highlight></codeline>
+<codeline lineno="789"><highlight class="normal"></highlight></codeline>
+<codeline lineno="796"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_get_response" kindref="compound">CGetResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_get_response" kindref="compound">CGetResponse</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="797"><highlight class="normal"></highlight></codeline>
+<codeline lineno="798"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_c_get_response" kindref="compound">CGetResponse</ref>();</highlight></codeline>
+<codeline lineno="799"><highlight class="normal"></highlight></codeline>
+<codeline lineno="800"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_get_response" kindref="compound">CGetResponse</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_get_response" kindref="compound">CGetResponse</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="801"><highlight class="normal"></highlight></codeline>
+<codeline lineno="802"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="803"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_get_response" kindref="compound">CGetResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::cGetResponse&gt;&amp;<sp/>pResponse);</highlight></codeline>
+<codeline lineno="804"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="805"><highlight class="normal"></highlight></codeline>
+<codeline lineno="806"><highlight class="normal"></highlight></codeline>
+<codeline lineno="811" refid="classdicomhero_1_1_c_find_command" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_c_find_command" kindref="compound">CFindCommand</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref></highlight></codeline>
+<codeline lineno="812"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="813"><highlight class="normal"></highlight></codeline>
+<codeline lineno="814"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="815"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>;</highlight></codeline>
+<codeline lineno="816"><highlight class="normal"></highlight></codeline>
+<codeline lineno="817"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="836"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_find_command" kindref="compound">CFindCommand</ref>(</highlight></codeline>
+<codeline lineno="837"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>abstractSyntax,</highlight></codeline>
+<codeline lineno="838"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>messageID,</highlight></codeline>
+<codeline lineno="839"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a02923fa5fc1c9bbea4dae876b4fd5227" kindref="member">dimseCommandPriority_t</ref><sp/>priority,</highlight></codeline>
+<codeline lineno="840"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>affectedSopClassUid,</highlight></codeline>
+<codeline lineno="841"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>&amp;<sp/>identifier);</highlight></codeline>
+<codeline lineno="842"><highlight class="normal"></highlight></codeline>
+<codeline lineno="849"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_find_command" kindref="compound">CFindCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_find_command" kindref="compound">CFindCommand</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="850"><highlight class="normal"></highlight></codeline>
+<codeline lineno="851"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_c_find_command" kindref="compound">CFindCommand</ref>();</highlight></codeline>
+<codeline lineno="852"><highlight class="normal"></highlight></codeline>
+<codeline lineno="853"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_find_command" kindref="compound">CFindCommand</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_find_command" kindref="compound">CFindCommand</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="854"><highlight class="normal"></highlight></codeline>
+<codeline lineno="855"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="856"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_find_command" kindref="compound">CFindCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::cFindCommand&gt;&amp;<sp/>pCommand);</highlight></codeline>
+<codeline lineno="857"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="858"><highlight class="normal"></highlight></codeline>
+<codeline lineno="859"><highlight class="normal"></highlight></codeline>
+<codeline lineno="864" refid="classdicomhero_1_1_c_find_response" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_c_find_response" kindref="compound">CFindResponse</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref></highlight></codeline>
+<codeline lineno="865"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="866"><highlight class="normal"></highlight></codeline>
+<codeline lineno="867"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="868"><highlight class="normal"></highlight></codeline>
+<codeline lineno="869"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="881"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_find_response" kindref="compound">CFindResponse</ref>(</highlight></codeline>
+<codeline lineno="882"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_find_command" kindref="compound">CFindCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="883"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>&amp;<sp/>identifier);</highlight></codeline>
+<codeline lineno="884"><highlight class="normal"></highlight></codeline>
+<codeline lineno="894"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_find_response" kindref="compound">CFindResponse</ref>(</highlight></codeline>
+<codeline lineno="895"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_find_command" kindref="compound">CFindCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="896"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref><sp/>responseCode);</highlight></codeline>
+<codeline lineno="897"><highlight class="normal"></highlight></codeline>
+<codeline lineno="904"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_find_response" kindref="compound">CFindResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_find_response" kindref="compound">CFindResponse</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="905"><highlight class="normal"></highlight></codeline>
+<codeline lineno="906"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_c_find_response" kindref="compound">CFindResponse</ref>();</highlight></codeline>
+<codeline lineno="907"><highlight class="normal"></highlight></codeline>
+<codeline lineno="908"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_find_response" kindref="compound">CFindResponse</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_find_response" kindref="compound">CFindResponse</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="909"><highlight class="normal"></highlight></codeline>
+<codeline lineno="910"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="911"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_find_response" kindref="compound">CFindResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::cFindResponse&gt;&amp;<sp/>pResponse);</highlight></codeline>
+<codeline lineno="912"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="913"><highlight class="normal"></highlight></codeline>
+<codeline lineno="914"><highlight class="normal"></highlight></codeline>
+<codeline lineno="919" refid="classdicomhero_1_1_c_move_command" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_c_move_command" kindref="compound">CMoveCommand</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref></highlight></codeline>
+<codeline lineno="920"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="921"><highlight class="normal"></highlight></codeline>
+<codeline lineno="922"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="923"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>;</highlight></codeline>
+<codeline lineno="924"><highlight class="normal"></highlight></codeline>
+<codeline lineno="925"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="945"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_move_command" kindref="compound">CMoveCommand</ref>(</highlight></codeline>
+<codeline lineno="946"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>abstractSyntax,</highlight></codeline>
+<codeline lineno="947"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>messageID,</highlight></codeline>
+<codeline lineno="948"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a02923fa5fc1c9bbea4dae876b4fd5227" kindref="member">dimseCommandPriority_t</ref><sp/>priority,</highlight></codeline>
+<codeline lineno="949"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>affectedSopClassUid,</highlight></codeline>
+<codeline lineno="950"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>destinationAET,</highlight></codeline>
+<codeline lineno="951"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>&amp;<sp/>identifier);</highlight></codeline>
+<codeline lineno="952"><highlight class="normal"></highlight></codeline>
+<codeline lineno="959"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_move_command" kindref="compound">CMoveCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_move_command" kindref="compound">CMoveCommand</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="960"><highlight class="normal"></highlight></codeline>
+<codeline lineno="961"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_c_move_command" kindref="compound">CMoveCommand</ref>();</highlight></codeline>
+<codeline lineno="962"><highlight class="normal"></highlight></codeline>
+<codeline lineno="963"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_move_command" kindref="compound">CMoveCommand</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_move_command" kindref="compound">CMoveCommand</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="964"><highlight class="normal"></highlight></codeline>
+<codeline lineno="971"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>getDestinationAET()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="972"><highlight class="normal"></highlight></codeline>
+<codeline lineno="973"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="974"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_move_command" kindref="compound">CMoveCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::cMoveCommand&gt;&amp;<sp/>pCommand);</highlight></codeline>
+<codeline lineno="975"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="976"><highlight class="normal"></highlight></codeline>
+<codeline lineno="977"><highlight class="normal"></highlight></codeline>
+<codeline lineno="982" refid="classdicomhero_1_1_c_move_response" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_c_move_response" kindref="compound">CMoveResponse</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_partial_response" kindref="compound">CPartialResponse</ref></highlight></codeline>
+<codeline lineno="983"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="984"><highlight class="normal"></highlight></codeline>
+<codeline lineno="985"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="986"><highlight class="normal"></highlight></codeline>
+<codeline lineno="987"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1014"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_move_response" kindref="compound">CMoveResponse</ref>(</highlight></codeline>
+<codeline lineno="1015"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_move_command" kindref="compound">CMoveCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="1016"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref><sp/>responseCode,</highlight></codeline>
+<codeline lineno="1017"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint32_t<sp/>remainingSubOperations,</highlight></codeline>
+<codeline lineno="1018"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint32_t<sp/>completedSubOperations,</highlight></codeline>
+<codeline lineno="1019"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint32_t<sp/>failedSubOperations,</highlight></codeline>
+<codeline lineno="1020"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint32_t<sp/>warningSubOperations,</highlight></codeline>
+<codeline lineno="1021"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>&amp;<sp/>identifier);</highlight></codeline>
+<codeline lineno="1022"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1041"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_move_response" kindref="compound">CMoveResponse</ref>(</highlight></codeline>
+<codeline lineno="1042"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_move_command" kindref="compound">CMoveCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="1043"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref><sp/>responseCode,</highlight></codeline>
+<codeline lineno="1044"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint32_t<sp/>remainingSubOperations,</highlight></codeline>
+<codeline lineno="1045"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint32_t<sp/>completedSubOperations,</highlight></codeline>
+<codeline lineno="1046"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint32_t<sp/>failedSubOperations,</highlight></codeline>
+<codeline lineno="1047"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint32_t<sp/>warningSubOperations);</highlight></codeline>
+<codeline lineno="1048"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1055"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_move_response" kindref="compound">CMoveResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_move_response" kindref="compound">CMoveResponse</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="1056"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1057"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_c_move_response" kindref="compound">CMoveResponse</ref>();</highlight></codeline>
+<codeline lineno="1058"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1059"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_move_response" kindref="compound">CMoveResponse</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_move_response" kindref="compound">CMoveResponse</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1060"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1061"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1062"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_move_response" kindref="compound">CMoveResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::cMoveResponse&gt;&amp;<sp/>pResponse);</highlight></codeline>
+<codeline lineno="1063"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1064"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1065"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1070" refid="classdicomhero_1_1_c_echo_command" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_c_echo_command" kindref="compound">CEchoCommand</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref></highlight></codeline>
+<codeline lineno="1071"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1072"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1073"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="1074"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>;</highlight></codeline>
+<codeline lineno="1075"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1076"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1092"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_echo_command" kindref="compound">CEchoCommand</ref>(</highlight></codeline>
+<codeline lineno="1093"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>abstractSyntax,</highlight></codeline>
+<codeline lineno="1094"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>messageID,</highlight></codeline>
+<codeline lineno="1095"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a02923fa5fc1c9bbea4dae876b4fd5227" kindref="member">dimseCommandPriority_t</ref><sp/>priority,</highlight></codeline>
+<codeline lineno="1096"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>affectedSopClassUid);</highlight></codeline>
+<codeline lineno="1097"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_echo_command" kindref="compound">CEchoCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_echo_command" kindref="compound">CEchoCommand</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="1105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_c_echo_command" kindref="compound">CEchoCommand</ref>();</highlight></codeline>
+<codeline lineno="1107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_echo_command" kindref="compound">CEchoCommand</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_echo_command" kindref="compound">CEchoCommand</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1110"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_echo_command" kindref="compound">CEchoCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::cEchoCommand&gt;&amp;<sp/>pCommand);</highlight></codeline>
+<codeline lineno="1112"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1119" refid="classdicomhero_1_1_c_echo_response" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_c_echo_response" kindref="compound">CEchoResponse</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref></highlight></codeline>
+<codeline lineno="1120"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="1123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1124"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_echo_response" kindref="compound">CEchoResponse</ref>(</highlight></codeline>
+<codeline lineno="1134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_echo_command" kindref="compound">CEchoCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="1135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref><sp/>responseCode);</highlight></codeline>
+<codeline lineno="1136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_echo_response" kindref="compound">CEchoResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_echo_response" kindref="compound">CEchoResponse</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="1144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_c_echo_response" kindref="compound">CEchoResponse</ref>();</highlight></codeline>
+<codeline lineno="1146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_echo_response" kindref="compound">CEchoResponse</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_echo_response" kindref="compound">CEchoResponse</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1149"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_echo_response" kindref="compound">CEchoResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::cEchoResponse&gt;&amp;<sp/>pResponse);</highlight></codeline>
+<codeline lineno="1151"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1158" refid="classdicomhero_1_1_c_cancel_command" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_c_cancel_command" kindref="compound">CCancelCommand</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref></highlight></codeline>
+<codeline lineno="1159"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="1162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>;</highlight></codeline>
+<codeline lineno="1163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1164"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_cancel_command" kindref="compound">CCancelCommand</ref>(</highlight></codeline>
+<codeline lineno="1181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>abstractSyntax,</highlight></codeline>
+<codeline lineno="1182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>messageID,</highlight></codeline>
+<codeline lineno="1183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a02923fa5fc1c9bbea4dae876b4fd5227" kindref="member">dimseCommandPriority_t</ref><sp/>priority,</highlight></codeline>
+<codeline lineno="1184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>cancelMessageID);</highlight></codeline>
+<codeline lineno="1185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1192"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_cancel_command" kindref="compound">CCancelCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_cancel_command" kindref="compound">CCancelCommand</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="1193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_c_cancel_command" kindref="compound">CCancelCommand</ref>();</highlight></codeline>
+<codeline lineno="1195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1196"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_cancel_command" kindref="compound">CCancelCommand</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_cancel_command" kindref="compound">CCancelCommand</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1204"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint16_t<sp/>getCancelMessageID()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1206"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_cancel_command" kindref="compound">CCancelCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::cCancelCommand&gt;&amp;<sp/>pCommand);</highlight></codeline>
+<codeline lineno="1208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1209"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1216" refid="classdicomhero_1_1_n_event_report_command" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref></highlight></codeline>
+<codeline lineno="1217"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="1220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>;</highlight></codeline>
+<codeline lineno="1221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1222"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref>(</highlight></codeline>
+<codeline lineno="1240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>abstractSyntax,</highlight></codeline>
+<codeline lineno="1241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>messageID,</highlight></codeline>
+<codeline lineno="1242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>affectedSopClassUid,</highlight></codeline>
+<codeline lineno="1243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>affectedSopInstanceUid,</highlight></codeline>
+<codeline lineno="1244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>eventID</highlight></codeline>
+<codeline lineno="1245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref>(</highlight></codeline>
+<codeline lineno="1266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>abstractSyntax,</highlight></codeline>
+<codeline lineno="1267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>messageID,</highlight></codeline>
+<codeline lineno="1268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>affectedSopClassUid,</highlight></codeline>
+<codeline lineno="1269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>affectedSopInstanceUid,</highlight></codeline>
+<codeline lineno="1270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>eventID,</highlight></codeline>
+<codeline lineno="1271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>&amp;<sp/>eventInformation</highlight></codeline>
+<codeline lineno="1272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1280"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="1281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref>();</highlight></codeline>
+<codeline lineno="1283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1284"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1292"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint16_t<sp/>getEventID()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1294"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::nEventReportCommand&gt;&amp;<sp/>pCommand);</highlight></codeline>
+<codeline lineno="1296"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1303" refid="classdicomhero_1_1_n_event_report_response" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_n_event_report_response" kindref="compound">NEventReportResponse</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref></highlight></codeline>
+<codeline lineno="1304"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="1307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1308"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_event_report_response" kindref="compound">NEventReportResponse</ref>(</highlight></codeline>
+<codeline lineno="1319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="1320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>&amp;<sp/>eventReply</highlight></codeline>
+<codeline lineno="1321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_event_report_response" kindref="compound">NEventReportResponse</ref>(</highlight></codeline>
+<codeline lineno="1332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="1333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref><sp/>responseCode</highlight></codeline>
+<codeline lineno="1334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1342"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_event_report_response" kindref="compound">NEventReportResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_event_report_response" kindref="compound">NEventReportResponse</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="1343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_n_event_report_response" kindref="compound">NEventReportResponse</ref>();</highlight></codeline>
+<codeline lineno="1345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1346"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_event_report_response" kindref="compound">NEventReportResponse</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_event_report_response" kindref="compound">NEventReportResponse</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1355"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint16_t<sp/>getEventID()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1357"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_event_report_response" kindref="compound">NEventReportResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::nEventReportResponse&gt;&amp;<sp/>pResponse);</highlight></codeline>
+<codeline lineno="1359"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1366" refid="classdicomhero_1_1_n_get_command" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_n_get_command" kindref="compound">NGetCommand</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref></highlight></codeline>
+<codeline lineno="1367"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="1370"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>;</highlight></codeline>
+<codeline lineno="1371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1372"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1392"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_get_command" kindref="compound">NGetCommand</ref>(</highlight></codeline>
+<codeline lineno="1393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>abstractSyntax,</highlight></codeline>
+<codeline lineno="1394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>messageID,</highlight></codeline>
+<codeline lineno="1395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>requestedSopClassUid,</highlight></codeline>
+<codeline lineno="1396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>requestedSopInstanceUid,</highlight></codeline>
+<codeline lineno="1397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1afe5a6c98320c4a24eb38260c76a6f961" kindref="member">attributeIdentifierList_t</ref>&amp;<sp/>attributeIdentifierList</highlight></codeline>
+<codeline lineno="1398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1406"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_get_command" kindref="compound">NGetCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_get_command" kindref="compound">NGetCommand</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="1407"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1408"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_n_get_command" kindref="compound">NGetCommand</ref>();</highlight></codeline>
+<codeline lineno="1409"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1410"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_get_command" kindref="compound">NGetCommand</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_get_command" kindref="compound">NGetCommand</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1420"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1afe5a6c98320c4a24eb38260c76a6f961" kindref="member">attributeIdentifierList_t</ref><sp/>getAttributeList()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1421"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1422"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1423"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_get_command" kindref="compound">NGetCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::nGetCommand&gt;&amp;<sp/>pCommand);</highlight></codeline>
+<codeline lineno="1424"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1425"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1431" refid="classdicomhero_1_1_n_get_response" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_n_get_response" kindref="compound">NGetResponse</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref></highlight></codeline>
+<codeline lineno="1432"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1433"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1434"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="1435"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1436"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1447"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_get_response" kindref="compound">NGetResponse</ref>(</highlight></codeline>
+<codeline lineno="1448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_get_command" kindref="compound">NGetCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="1449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref><sp/>responseCode,</highlight></codeline>
+<codeline lineno="1450"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>&amp;<sp/>attributeList</highlight></codeline>
+<codeline lineno="1451"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1452"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1461"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_get_response" kindref="compound">NGetResponse</ref>(</highlight></codeline>
+<codeline lineno="1462"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_get_command" kindref="compound">NGetCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="1463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref><sp/>responseCode</highlight></codeline>
+<codeline lineno="1464"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1465"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1472"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_get_response" kindref="compound">NGetResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_get_response" kindref="compound">NGetResponse</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="1473"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1474"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_n_get_response" kindref="compound">NGetResponse</ref>();</highlight></codeline>
+<codeline lineno="1475"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1476"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_get_response" kindref="compound">NGetResponse</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_get_response" kindref="compound">NGetResponse</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1477"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1478"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1479"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_get_response" kindref="compound">NGetResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::nGetResponse&gt;&amp;<sp/>pResponse);</highlight></codeline>
+<codeline lineno="1480"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1481"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1482"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1487" refid="classdicomhero_1_1_n_set_command" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref></highlight></codeline>
+<codeline lineno="1488"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1489"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1490"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="1491"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>;</highlight></codeline>
+<codeline lineno="1492"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1493"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1512"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref>(</highlight></codeline>
+<codeline lineno="1513"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>abstractSyntax,</highlight></codeline>
+<codeline lineno="1514"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>messageID,</highlight></codeline>
+<codeline lineno="1515"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>requestedSopClassUid,</highlight></codeline>
+<codeline lineno="1516"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>requestedSopInstanceUid,</highlight></codeline>
+<codeline lineno="1517"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>&amp;<sp/>modificationList</highlight></codeline>
+<codeline lineno="1518"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1519"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1526"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="1527"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1528"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref>();</highlight></codeline>
+<codeline lineno="1529"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1530"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1531"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1532"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1533"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::nSetCommand&gt;&amp;<sp/>pCommand);</highlight></codeline>
+<codeline lineno="1534"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1535"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1541" refid="classdicomhero_1_1_n_set_response" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_n_set_response" kindref="compound">NSetResponse</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref></highlight></codeline>
+<codeline lineno="1542"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1543"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1544"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="1545"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1546"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1555"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_set_response" kindref="compound">NSetResponse</ref>(</highlight></codeline>
+<codeline lineno="1556"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="1557"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1afe5a6c98320c4a24eb38260c76a6f961" kindref="member">attributeIdentifierList_t</ref><sp/>modifiedAttributes</highlight></codeline>
+<codeline lineno="1558"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1559"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1568"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_set_response" kindref="compound">NSetResponse</ref>(</highlight></codeline>
+<codeline lineno="1569"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="1570"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref><sp/>responseCode</highlight></codeline>
+<codeline lineno="1571"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1572"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1579"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_set_response" kindref="compound">NSetResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_set_response" kindref="compound">NSetResponse</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="1580"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1581"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_n_set_response" kindref="compound">NSetResponse</ref>();</highlight></codeline>
+<codeline lineno="1582"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1583"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_set_response" kindref="compound">NSetResponse</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_set_response" kindref="compound">NSetResponse</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1584"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1591"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1afe5a6c98320c4a24eb38260c76a6f961" kindref="member">attributeIdentifierList_t</ref><sp/>getModifiedAttributes()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1592"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1593"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1594"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_set_response" kindref="compound">NSetResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::nSetResponse&gt;&amp;<sp/>pResponse);</highlight></codeline>
+<codeline lineno="1595"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1596"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1597"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1602" refid="classdicomhero_1_1_n_action_command" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref></highlight></codeline>
+<codeline lineno="1603"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1604"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1605"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="1606"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>;</highlight></codeline>
+<codeline lineno="1607"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1608"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1628"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref>(</highlight></codeline>
+<codeline lineno="1629"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>abstractSyntax,</highlight></codeline>
+<codeline lineno="1630"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>messageID,</highlight></codeline>
+<codeline lineno="1631"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>requestedSopClassUid,</highlight></codeline>
+<codeline lineno="1632"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>requestedSopInstanceUid,</highlight></codeline>
+<codeline lineno="1633"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>actionID,</highlight></codeline>
+<codeline lineno="1634"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>&amp;<sp/>actionInformation</highlight></codeline>
+<codeline lineno="1635"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1636"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1654"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref>(</highlight></codeline>
+<codeline lineno="1655"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>abstractSyntax,</highlight></codeline>
+<codeline lineno="1656"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>messageID,</highlight></codeline>
+<codeline lineno="1657"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>requestedSopClassUid,</highlight></codeline>
+<codeline lineno="1658"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>requestedSopInstanceUid,</highlight></codeline>
+<codeline lineno="1659"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>actionID</highlight></codeline>
+<codeline lineno="1660"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1661"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1668"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="1669"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1670"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref>();</highlight></codeline>
+<codeline lineno="1671"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1672"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1673"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1680"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint16_t<sp/>getActionID()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1681"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1682"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1683"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::nActionCommand&gt;&amp;<sp/>pCommand);</highlight></codeline>
+<codeline lineno="1684"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1685"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1686"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1691" refid="classdicomhero_1_1_n_action_response" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_n_action_response" kindref="compound">NActionResponse</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref></highlight></codeline>
+<codeline lineno="1692"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1693"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1694"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="1695"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1696"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1706"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_action_response" kindref="compound">NActionResponse</ref>(</highlight></codeline>
+<codeline lineno="1707"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="1708"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>&amp;<sp/>actionReply</highlight></codeline>
+<codeline lineno="1709"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1710"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1719"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_action_response" kindref="compound">NActionResponse</ref>(</highlight></codeline>
+<codeline lineno="1720"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="1721"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref><sp/>responseCode</highlight></codeline>
+<codeline lineno="1722"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1723"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1730"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_action_response" kindref="compound">NActionResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_action_response" kindref="compound">NActionResponse</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="1731"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1732"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_n_action_response" kindref="compound">NActionResponse</ref>();</highlight></codeline>
+<codeline lineno="1733"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1734"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_action_response" kindref="compound">NActionResponse</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_action_response" kindref="compound">NActionResponse</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1735"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1742"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint16_t<sp/>getActionID()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1743"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1744"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1745"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_action_response" kindref="compound">NActionResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::nActionResponse&gt;&amp;<sp/>pResponse);</highlight></codeline>
+<codeline lineno="1746"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1747"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1748"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1753" refid="classdicomhero_1_1_n_create_command" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref></highlight></codeline>
+<codeline lineno="1754"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1755"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1756"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="1757"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>;</highlight></codeline>
+<codeline lineno="1758"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1759"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1777"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref>(</highlight></codeline>
+<codeline lineno="1778"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>abstractSyntax,</highlight></codeline>
+<codeline lineno="1779"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>messageID,</highlight></codeline>
+<codeline lineno="1780"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>affectedSopClassUid,</highlight></codeline>
+<codeline lineno="1781"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>affectedSopInstanceUid,</highlight></codeline>
+<codeline lineno="1782"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>&amp;<sp/>attributeList</highlight></codeline>
+<codeline lineno="1783"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1784"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1800"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref>(</highlight></codeline>
+<codeline lineno="1801"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>abstractSyntax,</highlight></codeline>
+<codeline lineno="1802"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>messageID,</highlight></codeline>
+<codeline lineno="1803"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>affectedSopClassUid,</highlight></codeline>
+<codeline lineno="1804"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>affectedSopInstanceUid</highlight></codeline>
+<codeline lineno="1805"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1806"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1813"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="1814"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1815"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref>();</highlight></codeline>
+<codeline lineno="1816"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1817"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1818"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1819"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1820"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::nCreateCommand&gt;&amp;<sp/>pCommand);</highlight></codeline>
+<codeline lineno="1821"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1822"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1823"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1828" refid="classdicomhero_1_1_n_create_response" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_n_create_response" kindref="compound">NCreateResponse</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref></highlight></codeline>
+<codeline lineno="1829"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1830"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1831"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="1832"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1833"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1842"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_create_response" kindref="compound">NCreateResponse</ref>(</highlight></codeline>
+<codeline lineno="1843"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="1844"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>&amp;<sp/>attributeList</highlight></codeline>
+<codeline lineno="1845"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1846"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1856"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_create_response" kindref="compound">NCreateResponse</ref>(</highlight></codeline>
+<codeline lineno="1857"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="1858"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>affectedSopInstanceUid,</highlight></codeline>
+<codeline lineno="1859"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>&amp;<sp/>attributeList</highlight></codeline>
+<codeline lineno="1860"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1861"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1870"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_create_response" kindref="compound">NCreateResponse</ref>(</highlight></codeline>
+<codeline lineno="1871"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="1872"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref><sp/>responseCode</highlight></codeline>
+<codeline lineno="1873"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1874"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1883"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_create_response" kindref="compound">NCreateResponse</ref>(</highlight></codeline>
+<codeline lineno="1884"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="1885"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>affectedSopInstanceUid</highlight></codeline>
+<codeline lineno="1886"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1887"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1894"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_create_response" kindref="compound">NCreateResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_create_response" kindref="compound">NCreateResponse</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="1895"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1896"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_n_create_response" kindref="compound">NCreateResponse</ref>();</highlight></codeline>
+<codeline lineno="1897"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1898"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_create_response" kindref="compound">NCreateResponse</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_create_response" kindref="compound">NCreateResponse</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1899"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1900"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1901"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_create_response" kindref="compound">NCreateResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::nCreateResponse&gt;&amp;<sp/>pResponse);</highlight></codeline>
+<codeline lineno="1902"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1903"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1904"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1909" refid="classdicomhero_1_1_n_delete_command" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_n_delete_command" kindref="compound">NDeleteCommand</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref></highlight></codeline>
+<codeline lineno="1910"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1911"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1912"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="1913"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref>;</highlight></codeline>
+<codeline lineno="1914"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1915"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1931"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_delete_command" kindref="compound">NDeleteCommand</ref>(</highlight></codeline>
+<codeline lineno="1932"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>abstractSyntax,</highlight></codeline>
+<codeline lineno="1933"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>messageID,</highlight></codeline>
+<codeline lineno="1934"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>requestedSopClassUid,</highlight></codeline>
+<codeline lineno="1935"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>requestedSopInstanceUid</highlight></codeline>
+<codeline lineno="1936"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1937"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1944"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_delete_command" kindref="compound">NDeleteCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_delete_command" kindref="compound">NDeleteCommand</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="1945"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1946"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_n_delete_command" kindref="compound">NDeleteCommand</ref>();</highlight></codeline>
+<codeline lineno="1947"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1948"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_delete_command" kindref="compound">NDeleteCommand</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_delete_command" kindref="compound">NDeleteCommand</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1949"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1950"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1951"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_delete_command" kindref="compound">NDeleteCommand</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::nDeleteCommand&gt;&amp;<sp/>pCommand);</highlight></codeline>
+<codeline lineno="1952"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1953"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1954"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1959" refid="classdicomhero_1_1_n_delete_response" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_n_delete_response" kindref="compound">NDeleteResponse</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_response" kindref="compound">DimseResponse</ref></highlight></codeline>
+<codeline lineno="1960"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1961"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1962"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>;</highlight></codeline>
+<codeline lineno="1963"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1964"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1973"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_delete_response" kindref="compound">NDeleteResponse</ref>(</highlight></codeline>
+<codeline lineno="1974"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_delete_command" kindref="compound">NDeleteCommand</ref>&amp;<sp/>receivedCommand,</highlight></codeline>
+<codeline lineno="1975"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref><sp/>responseCode</highlight></codeline>
+<codeline lineno="1976"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="1977"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1984"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_delete_response" kindref="compound">NDeleteResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_delete_response" kindref="compound">NDeleteResponse</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="1985"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1986"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_n_delete_response" kindref="compound">NDeleteResponse</ref>();</highlight></codeline>
+<codeline lineno="1987"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1988"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_delete_response" kindref="compound">NDeleteResponse</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_delete_response" kindref="compound">NDeleteResponse</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1989"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1990"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1991"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_delete_response" kindref="compound">NDeleteResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::nDeleteResponse&gt;&amp;<sp/>pResponse);</highlight></codeline>
+<codeline lineno="1992"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1993"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1994"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2008" refid="classdicomhero_1_1_dimse_service" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref></highlight></codeline>
+<codeline lineno="2009"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="2010"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2011"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="2020"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>(<ref refid="classdicomhero_1_1_association_base" kindref="compound">AssociationBase</ref>&amp;<sp/>association);</highlight></codeline>
+<codeline lineno="2021"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2028"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="2029"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2030"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>();</highlight></codeline>
+<codeline lineno="2031"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2032"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="2033"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2046"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>getTransferSyntax(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>abstractSyntax)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="2047"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2058"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint16_t<sp/>getNextCommandID();</highlight></codeline>
+<codeline lineno="2059"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2092"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref><sp/>getCommand();</highlight></codeline>
+<codeline lineno="2093"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sendCommandOrResponse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_command_base" kindref="compound">DimseCommandBase</ref>&amp;<sp/>command);</highlight></codeline>
+<codeline lineno="2104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_store_response" kindref="compound">CStoreResponse</ref><sp/>getCStoreResponse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_store_command" kindref="compound">CStoreCommand</ref>&amp;<sp/>command);</highlight></codeline>
+<codeline lineno="2124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_get_response" kindref="compound">CGetResponse</ref><sp/>getCGetResponse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_get_command" kindref="compound">CGetCommand</ref>&amp;<sp/>command);</highlight></codeline>
+<codeline lineno="2144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2163"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_find_response" kindref="compound">CFindResponse</ref><sp/>getCFindResponse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_find_command" kindref="compound">CFindCommand</ref>&amp;<sp/>command);</highlight></codeline>
+<codeline lineno="2164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_move_response" kindref="compound">CMoveResponse</ref><sp/>getCMoveResponse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_move_command" kindref="compound">CMoveCommand</ref>&amp;<sp/>command);</highlight></codeline>
+<codeline lineno="2184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2203"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_c_echo_response" kindref="compound">CEchoResponse</ref><sp/>getCEchoResponse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_c_echo_command" kindref="compound">CEchoCommand</ref>&amp;<sp/>command);</highlight></codeline>
+<codeline lineno="2204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2223"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_event_report_response" kindref="compound">NEventReportResponse</ref><sp/>getNEventReportResponse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref>&amp;<sp/>command);</highlight></codeline>
+<codeline lineno="2224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2243"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_get_response" kindref="compound">NGetResponse</ref><sp/>getNGetResponse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_get_command" kindref="compound">NGetCommand</ref>&amp;<sp/>command);</highlight></codeline>
+<codeline lineno="2244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2263"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_set_response" kindref="compound">NSetResponse</ref><sp/>getNSetResponse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref>&amp;<sp/>command);</highlight></codeline>
+<codeline lineno="2264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2283"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_action_response" kindref="compound">NActionResponse</ref><sp/>getNActionResponse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref>&amp;<sp/>command);</highlight></codeline>
+<codeline lineno="2284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2303"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_create_response" kindref="compound">NCreateResponse</ref><sp/>getNCreateResponse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref>&amp;<sp/>command);</highlight></codeline>
+<codeline lineno="2304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2323"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_n_delete_response" kindref="compound">NDeleteResponse</ref><sp/>getNDeleteResponse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_n_delete_command" kindref="compound">NDeleteCommand</ref>&amp;<sp/>command);</highlight></codeline>
+<codeline lineno="2324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2325"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SWIG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2326"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="2327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::dimseService&gt;&amp;<sp/>getDimseServiceImplementation(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref>&amp;<sp/>service);</highlight></codeline>
+<codeline lineno="2328"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;implementation::dimseService&gt;<sp/>m_pDimseService;</highlight></codeline>
+<codeline lineno="2329"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2330"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="2331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2333"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="2334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2335"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!defined(imebraDIMSE__INCLUDED_)</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_presentation_contexts" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroPresentationContexts</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_acse.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_presentation_contexts_1a35f41268e03d43c8d1e031b8b6493e2d" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroPresentationContexts::m_PresentationContexts</definition>
+        <argsstring></argsstring>
+        <name>m_PresentationContexts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="84" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_presentation_contexts_1a091a01ee376be8b6eafcc2991ab63d88" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroPresentationContexts::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="84" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_presentation_contexts_1a8cc8f2d06be56a57fb3e55f57d710a1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroPresentationContexts::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="84" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_presentation_contexts_1a35481a6ad605229b759b8a176fe7fc66" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroPresentationContexts::addPresentationContext:</definition>
+        <argsstring>(DicomheroPresentationContext *pPresentationContext)</argsstring>
+        <name>addPresentationContext:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_presentation_context" kindref="compound">DicomheroPresentationContext</ref> *</type>
+          <declname>pPresentationContext</declname>
+        </param>
+        <briefdescription>
+<para>Add a presentation context to the collection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pPresentationContext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the presentation context to add to the collection </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="84" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A collection of presentation contexts. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="81" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" bodystart="82" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_presentation_contexts_1a35481a6ad605229b759b8a176fe7fc66" prot="public" virt="virtual"><scope>DicomheroPresentationContexts</scope><name>addPresentationContext:</name></member>
+      <member refid="interface_dicomhero_presentation_contexts_1a8cc8f2d06be56a57fb3e55f57d710a1e" prot="public" virt="virtual"><scope>DicomheroPresentationContexts</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_presentation_contexts_1a091a01ee376be8b6eafcc2991ab63d88" prot="public" virt="virtual"><scope>DicomheroPresentationContexts</scope><name>init</name></member>
+      <member refid="interface_dicomhero_presentation_contexts_1a35f41268e03d43c8d1e031b8b6493e2d" prot="public" virt="non-virtual"><scope>DicomheroPresentationContexts</scope><name>m_PresentationContexts</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

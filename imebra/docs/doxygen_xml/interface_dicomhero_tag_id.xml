@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_tag_id" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroTagId</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_tagId.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_tag_id_1a698fc515dea916822ff892f8ab195a49" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroTagId::m_TagId</definition>
+        <argsstring></argsstring>
+        <name>m_TagId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tagId.h" line="30" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tagId.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_tag_id_1a245b4ecd0b79feb1a9f57418429ea3fd" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned short</type>
+        <definition>unsigned short DicomheroTagId::groupId</definition>
+        <argsstring></argsstring>
+        <name>groupId</name>
+        <read></read>
+        <briefdescription>
+<para>Retrieve the group id. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tagId.h" line="66" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tagId.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_tag_id_1ac7c99f826c6d82859738b7da85dc38fc" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroTagId::groupOrder</definition>
+        <argsstring></argsstring>
+        <name>groupOrder</name>
+        <read></read>
+        <briefdescription>
+<para>Return the group order. Old DICOM files may have several groups with the same id. This value specifies which of the groups with the same id has been taken into consideration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tagId.h" line="73" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tagId.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_tag_id_1ad9ed86c277e2fbca0523e243c3873f03" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned short</type>
+        <definition>unsigned short DicomheroTagId::tagId</definition>
+        <argsstring></argsstring>
+        <name>tagId</name>
+        <read></read>
+        <briefdescription>
+<para>Retrieve the tag id. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tagId.h" line="78" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tagId.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_tag_id_1a858117b222b4d39fece165e347909af5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroTagId::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tagId.h" line="30" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_id_1a729228f915926c51f7655e25d6dbc95f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroTagId::initWithGroup:tag:</definition>
+        <argsstring>(unsigned short groupId,[tag] unsigned short tagId)</argsstring>
+        <name>initWithGroup:tag:</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>groupId</declname>
+        </param>
+        <param>
+          <attributes>[tag]</attributes>
+          <type>unsigned short</type>
+          <declname>tagId</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>groupId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the group id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tagId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tagId.h" line="30" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_id_1a2205ee1db85e9b9a586ca70c4fc51c7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroTagId::initWithId:</definition>
+        <argsstring>(DicomheroTagEnum tagId)</argsstring>
+        <name>initWithId:</name>
+        <param>
+          <type>DicomheroTagEnum</type>
+          <declname>tagId</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an enumeration representing a tag group and id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tagId.h" line="30" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_id_1a14b2ff1589c5debe6e0c59b1ae55c421" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroTagId::initWithGroup:groupOrder:tag:</definition>
+        <argsstring>(unsigned short groupId,[groupOrder] unsigned int groupOrder,[tag] unsigned short tagId)</argsstring>
+        <name>initWithGroup:groupOrder:tag:</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>groupId</declname>
+        </param>
+        <param>
+          <attributes>[groupOrder]</attributes>
+          <type>unsigned int</type>
+          <declname>groupOrder</declname>
+        </param>
+        <param>
+          <attributes>[tag]</attributes>
+          <type>unsigned short</type>
+          <declname>tagId</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>groupId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the group id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>groupOrder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>old DICOM files may have several groups with the same id. This parameter specifies which of the groups with the same id must be taken into consideration </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tagId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tagId.h" line="30" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_id_1a1eadbb8dd848a1697298cc494692dbcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroTagId::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tagId.h" line="30" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a Dicom tag&apos;s identification. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tagId.h" line="26" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tagId.h" bodystart="28" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_tag_id_1a1eadbb8dd848a1697298cc494692dbcf" prot="public" virt="virtual"><scope>DicomheroTagId</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_tag_id_1a245b4ecd0b79feb1a9f57418429ea3fd" prot="public" virt="non-virtual"><scope>DicomheroTagId</scope><name>groupId</name></member>
+      <member refid="interface_dicomhero_tag_id_1ac7c99f826c6d82859738b7da85dc38fc" prot="public" virt="non-virtual"><scope>DicomheroTagId</scope><name>groupOrder</name></member>
+      <member refid="interface_dicomhero_tag_id_1a858117b222b4d39fece165e347909af5" prot="public" virt="virtual"><scope>DicomheroTagId</scope><name>init</name></member>
+      <member refid="interface_dicomhero_tag_id_1a14b2ff1589c5debe6e0c59b1ae55c421" prot="public" virt="virtual"><scope>DicomheroTagId</scope><name>initWithGroup:groupOrder:tag:</name></member>
+      <member refid="interface_dicomhero_tag_id_1a729228f915926c51f7655e25d6dbc95f" prot="public" virt="virtual"><scope>DicomheroTagId</scope><name>initWithGroup:tag:</name></member>
+      <member refid="interface_dicomhero_tag_id_1a2205ee1db85e9b9a586ca70c4fc51c7e" prot="public" virt="virtual"><scope>DicomheroTagId</scope><name>initWithId:</name></member>
+      <member refid="interface_dicomhero_tag_id_1a698fc515dea916822ff892f8ab195a49" prot="public" virt="non-virtual"><scope>DicomheroTagId</scope><name>m_TagId</name></member>
+      <member refid="interface_dicomhero_tag_id_1ad9ed86c277e2fbca0523e243c3873f03" prot="public" virt="non-virtual"><scope>DicomheroTagId</scope><name>tagId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

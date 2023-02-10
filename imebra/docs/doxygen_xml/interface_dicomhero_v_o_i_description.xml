@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_v_o_i_description" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroVOIDescription</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_VOIDescription.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_v_o_i_description_1a51a1e39b313241b9748322f8af843c4b" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroVOIDescription::m_VOIDescription</definition>
+        <argsstring></argsstring>
+        <name>m_VOIDescription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOIDescription.h" line="39" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOIDescription.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_v_o_i_description_1a6f0346942d9d0fa084bc5a7f3fbbc765" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>double</type>
+        <definition>double DicomheroVOIDescription::center</definition>
+        <argsstring></argsstring>
+        <name>center</name>
+        <read></read>
+        <briefdescription>
+<para>The VOI window center. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOIDescription.h" line="57" column="13" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOIDescription.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_v_o_i_description_1a94d87a9e252c09d6920ed80ee6f21214" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>double</type>
+        <definition>double DicomheroVOIDescription::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <read></read>
+        <briefdescription>
+<para>The VOI window width. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOIDescription.h" line="58" column="13" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOIDescription.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_v_o_i_description_1a8cac9c433a5ff31471d99b33ea0a8dc1" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>ImebraDicomVOIFunction</type>
+        <definition>ImebraDicomVOIFunction DicomheroVOIDescription::function</definition>
+        <argsstring></argsstring>
+        <name>function</name>
+        <read></read>
+        <briefdescription>
+<para>The VOI function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOIDescription.h" line="59" column="29" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOIDescription.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_v_o_i_description_1a059a071079c8f6e3324df2088fbf1388" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroVOIDescription::description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <read></read>
+        <briefdescription>
+<para>The VOI description. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOIDescription.h" line="60" column="15" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOIDescription.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_v_o_i_description_1aca9defae2d61b2f0eedd8bea8d2fce92" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroVOIDescription::initWithDicomheroVOIDescription:</definition>
+        <argsstring>(void *parameter_VOIDescription)</argsstring>
+        <name>initWithDicomheroVOIDescription:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_VOIDescription</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOIDescription.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_v_o_i_description_1acd5267a1ba05df5293a4f629bf11b07e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroVOIDescription::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOIDescription.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_v_o_i_description_1a8e080238ad2166f10d6d4cb1027fdeda" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroVOIDescription::initWithCenter:width:function:description:</definition>
+        <argsstring>(double center,[width] double width,[function] ImebraDicomVOIFunction function,[description] NSString *description)</argsstring>
+        <name>initWithCenter:width:function:description:</name>
+        <param>
+          <type>double</type>
+          <declname>center</declname>
+        </param>
+        <param>
+          <attributes>[width]</attributes>
+          <type>double</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <attributes>[function]</attributes>
+          <type>ImebraDicomVOIFunction</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <attributes>[description]</attributes>
+          <type>NSString *</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>center</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the VOI window&apos;s center </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the VOI windoe&apos;s width </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the function to use when applying the center/width </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the VOI description (unicode) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOIDescription.h" line="39" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Specifies an age, in days, weeks, months or years. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOIDescription.h" line="35" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOIDescription.h" bodystart="37" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_v_o_i_description_1a6f0346942d9d0fa084bc5a7f3fbbc765" prot="public" virt="non-virtual"><scope>DicomheroVOIDescription</scope><name>center</name></member>
+      <member refid="interface_dicomhero_v_o_i_description_1acd5267a1ba05df5293a4f629bf11b07e" prot="public" virt="virtual"><scope>DicomheroVOIDescription</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_v_o_i_description_1a059a071079c8f6e3324df2088fbf1388" prot="public" virt="non-virtual"><scope>DicomheroVOIDescription</scope><name>description</name></member>
+      <member refid="interface_dicomhero_v_o_i_description_1a8cac9c433a5ff31471d99b33ea0a8dc1" prot="public" virt="non-virtual"><scope>DicomheroVOIDescription</scope><name>function</name></member>
+      <member refid="interface_dicomhero_v_o_i_description_1a8e080238ad2166f10d6d4cb1027fdeda" prot="public" virt="virtual"><scope>DicomheroVOIDescription</scope><name>initWithCenter:width:function:description:</name></member>
+      <member refid="interface_dicomhero_v_o_i_description_1aca9defae2d61b2f0eedd8bea8d2fce92" prot="public" virt="virtual"><scope>DicomheroVOIDescription</scope><name>initWithDicomheroVOIDescription:</name></member>
+      <member refid="interface_dicomhero_v_o_i_description_1a51a1e39b313241b9748322f8af843c4b" prot="public" virt="non-virtual"><scope>DicomheroVOIDescription</scope><name>m_VOIDescription</name></member>
+      <member refid="interface_dicomhero_v_o_i_description_1a94d87a9e252c09d6920ed80ee6f21214" prot="public" virt="non-virtual"><scope>DicomheroVOIDescription</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

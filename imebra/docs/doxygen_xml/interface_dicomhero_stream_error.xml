@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_stream_error" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroStreamError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSError</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_stream_e_o_f_error" prot="public" virt="non-virtual">DicomheroStreamEOFError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_stream_open_error" prot="public" virt="non-virtual">DicomheroStreamOpenError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_stream_read_error" prot="public" virt="non-virtual">DicomheroStreamReadError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_stream_write_error" prot="public" virt="non-virtual">DicomheroStreamWriteError</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_exceptions.h" line="41" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_exceptions.h" bodystart="42" bodyend="-1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

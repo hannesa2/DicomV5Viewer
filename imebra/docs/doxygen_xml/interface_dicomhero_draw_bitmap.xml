@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_draw_bitmap" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroDrawBitmap</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_drawBitmap.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_draw_bitmap_1a95467699046f3befe49f6cb6a266df53" prot="protected" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroDrawBitmap::m_DrawBitmap</definition>
+        <argsstring></argsstring>
+        <name>m_DrawBitmap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_drawBitmap.h" line="60" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_drawBitmap.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_draw_bitmap_1a2af03d6f90e14a4322bf6d3ac8bc177c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroDrawBitmap::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>Initializes a <ref refid="interface_dicomhero_draw_bitmap" kindref="compound">DicomheroDrawBitmap</ref> with no transforms. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The getBitmap() method will not apply any transform to the Image before generating the bitmap (except for the high bit and color space to obtain a 24bpp RGB image). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_drawBitmap.h" line="60" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_draw_bitmap_1a496199a684c6980d634cdd28d43b7869" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroDrawBitmap::initWithTransform:</definition>
+        <argsstring>(DicomheroTransform *pTransform)</argsstring>
+        <name>initWithTransform:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_transform" kindref="compound">DicomheroTransform</ref> *</type>
+          <declname>pTransform</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a <ref refid="interface_dicomhero_draw_bitmap" kindref="compound">DicomheroDrawBitmap</ref> object that always apply the transform specified in the parameter when calling getBitmap() or getDicomheroImage(). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pTransform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the transforms to apply to the Image in the getBitmap() method </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_drawBitmap.h" line="60" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_draw_bitmap_1a7bfcdd0dd50c32d78d94604c9c0040c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroDrawBitmap::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_drawBitmap.h" line="60" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_draw_bitmap_1a4d28718ed6caba93394c1c763464c659" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_memory" kindref="compound">DicomheroMemory</ref> *</type>
+        <definition>DicomheroMemory* DicomheroDrawBitmap::getBitmap:bitmapType:rowAlignBytes:error:</definition>
+        <argsstring>(DicomheroImage *pImage,[bitmapType] DicomheroDrawBitmapType drawBitmapType,[rowAlignBytes] unsigned int rowAlignBytes,[error] NSError **pError)</argsstring>
+        <name>getBitmap:bitmapType:rowAlignBytes:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref> *</type>
+          <declname>pImage</declname>
+        </param>
+        <param>
+          <attributes>[bitmapType]</attributes>
+          <type>DicomheroDrawBitmapType</type>
+          <declname>drawBitmapType</declname>
+        </param>
+        <param>
+          <attributes>[rowAlignBytes]</attributes>
+          <type>unsigned int</type>
+          <declname>rowAlignBytes</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Apply the transforms defined in the constructor (if any) to the input image, then calculate an array of bytes containing a bitmap that can be rendered by the operating system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pImage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the image for which the bitmap must be calculated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>drawBitmapType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of bitmap to generate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rowAlignBytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of bytes on which the bitmap rows are aligned </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="interface_dicomhero_memory" kindref="compound">DicomheroMemory</ref> object containing the buffer containing the generated bitmap </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_drawBitmap.h" line="60" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_draw_bitmap_1af775cf83c8097d8093f580a40b256433" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSImage *</type>
+        <definition>NSImage* DicomheroDrawBitmap::getDicomheroImage:error:</definition>
+        <argsstring>(DicomheroImage *pImage,[error] NSError **pError)</argsstring>
+        <name>getDicomheroImage:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref> *</type>
+          <declname>pImage</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Apply the transforms defined in the constructor (if any) to the input image, then return a NSImage (on OS-X) or an UIImage (on iOS). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pImage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the image for which the NSImage or UIImage must be calculated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a NSImage on OS-X or an UIImage on iOS </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_drawBitmap.h" line="60" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="interface_dicomhero_draw_bitmap" kindref="compound">DicomheroDrawBitmap</ref> takes care of converting an Image object into an array of bytes that can be displayed by the operating system facilities. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="interface_dicomhero_draw_bitmap" kindref="compound">DicomheroDrawBitmap</ref> can apply several transformations to the Image before generating the bitmap.</para>
+<para>DrawBitmap applies automatically the necessary color transform and high bit shift in order to obtain a 8 bits per channel RGB image. </para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_drawBitmap.h" line="57" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_drawBitmap.h" bodystart="59" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_draw_bitmap_1a7bfcdd0dd50c32d78d94604c9c0040c2" prot="public" virt="virtual"><scope>DicomheroDrawBitmap</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_draw_bitmap_1a4d28718ed6caba93394c1c763464c659" prot="public" virt="virtual"><scope>DicomheroDrawBitmap</scope><name>getBitmap:bitmapType:rowAlignBytes:error:</name></member>
+      <member refid="interface_dicomhero_draw_bitmap_1af775cf83c8097d8093f580a40b256433" prot="public" virt="virtual"><scope>DicomheroDrawBitmap</scope><name>getDicomheroImage:error:</name></member>
+      <member refid="interface_dicomhero_draw_bitmap_1a2af03d6f90e14a4322bf6d3ac8bc177c" prot="public" virt="virtual"><scope>DicomheroDrawBitmap</scope><name>init</name></member>
+      <member refid="interface_dicomhero_draw_bitmap_1a496199a684c6980d634cdd28d43b7869" prot="public" virt="virtual"><scope>DicomheroDrawBitmap</scope><name>initWithTransform:</name></member>
+      <member refid="interface_dicomhero_draw_bitmap_1a95467699046f3befe49f6cb6a266df53" prot="protected" virt="non-virtual"><scope>DicomheroDrawBitmap</scope><name>m_DrawBitmap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

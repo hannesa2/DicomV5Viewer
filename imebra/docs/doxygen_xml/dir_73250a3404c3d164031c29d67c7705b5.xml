@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_73250a3404c3d164031c29d67c7705b5" kind="dir">
+    <compoundname>library</compoundname>
+    <innerdir refid="dir_eb902c7e0035b5bf72775488a5d9fe72">include</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/"/>
+  </compounddef>
+</doxygen>

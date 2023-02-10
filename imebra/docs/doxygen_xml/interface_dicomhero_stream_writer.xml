@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_stream_writer" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroStreamWriter</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_streamWriter.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_stream_writer_1af99b455f9583a4d8011b37cf3039f0dd" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroStreamWriter::m_StreamWriter</definition>
+        <argsstring></argsstring>
+        <name>m_StreamWriter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamWriter.h" line="32" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamWriter.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_stream_writer_1abc83a9178b293c41e978b241b79f8c9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroStreamWriter::initWithDicomheroStreamWriter:</definition>
+        <argsstring>(void *parameter_StreamWriter)</argsstring>
+        <name>initWithDicomheroStreamWriter:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_StreamWriter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamWriter.h" line="32" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_stream_writer_1ad66724d9af64f0a171ca67f0a2fad4e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroStreamWriter::initWithOutputStream:</definition>
+        <argsstring>(DicomheroBaseStreamOutput *pOutput)</argsstring>
+        <name>initWithOutputStream:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_base_stream_output" kindref="compound">DicomheroBaseStreamOutput</ref> *</type>
+          <declname>pOutput</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pOutput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="interface_dicomhero_base_stream_output" kindref="compound">DicomheroBaseStreamOutput</ref> object on which the <ref refid="interface_dicomhero_stream_writer" kindref="compound">DicomheroStreamWriter</ref> will write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamWriter.h" line="32" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_stream_writer_1a445a64d8fc746f6d62f38d2f3c782639" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroStreamWriter::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamWriter.h" line="32" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="interface_dicomhero_stream_writer" kindref="compound">DicomheroStreamWriter</ref> is used to write data into a <ref refid="interface_dicomhero_base_stream_output" kindref="compound">DicomheroBaseStreamOutput</ref> object. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamWriter.h" line="28" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamWriter.h" bodystart="30" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_stream_writer_1a445a64d8fc746f6d62f38d2f3c782639" prot="public" virt="virtual"><scope>DicomheroStreamWriter</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_stream_writer_1abc83a9178b293c41e978b241b79f8c9d" prot="public" virt="virtual"><scope>DicomheroStreamWriter</scope><name>initWithDicomheroStreamWriter:</name></member>
+      <member refid="interface_dicomhero_stream_writer_1ad66724d9af64f0a171ca67f0a2fad4e5" prot="public" virt="virtual"><scope>DicomheroStreamWriter</scope><name>initWithOutputStream:</name></member>
+      <member refid="interface_dicomhero_stream_writer_1af99b455f9583a4d8011b37cf3039f0dd" prot="public" virt="non-virtual"><scope>DicomheroStreamWriter</scope><name>m_StreamWriter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="imebrav4" xsi:noNamespaceSchemaLocation="./riskAnalysis.xsd">
+  <title>Dicomhero v.4</title>
+
+  <description/>
+
+  <categories>
+    <category id="REQ_FUNC">
+      <title>Functional requirements</title>
+
+      <priority>100</priority>
+    </category>
+
+    <category id="REQ_PERF">
+      <title>Performances</title>
+
+      <priority>30</priority>
+    </category>
+
+    <category id="REQ_SEC">
+      <title>Security</title>
+
+      <priority>20</priority>
+    </category>
+
+    <category id="REQ_IMPL">
+      <title>Implementation requirements</title>
+
+      <priority>80</priority>
+    </category>
+  </categories>
+
+  <requirements>
+    <requirement categoryIdref="REQ_IMPL" id="REQ_TAGID_SEPARATE_CLASS">
+      <mitigates>
+        <mitigatedRisk idref="RISK_LONG_PARAMETERS_LIST">
+          <riskReduction>100</riskReduction>
+
+          <rationale>Moving the tag's id outside the parameters list reduces the possibility of
+                    errors. Additionally, the tag's id is isolated and visible.</rationale>
+        </mitigatedRisk>
+      </mitigates>
+
+      <title>The tag id must be specified using a specific class</title>
+
+      <description>
+                A class must be used to specify a Dicom tag's id (group, order, id).
+            </description>
+
+      <priority>10</priority>
+    </requirement>
+
+    <requirement id="REQ_VOI_FUNCTION" categoryIdref="REQ_FUNC">
+      <title>Allow the calculation of the VOI transform using different defined DICOM functions</title>
+      <description>Allow the calculation of the VOI transform using the functions LINEAR, LINEAR_EXACT and SIGMOID as defined by DICOM</description>
+      <priority>90</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_IMPL" id="REQ_DONT_EXPOSE_INDEXED_WRITING">
+      <mitigates>
+        <mitigatedRisk idref="RISK_BUFFER_RESET">
+          <riskReduction>90</riskReduction>
+
+          <rationale>If there are no functions that enable indexed writing into the buffer while
+                    also resetting it, then the client will not be able to do that</rationale>
+        </mitigatedRisk>
+      </mitigates>
+
+      <title>Don't expose methods that allow indexed writing into the buffer while resetting it</title>
+
+      <description>The library must not expose methods that allow indexed writing into the buffers and
+            silently erase its previous content.</description>
+
+      <priority>10</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_PERF" id="REQ_WRITING_HANDLER_EMPTY">
+      <title>New writing handler that write data to a buffer should be initially empty</title>
+
+      <description>For performance reasons, when a buffer returns a new writing data handler (an object
+                used to write data in the tag) the writing data handler should be initially empty</description>
+
+      <priority>20</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_PERF"
+                 id="REQ_WRAP_FUNCTIONS_EXCEPTIONS_INFO">
+      <title>All the functions must be wrapped by macros that report the exception info</title>
+
+      <description>All the functions must be wrapped by special macros that capture
+            the information about the exception being thrown or that cause a stack unwind.</description>
+
+      <priority>40</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_EXCEPTIONS">
+      <title>All the error should be reported via C++ exceptions</title>
+
+      <description>The library should throw specific C++ exceptions to report errors.</description>
+
+      <priority>90</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_CONST_COPY_DOCUMENTATION">
+      <mitigates>
+        <mitigatedRisk idref="RISK_COPY_CONST_OBJECTS">
+          <riskReduction>90</riskReduction>
+          <rationale>In methods that return a dataset, suggest assignment to const object if the dataset should not be modified.</rationale>
+        </mitigatedRisk>
+      </mitigates>
+
+      <title>In the documentation suggest assignments to const objects</title>
+
+      <description>The returned objects should be immutable when possible. Mutable objects should be used only when they need to be modified.</description>
+
+      <priority>6</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_OVERLAYS">
+
+      <title>The API must supply methods to retrieve and set overlay bitmaps</title>
+
+      <description>The DataSet class must supply methods to retrieve and set overlay bitmaps.</description>
+
+      <priority>6</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_DONT_RETURN_POINTER">
+      <title>The API should not return pointers to allocated objects</title>
+
+      <description>Instead of returning pointers to the allocated objects, the library should return the object instead.
+      	           Because the API allocated objects hold just pointer to the implementation classes, copying them around
+      	           should not impact the performances.</description>
+
+      <priority>50</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_INSERT_FILES_IN_TAGS">
+      <title>Allow to insert reference to files into DICOM tags</title>
+
+      <description>The API client should be able to specify a file as content of a DICOM tag: when the DICOM stream is encoded then
+      	           the specific tag content should be fetched directly from the file.</description>
+
+      <priority>10</priority>
+    </requirement>
+
+
+    <requirement categoryIdref="REQ_PERF" id="REQ_MEMORY_POOL_THREAD">
+      <introducedBy>
+        <parentRequirement idref="REQ_MEMORY_POOL"/>
+      </introducedBy>
+
+      <title>There should be a memory pool per thread</title>
+
+      <description>A memory pool per thread removes the need for synchronization, increasing the
+                speed of the memory pool methods.</description>
+
+      <priority>20</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_PERF" id="REQ_MEMORY_POOL_NEW_HANDLER">
+      <mitigates>
+        <mitigatedRisk idref="RISK_FULL_MEMORY">
+          <riskReduction>50</riskReduction>
+
+          <rationale>The std::new_handler is able to clear the memory pool when a memory allocation fails.
+                        Because there is a memory pool per thread, only the memory in the memory pool of the current
+                        thread is cleared when a memory allocation fails.</rationale>
+        </mitigatedRisk>
+      </mitigates>
+
+      <title>Provide a std::new_handler that clears the memory pool when necessary</title>
+
+      <description>The std::new_handler function will be automatically called when a new memory
+            allocation fails, giving the memory pool an opportunity to clear the unused memory.</description>
+
+      <priority>10</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_PERF" id="REQ_MEMORY_POOL">
+      <title>The library should reuse unused memory instead of allocating new blocks.</title>
+
+      <description>When a block of memory is discarded it should be stored in a memory pool
+                for a while and reused when the library needs a block of the same size.</description>
+
+      <priority>30</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_IMPL" id="REQ_INTEGER_TYPES">
+      <title>The integer types in the public interface must be consistent</title>
+
+      <description>All the integer that express a size, a file offset or an index must be of type size_t.
+                All the other integers must be int32_t or uint32_t</description>
+
+      <priority>40</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_IMPL" id="REQ_VARIABLE_MAX_IMAGE_SIZE">
+      <introducedBy>
+        <parentRequirement idref="REQ_MAX_IMAGE_SIZE"/>
+      </introducedBy>
+
+      <title>The settings of the maximum image size must be settable at runtime</title>
+
+      <description>The client application must be able to modify the maximum acceptable image size.
+                The max image size settings must be clearly explained in the documentation.</description>
+
+      <priority>30</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_SEC" id="REQ_MAX_IMAGE_SIZE">
+      <mitigates>
+        <mitigatedRisk idref="RISK_OUT_OF_MEMORY_BIG_IMAGE">
+          <riskReduction>80</riskReduction>
+
+          <rationale/>
+        </mitigatedRisk>
+      </mitigates>
+
+      <title>The library must reject images that are bigger than a predefined size</title>
+
+      <description>The library must have a configurable setting that specifies the maximum
+                size of the images that can be loaded. An exception must be thrown if the image
+                is bigger than the setting allows.</description>
+
+      <priority>30</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_IMPL" id="REQ_MAKE_SHARED">
+      <mitigates>
+        <mitigatedRisk idref="RISK_SHARED_PTR_NEW">
+          <riskReduction>90</riskReduction>
+
+          <rationale/>
+        </mitigatedRisk>
+      </mitigates>
+
+      <title>Object inserted in shared pointers must be allocated via make_shared</title>
+
+      <description>Object that at some point are inserted into shared pointers must be
+                allocated via make_shared</description>
+
+      <priority>50</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_IMPL" id="REQ_THROW_WRONG_CONVERSION">
+      <mitigates>
+        <mitigatedRisk idref="RISK_VR_CONVERSION">
+          <riskReduction>80</riskReduction>
+
+          <rationale/>
+        </mitigatedRisk>
+      </mitigates>
+
+      <title>Throw exception on non allowed VR conversions</title>
+
+      <description>Some VR convenversions cannot be safely executed.
+                In particular, the following conversions are forbidden: time and date to/from numbers, age to/from anything else.
+                Failed conversion from strings to numbers must throw an exception.</description>
+
+      <priority>60</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_VR_CONVERSION">
+      <introducedBy>
+        <parentRequirement idref="REQ_READ_TAGS"/>
+
+        <parentRequirement idref="REQ_WRITE_TAGS"/>
+      </introducedBy>
+
+      <title>The library must be able to convert data between different VRs</title>
+
+      <description>The library must be able to convert data between different VRs, for instance
+                from integer to double or string.
+            </description>
+
+      <priority>70</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_LOGGING">
+      <title>The library must log the most important tasks execution</title>
+
+      <description>The library must log to the device standard logging the most important steps.</description>
+
+      <priority>70</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_IMPL" id="REQ_MEMORY_ALLOCATION">
+      <mitigates>
+        <mitigatedRisk idref="RISK_MEMORY_ALLOC">
+          <riskReduction>80</riskReduction>
+
+          <rationale/>
+        </mitigatedRisk>
+      </mitigates>
+
+      <title>Memory should be allocated via cpp std arrays, vectors, strings, etc, not through new</title>
+
+      <description>Memory shold be allocated via c++ provided classes instantiated on the stack or
+                shared pointer if they have to be shared.</description>
+
+      <priority>70</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_IMPL" id="REQ_OBJECT_ALLOCATION">
+      <mitigates>
+        <mitigatedRisk idref="RISK_OBJECT_ALLOC">
+          <riskReduction>80</riskReduction>
+
+          <rationale/>
+        </mitigatedRisk>
+      </mitigates>
+
+      <title>Objects should be allocated via shared pointers, unique pointers or on the stack</title>
+
+      <description>Objects shared between different components should be allocated via shared pointers,
+                while objects used only once should be allocated via unique pointers or, preferably, on the stack
+            </description>
+
+      <priority>70</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_IMPL" id="REQ_CPP">
+      <title>The library must be implemented in C++ 0x</title>
+
+      <description>The library must be implemented in C++0x</description>
+
+      <priority>90</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_RETURN_DEFAULT_VALUE">
+      <introducedBy>
+        <parentRequirement idref="REQ_READ_TAGS"/>
+      </introducedBy>
+
+      <title>There has to be a special function able to return a default value for missing tags</title>
+
+      <description>In addition to the functions that throw an exception when the required data is missing, special
+                functions able to return a default value for missing data should be present.
+            </description>
+
+      <priority>60</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_APP_DECIDES_DEFAULT_VALUE">
+      <mitigates>
+        <mitigatedRisk idref="RISK_RECEIVE_DEFAULT_VALUE">
+          <riskReduction>50</riskReduction>
+
+          <rationale>The end application must decide the default value, but there is a chance that it still choose the wrong default valur</rationale>
+        </mitigatedRisk>
+      </mitigates>
+
+      <title>Default values must be explicitly set by the application for each tag</title>
+
+      <description>The library must not decide the default value to return when a tag is missing: the
+                client application must specify the default value on each call.
+            </description>
+
+      <priority>60</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_THROW_ON_MISSING_DATA">
+      <mitigates>
+        <mitigatedRisk idref="RISK_TAGS_DONT_EXIST">
+          <riskReduction>100</riskReduction>
+
+          <rationale/>
+        </mitigatedRisk>
+      </mitigates>
+
+      <introducedBy/>
+
+      <title>The library must throw an exception when the client tries to access data that doesn't exist</title>
+
+      <description>The library must throw an exception when the client tries to access data that doesn't exist.
+            </description>
+
+      <priority>60</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_ENDIANESS_PLATFORM">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>Exposed memory with raw numerical data must use the platform endianess to represent numbers</title>
+
+      <description>Numbers in the tag's memory exposed by the library must be represented using the byte endianess of
+                the platform on which the library is being used.
+            </description>
+
+      <priority>99</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_RAW_MEMORY">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>The library must be able to expose the raw memory of numeric DICOM tags</title>
+
+      <description>To be able to perform fast image processing, the client application needs access to the images or
+                LUTs raw memory data.
+                
+                This implies that Dicomhero must be able to expose the raw memory used to store numeric tags (VRs: AT, FL, FD,
+                OF, OW, OD, SS, SL, UL, US).
+            </description>
+
+      <priority>90</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_READ_TAGS">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>The library must be able to extract the information contained in the DICOM tags</title>
+
+      <description>The library must be able to extract the tags information from the DICOM structure in memory.
+                
+                The following VRs must be supported: AE, AS, AT, CS, DA, DS, DT, FL, FD, IS, LO, LT,
+                OB, OF, OD, OW, PN, SH, SL, SQ, SS, ST, TM, UI, UL, UN, US, UT, IS
+            </description>
+
+      <priority>99</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_WRITE_TAGS">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>The library must be able to write tags into the DICOM structure</title>
+
+      <description>The library must be able to write tags into the DICOM structure in memory.
+                
+                The following VRs must be supported: AE, AS, AT, CS, DA, DS, DT, FL, FD, IS, LO, LT,
+                OB, OF, OD, OW, PN, SH, SL, SQ, SS, ST, TM, UI, UL, UN, US, UT, IS
+            </description>
+
+      <priority>99</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_EXTRACT_LUT">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>The library must be able to extract LUT information from the DataSet</title>
+
+      <description>The library must be able to extract LUT information from the dataset, regardless of the tag where
+                it is stored.
+            </description>
+
+      <priority>80</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_APPLY_MODALITY_VOILUT">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>The library must be able to apply the modality VOI or LUT to extracted images</title>
+
+      <description>The library must be able to apply to the images the modality VOI or LUT specified in the dataset.
+            </description>
+
+      <priority>70</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_PREPARE_RGB_IMAGE">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>Dicomhero must be able to create an image ready to be displayed on the computer screen</title>
+
+      <description>Dicomhero must be able to convert the images extracted from DICOM structures into RGBA images ready to
+                be displayed into computer screens
+            </description>
+
+      <priority>70</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_APPLY_VOILUT">
+      <title>The library must be able to apply the presentation VOI/LUT to the extracted images</title>
+
+      <description>The library must be able to apply the presentation VOI/LUT to the images extracted from DICOM
+                datasets
+            </description>
+
+      <priority>70</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_DECOMPRESS_IMAGES">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>Dicomhero must be able to decompress images contained in the DICOM dataset</title>
+
+      <description>Dicomhero must be able to extract decompressed images from the DICOM dataset.
+                The recognized transfer syntaxes for the image compression are:
+                
+                - jpeg baseline (8 bits per color channel lossy), transfer syntax 1.2.840.10008.1.2.4.50
+                - jpeg baseline extended (12 bits per color channel lossy), transfer syntax 1.2.840.10008.1.2.4.51
+                - jpeg lossless (up to 16 bits per color channel lossless), transfer syntaxes 1.2.840.10008.1.2.4.57 and 1.2.840.10008.1.2.4.70
+                - raw dicom (up to 16 bits per color channel lossless), transfer syntaxes 1.2.840.10008.1.2, 1.2.840.10008.1.2.1 and 1.2.840.10008.1.2.2
+                - rle dicom (up to 16 bits per color channel lossless), transfer syntax 1.2.840.10008.1.2.5
+            </description>
+
+      <priority>99</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_COMPRESS_IMAGES">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>Dicomhero must be able to compress images and insert them in the DICOM dataset</title>
+
+      <description>Dicomhero must be able to compress images and insert them in the DICOM dataset.
+                
+                The recognized transfer syntaxes for the image compression are:
+                
+                - jpeg baseline (8 bits per color channel lossy), transfer syntax 1.2.840.10008.1.2.4.50
+                - jpeg baseline extended (12 bits per color channel lossy), transfer syntax 1.2.840.10008.1.2.4.51
+                - jpeg lossless (up to 16 bits per color channel lossless), transfer syntaxes 1.2.840.10008.1.2.4.57 and 1.2.840.10008.1.2.4.70
+                - raw dicom (up to 16 bits per color channel lossless), transfer syntaxes 1.2.840.10008.1.2, 1.2.840.10008.1.2.1 and 1.2.840.10008.1.2.2
+                - rle dicom (up to 16 bits per color channel lossless), transfer syntax 1.2.840.10008.1.2.5
+            </description>
+
+      <priority>99</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_PARSE_DICOMDIR">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>The library must be able to parse DICOMDIR structures and the records they contain</title>
+
+      <description>Dicomhero must be able to parse DICOMDIR structures and the records they contain.</description>
+
+      <priority>99</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_BUILD_DICOMDIR">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>The library must be able to build DICOMDIR structures and the records they contain</title>
+
+      <description>Dicomhero must be able to build DICOMDIR structures and the records they contain.</description>
+
+      <priority>99</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_IMPL" id="REQ_BINARY_COMPATIBILITY">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>The library should offer binary compatibility between minor revisions</title>
+
+      <description>The library should offer binary compatibility between minor revisions.
+                
+                In order to achieve this goal, minimal parts of the library interface should be exposed to the client
+                application
+            </description>
+
+      <priority>80</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_DELAYED_LOAD">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>The library must be able to delay the loading of large chunk of data from the DICOM file</title>
+
+      <description>In order to minimize the memory footprint of the loaded datasets, the library must be able to load
+                the tags data only when necessary.
+                
+                It should also release the loaded memory when the data is no longer necessary
+            </description>
+
+      <priority>80</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_READ_DICOM_FILES">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>The library must be able to read DICOM files from a data source and replicate their structure in
+                memory
+            </title>
+
+      <description>The library must be able to read DICOM files from a data source and replicate their structure in
+                memory.
+                
+                The following transfer syntaxes must be supported:
+
+                - jpeg baseline (8 bits per color channel lossy), transfer syntax 1.2.840.10008.1.2.4.50
+                - jpeg baseline extended (12 bits per color channel lossy), transfer syntax 1.2.840.10008.1.2.4.51
+                - jpeg lossless (up to 16 bits per color channel lossless), transfer syntaxes 1.2.840.10008.1.2.4.57 and 1.2.840.10008.1.2.4.70
+                - raw dicom (up to 16 bits per color channel lossless), transfer syntaxes 1.2.840.10008.1.2, 1.2.840.10008.1.2.1 and 1.2.840.10008.1.2.2
+                - rle dicom (up to 16 bits per color channel lossless), transfer syntax 1.2.840.10008.1.2.5
+            </description>
+
+      <priority>100</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_WRITE_DICOM_FILES">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>The library must be able to write DICOM files from a DICOM structure in memory</title>
+
+      <description>The library must be able to write DICOM files from a DICOM structure in memory.
+                
+                The following transfer syntaxes must be supported:
+
+                - jpeg baseline (8 bits per color channel lossy), transfer syntax 1.2.840.10008.1.2.4.50
+                - jpeg baseline extended (12 bits per color channel lossy), transfer syntax 1.2.840.10008.1.2.4.51
+                - jpeg lossless (up to 16 bits per color channel lossless), transfer syntaxes 1.2.840.10008.1.2.4.57 and 1.2.840.10008.1.2.4.70
+                - raw dicom (up to 16 bits per color channel lossless), transfer syntaxes 1.2.840.10008.1.2, 1.2.840.10008.1.2.1 and 1.2.840.10008.1.2.2
+                - rle dicom (up to 16 bits per color channel lossless), transfer syntax 1.2.840.10008.1.2.5
+            </description>
+
+      <priority>100</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_DIMSE">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>The library must be able to send and receive DIMSE messages</title>
+
+      <description>The library must be able to build and parse DIMSE messages through an ACSE service.
+                
+                The following DIMSE services must be supported:
+
+                - C-STORE
+                - C-GET
+                - C-MOVE
+                - C-FIND
+                - C-ECHO
+                - C-CANCEL
+                - N-EVENT-REPORT
+                - N-GET
+                - N-SET
+                - N-ACTION
+                - N-CREATE
+                - N-DELETE
+      </description>
+      <priority>100</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_ACSE">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>The library must be able to send and receive ACSE messages through a generic transport mechanism</title>
+
+      <description>The library must be able to send and receive DUL messages through a generic stream oriented
+                transport mechanism.
+                
+                The ACSE management should not be exposed in the API.
+      </description>
+      <priority>100</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_GENERIC_STREAM_PROTOCOL">
+      <mitigates/>
+
+      <introducedBy>
+        <parentRequirement idref="REQ_DIMSE"/>
+      </introducedBy>
+
+      <title>There must be a generic streaming protocol able to transport DIMSE messages</title>
+      <description>There must be a generic streaming protocol able to transport DIMSE messages.
+
+          The generic streaming protocol must derive from the Dicomhero base stream class and offer
+          timeout capabilities and termination capabilities when waiting for incoming or outgoing data.
+      </description>
+      <priority>100</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_TCPIP_PROTOCOL">
+      <mitigates/>
+
+      <introducedBy>
+        <parentRequirement idref="REQ_DIMSE"/>
+      </introducedBy>
+
+      <title>Dicomhero must supply a basic TCP streaming class</title>
+      <description>A basic TCP streaming class must be provided so that it can be used with DUL.
+
+          TLS is out of the scope of this class.
+      </description>
+      <priority>100</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_USER_PROTOCOL">
+      <mitigates/>
+
+      <introducedBy>
+        <parentRequirement idref="REQ_TCPIP_PROTOCOL"/>
+      </introducedBy>
+
+      <title>Dicomhero must supply a base class for IO streaming</title>
+      <description>Since Dicomhero does not provide TLS, it must provide a base IO streaming class
+      	  from which the user can build its own streaming class.
+      </description>
+      <priority>100</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_UID_GEN">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>Supply a mechanism to generate unique DICOM UIDs</title>
+
+      <description>The library must be able to generate unique UIDs to be used in DICOM datasets as SOP instance UID.
+      </description>
+      <priority>80</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_FUNC" id="REQ_FUNCTIONAL_MACROS">
+      <mitigates/>
+
+      <introducedBy/>
+
+      <title>The operations that get image specific parameters should be aware of Functional Macros</title>
+
+      <description>Function that retrieve image related information should use also the Functional Macros (global or frame specific).
+      </description>
+      <priority>100</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_IMPL" id="REQ_NO_CALLBACK">
+      <mitigates/>
+
+      <introducedBy>
+        <parentRequirement idref="REQ_USER_PROTOCOL"/>
+      </introducedBy>
+
+      <title>User extensions should not be achievable by extending Dicomhero classes or by supplying callbacks</title>
+      <description>Allowing the user to extend Dicomhero classes or to provide callback functions complicates the separation
+          between the Dicomhero's interface and its implementation.
+      </description>
+      <priority>100</priority>
+    </requirement>
+
+    <requirement categoryIdref="REQ_IMPL" id="REQ_NO_MULTIPLE_INHERITANCE">
+      <mitigates/>
+
+      <title>Multiple inheritance is not allowed</title>
+      <description>Some language for which bindings are required don't support multiple inheritance, therefore it should not be used.</description>
+      <priority>100</priority>
+    </requirement>
+
+
+
+  </requirements>
+
+  <risks>
+    <risk id="RISK_LONG_PARAMETERS_LIST">
+      <title>
+                Specifying the tag id in the dataset methods may create a long confusing list of parameters
+            </title>
+
+      <description>Because the tag id is composed by group id and tag id (and optionally order id),
+            the list of parameters in the methods that access a dataset's tags may become too long
+            and confuse the developers that use the library.</description>
+
+      <likelihood>
+        <factor>80</factor>
+
+        <rationale>It is very easy to get confused when a long list of parameters
+                is used in a method call, specially when all the parameters are integers (e.g.
+                when setting an integer tag's value).</rationale>
+      </likelihood>
+
+      <severity>
+        <factor>100</factor>
+
+        <rationale>Referencing the wrong tag may cause wrong diagnoses or therapies and lead to death.</rationale>
+      </severity>
+    </risk>
+
+    <risk id="RISK_BUFFER_RESET">
+      <causedBy>
+        <causedByRequirement idref="REQ_WRITING_HANDLER_EMPTY"/>
+      </causedBy>
+
+      <title>When a client wants to write several values in the buffer it may inadvertently reset the buffer</title>
+
+      <description>Because a writing data handler always starts in an empty state, a client
+            may inadvertently erase the buffer content when writing new content into it.</description>
+
+      <likelihood>
+        <factor>100</factor>
+
+        <rationale>If the library supplies a function able to write in different locations of a buffer then
+                it is very likely that the client will use such function.</rationale>
+      </likelihood>
+
+      <severity>
+        <factor>100</factor>
+
+        <rationale>The final dicom content may not represent what the client intended.</rationale>
+      </severity>
+    </risk>
+
+    <risk id="RISK_FULL_MEMORY">
+      <causedBy>
+        <causedByRequirement idref="REQ_MEMORY_POOL"/>
+      </causedBy>
+
+      <title>The memory retained in the memory pool may cause an out-of-memory error</title>
+
+      <likelihood>
+        <factor>50</factor>
+
+        <rationale>On embedded or small devices (e.g. mobile phones) the amount of RAM may be limited.
+                           The usage of a memory pool causes the accumulation.</rationale>
+      </likelihood>
+
+      <severity>
+        <factor>10</factor>
+
+        <rationale>This is a low risk error: the software will stop working and report the error.</rationale>
+      </severity>
+    </risk>
+
+    <risk id="RISK_OUT_OF_MEMORY_BIG_IMAGE">
+      <causedBy>
+        <causedByRequirement idref="REQ_DECOMPRESS_IMAGES"/>
+      </causedBy>
+
+      <title>Big images or corrupted image size tags may cause an out-of-memory error</title>
+
+      <description>Big images or corrupted image size tags may cause an out-of-memory error</description>
+
+      <likelihood>
+        <factor>50</factor>
+
+        <rationale>This could happen on embedded or small devices (e.g. mobile phones) where the amount of RAM may be limited.</rationale>
+      </likelihood>
+
+      <severity>
+        <factor>10</factor>
+
+        <rationale>This is a low risk error: the software will stop working and report the error.</rationale>
+      </severity>
+    </risk>
+
+    <risk id="RISK_SHARED_PTR_NEW">
+      <causedBy>
+        <causedByRequirement idref="REQ_OBJECT_ALLOCATION"/>
+      </causedBy>
+
+      <title>Out of sync shared_ptr usage counter</title>
+
+      <description>
+                When an object is allocated with new and later inserted into a shared pointer
+                then the actual object usage counter and the shared pointer usage
+                counter may be out of sync.
+            </description>
+
+      <likelihood>
+        <factor>50</factor>
+
+        <rationale>Developers will usually avoid this error, but it may happen.</rationale>
+      </likelihood>
+
+      <severity>
+        <factor>100</factor>
+
+        <rationale>This may lead to usage of memory containing random values, resulting in wrong images, tags and finally diagnoses.</rationale>
+      </severity>
+    </risk>
+
+    <risk id="RISK_VR_CONVERSION">
+      <causedBy>
+        <causedByRequirement idref="REQ_VR_CONVERSION"/>
+      </causedBy>
+
+      <title>Implicit VR conversion may hide wrong tag's VR</title>
+
+      <description>The library or the client may read a tag and assume its type: an implicit VR
+                conversion may hide the fact that the tag has in fact the wrong VR and contain a different
+                information than the assumed one.</description>
+
+      <likelihood>
+        <factor>100</factor>
+
+        <rationale/>
+      </likelihood>
+
+      <severity>
+        <factor>100</factor>
+
+        <rationale/>
+      </severity>
+    </risk>
+
+    <risk id="RISK_COPY_CONST_OBJECTS">
+      <causedBy>
+        <causedByRequirement idref="REQ_DONT_RETURN_POINTER"/>
+      </causedBy>
+
+      <title>A const object may be copied into a non-const object</title>
+
+      <description>Because the objects returned by the API are just handlers to implementation objects, the user
+                may copy a const object into a non-const one, introducing the possibility that the implementation object
+                pointed by the const object may be changed through the non-const object.</description>
+
+      <likelihood>
+        <factor>10</factor>
+        <rationale>Modifications of an object requires intentional call to non-const functions</rationale>
+      </likelihood>
+
+      <severity>
+        <factor>100</factor>
+        <rationale/>
+      </severity>
+    </risk>
+
+
+    <risk id="RISK_BUFFER_OVERFLOW">
+      <causedBy>
+        <causedByRequirement idref="REQ_CPP"/>
+
+        <causedByRequirement idref="REQ_RAW_MEMORY"/>
+      </causedBy>
+
+      <title>The library and its client may read or write memory outside the allocated buffer</title>
+
+      <likelihood>
+        <factor>100</factor>
+
+        <rationale/>
+      </likelihood>
+
+      <severity>
+        <factor>100</factor>
+
+        <rationale/>
+      </severity>
+    </risk>
+
+    <risk id="RISK_MEMORY_ALLOC">
+      <causedBy>
+        <causedByRequirement idref="REQ_CPP"/>
+      </causedBy>
+
+      <title>The library may use deallocated memory or forget to deallocate memory</title>
+
+      <likelihood>
+        <factor>100</factor>
+
+        <rationale/>
+      </likelihood>
+
+      <severity>
+        <factor>100</factor>
+
+        <rationale>The usage of deleted objects may lead to wrong images, tags and ultimately diagnosis</rationale>
+      </severity>
+    </risk>
+
+    <risk id="RISK_OBJECT_ALLOC">
+      <causedBy>
+        <causedByRequirement idref="REQ_CPP"/>
+      </causedBy>
+
+      <title>The library and its client may use deallocated objects or forget to deallocate objects</title>
+
+      <description/>
+
+      <likelihood>
+        <factor>100</factor>
+
+        <rationale>In large projects memory leakage or misusage of raw pointer will almost certainly happen.</rationale>
+      </likelihood>
+
+      <severity>
+        <factor>100</factor>
+
+        <rationale>The usage of deleted objects may lead to wrong images, tags and ultimately diagnosis.</rationale>
+      </severity>
+    </risk>
+
+    <risk id="RISK_RECEIVE_DEFAULT_VALUE">
+      <causedBy>
+        <causedByRequirement idref="REQ_RETURN_DEFAULT_VALUE"/>
+      </causedBy>
+
+      <title>When receiving default values for non-existent data the client may understand that the tag is
+                actually present
+            </title>
+
+      <description>When receiving default values for non-existent data the client may understand that the tag is
+                actually present.
+            </description>
+
+      <likelihood>
+        <factor>100</factor>
+
+        <rationale>It is really common that a dataset is missing some tags.</rationale>
+      </likelihood>
+
+      <severity>
+        <factor>100</factor>
+
+        <rationale>If the client application is not aware of the fact that the library may have returned a default value instead of the
+                actual one (that is missing) then it could use it as base for clinical actions or diagnoses.</rationale>
+      </severity>
+    </risk>
+
+    <risk id="RISK_WRONG_VOILUT_DATASET">
+      <causedBy>
+        <causedByRequirement idref="REQ_APPLY_VOILUT"/>
+      </causedBy>
+
+      <title>The library client may apply to an image the VOI/LUT from a wrong dataset</title>
+
+      <description>The client library may apply to an image the VOILUT from the wrong dataset.
+            </description>
+
+      <likelihood>
+        <factor>5</factor>
+
+        <rationale>It is unlikely that the developer will pass the wrong DataSet to the transform.</rationale>
+      </likelihood>
+
+      <severity>
+        <factor>30</factor>
+
+        <rationale>The risk is related to the presentation LUT, which is used only for presentation of the data, not for analysis.</rationale>
+      </severity>
+    </risk>
+
+    <risk id="RISK_WRONG_MODALITY_VOILUT_DATASET">
+      <causedBy>
+        <causedByRequirement idref="REQ_APPLY_MODALITY_VOILUT"/>
+      </causedBy>
+
+      <title>The client may apply to the image the modality VOI/LUT from the wrong dataset</title>
+
+      <description>The client may apply to the image the modality VOI/LUT from the wrong dataset</description>
+
+      <likelihood>
+        <factor>5</factor>
+
+        <rationale>It is unlikely that the developer will pass the wrong DataSet to the transform.</rationale>
+      </likelihood>
+
+      <severity>
+        <factor>100</factor>
+
+        <rationale>Errors in the modality VOILUT may change the meaning of the pixels, resulting in
+                wrong diagnoses.</rationale>
+      </severity>
+    </risk>
+
+    <risk id="RISK_TAGS_DONT_EXIST">
+      <causedBy>
+        <causedByRequirement idref="REQ_READ_TAGS"/>
+      </causedBy>
+
+      <title>The client may ask for tags that don't exist</title>
+
+      <description>The client may ask for data not included in the dataset
+            </description>
+
+      <likelihood>
+        <factor>100</factor>
+
+        <rationale>The chances of requesting a non-existing tag are really high and may happen on every loaded dataset.</rationale>
+      </likelihood>
+
+      <severity>
+        <factor>100</factor>
+
+        <rationale>Missing tags may be essential in making sense of the image and the information contained in the dataset.</rationale>
+      </severity>
+    </risk>
+  </risks>
+</project>

@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_acse_no_payload_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::AcseNoPayloadError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_acse_error" prot="public" virt="non-virtual">dicomhero::AcseError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_acse_no_payload_error_1ad22672e8b4e105da07d00b724aac2223" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AcseNoPayloadError::AcseNoPayloadError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>AcseNoPayloadError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1884" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_no_payload_error_1a85c20ebafcc6676dcdfa3af86c4ef2f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AcseNoPayloadError::AcseNoPayloadError</definition>
+        <argsstring>(const AcseNoPayloadError &amp;source)</argsstring>
+        <name>AcseNoPayloadError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_acse_no_payload_error" kindref="compound">AcseNoPayloadError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1886" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_no_payload_error_1a8d57719aaea6ad7bb7e47ebe10989bd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_acse_no_payload_error" kindref="compound">AcseNoPayloadError</ref> &amp;</type>
+        <definition>AcseNoPayloadError&amp; dicomhero::AcseNoPayloadError::operator=</definition>
+        <argsstring>(const AcseNoPayloadError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_acse_no_payload_error" kindref="compound">AcseNoPayloadError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1888" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_no_payload_error_1a9fc4ba0e01de028f536f3677bf131c9d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::AcseNoPayloadError::~AcseNoPayloadError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~AcseNoPayloadError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1890" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Exception thrown when a command does not have a payload but it should have one. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dicomhero::AcseError</label>
+        <link refid="classdicomhero_1_1_acse_error"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::AcseNoPayloadError</label>
+        <link refid="classdicomhero_1_1_acse_no_payload_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dicomhero::AcseError</label>
+        <link refid="classdicomhero_1_1_acse_error"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::AcseNoPayloadError</label>
+        <link refid="classdicomhero_1_1_acse_no_payload_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1881" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="1882" bodyend="1891"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_acse_error_1adbb42aa40c7a143809c083a281f49e7d" prot="public" virt="non-virtual"><scope>dicomhero::AcseNoPayloadError</scope><name>AcseError</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1a6becca8ff22e9b1719d2856af94a8417" prot="public" virt="non-virtual"><scope>dicomhero::AcseNoPayloadError</scope><name>AcseError</name></member>
+      <member refid="classdicomhero_1_1_acse_no_payload_error_1ad22672e8b4e105da07d00b724aac2223" prot="public" virt="non-virtual"><scope>dicomhero::AcseNoPayloadError</scope><name>AcseNoPayloadError</name></member>
+      <member refid="classdicomhero_1_1_acse_no_payload_error_1a85c20ebafcc6676dcdfa3af86c4ef2f9" prot="public" virt="non-virtual"><scope>dicomhero::AcseNoPayloadError</scope><name>AcseNoPayloadError</name></member>
+      <member refid="classdicomhero_1_1_acse_no_payload_error_1a8d57719aaea6ad7bb7e47ebe10989bd4" prot="public" virt="non-virtual"><scope>dicomhero::AcseNoPayloadError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1a4f961f17b47823241f64229459c21c50" prot="public" virt="non-virtual" ambiguityscope="dicomhero::AcseError::"><scope>dicomhero::AcseNoPayloadError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1ab574eff3cad5081bbae7325330357201" prot="public" virt="virtual"><scope>dicomhero::AcseNoPayloadError</scope><name>~AcseError</name></member>
+      <member refid="classdicomhero_1_1_acse_no_payload_error_1a9fc4ba0e01de028f536f3677bf131c9d" prot="public" virt="virtual"><scope>dicomhero::AcseNoPayloadError</scope><name>~AcseNoPayloadError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

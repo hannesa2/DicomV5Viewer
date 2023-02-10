@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_missing_buffer_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::MissingBufferError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_missing_data_element_error" prot="public" virt="non-virtual">dicomhero::MissingDataElementError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_missing_buffer_error_1af972365294bcd65cadc541b8edc74385" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::MissingBufferError::MissingBufferError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>MissingBufferError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="165" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_missing_buffer_error_1a7cd4b05b0af9054a09e8908861f792c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::MissingBufferError::MissingBufferError</definition>
+        <argsstring>(const MissingBufferError &amp;source)</argsstring>
+        <name>MissingBufferError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_missing_buffer_error" kindref="compound">MissingBufferError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="167" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_missing_buffer_error_1a233eb408537fc4753ca27691d6a59db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_missing_buffer_error" kindref="compound">MissingBufferError</ref> &amp;</type>
+        <definition>MissingBufferError&amp; dicomhero::MissingBufferError::operator=</definition>
+        <argsstring>(const MissingBufferError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_missing_buffer_error" kindref="compound">MissingBufferError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="169" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_missing_buffer_error_1a02985f5115f9fd3477d88b51398aa16f" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::MissingBufferError::~MissingBufferError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~MissingBufferError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="171" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This exception is thrown when the client tries to read a value from a buffer that does not exist (inside an existing tag). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dicomhero::MissingBufferError</label>
+        <link refid="classdicomhero_1_1_missing_buffer_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::MissingDataElementError</label>
+        <link refid="classdicomhero_1_1_missing_data_element_error"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dicomhero::MissingBufferError</label>
+        <link refid="classdicomhero_1_1_missing_buffer_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::MissingDataElementError</label>
+        <link refid="classdicomhero_1_1_missing_data_element_error"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="157" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="158" bodyend="172"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_missing_buffer_error_1af972365294bcd65cadc541b8edc74385" prot="public" virt="non-virtual"><scope>dicomhero::MissingBufferError</scope><name>MissingBufferError</name></member>
+      <member refid="classdicomhero_1_1_missing_buffer_error_1a7cd4b05b0af9054a09e8908861f792c1" prot="public" virt="non-virtual"><scope>dicomhero::MissingBufferError</scope><name>MissingBufferError</name></member>
+      <member refid="classdicomhero_1_1_missing_data_element_error_1a673ff8b882a659224183d80879f576a3" prot="public" virt="non-virtual"><scope>dicomhero::MissingBufferError</scope><name>MissingDataElementError</name></member>
+      <member refid="classdicomhero_1_1_missing_data_element_error_1a87d60e8ed98f1b5f6b82e94d22dcc02d" prot="public" virt="non-virtual"><scope>dicomhero::MissingBufferError</scope><name>MissingDataElementError</name></member>
+      <member refid="classdicomhero_1_1_missing_buffer_error_1a233eb408537fc4753ca27691d6a59db0" prot="public" virt="non-virtual"><scope>dicomhero::MissingBufferError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_missing_data_element_error_1a5ecffe071225bffe7e129de186698ec6" prot="public" virt="non-virtual" ambiguityscope="dicomhero::MissingDataElementError::"><scope>dicomhero::MissingBufferError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_missing_buffer_error_1a02985f5115f9fd3477d88b51398aa16f" prot="public" virt="virtual"><scope>dicomhero::MissingBufferError</scope><name>~MissingBufferError</name></member>
+      <member refid="classdicomhero_1_1_missing_data_element_error_1a2bd45e6484ec67b1d60407711fd3781c" prot="public" virt="virtual"><scope>dicomhero::MissingBufferError</scope><name>~MissingDataElementError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

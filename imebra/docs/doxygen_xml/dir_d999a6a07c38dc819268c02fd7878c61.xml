@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_d999a6a07c38dc819268c02fd7878c61" kind="dir">
+    <compoundname>dicomhero6</compoundname>
+    <innerfile refid="acse_8h">acse.h</innerfile>
+    <innerfile refid="age_8h">age.h</innerfile>
+    <innerfile refid="base_stream_input_8h">baseStreamInput.h</innerfile>
+    <innerfile refid="base_stream_output_8h">baseStreamOutput.h</innerfile>
+    <innerfile refid="base_uid_generator_8h">baseUidGenerator.h</innerfile>
+    <innerfile refid="codec_factory_8h">codecFactory.h</innerfile>
+    <innerfile refid="color_transforms_factory_8h">colorTransformsFactory.h</innerfile>
+    <innerfile refid="data_set_8h">dataSet.h</innerfile>
+    <innerfile refid="date_8h">date.h</innerfile>
+    <innerfile refid="definitions_8h">definitions.h</innerfile>
+    <innerfile refid="dicom_definitions_8h">dicomDefinitions.h</innerfile>
+    <innerfile refid="dicom_dictionary_8h">dicomDictionary.h</innerfile>
+    <innerfile refid="dicom_dir_8h">dicomDir.h</innerfile>
+    <innerfile refid="dicom_dir_entry_8h">dicomDirEntry.h</innerfile>
+    <innerfile refid="library_2include_2dicomhero6_2dicomhero_8h">library/include/dicomhero6/dicomhero.h</innerfile>
+    <innerfile refid="dimse_8h">dimse.h</innerfile>
+    <innerfile refid="draw_bitmap_8h">drawBitmap.h</innerfile>
+    <innerfile refid="exceptions_8h">exceptions.h</innerfile>
+    <innerfile refid="file_stream_input_8h">fileStreamInput.h</innerfile>
+    <innerfile refid="file_stream_output_8h">fileStreamOutput.h</innerfile>
+    <innerfile refid="get_version_8h">getVersion.h</innerfile>
+    <innerfile refid="image_8h">image.h</innerfile>
+    <innerfile refid="lut_8h">lut.h</innerfile>
+    <innerfile refid="memory_8h">memory.h</innerfile>
+    <innerfile refid="memory_pool_8h">memoryPool.h</innerfile>
+    <innerfile refid="memory_stream_input_8h">memoryStreamInput.h</innerfile>
+    <innerfile refid="memory_stream_output_8h">memoryStreamOutput.h</innerfile>
+    <innerfile refid="modality_v_o_i_l_u_t_8h">modalityVOILUT.h</innerfile>
+    <innerfile refid="mutable_memory_8h">mutableMemory.h</innerfile>
+    <innerfile refid="overlay_8h">overlay.h</innerfile>
+    <innerfile refid="patient_name_8h">patientName.h</innerfile>
+    <innerfile refid="pipe_stream_8h">pipeStream.h</innerfile>
+    <innerfile refid="random_uid_generator_8h">randomUidGenerator.h</innerfile>
+    <innerfile refid="reading_data_handler_8h">readingDataHandler.h</innerfile>
+    <innerfile refid="reading_data_handler_numeric_8h">readingDataHandlerNumeric.h</innerfile>
+    <innerfile refid="serial_number_uid_generator_8h">serialNumberUidGenerator.h</innerfile>
+    <innerfile refid="stream_reader_8h">streamReader.h</innerfile>
+    <innerfile refid="stream_writer_8h">streamWriter.h</innerfile>
+    <innerfile refid="tag_8h">tag.h</innerfile>
+    <innerfile refid="tag_id_8h">tagId.h</innerfile>
+    <innerfile refid="tcp_address_8h">tcpAddress.h</innerfile>
+    <innerfile refid="tcp_listener_8h">tcpListener.h</innerfile>
+    <innerfile refid="tcp_stream_8h">tcpStream.h</innerfile>
+    <innerfile refid="transform_8h">transform.h</innerfile>
+    <innerfile refid="transform_high_bit_8h">transformHighBit.h</innerfile>
+    <innerfile refid="transforms_chain_8h">transformsChain.h</innerfile>
+    <innerfile refid="uid_generator_factory_8h">uidGeneratorFactory.h</innerfile>
+    <innerfile refid="library_2include_2dicomhero6_2uids_enumeration_8h">library/include/dicomhero6/uidsEnumeration.h</innerfile>
+    <innerfile refid="_v_o_i_description_8h">VOIDescription.h</innerfile>
+    <innerfile refid="_v_o_i_l_u_t_8h">VOILUT.h</innerfile>
+    <innerfile refid="writing_data_handler_8h">writingDataHandler.h</innerfile>
+    <innerfile refid="writing_data_handler_numeric_8h">writingDataHandlerNumeric.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/"/>
+  </compounddef>
+</doxygen>

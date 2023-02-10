@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_n_set_response" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::NSetResponse</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_dimse_response" prot="public" virt="non-virtual">dicomhero::DimseResponse</basecompoundref>
+    <includes local="no">dimse.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_n_set_response_1a196cc1a4f0024e650447e23faefe377d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class DimseService</definition>
+        <argsstring></argsstring>
+        <name>DimseService</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="1544" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" bodystart="1544" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_n_set_response_1a2e94e2992ed300cdf6a143378d2f1b26" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::NSetResponse::NSetResponse</definition>
+        <argsstring>(const NSetCommand &amp;receivedCommand, attributeIdentifierList_t modifiedAttributes)</argsstring>
+        <name>NSetResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref> &amp;</type>
+          <declname>receivedCommand</declname>
+        </param>
+        <param>
+          <type><ref refid="definitions_8h_1afe5a6c98320c4a24eb38260c76a6f961" kindref="member">attributeIdentifierList_t</ref></type>
+          <declname>modifiedAttributes</declname>
+        </param>
+        <briefdescription>
+<para>Constructor of a successful response. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>receivedCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the command for which this response is being constructed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>modifiedAttributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of modified attributes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="1555" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_n_set_response_1aac459cd61574606ad8ba74959c157006" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::NSetResponse::NSetResponse</definition>
+        <argsstring>(const NSetCommand &amp;receivedCommand, dimseStatusCode_t responseCode)</argsstring>
+        <name>NSetResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref> &amp;</type>
+          <declname>receivedCommand</declname>
+        </param>
+        <param>
+          <type><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref></type>
+          <declname>responseCode</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>receivedCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the command for which this response is being constructed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>responseCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>response code </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="1568" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_n_set_response_1a963d123578cc29b4b5d6a609e82815f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::NSetResponse::NSetResponse</definition>
+        <argsstring>(const NSetResponse &amp;source)</argsstring>
+        <name>NSetResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_n_set_response" kindref="compound">NSetResponse</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_n_set_response" kindref="compound">NSetResponse</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="1579" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_n_set_response_1ad082b78463b040f8b1ac652436d91389" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::NSetResponse::~NSetResponse</definition>
+        <argsstring>()</argsstring>
+        <name>~NSetResponse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="1581" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_n_set_response_1a58fb0b03f01f054e5a54ba415e32f884" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_n_set_response" kindref="compound">NSetResponse</ref> &amp;</type>
+        <definition>NSetResponse&amp; dicomhero::NSetResponse::operator=</definition>
+        <argsstring>(const NSetResponse &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_n_set_response" kindref="compound">NSetResponse</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="1583" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_n_set_response_1ae60c0303d8123f4d3f8ffe5b7dfd7271" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="definitions_8h_1afe5a6c98320c4a24eb38260c76a6f961" kindref="member">attributeIdentifierList_t</ref></type>
+        <definition>attributeIdentifierList_t dicomhero::NSetResponse::getModifiedAttributes</definition>
+        <argsstring>() const</argsstring>
+        <name>getModifiedAttributes</name>
+        <briefdescription>
+<para>Returns the list of modified attributes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>list of modified attributes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="1591" column="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdicomhero_1_1_n_set_response_1a72fb02f7706d44c79e900f99c14970e0" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::NSetResponse::NSetResponse</definition>
+        <argsstring>(const std::shared_ptr&lt; implementation::nSetResponse &gt; &amp;pResponse)</argsstring>
+        <name>NSetResponse</name>
+        <param>
+          <type>const std::shared_ptr&lt; implementation::nSetResponse &gt; &amp;</type>
+          <declname>pResponse</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="1594" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents the N-SET response. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dicomhero::NSetResponse</label>
+        <link refid="classdicomhero_1_1_n_set_response"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dicomhero::DimseCommandBase</label>
+        <link refid="classdicomhero_1_1_dimse_command_base"/>
+      </node>
+      <node id="2">
+        <label>dicomhero::DimseResponse</label>
+        <link refid="classdicomhero_1_1_dimse_response"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dicomhero::NSetResponse</label>
+        <link refid="classdicomhero_1_1_n_set_response"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dicomhero::DimseCommandBase</label>
+        <link refid="classdicomhero_1_1_dimse_command_base"/>
+      </node>
+      <node id="2">
+        <label>dicomhero::DimseResponse</label>
+        <link refid="classdicomhero_1_1_dimse_response"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="1541" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" bodystart="1542" bodyend="1595"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a4c49f1a679c3d5d6963406f98bbf6488" prot="public" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>DimseCommandBase</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a56fe4824f166f85256608b95063c715b" prot="protected" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>DimseCommandBase</name></member>
+      <member refid="classdicomhero_1_1_dimse_response_1a3b68c327bc1fc54b43d2e40cb67a2b55" prot="public" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>DimseResponse</name></member>
+      <member refid="classdicomhero_1_1_dimse_response_1a4a9d8cb80441adb6bd975281f0033200" prot="protected" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>DimseResponse</name></member>
+      <member refid="classdicomhero_1_1_n_set_response_1a196cc1a4f0024e650447e23faefe377d" prot="private" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>DimseService</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a8aad82b61e4888f5ae454e6038817aba" prot="public" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>getAbstractSyntax</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a92b5b9ec7001e21ffb4657f21b901fb3" prot="public" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>getAffectedSopClassUid</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1acda407c661ca6b0d77d103bf1449e936" prot="public" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>getAffectedSopInstanceUid</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a5de4ba3f28c279fa9ca8a6d042ff7487" prot="public" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>getCommandDataSet</name></member>
+      <member refid="classdicomhero_1_1_n_set_response_1ae60c0303d8123f4d3f8ffe5b7dfd7271" prot="public" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>getModifiedAttributes</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1ab5da3e6a748beb8ee2367e4a5c857bcc" prot="public" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>getPayloadDataSet</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1ac7ccfe1ea12e2de305b7fb6fddb0c7b3" prot="public" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>getRequestedSopClassUid</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a4b2e73824fdbb3f1dc0d99196749761d" prot="public" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>getRequestedSopInstanceUid</name></member>
+      <member refid="classdicomhero_1_1_dimse_response_1a9d8e082e061becb9ac9949ab61178bee" prot="public" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>getStatus</name></member>
+      <member refid="classdicomhero_1_1_dimse_response_1a7528461978cf2f7db4a01ea0080230e5" prot="public" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>getStatusCode</name></member>
+      <member refid="classdicomhero_1_1_n_set_response_1a2e94e2992ed300cdf6a143378d2f1b26" prot="public" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>NSetResponse</name></member>
+      <member refid="classdicomhero_1_1_n_set_response_1aac459cd61574606ad8ba74959c157006" prot="public" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>NSetResponse</name></member>
+      <member refid="classdicomhero_1_1_n_set_response_1a963d123578cc29b4b5d6a609e82815f5" prot="public" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>NSetResponse</name></member>
+      <member refid="classdicomhero_1_1_n_set_response_1a72fb02f7706d44c79e900f99c14970e0" prot="protected" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>NSetResponse</name></member>
+      <member refid="classdicomhero_1_1_n_set_response_1a58fb0b03f01f054e5a54ba415e32f884" prot="public" virt="non-virtual"><scope>dicomhero::NSetResponse</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_dimse_response_1ad0a961b19f7b1f83231d5f4100bed015" prot="public" virt="non-virtual" ambiguityscope="dicomhero::DimseResponse::"><scope>dicomhero::NSetResponse</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a31a133b2fab838d4d49a84babfb82d98" prot="public" virt="non-virtual" ambiguityscope="dicomhero::DimseCommandBase::"><scope>dicomhero::NSetResponse</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a3923c35d64048191be0f1b662e9c5277" prot="public" virt="virtual"><scope>dicomhero::NSetResponse</scope><name>~DimseCommandBase</name></member>
+      <member refid="classdicomhero_1_1_dimse_response_1a45837dca907ae44fc5aa8b6c4adc8bcb" prot="public" virt="virtual"><scope>dicomhero::NSetResponse</scope><name>~DimseResponse</name></member>
+      <member refid="classdicomhero_1_1_n_set_response_1ad082b78463b040f8b1ac652436d91389" prot="public" virt="virtual"><scope>dicomhero::NSetResponse</scope><name>~NSetResponse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_random_u_i_d_generator" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroRandomUIDGenerator</compoundname>
+    <basecompoundref refid="interface_dicomhero_base_u_i_d_generator" prot="public" virt="non-virtual">DicomheroBaseUIDGenerator</basecompoundref>
+    <includes local="no">dicomhero_randomUidGenerator.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_random_u_i_d_generator_1a5e0eb9d11b535070fffc08cde33e7e09" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroRandomUIDGenerator::initWithRoot:departmentId:modelId:</definition>
+        <argsstring>(NSString *root,[departmentId] unsigned int departmentId,[modelId] unsigned int modelId)</argsstring>
+        <name>initWithRoot:departmentId:modelId:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>root</declname>
+        </param>
+        <param>
+          <attributes>[departmentId]</attributes>
+          <type>unsigned int</type>
+          <declname>departmentId</declname>
+        </param>
+        <param>
+          <attributes>[modelId]</attributes>
+          <type>unsigned int</type>
+          <declname>modelId</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>root</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the root UID assigned to the company </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>departmentId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>department ID (assigned by the company) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>modelId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>model ID (assigned by the department) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_randomUidGenerator.h" line="1" column="0"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An UID generator that uses a random number to generate unique UIDs. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The uniqueness of the generated UIDs is guaranteed by the fact that the machine generates a long random number during the UID generator initialization. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>DicomheroBaseUIDGenerator</label>
+        <link refid="interface_dicomhero_base_u_i_d_generator"/>
+      </node>
+      <node id="1">
+        <label>DicomheroRandomUIDGenerator</label>
+        <link refid="interface_dicomhero_random_u_i_d_generator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>DicomheroBaseUIDGenerator</label>
+        <link refid="interface_dicomhero_base_u_i_d_generator"/>
+      </node>
+      <node id="1">
+        <label>DicomheroRandomUIDGenerator</label>
+        <link refid="interface_dicomhero_random_u_i_d_generator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_randomUidGenerator.h" line="30" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_randomUidGenerator.h" bodystart="31" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_base_u_i_d_generator_1ad5bd7dd782fc73c3c4c14b506d0a20bc" prot="public" virt="virtual"><scope>DicomheroRandomUIDGenerator</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_base_u_i_d_generator_1a38d449f90138e8d93681144364208d9a" prot="public" virt="virtual"><scope>DicomheroRandomUIDGenerator</scope><name>getUID</name></member>
+      <member refid="interface_dicomhero_base_u_i_d_generator_1a9107cf94865fb134ba1cdbdd8a0dfedf" prot="public" virt="virtual"><scope>DicomheroRandomUIDGenerator</scope><name>initWithDicomheroBaseUidGenerator:</name></member>
+      <member refid="interface_dicomhero_random_u_i_d_generator_1a5e0eb9d11b535070fffc08cde33e7e09" prot="public" virt="virtual"><scope>DicomheroRandomUIDGenerator</scope><name>initWithRoot:departmentId:modelId:</name></member>
+      <member refid="interface_dicomhero_base_u_i_d_generator_1ad0fb837a616e7178df46b665dd6e7785" prot="public" virt="non-virtual"><scope>DicomheroRandomUIDGenerator</scope><name>m_BaseUIDGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

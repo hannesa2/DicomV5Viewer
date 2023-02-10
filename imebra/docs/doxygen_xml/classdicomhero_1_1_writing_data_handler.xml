@@ -1,0 +1,973 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_writing_data_handler" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::WritingDataHandler</compoundname>
+    <derivedcompoundref refid="classdicomhero_1_1_writing_data_handler_numeric" prot="public" virt="non-virtual">dicomhero::WritingDataHandlerNumeric</derivedcompoundref>
+    <includes local="no">writingDataHandler.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_writing_data_handler_1aef648af6c56fa8ee0738c93629e725dc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class DataSet</definition>
+        <argsstring></argsstring>
+        <name>DataSet</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="63" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_writing_data_handler_1afc8c1b0e7f1fedf25715bd33b74eb56c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Tag</definition>
+        <argsstring></argsstring>
+        <name>Tag</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="64" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_writing_data_handler_1a5c4b4cc79a939f7eed42d892d44c4955" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::shared_ptr&lt; implementation::handlers::writingDataHandler &gt; &amp;</type>
+        <definition>const std::shared_ptr&lt;implementation::handlers::writingDataHandler&gt;&amp; getWritingDataHandlerImplementation</definition>
+        <argsstring>(const WritingDataHandler &amp;writingHandler)</argsstring>
+        <name>getWritingDataHandlerImplementation</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+          <declname>writingHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="327" column="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdicomhero_1_1_writing_data_handler_1acc5b7cb824333052ac4089a918328ac3" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; implementation::handlers::writingDataHandler &gt;</type>
+        <definition>std::shared_ptr&lt;implementation::handlers::writingDataHandler&gt; dicomhero::WritingDataHandler::m_pDataHandler</definition>
+        <argsstring></argsstring>
+        <name>m_pDataHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="328" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1a206b39b953437276bfa3fc78d14b1f02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::WritingDataHandler::WritingDataHandler</definition>
+        <argsstring>(const WritingDataHandler &amp;source)</argsstring>
+        <name>WritingDataHandler</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="73" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1a7340146c60766aef5e7e890e6d01b872" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::operator=</definition>
+        <argsstring>(const WritingDataHandler &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="75" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1af204b033af04b499053e9255ee9580de" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::WritingDataHandler::~WritingDataHandler</definition>
+        <argsstring>()</argsstring>
+        <name>~WritingDataHandler</name>
+        <briefdescription>
+<para>Destructor: replaces the tag buffer&apos;s memory with the memory created by this <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="81" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1a5d6b87b0e639b8c41b3cb492be183e7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setSize</definition>
+        <argsstring>(size_t elementsNumber)</argsstring>
+        <name>setSize</name>
+        <param>
+          <type>size_t</type>
+          <declname>elementsNumber</declname>
+        </param>
+        <briefdescription>
+<para>Resize the memory to contain the specified number of elements. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>By default, the <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> buffer allocates an empty memory block that must be resized in order to be filled with data.</para>
+<para>The type of the contained elements depends on the tag&apos;s VR. The VR can be retrieved with <ref refid="classdicomhero_1_1_writing_data_handler_1aba8991c5f59803e2c2b20cb3e82262ae" kindref="member">getDataType()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>elementsNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of elements to store in the buffer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="94" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t dicomhero::WritingDataHandler::getSize</definition>
+        <argsstring>() const</argsstring>
+        <name>getSize</name>
+        <briefdescription>
+<para>Retrieve the number of elements that can be stored in the buffer controlled by <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The memory size can be changed with <ref refid="classdicomhero_1_1_writing_data_handler_1a5d6b87b0e639b8c41b3cb492be183e7d" kindref="member">setSize()</ref>.</para>
+<para>The type of the contained elements depends on the tag&apos;s VR. The VR can be retrieved with <ref refid="classdicomhero_1_1_writing_data_handler_1aba8991c5f59803e2c2b20cb3e82262ae" kindref="member">getDataType()</ref>.</para>
+<para><simplesect kind="return"><para>the number of elements that can be stored in the buffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="107" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1aba8991c5f59803e2c2b20cb3e82262ae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1" kindref="member">tagVR_t</ref></type>
+        <definition>tagVR_t dicomhero::WritingDataHandler::getDataType</definition>
+        <argsstring>() const</argsstring>
+        <name>getDataType</name>
+        <briefdescription>
+<para>Returns the data type (VR) of the data handled by the data handler. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the data type of the handled data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="114" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1a86393fc84ec31c4ae841aab2026b0be0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setInt64</definition>
+        <argsstring>(size_t index, std::int64_t value)</argsstring>
+        <name>setInt64</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::int64_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Write a 64 bit signed integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a 64 bit signed integer then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="126" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1a44fad982a84359e47121406eb0330a66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setInt32</definition>
+        <argsstring>(size_t index, std::int32_t value)</argsstring>
+        <name>setInt32</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Write a signed long integer (32 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a signed long integer then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="138" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1adbda7c6b549ce571eb1c1267d298ee77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setSignedLong</definition>
+        <argsstring>(size_t index, std::int32_t value)</argsstring>
+        <name>setSignedLong</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Deprecated. Use <ref refid="classdicomhero_1_1_writing_data_handler_1a44fad982a84359e47121406eb0330a66" kindref="member">setInt32()</ref> instead. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="143" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1afb6df861a30364ba4edb75fd225408b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setUint64</definition>
+        <argsstring>(size_t index, std::uint64_t value)</argsstring>
+        <name>setUint64</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Write an unsigned 64 bit integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from an unsigned 64 bit integer then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="155" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1a939264ee0ed042da81c91ae364911ccf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setUint32</definition>
+        <argsstring>(size_t index, std::uint32_t value)</argsstring>
+        <name>setUint32</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Write an unsigned long integer (32 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When setting a value for an AT tag (Attribute <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>) then the tag&apos;s group must always be in the higher 16 bits of the value.</para>
+<para>If the value cannot be converted from an unsigned long integer then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="170" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1a845aa8a5b782451f05fb4af571df79f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setUnsignedLong</definition>
+        <argsstring>(size_t index, std::uint32_t value)</argsstring>
+        <name>setUnsignedLong</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Deprecated. Use <ref refid="classdicomhero_1_1_writing_data_handler_1a939264ee0ed042da81c91ae364911ccf" kindref="member">setUint32()</ref> instead. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="175" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1afcb7404c1513628db3d0298c0f7b472f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setInt16</definition>
+        <argsstring>(size_t index, std::int16_t value)</argsstring>
+        <name>setInt16</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::int16_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Write a signed long integer (16 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a signed long integer then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="187" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1a776b4a583e40e9f299a9534ee9cd4dc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setUint16</definition>
+        <argsstring>(size_t index, std::uint16_t value)</argsstring>
+        <name>setUint16</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Write an unsigned long integer (16 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from an unsigned long integer then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="199" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1affcf382a2db44891833a0153ffa2eb8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setInt8</definition>
+        <argsstring>(size_t index, std::int8_t value)</argsstring>
+        <name>setInt8</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::int8_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Write a signed long integer (8 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a signed long integer then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="211" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1a619f2eb16844cd640c4a876145b5e449" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setUint8</definition>
+        <argsstring>(size_t index, std::uint8_t value)</argsstring>
+        <name>setUint8</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Write an unsigned long integer (8 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from an unsigned long integer then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="223" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1ace488cb7d811340e3864310f1d53ec32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setDouble</definition>
+        <argsstring>(size_t index, double value)</argsstring>
+        <name>setDouble</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Write a double floating point value (64 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a double floating point then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="235" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1af302ad18a9772f1ae299913cab53b016" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setFloat</definition>
+        <argsstring>(size_t index, float value)</argsstring>
+        <name>setFloat</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Write a floating point value (32 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a floating point then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="247" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1adf972e1c24a6f1a031268e2ad9918936" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setString</definition>
+        <argsstring>(size_t index, const std::string &amp;value)</argsstring>
+        <name>setString</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Write a UTF8 string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a string then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="259" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1ab23afce802bbcb711b1a0d1b15b7e347" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setUnicodeString</definition>
+        <argsstring>(size_t index, const std::wstring &amp;value)</argsstring>
+        <name>setUnicodeString</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const std::wstring &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Write an Unicode string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a Unicode string then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="271" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1ab457caaac5d5e31903585c450ac3f748" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setDate</definition>
+        <argsstring>(size_t index, const Date &amp;date)</argsstring>
+        <name>setDate</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_date" kindref="compound">Date</ref> &amp;</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+<para>Write a date and/or a time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a <ref refid="classdicomhero_1_1_date" kindref="compound">Date</ref> then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="283" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1adae12227ec393653ee11cdca455a9904" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setAge</definition>
+        <argsstring>(size_t index, const Age &amp;age)</argsstring>
+        <name>setAge</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_age" kindref="compound">Age</ref> &amp;</type>
+          <declname>age</declname>
+        </param>
+        <briefdescription>
+<para>Write an <ref refid="classdicomhero_1_1_age" kindref="compound">Age</ref> value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from an <ref refid="classdicomhero_1_1_age" kindref="compound">Age</ref> then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>age</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="295" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1ae21d0749ad30efb769af2b441658a305" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setPatientName</definition>
+        <argsstring>(size_t index, const PatientName &amp;patientName)</argsstring>
+        <name>setPatientName</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_patient_name" kindref="compound">PatientName</ref> &amp;</type>
+          <declname>patientName</declname>
+        </param>
+        <briefdescription>
+<para>Write a <ref refid="classdicomhero_1_1_patient_name" kindref="compound">PatientName</ref> value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a <ref refid="classdicomhero_1_1_patient_name" kindref="compound">PatientName</ref> value then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>age</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="307" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1a48ac20376756e495ce29c180f05d6835" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> &amp;</type>
+        <definition>WritingDataHandler&amp; dicomhero::WritingDataHandler::setUnicodePatientName</definition>
+        <argsstring>(size_t index, const UnicodePatientName &amp;patientName)</argsstring>
+        <name>setUnicodePatientName</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_unicode_patient_name" kindref="compound">UnicodePatientName</ref> &amp;</type>
+          <declname>patientName</declname>
+        </param>
+        <briefdescription>
+<para>Write a <ref refid="classdicomhero_1_1_unicode_patient_name" kindref="compound">UnicodePatientName</ref> value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a <ref refid="classdicomhero_1_1_patient_name" kindref="compound">PatientName</ref> value then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>age</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="321" column="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdicomhero_1_1_writing_data_handler_1aab01d648a11e86bdbdd9f0e76ead4304" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::WritingDataHandler::WritingDataHandler</definition>
+        <argsstring>(const std::shared_ptr&lt; implementation::handlers::writingDataHandler &gt; &amp;pDataHandler)</argsstring>
+        <name>WritingDataHandler</name>
+        <param>
+          <type>const std::shared_ptr&lt; implementation::handlers::writingDataHandler &gt; &amp;</type>
+          <declname>pDataHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="324" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> class allows to write the content of a Dicom tag&apos;s buffer. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> is able to write into the buffer&apos;s content strings, numbers, date/time or ages.</para>
+<para>In order to obtain a <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> object for a specific tag stored in a <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>, call <ref refid="classdicomhero_1_1_data_set_1a924ce70603998676d3cad779ec135c76" kindref="member">DataSet::getWritingDataHandler()</ref> or <ref refid="classdicomhero_1_1_tag_1affa90e70af4b7430145f5c87cee189ae" kindref="member">Tag::getWritingDataHandler()</ref>.</para>
+<para>The <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> object always works on a new and clean memory area. The buffer&apos;s memory is replaced by the <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> memory when the data handler is destroyed. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dicomhero::WritingDataHandler</label>
+        <link refid="classdicomhero_1_1_writing_data_handler"/>
+      </node>
+      <node id="2">
+        <label>dicomhero::WritingDataHandlerNumeric</label>
+        <link refid="classdicomhero_1_1_writing_data_handler_numeric"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" line="60" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h" bodystart="61" bodyend="330"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_writing_data_handler_1aef648af6c56fa8ee0738c93629e725dc" prot="private" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>DataSet</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1aba8991c5f59803e2c2b20cb3e82262ae" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>getDataType</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1a8eb643ba7c7d1403bf11599611a516c3" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>getSize</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1a5c4b4cc79a939f7eed42d892d44c4955" prot="private" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>getWritingDataHandlerImplementation</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1acc5b7cb824333052ac4089a918328ac3" prot="private" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>m_pDataHandler</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1a7340146c60766aef5e7e890e6d01b872" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1adae12227ec393653ee11cdca455a9904" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setAge</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1ab457caaac5d5e31903585c450ac3f748" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setDate</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1ace488cb7d811340e3864310f1d53ec32" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setDouble</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1af302ad18a9772f1ae299913cab53b016" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setFloat</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1afcb7404c1513628db3d0298c0f7b472f" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setInt16</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1a44fad982a84359e47121406eb0330a66" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setInt32</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1a86393fc84ec31c4ae841aab2026b0be0" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setInt64</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1affcf382a2db44891833a0153ffa2eb8a" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setInt8</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1ae21d0749ad30efb769af2b441658a305" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setPatientName</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1adbda7c6b549ce571eb1c1267d298ee77" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setSignedLong</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1a5d6b87b0e639b8c41b3cb492be183e7d" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setSize</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1adf972e1c24a6f1a031268e2ad9918936" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setString</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1a776b4a583e40e9f299a9534ee9cd4dc7" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setUint16</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1a939264ee0ed042da81c91ae364911ccf" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setUint32</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1afb6df861a30364ba4edb75fd225408b8" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setUint64</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1a619f2eb16844cd640c4a876145b5e449" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setUint8</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1a48ac20376756e495ce29c180f05d6835" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setUnicodePatientName</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1ab23afce802bbcb711b1a0d1b15b7e347" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setUnicodeString</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1a845aa8a5b782451f05fb4af571df79f8" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>setUnsignedLong</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1afc8c1b0e7f1fedf25715bd33b74eb56c" prot="private" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>Tag</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1a206b39b953437276bfa3fc78d14b1f02" prot="public" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>WritingDataHandler</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1aab01d648a11e86bdbdd9f0e76ead4304" prot="protected" virt="non-virtual"><scope>dicomhero::WritingDataHandler</scope><name>WritingDataHandler</name></member>
+      <member refid="classdicomhero_1_1_writing_data_handler_1af204b033af04b499053e9255ee9580de" prot="public" virt="virtual"><scope>dicomhero::WritingDataHandler</scope><name>~WritingDataHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

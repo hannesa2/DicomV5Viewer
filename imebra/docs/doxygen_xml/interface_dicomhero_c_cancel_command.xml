@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_c_cancel_command" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroCCancelCommand</compoundname>
+    <basecompoundref refid="interface_dicomhero_dimse_command" prot="public" virt="non-virtual">DicomheroDimseCommand</basecompoundref>
+    <includes local="no">dicomhero_dimse.h</includes>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_c_cancel_command_1a370e195d60b9126918912f4b0a470844" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned short</type>
+        <definition>unsigned short DicomheroCCancelCommand::cancelMessageID</definition>
+        <argsstring></argsstring>
+        <name>cancelMessageID</name>
+        <read></read>
+        <briefdescription>
+<para>Returns the ID of the message to cancel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="738" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="738" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_c_cancel_command_1a36c3a8e041327bd3596721904955f8be" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroCCancelCommand::initWithAbstractSyntax:messageID:priority:cancelMessageID:</definition>
+        <argsstring>(NSString *abstractSyntax,[messageID] unsigned short messageID,[priority] DicomheroDimseCommandPriority priority,[cancelMessageID] unsigned short cancelMessageID)</argsstring>
+        <name>initWithAbstractSyntax:messageID:priority:cancelMessageID:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>abstractSyntax</declname>
+        </param>
+        <param>
+          <attributes>[messageID]</attributes>
+          <type>unsigned short</type>
+          <declname>messageID</declname>
+        </param>
+        <param>
+          <attributes>[priority]</attributes>
+          <type>DicomheroDimseCommandPriority</type>
+          <declname>priority</declname>
+        </param>
+        <param>
+          <attributes>[cancelMessageID]</attributes>
+          <type>unsigned short</type>
+          <declname>cancelMessageID</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>abstractSyntax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message&apos;s abstract syntax (previously negotiated via the <ref refid="interface_dicomhero_presentation_contexts" kindref="compound">DicomheroPresentationContexts</ref> parameter of the <ref refid="interface_dicomhero_association_s_c_p" kindref="compound">DicomheroAssociationSCP</ref> or <ref refid="interface_dicomhero_association_s_c_u" kindref="compound">DicomheroAssociationSCU</ref> initializers) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>messageID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>message ID (can be retrieved with <ref refid="interface_dicomhero_dimse_service_1a89cba6d75cdef2b02e88bdba583808bc" kindref="member">getNextCommandID (DicomheroDimseService)</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message priority </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cancelMessageID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ID of the message to cancel </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="344" column="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents the C-CANCEL command. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>DicomheroDimseCommand</label>
+        <link refid="interface_dicomhero_dimse_command"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DicomheroCCancelCommand</label>
+        <link refid="interface_dicomhero_c_cancel_command"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DicomheroDimseCommandBase</label>
+        <link refid="interface_dicomhero_dimse_command_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>DicomheroDimseCommand</label>
+        <link refid="interface_dicomhero_dimse_command"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DicomheroCCancelCommand</label>
+        <link refid="interface_dicomhero_c_cancel_command"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DicomheroDimseCommandBase</label>
+        <link refid="interface_dicomhero_dimse_command_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="710" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="711" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_c_cancel_command_1a370e195d60b9126918912f4b0a470844" prot="public" virt="non-virtual"><scope>DicomheroCCancelCommand</scope><name>cancelMessageID</name></member>
+      <member refid="interface_dicomhero_dimse_command_1a76136966e014566dc921bf330a4ef335" prot="public" virt="non-virtual"><scope>DicomheroCCancelCommand</scope><name>commandType</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1aa6e7648457444127f82ded7dd4aa891d" prot="public" virt="virtual"><scope>DicomheroCCancelCommand</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a68d97c939e669901c372557fca25cf34" prot="public" virt="virtual"><scope>DicomheroCCancelCommand</scope><name>getAbstractSyntax</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a77cfd3acdf766f5ec85c9075bfc68902" prot="public" virt="virtual"><scope>DicomheroCCancelCommand</scope><name>getAffectedSopClassUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a960b3c03c3d2952f920977b6c45032b6" prot="public" virt="virtual"><scope>DicomheroCCancelCommand</scope><name>getAffectedSopInstanceUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a478b7f0930cc6fad1fe0a12cb20f6193" prot="public" virt="virtual"><scope>DicomheroCCancelCommand</scope><name>getCommandDataSet:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a62a22fdadc33eb68b0a87c2095acc239" prot="public" virt="virtual"><scope>DicomheroCCancelCommand</scope><name>getPayloadDataSet:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a11da81e00cc6f99977de4a53d5573256" prot="public" virt="virtual"><scope>DicomheroCCancelCommand</scope><name>getRequestedSopClassUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a3881cedfd1df5f2b0843763b15183adf" prot="public" virt="virtual"><scope>DicomheroCCancelCommand</scope><name>getRequestedSopInstanceUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_1a4aaa4fa728da2426b7b15b9be68166c3" prot="public" virt="non-virtual"><scope>DicomheroCCancelCommand</scope><name>ID</name></member>
+      <member refid="interface_dicomhero_c_cancel_command_1a36c3a8e041327bd3596721904955f8be" prot="public" virt="virtual"><scope>DicomheroCCancelCommand</scope><name>initWithAbstractSyntax:messageID:priority:cancelMessageID:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1aee56566e403c56fe35de6057b9cafde7" prot="public" virt="virtual"><scope>DicomheroCCancelCommand</scope><name>initWithDicomheroCommand:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1ae5022fe1e9373e80bc857936d1e03f39" prot="public" virt="non-virtual"><scope>DicomheroCCancelCommand</scope><name>m_DimseCommandBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

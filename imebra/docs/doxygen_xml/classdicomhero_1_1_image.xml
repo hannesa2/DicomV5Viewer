@@ -1,0 +1,413 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_image" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::Image</compoundname>
+    <includes local="no">image.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_image_1aef648af6c56fa8ee0738c93629e725dc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class DataSet</definition>
+        <argsstring></argsstring>
+        <name>DataSet</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="58" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_image_1aee423670a7a98cd846b317ca635fd3dd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Overlay</definition>
+        <argsstring></argsstring>
+        <name>Overlay</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_overlay" kindref="compound">Overlay</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="59" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_image_1af851b4d9aacd1a871da33592334b8d72" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Transform</definition>
+        <argsstring></argsstring>
+        <name>Transform</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_transform" kindref="compound">Transform</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="60" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_image_1ada250f109ec701aea665d36759c18ee6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::shared_ptr&lt; implementation::image &gt; &amp;</type>
+        <definition>const std::shared_ptr&lt;implementation::image&gt;&amp; getImageImplementation</definition>
+        <argsstring>(const Image &amp;image)</argsstring>
+        <name>getImageImplementation</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="168" column="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdicomhero_1_1_image_1a0e36de7d147cdb4b773ff963887fbbdc" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; implementation::image &gt;</type>
+        <definition>std::shared_ptr&lt;implementation::image&gt; dicomhero::Image::m_pImage</definition>
+        <argsstring></argsstring>
+        <name>m_pImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="169" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_image_1a0d86bae7543b7ae710157fd3519c0ae7" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::Image::Image</definition>
+        <argsstring>(std::uint32_t width, std::uint32_t height, bitDepth_t depth, const std::string &amp;colorSpace, std::uint32_t highBit)</argsstring>
+        <name>Image</name>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type><ref refid="definitions_8h_1a1122eda39f3934f15c6ce131dc37d411" kindref="member">bitDepth_t</ref></type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>colorSpace</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>highBit</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The memory for the image is not allocated by the constructor but only when a <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> is requested with <ref refid="classdicomhero_1_1_image_1a441597d26c20b84d7829f0ac4a76566e" kindref="member">getWritingDataHandler()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the image width, in pixels </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the image height, in pixels </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel values data types </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>colorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref>&apos;s color space </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>highBit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the highest bit occupied by the channels&apos; values </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="75" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_image_1a06230293d51dfdf6e6cb2353c898a49e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::Image::Image</definition>
+        <argsstring>(const Image &amp;source)</argsstring>
+        <name>Image</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="88" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_image_1afc7cd4d4d5b49f63fbfa47bc96d85d41" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::Image::~Image</definition>
+        <argsstring>()</argsstring>
+        <name>~Image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="90" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_image_1ab4d555b9160d220ad57711b44d9cbf44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref> &amp;</type>
+        <definition>Image&amp; dicomhero::Image::operator=</definition>
+        <argsstring>(const Image &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="92" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_image_1a83ffe5c36fdc18c545f62c822b392317" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t dicomhero::Image::getWidth</definition>
+        <argsstring>() const</argsstring>
+        <name>getWidth</name>
+        <briefdescription>
+<para>Retrieve the image&apos;s width, in pixels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the image&apos;s width, in pixels </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="99" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_image_1a7bf1439f7fc80237af97fab15388ee90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t dicomhero::Image::getHeight</definition>
+        <argsstring>() const</argsstring>
+        <name>getHeight</name>
+        <briefdescription>
+<para>Retrieve the image&apos;s height, in pixels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the image&apos;s height, in pixels </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="106" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_image_1a1f5ba46b010b427916f048beb58d90f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_reading_data_handler_numeric" kindref="compound">ReadingDataHandlerNumeric</ref></type>
+        <definition>ReadingDataHandlerNumeric dicomhero::Image::getReadingDataHandler</definition>
+        <argsstring>() const</argsstring>
+        <name>getReadingDataHandler</name>
+        <briefdescription>
+<para>Retrieve a <ref refid="classdicomhero_1_1_reading_data_handler_numeric" kindref="compound">ReadingDataHandlerNumeric</ref> object referencing the <ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref>&apos;s memory (read only). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The memory referenced by <ref refid="classdicomhero_1_1_reading_data_handler_numeric" kindref="compound">ReadingDataHandlerNumeric</ref> contains all the image&apos;s values. The color channels are interleaved.</para>
+<para><simplesect kind="return"><para>a <ref refid="classdicomhero_1_1_reading_data_handler_numeric" kindref="compound">ReadingDataHandlerNumeric</ref> object referencing the <ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref>&apos;s memory in read-only mode </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="118" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_image_1a441597d26c20b84d7829f0ac4a76566e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref></type>
+        <definition>WritingDataHandlerNumeric dicomhero::Image::getWritingDataHandler</definition>
+        <argsstring>()</argsstring>
+        <name>getWritingDataHandler</name>
+        <briefdescription>
+<para>Retrieve a <ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref> object referencing the <ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref>&apos;s memory (mutable). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The memory referenced by the <ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref> object is uninitialized.</para>
+<para>When the <ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref> is destroyed then the memory managed by the <ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref> object replaces the old <ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref>&apos;s memory.</para>
+<para><simplesect kind="return"><para>a <ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref> object referencing an uninitialized memory buffer that the client has to fill the the image&apos;s data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="133" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_image_1a02e81200960c54b4b51e1111387a5b90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string dicomhero::Image::getColorSpace</definition>
+        <argsstring>() const</argsstring>
+        <name>getColorSpace</name>
+        <briefdescription>
+<para>Retrieve the <ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref>&apos;s color space. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref>&apos;s color space </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="140" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_image_1adeea1f34a3fb4396e0375415731771b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t dicomhero::Image::getChannelsNumber</definition>
+        <argsstring>() const</argsstring>
+        <name>getChannelsNumber</name>
+        <briefdescription>
+<para>Return the number of color channels contained by the image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the number of color channel contained by the image </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="147" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_image_1ae41598088e848ec18115a8457d321b98" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="definitions_8h_1a1122eda39f3934f15c6ce131dc37d411" kindref="member">bitDepth_t</ref></type>
+        <definition>bitDepth_t dicomhero::Image::getDepth</definition>
+        <argsstring>() const</argsstring>
+        <name>getDepth</name>
+        <briefdescription>
+<para>Return the type of the channels&apos; values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the type of the channels&apos; values </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="154" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_image_1a1a59b699275fbf7ee5b6683f7a2b9e30" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t dicomhero::Image::getHighBit</definition>
+        <argsstring>() const</argsstring>
+        <name>getHighBit</name>
+        <briefdescription>
+<para>Return the highest bit occupied by the channels&apos; values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the highest bit occupied by the channels&apos; values </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="161" column="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdicomhero_1_1_image_1a76cfc278a2207a578dfd3fb9a67da96a" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::Image::Image</definition>
+        <argsstring>(const std::shared_ptr&lt; dicomhero::implementation::image &gt; &amp;pImage)</argsstring>
+        <name>Image</name>
+        <param>
+          <type>const std::shared_ptr&lt; dicomhero::implementation::image &gt; &amp;</type>
+          <declname>pImage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="165" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a DICOM image. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The class manages an uncompressed DICOM image. Images are compressed when they are inserted into the <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> via <ref refid="classdicomhero_1_1_data_set_1acbc4fd2b0d6786392e5ac43567870b13" kindref="member">DataSet::setImage()</ref> and are decompressed when they are referenced by the <ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref> class.</para>
+<para>The image is stored in a contiguous area of memory: each channel&apos;s value can occupy 1, 2 or 4 bytes, according to the <ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref>&apos;s data type.</para>
+<para>Channels&apos; values are always interleaved in the <ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref> class, regardless of how they are stored in the <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> object. </para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" line="56" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/image.h" bodystart="57" bodyend="171"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_image_1aef648af6c56fa8ee0738c93629e725dc" prot="private" virt="non-virtual"><scope>dicomhero::Image</scope><name>DataSet</name></member>
+      <member refid="classdicomhero_1_1_image_1adeea1f34a3fb4396e0375415731771b4" prot="public" virt="non-virtual"><scope>dicomhero::Image</scope><name>getChannelsNumber</name></member>
+      <member refid="classdicomhero_1_1_image_1a02e81200960c54b4b51e1111387a5b90" prot="public" virt="non-virtual"><scope>dicomhero::Image</scope><name>getColorSpace</name></member>
+      <member refid="classdicomhero_1_1_image_1ae41598088e848ec18115a8457d321b98" prot="public" virt="non-virtual"><scope>dicomhero::Image</scope><name>getDepth</name></member>
+      <member refid="classdicomhero_1_1_image_1a7bf1439f7fc80237af97fab15388ee90" prot="public" virt="non-virtual"><scope>dicomhero::Image</scope><name>getHeight</name></member>
+      <member refid="classdicomhero_1_1_image_1a1a59b699275fbf7ee5b6683f7a2b9e30" prot="public" virt="non-virtual"><scope>dicomhero::Image</scope><name>getHighBit</name></member>
+      <member refid="classdicomhero_1_1_image_1ada250f109ec701aea665d36759c18ee6" prot="private" virt="non-virtual"><scope>dicomhero::Image</scope><name>getImageImplementation</name></member>
+      <member refid="classdicomhero_1_1_image_1a1f5ba46b010b427916f048beb58d90f1" prot="public" virt="non-virtual"><scope>dicomhero::Image</scope><name>getReadingDataHandler</name></member>
+      <member refid="classdicomhero_1_1_image_1a83ffe5c36fdc18c545f62c822b392317" prot="public" virt="non-virtual"><scope>dicomhero::Image</scope><name>getWidth</name></member>
+      <member refid="classdicomhero_1_1_image_1a441597d26c20b84d7829f0ac4a76566e" prot="public" virt="non-virtual"><scope>dicomhero::Image</scope><name>getWritingDataHandler</name></member>
+      <member refid="classdicomhero_1_1_image_1a0d86bae7543b7ae710157fd3519c0ae7" prot="public" virt="non-virtual"><scope>dicomhero::Image</scope><name>Image</name></member>
+      <member refid="classdicomhero_1_1_image_1a06230293d51dfdf6e6cb2353c898a49e" prot="public" virt="non-virtual"><scope>dicomhero::Image</scope><name>Image</name></member>
+      <member refid="classdicomhero_1_1_image_1a76cfc278a2207a578dfd3fb9a67da96a" prot="protected" virt="non-virtual"><scope>dicomhero::Image</scope><name>Image</name></member>
+      <member refid="classdicomhero_1_1_image_1a0e36de7d147cdb4b773ff963887fbbdc" prot="private" virt="non-virtual"><scope>dicomhero::Image</scope><name>m_pImage</name></member>
+      <member refid="classdicomhero_1_1_image_1ab4d555b9160d220ad57711b44d9cbf44" prot="public" virt="non-virtual"><scope>dicomhero::Image</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_image_1aee423670a7a98cd846b317ca635fd3dd" prot="private" virt="non-virtual"><scope>dicomhero::Image</scope><name>Overlay</name></member>
+      <member refid="classdicomhero_1_1_image_1af851b4d9aacd1a871da33592334b8d72" prot="private" virt="non-virtual"><scope>dicomhero::Image</scope><name>Transform</name></member>
+      <member refid="classdicomhero_1_1_image_1afc7cd4d4d5b49f63fbfa47bc96d85d41" prot="public" virt="virtual"><scope>dicomhero::Image</scope><name>~Image</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

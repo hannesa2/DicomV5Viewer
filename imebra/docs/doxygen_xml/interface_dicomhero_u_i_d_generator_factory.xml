@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_u_i_d_generator_factory" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroUIDGeneratorFactory</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_uidGeneratorFactory.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_dicomhero_u_i_d_generator_factory_1a6b49681823c1b3d5c3b75b508a6e33aa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroUIDGeneratorFactory::registerUIDGenerator:generator:error:</definition>
+        <argsstring>(NSString *name,[generator] DicomheroBaseUIDGenerator *pGenerator,[error] NSError **pError)</argsstring>
+        <name>registerUIDGenerator:generator:error:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <attributes>[generator]</attributes>
+          <type><ref refid="interface_dicomhero_base_u_i_d_generator" kindref="compound">DicomheroBaseUIDGenerator</ref> *</type>
+          <declname>pGenerator</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Register an UID generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>UID generators should be registered when the application starts.</para>
+<para>Registered UID generators can be retrieved using getUIDGenerator() or getDefaultUIDGenerator().</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name under which the UID generator is registered </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pGGenerator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the UID generator to register </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_uidGeneratorFactory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_u_i_d_generator_factory_1a2b82e0b97af4339d930d4b7698211ae3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_base_u_i_d_generator" kindref="compound">DicomheroBaseUIDGenerator</ref> *</type>
+        <definition>DicomheroBaseUIDGenerator* DicomheroUIDGeneratorFactory::getUIDGenerator:error:</definition>
+        <argsstring>(NSString *name,[error] NSError **pError)</argsstring>
+        <name>getUIDGenerator:error:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieved a registered UID generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>DicomheroNonRegisteredUIDGenerator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the requested UID generator was not register via registerUIDGenerator().</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the generator to retrieve </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the requested UID generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_uidGeneratorFactory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_u_i_d_generator_factory_1a493c1bdabebd971f937ba5939eb67b4e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_base_u_i_d_generator" kindref="compound">DicomheroBaseUIDGenerator</ref> *</type>
+        <definition>DicomheroBaseUIDGenerator* DicomheroUIDGeneratorFactory::getDefaultUIDGenerator:</definition>
+        <argsstring>(NSError **pError)</argsstring>
+        <name>getDefaultUIDGenerator:</name>
+        <param>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve the first UID generator registered in the factory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>DicomheroNonRegisteredUIDGenerator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if no UID generator was not register via registerUIDGenerator().</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the first registered UID generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_uidGeneratorFactory.h" line="1" column="0"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="interface_dicomhero_u_i_d_generator_factory" kindref="compound">DicomheroUIDGeneratorFactory</ref> manages a global collection of DICOM UID generators. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>In order to generate different UIDs, the UID generators maintain an internal state that must be preserved between UID generations. Ideally, UID generators should be allocated when the application starts and should be reused every time a new UID is needed.</para>
+<para><ref refid="interface_dicomhero_u_i_d_generator_factory" kindref="compound">DicomheroUIDGeneratorFactory</ref> helps with the reuse of the allocated generators. </para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_uidGeneratorFactory.h" line="35" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_uidGeneratorFactory.h" bodystart="36" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_u_i_d_generator_factory_1a493c1bdabebd971f937ba5939eb67b4e" prot="public" virt="virtual"><scope>DicomheroUIDGeneratorFactory</scope><name>getDefaultUIDGenerator:</name></member>
+      <member refid="interface_dicomhero_u_i_d_generator_factory_1a2b82e0b97af4339d930d4b7698211ae3" prot="public" virt="virtual"><scope>DicomheroUIDGeneratorFactory</scope><name>getUIDGenerator:error:</name></member>
+      <member refid="interface_dicomhero_u_i_d_generator_factory_1a6b49681823c1b3d5c3b75b508a6e33aa" prot="public" virt="virtual"><scope>DicomheroUIDGeneratorFactory</scope><name>registerUIDGenerator:generator:error:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

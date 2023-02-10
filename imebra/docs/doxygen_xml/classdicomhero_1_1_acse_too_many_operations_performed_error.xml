@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_acse_too_many_operations_performed_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::AcseTooManyOperationsPerformedError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_acse_error" prot="public" virt="non-virtual">dicomhero::AcseError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_acse_too_many_operations_performed_error_1ab45b367cc4b0fd0ddf5dd55e33ed351c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AcseTooManyOperationsPerformedError::AcseTooManyOperationsPerformedError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>AcseTooManyOperationsPerformedError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1848" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_too_many_operations_performed_error_1a85ffe064a9eecf77b3d829e965fdf311" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AcseTooManyOperationsPerformedError::AcseTooManyOperationsPerformedError</definition>
+        <argsstring>(const AcseTooManyOperationsPerformedError &amp;source)</argsstring>
+        <name>AcseTooManyOperationsPerformedError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_acse_too_many_operations_performed_error" kindref="compound">AcseTooManyOperationsPerformedError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1850" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_too_many_operations_performed_error_1a68d12da5a3f0f781e540996e556b00dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_acse_too_many_operations_performed_error" kindref="compound">AcseTooManyOperationsPerformedError</ref> &amp;</type>
+        <definition>AcseTooManyOperationsPerformedError&amp; dicomhero::AcseTooManyOperationsPerformedError::operator=</definition>
+        <argsstring>(const AcseTooManyOperationsPerformedError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_acse_too_many_operations_performed_error" kindref="compound">AcseTooManyOperationsPerformedError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1852" column="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_too_many_operations_performed_error_1a177bba87c5759d290803f4344831d526" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::AcseTooManyOperationsPerformedError::~AcseTooManyOperationsPerformedError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~AcseTooManyOperationsPerformedError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1854" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Exception thrown when too many simultaneous operations have been requested. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dicomhero::AcseTooManyOperationsPerformedError</label>
+        <link refid="classdicomhero_1_1_acse_too_many_operations_performed_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::AcseError</label>
+        <link refid="classdicomhero_1_1_acse_error"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dicomhero::AcseTooManyOperationsPerformedError</label>
+        <link refid="classdicomhero_1_1_acse_too_many_operations_performed_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::AcseError</label>
+        <link refid="classdicomhero_1_1_acse_error"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1845" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="1846" bodyend="1855"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_acse_error_1adbb42aa40c7a143809c083a281f49e7d" prot="public" virt="non-virtual"><scope>dicomhero::AcseTooManyOperationsPerformedError</scope><name>AcseError</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1a6becca8ff22e9b1719d2856af94a8417" prot="public" virt="non-virtual"><scope>dicomhero::AcseTooManyOperationsPerformedError</scope><name>AcseError</name></member>
+      <member refid="classdicomhero_1_1_acse_too_many_operations_performed_error_1ab45b367cc4b0fd0ddf5dd55e33ed351c" prot="public" virt="non-virtual"><scope>dicomhero::AcseTooManyOperationsPerformedError</scope><name>AcseTooManyOperationsPerformedError</name></member>
+      <member refid="classdicomhero_1_1_acse_too_many_operations_performed_error_1a85ffe064a9eecf77b3d829e965fdf311" prot="public" virt="non-virtual"><scope>dicomhero::AcseTooManyOperationsPerformedError</scope><name>AcseTooManyOperationsPerformedError</name></member>
+      <member refid="classdicomhero_1_1_acse_too_many_operations_performed_error_1a68d12da5a3f0f781e540996e556b00dd" prot="public" virt="non-virtual"><scope>dicomhero::AcseTooManyOperationsPerformedError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1a4f961f17b47823241f64229459c21c50" prot="public" virt="non-virtual" ambiguityscope="dicomhero::AcseError::"><scope>dicomhero::AcseTooManyOperationsPerformedError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1ab574eff3cad5081bbae7325330357201" prot="public" virt="virtual"><scope>dicomhero::AcseTooManyOperationsPerformedError</scope><name>~AcseError</name></member>
+      <member refid="classdicomhero_1_1_acse_too_many_operations_performed_error_1a177bba87c5759d290803f4344831d526" prot="public" virt="virtual"><scope>dicomhero::AcseTooManyOperationsPerformedError</scope><name>~AcseTooManyOperationsPerformedError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_base_stream_output" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroBaseStreamOutput</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_file_stream_output" prot="public" virt="non-virtual">DicomheroFileStreamOutput</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_memory_stream_output" prot="public" virt="non-virtual">DicomheroMemoryStreamOutput</derivedcompoundref>
+    <includes local="no">dicomhero_baseStreamOutput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_base_stream_output_1a05269da80232530f5aa4b0f920031a15" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroBaseStreamOutput::m_BaseStreamOutput</definition>
+        <argsstring></argsstring>
+        <name>m_BaseStreamOutput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamOutput.h" line="35" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamOutput.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_base_stream_output_1a19fe318f69903181d652fbb7586d0667" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroBaseStreamOutput::initWithDicomheroBaseStreamOutput:</definition>
+        <argsstring>(void *parameter_BaseStreamOutput)</argsstring>
+        <name>initWithDicomheroBaseStreamOutput:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_BaseStreamOutput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamOutput.h" line="35" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_base_stream_output_1ad370d6d9d6866aad74d44473e7607bd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroBaseStreamOutput::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamOutput.h" line="35" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents a generic output stream. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Specialized classes derived from this one can write into files on the computer&apos;s disks (<ref refid="interface_dicomhero_file_stream_output" kindref="compound">DicomheroFileStreamOutput</ref>) or to memory (<ref refid="interface_dicomhero_memory_stream_output" kindref="compound">DicomheroMemoryStreamOutput</ref>).</para>
+<para>The application can write into the stream by using a <ref refid="interface_dicomhero_stream_writer" kindref="compound">DicomheroStreamWriter</ref> object. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>DicomheroMemoryStreamOutput</label>
+        <link refid="interface_dicomhero_memory_stream_output"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DicomheroBaseStreamOutput</label>
+        <link refid="interface_dicomhero_base_stream_output"/>
+      </node>
+      <node id="2">
+        <label>DicomheroFileStreamOutput</label>
+        <link refid="interface_dicomhero_file_stream_output"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamOutput.h" line="31" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamOutput.h" bodystart="33" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_base_stream_output_1ad370d6d9d6866aad74d44473e7607bd8" prot="public" virt="virtual"><scope>DicomheroBaseStreamOutput</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_base_stream_output_1a19fe318f69903181d652fbb7586d0667" prot="public" virt="virtual"><scope>DicomheroBaseStreamOutput</scope><name>initWithDicomheroBaseStreamOutput:</name></member>
+      <member refid="interface_dicomhero_base_stream_output_1a05269da80232530f5aa4b0f920031a15" prot="public" virt="non-virtual"><scope>DicomheroBaseStreamOutput</scope><name>m_BaseStreamOutput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

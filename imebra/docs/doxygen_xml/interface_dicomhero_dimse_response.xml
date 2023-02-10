@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_dimse_response" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroDimseResponse</compoundname>
+    <basecompoundref refid="interface_dicomhero_dimse_command_base" prot="public" virt="non-virtual">DicomheroDimseCommandBase</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_c_echo_response" prot="public" virt="non-virtual">DicomheroCEchoResponse</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_c_find_response" prot="public" virt="non-virtual">DicomheroCFindResponse</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_c_partial_response" prot="public" virt="non-virtual">DicomheroCPartialResponse</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_c_store_response" prot="public" virt="non-virtual">DicomheroCStoreResponse</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_n_action_response" prot="public" virt="non-virtual">DicomheroNActionResponse</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_n_create_response" prot="public" virt="non-virtual">DicomheroNCreateResponse</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_n_delete_response" prot="public" virt="non-virtual">DicomheroNDeleteResponse</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_n_event_report_response" prot="public" virt="non-virtual">DicomheroNEventReportResponse</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_n_get_response" prot="public" virt="non-virtual">DicomheroNGetResponse</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_n_set_response" prot="public" virt="non-virtual">DicomheroNSetResponse</derivedcompoundref>
+    <includes local="no">dicomhero_dimse.h</includes>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_dimse_response_1a2fc1a634d755b2aff0dda3cfaf577141" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>DicomheroDimseStatus</type>
+        <definition>DicomheroDimseStatus DicomheroDimseResponse::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <read></read>
+        <briefdescription>
+<para>Returns the response status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="227" column="27" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_dimse_response_1a617e27193ec87cf5d1656293120db7ab" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned short</type>
+        <definition>unsigned short DicomheroDimseResponse::statusCode</definition>
+        <argsstring></argsstring>
+        <name>statusCode</name>
+        <read></read>
+        <briefdescription>
+<para>Returns the response status code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="233" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class for the DICOM responses. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="13">
+        <label>DicomheroNGetResponse</label>
+        <link refid="interface_dicomhero_n_get_response"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>DicomheroNSetResponse</label>
+        <link refid="interface_dicomhero_n_set_response"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DicomheroCFindResponse</label>
+        <link refid="interface_dicomhero_c_find_response"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>DicomheroCStoreResponse</label>
+        <link refid="interface_dicomhero_c_store_response"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>DicomheroNDeleteResponse</label>
+        <link refid="interface_dicomhero_n_delete_response"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>DicomheroNActionResponse</label>
+        <link refid="interface_dicomhero_n_action_response"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>DicomheroNEventReportResponse</label>
+        <link refid="interface_dicomhero_n_event_report_response"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>DicomheroNCreateResponse</label>
+        <link refid="interface_dicomhero_n_create_response"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DicomheroDimseResponse</label>
+        <link refid="interface_dicomhero_dimse_response"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DicomheroCPartialResponse</label>
+        <link refid="interface_dicomhero_c_partial_response"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DicomheroCEchoResponse</label>
+        <link refid="interface_dicomhero_c_echo_response"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>DicomheroCMoveResponse</label>
+        <link refid="interface_dicomhero_c_move_response"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroDimseCommandBase</label>
+        <link refid="interface_dicomhero_dimse_command_base"/>
+      </node>
+      <node id="6">
+        <label>DicomheroCGetResponse</label>
+        <link refid="interface_dicomhero_c_get_response"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DicomheroDimseResponse</label>
+        <link refid="interface_dicomhero_dimse_response"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroDimseCommandBase</label>
+        <link refid="interface_dicomhero_dimse_command_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="221" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="222" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_dimse_command_base_1aa6e7648457444127f82ded7dd4aa891d" prot="public" virt="virtual"><scope>DicomheroDimseResponse</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a68d97c939e669901c372557fca25cf34" prot="public" virt="virtual"><scope>DicomheroDimseResponse</scope><name>getAbstractSyntax</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a77cfd3acdf766f5ec85c9075bfc68902" prot="public" virt="virtual"><scope>DicomheroDimseResponse</scope><name>getAffectedSopClassUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a960b3c03c3d2952f920977b6c45032b6" prot="public" virt="virtual"><scope>DicomheroDimseResponse</scope><name>getAffectedSopInstanceUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a478b7f0930cc6fad1fe0a12cb20f6193" prot="public" virt="virtual"><scope>DicomheroDimseResponse</scope><name>getCommandDataSet:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a62a22fdadc33eb68b0a87c2095acc239" prot="public" virt="virtual"><scope>DicomheroDimseResponse</scope><name>getPayloadDataSet:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a11da81e00cc6f99977de4a53d5573256" prot="public" virt="virtual"><scope>DicomheroDimseResponse</scope><name>getRequestedSopClassUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a3881cedfd1df5f2b0843763b15183adf" prot="public" virt="virtual"><scope>DicomheroDimseResponse</scope><name>getRequestedSopInstanceUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1aee56566e403c56fe35de6057b9cafde7" prot="public" virt="virtual"><scope>DicomheroDimseResponse</scope><name>initWithDicomheroCommand:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1ae5022fe1e9373e80bc857936d1e03f39" prot="public" virt="non-virtual"><scope>DicomheroDimseResponse</scope><name>m_DimseCommandBase</name></member>
+      <member refid="interface_dicomhero_dimse_response_1a2fc1a634d755b2aff0dda3cfaf577141" prot="public" virt="non-virtual"><scope>DicomheroDimseResponse</scope><name>status</name></member>
+      <member refid="interface_dicomhero_dimse_response_1a617e27193ec87cf5d1656293120db7ab" prot="public" virt="non-virtual"><scope>DicomheroDimseResponse</scope><name>statusCode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

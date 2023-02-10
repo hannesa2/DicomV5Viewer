@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_dimse_command" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroDimseCommand</compoundname>
+    <basecompoundref refid="interface_dicomhero_dimse_command_base" prot="public" virt="non-virtual">DicomheroDimseCommandBase</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_c_cancel_command" prot="public" virt="non-virtual">DicomheroCCancelCommand</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_c_echo_command" prot="public" virt="non-virtual">DicomheroCEchoCommand</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_c_find_command" prot="public" virt="non-virtual">DicomheroCFindCommand</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_c_get_command" prot="public" virt="non-virtual">DicomheroCGetCommand</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_c_move_command" prot="public" virt="non-virtual">DicomheroCMoveCommand</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_c_store_command" prot="public" virt="non-virtual">DicomheroCStoreCommand</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_n_action_command" prot="public" virt="non-virtual">DicomheroNActionCommand</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_n_create_command" prot="public" virt="non-virtual">DicomheroNCreateCommand</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_n_delete_command" prot="public" virt="non-virtual">DicomheroNDeleteCommand</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_n_event_report_command" prot="public" virt="non-virtual">DicomheroNEventReportCommand</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_n_get_command" prot="public" virt="non-virtual">DicomheroNGetCommand</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_n_set_command" prot="public" virt="non-virtual">DicomheroNSetCommand</derivedcompoundref>
+    <includes local="no">dicomhero_dimse.h</includes>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_dimse_command_1a4aaa4fa728da2426b7b15b9be68166c3" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned short</type>
+        <definition>unsigned short DicomheroDimseCommand::ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <read></read>
+        <briefdescription>
+<para>Returns the command ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="206" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_dimse_command_1a76136966e014566dc921bf330a4ef335" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>DicomheroDimseCommandType</type>
+        <definition>DicomheroDimseCommandType DicomheroDimseCommand::commandType</definition>
+        <argsstring></argsstring>
+        <name>commandType</name>
+        <read></read>
+        <briefdescription>
+<para>Returns the command type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="212" column="32" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class for the DICOM commands. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>DicomheroCEchoCommand</label>
+        <link refid="interface_dicomhero_c_echo_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>DicomheroNActionCommand</label>
+        <link refid="interface_dicomhero_n_action_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DicomheroDimseCommand</label>
+        <link refid="interface_dicomhero_dimse_command"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DicomheroCCancelCommand</label>
+        <link refid="interface_dicomhero_c_cancel_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>DicomheroCGetCommand</label>
+        <link refid="interface_dicomhero_c_get_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>DicomheroNDeleteCommand</label>
+        <link refid="interface_dicomhero_n_delete_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>DicomheroNSetCommand</label>
+        <link refid="interface_dicomhero_n_set_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>DicomheroCStoreCommand</label>
+        <link refid="interface_dicomhero_c_store_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>DicomheroNEventReportCommand</label>
+        <link refid="interface_dicomhero_n_event_report_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>DicomheroCMoveCommand</label>
+        <link refid="interface_dicomhero_c_move_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroDimseCommandBase</label>
+        <link refid="interface_dicomhero_dimse_command_base"/>
+      </node>
+      <node id="13">
+        <label>DicomheroNGetCommand</label>
+        <link refid="interface_dicomhero_n_get_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DicomheroCFindCommand</label>
+        <link refid="interface_dicomhero_c_find_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>DicomheroNCreateCommand</label>
+        <link refid="interface_dicomhero_n_create_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DicomheroDimseCommand</label>
+        <link refid="interface_dicomhero_dimse_command"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroDimseCommandBase</label>
+        <link refid="interface_dicomhero_dimse_command_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="200" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="201" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_dimse_command_1a76136966e014566dc921bf330a4ef335" prot="public" virt="non-virtual"><scope>DicomheroDimseCommand</scope><name>commandType</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1aa6e7648457444127f82ded7dd4aa891d" prot="public" virt="virtual"><scope>DicomheroDimseCommand</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a68d97c939e669901c372557fca25cf34" prot="public" virt="virtual"><scope>DicomheroDimseCommand</scope><name>getAbstractSyntax</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a77cfd3acdf766f5ec85c9075bfc68902" prot="public" virt="virtual"><scope>DicomheroDimseCommand</scope><name>getAffectedSopClassUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a960b3c03c3d2952f920977b6c45032b6" prot="public" virt="virtual"><scope>DicomheroDimseCommand</scope><name>getAffectedSopInstanceUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a478b7f0930cc6fad1fe0a12cb20f6193" prot="public" virt="virtual"><scope>DicomheroDimseCommand</scope><name>getCommandDataSet:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a62a22fdadc33eb68b0a87c2095acc239" prot="public" virt="virtual"><scope>DicomheroDimseCommand</scope><name>getPayloadDataSet:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a11da81e00cc6f99977de4a53d5573256" prot="public" virt="virtual"><scope>DicomheroDimseCommand</scope><name>getRequestedSopClassUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a3881cedfd1df5f2b0843763b15183adf" prot="public" virt="virtual"><scope>DicomheroDimseCommand</scope><name>getRequestedSopInstanceUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_1a4aaa4fa728da2426b7b15b9be68166c3" prot="public" virt="non-virtual"><scope>DicomheroDimseCommand</scope><name>ID</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1aee56566e403c56fe35de6057b9cafde7" prot="public" virt="virtual"><scope>DicomheroDimseCommand</scope><name>initWithDicomheroCommand:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1ae5022fe1e9373e80bc857936d1e03f39" prot="public" virt="non-virtual"><scope>DicomheroDimseCommand</scope><name>m_DimseCommandBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

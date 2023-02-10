@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_t_c_p_listener" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroTCPListener</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_tcpListener.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_t_c_p_listener_1a37f980df453fd66adeb11f2c209ae5bf" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroTCPListener::m_TCPListener</definition>
+        <argsstring></argsstring>
+        <name>m_TCPListener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpListener.h" line="38" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpListener.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_t_c_p_listener_1a52554d8f828c8d9f10fd6485b05e7e46" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroTCPListener::initWithAddress:error:</definition>
+        <argsstring>(DicomheroTCPPassiveAddress *pAddress,[error] NSError **pError)</argsstring>
+        <name>initWithAddress:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_t_c_p_passive_address" kindref="compound">DicomheroTCPPassiveAddress</ref> *</type>
+          <declname>pAddress</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a listening socket and starts listening for incoming connections.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the address to which the listening socket must be bound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpListener.h" line="38" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_t_c_p_listener_1aa5fd5424c76ccbf7e557e4e74db5bcfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroTCPListener::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpListener.h" line="38" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_t_c_p_listener_1a1f415ba32a400d37207a87110cd4e2ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_t_c_p_stream" kindref="compound">DicomheroTCPStream</ref> *</type>
+        <definition>DicomheroTCPStream* DicomheroTCPListener::waitForConnection:</definition>
+        <argsstring>(NSError **pError)</argsstring>
+        <name>waitForConnection:</name>
+        <param>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Waits for an incoming connection on the listening socket. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The method blocks until a new connection is accepted or until the socket is closed, in which case pError is set to StreamClosedError.</para>
+<para>The socket is closed by the <ref refid="interface_dicomhero_t_c_p_stream" kindref="compound">DicomheroTCPStream</ref>&apos;s destructor or by a call to <ref refid="interface_dicomhero_t_c_p_listener_1aeaf7a46440fd183cfd70687df4ea72c0" kindref="member">terminate</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a DicomheroStreamError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a new <ref refid="interface_dicomhero_t_c_p_stream" kindref="compound">DicomheroTCPStream</ref> object bound to the new accepted connection. The returned <ref refid="interface_dicomhero_t_c_p_stream" kindref="compound">DicomheroTCPStream</ref> object will be owned by the caller </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpListener.h" line="38" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_t_c_p_listener_1aeaf7a46440fd183cfd70687df4ea72c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroTCPListener::terminate</definition>
+        <argsstring>()</argsstring>
+        <name>terminate</name>
+        <briefdescription>
+<para>Instructs the listener to terminate any pending action. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If a thread is in the method waitForConnection() then it will receive the exception StreamClosedError. StreamClosedError will be also be set for each subsequent call to waitForConnection(). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpListener.h" line="38" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents listening TCP socket. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Once allocated the socket starts listening at the address declared in the constructor.</para>
+<para>A loop in the client application should call waitForConnection() in order to retrieve all the connections accepted by the socket. </para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpListener.h" line="34" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpListener.h" bodystart="36" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_t_c_p_listener_1aa5fd5424c76ccbf7e557e4e74db5bcfa" prot="public" virt="virtual"><scope>DicomheroTCPListener</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_t_c_p_listener_1a52554d8f828c8d9f10fd6485b05e7e46" prot="public" virt="virtual"><scope>DicomheroTCPListener</scope><name>initWithAddress:error:</name></member>
+      <member refid="interface_dicomhero_t_c_p_listener_1a37f980df453fd66adeb11f2c209ae5bf" prot="public" virt="non-virtual"><scope>DicomheroTCPListener</scope><name>m_TCPListener</name></member>
+      <member refid="interface_dicomhero_t_c_p_listener_1aeaf7a46440fd183cfd70687df4ea72c0" prot="public" virt="virtual"><scope>DicomheroTCPListener</scope><name>terminate</name></member>
+      <member refid="interface_dicomhero_t_c_p_listener_1a1f415ba32a400d37207a87110cd4e2ce" prot="public" virt="virtual"><scope>DicomheroTCPListener</scope><name>waitForConnection:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

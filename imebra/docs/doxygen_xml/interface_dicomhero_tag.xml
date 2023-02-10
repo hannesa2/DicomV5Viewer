@@ -1,0 +1,700 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_tag" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroTag</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_tag.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_tag_1a7f3d040d134c9f013fa5bf638e13f535" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroTag::m_Tag</definition>
+        <argsstring></argsstring>
+        <name>m_Tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_tag_1a92b7c547d879de27dee9ae9eed172896" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>DicomheroTagType</type>
+        <definition>DicomheroTagType DicomheroTag::dataType</definition>
+        <argsstring></argsstring>
+        <name>dataType</name>
+        <read></read>
+        <briefdescription>
+<para>Get the tag&apos;s data type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the tag&apos;s data type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="242" column="23" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_tag_1adca4a336ff91e98874364d0e3d58e8ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroTag::initWithDicomheroTag:</definition>
+        <argsstring>(void *parameter_Tag)</argsstring>
+        <name>initWithDicomheroTag:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_Tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_1ab94381115a74bb9038ac92a0f62686b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroTag::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_1aa3b368dbcc4468ff0a1d61f4bc8fd813" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_writing_data_handler" kindref="compound">DicomheroWritingDataHandler</ref> *</type>
+        <definition>DicomheroWritingDataHandler* DicomheroTag::getWritingDataHandler:error:</definition>
+        <argsstring>(unsigned int bufferId,[error] NSError **pError)</argsstring>
+        <name>getWritingDataHandler:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>bufferId</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a <ref refid="interface_dicomhero_writing_data_handler" kindref="compound">DicomheroWritingDataHandler</ref> object connected to a specific tag&apos;s buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the specified buffer does not exist then it creates a new buffer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the position where the new buffer has to be stored into the tag. The first buffer position is 0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="interface_dicomhero_writing_data_handler" kindref="compound">DicomheroWritingDataHandler</ref> object connected to a new tag&apos;s buffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_1a1876108da1f9a3c595bdb166f42b48d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_writing_data_handler_numeric" kindref="compound">DicomheroWritingDataHandlerNumeric</ref> *</type>
+        <definition>DicomheroWritingDataHandlerNumeric* DicomheroTag::getWritingDataHandlerNumeric:error:</definition>
+        <argsstring>(unsigned int bufferId,[error] NSError **pError)</argsstring>
+        <name>getWritingDataHandlerNumeric:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>bufferId</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a WritingDataHandlerNumeric object connected to the Tag&apos;s buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the tag&apos;s VR is not a numeric type then throws std::bad_cast.</para>
+<para>The returned WritingDataHandlerNumeric is connected to a new buffer which is updated and stored into the tag when WritingDataHandlerNumeric is destroyed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the position where the new buffer has to be stored in the tag. The first buffer position is 0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a WritingDataHandlerNumeric object connected to a new Tag&apos;s buffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_1ad8a3418917d6dddbcfd6b04fd91c947a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_writing_data_handler_numeric" kindref="compound">DicomheroWritingDataHandlerNumeric</ref> *</type>
+        <definition>DicomheroWritingDataHandlerNumeric* DicomheroTag::getWritingDataHandlerRaw:error:</definition>
+        <argsstring>(unsigned int bufferId,[error] NSError **pError)</argsstring>
+        <name>getWritingDataHandlerRaw:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>bufferId</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a WritingDataHandlerNumeric object connected to the Tag&apos;s raw data buffer (8 bit unsigned integers). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the tag&apos;s VR is not a numeric type then throws std::bad_cast.</para>
+<para>The returned WritingDataHandlerNumeric is connected to a new buffer which is updated and stored into the tag when WritingDataHandlerNumeric is destroyed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the position where the new buffer has to be stored in the tag. The first buffer position is 0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a WritingDataHandlerNumeric object connected to a new Tag&apos;s buffer (the buffer contains raw data of 8 bit integers) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_1aaf26c8ab1cef1a0141f4f57bdf8c2b38" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_stream_writer" kindref="compound">DicomheroStreamWriter</ref> *</type>
+        <definition>DicomheroStreamWriter* DicomheroTag::getStreamWriter:error:</definition>
+        <argsstring>(unsigned int bufferId,[error] NSError **pError)</argsstring>
+        <name>getStreamWriter:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>bufferId</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Get a StreamWriter connected to a buffer&apos;s data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the id of the buffer for which the StreamWriter is required. This parameter is usually 0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the StreamWriter connected to the buffer&apos;s data. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_1ae21447168f9ed67b6390cb975a285371" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> *</type>
+        <definition>DicomheroDataSet* DicomheroTag::appendSequenceItem:</definition>
+        <argsstring>((swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>appendSequenceItem:</name>
+        <param>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Append a sequence item into the Tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Several sequence items can be nested one inside each other. When a sequence item is embedded into a Tag, then the tag will have a sequence VR (VR = SQ).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> representing the added sequence item </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_1abc57e799e28c8cff770a4ddcb55a45ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroTag::setStream:stream:error:</definition>
+        <argsstring>(unsigned int bufferId,[stream] DicomheroFileStreamInput *pStream,[error] NSError **pError)</argsstring>
+        <name>setStream:stream:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>bufferId</declname>
+        </param>
+        <param>
+          <attributes>[stream]</attributes>
+          <type><ref refid="interface_dicomhero_file_stream_input" kindref="compound">DicomheroFileStreamInput</ref> *</type>
+          <declname>pStream</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Set the tag&apos;s content to the content of a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The tag will just keep a reference to the file content.</para>
+<para>This is useful when embedding large objects into a dataset (e.g. a MPEG file acquired by the device).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the id of the buffer to which the content is added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>streamInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the file into which the tag&apos;s content is stored </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_1aa04d0f3a48caba3e3d82ec7a4ec9e0a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroTag::getBuffersCount</definition>
+        <argsstring>()</argsstring>
+        <name>getBuffersCount</name>
+        <briefdescription>
+<para>Returns the number of buffers in the tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the number of buffers in the tag </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_1afdea77e7a72867020ea3dc9e713eff91" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>BOOL DicomheroTag::bufferExists:</definition>
+        <argsstring>(unsigned int bufferId)</argsstring>
+        <name>bufferExists:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>bufferId</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the specified buffer exists, otherwise it returns false. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the zero-based buffer&apos;s id the function has to check for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the buffer exists, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_1a31c6e3b32494bf0cb216e5ca51ce2b2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroTag::getBufferSize:error:</definition>
+        <argsstring>(unsigned int bufferId,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getBufferSize:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>bufferId</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Returns the size of a buffer, in bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer doesn&apos;t exist then set pError to DicomheroMissingBufferError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the zero-based buffer&apos;s id the function has to check for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the buffer&apos;s size in bytes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_1a0639b6cce15c8d8c1c55bfefb3fa6b3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_reading_data_handler" kindref="compound">DicomheroReadingDataHandler</ref> *</type>
+        <definition>DicomheroReadingDataHandler* DicomheroTag::getReadingDataHandler:error:</definition>
+        <argsstring>(unsigned int bufferId,[error] NSError **pError)</argsstring>
+        <name>getReadingDataHandler:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>bufferId</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a <ref refid="interface_dicomhero_reading_data_handler" kindref="compound">DicomheroReadingDataHandler</ref> object connected to a specific buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer doesn&apos;t exist then set pError to DicomheroMissingBufferError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the buffer to connect to the ReadingDataHandler object. The first buffer has an Id = 0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="interface_dicomhero_reading_data_handler" kindref="compound">DicomheroReadingDataHandler</ref> object connected to the requested buffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_1a8b4a53eab45c3b635b9e7684cfb5cf69" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_reading_data_handler_numeric" kindref="compound">DicomheroReadingDataHandlerNumeric</ref> *</type>
+        <definition>DicomheroReadingDataHandlerNumeric* DicomheroTag::getReadingDataHandlerNumeric:error:</definition>
+        <argsstring>(unsigned int bufferId,[error] NSError **pError)</argsstring>
+        <name>getReadingDataHandlerNumeric:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>bufferId</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a <ref refid="interface_dicomhero_reading_data_handler_numeric" kindref="compound">DicomheroReadingDataHandlerNumeric</ref> object connected to the Tag&apos;s numeric buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the tag&apos;s VR is not a numeric type then throws std::bad_cast.</para>
+<para>If the tag does not contain the specified buffer then set pError to DicomheroMissingBufferError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the buffer to connect to the <ref refid="interface_dicomhero_reading_data_handler" kindref="compound">DicomheroReadingDataHandler</ref> object. The first buffer has an Id = 0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="interface_dicomhero_reading_data_handler_numeric" kindref="compound">DicomheroReadingDataHandlerNumeric</ref> object connected to the Tag&apos;s buffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_1acd7b029bd7532c2471a5ec4190109f75" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_reading_data_handler_numeric" kindref="compound">DicomheroReadingDataHandlerNumeric</ref> *</type>
+        <definition>DicomheroReadingDataHandlerNumeric* DicomheroTag::getReadingDataHandlerRaw:error:</definition>
+        <argsstring>(unsigned int bufferId,[error] NSError **pError)</argsstring>
+        <name>getReadingDataHandlerRaw:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>bufferId</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a ReadingDataHandlerNumeric object connected to the Tag&apos;s raw data buffer (8 bit unsigned integers). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the tag&apos;s VR is not a numeric type then throws std::bad_cast.</para>
+<para>If the specified Tag does not contain the specified buffer then throws MissingBufferError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the buffer to connect to the ReadingDataHandler object. The first buffer has an Id = 0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a ReadingDataHandlerNumeric object connected to the Tag&apos;s buffer (raw content represented by 8 bit unsigned integers) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_1ad60794f3a25c0080a8eebb286bba0ced" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> *</type>
+        <definition>DicomheroStreamReader* DicomheroTag::getStreamReader:error:</definition>
+        <argsstring>(unsigned int bufferId,[error] NSError **pError)</argsstring>
+        <name>getStreamReader:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>bufferId</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Get a StreamReader connected to a buffer&apos;s data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the id of the buffer for which the StreamReader is required. This parameter is usually 0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the streamReader connected to the buffer&apos;s data. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_1a663244a60ed0d792e88001d675d943e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> *</type>
+        <definition>DicomheroDataSet* DicomheroTag::getSequenceItem:error:</definition>
+        <argsstring>(unsigned int dataSetId,[error] NSError **pError)</argsstring>
+        <name>getSequenceItem:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>dataSetId</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve an embedded DataSet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sequence tags (VR=SQ) store embedded dicom structures.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataSetId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ID of the sequence item to retrieve. Several sequence items can be embedded in one tag. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the sequence DataSet </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_tag_1a4f8bd41d7f6a7afc8bbfe55294be0b3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>BOOL DicomheroTag::sequenceItemExists:</definition>
+        <argsstring>(unsigned int dataSetId)</argsstring>
+        <name>sequenceItemExists:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>dataSetId</declname>
+        </param>
+        <briefdescription>
+<para>Check for the existance of a sequence item. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataSetId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ID of the sequence item to check for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the sequence item exists, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="39" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents a DICOM tag. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" line="35" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tag.h" bodystart="37" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_tag_1ae21447168f9ed67b6390cb975a285371" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>appendSequenceItem:</name></member>
+      <member refid="interface_dicomhero_tag_1afdea77e7a72867020ea3dc9e713eff91" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>bufferExists:</name></member>
+      <member refid="interface_dicomhero_tag_1a92b7c547d879de27dee9ae9eed172896" prot="public" virt="non-virtual"><scope>DicomheroTag</scope><name>dataType</name></member>
+      <member refid="interface_dicomhero_tag_1ab94381115a74bb9038ac92a0f62686b9" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_tag_1aa04d0f3a48caba3e3d82ec7a4ec9e0a6" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>getBuffersCount</name></member>
+      <member refid="interface_dicomhero_tag_1a31c6e3b32494bf0cb216e5ca51ce2b2e" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>getBufferSize:error:</name></member>
+      <member refid="interface_dicomhero_tag_1a0639b6cce15c8d8c1c55bfefb3fa6b3d" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>getReadingDataHandler:error:</name></member>
+      <member refid="interface_dicomhero_tag_1a8b4a53eab45c3b635b9e7684cfb5cf69" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>getReadingDataHandlerNumeric:error:</name></member>
+      <member refid="interface_dicomhero_tag_1acd7b029bd7532c2471a5ec4190109f75" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>getReadingDataHandlerRaw:error:</name></member>
+      <member refid="interface_dicomhero_tag_1a663244a60ed0d792e88001d675d943e1" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>getSequenceItem:error:</name></member>
+      <member refid="interface_dicomhero_tag_1ad60794f3a25c0080a8eebb286bba0ced" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>getStreamReader:error:</name></member>
+      <member refid="interface_dicomhero_tag_1aaf26c8ab1cef1a0141f4f57bdf8c2b38" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>getStreamWriter:error:</name></member>
+      <member refid="interface_dicomhero_tag_1aa3b368dbcc4468ff0a1d61f4bc8fd813" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>getWritingDataHandler:error:</name></member>
+      <member refid="interface_dicomhero_tag_1a1876108da1f9a3c595bdb166f42b48d0" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>getWritingDataHandlerNumeric:error:</name></member>
+      <member refid="interface_dicomhero_tag_1ad8a3418917d6dddbcfd6b04fd91c947a" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>getWritingDataHandlerRaw:error:</name></member>
+      <member refid="interface_dicomhero_tag_1adca4a336ff91e98874364d0e3d58e8ca" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>initWithDicomheroTag:</name></member>
+      <member refid="interface_dicomhero_tag_1a7f3d040d134c9f013fa5bf638e13f535" prot="public" virt="non-virtual"><scope>DicomheroTag</scope><name>m_Tag</name></member>
+      <member refid="interface_dicomhero_tag_1a4f8bd41d7f6a7afc8bbfe55294be0b3a" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>sequenceItemExists:</name></member>
+      <member refid="interface_dicomhero_tag_1abc57e799e28c8cff770a4ddcb55a45ad" prot="public" virt="virtual"><scope>DicomheroTag</scope><name>setStream:stream:error:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

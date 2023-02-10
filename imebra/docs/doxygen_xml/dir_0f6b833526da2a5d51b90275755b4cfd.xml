@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_0f6b833526da2a5d51b90275755b4cfd" kind="dir">
+    <compoundname>changeTransferSyntax</compoundname>
+    <innerfile refid="change_transfer_syntax_8cpp">changeTransferSyntax.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/examples/c++/changeTransferSyntax/"/>
+  </compounddef>
+</doxygen>

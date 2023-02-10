@@ -1,0 +1,741 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="definitions_8h" kind="file" language="C++">
+    <compoundname>definitions.h</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes refid="dicom_definitions_8h" local="yes">dicomDefinitions.h</includes>
+    <includedby refid="acse_8h" local="yes">acse.h</includedby>
+    <includedby refid="base_stream_input_8h" local="yes">baseStreamInput.h</includedby>
+    <includedby refid="base_stream_output_8h" local="yes">baseStreamOutput.h</includedby>
+    <includedby refid="base_uid_generator_8h" local="yes">baseUidGenerator.h</includedby>
+    <includedby refid="codec_factory_8h" local="yes">codecFactory.h</includedby>
+    <includedby refid="color_transforms_factory_8h" local="yes">colorTransformsFactory.h</includedby>
+    <includedby refid="data_set_8h" local="yes">dataSet.h</includedby>
+    <includedby refid="date_8h" local="yes">date.h</includedby>
+    <includedby refid="dicom_dictionary_8h" local="yes">dicomDictionary.h</includedby>
+    <includedby refid="dicom_dir_8h" local="yes">dicomDir.h</includedby>
+    <includedby refid="dicom_dir_entry_8h" local="yes">dicomDirEntry.h</includedby>
+    <includedby refid="library_2include_2dicomhero6_2dicomhero_8h" local="yes">dicomhero.h</includedby>
+    <includedby refid="dimse_8h" local="yes">dimse.h</includedby>
+    <includedby refid="draw_bitmap_8h" local="yes">drawBitmap.h</includedby>
+    <includedby refid="exceptions_8h" local="yes">exceptions.h</includedby>
+    <includedby refid="file_stream_input_8h" local="yes">fileStreamInput.h</includedby>
+    <includedby refid="file_stream_output_8h" local="yes">fileStreamOutput.h</includedby>
+    <includedby refid="get_version_8h" local="yes">getVersion.h</includedby>
+    <includedby refid="image_8h" local="yes">image.h</includedby>
+    <includedby refid="lut_8h" local="yes">lut.h</includedby>
+    <includedby refid="memory_8h" local="yes">memory.h</includedby>
+    <includedby refid="memory_pool_8h" local="yes">memoryPool.h</includedby>
+    <includedby refid="memory_stream_input_8h" local="yes">memoryStreamInput.h</includedby>
+    <includedby refid="memory_stream_output_8h" local="yes">memoryStreamOutput.h</includedby>
+    <includedby refid="modality_v_o_i_l_u_t_8h" local="yes">modalityVOILUT.h</includedby>
+    <includedby refid="mutable_memory_8h" local="yes">mutableMemory.h</includedby>
+    <includedby refid="overlay_8h" local="yes">overlay.h</includedby>
+    <includedby refid="pipe_stream_8h" local="yes">pipeStream.h</includedby>
+    <includedby refid="random_uid_generator_8h" local="yes">randomUidGenerator.h</includedby>
+    <includedby refid="reading_data_handler_8h" local="yes">readingDataHandler.h</includedby>
+    <includedby refid="reading_data_handler_numeric_8h" local="yes">readingDataHandlerNumeric.h</includedby>
+    <includedby refid="serial_number_uid_generator_8h" local="yes">serialNumberUidGenerator.h</includedby>
+    <includedby refid="stream_reader_8h" local="yes">streamReader.h</includedby>
+    <includedby refid="stream_writer_8h" local="yes">streamWriter.h</includedby>
+    <includedby refid="tag_8h" local="yes">tag.h</includedby>
+    <includedby refid="tag_id_8h" local="yes">tagId.h</includedby>
+    <includedby refid="tcp_address_8h" local="yes">tcpAddress.h</includedby>
+    <includedby refid="tcp_listener_8h" local="yes">tcpListener.h</includedby>
+    <includedby refid="tcp_stream_8h" local="yes">tcpStream.h</includedby>
+    <includedby refid="transform_8h" local="yes">transform.h</includedby>
+    <includedby refid="transform_high_bit_8h" local="yes">transformHighBit.h</includedby>
+    <includedby refid="transforms_chain_8h" local="yes">transformsChain.h</includedby>
+    <includedby refid="uid_generator_factory_8h" local="yes">uidGeneratorFactory.h</includedby>
+    <includedby refid="_v_o_i_l_u_t_8h" local="yes">VOILUT.h</includedby>
+    <includedby refid="writing_data_handler_8h" local="yes">writingDataHandler.h</includedby>
+    <includedby refid="writing_data_handler_numeric_8h" local="yes">writingDataHandlerNumeric.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>definitions.h</label>
+        <link refid="definitions_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11">
+        <label>colorTransformsFactory.h</label>
+        <link refid="color_transforms_factory_8h"/>
+      </node>
+      <node id="23">
+        <label>writingDataHandlerNumeric.h</label>
+        <link refid="writing_data_handler_numeric_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>overlay.h</label>
+        <link refid="overlay_8h"/>
+      </node>
+      <node id="34">
+        <label>transformHighBit.h</label>
+        <link refid="transform_high_bit_8h"/>
+      </node>
+      <node id="19">
+        <label>dicomDir.h</label>
+        <link refid="dicom_dir_8h"/>
+      </node>
+      <node id="10">
+        <label>codecFactory.h</label>
+        <link refid="codec_factory_8h"/>
+      </node>
+      <node id="16">
+        <label>readingDataHandler.h</label>
+        <link refid="reading_data_handler_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>acse.h</label>
+        <link refid="acse_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>mutableMemory.h</label>
+        <link refid="mutable_memory_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>transform.h</label>
+        <link refid="transform_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>tcpAddress.h</label>
+        <link refid="tcp_address_8h"/>
+      </node>
+      <node id="12">
+        <label>dataSet.h</label>
+        <link refid="data_set_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>uidGeneratorFactory.h</label>
+        <link refid="uid_generator_factory_8h"/>
+      </node>
+      <node id="8">
+        <label>fileStreamOutput.h</label>
+        <link refid="file_stream_output_8h"/>
+      </node>
+      <node id="18">
+        <label>image.h</label>
+        <link refid="image_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>tcpListener.h</label>
+        <link refid="tcp_listener_8h"/>
+      </node>
+      <node id="7">
+        <label>baseStreamOutput.h</label>
+        <link refid="base_stream_output_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>pipeStream.h</label>
+        <link refid="pipe_stream_8h"/>
+      </node>
+      <node id="9">
+        <label>baseUidGenerator.h</label>
+        <link refid="base_uid_generator_8h"/>
+      </node>
+      <node id="21">
+        <label>memory.h</label>
+        <link refid="memory_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>streamReader.h</label>
+        <link refid="stream_reader_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>streamWriter.h</label>
+        <link refid="stream_writer_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dimse.h</label>
+        <link refid="dimse_8h"/>
+      </node>
+      <node id="6">
+        <label>tcpStream.h</label>
+        <link refid="tcp_stream_8h"/>
+      </node>
+      <node id="14">
+        <label>modalityVOILUT.h</label>
+        <link refid="modality_v_o_i_l_u_t_8h"/>
+      </node>
+      <node id="36">
+        <label>VOILUT.h</label>
+        <link refid="_v_o_i_l_u_t_8h"/>
+      </node>
+      <node id="15">
+        <label>date.h</label>
+        <link refid="date_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>baseStreamInput.h</label>
+        <link refid="base_stream_input_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>tag.h</label>
+        <link refid="tag_8h"/>
+      </node>
+      <node id="13">
+        <label>dicomDictionary.h</label>
+        <link refid="dicom_dictionary_8h"/>
+      </node>
+      <node id="30">
+        <label>tagId.h</label>
+        <link refid="tag_id_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>drawBitmap.h</label>
+        <link refid="draw_bitmap_8h"/>
+      </node>
+      <node id="38">
+        <label>writingDataHandler.h</label>
+        <link refid="writing_data_handler_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>definitions.h</label>
+        <link refid="definitions_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>readingDataHandlerNumeric.h</label>
+        <link refid="reading_data_handler_numeric_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>memoryPool.h</label>
+        <link refid="memory_pool_8h"/>
+      </node>
+      <node id="35">
+        <label>transformsChain.h</label>
+        <link refid="transforms_chain_8h"/>
+      </node>
+      <node id="5">
+        <label>fileStreamInput.h</label>
+        <link refid="file_stream_input_8h"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacedicomhero">dicomhero</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="definitions_8h_1ae5e62f5974962f7575d7b4bcb740a5f2" prot="public" static="no">
+        <name>DICOMHERO_HELPER_DLL_IMPORT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/definitions.h" line="39" column="17" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/definitions.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="definitions_8h_1aef77cc94f817debccc49a90faa5fba7f" prot="public" static="no">
+        <name>DICOMHERO_HELPER_DLL_EXPORT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/definitions.h" line="40" column="13" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/definitions.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="definitions_8h_1a9946117f09f475c580b20b8164495232" prot="public" static="no">
+        <name>DICOMHERO_API</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/definitions.h" line="53" column="11" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/definitions.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="definitions_8h_1aef5ccb2e1c0a1eb07c24a0a21fecced8" prot="public" static="no">
+        <name>DICOMHERO_IMPLEMENTATION_CLASS_UID</name>
+        <initializer>&quot;1.3.6.1.4.1.54308.2.1.1.4&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/definitions.h" line="57" column="9" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/definitions.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="definitions_8h_1a572070671e837cbedd5a9b56758d68b8" prot="public" static="no">
+        <name>DICOMHERO_IMPLEMENTATION_NAME</name>
+        <initializer>&quot;DicomHero 6&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/definitions.h" line="61" column="9" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/definitions.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="definitions_8h_1aacf373470e793cbbb50f3510c2909cea" prot="public" static="no">
+        <name>MAKE_VR_ENUM</name>
+        <param><defname>string</defname></param>
+        <initializer>((std::uint16_t)((((std::uint16_t)string[0]) &lt;&lt; 8) | (std::uint16_t)string[1]))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/definitions.h" line="142" column="9" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/definitions.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Declaration of the enumeration classes and custom types. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>2005<sp/>-<sp/>2021<sp/>by<sp/>Paolo<sp/>Brandoli/Binarno<sp/>s.p.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">DICOMHero/Imebra<sp/>is<sp/>available<sp/>for<sp/>free<sp/>under<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">The<sp/>full<sp/>text<sp/>of<sp/>the<sp/>license<sp/>is<sp/>available<sp/>in<sp/>the<sp/>file<sp/>license.rst</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>in<sp/>the<sp/>project<sp/>root<sp/>folder.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">If<sp/>you<sp/>do<sp/>not<sp/>want<sp/>to<sp/>be<sp/>bound<sp/>by<sp/>the<sp/>GPL<sp/>terms<sp/>(such<sp/>as<sp/>the<sp/>requirement</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>that<sp/>your<sp/>application<sp/>must<sp/>also<sp/>be<sp/>GPL),<sp/>you<sp/>may<sp/>purchase<sp/>a<sp/>commercial</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>license<sp/>for<sp/>DICOMHero/Imebra<sp/>from<sp/>the<sp/>DICOMHero’s<sp/>website<sp/>(https://dicomhero.com).</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(imebraDefinitions__INCLUDED_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>imebraDefinitions__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dicomDefinitions.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SWIG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Generic<sp/>helper<sp/>definitions<sp/>for<sp/>shared<sp/>library<sp/>support</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined<sp/>_WIN32<sp/>||<sp/>defined<sp/>__CYGWIN__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>DICOMHERO_HELPER_DLL_IMPORT<sp/>__declspec(dllimport)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>DICOMHERO_HELPER_DLL_EXPORT<sp/>__declspec(dllexport)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#pragma<sp/>warning(disable:<sp/>4275)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#pragma<sp/>warning(disable:<sp/>4251)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#if<sp/>__GNUC__<sp/>&gt;=<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>DICOMHERO_HELPER_DLL_IMPORT<sp/>__attribute__<sp/>((visibility<sp/>(&quot;default&quot;</highlight><highlight class="normal">)))</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>DICOMHERO_HELPER_DLL_EXPORT<sp/>__attribute__<sp/>((visibility<sp/>(&quot;default&quot;</highlight><highlight class="normal">)))</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>DICOMHERO_HELPER_DLL_IMPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>DICOMHERO_HELPER_DLL_EXPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DICOMHERO_API<sp/>is<sp/>used<sp/>for<sp/>the<sp/>public<sp/>API<sp/>symbols</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DICOMHERO_DLL<sp/></highlight><highlight class="comment">//<sp/>defined<sp/>if<sp/>Imebra<sp/>is<sp/>compiled<sp/>as<sp/>a<sp/>DLL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifdef<sp/>DICOMHERO_DLL_EXPORTS<sp/></highlight><highlight class="comment">//<sp/>defined<sp/>if<sp/>we<sp/>are<sp/>building<sp/>the<sp/>Imebra<sp/>DLL<sp/>(instead<sp/>of<sp/>using<sp/>it)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>DICOMHERO_API<sp/>DICOMHERO_HELPER_DLL_EXPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>DICOMHERO_API<sp/>DICOMHERO_HELPER_DLL_IMPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif<sp/></highlight><highlight class="comment">//<sp/>DICOMHERO_DLL_EXPORTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">//<sp/>DICOMHERO_DLL<sp/>is<sp/>not<sp/>defined:<sp/>this<sp/>means<sp/>Imebra<sp/>is<sp/>a<sp/>static<sp/>lib.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>DICOMHERO_API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>DICOMHERO_DLL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DICOMHERO_IMPLEMENTATION_CLASS_UID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DICOMHERO_IMPLEMENTATION_CLASS_UID<sp/>&quot;1.3.6.1.4.1.54308.2.1.1.4&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DICOMHERO_IMPLEMENTATION_NAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DICOMHERO_IMPLEMENTATION_NAME<sp/>&quot;DicomHero<sp/>6&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>SWIG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">dicomhero</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a704d3afe08c779e7fb3ab6873582d16b" kindref="member">ageUnit_t</ref>:<sp/>char</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a704d3afe08c779e7fb3ab6873582d16ba44fdec47036f482b68b748f9d786801b" kindref="member">days</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;D&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a704d3afe08c779e7fb3ab6873582d16baae60f11ab51860bdb22794a943335a34" kindref="member">weeks</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;W&apos;</highlight><highlight class="normal">,<sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a704d3afe08c779e7fb3ab6873582d16bada36cfaf48b9e19896e23e1207040d1e" kindref="member">months</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;M&apos;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a704d3afe08c779e7fb3ab6873582d16ba75aeb98e5241592ad6a6c2c4c78a16ef" kindref="member">years</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;Y&apos;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a6929171a4348c7e8b65e02ff7369274a" kindref="member">imageQuality_t</ref>:<sp/>std::uint32_t</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a6929171a4348c7e8b65e02ff7369274aa063ac1ecb3f82cd377cb514d79b4cb56" kindref="member">veryHigh</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a6929171a4348c7e8b65e02ff7369274aa8d966b2253a917086c8604959e152243" kindref="member">high</ref><sp/>=<sp/>100,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a6929171a4348c7e8b65e02ff7369274aa0bec2467351b09d502d5387d400c0ff1" kindref="member">aboveMedium</ref><sp/>=<sp/>200,<sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a6929171a4348c7e8b65e02ff7369274aa075a3e36a0a52dcbc568c05788e8a713" kindref="member">medium</ref><sp/>=<sp/>300,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a6929171a4348c7e8b65e02ff7369274aa1dc0019bccb9b2d7d960c87ca2ee8b0b" kindref="member">belowMedium</ref><sp/>=<sp/>400,<sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a6929171a4348c7e8b65e02ff7369274aa53cced8d281a1a0ace3cb6594daaa4f7" kindref="member">low</ref><sp/>=<sp/>500,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a6929171a4348c7e8b65e02ff7369274aabf9240cec04556b547f842bd332ae449" kindref="member">veryLow</ref><sp/>=<sp/>600<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a1122eda39f3934f15c6ce131dc37d411" kindref="member">bitDepth_t</ref>:<sp/>std::uint32_t</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a1122eda39f3934f15c6ce131dc37d411a534bdd374d489635bcf3baa24508082f" kindref="member">depthU8</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a1122eda39f3934f15c6ce131dc37d411a1d3a54cd3331fa807aa9a436d039e806" kindref="member">depthS8</ref><sp/>=<sp/>1,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a1122eda39f3934f15c6ce131dc37d411ab7def596f1dfa24625164d90c88d9124" kindref="member">depthU16</ref><sp/>=<sp/>2,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a1122eda39f3934f15c6ce131dc37d411ac551b1c1ddca713a38a5676e8dc6609e" kindref="member">depthS16</ref><sp/>=<sp/>3,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a1122eda39f3934f15c6ce131dc37d411a1f80ba02187eb25296dedce6437738eb" kindref="member">depthU32</ref><sp/>=<sp/>4,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a1122eda39f3934f15c6ce131dc37d411a0db68160cba38952e6e2d0907c83be3e" kindref="member">depthS32</ref><sp/>=<sp/>5<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a8661126602cdfa1f3b51914c18b0a057" kindref="member">codecType_t</ref>:<sp/>std::uint32_t</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a8661126602cdfa1f3b51914c18b0a057a2fb318866a8746ae007aacd41f81c566" kindref="member">dicom</ref>,<sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a8661126602cdfa1f3b51914c18b0a057aab4f3ccba74857c5f2ba0d5b7dbf65e1" kindref="member">jpeg</ref><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1ade52f29bfd29833301e201961d0aa5ad" kindref="member">overlayType_t</ref>:<sp/>std::uint32_t</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ade52f29bfd29833301e201961d0aa5adab99da6afb822d9160a302091df4a7629" kindref="member">graphic</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ade52f29bfd29833301e201961d0aa5ada9c244bde489d0a693bf88aa1cabb2551" kindref="member">ROI</ref><sp/>=<sp/>1<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAKE_VR_ENUM(string)<sp/>((std::uint16_t)((((std::uint16_t)string[0])<sp/>&lt;&lt;<sp/>8)<sp/>|<sp/>(std::uint16_t)string[1]))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1" kindref="member">tagVR_t</ref>:<sp/>std::uint32_t</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1aea8a1a99f6c94c275a58dcd78f418c1f" kindref="member">AE</ref><sp/>=<sp/>0x4145,<sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1aa2c29192484301fa800100e16e494acf" kindref="member">AS</ref><sp/>=<sp/>0x4153,<sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1afa868488740aa25870ced6b9169951fb" kindref="member">AT</ref><sp/>=<sp/>0x4154,<sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a8d7e99c73cd5a10adaaf4c9f9a520368" kindref="member">CS</ref><sp/>=<sp/>0x4353,<sp/></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a03895f91b58717b678dd94bd941d7a72" kindref="member">DA</ref><sp/>=<sp/>0x4441,<sp/></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a47b79bd259e22596ffc4be2ffbbe5c5a" kindref="member">DS</ref><sp/>=<sp/>0x4453,<sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a4d63ec1aa4c46738107033714adf7189" kindref="member">DT</ref><sp/>=<sp/>0x4454,<sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1aac717902757f64247e6ee5ec9b2d1a9b" kindref="member">FL</ref><sp/>=<sp/>0x464c,<sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1aa8fa6b553b655657f943cb8fd85859d1" kindref="member">FD</ref><sp/>=<sp/>0x4644,<sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a0bfc16cc12effc1bae4d3766c4f2257d" kindref="member">IS</ref><sp/>=<sp/>0x4953,<sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a31d38ecd194aaab6e0584e14314036af" kindref="member">LO</ref><sp/>=<sp/>0x4c4f,<sp/></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1ac562607189d77eb9dfb707464c1e7b0b" kindref="member">LT</ref><sp/>=<sp/>0x4c54,<sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a02254216324801a8211731781e7eb52e" kindref="member">OB</ref><sp/>=<sp/>0x4f42,<sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1aa06b33d1ea28e90733617ec889d4e76e" kindref="member">SB</ref><sp/>=<sp/>0x5342,<sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a75f75daed3373b39ee67e33c84afc37d" kindref="member">OD</ref><sp/>=<sp/>0x4f44,<sp/></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a7e4137add2dfe45e078e7f076aec84df" kindref="member">OF</ref><sp/>=<sp/>0x4f46,<sp/></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1ab406571b7334cfe40767dc13498c1896" kindref="member">OL</ref><sp/>=<sp/>0x4f4c,<sp/></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a2e9413b5696d0384c61121df61cc1cbb" kindref="member">OV</ref><sp/>=<sp/>0x4f56,<sp/></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a9b14fd50dc7c262c5871fd91c3902f31" kindref="member">OW</ref><sp/>=<sp/>0x4f57,<sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a7b6166324dc52f374d908e03602b1daf" kindref="member">PN</ref><sp/>=<sp/>0x504e,<sp/></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1aec5704f0d56945d1e5b8f9a2384a2b4b" kindref="member">SH</ref><sp/>=<sp/>0x5348,<sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a74b8d5453b654b3a79e7b8985a2fc71c" kindref="member">SL</ref><sp/>=<sp/>0x534c,<sp/></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a1249ab51832d31d2c1a0ac36b9ffaa2d" kindref="member">SQ</ref><sp/>=<sp/>0x5351,<sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1ad53aeb78abc83a52ab8982f5c82a3d5b" kindref="member">SS</ref><sp/>=<sp/>0x5353,<sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1aec8e57d71f07e31203035548b79d03c8" kindref="member">ST</ref><sp/>=<sp/>0x5354,<sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1ad38212a0c0e98f678feaaa5a8b9167f5" kindref="member">SV</ref><sp/>=<sp/>0x5356,<sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1aac7a4fbd0d788d94f43454817e1c208c" kindref="member">TM</ref><sp/>=<sp/>0x544d,<sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a6a2fb30a2dacdda4d74122697262a8b7" kindref="member">UC</ref><sp/>=<sp/>0x5543,<sp/></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a71ff71526d15db86eb50fcac245d183b" kindref="member">UI</ref><sp/>=<sp/>0x5549,<sp/></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a5b26faf932d04f134a2cf70e96c4c548" kindref="member">UL</ref><sp/>=<sp/>0x554c,<sp/></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a0433a030f35fe613ec8cf50417323dea" kindref="member">UN</ref><sp/>=<sp/>0x554e,<sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a1f72410deecd85b61b1c8ffcf6bf4c99" kindref="member">UR</ref><sp/>=<sp/>0x5552,<sp/></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a7516fd43adaa5e0b8a65a672c39845d2" kindref="member">US</ref><sp/>=<sp/>0x5553,<sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1a87db16cba59e908888837d351af65bfe" kindref="member">UT</ref><sp/>=<sp/>0x5554,<sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1adeaa2adbeb26802ae61609c3f3642d82" kindref="member">UV</ref><sp/>=<sp/>0x5556<sp/><sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SWIG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::AE<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;AE&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::AS<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;AS&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::AT<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;AT&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::CS<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;CS&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::DA<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;DA&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::DS<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;DS&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::DT<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;DT&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::FL<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;FL&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::FD<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;FD&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::IS<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;IS&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::LO<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;LO&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::LT<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;LT&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::OB<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;OB&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::SB<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;SB&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::OD<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;OD&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::OF<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;OF&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::OL<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;OL&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::OV<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;OV&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::OW<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;OW&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::PN<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;PN&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::SH<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;SH&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::SL<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;SL&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::SV<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;SV&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::SQ<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;SQ&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::SS<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;SS&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::ST<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;ST&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::TM<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;TM&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::UC<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;UC&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::UI<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;UI&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::UL<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;UL&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::UV<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;UV&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::UN<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;UN&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::UR<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;UR&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::US<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;US&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">static_assert((std::uint16_t)tagVR_t::UT<sp/>==<sp/>MAKE_VR_ENUM(</highlight><highlight class="stringliteral">&quot;UT&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;Wrong<sp/>VR<sp/>enumeration<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;<sp/>fileParts_t;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;<sp/>charsetsList_t;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a257a8cd2a03bf0dce2d65b2b9031d719" kindref="member">drawBitmapType_t</ref>:<sp/>std::uint32_t</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a257a8cd2a03bf0dce2d65b2b9031d719a8658e75dc16786688c4330a9a0d713f3" kindref="member">drawBitmapRGB</ref><sp/><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a257a8cd2a03bf0dce2d65b2b9031d719a6d428a78fef4dde9d57b079538d527fe" kindref="member">drawBitmapBGR</ref><sp/><sp/>=<sp/>1,<sp/></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a257a8cd2a03bf0dce2d65b2b9031d719a04c6e08bab18af527ef5e2a8de4da068" kindref="member">drawBitmapRGBA</ref><sp/>=<sp/>2,<sp/></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a257a8cd2a03bf0dce2d65b2b9031d719a47d0abe02bd51712e107824e8237853a" kindref="member">drawBitmapBGRA</ref><sp/>=<sp/>3<sp/><sp/></highlight></codeline>
+<codeline lineno="241"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a33a79d7d886beab8c5265cb90d07250d" kindref="member">dicomVOIFunction_t</ref>:<sp/>std::uint16_t</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a33a79d7d886beab8c5265cb90d07250da9a932b3cb396238423eb2f33ec17d6aa" kindref="member">linear</ref><sp/>=<sp/>0u,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a33a79d7d886beab8c5265cb90d07250da0083ca257c2aafda70c6823d7aefae9c" kindref="member">linearExact</ref><sp/>=<sp/>1u,<sp/></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a33a79d7d886beab8c5265cb90d07250daaccc4a6aef7653498bcf65507244b7f5" kindref="member">sigmoid</ref><sp/>=<sp/>2u<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="253"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="keyword">class<sp/></highlight><highlight class="normal">VOIDescription;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;VOIDescription&gt;<sp/>vois_t;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a7279e4e5761c3824449170ec61b0a95c" kindref="member">dimseCommandType_t</ref>:<sp/>std::uint16_t</highlight></codeline>
+<codeline lineno="271"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a7279e4e5761c3824449170ec61b0a95cafd471add441753f41915d5155b5381bf" kindref="member">cStore</ref><sp/>=<sp/>0x1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a7279e4e5761c3824449170ec61b0a95ca95623822b23dbb4e0593fe9fcc9f53b0" kindref="member">cGet</ref><sp/>=<sp/>0x10,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a7279e4e5761c3824449170ec61b0a95cabc60222d94902bee420054ffc74264f2" kindref="member">cFind</ref><sp/>=<sp/>0x20,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a7279e4e5761c3824449170ec61b0a95cabd6771cb6af35ad3e68a9999fcecd08d" kindref="member">cMove</ref><sp/>=<sp/>0x21,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a7279e4e5761c3824449170ec61b0a95caab8aea6e15af8c32d0d66fcbcee5a4a3" kindref="member">cCancel</ref><sp/>=<sp/>0xfff,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a7279e4e5761c3824449170ec61b0a95ca008c47ad9f8f613b565abf418d9e9408" kindref="member">cEcho</ref><sp/>=<sp/>0x30,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a7279e4e5761c3824449170ec61b0a95ca21f4a64c6f344c7923052c6fa0e3453f" kindref="member">nEventReport</ref><sp/>=<sp/>0x100,<sp/></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a7279e4e5761c3824449170ec61b0a95ca24fb210c7d6257590dc462856fd4af37" kindref="member">nGet</ref><sp/>=<sp/>0x110,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a7279e4e5761c3824449170ec61b0a95cac48ecf076a6943ddece3101987f0971c" kindref="member">nSet</ref><sp/>=<sp/>0x120,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a7279e4e5761c3824449170ec61b0a95ca3ab08c23e90017ee1acd7ab5460e6f80" kindref="member">nAction</ref><sp/>=<sp/>0x130,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a7279e4e5761c3824449170ec61b0a95ca5e2371f9c2f0af7e2c36db5baa4bd0fe" kindref="member">nCreate</ref><sp/>=<sp/>0x140,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a7279e4e5761c3824449170ec61b0a95cacdac1af10317bcba89a73148c07eea2b" kindref="member">nDelete</ref><sp/>=<sp/>0x150,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a7279e4e5761c3824449170ec61b0a95cad1fc8eaf36937be0c3ba8cfe0a2c1bfe" kindref="member">response</ref><sp/>=<sp/>0x8000<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="285"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a02923fa5fc1c9bbea4dae876b4fd5227" kindref="member">dimseCommandPriority_t</ref>:<sp/>std::uint16_t</highlight></codeline>
+<codeline lineno="293"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a6929171a4348c7e8b65e02ff7369274aa53cced8d281a1a0ace3cb6594daaa4f7" kindref="member">low</ref><sp/>=<sp/>0x2,<sp/><sp/></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a6929171a4348c7e8b65e02ff7369274aa075a3e36a0a52dcbc568c05788e8a713" kindref="member">medium</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a6929171a4348c7e8b65e02ff7369274aa8d966b2253a917086c8604959e152243" kindref="member">high</ref><sp/>=<sp/>0x1<sp/><sp/></highlight></codeline>
+<codeline lineno="297"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref>:<sp/>std::uint16_t</highlight></codeline>
+<codeline lineno="305"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a260ca9dd8a4577fc00b7bd5810298076" kindref="member">success</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a1466824db8f158879aeebc089f0d0f9f" kindref="member">unsupportedOptionalAttributes</ref><sp/>=<sp/>0x0001,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a3d04f7f4503308fc4d627ea1085a2af4" kindref="member">cannotUpdateperformedProcedureStepObject</ref><sp/>=<sp/>0x0110,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a18a0fd9b638f5d181443723ceb0c612c" kindref="member">unsupportedSOPClass</ref><sp/>=<sp/>0x0122,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3aa16ac88bf92050ca712d96c71d38159b" kindref="member">outOfResources</ref><sp/>=<sp/>0xa700,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a8f33f44085fadbdf3fb02d769818b80c" kindref="member">outOfResourcesCannotCalculateNumberOfMatches</ref><sp/>=<sp/>0xa701,<sp/></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a66dc31956fecbe3abf4eb26c6e494e80" kindref="member">outOfResourcesCannotPerformSubOperations</ref><sp/>=<sp/>0xa702,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a1eca2704ba3024e3313d726a0cda51f6" kindref="member">moveDestinationUnknown</ref><sp/>=<sp/>0xa801,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3aa1544f98550986062bb731d65a518b56" kindref="member">identifierDoesNotMatchSOPClass</ref><sp/>=<sp/>0xa900,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a9498cc78091058b628bb163cd6912316" kindref="member">subOperationCompletedWithErrors</ref><sp/>=<sp/>0xb000,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3aed5ee9344d2062b575d31271963b3df3" kindref="member">elementDiscarded</ref><sp/>=<sp/>0xb006,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a896b55d11589cf64cd2ee9f560dbad23" kindref="member">datasetDoesNotMatchSOPClass</ref><sp/>=<sp/>0xb007,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3aeaeb63d53b4cf097a4105bef31d6bdaf" kindref="member">UPSAlreadyCanceled</ref><sp/>=<sp/>0xb304,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a94b0980c49f46363dbf1c5a04c1d7c4b" kindref="member">coercedInvalidValuesToValidValues</ref><sp/>=<sp/>0xb305,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a0d5e7a3da2d9549f9062ecc00dfb4477" kindref="member">UPSStateAlreadyCompleted</ref><sp/>=<sp/>0xb306,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3ad61333cf6a2a1473e20684c8121c33a7" kindref="member">unableToProcess</ref><sp/>=<sp/>0xc000,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3af8e10d9cb3f057375d0c5e8da1d2ada8" kindref="member">moreThanOneMatchFound</ref><sp/>=<sp/>0xc100,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a06d2bd1aadfa73094d761fb88ace6f16" kindref="member">CannotSupportRequestedTemplate</ref><sp/>=<sp/>0xc200,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3aeca231a025c670090a32f9248a2e0f5f" kindref="member">UPSNotUpdated</ref><sp/>=<sp/>0xc300,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a895122ef67cdbfd1ad39fe909884c022" kindref="member">transactionUIDNotProvided</ref><sp/>=<sp/>0xc301,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a76739017e59829966bdff3c5a626ff4e" kindref="member">UPSAlreadyInProgress</ref><sp/>=<sp/>0xc302,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a7706e19b842d8db963389ebb06c65be9" kindref="member">canScheduleOnlyWithNCreate</ref><sp/>=<sp/>0xc303,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a6a2deaa957c6cebbb202719c942449d8" kindref="member">UPSCannotChangeState</ref><sp/>=<sp/>0xc304,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a97cc00cd2de44cae219a45e18958ab96" kindref="member">instanceUIDDoesNotExist</ref><sp/>=<sp/>0xc307,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a1b2d7f96aab27dc150a30d3103f9d346" kindref="member">unknownAETitle</ref><sp/>=<sp/>0xc308,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3abf9349a71ac51245809f2a13abf8dd2f" kindref="member">UPSNotSchedule</ref><sp/>=<sp/>0xc309,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a4a266b8478e54dd9ddfab48e46f51c05" kindref="member">UPSNotInProgress</ref><sp/>=<sp/>0xc310,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3aaad06a262df16dad742e97f2923883a1" kindref="member">UPSAlreadyCompleted</ref><sp/>=<sp/>0xc311,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3ae22ccc5ac4b67a225424abbb5c0743af" kindref="member">performerCannotBeContacted</ref><sp/>=<sp/>0xc312,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a1e02f5fd94f241aac4daba1c7e24fa47" kindref="member">performerDoesNotCancel</ref><sp/>=<sp/>0xc313,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a7f7c9c621e9522652491e7d884d4c574" kindref="member">unappropriateActionForInstance</ref><sp/>=<sp/>0xc314,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a47ce9a5ea3eba33cd88783a4921b78fc" kindref="member">SCPDoesNotSupportEventReports</ref><sp/>=<sp/>0xc315,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3ad5c39a1d9aced393f835f334a1fb9206" kindref="member">canceled</ref><sp/>=<sp/>0xfe00,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a7c6c2e5d48ab37a007cbf70d3ea25fa4" kindref="member">pending</ref><sp/>=<sp/>0xff00,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3af262b9c8df3bfe45b0a1ec0714cebce5" kindref="member">pendingWithWarnings</ref><sp/>=<sp/>0xff01<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="341"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a0e9647ca08c73851de0a7f5bd158584a" kindref="member">dimseStatus_t</ref></highlight></codeline>
+<codeline lineno="350"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a260ca9dd8a4577fc00b7bd5810298076" kindref="member">success</ref>,<sp/></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a0e9647ca08c73851de0a7f5bd158584aa7b83d3f08fa392b79e3f553b585971cd" kindref="member">warning</ref>,<sp/></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a0e9647ca08c73851de0a7f5bd158584aa3ee28fe1a60c95b89d29317f122c7021" kindref="member">failure</ref>,<sp/></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a0e9647ca08c73851de0a7f5bd158584aa10aec35353f9c4096a71c38654c3d402" kindref="member">cancel</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3a7c6c2e5d48ab37a007cbf70d3ea25fa4" kindref="member">pending</ref><sp/><sp/></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;tagId_t&gt;<sp/><ref refid="definitions_8h_1afe5a6c98320c4a24eb38260c76a6f961" kindref="member">attributeIdentifierList_t</ref>;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dicomhero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>imebraDefinitions__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/definitions.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,506 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_dimse_command" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::DimseCommand</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_dimse_command_base" prot="public" virt="non-virtual">dicomhero::DimseCommandBase</basecompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_c_cancel_command" prot="public" virt="non-virtual">dicomhero::CCancelCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_c_echo_command" prot="public" virt="non-virtual">dicomhero::CEchoCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_c_find_command" prot="public" virt="non-virtual">dicomhero::CFindCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_c_get_command" prot="public" virt="non-virtual">dicomhero::CGetCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_c_move_command" prot="public" virt="non-virtual">dicomhero::CMoveCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_c_store_command" prot="public" virt="non-virtual">dicomhero::CStoreCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_n_action_command" prot="public" virt="non-virtual">dicomhero::NActionCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_n_create_command" prot="public" virt="non-virtual">dicomhero::NCreateCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_n_delete_command" prot="public" virt="non-virtual">dicomhero::NDeleteCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_n_event_report_command" prot="public" virt="non-virtual">dicomhero::NEventReportCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_n_get_command" prot="public" virt="non-virtual">dicomhero::NGetCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_n_set_command" prot="public" virt="non-virtual">dicomhero::NSetCommand</derivedcompoundref>
+    <includes local="no">dimse.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1a42b5c4a4f98007ee98243d86183f217a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DimseCommand::DimseCommand</definition>
+        <argsstring>(const DimseCommand &amp;source)</argsstring>
+        <name>DimseCommand</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="187" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1ab2d5daf371a921beeccf3a5fed0ebf2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::DimseCommand::~DimseCommand</definition>
+        <argsstring>()</argsstring>
+        <name>~DimseCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="189" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1ab63820778406b25ec0ff2b60e3d2263b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> &amp;</type>
+        <definition>DimseCommand&amp; dicomhero::DimseCommand::operator=</definition>
+        <argsstring>(const DimseCommand &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="191" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1a20a21994767dd00fb7d51c8e2df10770" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t dicomhero::DimseCommand::getID</definition>
+        <argsstring>() const</argsstring>
+        <name>getID</name>
+        <briefdescription>
+<para>Returns the command ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the command ID </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="199" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1ade581e0e2cddeafcf3146905cc841b3a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="definitions_8h_1a7279e4e5761c3824449170ec61b0a95c" kindref="member">dimseCommandType_t</ref></type>
+        <definition>dimseCommandType_t dicomhero::DimseCommand::getCommandType</definition>
+        <argsstring>() const</argsstring>
+        <name>getCommandType</name>
+        <briefdescription>
+<para>Returns the command type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the command type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="207" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1a5e26201f021715bcfb2a3183f2789b18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_c_store_command" kindref="compound">CStoreCommand</ref></type>
+        <definition>CStoreCommand dicomhero::DimseCommand::getAsCStoreCommand</definition>
+        <argsstring>() const</argsstring>
+        <name>getAsCStoreCommand</name>
+        <briefdescription>
+<para>Downcast the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> to a <ref refid="classdicomhero_1_1_c_store_command" kindref="compound">CStoreCommand</ref>, unless the command cannot be casted in which case a std::bad_cast exception is thrown. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method can be used with wrapper languages that don&apos;t support downcast (e.g. Golang). Other languages can still use the downcast functionalities embedded into the language.</para>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> downcasted to a <ref refid="classdicomhero_1_1_c_store_command" kindref="compound">CStoreCommand</ref></para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="226" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1a25f13aa3be71635927e54c9edf964606" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_c_move_command" kindref="compound">CMoveCommand</ref></type>
+        <definition>CMoveCommand dicomhero::DimseCommand::getAsCMoveCommand</definition>
+        <argsstring>() const</argsstring>
+        <name>getAsCMoveCommand</name>
+        <briefdescription>
+<para>Downcast the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> to a <ref refid="classdicomhero_1_1_c_move_command" kindref="compound">CMoveCommand</ref>, unless the command cannot be casted in which case a std::bad_cast exception is thrown. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method can be used with wrapper languages that don&apos;t support downcast (e.g. Golang). Other languages can still use the downcast functionalities embedded into the language.</para>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> downcasted to a <ref refid="classdicomhero_1_1_c_move_command" kindref="compound">CMoveCommand</ref></para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="245" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1aca9b772aba2bf043b30ccc7183928f7b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_c_get_command" kindref="compound">CGetCommand</ref></type>
+        <definition>CGetCommand dicomhero::DimseCommand::getAsCGetCommand</definition>
+        <argsstring>() const</argsstring>
+        <name>getAsCGetCommand</name>
+        <briefdescription>
+<para>Downcast the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> to a <ref refid="classdicomhero_1_1_c_get_command" kindref="compound">CGetCommand</ref>, unless the command cannot be casted in which case a std::bad_cast exception is thrown. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method can be used with wrapper languages that don&apos;t support downcast (e.g. Golang). Other languages can still use the downcast functionalities embedded into the language.</para>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> downcasted to a <ref refid="classdicomhero_1_1_c_get_command" kindref="compound">CGetCommand</ref></para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="264" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1acb3224b9cfe87c4111827d8dfa2548ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_c_find_command" kindref="compound">CFindCommand</ref></type>
+        <definition>CFindCommand dicomhero::DimseCommand::getAsCFindCommand</definition>
+        <argsstring>() const</argsstring>
+        <name>getAsCFindCommand</name>
+        <briefdescription>
+<para>Downcast the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> to a <ref refid="classdicomhero_1_1_c_find_command" kindref="compound">CFindCommand</ref>, unless the command cannot be casted in which case a std::bad_cast exception is thrown. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method can be used with wrapper languages that don&apos;t support downcast (e.g. Golang). Other languages can still use the downcast functionalities embedded into the language.</para>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> downcasted to a <ref refid="classdicomhero_1_1_c_find_command" kindref="compound">CFindCommand</ref></para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="283" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1a1f194a43cc3bd14374c6a017ca90cacf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_c_echo_command" kindref="compound">CEchoCommand</ref></type>
+        <definition>CEchoCommand dicomhero::DimseCommand::getAsCEchoCommand</definition>
+        <argsstring>() const</argsstring>
+        <name>getAsCEchoCommand</name>
+        <briefdescription>
+<para>Downcast the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> to a <ref refid="classdicomhero_1_1_c_echo_command" kindref="compound">CEchoCommand</ref>, unless the command cannot be casted in which case a std::bad_cast exception is thrown. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method can be used with wrapper languages that don&apos;t support downcast (e.g. Golang). Other languages can still use the downcast functionalities embedded into the language.</para>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> downcasted to a <ref refid="classdicomhero_1_1_c_echo_command" kindref="compound">CEchoCommand</ref></para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="302" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1a09806cd70f4863f169e79f7ba0f2938c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_c_cancel_command" kindref="compound">CCancelCommand</ref></type>
+        <definition>CCancelCommand dicomhero::DimseCommand::getAsCCancelCommand</definition>
+        <argsstring>() const</argsstring>
+        <name>getAsCCancelCommand</name>
+        <briefdescription>
+<para>Downcast the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> to a <ref refid="classdicomhero_1_1_c_cancel_command" kindref="compound">CCancelCommand</ref>, unless the command cannot be casted in which case a std::bad_cast exception is thrown. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method can be used with wrapper languages that don&apos;t support downcast (e.g. Golang). Other languages can still use the downcast functionalities embedded into the language.</para>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> downcasted to a <ref refid="classdicomhero_1_1_c_cancel_command" kindref="compound">CCancelCommand</ref></para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="321" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1ad3c9fc875fd26bf148f2774b83c86dd2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref></type>
+        <definition>NActionCommand dicomhero::DimseCommand::getAsNActionCommand</definition>
+        <argsstring>() const</argsstring>
+        <name>getAsNActionCommand</name>
+        <briefdescription>
+<para>Downcast the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> to a <ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref>, unless the command cannot be casted in which case a std::bad_cast exception is thrown. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method can be used with wrapper languages that don&apos;t support downcast (e.g. Golang). Other languages can still use the downcast functionalities embedded into the language.</para>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> downcasted to a <ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref></para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="340" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1a2951f37ed8663eb28b9dde1383678cd3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref></type>
+        <definition>NEventReportCommand dicomhero::DimseCommand::getAsNEventReportCommand</definition>
+        <argsstring>() const</argsstring>
+        <name>getAsNEventReportCommand</name>
+        <briefdescription>
+<para>Downcast the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> to a <ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref>, unless the command cannot be casted in which case a std::bad_cast exception is thrown. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method can be used with wrapper languages that don&apos;t support downcast (e.g. Golang). Other languages can still use the downcast functionalities embedded into the language.</para>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> downcasted to a <ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref></para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="359" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1af8b436bdbd272b4a5db13a364d4f53b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref></type>
+        <definition>NCreateCommand dicomhero::DimseCommand::getAsNCreateCommand</definition>
+        <argsstring>() const</argsstring>
+        <name>getAsNCreateCommand</name>
+        <briefdescription>
+<para>Downcast the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> to a <ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref>, unless the command cannot be casted in which case a std::bad_cast exception is thrown. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method can be used with wrapper languages that don&apos;t support downcast (e.g. Golang). Other languages can still use the downcast functionalities embedded into the language.</para>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> downcasted to a <ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref></para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="378" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1a45916fcf83887280f1df1752114dd65c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_n_delete_command" kindref="compound">NDeleteCommand</ref></type>
+        <definition>NDeleteCommand dicomhero::DimseCommand::getAsNDeleteCommand</definition>
+        <argsstring>() const</argsstring>
+        <name>getAsNDeleteCommand</name>
+        <briefdescription>
+<para>Downcast the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> to a <ref refid="classdicomhero_1_1_n_delete_command" kindref="compound">NDeleteCommand</ref>, unless the command cannot be casted in which case a std::bad_cast exception is thrown. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method can be used with wrapper languages that don&apos;t support downcast (e.g. Golang). Other languages can still use the downcast functionalities embedded into the language.</para>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> downcasted to a <ref refid="classdicomhero_1_1_n_delete_command" kindref="compound">NDeleteCommand</ref></para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="397" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1a5b475bc56320bb80140c289b573bc78a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref></type>
+        <definition>NSetCommand dicomhero::DimseCommand::getAsNSetCommand</definition>
+        <argsstring>() const</argsstring>
+        <name>getAsNSetCommand</name>
+        <briefdescription>
+<para>Downcast the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> to a <ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref>, unless the command cannot be casted in which case a std::bad_cast exception is thrown. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method can be used with wrapper languages that don&apos;t support downcast (e.g. Golang). Other languages can still use the downcast functionalities embedded into the language.</para>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> downcasted to a <ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref></para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="416" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1a618b8272307d8225f964d7fe394d4d4d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_n_get_command" kindref="compound">NGetCommand</ref></type>
+        <definition>NGetCommand dicomhero::DimseCommand::getAsNGetCommand</definition>
+        <argsstring>() const</argsstring>
+        <name>getAsNGetCommand</name>
+        <briefdescription>
+<para>Downcast the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> to a <ref refid="classdicomhero_1_1_n_get_command" kindref="compound">NGetCommand</ref>, unless the command cannot be casted in which case a std::bad_cast exception is thrown. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method can be used with wrapper languages that don&apos;t support downcast (e.g. Golang). Other languages can still use the downcast functionalities embedded into the language.</para>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref> downcasted to a <ref refid="classdicomhero_1_1_n_get_command" kindref="compound">NGetCommand</ref></para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="435" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_command_1a3d94961676cc3a5a6c713e402d819c0c" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DimseCommand::DimseCommand</definition>
+        <argsstring>(const std::shared_ptr&lt; implementation::dimseNCommand &gt; &amp;pCommand)</argsstring>
+        <name>DimseCommand</name>
+        <param>
+          <type>const std::shared_ptr&lt; implementation::dimseNCommand &gt; &amp;</type>
+          <declname>pCommand</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="438" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class for the DICOM commands. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>dicomhero::CEchoCommand</label>
+        <link refid="classdicomhero_1_1_c_echo_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dicomhero::NEventReportCommand</label>
+        <link refid="classdicomhero_1_1_n_event_report_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::DimseCommandBase</label>
+        <link refid="classdicomhero_1_1_dimse_command_base"/>
+      </node>
+      <node id="9">
+        <label>dicomhero::NActionCommand</label>
+        <link refid="classdicomhero_1_1_n_action_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dicomhero::NGetCommand</label>
+        <link refid="classdicomhero_1_1_n_get_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dicomhero::CMoveCommand</label>
+        <link refid="classdicomhero_1_1_c_move_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dicomhero::CFindCommand</label>
+        <link refid="classdicomhero_1_1_c_find_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dicomhero::CGetCommand</label>
+        <link refid="classdicomhero_1_1_c_get_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dicomhero::NDeleteCommand</label>
+        <link refid="classdicomhero_1_1_n_delete_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>dicomhero::NSetCommand</label>
+        <link refid="classdicomhero_1_1_n_set_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dicomhero::NCreateCommand</label>
+        <link refid="classdicomhero_1_1_n_create_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dicomhero::CCancelCommand</label>
+        <link refid="classdicomhero_1_1_c_cancel_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dicomhero::DimseCommand</label>
+        <link refid="classdicomhero_1_1_dimse_command"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dicomhero::CStoreCommand</label>
+        <link refid="classdicomhero_1_1_c_store_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dicomhero::DimseCommandBase</label>
+        <link refid="classdicomhero_1_1_dimse_command_base"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::DimseCommand</label>
+        <link refid="classdicomhero_1_1_dimse_command"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="177" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" bodystart="178" bodyend="440"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_dimse_command_1a42b5c4a4f98007ee98243d86183f217a" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>DimseCommand</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1a3d94961676cc3a5a6c713e402d819c0c" prot="protected" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>DimseCommand</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a4c49f1a679c3d5d6963406f98bbf6488" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>DimseCommandBase</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a56fe4824f166f85256608b95063c715b" prot="protected" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>DimseCommandBase</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a8aad82b61e4888f5ae454e6038817aba" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getAbstractSyntax</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a92b5b9ec7001e21ffb4657f21b901fb3" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getAffectedSopClassUid</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1acda407c661ca6b0d77d103bf1449e936" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getAffectedSopInstanceUid</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1a09806cd70f4863f169e79f7ba0f2938c" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getAsCCancelCommand</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1a1f194a43cc3bd14374c6a017ca90cacf" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getAsCEchoCommand</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1acb3224b9cfe87c4111827d8dfa2548ad" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getAsCFindCommand</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1aca9b772aba2bf043b30ccc7183928f7b" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getAsCGetCommand</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1a25f13aa3be71635927e54c9edf964606" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getAsCMoveCommand</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1a5e26201f021715bcfb2a3183f2789b18" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getAsCStoreCommand</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1ad3c9fc875fd26bf148f2774b83c86dd2" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getAsNActionCommand</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1af8b436bdbd272b4a5db13a364d4f53b1" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getAsNCreateCommand</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1a45916fcf83887280f1df1752114dd65c" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getAsNDeleteCommand</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1a2951f37ed8663eb28b9dde1383678cd3" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getAsNEventReportCommand</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1a618b8272307d8225f964d7fe394d4d4d" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getAsNGetCommand</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1a5b475bc56320bb80140c289b573bc78a" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getAsNSetCommand</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a5de4ba3f28c279fa9ca8a6d042ff7487" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getCommandDataSet</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1ade581e0e2cddeafcf3146905cc841b3a" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getCommandType</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1a20a21994767dd00fb7d51c8e2df10770" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getID</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1ab5da3e6a748beb8ee2367e4a5c857bcc" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getPayloadDataSet</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1ac7ccfe1ea12e2de305b7fb6fddb0c7b3" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getRequestedSopClassUid</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a4b2e73824fdbb3f1dc0d99196749761d" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>getRequestedSopInstanceUid</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1ab63820778406b25ec0ff2b60e3d2263b" prot="public" virt="non-virtual"><scope>dicomhero::DimseCommand</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a31a133b2fab838d4d49a84babfb82d98" prot="public" virt="non-virtual" ambiguityscope="dicomhero::DimseCommandBase::"><scope>dicomhero::DimseCommand</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_1ab2d5daf371a921beeccf3a5fed0ebf2e" prot="public" virt="virtual"><scope>dicomhero::DimseCommand</scope><name>~DimseCommand</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a3923c35d64048191be0f1b662e9c5277" prot="public" virt="virtual"><scope>dicomhero::DimseCommand</scope><name>~DimseCommandBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

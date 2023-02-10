@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_stream_timeout" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroStreamTimeout</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_baseStreamInput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_stream_timeout_1a522900dd550a7862a883d130a36997fd" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroStreamTimeout::m_StreamTimeout</definition>
+        <argsstring></argsstring>
+        <name>m_StreamTimeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamInput.h" line="60" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamInput.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_stream_timeout_1a013a416936814d8c65e0e8fc37ccb156" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroStreamTimeout::initWithInputStream:timeoutSeconds:</definition>
+        <argsstring>(DicomheroBaseStreamInput *pStream,[timeoutSeconds] unsigned int timeoutSeconds)</argsstring>
+        <name>initWithInputStream:timeoutSeconds:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_base_stream_input" kindref="compound">DicomheroBaseStreamInput</ref> *</type>
+          <declname>pStream</declname>
+        </param>
+        <param>
+          <attributes>[timeoutSeconds]</attributes>
+          <type>unsigned int</type>
+          <declname>timeoutSeconds</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. Starts a separate thread that closes the stream in the parameter if this class destructor is not called before the timeout expires. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>stream that must be closed when the timeout expires </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeoutSeconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timeout in seconds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamInput.h" line="60" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_stream_timeout_1a4e94de86697ca1ec0d239941de458e11" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroStreamTimeout::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamInput.h" line="60" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Triggers a timeout on a selected stream if the class is not deallocated within the specified amount of time. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamInput.h" line="56" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamInput.h" bodystart="58" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_stream_timeout_1a4e94de86697ca1ec0d239941de458e11" prot="public" virt="virtual"><scope>DicomheroStreamTimeout</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_stream_timeout_1a013a416936814d8c65e0e8fc37ccb156" prot="public" virt="virtual"><scope>DicomheroStreamTimeout</scope><name>initWithInputStream:timeoutSeconds:</name></member>
+      <member refid="interface_dicomhero_stream_timeout_1a522900dd550a7862a883d130a36997fd" prot="public" virt="non-virtual"><scope>DicomheroStreamTimeout</scope><name>m_StreamTimeout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

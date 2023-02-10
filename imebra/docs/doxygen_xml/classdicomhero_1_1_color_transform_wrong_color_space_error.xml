@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_color_transform_wrong_color_space_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::ColorTransformWrongColorSpaceError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_color_transform_error" prot="public" virt="non-virtual">dicomhero::ColorTransformError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_color_transform_wrong_color_space_error_1a56e6b48616887864f602de74dbbc6a4f" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::ColorTransformWrongColorSpaceError::ColorTransformWrongColorSpaceError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>ColorTransformWrongColorSpaceError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1204" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_color_transform_wrong_color_space_error_1a35f867bb48c7de603c58389b3e85d1ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::ColorTransformWrongColorSpaceError::ColorTransformWrongColorSpaceError</definition>
+        <argsstring>(const ColorTransformWrongColorSpaceError &amp;source)</argsstring>
+        <name>ColorTransformWrongColorSpaceError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_color_transform_wrong_color_space_error" kindref="compound">ColorTransformWrongColorSpaceError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1206" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_color_transform_wrong_color_space_error_1a2b172914b831123f93f83f0bcf279bbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_color_transform_wrong_color_space_error" kindref="compound">ColorTransformWrongColorSpaceError</ref> &amp;</type>
+        <definition>ColorTransformWrongColorSpaceError&amp; dicomhero::ColorTransformWrongColorSpaceError::operator=</definition>
+        <argsstring>(const ColorTransformWrongColorSpaceError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_color_transform_wrong_color_space_error" kindref="compound">ColorTransformWrongColorSpaceError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1208" column="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_color_transform_wrong_color_space_error_1a8a87dc5b558f9fbc336ff4192dd7991b" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::ColorTransformWrongColorSpaceError::~ColorTransformWrongColorSpaceError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~ColorTransformWrongColorSpaceError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1210" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This exception is thrown when a color transform must convert between two color spaces that it does not support. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dicomhero::ColorTransformError</label>
+        <link refid="classdicomhero_1_1_color_transform_error"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dicomhero::ColorTransformWrongColorSpaceError</label>
+        <link refid="classdicomhero_1_1_color_transform_wrong_color_space_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dicomhero::TransformError</label>
+        <link refid="classdicomhero_1_1_transform_error"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dicomhero::ColorTransformError</label>
+        <link refid="classdicomhero_1_1_color_transform_error"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dicomhero::ColorTransformWrongColorSpaceError</label>
+        <link refid="classdicomhero_1_1_color_transform_wrong_color_space_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dicomhero::TransformError</label>
+        <link refid="classdicomhero_1_1_transform_error"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1196" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="1197" bodyend="1211"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_color_transform_error_1ac1a3a12f4ca6447c5a8ac0c02109ff10" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformWrongColorSpaceError</scope><name>ColorTransformError</name></member>
+      <member refid="classdicomhero_1_1_color_transform_error_1a2fbd4131975fcc492b6a023d34baec25" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformWrongColorSpaceError</scope><name>ColorTransformError</name></member>
+      <member refid="classdicomhero_1_1_color_transform_wrong_color_space_error_1a56e6b48616887864f602de74dbbc6a4f" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformWrongColorSpaceError</scope><name>ColorTransformWrongColorSpaceError</name></member>
+      <member refid="classdicomhero_1_1_color_transform_wrong_color_space_error_1a35f867bb48c7de603c58389b3e85d1ee" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformWrongColorSpaceError</scope><name>ColorTransformWrongColorSpaceError</name></member>
+      <member refid="classdicomhero_1_1_color_transform_wrong_color_space_error_1a2b172914b831123f93f83f0bcf279bbe" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformWrongColorSpaceError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_color_transform_error_1ae6e885a23a544a838cbb7b70f0b0c4d2" prot="public" virt="non-virtual" ambiguityscope="dicomhero::ColorTransformError::"><scope>dicomhero::ColorTransformWrongColorSpaceError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_transform_error_1a21afa7b157385103baf786b1781bb1d7" prot="public" virt="non-virtual" ambiguityscope="dicomhero::TransformError::"><scope>dicomhero::ColorTransformWrongColorSpaceError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_transform_error_1ab09af38e1f790b059c8753486d086a04" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformWrongColorSpaceError</scope><name>TransformError</name></member>
+      <member refid="classdicomhero_1_1_transform_error_1a17e27567b75da6d3fb1795c96c9f486c" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformWrongColorSpaceError</scope><name>TransformError</name></member>
+      <member refid="classdicomhero_1_1_color_transform_error_1a9a0999af47ac474c4451087f5a05a412" prot="public" virt="virtual"><scope>dicomhero::ColorTransformWrongColorSpaceError</scope><name>~ColorTransformError</name></member>
+      <member refid="classdicomhero_1_1_color_transform_wrong_color_space_error_1a8a87dc5b558f9fbc336ff4192dd7991b" prot="public" virt="virtual"><scope>dicomhero::ColorTransformWrongColorSpaceError</scope><name>~ColorTransformWrongColorSpaceError</name></member>
+      <member refid="classdicomhero_1_1_transform_error_1a6d990b96293194cd521500a6fde9d89d" prot="public" virt="virtual"><scope>dicomhero::ColorTransformWrongColorSpaceError</scope><name>~TransformError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

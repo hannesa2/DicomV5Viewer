@@ -1,0 +1,524 @@
+<?xml version="1.0"?>
+<!--
+Schema used to build XML documents containing a list of risks & requirements and
+ their relationship.
+ 
+-->
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:annotation>
+        <xs:documentation>
+            This schema specifies the relationship between risks and requirements of a
+            project.
+            
+            Each requirement may introduce new risks, and each risk may be mitigated by
+             new requirements.
+        </xs:documentation>
+    </xs:annotation>
+
+    <!--
+    This is the root element of the flowingmail risks & requirements XML document
+    It specifies the project name and contains a sequence of requirements & risks.
+    -->
+
+    <xs:element name="project">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title" type="xs:string" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            The title of the project.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="author" type="xs:string" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            The author of the project.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            The description of the project.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+
+                <xs:element ref="repositories" minOccurs="0" maxOccurs="1"/>
+
+                <xs:element ref="categories" minOccurs="0" maxOccurs="1"/>
+
+                <xs:element ref="requirements" minOccurs="0" maxOccurs="1"/>
+
+                <xs:element ref="risks" minOccurs="0" maxOccurs="1"/>
+
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required">
+                <xs:annotation>
+                    <xs:documentation>
+                        An unique ID for the project.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+
+
+        <xs:key name="requirementKey">
+            <xs:selector xpath="requirement"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+        <xs:keyref name="requirementRef" refer="requirementKey">
+            <xs:selector xpath="risk/causedBy/causeRequirement"/>
+            <xs:field xpath="@idref"/>
+        </xs:keyref>
+        <xs:keyref name="parentRequirementRef" refer="requirementKey">
+            <xs:selector xpath="requirement/introducedBy/parentRequirement"/>
+            <xs:field xpath="@idref"/>
+        </xs:keyref>
+
+        <xs:key name="riskKey">
+            <xs:selector xpath="risk"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+        <xs:keyref name="riskRef" refer="riskKey">
+            <xs:selector xpath="requirement/mitigates/mitigatedRisk"/>
+            <xs:field xpath="@idref"/>
+        </xs:keyref>
+
+        <xs:key name="categoryKey">
+            <xs:selector xpath="categories/category"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+        <xs:keyref name="requirementCategoryRef" refer="categoryKey">
+            <xs:selector xpath="requirement"/>
+            <xs:field xpath="@categoryIdref"/>
+        </xs:keyref>
+        <xs:keyref name="riskCategoryRef" refer="categoryKey">
+            <xs:selector xpath="risk"/>
+            <xs:field xpath="@categoryIdref"/>
+        </xs:keyref>
+
+    </xs:element>
+
+    <xs:element name="repositories">
+        <xs:annotation>
+            <xs:documentation>
+                Contains a list of repositories that contain the implementation of the
+                project.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="repository" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>
+                            A repository that contain the implementation of one or more requirements.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="url" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The url of the repository.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID" use="required">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    An unique ID that identifies the repository.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:element>
+
+
+    <xs:element name="categories">
+        <xs:annotation>
+            <xs:documentation>
+                Contains a list of categories used to reference groups of
+                risks and/or requirements.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="category" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>
+                            A category that groups a collection of risks and/or requirements.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The title of the category.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="description" type="xs:string" minOccurs="0"
+                                maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The description of the category.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="notes" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="priority" type="xs:nonNegativeInteger" minOccurs="0"
+                                        maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The priority of the category: 0=useless, 100=very important
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID" use="required">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    An unique ID that identifies the category.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:element>
+
+
+    <xs:element name="requirements">
+        <xs:annotation>
+            <xs:documentation>
+                Contains all the requirements.
+            </xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="requirement" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Specifies a requirement for the project.
+                            A requirement may be introduced to mitigate a risk and may also introduce new risks.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <xs:element name="mitigates" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Contains a list of risks that are mitigated by the requirement.
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="mitigatedRisk" minOccurs="0"
+                                            maxOccurs="unbounded">
+                                            <xs:annotation>
+                                                <xs:documentation>
+                                                    Specifies a risk mitigated by the requirement.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="riskReduction" minOccurs="1"
+                                                  maxOccurs="1" type="xs:nonNegativeInteger">
+                                                  <xs:annotation>
+                                                  <xs:documentation>
+                                                                The percentage of the risk reduction: 0 means that the requirement doesn't mitigate
+                                                                the risk at all, 100 means that the requirement completely removes the risk.
+                                                            </xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:element>
+                                                  <xs:element name="rationale" type="xs:string">
+                                                  <xs:annotation>
+                                                  <xs:documentation>Rationale behind the risk reduction factor.</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="idref" type="xs:IDREF"
+                                                  use="required">
+                                                  <xs:annotation>
+                                                  <xs:documentation>
+                                                            The ID of the risk being mitigated by the requirement.
+                                                        </xs:documentation>
+                                                  </xs:annotation>
+                                                </xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="introducedBy" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Contains a list of requirements that cause the existence of this requirement.
+                                        For instance, the requirement "The user can save the document to disk" may
+                                        introduce the requirement "The user can select the folder where to save the document".
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="parentRequirement" minOccurs="0"
+                                            maxOccurs="unbounded">
+                                            <xs:annotation>
+                                                <xs:documentation>
+                                                    Specifies the requirement that caused the creation of this requirement.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:attribute name="idref" type="xs:IDREF"
+                                                  use="required">
+                                                  <xs:annotation>
+                                                  <xs:documentation>
+                                                            The ID of the requirement that caused the introduction of this requirement.
+                                                        </xs:documentation>
+                                                  </xs:annotation>
+                                                </xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="title" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The title of the requirement.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="description" type="xs:string" minOccurs="0"
+                                maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The description of the requirement.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="notes" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Notes about the requirement.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="priority" type="xs:nonNegativeInteger" minOccurs="1"
+                                maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The priority of the requirement: 0=useless, 100=very important
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="implementedIn" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        A list of commits that implement the requirement.
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="commit" type="xs:string" minOccurs="0"
+                                            maxOccurs="unbounded">
+                                            <xs:annotation>
+                                                <xs:documentation>
+                                                    A commit where the requirement has been implemented.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="issueId" minOccurs="0" maxOccurs="1" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The ID of the requirement in the issue tracker.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID" use="required"/>
+                        <xs:attribute name="active" type="xs:boolean" use="optional" default="true"/>
+                        <xs:attribute name="categoryIdref" type="xs:IDREF" use="required"/>
+
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="risks">
+        <xs:annotation>
+            <xs:documentation>
+                Contains all the risks.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="risk" maxOccurs="unbounded" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Represents a risk. A risk may be introduced by one or more requirements and may be mitigated by one or
+                            more requirements.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="causedBy" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        A list of one or more references to the requirements that introduced this risk.
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="causedByRequirement" minOccurs="0"
+                                            maxOccurs="unbounded">
+                                            <xs:annotation>
+                                                <xs:documentation>
+                                                    Contains a reference to the requirement that introduced this risk.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:attribute name="idref" type="xs:IDREF"
+                                                  use="required">
+                                                  <xs:annotation>
+                                                  <xs:documentation>
+                                                            The ID of the requirement that introduced this risk.
+                                                        </xs:documentation>
+                                                  </xs:annotation>
+                                                </xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="title" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The title of the risk.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="description" type="xs:string" minOccurs="0"
+                                maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The description of the risk.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="likelihood">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="factor" minOccurs="1" maxOccurs="1"
+                                            type="xs:nonNegativeInteger">
+                                            <xs:annotation>
+                                                <xs:documentation>
+                                        The likelihood that this risk will appear: 0=none 100=for sure will happen.
+                                    </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="rationale" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation>Rationale behind the likelihood factor.</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="severity">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="factor" minOccurs="1" maxOccurs="1"
+                                            type="xs:nonNegativeInteger">
+                                            <xs:annotation>
+                                                <xs:documentation>
+                                        The severity of the risk: 0=no harm 100=maximum severity.
+                                    </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="rationale" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation>Rationale behind the severity factor.</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="issueId" minOccurs="0" maxOccurs="1" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The ID of the risk in the issue tracker.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="mitigation" minOccurs="0" maxOccurs="1"
+                                type="xs:nonNegativeInteger">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        How much this risk is being mitigated in theory. This value is calculated by the
+                                        risk analysis tools according to the mitigating requirements (also the non implemented
+                                        ones).
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="implementedMitigation" minOccurs="0" maxOccurs="1"
+                                type="xs:nonNegativeInteger">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        How much this risk is being mitigated in practice. This value is calculated by the
+                                        risk analysis tools according to the mitigating requirements that have been already
+                                        implemented.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="notes" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Notes about the risk.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID" use="required">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    An unique ID for the risk.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                        <xs:attribute name="categoryIdref" type="xs:IDREF" use="optional">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    The ID of the category in which the risk belongs.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+
+                    </xs:complexType>
+
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+
+</xs:schema>

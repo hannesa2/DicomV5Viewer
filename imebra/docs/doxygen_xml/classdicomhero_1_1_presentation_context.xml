@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_presentation_context" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::PresentationContext</compoundname>
+    <includes local="no">acse.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdicomhero_1_1_presentation_context_1aff0e37ee6b4558a451c2f01b066d1522" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; implementation::presentationContext &gt;</type>
+        <definition>std::shared_ptr&lt;implementation::presentationContext&gt; dicomhero::PresentationContext::m_pPresentationContext</definition>
+        <argsstring></argsstring>
+        <name>m_pPresentationContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="106" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_presentation_context_1a55457f1aa92a96af035a1139f876393d" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::PresentationContext::PresentationContext</definition>
+        <argsstring>(const std::string &amp;abstractSyntax)</argsstring>
+        <name>PresentationContext</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>abstractSyntax</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The SCU will act as SCU and the SCP will act as SCP when using this presentation context. To specify the roles of the SCU and the SCP use the other constructor which includes the roles parameters.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>abstractSyntax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the abstract syntax described by this presentation context </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="66" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_presentation_context_1ab48400e666e0ffc658d6015775a466b7" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::PresentationContext::PresentationContext</definition>
+        <argsstring>(const std::string &amp;abstractSyntax, bool bSCURole, bool bSCPRole)</argsstring>
+        <name>PresentationContext</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>abstractSyntax</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bSCURole</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bSCPRole</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>abstractSyntax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the abstract syntax described by this presentation context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bSCURole</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true then the SCU will act as an SCU. The SCU and SCP can be both an SCU and an SCP for the same abstract syntax </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bSCPRole</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true then the SCU will act as an SCP The SCU and SCP can be both an SCU and an SCP for the same abstract syntax </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="81" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_presentation_context_1a717687a98c8c52bb1590ed8fdb302989" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::PresentationContext::PresentationContext</definition>
+        <argsstring>(const PresentationContext &amp;source)</argsstring>
+        <name>PresentationContext</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_presentation_context" kindref="compound">PresentationContext</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source presentation context </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="89" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_presentation_context_1af26cd4a81c14cff3c719fc4bf22f313b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_presentation_context" kindref="compound">PresentationContext</ref> &amp;</type>
+        <definition>PresentationContext&amp; dicomhero::PresentationContext::operator=</definition>
+        <argsstring>(const PresentationContext &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_presentation_context" kindref="compound">PresentationContext</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="91" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_presentation_context_1a4ffe022b735ae95c9df81d15ba6a8e2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::PresentationContext::~PresentationContext</definition>
+        <argsstring>()</argsstring>
+        <name>~PresentationContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="93" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_presentation_context_1ae89719ae0968990c4f7a344d64572099" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::PresentationContext::addTransferSyntax</definition>
+        <argsstring>(const std::string &amp;transferSyntax)</argsstring>
+        <name>addTransferSyntax</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>transferSyntax</declname>
+        </param>
+        <briefdescription>
+<para>Add a supported transfer syntax to the presentation context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>transferSyntax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the transfer syntax to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="101" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_presentation_context_1ae4c3e86922d9263eb4952c8d892c129c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::shared_ptr&lt; implementation::presentationContext &gt; &amp;</type>
+        <definition>const std::shared_ptr&lt;implementation::presentationContext&gt;&amp; getPresentationContextImplementation</definition>
+        <argsstring>(const PresentationContext &amp;message)</argsstring>
+        <name>getPresentationContextImplementation</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_presentation_context" kindref="compound">PresentationContext</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="105" column="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A presentation context defines which transfer syntaxes are supported for a an abstract syntax. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Add the <ref refid="classdicomhero_1_1_presentation_context" kindref="compound">PresentationContext</ref> to the <ref refid="classdicomhero_1_1_presentation_contexts" kindref="compound">PresentationContexts</ref> list to build a list of <ref refid="classdicomhero_1_1_presentation_context" kindref="compound">PresentationContext</ref> objects that can be managed by the client application. </para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="52" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" bodystart="53" bodyend="108"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_presentation_context_1ae89719ae0968990c4f7a344d64572099" prot="public" virt="non-virtual"><scope>dicomhero::PresentationContext</scope><name>addTransferSyntax</name></member>
+      <member refid="classdicomhero_1_1_presentation_context_1ae4c3e86922d9263eb4952c8d892c129c" prot="private" virt="non-virtual"><scope>dicomhero::PresentationContext</scope><name>getPresentationContextImplementation</name></member>
+      <member refid="classdicomhero_1_1_presentation_context_1aff0e37ee6b4558a451c2f01b066d1522" prot="private" virt="non-virtual"><scope>dicomhero::PresentationContext</scope><name>m_pPresentationContext</name></member>
+      <member refid="classdicomhero_1_1_presentation_context_1af26cd4a81c14cff3c719fc4bf22f313b" prot="public" virt="non-virtual"><scope>dicomhero::PresentationContext</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_presentation_context_1a55457f1aa92a96af035a1139f876393d" prot="public" virt="non-virtual"><scope>dicomhero::PresentationContext</scope><name>PresentationContext</name></member>
+      <member refid="classdicomhero_1_1_presentation_context_1ab48400e666e0ffc658d6015775a466b7" prot="public" virt="non-virtual"><scope>dicomhero::PresentationContext</scope><name>PresentationContext</name></member>
+      <member refid="classdicomhero_1_1_presentation_context_1a717687a98c8c52bb1590ed8fdb302989" prot="public" virt="non-virtual"><scope>dicomhero::PresentationContext</scope><name>PresentationContext</name></member>
+      <member refid="classdicomhero_1_1_presentation_context_1a4ffe022b735ae95c9df81d15ba6a8e2e" prot="public" virt="virtual"><scope>dicomhero::PresentationContext</scope><name>~PresentationContext</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

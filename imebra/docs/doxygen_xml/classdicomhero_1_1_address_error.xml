@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_address_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::AddressError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::runtime_error</basecompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_address_no_name_error" prot="public" virt="non-virtual">dicomhero::AddressNoNameError</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_address_service_not_supported_error" prot="public" virt="non-virtual">dicomhero::AddressServiceNotSupportedError</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_address_try_again_error" prot="public" virt="non-virtual">dicomhero::AddressTryAgainError</derivedcompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_address_error_1a765d7d16e06c97c98f39103299ea883e" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AddressError::AddressError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>AddressError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="349" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_address_error_1a8303e442b718b6fc8b07d79a4a151e5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AddressError::AddressError</definition>
+        <argsstring>(const AddressError &amp;source)</argsstring>
+        <name>AddressError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_address_error" kindref="compound">AddressError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="351" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_address_error_1ac8afb100c11cafb40f3a23a4f124ca5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_address_error" kindref="compound">AddressError</ref> &amp;</type>
+        <definition>AddressError&amp; dicomhero::AddressError::operator=</definition>
+        <argsstring>(const AddressError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_address_error" kindref="compound">AddressError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="353" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_address_error_1aee964f64a4bf302306bb4833e4c1db2a" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::AddressError::~AddressError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~AddressError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="355" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class for the exceptions thrown by <ref refid="classdicomhero_1_1_t_c_p_address" kindref="compound">TCPAddress</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>dicomhero::AddressTryAgainError</label>
+        <link refid="classdicomhero_1_1_address_try_again_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dicomhero::AddressServiceNotSupportedError</label>
+        <link refid="classdicomhero_1_1_address_service_not_supported_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dicomhero::AddressError</label>
+        <link refid="classdicomhero_1_1_address_error"/>
+      </node>
+      <node id="2">
+        <label>dicomhero::AddressNoNameError</label>
+        <link refid="classdicomhero_1_1_address_no_name_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="341" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="342" bodyend="356"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_address_error_1a765d7d16e06c97c98f39103299ea883e" prot="public" virt="non-virtual"><scope>dicomhero::AddressError</scope><name>AddressError</name></member>
+      <member refid="classdicomhero_1_1_address_error_1a8303e442b718b6fc8b07d79a4a151e5e" prot="public" virt="non-virtual"><scope>dicomhero::AddressError</scope><name>AddressError</name></member>
+      <member refid="classdicomhero_1_1_address_error_1ac8afb100c11cafb40f3a23a4f124ca5b" prot="public" virt="non-virtual"><scope>dicomhero::AddressError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_address_error_1aee964f64a4bf302306bb4833e4c1db2a" prot="public" virt="virtual"><scope>dicomhero::AddressError</scope><name>~AddressError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

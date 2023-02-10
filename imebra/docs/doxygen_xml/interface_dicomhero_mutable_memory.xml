@@ -1,0 +1,444 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_mutable_memory" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroMutableMemory</compoundname>
+    <basecompoundref refid="interface_dicomhero_memory" prot="public" virt="non-virtual">DicomheroMemory</basecompoundref>
+    <includes local="no">dicomhero_readWriteMemory.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_mutable_memory_1a4ec7f2ced6aca45c6a662265c04c5e67" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroMutableMemory::initWithDicomheroMutableMemory:</definition>
+        <argsstring>(void *parameter_MutableMemory)</argsstring>
+        <name>initWithDicomheroMutableMemory:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_MutableMemory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readWriteMemory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_mutable_memory_1af36a49aa6a64ad177f5b4581b61fa754" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroMutableMemory::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <reimplements refid="interface_dicomhero_memory_1ac00cf6ca27290d246b21888a6c3446d2">init</reimplements>
+        <briefdescription>
+<para>Construct an empty buffer of memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The memory can be resized later with resize(). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readWriteMemory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_mutable_memory_1a324768a0bb8b75ca143cc061b782d573" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroMutableMemory::initWithSize:</definition>
+        <argsstring>(unsigned int size)</argsstring>
+        <name>initWithSize:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Construct a buffer of memory of the specified size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The memory can be resized later with resize().</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the initial memory&apos;s size, in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readWriteMemory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_mutable_memory_1a4406d1a12fbb329eae208c24728aaec8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroMutableMemory::initWithMemory:</definition>
+        <argsstring>(DicomheroMemory *source)</argsstring>
+        <name>initWithMemory:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_memory" kindref="compound">DicomheroMemory</ref> *</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Construct a buffer of memory and copy the specified content into it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object containing the initial memory&apos;s content </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readWriteMemory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_mutable_memory_1aa028be3f7d5e64ec00eae0baaa289f03" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroMutableMemory::initWithData:</definition>
+        <argsstring>(NSData *pSource)</argsstring>
+        <name>initWithData:</name>
+        <reimplements refid="interface_dicomhero_memory_1ae84feeec37f63bbf348d9a8d3bfde17c">initWithData:</reimplements>
+        <param>
+          <type>NSData *</type>
+          <declname>pSource</declname>
+        </param>
+        <briefdescription>
+<para>Construct a buffer of memory and copy the specified content into it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object containing the initial memory&apos;s content </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readWriteMemory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_mutable_memory_1a3496cd94c91435b7c3190f7d8f676fbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroMutableMemory::copyFrom:error:</definition>
+        <argsstring>(DicomheroMemory *source,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>copyFrom:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_memory" kindref="compound">DicomheroMemory</ref> *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Copy the content from another memory object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the source memory object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readWriteMemory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_mutable_memory_1a789d747ef465b5072ab92840ebcc6be5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroMutableMemory::clear:</definition>
+        <argsstring>((swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>clear:</name>
+        <param>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Resize the memory to zero bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readWriteMemory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_mutable_memory_1a9360bbdfbc9343306bc49ede8d8841f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroMutableMemory::resize:error:</definition>
+        <argsstring>(unsigned int newSize,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>resize:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>newSize</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Resize the memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new memory size, in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readWriteMemory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_mutable_memory_1ae1f12bd1501cea284297ac43d1ee7244" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DicomheroMutableMemory::reserve</definition>
+        <argsstring>(size_t reserveSize)</argsstring>
+        <name>reserve</name>
+        <param>
+          <type>size_t</type>
+          <declname>reserveSize</declname>
+        </param>
+        <briefdescription>
+<para>Reserve the specified amount of bytes, without changing the memory size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reserveSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of bytes to reserve </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readWriteMemory.h" line="96" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_mutable_memory_1a16b74c2ed3e4a4a4a3f31fcc8c2f52cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroMutableMemory::reserve:error:</definition>
+        <argsstring>(unsigned int reserveSize,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>reserve:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>reserveSize</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readWriteMemory.h" line="96" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_mutable_memory_1a2ae7888ff336111cc4001ceab9acdde8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroMutableMemory::assign:error:</definition>
+        <argsstring>(NSData *pSource,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>assign:error:</name>
+        <param>
+          <type>NSData *</type>
+          <declname>pSource</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Copy the content of the specified buffer into the ReadWriteMemory object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to the source memory buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readWriteMemory.h" line="96" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_mutable_memory_1a92ae9b13411bedcf422ee09cdc91cc0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroMutableMemory::assignRegion:offset:error:</definition>
+        <argsstring>(NSData *pSource,[offset] unsigned int destinationOffset,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>assignRegion:offset:error:</name>
+        <param>
+          <type>NSData *</type>
+          <declname>pSource</declname>
+        </param>
+        <param>
+          <attributes>[offset]</attributes>
+          <type>unsigned int</type>
+          <declname>destinationOffset</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Copy the content of the specified buffer into a region of the ReadWriteMemory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The memory size remains unchanged.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to the source memory buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destinationOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the offset into the ReadWriteMemory at which the data must be copied </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readWriteMemory.h" line="96" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Manages a writable buffer of memory. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The buffer of memory is usually associated with a tag buffer content.</para>
+<para>The memory used by ImebraReadMemory and <ref refid="interface_dicomhero_mutable_memory" kindref="compound">DicomheroMutableMemory</ref> is managed by DicomheroMemoryPool. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DicomheroMutableMemory</label>
+        <link refid="interface_dicomhero_mutable_memory"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroMemory</label>
+        <link refid="interface_dicomhero_memory"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DicomheroMutableMemory</label>
+        <link refid="interface_dicomhero_mutable_memory"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroMemory</label>
+        <link refid="interface_dicomhero_memory"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readWriteMemory.h" line="29" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readWriteMemory.h" bodystart="30" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_mutable_memory_1a2ae7888ff336111cc4001ceab9acdde8" prot="public" virt="virtual"><scope>DicomheroMutableMemory</scope><name>assign:error:</name></member>
+      <member refid="interface_dicomhero_mutable_memory_1a92ae9b13411bedcf422ee09cdc91cc0f" prot="public" virt="virtual"><scope>DicomheroMutableMemory</scope><name>assignRegion:offset:error:</name></member>
+      <member refid="interface_dicomhero_mutable_memory_1a789d747ef465b5072ab92840ebcc6be5" prot="public" virt="virtual"><scope>DicomheroMutableMemory</scope><name>clear:</name></member>
+      <member refid="interface_dicomhero_mutable_memory_1a3496cd94c91435b7c3190f7d8f676fbf" prot="public" virt="virtual"><scope>DicomheroMutableMemory</scope><name>copyFrom:error:</name></member>
+      <member refid="interface_dicomhero_memory_1a09c669eb3cee22348d4f3b5cd72e98c3" prot="public" virt="virtual"><scope>DicomheroMutableMemory</scope><name>data</name></member>
+      <member refid="interface_dicomhero_memory_1afac8922dc268f2646e31c8b0e0b7a8a9" prot="public" virt="virtual"><scope>DicomheroMutableMemory</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_memory_1a5b821f224720b874771ea49b6e6d0f06" prot="public" virt="non-virtual"><scope>DicomheroMutableMemory</scope><name>empty</name></member>
+      <member refid="interface_dicomhero_mutable_memory_1af36a49aa6a64ad177f5b4581b61fa754" prot="public" virt="virtual"><scope>DicomheroMutableMemory</scope><name>init</name></member>
+      <member refid="interface_dicomhero_mutable_memory_1aa028be3f7d5e64ec00eae0baaa289f03" prot="public" virt="virtual"><scope>DicomheroMutableMemory</scope><name>initWithData:</name></member>
+      <member refid="interface_dicomhero_memory_1ad449001d63b011e205b064e20be5d194" prot="public" virt="virtual"><scope>DicomheroMutableMemory</scope><name>initWithDicomheroMemory:</name></member>
+      <member refid="interface_dicomhero_mutable_memory_1a4ec7f2ced6aca45c6a662265c04c5e67" prot="public" virt="virtual"><scope>DicomheroMutableMemory</scope><name>initWithDicomheroMutableMemory:</name></member>
+      <member refid="interface_dicomhero_mutable_memory_1a4406d1a12fbb329eae208c24728aaec8" prot="public" virt="virtual"><scope>DicomheroMutableMemory</scope><name>initWithMemory:</name></member>
+      <member refid="interface_dicomhero_mutable_memory_1a324768a0bb8b75ca143cc061b782d573" prot="public" virt="virtual"><scope>DicomheroMutableMemory</scope><name>initWithSize:</name></member>
+      <member refid="interface_dicomhero_memory_1a653a971e7ed721dc4cb9ff571e7da46a" prot="public" virt="non-virtual"><scope>DicomheroMutableMemory</scope><name>m_Memory</name></member>
+      <member refid="interface_dicomhero_mutable_memory_1ae1f12bd1501cea284297ac43d1ee7244" prot="public" virt="non-virtual"><scope>DicomheroMutableMemory</scope><name>reserve</name></member>
+      <member refid="interface_dicomhero_mutable_memory_1a16b74c2ed3e4a4a4a3f31fcc8c2f52cd" prot="public" virt="virtual"><scope>DicomheroMutableMemory</scope><name>reserve:error:</name></member>
+      <member refid="interface_dicomhero_mutable_memory_1a9360bbdfbc9343306bc49ede8d8841f6" prot="public" virt="virtual"><scope>DicomheroMutableMemory</scope><name>resize:error:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

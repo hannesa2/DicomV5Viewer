@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_patient_name" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroPatientName</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_patient_name_1ac33e3eee4aa820d12de0acba5887b41d" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroPatientName::m_PatientName</definition>
+        <argsstring></argsstring>
+        <name>m_PatientName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_patientName.h" line="25" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_patientName.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_patient_name_1a844ef668b3797aae9740b9b3fdd0d45f" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroPatientName::alphabeticRepresentation</definition>
+        <argsstring></argsstring>
+        <name>alphabeticRepresentation</name>
+        <read></read>
+        <briefdescription>
+<para>The alphabetic representation of the Patient Name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_patientName.h" line="48" column="15" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_patientName.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_patient_name_1ade034e4709eba207d9a3ea77ec864cbd" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroPatientName::ideographicRepresentation</definition>
+        <argsstring></argsstring>
+        <name>ideographicRepresentation</name>
+        <read></read>
+        <briefdescription>
+<para>The ideographic representation of the Patient Name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_patientName.h" line="49" column="15" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_patientName.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_patient_name_1adab4d0e746f3f4858df70e6ce02404da" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroPatientName::phoneticRepresentation</definition>
+        <argsstring></argsstring>
+        <name>phoneticRepresentation</name>
+        <read></read>
+        <briefdescription>
+<para>The phonetic representation of the Patient Name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_patientName.h" line="50" column="15" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_patientName.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_patient_name_1a2f33d6fe0352ca7fd888e70d960d4aba" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroPatientName::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_patientName.h" line="25" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_patient_name_1a649d0b80c115ed3d891f9e5906c90c16" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroPatientName::initWithDicomheroPatientName:</definition>
+        <argsstring>(void *parameter_PatientName)</argsstring>
+        <name>initWithDicomheroPatientName:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_PatientName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_patientName.h" line="25" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_patient_name_1ae6b4dc6c98ba13a01f72abf4d0ad434a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroPatientName::initWithAlphabeticRepresentation:ideographicRepresentation:phoneticRepresentation:</definition>
+        <argsstring>(NSString *alphabeticRepresentation,[ideographicRepresentation] NSString *ideographicRepresentation,[phoneticRepresentation] NSString *phoneticRepresentation)</argsstring>
+        <name>initWithAlphabeticRepresentation:ideographicRepresentation:phoneticRepresentation:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>alphabeticRepresentation</declname>
+        </param>
+        <param>
+          <attributes>[ideographicRepresentation]</attributes>
+          <type>NSString *</type>
+          <declname>ideographicRepresentation</declname>
+        </param>
+        <param>
+          <attributes>[phoneticRepresentation]</attributes>
+          <type>NSString *</type>
+          <declname>phoneticRepresentation</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize the PatientName structure with the specified values.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>alphabeticRepresentation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The alphabetic representation of the patient name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ideographicRepresentation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ideographic representation of the patient name. Can be left empty </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phoneticRepresentation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The phonetic representation of the patient name. Can be left empty </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_patientName.h" line="25" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_patientName.h" line="21" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_patientName.h" bodystart="23" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_patient_name_1a844ef668b3797aae9740b9b3fdd0d45f" prot="public" virt="non-virtual"><scope>DicomheroPatientName</scope><name>alphabeticRepresentation</name></member>
+      <member refid="interface_dicomhero_patient_name_1a2f33d6fe0352ca7fd888e70d960d4aba" prot="public" virt="virtual"><scope>DicomheroPatientName</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_patient_name_1ade034e4709eba207d9a3ea77ec864cbd" prot="public" virt="non-virtual"><scope>DicomheroPatientName</scope><name>ideographicRepresentation</name></member>
+      <member refid="interface_dicomhero_patient_name_1ae6b4dc6c98ba13a01f72abf4d0ad434a" prot="public" virt="virtual"><scope>DicomheroPatientName</scope><name>initWithAlphabeticRepresentation:ideographicRepresentation:phoneticRepresentation:</name></member>
+      <member refid="interface_dicomhero_patient_name_1a649d0b80c115ed3d891f9e5906c90c16" prot="public" virt="virtual"><scope>DicomheroPatientName</scope><name>initWithDicomheroPatientName:</name></member>
+      <member refid="interface_dicomhero_patient_name_1ac33e3eee4aa820d12de0acba5887b41d" prot="public" virt="non-virtual"><scope>DicomheroPatientName</scope><name>m_PatientName</name></member>
+      <member refid="interface_dicomhero_patient_name_1adab4d0e746f3f4858df70e6ce02404da" prot="public" virt="non-virtual"><scope>DicomheroPatientName</scope><name>phoneticRepresentation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

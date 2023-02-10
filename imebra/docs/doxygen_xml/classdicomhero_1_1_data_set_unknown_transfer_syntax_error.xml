@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_data_set_unknown_transfer_syntax_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::DataSetUnknownTransferSyntaxError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_data_set_error" prot="public" virt="non-virtual">dicomhero::DataSetError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_data_set_unknown_transfer_syntax_error_1aedc01f41b8ffa18a854c8872061caf94" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DataSetUnknownTransferSyntaxError::DataSetUnknownTransferSyntaxError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>DataSetUnknownTransferSyntaxError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="853" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_data_set_unknown_transfer_syntax_error_1a5b0e859fbd5ba048a58029835c8ae2ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DataSetUnknownTransferSyntaxError::DataSetUnknownTransferSyntaxError</definition>
+        <argsstring>(const DataSetUnknownTransferSyntaxError &amp;source)</argsstring>
+        <name>DataSetUnknownTransferSyntaxError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_data_set_unknown_transfer_syntax_error" kindref="compound">DataSetUnknownTransferSyntaxError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="855" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_data_set_unknown_transfer_syntax_error_1a8436b5fd162f68a1fa2dbfd51f5d05cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_data_set_unknown_transfer_syntax_error" kindref="compound">DataSetUnknownTransferSyntaxError</ref> &amp;</type>
+        <definition>DataSetUnknownTransferSyntaxError&amp; dicomhero::DataSetUnknownTransferSyntaxError::operator=</definition>
+        <argsstring>(const DataSetUnknownTransferSyntaxError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_data_set_unknown_transfer_syntax_error" kindref="compound">DataSetUnknownTransferSyntaxError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="857" column="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_data_set_unknown_transfer_syntax_error_1a2fd763320e8bc3aef6ae80a14810bf52" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::DataSetUnknownTransferSyntaxError::~DataSetUnknownTransferSyntaxError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~DataSetUnknownTransferSyntaxError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="859" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This exception is thrown when an unknown transfer syntax is being used while reading or writing a stream. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dicomhero::DataSetError</label>
+        <link refid="classdicomhero_1_1_data_set_error"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::DataSetUnknownTransferSyntaxError</label>
+        <link refid="classdicomhero_1_1_data_set_unknown_transfer_syntax_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dicomhero::DataSetError</label>
+        <link refid="classdicomhero_1_1_data_set_error"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::DataSetUnknownTransferSyntaxError</label>
+        <link refid="classdicomhero_1_1_data_set_unknown_transfer_syntax_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="845" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="846" bodyend="860"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_data_set_error_1a3f9440d04c8321299c38bf9a777e38c3" prot="public" virt="non-virtual"><scope>dicomhero::DataSetUnknownTransferSyntaxError</scope><name>DataSetError</name></member>
+      <member refid="classdicomhero_1_1_data_set_error_1aad232fafaa597cb682694cdcd6fc9386" prot="public" virt="non-virtual"><scope>dicomhero::DataSetUnknownTransferSyntaxError</scope><name>DataSetError</name></member>
+      <member refid="classdicomhero_1_1_data_set_unknown_transfer_syntax_error_1aedc01f41b8ffa18a854c8872061caf94" prot="public" virt="non-virtual"><scope>dicomhero::DataSetUnknownTransferSyntaxError</scope><name>DataSetUnknownTransferSyntaxError</name></member>
+      <member refid="classdicomhero_1_1_data_set_unknown_transfer_syntax_error_1a5b0e859fbd5ba048a58029835c8ae2ab" prot="public" virt="non-virtual"><scope>dicomhero::DataSetUnknownTransferSyntaxError</scope><name>DataSetUnknownTransferSyntaxError</name></member>
+      <member refid="classdicomhero_1_1_data_set_unknown_transfer_syntax_error_1a8436b5fd162f68a1fa2dbfd51f5d05cf" prot="public" virt="non-virtual"><scope>dicomhero::DataSetUnknownTransferSyntaxError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_data_set_error_1ada61ee44f80e6c62ef611012b2448a80" prot="public" virt="non-virtual" ambiguityscope="dicomhero::DataSetError::"><scope>dicomhero::DataSetUnknownTransferSyntaxError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_data_set_error_1a8b0d3a41be2b5d810a76b3403919eb6d" prot="public" virt="virtual"><scope>dicomhero::DataSetUnknownTransferSyntaxError</scope><name>~DataSetError</name></member>
+      <member refid="classdicomhero_1_1_data_set_unknown_transfer_syntax_error_1a2fd763320e8bc3aef6ae80a14810bf52" prot="public" virt="virtual"><scope>dicomhero::DataSetUnknownTransferSyntaxError</scope><name>~DataSetUnknownTransferSyntaxError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

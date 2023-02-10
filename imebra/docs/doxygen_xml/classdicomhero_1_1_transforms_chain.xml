@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_transforms_chain" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::TransformsChain</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_transform" prot="public" virt="non-virtual">dicomhero::Transform</basecompoundref>
+    <includes local="no">transformsChain.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_transforms_chain_1af8f1270fc642743c3574c03e49cc220c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::TransformsChain::TransformsChain</definition>
+        <argsstring>()</argsstring>
+        <name>TransformsChain</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/transformsChain.h" line="54" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_transforms_chain_1a00fb5ad6a9d5f9da074c596e90afcb3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::TransformsChain::TransformsChain</definition>
+        <argsstring>(const TransformsChain &amp;source)</argsstring>
+        <name>TransformsChain</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_transforms_chain" kindref="compound">TransformsChain</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_transforms_chain" kindref="compound">TransformsChain</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/transformsChain.h" line="62" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_transforms_chain_1a689d325fcd5dffb99f433bdc01cd8571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_transforms_chain" kindref="compound">TransformsChain</ref> &amp;</type>
+        <definition>TransformsChain&amp; dicomhero::TransformsChain::operator=</definition>
+        <argsstring>(const TransformsChain &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_transforms_chain" kindref="compound">TransformsChain</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/transformsChain.h" line="64" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_transforms_chain_1a4f62989752deef929fcba5c0597698fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::TransformsChain::~TransformsChain</definition>
+        <argsstring>()</argsstring>
+        <name>~TransformsChain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/transformsChain.h" line="66" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_transforms_chain_1a60e4ffd003f7a9f8016e3e7fe7b48610" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::TransformsChain::addTransform</definition>
+        <argsstring>(const Transform &amp;transform)</argsstring>
+        <name>addTransform</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_transform" kindref="compound">Transform</ref> &amp;</type>
+          <declname>transform</declname>
+        </param>
+        <briefdescription>
+<para>Add a transform to the chain of transforms that will be applied to the input image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classdicomhero_1_1_transform" kindref="compound">Transform</ref> to add to the chain of transforms </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/transformsChain.h" line="74" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classdicomhero_1_1_transforms_chain" kindref="compound">TransformsChain</ref> applies a series of Transforms to the input image. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Transforms can be added to the chain by using <ref refid="classdicomhero_1_1_transforms_chain_1a60e4ffd003f7a9f8016e3e7fe7b48610" kindref="member">addTransform()</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dicomhero::Transform</label>
+        <link refid="classdicomhero_1_1_transform"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::TransformsChain</label>
+        <link refid="classdicomhero_1_1_transforms_chain"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dicomhero::Transform</label>
+        <link refid="classdicomhero_1_1_transform"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::TransformsChain</label>
+        <link refid="classdicomhero_1_1_transforms_chain"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/transformsChain.h" line="47" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/transformsChain.h" bodystart="48" bodyend="75"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_transforms_chain_1a60e4ffd003f7a9f8016e3e7fe7b48610" prot="public" virt="non-virtual"><scope>dicomhero::TransformsChain</scope><name>addTransform</name></member>
+      <member refid="classdicomhero_1_1_transform_1a98f9eaf07e09528a9cbb7de0b0603236" prot="public" virt="non-virtual"><scope>dicomhero::TransformsChain</scope><name>allocateOutputImage</name></member>
+      <member refid="classdicomhero_1_1_transform_1adfd81c2070af065ec0d797f6b83c06b6" prot="public" virt="non-virtual"><scope>dicomhero::TransformsChain</scope><name>isEmpty</name></member>
+      <member refid="classdicomhero_1_1_transforms_chain_1a689d325fcd5dffb99f433bdc01cd8571" prot="public" virt="non-virtual"><scope>dicomhero::TransformsChain</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_transform_1ade62af813980d1a890ff24b7288c3a69" prot="public" virt="non-virtual" ambiguityscope="dicomhero::Transform::"><scope>dicomhero::TransformsChain</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_transform_1a8fe6e274f0ab08fc9d5a64cf414d77ba" prot="public" virt="non-virtual"><scope>dicomhero::TransformsChain</scope><name>runTransform</name></member>
+      <member refid="classdicomhero_1_1_transform_1ac2b188c1e4b9e778a049ac8b7589f9fe" prot="public" virt="non-virtual"><scope>dicomhero::TransformsChain</scope><name>Transform</name></member>
+      <member refid="classdicomhero_1_1_transform_1a548cf8aa88ffe9a9c557ecc9df126e8b" prot="protected" virt="non-virtual"><scope>dicomhero::TransformsChain</scope><name>Transform</name></member>
+      <member refid="classdicomhero_1_1_transforms_chain_1af8f1270fc642743c3574c03e49cc220c" prot="public" virt="non-virtual"><scope>dicomhero::TransformsChain</scope><name>TransformsChain</name></member>
+      <member refid="classdicomhero_1_1_transforms_chain_1a00fb5ad6a9d5f9da074c596e90afcb3a" prot="public" virt="non-virtual"><scope>dicomhero::TransformsChain</scope><name>TransformsChain</name></member>
+      <member refid="classdicomhero_1_1_transform_1a8f43cf7cfef1f594dd35e0c4b1f1d8e0" prot="public" virt="virtual"><scope>dicomhero::TransformsChain</scope><name>~Transform</name></member>
+      <member refid="classdicomhero_1_1_transforms_chain_1a4f62989752deef929fcba5c0597698fe" prot="public" virt="virtual"><scope>dicomhero::TransformsChain</scope><name>~TransformsChain</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_data_set_error" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroDataSetError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSError</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_data_set_corrupted_offset_table_error" prot="public" virt="non-virtual">DicomheroDataSetCorruptedOffsetTableError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_data_set_different_format_error" prot="public" virt="non-virtual">DicomheroDataSetDifferentFormatError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_data_set_image_doesnt_exist_error" prot="public" virt="non-virtual">DicomheroDataSetImageDoesntExistError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_data_set_image_palette_color_is_read_only" prot="public" virt="non-virtual">DicomheroDataSetImagePaletteColorIsReadOnly</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_data_set_unknown_transfer_syntax_error" prot="public" virt="non-virtual">DicomheroDataSetUnknownTransferSyntaxError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_data_set_wrong_frame_error" prot="public" virt="non-virtual">DicomheroDataSetWrongFrameError</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_exceptions.h" line="125" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_exceptions.h" bodystart="126" bodyend="-1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

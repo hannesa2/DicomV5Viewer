@@ -1,0 +1,500 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_stream_reader" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::StreamReader</compoundname>
+    <includes local="no">streamReader.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_stream_reader_1a23c0ade62d1edf18d9097d5ffda4417f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class CodecFactory</definition>
+        <argsstring></argsstring>
+        <name>CodecFactory</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_codec_factory" kindref="compound">CodecFactory</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="54" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_stream_reader_1afc8c1b0e7f1fedf25715bd33b74eb56c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Tag</definition>
+        <argsstring></argsstring>
+        <name>Tag</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="55" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_stream_reader_1ac9e4ca3c0328ebf261d76d2682c5e08a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class AssociationSCU</definition>
+        <argsstring></argsstring>
+        <name>AssociationSCU</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_association_s_c_u" kindref="compound">AssociationSCU</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="56" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_stream_reader_1a2fcfe6ae31ee4e920f8cdbfb7dfce204" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class AssociationSCP</definition>
+        <argsstring></argsstring>
+        <name>AssociationSCP</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_association_s_c_p" kindref="compound">AssociationSCP</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="57" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_stream_reader_1aef648af6c56fa8ee0738c93629e725dc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class DataSet</definition>
+        <argsstring></argsstring>
+        <name>DataSet</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="58" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_stream_reader_1a732336c766ea94f189f09507e01d8bb3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::shared_ptr&lt; implementation::streamReader &gt; &amp;</type>
+        <definition>const std::shared_ptr&lt;implementation::streamReader&gt;&amp; getStreamReaderImplementation</definition>
+        <argsstring>(const StreamReader &amp;streamReader)</argsstring>
+        <name>getStreamReaderImplementation</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> &amp;</type>
+          <declname>streamReader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="160" column="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdicomhero_1_1_stream_reader_1ac0f663aa8ab1a863d31793c542ec98e7" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; implementation::streamReader &gt;</type>
+        <definition>std::shared_ptr&lt;implementation::streamReader&gt; dicomhero::StreamReader::m_pReader</definition>
+        <argsstring></argsstring>
+        <name>m_pReader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="161" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_stream_reader_1a52dedfbb6b867da402b6f351955fff8c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::StreamReader::StreamReader</definition>
+        <argsstring>(const BaseStreamInput &amp;stream)</argsstring>
+        <name>StreamReader</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_base_stream_input" kindref="compound">BaseStreamInput</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classdicomhero_1_1_base_stream_input" kindref="compound">BaseStreamInput</ref> object from which the <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> will read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="67" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_reader_1a662397a783f006d35e1985d396c9e242" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::StreamReader::StreamReader</definition>
+        <argsstring>(const BaseStreamInput &amp;stream, size_t virtualStart, size_t virtualLength)</argsstring>
+        <name>StreamReader</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_base_stream_input" kindref="compound">BaseStreamInput</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>virtualStart</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>virtualLength</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This version of the constructor limits the portion of the stream that the <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> will see.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classdicomhero_1_1_base_stream_input" kindref="compound">BaseStreamInput</ref> object from which the <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> will read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>virtualStart</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first visible byte of the managed stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>virtualLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of visible bytes in the managed stream </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="80" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_reader_1ab44dce8cdf7a28cecc11847f41c26908" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::StreamReader::StreamReader</definition>
+        <argsstring>(const StreamReader &amp;source)</argsstring>
+        <name>StreamReader</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="88" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_reader_1a087e7c302bb2d9d3a374d9056c09f905" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> &amp;</type>
+        <definition>StreamReader&amp; dicomhero::StreamReader::operator=</definition>
+        <argsstring>(const StreamReader &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="90" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_reader_1a1a18fd6804d94f5640b835f0baa04049" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref></type>
+        <definition>StreamReader dicomhero::StreamReader::getVirtualStream</definition>
+        <argsstring>(size_t virtualStreamLength)</argsstring>
+        <name>getVirtualStream</name>
+        <param>
+          <type>size_t</type>
+          <declname>virtualStreamLength</declname>
+        </param>
+        <briefdescription>
+<para>Returns a virtual stream that has a restricted view into the stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The reading position of this stream advances to the end of the virtual stream.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>virtualStreamLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of bytes that the virtual stream can read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a virtual stream that sees a limited number of bytes of this stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="105" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_reader_1a1055cb85af3ff1190194d4bce61a6970" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::StreamReader::read</definition>
+        <argsstring>(char *destination, size_t destinationSize)</argsstring>
+        <name>read</name>
+        <param>
+          <type>char *</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>destinationSize</declname>
+        </param>
+        <briefdescription>
+<para>Read data from the stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>destination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the destination buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destinationSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes to read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="114" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_reader_1aa270add9a01e9ce06f3f511d7a033bef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t dicomhero::StreamReader::readSome</definition>
+        <argsstring>(char *destination, size_t destinationSize)</argsstring>
+        <name>readSome</name>
+        <param>
+          <type>char *</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>destinationSize</declname>
+        </param>
+        <briefdescription>
+<para>Read data from the stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>destination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the destination buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destinationSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum number of bytes to read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the number of bytes that have been read </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="124" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_reader_1af24e8c204bb95228a2d3fc59cb30bd45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_memory" kindref="compound">Memory</ref></type>
+        <definition>Memory dicomhero::StreamReader::read</definition>
+        <argsstring>(size_t readSize)</argsstring>
+        <name>read</name>
+        <param>
+          <type>size_t</type>
+          <declname>readSize</declname>
+        </param>
+        <briefdescription>
+<para>Read data from the stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>readSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes to read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>memory block containing the read data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="133" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_reader_1ac6778599e703b3f4396d4ff67dfa9c46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_memory" kindref="compound">Memory</ref></type>
+        <definition>Memory dicomhero::StreamReader::readSome</definition>
+        <argsstring>(size_t readSize)</argsstring>
+        <name>readSome</name>
+        <param>
+          <type>size_t</type>
+          <declname>readSize</declname>
+        </param>
+        <briefdescription>
+<para>Read data from the stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>readSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum number of bytes to read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>memory block containing the read data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="142" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_reader_1aeb8df499989c5152a9f500d2e0a324a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::StreamReader::terminate</definition>
+        <argsstring>()</argsstring>
+        <name>terminate</name>
+        <briefdescription>
+<para>Cause the controlled stream to throw <ref refid="classdicomhero_1_1_stream_closed_error" kindref="compound">StreamClosedError</ref> during the mext read operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This can be used to cause reading threads to terminate. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="151" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_reader_1abe4110010986b75fe5a2a37a520c70df" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::StreamReader::~StreamReader</definition>
+        <argsstring>()</argsstring>
+        <name>~StreamReader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="153" column="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdicomhero_1_1_stream_reader_1a07d767b0cda81d634319eaf16d41cbce" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::StreamReader::StreamReader</definition>
+        <argsstring>(const std::shared_ptr&lt; implementation::streamReader &gt; &amp;pReader)</argsstring>
+        <name>StreamReader</name>
+        <param>
+          <type>const std::shared_ptr&lt; implementation::streamReader &gt; &amp;</type>
+          <declname>pReader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="157" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> is used to read data from a <ref refid="classdicomhero_1_1_base_stream_input" kindref="compound">BaseStreamInput</ref> object. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> can be mapped to only a portion of the <ref refid="classdicomhero_1_1_base_stream_input" kindref="compound">BaseStreamInput</ref> it manages: for instance this is used by the Imebra classes to read Jpeg streams embedded into a DICOM stream.</para>
+<para><simplesect kind="warning"><para>The <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> object IS NOT THREAD-SAFE: however, several <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> objects from different threads can be connected to the same <ref refid="classdicomhero_1_1_base_stream_input" kindref="compound">BaseStreamInput</ref> object. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" line="51" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamReader.h" bodystart="52" bodyend="163"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_stream_reader_1a2fcfe6ae31ee4e920f8cdbfb7dfce204" prot="private" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>AssociationSCP</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1ac9e4ca3c0328ebf261d76d2682c5e08a" prot="private" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>AssociationSCU</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1a23c0ade62d1edf18d9097d5ffda4417f" prot="private" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>CodecFactory</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1aef648af6c56fa8ee0738c93629e725dc" prot="private" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>DataSet</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1a732336c766ea94f189f09507e01d8bb3" prot="private" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>getStreamReaderImplementation</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1a1a18fd6804d94f5640b835f0baa04049" prot="public" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>getVirtualStream</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1ac0f663aa8ab1a863d31793c542ec98e7" prot="private" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>m_pReader</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1a087e7c302bb2d9d3a374d9056c09f905" prot="public" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1a1055cb85af3ff1190194d4bce61a6970" prot="public" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>read</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1af24e8c204bb95228a2d3fc59cb30bd45" prot="public" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>read</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1aa270add9a01e9ce06f3f511d7a033bef" prot="public" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>readSome</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1ac6778599e703b3f4396d4ff67dfa9c46" prot="public" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>readSome</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1a52dedfbb6b867da402b6f351955fff8c" prot="public" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>StreamReader</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1a662397a783f006d35e1985d396c9e242" prot="public" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>StreamReader</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1ab44dce8cdf7a28cecc11847f41c26908" prot="public" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>StreamReader</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1a07d767b0cda81d634319eaf16d41cbce" prot="protected" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>StreamReader</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1afc8c1b0e7f1fedf25715bd33b74eb56c" prot="private" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>Tag</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1aeb8df499989c5152a9f500d2e0a324a2" prot="public" virt="non-virtual"><scope>dicomhero::StreamReader</scope><name>terminate</name></member>
+      <member refid="classdicomhero_1_1_stream_reader_1abe4110010986b75fe5a2a37a520c70df" prot="public" virt="virtual"><scope>dicomhero::StreamReader</scope><name>~StreamReader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

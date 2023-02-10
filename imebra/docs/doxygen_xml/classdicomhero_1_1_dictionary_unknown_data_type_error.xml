@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_dictionary_unknown_data_type_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::DictionaryUnknownDataTypeError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_dictionary_error" prot="public" virt="non-virtual">dicomhero::DictionaryError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_dictionary_unknown_data_type_error_1a618eb7bafa423781936a5af46d11ac7e" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DictionaryUnknownDataTypeError::DictionaryUnknownDataTypeError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>DictionaryUnknownDataTypeError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="481" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dictionary_unknown_data_type_error_1a1f97f278f445eeee9b4b9d1edf56f9f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DictionaryUnknownDataTypeError::DictionaryUnknownDataTypeError</definition>
+        <argsstring>(const DictionaryUnknownDataTypeError &amp;source)</argsstring>
+        <name>DictionaryUnknownDataTypeError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dictionary_unknown_data_type_error" kindref="compound">DictionaryUnknownDataTypeError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="483" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dictionary_unknown_data_type_error_1a74ae63577aca1d6d9979d54691a63c0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_dictionary_unknown_data_type_error" kindref="compound">DictionaryUnknownDataTypeError</ref> &amp;</type>
+        <definition>DictionaryUnknownDataTypeError&amp; dicomhero::DictionaryUnknownDataTypeError::operator=</definition>
+        <argsstring>(const DictionaryUnknownDataTypeError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dictionary_unknown_data_type_error" kindref="compound">DictionaryUnknownDataTypeError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="485" column="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dictionary_unknown_data_type_error_1ae35b00c6c69f2a5b196beab2b6c0b609" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::DictionaryUnknownDataTypeError::~DictionaryUnknownDataTypeError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~DictionaryUnknownDataTypeError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="487" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This exception is thrown by the <ref refid="classdicomhero_1_1_dicom_dictionary" kindref="compound">DicomDictionary</ref> when it must return information for a VR (data type) that the DICOM standard does not define. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dicomhero::DictionaryError</label>
+        <link refid="classdicomhero_1_1_dictionary_error"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::DictionaryUnknownDataTypeError</label>
+        <link refid="classdicomhero_1_1_dictionary_unknown_data_type_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dicomhero::DictionaryError</label>
+        <link refid="classdicomhero_1_1_dictionary_error"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::DictionaryUnknownDataTypeError</label>
+        <link refid="classdicomhero_1_1_dictionary_unknown_data_type_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="473" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="474" bodyend="488"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_dictionary_error_1a49a60b183bb569e0ced11cbd7880ed1e" prot="public" virt="non-virtual"><scope>dicomhero::DictionaryUnknownDataTypeError</scope><name>DictionaryError</name></member>
+      <member refid="classdicomhero_1_1_dictionary_error_1ad0b40b7740cccd6e054745916ab07ea9" prot="public" virt="non-virtual"><scope>dicomhero::DictionaryUnknownDataTypeError</scope><name>DictionaryError</name></member>
+      <member refid="classdicomhero_1_1_dictionary_unknown_data_type_error_1a618eb7bafa423781936a5af46d11ac7e" prot="public" virt="non-virtual"><scope>dicomhero::DictionaryUnknownDataTypeError</scope><name>DictionaryUnknownDataTypeError</name></member>
+      <member refid="classdicomhero_1_1_dictionary_unknown_data_type_error_1a1f97f278f445eeee9b4b9d1edf56f9f0" prot="public" virt="non-virtual"><scope>dicomhero::DictionaryUnknownDataTypeError</scope><name>DictionaryUnknownDataTypeError</name></member>
+      <member refid="classdicomhero_1_1_dictionary_unknown_data_type_error_1a74ae63577aca1d6d9979d54691a63c0a" prot="public" virt="non-virtual"><scope>dicomhero::DictionaryUnknownDataTypeError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_dictionary_error_1a3ed31db1241f58765b5f784125b5c4a5" prot="public" virt="non-virtual" ambiguityscope="dicomhero::DictionaryError::"><scope>dicomhero::DictionaryUnknownDataTypeError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_dictionary_error_1a989b61416901ba8d9ef1af0f9a3cb662" prot="public" virt="virtual"><scope>dicomhero::DictionaryUnknownDataTypeError</scope><name>~DictionaryError</name></member>
+      <member refid="classdicomhero_1_1_dictionary_unknown_data_type_error_1ae35b00c6c69f2a5b196beab2b6c0b609" prot="public" virt="virtual"><scope>dicomhero::DictionaryUnknownDataTypeError</scope><name>~DictionaryUnknownDataTypeError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

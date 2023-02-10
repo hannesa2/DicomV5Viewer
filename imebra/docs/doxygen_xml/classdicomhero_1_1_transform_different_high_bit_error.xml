@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_transform_different_high_bit_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::TransformDifferentHighBitError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_transform_error" prot="public" virt="non-virtual">dicomhero::TransformError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_transform_different_high_bit_error_1ae4628563265166c1b2f82cbf409d741e" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::TransformDifferentHighBitError::TransformDifferentHighBitError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>TransformDifferentHighBitError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1160" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_transform_different_high_bit_error_1aeabce7840ec387c591b72a06398241c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::TransformDifferentHighBitError::TransformDifferentHighBitError</definition>
+        <argsstring>(const TransformDifferentHighBitError &amp;source)</argsstring>
+        <name>TransformDifferentHighBitError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_transform_different_high_bit_error" kindref="compound">TransformDifferentHighBitError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1162" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_transform_different_high_bit_error_1a2b2c8140196215a2d144802cf73e2cd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_transform_different_high_bit_error" kindref="compound">TransformDifferentHighBitError</ref> &amp;</type>
+        <definition>TransformDifferentHighBitError&amp; dicomhero::TransformDifferentHighBitError::operator=</definition>
+        <argsstring>(const TransformDifferentHighBitError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_transform_different_high_bit_error" kindref="compound">TransformDifferentHighBitError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1164" column="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_transform_different_high_bit_error_1adf2abb75a274f6e1582f5465fef59427" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::TransformDifferentHighBitError::~TransformDifferentHighBitError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~TransformDifferentHighBitError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1166" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Exception thrown when a <ref refid="classdicomhero_1_1_transform" kindref="compound">Transform</ref> cannot process images with different high bit. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dicomhero::TransformDifferentHighBitError</label>
+        <link refid="classdicomhero_1_1_transform_different_high_bit_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::TransformError</label>
+        <link refid="classdicomhero_1_1_transform_error"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dicomhero::TransformDifferentHighBitError</label>
+        <link refid="classdicomhero_1_1_transform_different_high_bit_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::TransformError</label>
+        <link refid="classdicomhero_1_1_transform_error"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1152" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="1153" bodyend="1167"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_transform_different_high_bit_error_1a2b2c8140196215a2d144802cf73e2cd0" prot="public" virt="non-virtual"><scope>dicomhero::TransformDifferentHighBitError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_transform_error_1a21afa7b157385103baf786b1781bb1d7" prot="public" virt="non-virtual" ambiguityscope="dicomhero::TransformError::"><scope>dicomhero::TransformDifferentHighBitError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_transform_different_high_bit_error_1ae4628563265166c1b2f82cbf409d741e" prot="public" virt="non-virtual"><scope>dicomhero::TransformDifferentHighBitError</scope><name>TransformDifferentHighBitError</name></member>
+      <member refid="classdicomhero_1_1_transform_different_high_bit_error_1aeabce7840ec387c591b72a06398241c2" prot="public" virt="non-virtual"><scope>dicomhero::TransformDifferentHighBitError</scope><name>TransformDifferentHighBitError</name></member>
+      <member refid="classdicomhero_1_1_transform_error_1ab09af38e1f790b059c8753486d086a04" prot="public" virt="non-virtual"><scope>dicomhero::TransformDifferentHighBitError</scope><name>TransformError</name></member>
+      <member refid="classdicomhero_1_1_transform_error_1a17e27567b75da6d3fb1795c96c9f486c" prot="public" virt="non-virtual"><scope>dicomhero::TransformDifferentHighBitError</scope><name>TransformError</name></member>
+      <member refid="classdicomhero_1_1_transform_different_high_bit_error_1adf2abb75a274f6e1582f5465fef59427" prot="public" virt="virtual"><scope>dicomhero::TransformDifferentHighBitError</scope><name>~TransformDifferentHighBitError</name></member>
+      <member refid="classdicomhero_1_1_transform_error_1a6d990b96293194cd521500a6fde9d89d" prot="public" virt="virtual"><scope>dicomhero::TransformDifferentHighBitError</scope><name>~TransformError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

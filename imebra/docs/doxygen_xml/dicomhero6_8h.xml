@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dicomhero6_8h" kind="file" language="C++">
+    <compoundname>dicomhero6.h</compoundname>
+    <includes refid="dicomhero__acse_8h" local="yes">dicomhero_acse.h</includes>
+    <includes refid="dicomhero__base_stream_input_8h" local="yes">dicomhero_baseStreamInput.h</includes>
+    <includes refid="dicomhero__base_stream_output_8h" local="yes">dicomhero_baseStreamOutput.h</includes>
+    <includes refid="dicomhero__color_transforms_factory_8h" local="yes">dicomhero_colorTransformsFactory.h</includes>
+    <includes refid="dicomhero__codec_factory_8h" local="yes">dicomhero_codecFactory.h</includes>
+    <includes refid="dicomhero__dataset_8h" local="yes">dicomhero_dataset.h</includes>
+    <includes refid="dicomhero__date_age_8h" local="yes">dicomhero_dateAge.h</includes>
+    <includes refid="dicomhero__patient_name_8h" local="yes">dicomhero_patientName.h</includes>
+    <includes refid="dicomhero__dicom_dictionary_8h" local="yes">dicomhero_dicomDictionary.h</includes>
+    <includes refid="dicomhero__dicom_dir_8h" local="yes">dicomhero_dicomDir.h</includes>
+    <includes refid="dicomhero__dimse_8h" local="yes">dicomhero_dimse.h</includes>
+    <includes refid="dicomhero__draw_bitmap_8h" local="yes">dicomhero_drawBitmap.h</includes>
+    <includes refid="dicomhero__exceptions_8h" local="yes">dicomhero_exceptions.h</includes>
+    <includes refid="dicomhero__file_stream_input_8h" local="yes">dicomhero_fileStreamInput.h</includes>
+    <includes refid="dicomhero__file_stream_output_8h" local="yes">dicomhero_fileStreamOutput.h</includes>
+    <includes refid="dicomhero__image_8h" local="yes">dicomhero_image.h</includes>
+    <includes refid="dicomhero__lut_8h" local="yes">dicomhero_lut.h</includes>
+    <includes refid="dicomhero__memory_pool_8h" local="yes">dicomhero_memoryPool.h</includes>
+    <includes refid="dicomhero__memory_stream_input_8h" local="yes">dicomhero_memoryStreamInput.h</includes>
+    <includes refid="dicomhero__memory_stream_output_8h" local="yes">dicomhero_memoryStreamOutput.h</includes>
+    <includes refid="dicomhero__modality_v_o_i_l_u_t_8h" local="yes">dicomhero_modalityVOILUT.h</includes>
+    <includes refid="dicomhero__overlay_8h" local="yes">dicomhero_overlay.h</includes>
+    <includes refid="dicomhero__pipe_8h" local="yes">dicomhero_pipe.h</includes>
+    <includes refid="dicomhero__reading_data_handler_8h" local="yes">dicomhero_readingDataHandler.h</includes>
+    <includes refid="dicomhero__reading_data_handler_numeric_8h" local="yes">dicomhero_readingDataHandlerNumeric.h</includes>
+    <includes refid="dicomhero__read_memory_8h" local="yes">dicomhero_readMemory.h</includes>
+    <includes refid="dicomhero__read_write_memory_8h" local="yes">dicomhero_readWriteMemory.h</includes>
+    <includes refid="dicomhero__stream_reader_8h" local="yes">dicomhero_streamReader.h</includes>
+    <includes refid="dicomhero__stream_writer_8h" local="yes">dicomhero_streamWriter.h</includes>
+    <includes refid="dicomhero__tag_8h" local="yes">dicomhero_tag.h</includes>
+    <includes refid="dicomhero__tag_id_8h" local="yes">dicomhero_tagId.h</includes>
+    <includes refid="dicomhero__tcp_address_8h" local="yes">dicomhero_tcpAddress.h</includes>
+    <includes refid="dicomhero__tcp_listener_8h" local="yes">dicomhero_tcpListener.h</includes>
+    <includes refid="dicomhero__tcp_stream_8h" local="yes">dicomhero_tcpStream.h</includes>
+    <includes refid="dicomhero__transform_8h" local="yes">dicomhero_transform.h</includes>
+    <includes refid="dicomhero__transform_high_bit_8h" local="yes">dicomhero_transformHighBit.h</includes>
+    <includes refid="dicomhero__transforms_chain_8h" local="yes">dicomhero_transformsChain.h</includes>
+    <includes refid="dicomhero___v_o_i_l_u_t_8h" local="yes">dicomhero_VOILUT.h</includes>
+    <includes refid="dicomhero__writing_data_handler_8h" local="yes">dicomhero_writingDataHandler.h</includes>
+    <includes refid="dicomhero__writing_data_handler_numeric_8h" local="yes">dicomhero_writingDataHandlerNumeric.h</includes>
+    <includes refid="dicomhero__base_uid_generator_8h" local="yes">dicomhero_baseUidGenerator.h</includes>
+    <includes refid="dicomhero__uid_generator_factory_8h" local="yes">dicomhero_uidGeneratorFactory.h</includes>
+    <includes refid="dicomhero__random_uid_generator_8h" local="yes">dicomhero_randomUidGenerator.h</includes>
+    <includes refid="dicomhero__serial_number_uid_generator_8h" local="yes">dicomhero_serialNumberUidGenerator.h</includes>
+    <includes refid="dicomhero___v_o_i_description_8h" local="yes">dicomhero_VOIDescription.h</includes>
+    <includes refid="tags_enumeration_8h" local="yes">tagsEnumeration.h</includes>
+    <includes refid="wrappers_2objectivec_2include_2dicomhero6__objc_2uids_enumeration_8h" local="yes">uidsEnumeration.h</includes>
+    <includedby refid="wrappers_2objectivec_2include_2dicomhero6__objc_2dicomhero_8h" local="yes">dicomhero.h</includedby>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>2005<sp/>-<sp/>2021<sp/>by<sp/>Paolo<sp/>Brandoli/Binarno<sp/>s.p.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">DICOMHero/Imebra<sp/>is<sp/>available<sp/>for<sp/>free<sp/>under<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">The<sp/>full<sp/>text<sp/>of<sp/>the<sp/>license<sp/>is<sp/>available<sp/>in<sp/>the<sp/>file<sp/>license.rst</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>in<sp/>the<sp/>project<sp/>root<sp/>folder.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">If<sp/>you<sp/>do<sp/>not<sp/>want<sp/>to<sp/>be<sp/>bound<sp/>by<sp/>the<sp/>GPL<sp/>terms<sp/>(such<sp/>as<sp/>the<sp/>requirement</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>that<sp/>your<sp/>application<sp/>must<sp/>also<sp/>be<sp/>GPL),<sp/>you<sp/>may<sp/>purchase<sp/>a<sp/>commercial</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>license<sp/>for<sp/>DICOMHero/Imebra<sp/>from<sp/>the<sp/>DICOMHero’s<sp/>website<sp/>(https://dicomhero.com).</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__APPLE__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NS_ENUM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NS_ENUM(_type,<sp/>_name)<sp/>enum<sp/>_name<sp/>:<sp/>_type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!__has_feature(objc_arc)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>static_assert(</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;The<sp/>library<sp/>can<sp/>be<sp/>compiled<sp/>only<sp/>with<sp/>ARC<sp/>enabled&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_acse.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_baseStreamInput.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_baseStreamOutput.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_colorTransformsFactory.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_codecFactory.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_dataset.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_dateAge.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_patientName.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_dicomDictionary.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_dicomDir.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_dimse.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_drawBitmap.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_exceptions.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_fileStreamInput.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_fileStreamOutput.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_image.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_lut.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_memoryPool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_memoryStreamInput.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_memoryStreamOutput.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_modalityVOILUT.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_overlay.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_pipe.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_readingDataHandler.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_readingDataHandlerNumeric.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_readMemory.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_readWriteMemory.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_streamReader.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_streamWriter.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_tag.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_tagId.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_tcpAddress.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_tcpListener.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_tcpStream.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_transform.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_transformHighBit.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_transformsChain.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_VOILUT.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_writingDataHandler.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_writingDataHandlerNumeric.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_baseUidGenerator.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_uidGeneratorFactory.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_randomUidGenerator.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_serialNumberUidGenerator.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_VOIDescription.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;tagsEnumeration.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;uidsEnumeration.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero6.h"/>
+  </compounddef>
+</doxygen>

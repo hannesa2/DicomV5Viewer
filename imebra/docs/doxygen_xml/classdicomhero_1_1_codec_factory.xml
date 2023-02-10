@@ -1,0 +1,410 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_codec_factory" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::CodecFactory</compoundname>
+    <includes local="no">codecFactory.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classdicomhero_1_1_codec_factory_1a8edab7e6bac85df1feb0815f5a51f9f4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        <definition>static DataSet dicomhero::CodecFactory::load</definition>
+        <argsstring>(StreamReader &amp;reader, size_t maxSizeBufferLoad=std::numeric_limits&lt; size_t &gt;::max())</argsstring>
+        <name>load</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> &amp;</type>
+          <declname>reader</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maxSizeBufferLoad</declname>
+          <defval>std::numeric_limits&lt; size_t &gt;::max()</defval>
+        </param>
+        <briefdescription>
+<para>Parses the content of the input stream and returns a <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> representing it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If none of the codecs supplied by Imebra is able to decode the stream&apos;s content then it throws a <ref refid="classdicomhero_1_1_codec_wrong_format_error" kindref="compound">CodecWrongFormatError</ref> exception.</para>
+<para>The read position of the <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> is undefined when this method returns.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> connected to the input stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxSizeBufferLoad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum size of the tags that are loaded immediately. Tags larger than maxSizeBufferLoad are left on the input stream and loaded only when a <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> or a <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> reference them. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> object representing the input stream&apos;s content</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/codecFactory.h" line="63" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_codec_factory_1aff8213686cb239993e7253655ddfb486" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        <definition>static DataSet dicomhero::CodecFactory::load</definition>
+        <argsstring>(const std::wstring &amp;fileName, size_t maxSizeBufferLoad=std::numeric_limits&lt; size_t &gt;::max())</argsstring>
+        <name>load</name>
+        <param>
+          <type>const std::wstring &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maxSizeBufferLoad</declname>
+          <defval>std::numeric_limits&lt; size_t &gt;::max()</defval>
+        </param>
+        <briefdescription>
+<para>Parses the content of the input file and returns a <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> representing it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If none of the codecs supplied by Imebra is able to decode the file&apos;s content then it throws a <ref refid="classdicomhero_1_1_codec_wrong_format_error" kindref="compound">CodecWrongFormatError</ref> exception.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Unicode name of the input file to read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxSizeBufferLoad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum size of the tags that are loaded immediately. Tags larger than maxSizeBufferLoad are left on the input stream and loaded only when a <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> or a <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> reference them. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> object representing the input file&apos;s content</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/codecFactory.h" line="85" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_codec_factory_1adc28ae8d520adf8fe89d1e967d390f33" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        <definition>static DataSet dicomhero::CodecFactory::load</definition>
+        <argsstring>(const std::string &amp;fileName, size_t maxSizeBufferLoad=std::numeric_limits&lt; size_t &gt;::max())</argsstring>
+        <name>load</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maxSizeBufferLoad</declname>
+          <defval>std::numeric_limits&lt; size_t &gt;::max()</defval>
+        </param>
+        <briefdescription>
+<para>Parses the content of the input file and returns a <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> representing it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If none of the codecs supplied by Imebra is able to decode the file&apos;s content then it throws a <ref refid="classdicomhero_1_1_codec_wrong_format_error" kindref="compound">CodecWrongFormatError</ref> exception.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Utf8 name of the input file to read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxSizeBufferLoad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum size of the tags that are loaded immediately. Tags larger than maxSizeBufferLoad are left on the input stream and loaded only when a <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> or a <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> reference them. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> object representing the input file&apos;s content</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/codecFactory.h" line="107" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_codec_factory_1a80582219a1ea7d9d3be592a451f4ba16" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dicomhero::CodecFactory::saveImage</definition>
+        <argsstring>(StreamWriter &amp;destStream, const Image &amp;sourceImage, const std::string &amp;transferSyntax, imageQuality_t imageQuality_t, std::uint32_t allocatedBits, bool bSubSampledX, bool bSubSampledY, bool bInterleaved, bool b2Complement)</argsstring>
+        <name>saveImage</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> &amp;</type>
+          <declname>destStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>sourceImage</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>transferSyntax</declname>
+        </param>
+        <param>
+          <type><ref refid="definitions_8h_1a6929171a4348c7e8b65e02ff7369274a" kindref="member">imageQuality_t</ref></type>
+          <declname>imageQuality_t</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>allocatedBits</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bSubSampledX</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bSubSampledY</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bInterleaved</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>b2Complement</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/codecFactory.h" line="109" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_codec_factory_1a284b7a2857db66f9449a79d14c22b8fb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dicomhero::CodecFactory::save</definition>
+        <argsstring>(const DataSet &amp;dataSet, StreamWriter &amp;writer, codecType_t codecType)</argsstring>
+        <name>save</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> &amp;</type>
+          <declname>dataSet</declname>
+        </param>
+        <param>
+          <type><ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> &amp;</type>
+          <declname>writer</declname>
+        </param>
+        <param>
+          <type><ref refid="definitions_8h_1a8661126602cdfa1f3b51914c18b0a057" kindref="member">codecType_t</ref></type>
+          <declname>codecType</declname>
+        </param>
+        <briefdescription>
+<para>Saves the content of a <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> object to an output stream using the requested codec. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> object to save </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>writer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a <ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> connected to the output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>codecType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the codec to use to save the <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/codecFactory.h" line="128" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_codec_factory_1a31912915960ca4e53ec754c2a9a4d41f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dicomhero::CodecFactory::save</definition>
+        <argsstring>(const DataSet &amp;dataSet, const std::wstring &amp;fileName, codecType_t codecType)</argsstring>
+        <name>save</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> &amp;</type>
+          <declname>dataSet</declname>
+        </param>
+        <param>
+          <type>const std::wstring &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type><ref refid="definitions_8h_1a8661126602cdfa1f3b51914c18b0a057" kindref="member">codecType_t</ref></type>
+          <declname>codecType</declname>
+        </param>
+        <briefdescription>
+<para>Saves the content of a <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> object to an output file using the requested codec. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> object to save </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Unicode name of the output file to create </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>codecType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the codec to use to save the <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/codecFactory.h" line="139" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_codec_factory_1a27a63166489c1881c5c9e262544295c1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dicomhero::CodecFactory::save</definition>
+        <argsstring>(const DataSet &amp;dataSet, const std::string &amp;fileName, codecType_t codecType)</argsstring>
+        <name>save</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> &amp;</type>
+          <declname>dataSet</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type><ref refid="definitions_8h_1a8661126602cdfa1f3b51914c18b0a057" kindref="member">codecType_t</ref></type>
+          <declname>codecType</declname>
+        </param>
+        <briefdescription>
+<para>Saves the content of a <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> object to an output file using the requested codec. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> object to save </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Utf8 name of the output file to create </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>codecType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the codec to use to save the <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/codecFactory.h" line="150" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_codec_factory_1a07b542399b8c65fc8b2614e2e5dc7f0d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dicomhero::CodecFactory::setMaximumImageSize</definition>
+        <argsstring>(const std::uint32_t maximumWidth, const std::uint32_t maximumHeight)</argsstring>
+        <name>setMaximumImageSize</name>
+        <param>
+          <type>const std::uint32_t</type>
+          <declname>maximumWidth</declname>
+        </param>
+        <param>
+          <type>const std::uint32_t</type>
+          <declname>maximumHeight</declname>
+        </param>
+        <briefdescription>
+<para>Set the maximum image&apos;s width &amp; height accepted by Imebra. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>By default both the maximum width and height are set to 4096 pixels.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>maximumWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum image&apos;s width accepted by Imebra </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maximumHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum image&apos;s height accepted by Imebra </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/codecFactory.h" line="161" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classdicomhero_1_1_codec_factory" kindref="compound">CodecFactory</ref> class can load or save a <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> or an <ref refid="classdicomhero_1_1_image" kindref="compound">Image</ref> object using one of the codecs supplied by the Imebra library. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/codecFactory.h" line="38" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/codecFactory.h" bodystart="39" bodyend="163"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_codec_factory_1a8edab7e6bac85df1feb0815f5a51f9f4" prot="public" virt="non-virtual"><scope>dicomhero::CodecFactory</scope><name>load</name></member>
+      <member refid="classdicomhero_1_1_codec_factory_1aff8213686cb239993e7253655ddfb486" prot="public" virt="non-virtual"><scope>dicomhero::CodecFactory</scope><name>load</name></member>
+      <member refid="classdicomhero_1_1_codec_factory_1adc28ae8d520adf8fe89d1e967d390f33" prot="public" virt="non-virtual"><scope>dicomhero::CodecFactory</scope><name>load</name></member>
+      <member refid="classdicomhero_1_1_codec_factory_1a284b7a2857db66f9449a79d14c22b8fb" prot="public" virt="non-virtual"><scope>dicomhero::CodecFactory</scope><name>save</name></member>
+      <member refid="classdicomhero_1_1_codec_factory_1a31912915960ca4e53ec754c2a9a4d41f" prot="public" virt="non-virtual"><scope>dicomhero::CodecFactory</scope><name>save</name></member>
+      <member refid="classdicomhero_1_1_codec_factory_1a27a63166489c1881c5c9e262544295c1" prot="public" virt="non-virtual"><scope>dicomhero::CodecFactory</scope><name>save</name></member>
+      <member refid="classdicomhero_1_1_codec_factory_1a80582219a1ea7d9d3be592a451f4ba16" prot="public" virt="non-virtual"><scope>dicomhero::CodecFactory</scope><name>saveImage</name></member>
+      <member refid="classdicomhero_1_1_codec_factory_1a07b542399b8c65fc8b2614e2e5dc7f0d" prot="public" virt="non-virtual"><scope>dicomhero::CodecFactory</scope><name>setMaximumImageSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

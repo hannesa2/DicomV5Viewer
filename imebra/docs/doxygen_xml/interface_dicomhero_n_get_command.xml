@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_n_get_command" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroNGetCommand</compoundname>
+    <basecompoundref refid="interface_dicomhero_dimse_command" prot="public" virt="non-virtual">DicomheroDimseCommand</basecompoundref>
+    <includes local="no">dicomhero_dimse.h</includes>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_n_get_command_1aa2ba09a8c9ab49ad8debced50357d287" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>NSArray *</type>
+        <definition>NSArray* DicomheroNGetCommand::attributeList</definition>
+        <argsstring></argsstring>
+        <name>attributeList</name>
+        <read></read>
+        <briefdescription>
+<para>Return the list of tags to retrieve. an empty list means all the tags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The returned NSArray object is filled with <ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref> objects. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="888" column="14" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="888" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_n_get_command_1abe18ace75a1bd6304d07f67e550b7718" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroNGetCommand::initWithAbstractSyntax:messageID:requestedSopClassUid:requestedSopInstanceUid:attributeIdentifierList:</definition>
+        <argsstring>(NSString *abstractSyntax,[messageID] unsigned short messageID,[requestedSopClassUid] NSString *requestedSopClassUid,[requestedSopInstanceUid] NSString *requestedSopInstanceUid,[attributeIdentifierList] NSArray *attributeIdentifierList)</argsstring>
+        <name>initWithAbstractSyntax:messageID:requestedSopClassUid:requestedSopInstanceUid:attributeIdentifierList:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>abstractSyntax</declname>
+        </param>
+        <param>
+          <attributes>[messageID]</attributes>
+          <type>unsigned short</type>
+          <declname>messageID</declname>
+        </param>
+        <param>
+          <attributes>[requestedSopClassUid]</attributes>
+          <type>NSString *</type>
+          <declname>requestedSopClassUid</declname>
+        </param>
+        <param>
+          <attributes>[requestedSopInstanceUid]</attributes>
+          <type>NSString *</type>
+          <declname>requestedSopInstanceUid</declname>
+        </param>
+        <param>
+          <attributes>[attributeIdentifierList]</attributes>
+          <type>NSArray *</type>
+          <declname>attributeIdentifierList</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the N-GET command. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>abstractSyntax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message&apos;s abstract syntax (previously negotiated via the <ref refid="interface_dicomhero_presentation_contexts" kindref="compound">DicomheroPresentationContexts</ref> parameter of the <ref refid="interface_dicomhero_association_s_c_p" kindref="compound">DicomheroAssociationSCP</ref> or <ref refid="interface_dicomhero_association_s_c_u" kindref="compound">DicomheroAssociationSCU</ref> initializers) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>messageID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>message ID (can be retrieved with <ref refid="interface_dicomhero_dimse_service_1a89cba6d75cdef2b02e88bdba583808bc" kindref="member">getNextCommandID (DicomheroDimseService)</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>requestedSopClassUid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the requested SOP class UID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>requestedSopInstanceUid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the requested SOP instance UID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attributeIdentifierList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A NSArray of <ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref> objects, representing the tags to retrieve. An empty list means &quot;all the
+                               tags&quot;. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="841" column="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a N-GET command. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>DicomheroDimseCommand</label>
+        <link refid="interface_dicomhero_dimse_command"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DicomheroDimseCommandBase</label>
+        <link refid="interface_dicomhero_dimse_command_base"/>
+      </node>
+      <node id="1">
+        <label>DicomheroNGetCommand</label>
+        <link refid="interface_dicomhero_n_get_command"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>DicomheroDimseCommand</label>
+        <link refid="interface_dicomhero_dimse_command"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DicomheroDimseCommandBase</label>
+        <link refid="interface_dicomhero_dimse_command_base"/>
+      </node>
+      <node id="1">
+        <label>DicomheroNGetCommand</label>
+        <link refid="interface_dicomhero_n_get_command"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="850" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="851" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_n_get_command_1aa2ba09a8c9ab49ad8debced50357d287" prot="public" virt="non-virtual"><scope>DicomheroNGetCommand</scope><name>attributeList</name></member>
+      <member refid="interface_dicomhero_dimse_command_1a76136966e014566dc921bf330a4ef335" prot="public" virt="non-virtual"><scope>DicomheroNGetCommand</scope><name>commandType</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1aa6e7648457444127f82ded7dd4aa891d" prot="public" virt="virtual"><scope>DicomheroNGetCommand</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a68d97c939e669901c372557fca25cf34" prot="public" virt="virtual"><scope>DicomheroNGetCommand</scope><name>getAbstractSyntax</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a77cfd3acdf766f5ec85c9075bfc68902" prot="public" virt="virtual"><scope>DicomheroNGetCommand</scope><name>getAffectedSopClassUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a960b3c03c3d2952f920977b6c45032b6" prot="public" virt="virtual"><scope>DicomheroNGetCommand</scope><name>getAffectedSopInstanceUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a478b7f0930cc6fad1fe0a12cb20f6193" prot="public" virt="virtual"><scope>DicomheroNGetCommand</scope><name>getCommandDataSet:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a62a22fdadc33eb68b0a87c2095acc239" prot="public" virt="virtual"><scope>DicomheroNGetCommand</scope><name>getPayloadDataSet:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a11da81e00cc6f99977de4a53d5573256" prot="public" virt="virtual"><scope>DicomheroNGetCommand</scope><name>getRequestedSopClassUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a3881cedfd1df5f2b0843763b15183adf" prot="public" virt="virtual"><scope>DicomheroNGetCommand</scope><name>getRequestedSopInstanceUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_1a4aaa4fa728da2426b7b15b9be68166c3" prot="public" virt="non-virtual"><scope>DicomheroNGetCommand</scope><name>ID</name></member>
+      <member refid="interface_dicomhero_n_get_command_1abe18ace75a1bd6304d07f67e550b7718" prot="public" virt="virtual"><scope>DicomheroNGetCommand</scope><name>initWithAbstractSyntax:messageID:requestedSopClassUid:requestedSopInstanceUid:attributeIdentifierList:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1aee56566e403c56fe35de6057b9cafde7" prot="public" virt="virtual"><scope>DicomheroNGetCommand</scope><name>initWithDicomheroCommand:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1ae5022fe1e9373e80bc857936d1e03f39" prot="public" virt="non-virtual"><scope>DicomheroNGetCommand</scope><name>m_DimseCommandBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

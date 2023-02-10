@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_c_echo_response" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::CEchoResponse</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_dimse_response" prot="public" virt="non-virtual">dicomhero::DimseResponse</basecompoundref>
+    <includes local="no">dimse.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_c_echo_response_1a196cc1a4f0024e650447e23faefe377d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class DimseService</definition>
+        <argsstring></argsstring>
+        <name>DimseService</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="1122" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" bodystart="1122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_c_echo_response_1a762da6f23691c35266c6b2397265307a" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::CEchoResponse::CEchoResponse</definition>
+        <argsstring>(const CEchoCommand &amp;receivedCommand, dimseStatusCode_t responseCode)</argsstring>
+        <name>CEchoResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_c_echo_command" kindref="compound">CEchoCommand</ref> &amp;</type>
+          <declname>receivedCommand</declname>
+        </param>
+        <param>
+          <type><ref refid="definitions_8h_1ae2536ef9eae3beccf5490b5efa67e4e3" kindref="member">dimseStatusCode_t</ref></type>
+          <declname>responseCode</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>receivedCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command for which the response is being constructed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>responseCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the response code </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="1133" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_c_echo_response_1af576f553fe338ec94c05193b1cb962da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::CEchoResponse::CEchoResponse</definition>
+        <argsstring>(const CEchoResponse &amp;source)</argsstring>
+        <name>CEchoResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_c_echo_response" kindref="compound">CEchoResponse</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_c_echo_response" kindref="compound">CEchoResponse</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="1143" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_c_echo_response_1a77bdb1370499363fd4e00cb2c5a622d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::CEchoResponse::~CEchoResponse</definition>
+        <argsstring>()</argsstring>
+        <name>~CEchoResponse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="1145" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_c_echo_response_1a3401b5e3df9945f2d44c8a7e14014fe6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_c_echo_response" kindref="compound">CEchoResponse</ref> &amp;</type>
+        <definition>CEchoResponse&amp; dicomhero::CEchoResponse::operator=</definition>
+        <argsstring>(const CEchoResponse &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_c_echo_response" kindref="compound">CEchoResponse</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="1147" column="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdicomhero_1_1_c_echo_response_1a5b925b6cd80be2d4a807c7e7c191f3a0" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::CEchoResponse::CEchoResponse</definition>
+        <argsstring>(const std::shared_ptr&lt; implementation::cEchoResponse &gt; &amp;pResponse)</argsstring>
+        <name>CEchoResponse</name>
+        <param>
+          <type>const std::shared_ptr&lt; implementation::cEchoResponse &gt; &amp;</type>
+          <declname>pResponse</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="1150" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a C-ECHO response. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>dicomhero::DimseCommandBase</label>
+        <link refid="classdicomhero_1_1_dimse_command_base"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::CEchoResponse</label>
+        <link refid="classdicomhero_1_1_c_echo_response"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::DimseResponse</label>
+        <link refid="classdicomhero_1_1_dimse_response"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>dicomhero::DimseCommandBase</label>
+        <link refid="classdicomhero_1_1_dimse_command_base"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::CEchoResponse</label>
+        <link refid="classdicomhero_1_1_c_echo_response"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::DimseResponse</label>
+        <link refid="classdicomhero_1_1_dimse_response"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="1119" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" bodystart="1120" bodyend="1151"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_c_echo_response_1a762da6f23691c35266c6b2397265307a" prot="public" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>CEchoResponse</name></member>
+      <member refid="classdicomhero_1_1_c_echo_response_1af576f553fe338ec94c05193b1cb962da" prot="public" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>CEchoResponse</name></member>
+      <member refid="classdicomhero_1_1_c_echo_response_1a5b925b6cd80be2d4a807c7e7c191f3a0" prot="protected" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>CEchoResponse</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a4c49f1a679c3d5d6963406f98bbf6488" prot="public" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>DimseCommandBase</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a56fe4824f166f85256608b95063c715b" prot="protected" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>DimseCommandBase</name></member>
+      <member refid="classdicomhero_1_1_dimse_response_1a3b68c327bc1fc54b43d2e40cb67a2b55" prot="public" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>DimseResponse</name></member>
+      <member refid="classdicomhero_1_1_dimse_response_1a4a9d8cb80441adb6bd975281f0033200" prot="protected" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>DimseResponse</name></member>
+      <member refid="classdicomhero_1_1_c_echo_response_1a196cc1a4f0024e650447e23faefe377d" prot="private" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>DimseService</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a8aad82b61e4888f5ae454e6038817aba" prot="public" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>getAbstractSyntax</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a92b5b9ec7001e21ffb4657f21b901fb3" prot="public" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>getAffectedSopClassUid</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1acda407c661ca6b0d77d103bf1449e936" prot="public" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>getAffectedSopInstanceUid</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a5de4ba3f28c279fa9ca8a6d042ff7487" prot="public" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>getCommandDataSet</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1ab5da3e6a748beb8ee2367e4a5c857bcc" prot="public" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>getPayloadDataSet</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1ac7ccfe1ea12e2de305b7fb6fddb0c7b3" prot="public" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>getRequestedSopClassUid</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a4b2e73824fdbb3f1dc0d99196749761d" prot="public" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>getRequestedSopInstanceUid</name></member>
+      <member refid="classdicomhero_1_1_dimse_response_1a9d8e082e061becb9ac9949ab61178bee" prot="public" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>getStatus</name></member>
+      <member refid="classdicomhero_1_1_dimse_response_1a7528461978cf2f7db4a01ea0080230e5" prot="public" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>getStatusCode</name></member>
+      <member refid="classdicomhero_1_1_c_echo_response_1a3401b5e3df9945f2d44c8a7e14014fe6" prot="public" virt="non-virtual"><scope>dicomhero::CEchoResponse</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_dimse_response_1ad0a961b19f7b1f83231d5f4100bed015" prot="public" virt="non-virtual" ambiguityscope="dicomhero::DimseResponse::"><scope>dicomhero::CEchoResponse</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a31a133b2fab838d4d49a84babfb82d98" prot="public" virt="non-virtual" ambiguityscope="dicomhero::DimseCommandBase::"><scope>dicomhero::CEchoResponse</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_c_echo_response_1a77bdb1370499363fd4e00cb2c5a622d8" prot="public" virt="virtual"><scope>dicomhero::CEchoResponse</scope><name>~CEchoResponse</name></member>
+      <member refid="classdicomhero_1_1_dimse_command_base_1a3923c35d64048191be0f1b662e9c5277" prot="public" virt="virtual"><scope>dicomhero::CEchoResponse</scope><name>~DimseCommandBase</name></member>
+      <member refid="classdicomhero_1_1_dimse_response_1a45837dca907ae44fc5aa8b6c4adc8bcb" prot="public" virt="virtual"><scope>dicomhero::CEchoResponse</scope><name>~DimseResponse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_t_c_p_active_address" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::TCPActiveAddress</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_t_c_p_address" prot="public" virt="non-virtual">dicomhero::TCPAddress</basecompoundref>
+    <includes local="no">tcpAddress.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_t_c_p_active_address_1a94cbd10ff81724511e70dfda44d0bb2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::TCPActiveAddress::TCPActiveAddress</definition>
+        <argsstring>(const std::string &amp;node, const std::string &amp;service)</argsstring>
+        <name>TCPActiveAddress</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>service</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs an active TCP address from a node and a service description.</para>
+<para>The node may be a host name or address (both IPv4 and IPv6) while the service name may be a port number (in string format) or name (e.g. &quot;FTP&quot;).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the host name or address (e.g. &quot;192.168.10.20&quot; or &quot;example.com&quot;). Use an empty string to refer to the local host. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>service</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the service port (in string format) or name (e.g. &quot;140&quot; or &quot;ftp&quot;). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tcpAddress.h" line="120" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_t_c_p_active_address_1a6a49bfa05d7be03f4db554ca01c955f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::TCPActiveAddress::TCPActiveAddress</definition>
+        <argsstring>(const TCPActiveAddress &amp;source)</argsstring>
+        <name>TCPActiveAddress</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_t_c_p_active_address" kindref="compound">TCPActiveAddress</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tcpAddress.h" line="122" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_t_c_p_active_address_1a63dfddcc74a05b0f9c7f4a009ad67a8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_t_c_p_active_address" kindref="compound">TCPActiveAddress</ref> &amp;</type>
+        <definition>TCPActiveAddress&amp; dicomhero::TCPActiveAddress::operator=</definition>
+        <argsstring>(const TCPActiveAddress &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_t_c_p_active_address" kindref="compound">TCPActiveAddress</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tcpAddress.h" line="124" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_t_c_p_active_address_1a0fb97290540dbe200030e64571486dcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::TCPActiveAddress::~TCPActiveAddress</definition>
+        <argsstring>()</argsstring>
+        <name>~TCPActiveAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tcpAddress.h" line="126" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents an address of an active socket (a socket that initiates the connection with the peer). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dicomhero::TCPAddress</label>
+        <link refid="classdicomhero_1_1_t_c_p_address"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::TCPActiveAddress</label>
+        <link refid="classdicomhero_1_1_t_c_p_active_address"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dicomhero::TCPAddress</label>
+        <link refid="classdicomhero_1_1_t_c_p_address"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::TCPActiveAddress</label>
+        <link refid="classdicomhero_1_1_t_c_p_active_address"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tcpAddress.h" line="101" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tcpAddress.h" bodystart="102" bodyend="127"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_t_c_p_address_1a358c72f3b8c93e691d4f1d20cdcb9cdf" prot="public" virt="non-virtual"><scope>dicomhero::TCPActiveAddress</scope><name>getNode</name></member>
+      <member refid="classdicomhero_1_1_t_c_p_address_1a2eeb59d5b049817080fa588dd796a44c" prot="public" virt="non-virtual"><scope>dicomhero::TCPActiveAddress</scope><name>getService</name></member>
+      <member refid="classdicomhero_1_1_t_c_p_active_address_1a63dfddcc74a05b0f9c7f4a009ad67a8c" prot="public" virt="non-virtual"><scope>dicomhero::TCPActiveAddress</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_t_c_p_address_1ac5e6ada739e4dbc4a867bca0420e61c4" prot="public" virt="non-virtual" ambiguityscope="dicomhero::TCPAddress::"><scope>dicomhero::TCPActiveAddress</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_t_c_p_active_address_1a94cbd10ff81724511e70dfda44d0bb2d" prot="public" virt="non-virtual"><scope>dicomhero::TCPActiveAddress</scope><name>TCPActiveAddress</name></member>
+      <member refid="classdicomhero_1_1_t_c_p_active_address_1a6a49bfa05d7be03f4db554ca01c955f1" prot="public" virt="non-virtual"><scope>dicomhero::TCPActiveAddress</scope><name>TCPActiveAddress</name></member>
+      <member refid="classdicomhero_1_1_t_c_p_address_1ac1f351b01a4526cebabc332d8403fdd2" prot="public" virt="non-virtual"><scope>dicomhero::TCPActiveAddress</scope><name>TCPAddress</name></member>
+      <member refid="classdicomhero_1_1_t_c_p_address_1ab82ef6e6d45f0c4ba363d0c5d456ac4f" prot="protected" virt="non-virtual"><scope>dicomhero::TCPActiveAddress</scope><name>TCPAddress</name></member>
+      <member refid="classdicomhero_1_1_t_c_p_active_address_1a0fb97290540dbe200030e64571486dcd" prot="public" virt="virtual"><scope>dicomhero::TCPActiveAddress</scope><name>~TCPActiveAddress</name></member>
+      <member refid="classdicomhero_1_1_t_c_p_address_1ab030e8306b8bc12eee111106af52cf30" prot="public" virt="virtual"><scope>dicomhero::TCPActiveAddress</scope><name>~TCPAddress</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

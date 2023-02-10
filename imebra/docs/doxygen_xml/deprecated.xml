@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="deprecated" kind="page">
+    <compoundname>deprecated</compoundname>
+    <title>Deprecated List</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term>Member <ref refid="acse_8h_1a06dc8b3ccb65f1d273f56e43fef0d8d3" kindref="member">dicomhero::MutableAssociationMessage</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000001"/>  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="data_set_8h_1af328c7f779460ce65324628ef3d5407a" kindref="member">dicomhero::MutableDataSet</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000002"/>  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="dicom_dir_8h_1a05d61e1599c60f56162a5fda8a36eed9" kindref="member">dicomhero::MutableDicomDir</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000003"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="image_8h_1afb6b9dc3d6e90103e7e0bcd053046f0f" kindref="member">dicomhero::MutableImage</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000005"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="overlay_8h_1af0ab8fdee1e1612df7b2a74ded0a357c" kindref="member">dicomhero::MutableOverlay</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000006"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="tag_8h_1a881c8f5a00e69973cd8598ff17db2bd7" kindref="member">dicomhero::MutableTag</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000007"/></para>
+</listitem>
+</variablelist>
+</para>
+    </detaileddescription>
+    <location file="deprecated"/>
+  </compounddef>
+</doxygen>

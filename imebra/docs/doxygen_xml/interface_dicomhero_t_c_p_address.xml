@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_t_c_p_address" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroTCPAddress</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_t_c_p_active_address" prot="public" virt="non-virtual">DicomheroTCPActiveAddress</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_t_c_p_passive_address" prot="public" virt="non-virtual">DicomheroTCPPassiveAddress</derivedcompoundref>
+    <includes local="no">dicomhero_tcpAddress.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_t_c_p_address_1adf49caf31eff756bf7291397916124a8" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroTCPAddress::m_TCPAddress</definition>
+        <argsstring></argsstring>
+        <name>m_TCPAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpAddress.h" line="32" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpAddress.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_t_c_p_address_1a69ac023dd41b74649ea83eff191df192" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroTCPAddress::node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <read></read>
+        <briefdescription>
+<para>Returns the node part of the TCP address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The TCP address is composed by two parts:<itemizedlist>
+<listitem><para>the node which identifies the machine in the network</para>
+</listitem><listitem><para>the service which identifies one of the ports (services) in the machine </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpAddress.h" line="48" column="15" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpAddress.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_t_c_p_address_1a8963c1383c5e1df5594cd4c49ccc742d" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroTCPAddress::service</definition>
+        <argsstring></argsstring>
+        <name>service</name>
+        <read></read>
+        <briefdescription>
+<para>Returns the service part of the TCP address (the port number or name, eg. &quot;80&quot; or &quot;HTTP&quot;). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpAddress.h" line="55" column="15" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpAddress.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_t_c_p_address_1a51de551717e5fc8ba49ef84d6ced5a79" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroTCPAddress::initWithDicomheroTCPAddress:</definition>
+        <argsstring>(void *parameter_TCPAddress)</argsstring>
+        <name>initWithDicomheroTCPAddress:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_TCPAddress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpAddress.h" line="32" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_t_c_p_address_1acea6ba7622197117798f23fc64d599c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroTCPAddress::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpAddress.h" line="32" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a TCP address. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Use <ref refid="interface_dicomhero_t_c_p_active_address" kindref="compound">DicomheroTCPActiveAddress</ref> to manage an address of an active socket (a socket that initiates the connection) and <ref refid="interface_dicomhero_t_c_p_passive_address" kindref="compound">DicomheroTCPPassiveAddress</ref> for a passive socket (a socket that listens for incoming connections). </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>DicomheroTCPActiveAddress</label>
+        <link refid="interface_dicomhero_t_c_p_active_address"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DicomheroTCPAddress</label>
+        <link refid="interface_dicomhero_t_c_p_address"/>
+      </node>
+      <node id="3">
+        <label>DicomheroTCPPassiveAddress</label>
+        <link refid="interface_dicomhero_t_c_p_passive_address"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpAddress.h" line="28" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpAddress.h" bodystart="30" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_t_c_p_address_1acea6ba7622197117798f23fc64d599c6" prot="public" virt="virtual"><scope>DicomheroTCPAddress</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_t_c_p_address_1a51de551717e5fc8ba49ef84d6ced5a79" prot="public" virt="virtual"><scope>DicomheroTCPAddress</scope><name>initWithDicomheroTCPAddress:</name></member>
+      <member refid="interface_dicomhero_t_c_p_address_1adf49caf31eff756bf7291397916124a8" prot="public" virt="non-virtual"><scope>DicomheroTCPAddress</scope><name>m_TCPAddress</name></member>
+      <member refid="interface_dicomhero_t_c_p_address_1a69ac023dd41b74649ea83eff191df192" prot="public" virt="non-virtual"><scope>DicomheroTCPAddress</scope><name>node</name></member>
+      <member refid="interface_dicomhero_t_c_p_address_1a8963c1383c5e1df5594cd4c49ccc742d" prot="public" virt="non-virtual"><scope>DicomheroTCPAddress</scope><name>service</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

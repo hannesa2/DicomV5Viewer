@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_v_o_i_l_u_t" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroVOILUT</compoundname>
+    <basecompoundref refid="interface_dicomhero_transform" prot="public" virt="non-virtual">DicomheroTransform</basecompoundref>
+    <includes local="no">dicomhero_VOILUT.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_v_o_i_l_u_t_1a3582eade8c9b454aa0a418132386229b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroVOILUT::initWithLUT:</definition>
+        <argsstring>(DicomheroLUT *lut)</argsstring>
+        <name>initWithLUT:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_l_u_t" kindref="compound">DicomheroLUT</ref> *</type>
+          <declname>lut</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOILUT.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_v_o_i_l_u_t_1a38907905aab648a02181a66b61229e44" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroVOILUT::initWithVOIDescription:</definition>
+        <argsstring>(DicomheroVOIDescription *voiDescription)</argsstring>
+        <name>initWithVOIDescription:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_v_o_i_description" kindref="compound">DicomheroVOIDescription</ref> *</type>
+          <declname>voiDescription</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOILUT.h" line="1" column="0"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_dicomhero_v_o_i_l_u_t_1a4d9b84cc1e73ab51f8528bbb82cf65a4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_v_o_i_description" kindref="compound">DicomheroVOIDescription</ref> *</type>
+        <definition>DicomheroVOIDescription* DicomheroVOILUT::getOptimalVOI:inputTopLeftX:inputTopLeftY:inputWidth:inputHeight:error:</definition>
+        <argsstring>(DicomheroImage *pInputImage,[inputTopLeftX] unsigned int inputTopLeftX,[inputTopLeftY] unsigned int inputTopLeftY,[inputWidth] unsigned int inputWidth,[inputHeight] unsigned int inputHeight,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getOptimalVOI:inputTopLeftX:inputTopLeftY:inputWidth:inputHeight:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref> *</type>
+          <declname>pInputImage</declname>
+        </param>
+        <param>
+          <attributes>[inputTopLeftX]</attributes>
+          <type>unsigned int</type>
+          <declname>inputTopLeftX</declname>
+        </param>
+        <param>
+          <attributes>[inputTopLeftY]</attributes>
+          <type>unsigned int</type>
+          <declname>inputTopLeftY</declname>
+        </param>
+        <param>
+          <attributes>[inputWidth]</attributes>
+          <type>unsigned int</type>
+          <declname>inputWidth</declname>
+        </param>
+        <param>
+          <attributes>[inputHeight]</attributes>
+          <type>unsigned int</type>
+          <declname>inputHeight</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Find the optimal VOI settings for a specific image&apos;s area and apply it with setCenterWidth(). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pInputImage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the image to analyze </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topLeftX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the horizontal coordinate of the top-left angle of the area to analyze </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topLeftY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vertical coordinate of the top-left angle of the area to analyze </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the width of the area to analyze </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the height of the area to analyze </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an <ref refid="interface_dicomhero_v_o_i_description" kindref="compound">DicomheroVOIDescription</ref> object describing the optimal VOI parameters </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOILUT.h" line="1" column="0"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A VOILUT transform enhances the visibility of a specific range of brightness in an image. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The client can use VOILUT in three ways:<itemizedlist>
+<listitem><para>by declaring the minimum and maximum values of the pixels that must be visible via the method setCenterWidth()</para>
+</listitem><listitem><para>by declaring a LUT via the method setLUT()</para>
+</listitem><listitem><para>by letting the transform calculate the most appropriate center/width values via the method applyOptimalVOI()</para>
+</listitem></itemizedlist>
+</para>
+<para><ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> may already supply suitable values for the methods setCenterWidth() and setLUT().</para>
+<para>In order to retrieve from the dataset the suggested center/width values, call DicomheroDataSet::getVOIs().</para>
+<para>To get from the dataset a list of LUTs that can be used with the VOILUT transform use DicomheroDataSet::getLUT(TagId(DicomheroTagIdVOILUTSequence_0028_3010), X) where X is a 0 base index (the dataset may provide more than one LUT for the VOILUT transform). </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DicomheroVOILUT</label>
+        <link refid="interface_dicomhero_v_o_i_l_u_t"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroTransform</label>
+        <link refid="interface_dicomhero_transform"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DicomheroVOILUT</label>
+        <link refid="interface_dicomhero_v_o_i_l_u_t"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroTransform</label>
+        <link refid="interface_dicomhero_transform"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOILUT.h" line="49" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_VOILUT.h" bodystart="50" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_transform_1ad9d04a806e4bebe54e24d29ea3da55ae" prot="public" virt="virtual"><scope>DicomheroVOILUT</scope><name>allocateOutputImage:width:height:error:</name></member>
+      <member refid="interface_dicomhero_transform_1ac5a31bb888afc5b3fd803d8687b13e2c" prot="public" virt="virtual"><scope>DicomheroVOILUT</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_v_o_i_l_u_t_1a4d9b84cc1e73ab51f8528bbb82cf65a4" prot="public" virt="virtual"><scope>DicomheroVOILUT</scope><name>getOptimalVOI:inputTopLeftX:inputTopLeftY:inputWidth:inputHeight:error:</name></member>
+      <member refid="interface_dicomhero_transform_1a1687c0c599392ae018d492b632a15606" prot="public" virt="virtual"><scope>DicomheroVOILUT</scope><name>initWithDicomheroTransform:</name></member>
+      <member refid="interface_dicomhero_v_o_i_l_u_t_1a3582eade8c9b454aa0a418132386229b" prot="public" virt="virtual"><scope>DicomheroVOILUT</scope><name>initWithLUT:</name></member>
+      <member refid="interface_dicomhero_v_o_i_l_u_t_1a38907905aab648a02181a66b61229e44" prot="public" virt="virtual"><scope>DicomheroVOILUT</scope><name>initWithVOIDescription:</name></member>
+      <member refid="interface_dicomhero_transform_1ace5bf9d1b55c0da9acc5f4da95a6fac9" prot="public" virt="non-virtual"><scope>DicomheroVOILUT</scope><name>isEmpty</name></member>
+      <member refid="interface_dicomhero_transform_1ab02bb499ed0d612d635ed38b32222b05" prot="public" virt="non-virtual"><scope>DicomheroVOILUT</scope><name>m_Transform</name></member>
+      <member refid="interface_dicomhero_transform_1a8496d9da5f64878a1ddd4ebd4cd23149" prot="public" virt="virtual"><scope>DicomheroVOILUT</scope><name>runTransform:inputTopLeftX:inputTopLeftY:inputWidth:inputHeight:outputImage:outputTopLeftX:outputTopLeftY:error:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

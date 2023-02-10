@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_dicom_codec_depth_limit_reached_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::DicomCodecDepthLimitReachedError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_dicom_codec_error" prot="public" virt="non-virtual">dicomhero::DicomCodecError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_codec_depth_limit_reached_error_1a7ab5ecd8c9c0c793fa20294ae3fc755e" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DicomCodecDepthLimitReachedError::DicomCodecDepthLimitReachedError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>DicomCodecDepthLimitReachedError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1376" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_codec_depth_limit_reached_error_1a6d350f0d16a1e36471a760d24c43c2e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DicomCodecDepthLimitReachedError::DicomCodecDepthLimitReachedError</definition>
+        <argsstring>(const DicomCodecDepthLimitReachedError &amp;source)</argsstring>
+        <name>DicomCodecDepthLimitReachedError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dicom_codec_depth_limit_reached_error" kindref="compound">DicomCodecDepthLimitReachedError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1378" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_codec_depth_limit_reached_error_1afec28c0f5d4b92fbaf9f91ce9753073b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_dicom_codec_depth_limit_reached_error" kindref="compound">DicomCodecDepthLimitReachedError</ref> &amp;</type>
+        <definition>DicomCodecDepthLimitReachedError&amp; dicomhero::DicomCodecDepthLimitReachedError::operator=</definition>
+        <argsstring>(const DicomCodecDepthLimitReachedError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dicom_codec_depth_limit_reached_error" kindref="compound">DicomCodecDepthLimitReachedError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1380" column="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_codec_depth_limit_reached_error_1ae41bdd7470bb2307b4829433073b53c5" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::DicomCodecDepthLimitReachedError::~DicomCodecDepthLimitReachedError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~DicomCodecDepthLimitReachedError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1382" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This exception is thrown when dicomCodec::parseStream reaches the maximum depth for embedded datasets. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>dicomhero::CodecError</label>
+        <link refid="classdicomhero_1_1_codec_error"/>
+      </node>
+      <node id="2">
+        <label>dicomhero::DicomCodecError</label>
+        <link refid="classdicomhero_1_1_dicom_codec_error"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dicomhero::DicomCodecDepthLimitReachedError</label>
+        <link refid="classdicomhero_1_1_dicom_codec_depth_limit_reached_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>dicomhero::CodecError</label>
+        <link refid="classdicomhero_1_1_codec_error"/>
+      </node>
+      <node id="2">
+        <label>dicomhero::DicomCodecError</label>
+        <link refid="classdicomhero_1_1_dicom_codec_error"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dicomhero::DicomCodecDepthLimitReachedError</label>
+        <link refid="classdicomhero_1_1_dicom_codec_depth_limit_reached_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1368" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="1369" bodyend="1384"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_codec_error_1aa45cac1a20d58181456f129e237cdfa3" prot="public" virt="non-virtual"><scope>dicomhero::DicomCodecDepthLimitReachedError</scope><name>CodecError</name></member>
+      <member refid="classdicomhero_1_1_codec_error_1a0a70b95ba0045ba4c1f0a000e973303a" prot="public" virt="non-virtual"><scope>dicomhero::DicomCodecDepthLimitReachedError</scope><name>CodecError</name></member>
+      <member refid="classdicomhero_1_1_dicom_codec_depth_limit_reached_error_1a7ab5ecd8c9c0c793fa20294ae3fc755e" prot="public" virt="non-virtual"><scope>dicomhero::DicomCodecDepthLimitReachedError</scope><name>DicomCodecDepthLimitReachedError</name></member>
+      <member refid="classdicomhero_1_1_dicom_codec_depth_limit_reached_error_1a6d350f0d16a1e36471a760d24c43c2e2" prot="public" virt="non-virtual"><scope>dicomhero::DicomCodecDepthLimitReachedError</scope><name>DicomCodecDepthLimitReachedError</name></member>
+      <member refid="classdicomhero_1_1_dicom_codec_error_1aa3924b5872b4309fd9aa5b2af39db7fa" prot="public" virt="non-virtual"><scope>dicomhero::DicomCodecDepthLimitReachedError</scope><name>DicomCodecError</name></member>
+      <member refid="classdicomhero_1_1_dicom_codec_error_1a0a958ec51f54dc8994e3e8d02d32ded0" prot="public" virt="non-virtual"><scope>dicomhero::DicomCodecDepthLimitReachedError</scope><name>DicomCodecError</name></member>
+      <member refid="classdicomhero_1_1_dicom_codec_depth_limit_reached_error_1afec28c0f5d4b92fbaf9f91ce9753073b" prot="public" virt="non-virtual"><scope>dicomhero::DicomCodecDepthLimitReachedError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_dicom_codec_error_1af62f58a35c2012b5e0ec5d2157c7fc2d" prot="public" virt="non-virtual" ambiguityscope="dicomhero::DicomCodecError::"><scope>dicomhero::DicomCodecDepthLimitReachedError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_codec_error_1abeae1a2fb36ddd53a8323131a490a3b9" prot="public" virt="non-virtual" ambiguityscope="dicomhero::CodecError::"><scope>dicomhero::DicomCodecDepthLimitReachedError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_codec_error_1a6faa1ea3bd39b5ca09c0843f10a2db4f" prot="public" virt="virtual"><scope>dicomhero::DicomCodecDepthLimitReachedError</scope><name>~CodecError</name></member>
+      <member refid="classdicomhero_1_1_dicom_codec_depth_limit_reached_error_1ae41bdd7470bb2307b4829433073b53c5" prot="public" virt="virtual"><scope>dicomhero::DicomCodecDepthLimitReachedError</scope><name>~DicomCodecDepthLimitReachedError</name></member>
+      <member refid="classdicomhero_1_1_dicom_codec_error_1ab91d2d9cf41c1c6b840f7ddcf407e7a8" prot="public" virt="virtual"><scope>dicomhero::DicomCodecDepthLimitReachedError</scope><name>~DicomCodecError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_association_base" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroAssociationBase</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_association_s_c_p" prot="public" virt="non-virtual">DicomheroAssociationSCP</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_association_s_c_u" prot="public" virt="non-virtual">DicomheroAssociationSCU</derivedcompoundref>
+    <includes local="no">dicomhero_acse.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_association_base_1a05d90b348c5b38301fca4c6e0e747d69" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroAssociationBase::m_AssociationBase</definition>
+        <argsstring></argsstring>
+        <name>m_AssociationBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="187" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_association_base_1a3e78cfcb5e9a5d821b369367db0606b6" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroAssociationBase::thisAET</definition>
+        <argsstring></argsstring>
+        <name>thisAET</name>
+        <read></read>
+        <briefdescription>
+<para>Returns our AET. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="271" column="15" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_association_base_1ae4f5b8d3a1afaedd52b7a85990137992" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroAssociationBase::otherAET</definition>
+        <argsstring></argsstring>
+        <name>otherAET</name>
+        <read></read>
+        <briefdescription>
+<para>Returns the other party&apos;s AET. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="277" column="15" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_association_base_1a65c353828f54d6f9ba7cbf85c138eda8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroAssociationBase::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="187" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_association_base_1a794c54f60b98c32ae78db112f6d50309" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_association_message" kindref="compound">DicomheroAssociationMessage</ref> *</type>
+        <definition>DicomheroAssociationMessage* DicomheroAssociationBase::getCommand:</definition>
+        <argsstring>(NSError **pError)</argsstring>
+        <name>getCommand:</name>
+        <param>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Read a command dataset and its payload (if any). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to DicomheroStreamClosedError if the association has been released or aborted.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an <ref refid="interface_dicomhero_association_message" kindref="compound">DicomheroAssociationMessage</ref> containing a command and its payload. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="187" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_association_base_1aa1f1d25615fbe2b57de0b10630cbd497" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_association_message" kindref="compound">DicomheroAssociationMessage</ref> *</type>
+        <definition>DicomheroAssociationMessage* DicomheroAssociationBase::getResponse:error:</definition>
+        <argsstring>(unsigned int messageId,[error] NSError **pError)</argsstring>
+        <name>getResponse:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>messageId</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Read a response dataset and its payload (if any). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>messageId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message ID for which the response is expected </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to DicomheroStreamClosedError if the association has been released or aborted.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an AssociationDataSet containing a response and its payload. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="187" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_association_base_1af44b4d767a3567d8bf11a53374d0c3f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroAssociationBase::sendMessage:error:</definition>
+        <argsstring>(DicomheroAssociationMessage *pMessage,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>sendMessage:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_association_message" kindref="compound">DicomheroAssociationMessage</ref> *</type>
+          <declname>pMessage</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Send a DICOM message to the connected peer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pMessage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the DICOM message to send </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a subclass of NSError in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="187" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_association_base_1adb73d9daddf435c5902a3a84f728f5d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroAssociationBase::release:</definition>
+        <argsstring>((swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>release:</name>
+        <param>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Releases the association. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The method blocks until the other party acknowledges the release command or until the ACSE timout expires.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a subclass of NSError in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="187" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_association_base_1aee3c45381f98ac68bb5c7d75f4483f5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroAssociationBase::abort:</definition>
+        <argsstring>((swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>abort:</name>
+        <param>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Aborts the association. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The association will be aborted as soon as possible. The other party will not acknowledge the abort command.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a subclass of NSError in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="187" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_association_base_1af05815b6916dbe776ff9b15dc320fbd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroAssociationBase::getTransferSyntax:error:</definition>
+        <argsstring>(NSString *abstractSyntax,[error] NSError **pError)</argsstring>
+        <name>getTransferSyntax:error:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>abstractSyntax</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Returns the transfer syntax negotiated for a specific abstract syntax. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>abstractSyntax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the abstract syntax for which the transfer syntax is requested </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to DicomheroAcseNoTransferSyntaxError if no transfer syntax is available or DicomheroAcsePresentationContextNotRequestedError if the abstract syntax was not negotiated at all </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the negotiated transfer syntax for the specified abstract syntax </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="187" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The association base class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>DicomheroAssociationSCP</label>
+        <link refid="interface_dicomhero_association_s_c_p"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DicomheroAssociationSCU</label>
+        <link refid="interface_dicomhero_association_s_c_u"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DicomheroAssociationBase</label>
+        <link refid="interface_dicomhero_association_base"/>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="184" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" bodystart="185" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_association_base_1aee3c45381f98ac68bb5c7d75f4483f5b" prot="public" virt="virtual"><scope>DicomheroAssociationBase</scope><name>abort:</name></member>
+      <member refid="interface_dicomhero_association_base_1a65c353828f54d6f9ba7cbf85c138eda8" prot="public" virt="virtual"><scope>DicomheroAssociationBase</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_association_base_1a794c54f60b98c32ae78db112f6d50309" prot="public" virt="virtual"><scope>DicomheroAssociationBase</scope><name>getCommand:</name></member>
+      <member refid="interface_dicomhero_association_base_1aa1f1d25615fbe2b57de0b10630cbd497" prot="public" virt="virtual"><scope>DicomheroAssociationBase</scope><name>getResponse:error:</name></member>
+      <member refid="interface_dicomhero_association_base_1af05815b6916dbe776ff9b15dc320fbd6" prot="public" virt="virtual"><scope>DicomheroAssociationBase</scope><name>getTransferSyntax:error:</name></member>
+      <member refid="interface_dicomhero_association_base_1a05d90b348c5b38301fca4c6e0e747d69" prot="public" virt="non-virtual"><scope>DicomheroAssociationBase</scope><name>m_AssociationBase</name></member>
+      <member refid="interface_dicomhero_association_base_1ae4f5b8d3a1afaedd52b7a85990137992" prot="public" virt="non-virtual"><scope>DicomheroAssociationBase</scope><name>otherAET</name></member>
+      <member refid="interface_dicomhero_association_base_1adb73d9daddf435c5902a3a84f728f5d4" prot="public" virt="virtual"><scope>DicomheroAssociationBase</scope><name>release:</name></member>
+      <member refid="interface_dicomhero_association_base_1af44b4d767a3567d8bf11a53374d0c3f8" prot="public" virt="virtual"><scope>DicomheroAssociationBase</scope><name>sendMessage:error:</name></member>
+      <member refid="interface_dicomhero_association_base_1a3e78cfcb5e9a5d821b369367db0606b6" prot="public" virt="non-virtual"><scope>DicomheroAssociationBase</scope><name>thisAET</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

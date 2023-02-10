@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_acse_corrupted_message_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::AcseCorruptedMessageError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_acse_error" prot="public" virt="non-virtual">dicomhero::AcseError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_acse_corrupted_message_error_1a675bd3758f3cef642b1aefae4a30f1b7" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AcseCorruptedMessageError::AcseCorruptedMessageError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>AcseCorruptedMessageError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1518" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_corrupted_message_error_1ab20e08b6fadc4a4da17a05442288334d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AcseCorruptedMessageError::AcseCorruptedMessageError</definition>
+        <argsstring>(const AcseCorruptedMessageError &amp;source)</argsstring>
+        <name>AcseCorruptedMessageError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_acse_corrupted_message_error" kindref="compound">AcseCorruptedMessageError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1520" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_corrupted_message_error_1ab36154c970edbd4bd77622b599561c20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_acse_corrupted_message_error" kindref="compound">AcseCorruptedMessageError</ref> &amp;</type>
+        <definition>AcseCorruptedMessageError&amp; dicomhero::AcseCorruptedMessageError::operator=</definition>
+        <argsstring>(const AcseCorruptedMessageError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_acse_corrupted_message_error" kindref="compound">AcseCorruptedMessageError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1522" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_corrupted_message_error_1a61f455dc69e3dec2c339d8756ee0831d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::AcseCorruptedMessageError::~AcseCorruptedMessageError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~AcseCorruptedMessageError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1524" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Exception thrown by the ACSE services when an ACSE message is corrupted. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dicomhero::AcseCorruptedMessageError</label>
+        <link refid="classdicomhero_1_1_acse_corrupted_message_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::AcseError</label>
+        <link refid="classdicomhero_1_1_acse_error"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dicomhero::AcseCorruptedMessageError</label>
+        <link refid="classdicomhero_1_1_acse_corrupted_message_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::AcseError</label>
+        <link refid="classdicomhero_1_1_acse_error"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1510" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="1511" bodyend="1525"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_acse_corrupted_message_error_1a675bd3758f3cef642b1aefae4a30f1b7" prot="public" virt="non-virtual"><scope>dicomhero::AcseCorruptedMessageError</scope><name>AcseCorruptedMessageError</name></member>
+      <member refid="classdicomhero_1_1_acse_corrupted_message_error_1ab20e08b6fadc4a4da17a05442288334d" prot="public" virt="non-virtual"><scope>dicomhero::AcseCorruptedMessageError</scope><name>AcseCorruptedMessageError</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1adbb42aa40c7a143809c083a281f49e7d" prot="public" virt="non-virtual"><scope>dicomhero::AcseCorruptedMessageError</scope><name>AcseError</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1a6becca8ff22e9b1719d2856af94a8417" prot="public" virt="non-virtual"><scope>dicomhero::AcseCorruptedMessageError</scope><name>AcseError</name></member>
+      <member refid="classdicomhero_1_1_acse_corrupted_message_error_1ab36154c970edbd4bd77622b599561c20" prot="public" virt="non-virtual"><scope>dicomhero::AcseCorruptedMessageError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1a4f961f17b47823241f64229459c21c50" prot="public" virt="non-virtual" ambiguityscope="dicomhero::AcseError::"><scope>dicomhero::AcseCorruptedMessageError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_acse_corrupted_message_error_1a61f455dc69e3dec2c339d8756ee0831d" prot="public" virt="virtual"><scope>dicomhero::AcseCorruptedMessageError</scope><name>~AcseCorruptedMessageError</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1ab574eff3cad5081bbae7325330357201" prot="public" virt="virtual"><scope>dicomhero::AcseCorruptedMessageError</scope><name>~AcseError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

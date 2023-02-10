@@ -1,0 +1,405 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_codec_factory" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroCodecFactory</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_codecFactory.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_dicomhero_codec_factory_1a788bde055091d83fa8faffd53449dbe7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> *</type>
+        <definition>DicomheroDataSet* DicomheroCodecFactory::loadFromFile:error:</definition>
+        <argsstring>(NSString *fileName,[error] NSError **pError)</argsstring>
+        <name>loadFromFile:error:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Parses the content of the input file and returns a <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> object representing it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If none of the codecs supplied by Imebra is able to decode the file&apos;s content then sets the pError parameter and returns nil.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the input file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to a NSError pointer that will be set in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> object representing the input file&apos;s content </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_codecFactory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_codec_factory_1a0465fb7ade480f67f8b2e34cecd0eeb2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> *</type>
+        <definition>DicomheroDataSet* DicomheroCodecFactory::loadFromFileMaxSize:maxBufferSize:error:</definition>
+        <argsstring>(NSString *fileName,[maxBufferSize] unsigned int maxBufferSize,[error] NSError **pError)</argsstring>
+        <name>loadFromFileMaxSize:maxBufferSize:error:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <attributes>[maxBufferSize]</attributes>
+          <type>unsigned int</type>
+          <declname>maxBufferSize</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Parses the content of the input file and returns a <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> object representing it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If none of the codecs supplied by Imebra is able to decode the file&apos;s content then sets the pError parameter and returns nil.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the input file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxSizeBufferLoad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum size of the tags that are loaded immediately. Tags larger than maxSizeBufferLoad are left on the input stream and loaded only when a <ref refid="interface_dicomhero_reading_data_handler" kindref="compound">DicomheroReadingDataHandler</ref> object or a <ref refid="interface_dicomhero_writing_data_handler" kindref="compound">DicomheroWritingDataHandler</ref> object reference them. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to a NSError pointer that will be set in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> object representing the input file&apos;s content </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_codecFactory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_codec_factory_1ace6734b2c3b0fccb706ac4030a978177" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> *</type>
+        <definition>DicomheroDataSet* DicomheroCodecFactory::loadFromStream:error:</definition>
+        <argsstring>(DicomheroStreamReader *pReader,[error] NSError **pError)</argsstring>
+        <name>loadFromStream:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> *</type>
+          <declname>pReader</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Parses the content of the input stream and returns a <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> representing it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If none of the codecs supplied by Imebra is able to decode the stream&apos;s content then sets the pError parameter and returns nil.</para>
+<para>The read position of the <ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> object is undefined when this method returns.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pReader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a <ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> object connected to the input stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to a NSError pointer that will be set in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> object representing the input stream&apos;s content </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_codecFactory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_codec_factory_1ab3aa5f40ba1b3bf37fbd66be95cc7efa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> *</type>
+        <definition>DicomheroDataSet* DicomheroCodecFactory::loadFromStreamMaxSize:maxBufferSize:error:</definition>
+        <argsstring>(DicomheroStreamReader *pReader,[maxBufferSize] unsigned int maxBufferSize,[error] NSError **pError)</argsstring>
+        <name>loadFromStreamMaxSize:maxBufferSize:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> *</type>
+          <declname>pReader</declname>
+        </param>
+        <param>
+          <attributes>[maxBufferSize]</attributes>
+          <type>unsigned int</type>
+          <declname>maxBufferSize</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Parses the content of the input stream and returns a <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> representing it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If none of the codecs supplied by Imebra is able to decode the stream&apos;s content then sets the pError parameter and returns nil.</para>
+<para>The read position of the <ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> object is undefined when this method returns.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pReader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a <ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> object connected to the input stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxSizeBufferLoad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum size of the tags that are loaded immediately. Tags larger than maxSizeBufferLoad are left on the input stream and loaded only when an <ref refid="interface_dicomhero_reading_data_handler" kindref="compound">DicomheroReadingDataHandler</ref> or an <ref refid="interface_dicomhero_writing_data_handler" kindref="compound">DicomheroWritingDataHandler</ref> object reference sthem. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to a NSError pointer that will be set in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> object representing the input stream&apos;s content </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_codecFactory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_codec_factory_1aafb5a5c24bb4347b77ba51016c1f468b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroCodecFactory::saveToFile:dataSet:codecType:error:</definition>
+        <argsstring>(NSString *fileName,[dataSet] DicomheroDataSet *pDataSet,[codecType] DicomheroCodecType codecType,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>saveToFile:dataSet:codecType:error:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <attributes>[dataSet]</attributes>
+          <type><ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> *</type>
+          <declname>pDataSet</declname>
+        </param>
+        <param>
+          <attributes>[codecType]</attributes>
+          <type>DicomheroCodecType</type>
+          <declname>codecType</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Saves the content of a <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> object to a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the output file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pDataSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> object to save </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>codecType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the codec to use to save the <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to a NSError pointer that will be set in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_codecFactory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_codec_factory_1a1d96fc3ad23df2094aea31ed4c2ff0a0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroCodecFactory::saveToStream:dataSet:codecType:error:</definition>
+        <argsstring>(DicomheroStreamWriter *pWriter,[dataSet] DicomheroDataSet *pDataSet,[codecType] DicomheroCodecType codecType,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>saveToStream:dataSet:codecType:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_stream_writer" kindref="compound">DicomheroStreamWriter</ref> *</type>
+          <declname>pWriter</declname>
+        </param>
+        <param>
+          <attributes>[dataSet]</attributes>
+          <type><ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> *</type>
+          <declname>pDataSet</declname>
+        </param>
+        <param>
+          <attributes>[codecType]</attributes>
+          <type>DicomheroCodecType</type>
+          <declname>codecType</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Saves the content of a <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> object to an output stream using the requested codec. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pWriter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an <ref refid="interface_dicomhero_stream_writer" kindref="compound">DicomheroStreamWriter</ref> connected to the output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pDataSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> object to save </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>codecType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the codec to use to save the <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to a NSError pointer that will be set in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_codecFactory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_codec_factory_1a559d5420551c561d3dd3a1f3bd1bbb2b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroCodecFactory::setMaximumImageSize:maxHeight:</definition>
+        <argsstring>(unsigned int maximumWidth,[maxHeight] unsigned int maximumHeight)</argsstring>
+        <name>setMaximumImageSize:maxHeight:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>maximumWidth</declname>
+        </param>
+        <param>
+          <attributes>[maxHeight]</attributes>
+          <type>unsigned int</type>
+          <declname>maximumHeight</declname>
+        </param>
+        <briefdescription>
+<para>Set the maximum image&apos;s width &amp; height accepted by Imebra. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>By default both the maximum width and height are set to 4096 pixels.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>maximumWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum image&apos;s width accepted by Imebra </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maximumHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum image&apos;s height accepted by Imebra </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_codecFactory.h" line="1" column="0"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="interface_dicomhero_codec_factory" kindref="compound">DicomheroCodecFactory</ref> class can load or save a DataSet or an Image object using one of the codecs supplied by the Imebra library. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_codecFactory.h" line="39" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_codecFactory.h" bodystart="40" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_codec_factory_1a788bde055091d83fa8faffd53449dbe7" prot="public" virt="virtual"><scope>DicomheroCodecFactory</scope><name>loadFromFile:error:</name></member>
+      <member refid="interface_dicomhero_codec_factory_1a0465fb7ade480f67f8b2e34cecd0eeb2" prot="public" virt="virtual"><scope>DicomheroCodecFactory</scope><name>loadFromFileMaxSize:maxBufferSize:error:</name></member>
+      <member refid="interface_dicomhero_codec_factory_1ace6734b2c3b0fccb706ac4030a978177" prot="public" virt="virtual"><scope>DicomheroCodecFactory</scope><name>loadFromStream:error:</name></member>
+      <member refid="interface_dicomhero_codec_factory_1ab3aa5f40ba1b3bf37fbd66be95cc7efa" prot="public" virt="virtual"><scope>DicomheroCodecFactory</scope><name>loadFromStreamMaxSize:maxBufferSize:error:</name></member>
+      <member refid="interface_dicomhero_codec_factory_1aafb5a5c24bb4347b77ba51016c1f468b" prot="public" virt="virtual"><scope>DicomheroCodecFactory</scope><name>saveToFile:dataSet:codecType:error:</name></member>
+      <member refid="interface_dicomhero_codec_factory_1a1d96fc3ad23df2094aea31ed4c2ff0a0" prot="public" virt="virtual"><scope>DicomheroCodecFactory</scope><name>saveToStream:dataSet:codecType:error:</name></member>
+      <member refid="interface_dicomhero_codec_factory_1a559d5420551c561d3dd3a1f3bd1bbb2b" prot="public" virt="virtual"><scope>DicomheroCodecFactory</scope><name>setMaximumImageSize:maxHeight:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

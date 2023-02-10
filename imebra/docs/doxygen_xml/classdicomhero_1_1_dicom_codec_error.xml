@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_dicom_codec_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::DicomCodecError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_codec_error" prot="public" virt="non-virtual">dicomhero::CodecError</basecompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_dicom_codec_depth_limit_reached_error" prot="public" virt="non-virtual">dicomhero::DicomCodecDepthLimitReachedError</derivedcompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_codec_error_1aa3924b5872b4309fd9aa5b2af39db7fa" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DicomCodecError::DicomCodecError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>DicomCodecError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1354" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_codec_error_1a0a958ec51f54dc8994e3e8d02d32ded0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DicomCodecError::DicomCodecError</definition>
+        <argsstring>(const DicomCodecError &amp;source)</argsstring>
+        <name>DicomCodecError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dicom_codec_error" kindref="compound">DicomCodecError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1356" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_codec_error_1af62f58a35c2012b5e0ec5d2157c7fc2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_dicom_codec_error" kindref="compound">DicomCodecError</ref> &amp;</type>
+        <definition>DicomCodecError&amp; dicomhero::DicomCodecError::operator=</definition>
+        <argsstring>(const DicomCodecError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dicom_codec_error" kindref="compound">DicomCodecError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1358" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_codec_error_1ab91d2d9cf41c1c6b840f7ddcf407e7a8" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::DicomCodecError::~DicomCodecError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~DicomCodecError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1360" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is the base class for the exceptions thrown by the dicom codec (dicomCodec). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dicomhero::CodecError</label>
+        <link refid="classdicomhero_1_1_codec_error"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::DicomCodecError</label>
+        <link refid="classdicomhero_1_1_dicom_codec_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dicomhero::DicomCodecDepthLimitReachedError</label>
+        <link refid="classdicomhero_1_1_dicom_codec_depth_limit_reached_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dicomhero::CodecError</label>
+        <link refid="classdicomhero_1_1_codec_error"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::DicomCodecError</label>
+        <link refid="classdicomhero_1_1_dicom_codec_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1346" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="1347" bodyend="1361"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_codec_error_1aa45cac1a20d58181456f129e237cdfa3" prot="public" virt="non-virtual"><scope>dicomhero::DicomCodecError</scope><name>CodecError</name></member>
+      <member refid="classdicomhero_1_1_codec_error_1a0a70b95ba0045ba4c1f0a000e973303a" prot="public" virt="non-virtual"><scope>dicomhero::DicomCodecError</scope><name>CodecError</name></member>
+      <member refid="classdicomhero_1_1_dicom_codec_error_1aa3924b5872b4309fd9aa5b2af39db7fa" prot="public" virt="non-virtual"><scope>dicomhero::DicomCodecError</scope><name>DicomCodecError</name></member>
+      <member refid="classdicomhero_1_1_dicom_codec_error_1a0a958ec51f54dc8994e3e8d02d32ded0" prot="public" virt="non-virtual"><scope>dicomhero::DicomCodecError</scope><name>DicomCodecError</name></member>
+      <member refid="classdicomhero_1_1_dicom_codec_error_1af62f58a35c2012b5e0ec5d2157c7fc2d" prot="public" virt="non-virtual"><scope>dicomhero::DicomCodecError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_codec_error_1abeae1a2fb36ddd53a8323131a490a3b9" prot="public" virt="non-virtual" ambiguityscope="dicomhero::CodecError::"><scope>dicomhero::DicomCodecError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_codec_error_1a6faa1ea3bd39b5ca09c0843f10a2db4f" prot="public" virt="virtual"><scope>dicomhero::DicomCodecError</scope><name>~CodecError</name></member>
+      <member refid="classdicomhero_1_1_dicom_codec_error_1ab91d2d9cf41c1c6b840f7ddcf407e7a8" prot="public" virt="virtual"><scope>dicomhero::DicomCodecError</scope><name>~DicomCodecError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

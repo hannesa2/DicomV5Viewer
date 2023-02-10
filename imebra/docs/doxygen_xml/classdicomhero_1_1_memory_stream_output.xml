@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_memory_stream_output" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::MemoryStreamOutput</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_base_stream_output" prot="public" virt="non-virtual">dicomhero::BaseStreamOutput</basecompoundref>
+    <includes local="no">memoryStreamOutput.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_memory_stream_output_1afc4e0cd3553af7d728f487ec8b0aba9b" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::MemoryStreamOutput::MemoryStreamOutput</definition>
+        <argsstring>(const MutableMemory &amp;memory)</argsstring>
+        <name>MemoryStreamOutput</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_mutable_memory" kindref="compound">MutableMemory</ref> &amp;</type>
+          <declname>memory</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>memory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the memory region into which the stream will write the data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memoryStreamOutput.h" line="43" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_stream_output_1a054e681483a52e9fa711a2d73c4c5ddd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::MemoryStreamOutput::MemoryStreamOutput</definition>
+        <argsstring>(const MemoryStreamOutput &amp;source)</argsstring>
+        <name>MemoryStreamOutput</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_memory_stream_output" kindref="compound">MemoryStreamOutput</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_memory_stream_output" kindref="compound">MemoryStreamOutput</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memoryStreamOutput.h" line="51" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_stream_output_1a3889339ab278c109ebfd6e066e209271" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_memory_stream_output" kindref="compound">MemoryStreamOutput</ref> &amp;</type>
+        <definition>MemoryStreamOutput&amp; dicomhero::MemoryStreamOutput::operator=</definition>
+        <argsstring>(const MemoryStreamOutput &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_memory_stream_output" kindref="compound">MemoryStreamOutput</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memoryStreamOutput.h" line="53" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_stream_output_1a8eb71661b26616021037f292a70bd249" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::MemoryStreamOutput::~MemoryStreamOutput</definition>
+        <argsstring>()</argsstring>
+        <name>~MemoryStreamOutput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memoryStreamOutput.h" line="55" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An output stream that writes data into a memory region. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>When new data is written into the memory then it is resized as necessary. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dicomhero::BaseStreamOutput</label>
+        <link refid="classdicomhero_1_1_base_stream_output"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::MemoryStreamOutput</label>
+        <link refid="classdicomhero_1_1_memory_stream_output"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dicomhero::BaseStreamOutput</label>
+        <link refid="classdicomhero_1_1_base_stream_output"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::MemoryStreamOutput</label>
+        <link refid="classdicomhero_1_1_memory_stream_output"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memoryStreamOutput.h" line="33" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memoryStreamOutput.h" bodystart="34" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_base_stream_output_1a1c0189d9dcd95aa57eb0e7303e58d097" prot="public" virt="non-virtual"><scope>dicomhero::MemoryStreamOutput</scope><name>BaseStreamOutput</name></member>
+      <member refid="classdicomhero_1_1_base_stream_output_1acfead4cb4f56f4a4cd9288a5edb8b9c8" prot="protected" virt="non-virtual"><scope>dicomhero::MemoryStreamOutput</scope><name>BaseStreamOutput</name></member>
+      <member refid="classdicomhero_1_1_memory_stream_output_1afc4e0cd3553af7d728f487ec8b0aba9b" prot="public" virt="non-virtual"><scope>dicomhero::MemoryStreamOutput</scope><name>MemoryStreamOutput</name></member>
+      <member refid="classdicomhero_1_1_memory_stream_output_1a054e681483a52e9fa711a2d73c4c5ddd" prot="public" virt="non-virtual"><scope>dicomhero::MemoryStreamOutput</scope><name>MemoryStreamOutput</name></member>
+      <member refid="classdicomhero_1_1_memory_stream_output_1a3889339ab278c109ebfd6e066e209271" prot="public" virt="non-virtual"><scope>dicomhero::MemoryStreamOutput</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_base_stream_output_1a25c762e8fcc0cc17e5ae1a3a16636954" prot="public" virt="non-virtual" ambiguityscope="dicomhero::BaseStreamOutput::"><scope>dicomhero::MemoryStreamOutput</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_base_stream_output_1a93db7dd4fec5ee560ce61667e66da891" prot="public" virt="virtual"><scope>dicomhero::MemoryStreamOutput</scope><name>~BaseStreamOutput</name></member>
+      <member refid="classdicomhero_1_1_memory_stream_output_1a8eb71661b26616021037f292a70bd249" prot="public" virt="virtual"><scope>dicomhero::MemoryStreamOutput</scope><name>~MemoryStreamOutput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,344 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_date" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroDate</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_date_1ad467651bd8c5c8398f0cc05a0c955a61" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroDate::m_Date</definition>
+        <argsstring></argsstring>
+        <name>m_Date</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="86" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_date_1aa7e70f46283c23f0faa2fc7b15ea5d72" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroDate::year</definition>
+        <argsstring></argsstring>
+        <name>year</name>
+        <read></read>
+        <briefdescription>
+<para>Year (0 = unused) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="117" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_date_1a8e45d61ce72725718687e890a303c29a" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroDate::month</definition>
+        <argsstring></argsstring>
+        <name>month</name>
+        <read></read>
+        <briefdescription>
+<para>Month (1...12, 0 = unused) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="118" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_date_1a4d761d886a10cb6744817de16ed13e80" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroDate::day</definition>
+        <argsstring></argsstring>
+        <name>day</name>
+        <read></read>
+        <briefdescription>
+<para>Day (1...12, 0 = unused) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="119" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_date_1accb9e80d7505eb302f4617c4f0946e27" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroDate::hour</definition>
+        <argsstring></argsstring>
+        <name>hour</name>
+        <read></read>
+        <briefdescription>
+<para>Hours. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="120" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_date_1add8b351d1fc579822357b0cf49808a81" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroDate::minutes</definition>
+        <argsstring></argsstring>
+        <name>minutes</name>
+        <read></read>
+        <briefdescription>
+<para>Minutes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="121" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_date_1a37c9dbb019913fd255069f01aea4d155" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroDate::seconds</definition>
+        <argsstring></argsstring>
+        <name>seconds</name>
+        <read></read>
+        <briefdescription>
+<para>Seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="122" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_date_1a2a4115ef151155a502ebcc128abca5d5" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroDate::nanoseconds</definition>
+        <argsstring></argsstring>
+        <name>nanoseconds</name>
+        <read></read>
+        <briefdescription>
+<para>Nanoseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="123" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_date_1ab1cf11d7227771ff214f8f9f6799de83" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>int</type>
+        <definition>int DicomheroDate::offsetHours</definition>
+        <argsstring></argsstring>
+        <name>offsetHours</name>
+        <read></read>
+        <briefdescription>
+<para>Offset hours from UTC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="124" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_date_1ab48987ef37d0b68d6aaa02b55f09688c" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>int</type>
+        <definition>int DicomheroDate::offsetMinutes</definition>
+        <argsstring></argsstring>
+        <name>offsetMinutes</name>
+        <read></read>
+        <briefdescription>
+<para>Offset minutes from UTC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="125" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_date_1a6aded5e349f3622be55960b43cb33f90" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroDate::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="86" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_date_1a0d8c967a7fc0ecd3fcf7f6d4649f8f43" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroDate::initWithDicomheroDate:</definition>
+        <argsstring>(void *parameter_Date)</argsstring>
+        <name>initWithDicomheroDate:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_Date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="86" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_date_1ab652c7f56211a7775edeb052aa2a9f9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroDate::initWithYear:month:day:hour:minutes:seconds:nanoseconds:offsetHours:offsetMinutes:</definition>
+        <argsstring>(unsigned int initialYear,[month] unsigned int initialMonth,[day] unsigned int initialDay,[hour] unsigned int initialHour,[minutes] unsigned int initialMinutes,[seconds] unsigned int initialSeconds,[nanoseconds] unsigned int initialNanoseconds,[offsetHours] int initialOffsetHours,[offsetMinutes] int initialOffsetMinutes)</argsstring>
+        <name>initWithYear:month:day:hour:minutes:seconds:nanoseconds:offsetHours:offsetMinutes:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>initialYear</declname>
+        </param>
+        <param>
+          <attributes>[month]</attributes>
+          <type>unsigned int</type>
+          <declname>initialMonth</declname>
+        </param>
+        <param>
+          <attributes>[day]</attributes>
+          <type>unsigned int</type>
+          <declname>initialDay</declname>
+        </param>
+        <param>
+          <attributes>[hour]</attributes>
+          <type>unsigned int</type>
+          <declname>initialHour</declname>
+        </param>
+        <param>
+          <attributes>[minutes]</attributes>
+          <type>unsigned int</type>
+          <declname>initialMinutes</declname>
+        </param>
+        <param>
+          <attributes>[seconds]</attributes>
+          <type>unsigned int</type>
+          <declname>initialSeconds</declname>
+        </param>
+        <param>
+          <attributes>[nanoseconds]</attributes>
+          <type>unsigned int</type>
+          <declname>initialNanoseconds</declname>
+        </param>
+        <param>
+          <attributes>[offsetHours]</attributes>
+          <type>int</type>
+          <declname>initialOffsetHours</declname>
+        </param>
+        <param>
+          <attributes>[offsetMinutes]</attributes>
+          <type>int</type>
+          <declname>initialOffsetMinutes</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize the Date structure with the specified values.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initialYear</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>year (0 = unused) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialMonth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>month (1...12, 0 = unused) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialDay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>day of the month (1...31, 0 = unused) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialHour</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hour (0...23) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialMinutes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minutes (0...59) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialSeconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>seconds (0...59) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialNanoseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nanoseconds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialOffsetHours</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hours offset from UTC </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialOffsetMinutes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minutes offset from UTC </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="86" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="82" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" bodystart="84" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_date_1a4d761d886a10cb6744817de16ed13e80" prot="public" virt="non-virtual"><scope>DicomheroDate</scope><name>day</name></member>
+      <member refid="interface_dicomhero_date_1a6aded5e349f3622be55960b43cb33f90" prot="public" virt="virtual"><scope>DicomheroDate</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_date_1accb9e80d7505eb302f4617c4f0946e27" prot="public" virt="non-virtual"><scope>DicomheroDate</scope><name>hour</name></member>
+      <member refid="interface_dicomhero_date_1a0d8c967a7fc0ecd3fcf7f6d4649f8f43" prot="public" virt="virtual"><scope>DicomheroDate</scope><name>initWithDicomheroDate:</name></member>
+      <member refid="interface_dicomhero_date_1ab652c7f56211a7775edeb052aa2a9f9a" prot="public" virt="virtual"><scope>DicomheroDate</scope><name>initWithYear:month:day:hour:minutes:seconds:nanoseconds:offsetHours:offsetMinutes:</name></member>
+      <member refid="interface_dicomhero_date_1ad467651bd8c5c8398f0cc05a0c955a61" prot="public" virt="non-virtual"><scope>DicomheroDate</scope><name>m_Date</name></member>
+      <member refid="interface_dicomhero_date_1add8b351d1fc579822357b0cf49808a81" prot="public" virt="non-virtual"><scope>DicomheroDate</scope><name>minutes</name></member>
+      <member refid="interface_dicomhero_date_1a8e45d61ce72725718687e890a303c29a" prot="public" virt="non-virtual"><scope>DicomheroDate</scope><name>month</name></member>
+      <member refid="interface_dicomhero_date_1a2a4115ef151155a502ebcc128abca5d5" prot="public" virt="non-virtual"><scope>DicomheroDate</scope><name>nanoseconds</name></member>
+      <member refid="interface_dicomhero_date_1ab1cf11d7227771ff214f8f9f6799de83" prot="public" virt="non-virtual"><scope>DicomheroDate</scope><name>offsetHours</name></member>
+      <member refid="interface_dicomhero_date_1ab48987ef37d0b68d6aaa02b55f09688c" prot="public" virt="non-virtual"><scope>DicomheroDate</scope><name>offsetMinutes</name></member>
+      <member refid="interface_dicomhero_date_1a37c9dbb019913fd255069f01aea4d155" prot="public" virt="non-virtual"><scope>DicomheroDate</scope><name>seconds</name></member>
+      <member refid="interface_dicomhero_date_1aa7e70f46283c23f0faa2fc7b15ea5d72" prot="public" virt="non-virtual"><scope>DicomheroDate</scope><name>year</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

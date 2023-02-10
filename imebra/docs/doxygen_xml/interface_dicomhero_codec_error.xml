@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_codec_error" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroCodecError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSError</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_codec_corrupted_file_error" prot="public" virt="non-virtual">DicomheroCodecCorruptedFileError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_codec_image_too_big_error" prot="public" virt="non-virtual">DicomheroCodecImageTooBigError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_codec_wrong_format_error" prot="public" virt="non-virtual">DicomheroCodecWrongFormatError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_codec_wrong_transfer_syntax_error" prot="public" virt="non-virtual">DicomheroCodecWrongTransferSyntaxError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_dicom_codec_error" prot="public" virt="non-virtual">DicomheroDicomCodecError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_invalid_sequence_item_error" prot="public" virt="non-virtual">DicomheroInvalidSequenceItemError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_jpeg_codec_error" prot="public" virt="non-virtual">DicomheroJpegCodecError</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_exceptions.h" line="95" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_exceptions.h" bodystart="96" bodyend="-1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

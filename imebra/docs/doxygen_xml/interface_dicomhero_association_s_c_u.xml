@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_association_s_c_u" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroAssociationSCU</compoundname>
+    <basecompoundref refid="interface_dicomhero_association_base" prot="public" virt="non-virtual">DicomheroAssociationBase</basecompoundref>
+    <includes local="no">dicomhero_acse.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_association_s_c_u_1ad389a19c61191dde688c3f4d695a454b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroAssociationSCU::initWithThisAET:otherAET:maxInvokedOperations:maxPerformedOperations:presentationContexts:reader:writer:dimseTimeoutSeconds:error:</definition>
+        <argsstring>(NSString *thisAET,[otherAET] NSString *otherAET,[maxInvokedOperations] unsigned int invokedOperations,[maxPerformedOperations] unsigned int performedOperations,[presentationContexts] DicomheroPresentationContexts *presentationContexts,[reader] DicomheroStreamReader *pInput,[writer] DicomheroStreamWriter *pOutput,[dimseTimeoutSeconds] unsigned int dimseTimeoutSeconds,[error] NSError **pError)</argsstring>
+        <name>initWithThisAET:otherAET:maxInvokedOperations:maxPerformedOperations:presentationContexts:reader:writer:dimseTimeoutSeconds:error:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>thisAET</declname>
+        </param>
+        <param>
+          <attributes>[otherAET]</attributes>
+          <type>NSString *</type>
+          <declname>otherAET</declname>
+        </param>
+        <param>
+          <attributes>[maxInvokedOperations]</attributes>
+          <type>unsigned int</type>
+          <declname>invokedOperations</declname>
+        </param>
+        <param>
+          <attributes>[maxPerformedOperations]</attributes>
+          <type>unsigned int</type>
+          <declname>performedOperations</declname>
+        </param>
+        <param>
+          <attributes>[presentationContexts]</attributes>
+          <type><ref refid="interface_dicomhero_presentation_contexts" kindref="compound">DicomheroPresentationContexts</ref> *</type>
+          <declname>presentationContexts</declname>
+        </param>
+        <param>
+          <attributes>[reader]</attributes>
+          <type><ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> *</type>
+          <declname>pInput</declname>
+        </param>
+        <param>
+          <attributes>[writer]</attributes>
+          <type><ref refid="interface_dicomhero_stream_writer" kindref="compound">DicomheroStreamWriter</ref> *</type>
+          <declname>pOutput</declname>
+        </param>
+        <param>
+          <attributes>[dimseTimeoutSeconds]</attributes>
+          <type>unsigned int</type>
+          <declname>dimseTimeoutSeconds</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Initiates an association request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Blocks until the association has been negotiated successfully or an error occurs (pError is set).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>thisAET</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the AET of the SCU </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>otherAET</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the AET of the SCP with wich the association is negotiated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>invokedOperations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum number of parallel operations we intend to invoke when acting as a SCU </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>performedOperations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum number of parallel operations we can perform when acting as a SCP </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>presentationContexts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of proposed presentation contexts </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input stream from which the SCP receives data. When using a TCPStream the same object can act as both input and output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pOutput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output stream into which the SCP writes data. When using a TCPStream the same object can act as both input and output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dimseTimeoutSeconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DIMSE timeout, in seconds. 0 means infinite </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>may be set to one of the following errors:<itemizedlist>
+<listitem><para>ImebraCorruptedAcseMessageError</para>
+</listitem><listitem><para>DicomheroAcseSCUApplicationContextNameNotSupportedError</para>
+</listitem><listitem><para>DicomheroAcseSCUCalledAETNotRecognizedError</para>
+</listitem><listitem><para>DicomheroCodecWrongFormatError</para>
+</listitem><listitem><para>DicomheroDicomCodecDepthLimitReachedError </para>
+</listitem></itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="277" column="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents the SCU part of an association. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The initializer tries to create an association with an SCP via the <ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> and the <ref refid="interface_dicomhero_stream_writer" kindref="compound">DicomheroStreamWriter</ref> passed as parameter; when communicating through the <ref refid="interface_dicomhero_t_c_p_stream" kindref="compound">DicomheroTCPStream</ref> then the same object is used as reader and writer. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DicomheroAssociationSCU</label>
+        <link refid="interface_dicomhero_association_s_c_u"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroAssociationBase</label>
+        <link refid="interface_dicomhero_association_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DicomheroAssociationSCU</label>
+        <link refid="interface_dicomhero_association_s_c_u"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroAssociationBase</label>
+        <link refid="interface_dicomhero_association_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="291" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" bodystart="292" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_association_base_1aee3c45381f98ac68bb5c7d75f4483f5b" prot="public" virt="virtual"><scope>DicomheroAssociationSCU</scope><name>abort:</name></member>
+      <member refid="interface_dicomhero_association_base_1a65c353828f54d6f9ba7cbf85c138eda8" prot="public" virt="virtual"><scope>DicomheroAssociationSCU</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_association_base_1a794c54f60b98c32ae78db112f6d50309" prot="public" virt="virtual"><scope>DicomheroAssociationSCU</scope><name>getCommand:</name></member>
+      <member refid="interface_dicomhero_association_base_1aa1f1d25615fbe2b57de0b10630cbd497" prot="public" virt="virtual"><scope>DicomheroAssociationSCU</scope><name>getResponse:error:</name></member>
+      <member refid="interface_dicomhero_association_base_1af05815b6916dbe776ff9b15dc320fbd6" prot="public" virt="virtual"><scope>DicomheroAssociationSCU</scope><name>getTransferSyntax:error:</name></member>
+      <member refid="interface_dicomhero_association_s_c_u_1ad389a19c61191dde688c3f4d695a454b" prot="public" virt="virtual"><scope>DicomheroAssociationSCU</scope><name>initWithThisAET:otherAET:maxInvokedOperations:maxPerformedOperations:presentationContexts:reader:writer:dimseTimeoutSeconds:error:</name></member>
+      <member refid="interface_dicomhero_association_base_1a05d90b348c5b38301fca4c6e0e747d69" prot="public" virt="non-virtual"><scope>DicomheroAssociationSCU</scope><name>m_AssociationBase</name></member>
+      <member refid="interface_dicomhero_association_base_1ae4f5b8d3a1afaedd52b7a85990137992" prot="public" virt="non-virtual"><scope>DicomheroAssociationSCU</scope><name>otherAET</name></member>
+      <member refid="interface_dicomhero_association_base_1adb73d9daddf435c5902a3a84f728f5d4" prot="public" virt="virtual"><scope>DicomheroAssociationSCU</scope><name>release:</name></member>
+      <member refid="interface_dicomhero_association_base_1af44b4d767a3567d8bf11a53374d0c3f8" prot="public" virt="virtual"><scope>DicomheroAssociationSCU</scope><name>sendMessage:error:</name></member>
+      <member refid="interface_dicomhero_association_base_1a3e78cfcb5e9a5d821b369367db0606b6" prot="public" virt="non-virtual"><scope>DicomheroAssociationSCU</scope><name>thisAET</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

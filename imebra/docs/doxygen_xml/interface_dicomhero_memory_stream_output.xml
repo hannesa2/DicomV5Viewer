@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_memory_stream_output" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroMemoryStreamOutput</compoundname>
+    <basecompoundref refid="interface_dicomhero_base_stream_output" prot="public" virt="non-virtual">DicomheroBaseStreamOutput</basecompoundref>
+    <includes local="no">dicomhero_memoryStreamOutput.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_memory_stream_output_1a5795d7e8ee01df4a639dee1f750d4383" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroMemoryStreamOutput::initWithMutableMemory:</definition>
+        <argsstring>(DicomheroMutableMemory *pMemory)</argsstring>
+        <name>initWithMutableMemory:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_mutable_memory" kindref="compound">DicomheroMutableMemory</ref> *</type>
+          <declname>pMemory</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pMemory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the memory region into which the stream will write the data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_memoryStreamOutput.h" line="1" column="0"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An output stream that writes data into a memory region. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>When new data is written into the memory then it is resized as necessary. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DicomheroMemoryStreamOutput</label>
+        <link refid="interface_dicomhero_memory_stream_output"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroBaseStreamOutput</label>
+        <link refid="interface_dicomhero_base_stream_output"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DicomheroMemoryStreamOutput</label>
+        <link refid="interface_dicomhero_memory_stream_output"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroBaseStreamOutput</label>
+        <link refid="interface_dicomhero_base_stream_output"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_memoryStreamOutput.h" line="28" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_memoryStreamOutput.h" bodystart="29" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_base_stream_output_1ad370d6d9d6866aad74d44473e7607bd8" prot="public" virt="virtual"><scope>DicomheroMemoryStreamOutput</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_base_stream_output_1a19fe318f69903181d652fbb7586d0667" prot="public" virt="virtual"><scope>DicomheroMemoryStreamOutput</scope><name>initWithDicomheroBaseStreamOutput:</name></member>
+      <member refid="interface_dicomhero_memory_stream_output_1a5795d7e8ee01df4a639dee1f750d4383" prot="public" virt="virtual"><scope>DicomheroMemoryStreamOutput</scope><name>initWithMutableMemory:</name></member>
+      <member refid="interface_dicomhero_base_stream_output_1a05269da80232530f5aa4b0f920031a15" prot="public" virt="non-virtual"><scope>DicomheroMemoryStreamOutput</scope><name>m_BaseStreamOutput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_acse_rejected_association_error" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroAcseRejectedAssociationError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">DicomheroAcseError</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_s_c_p_acse_protocol_version_not_supported_error" prot="public" virt="non-virtual">DicomheroAcseSCPAcseProtocolVersionNotSupportedError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_s_c_p_no_reason_given_error" prot="public" virt="non-virtual">DicomheroAcseSCPNoReasonGivenError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_s_c_p_presentation_local_limit_exceded_error" prot="public" virt="non-virtual">DicomheroAcseSCPPresentationLocalLimitExcededError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_s_c_p_presentation_reserved_error" prot="public" virt="non-virtual">DicomheroAcseSCPPresentationReservedError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_s_c_p_presentation_temporary_congestion_error" prot="public" virt="non-virtual">DicomheroAcseSCPPresentationTemporaryCongestionError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_s_c_u_application_context_name_not_supported_error" prot="public" virt="non-virtual">DicomheroAcseSCUApplicationContextNameNotSupportedError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_s_c_u_called_a_e_t_not_recognized_error" prot="public" virt="non-virtual">DicomheroAcseSCUCalledAETNotRecognizedError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_s_c_u_calling_a_e_t_not_recognized_error" prot="public" virt="non-virtual">DicomheroAcseSCUCallingAETNotRecognizedError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_s_c_u_no_reason_given_error" prot="public" virt="non-virtual">DicomheroAcseSCUNoReasonGivenError</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_exceptions.h" line="242" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_exceptions.h" bodystart="243" bodyend="-1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_reading_data_handler_numeric" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroReadingDataHandlerNumeric</compoundname>
+    <basecompoundref refid="interface_dicomhero_reading_data_handler" prot="public" virt="non-virtual">DicomheroReadingDataHandler</basecompoundref>
+    <includes local="no">dicomhero_readingDataHandlerNumeric.h</includes>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_reading_data_handler_numeric_1a3d4d11f89057d7ebcf20f769ffb074d1" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroReadingDataHandlerNumeric::unitSize</definition>
+        <argsstring></argsstring>
+        <name>unitSize</name>
+        <read></read>
+        <briefdescription>
+<para>Returns the number of bytes occupied by the numbers handled by the data handler. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandlerNumeric.h" line="59" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandlerNumeric.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_reading_data_handler_numeric_1ab9733845b5932e4515fd7399599fdbe0" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>bool</type>
+        <definition>bool DicomheroReadingDataHandlerNumeric::isSigned</definition>
+        <argsstring></argsstring>
+        <name>isSigned</name>
+        <read></read>
+        <briefdescription>
+<para>Returns true if the numbers stored in the buffer are signed, false otherwise. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandlerNumeric.h" line="65" column="11" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandlerNumeric.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_reading_data_handler_numeric_1a910dd70656ed3eabd6ba700938efbd2f" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>bool</type>
+        <definition>bool DicomheroReadingDataHandlerNumeric::isFloat</definition>
+        <argsstring></argsstring>
+        <name>isFloat</name>
+        <read></read>
+        <briefdescription>
+<para>Returns true if the numbers stored in the buffer are floating point numbers, false otherwise. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandlerNumeric.h" line="71" column="11" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandlerNumeric.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_numeric_1ab22c4790e265b6eb39d31f693530ed79" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_memory" kindref="compound">DicomheroMemory</ref> *</type>
+        <definition>DicomheroMemory* DicomheroReadingDataHandlerNumeric::getMemory:</definition>
+        <argsstring>((swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getMemory:</name>
+        <param>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Return a ReadMemory object referencing the raw buffer&apos;s data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a ReadMemory object referencing the raw buffer&apos;s data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandlerNumeric.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_numeric_1a000f3435f8b4c123c877fad10b233eea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroReadingDataHandlerNumeric::copyTo:error:</definition>
+        <argsstring>(DicomheroWritingDataHandlerNumeric *destination,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>copyTo:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_writing_data_handler_numeric" kindref="compound">DicomheroWritingDataHandlerNumeric</ref> *</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Copies the content of the data handler into another data handler, converting the data to the destination handler data type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>the size of the destination data handler stays unchanged: if the destination too small to contain all the data to be copied then only a part of the data will be copied.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the destination data handler </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandlerNumeric.h" line="1" column="0"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Specialized dicomheroReadingDataHandler for numeric data types. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Includes few methods that allow accessing the raw memory containing the buffer&apos;s data. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DicomheroReadingDataHandlerNumeric</label>
+        <link refid="interface_dicomhero_reading_data_handler_numeric"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroReadingDataHandler</label>
+        <link refid="interface_dicomhero_reading_data_handler"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DicomheroReadingDataHandlerNumeric</label>
+        <link refid="interface_dicomhero_reading_data_handler_numeric"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroReadingDataHandler</label>
+        <link refid="interface_dicomhero_reading_data_handler"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandlerNumeric.h" line="30" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandlerNumeric.h" bodystart="31" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_reading_data_handler_numeric_1a000f3435f8b4c123c877fad10b233eea" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>copyTo:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a77feac1f6c5315e31be5c09ed1ca20d7" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a3f4340b2e681a948cdd77d0c5bb69704" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getAge:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1ab4d229effe903c76ad0fd29d0aad4417" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getDate:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1aa299f4f149d6835db6ee96f6a1f37c7d" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getDouble:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1aba1e063a0caf83c032e29c439ec40878" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getFloat:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1acbe89b4130e51aad6daee138b7b55f9a" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getInt16:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a04c1ad83d6b56749fd97f5a1f0af7109" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getInt32:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1ab1334752dd185301d46ea4f1255dc76a" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getInt64:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a9473ada3390084fc65b4f7e206def84b" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getInt8:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_numeric_1ab22c4790e265b6eb39d31f693530ed79" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getMemory:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a43834d450f16d69be37d774c92ba179e" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getPatientName:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a12c63ba368746266f2a5185469e46f0e" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getSignedLong:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a30522eca8619466aed06e42d4d459aa3" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getString:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a644deeb626a13ef066f4c6c00d737763" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getUint16:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a2f9cd9b41e5ba3d929076cd756a9b6ae" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getUint32:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a170afe12c635604c885c2154c66d58a9" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getUint64:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a86cc817df8790aecf843d759ce5750e0" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getUint8:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a5934c5750d158c14ffef54ff2040924b" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>getUnsignedLong:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a04fa9724e33158261f912db770337f9e" prot="public" virt="virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>initWithDicomheroReadingDataHandler:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_numeric_1a910dd70656ed3eabd6ba700938efbd2f" prot="public" virt="non-virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>isFloat</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_numeric_1ab9733845b5932e4515fd7399599fdbe0" prot="public" virt="non-virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>isSigned</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1adc15cb7b6523be7afc07457d2132aaa0" prot="public" virt="non-virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>m_ReadingDataHandler</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1af4a70594667e51c0ff893136a2f26566" prot="public" virt="non-virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>size</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_numeric_1a3d4d11f89057d7ebcf20f769ffb074d1" prot="public" virt="non-virtual"><scope>DicomheroReadingDataHandlerNumeric</scope><name>unitSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

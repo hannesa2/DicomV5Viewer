@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_dicom_dir_circular_reference_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::DicomDirCircularReferenceError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_dicom_dir_error" prot="public" virt="non-virtual">dicomhero::DicomDirError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_circular_reference_error_1aeecec855c5daebc8b37ac9d3829e8865" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DicomDirCircularReferenceError::DicomDirCircularReferenceError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>DicomDirCircularReferenceError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="988" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_circular_reference_error_1a4a8a5903e3a3ba048b60b6be9e5d8afe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DicomDirCircularReferenceError::DicomDirCircularReferenceError</definition>
+        <argsstring>(const DicomDirCircularReferenceError &amp;source)</argsstring>
+        <name>DicomDirCircularReferenceError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dicom_dir_circular_reference_error" kindref="compound">DicomDirCircularReferenceError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="990" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_circular_reference_error_1afc4f4346802d3188dc7e7adf45e1b284" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_dicom_dir_circular_reference_error" kindref="compound">DicomDirCircularReferenceError</ref> &amp;</type>
+        <definition>DicomDirCircularReferenceError&amp; dicomhero::DicomDirCircularReferenceError::operator=</definition>
+        <argsstring>(const DicomDirCircularReferenceError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dicom_dir_circular_reference_error" kindref="compound">DicomDirCircularReferenceError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="992" column="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_circular_reference_error_1ab09224e697590ca16b4dfbd1498e484d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::DicomDirCircularReferenceError::~DicomDirCircularReferenceError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~DicomDirCircularReferenceError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="994" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This exception is thrown when a call to DicomDir::setFirstRootRecord() or DicomDirEntry::setNextRecord() or DicomDirEntry::setFirstChildRecord() causes a circular reference between <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> objects. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dicomhero::DicomDirCircularReferenceError</label>
+        <link refid="classdicomhero_1_1_dicom_dir_circular_reference_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::DicomDirError</label>
+        <link refid="classdicomhero_1_1_dicom_dir_error"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dicomhero::DicomDirCircularReferenceError</label>
+        <link refid="classdicomhero_1_1_dicom_dir_circular_reference_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::DicomDirError</label>
+        <link refid="classdicomhero_1_1_dicom_dir_error"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="980" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="981" bodyend="995"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_dicom_dir_circular_reference_error_1aeecec855c5daebc8b37ac9d3829e8865" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirCircularReferenceError</scope><name>DicomDirCircularReferenceError</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_circular_reference_error_1a4a8a5903e3a3ba048b60b6be9e5d8afe" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirCircularReferenceError</scope><name>DicomDirCircularReferenceError</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_error_1acad05648cb660fe0c37666e351ce8eec" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirCircularReferenceError</scope><name>DicomDirError</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_error_1a91b32976a4a1dea215cdee70d8e63622" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirCircularReferenceError</scope><name>DicomDirError</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_circular_reference_error_1afc4f4346802d3188dc7e7adf45e1b284" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirCircularReferenceError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_error_1a8a64fd0538f9618ba3700c9a4e89c969" prot="public" virt="non-virtual" ambiguityscope="dicomhero::DicomDirError::"><scope>dicomhero::DicomDirCircularReferenceError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_circular_reference_error_1ab09224e697590ca16b4dfbd1498e484d" prot="public" virt="virtual"><scope>dicomhero::DicomDirCircularReferenceError</scope><name>~DicomDirCircularReferenceError</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_error_1a630fc0b71635dc7e79762ec00d24ffe7" prot="public" virt="virtual"><scope>dicomhero::DicomDirCircularReferenceError</scope><name>~DicomDirError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

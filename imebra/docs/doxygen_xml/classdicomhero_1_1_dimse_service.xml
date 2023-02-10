@@ -1,0 +1,634 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_dimse_service" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::DimseService</compoundname>
+    <includes local="no">dimse.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdicomhero_1_1_dimse_service_1a4a5e6b6c59d908b79da80652a6ac4486" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; implementation::dimseService &gt;</type>
+        <definition>std::shared_ptr&lt;implementation::dimseService&gt; dicomhero::DimseService::m_pDimseService</definition>
+        <argsstring></argsstring>
+        <name>m_pDimseService</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2328" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" bodystart="2328" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1a59ff233fc001cf8f36aa76f983be81a0" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DimseService::DimseService</definition>
+        <argsstring>(AssociationBase &amp;association)</argsstring>
+        <name>DimseService</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_association_base" kindref="compound">AssociationBase</ref> &amp;</type>
+          <declname>association</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>association</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classdicomhero_1_1_association_base" kindref="compound">AssociationBase</ref> derived class through which the DICOM commands and responses are sent and received </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2020" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1a891f664a3e9b19ad2d41243fd1a2177c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DimseService::DimseService</definition>
+        <argsstring>(const DimseService &amp;source)</argsstring>
+        <name>DimseService</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2028" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1ab75c5484130faa5b05cb858fb41145da" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::DimseService::~DimseService</definition>
+        <argsstring>()</argsstring>
+        <name>~DimseService</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2030" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1a4d609bc407757c954a81b4d17aa2e1dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref> &amp;</type>
+        <definition>DimseService&amp; dicomhero::DimseService::operator=</definition>
+        <argsstring>(const DimseService &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2032" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1aa5b90dbac24d7fed09d0e2b854641a08" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string dicomhero::DimseService::getTransferSyntax</definition>
+        <argsstring>(const std::string &amp;abstractSyntax) const</argsstring>
+        <name>getTransferSyntax</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>abstractSyntax</declname>
+        </param>
+        <briefdescription>
+<para>Returns the negotiated transfer syntax for a specific abstract syntax. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is multithread safe.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>abstractSyntax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the abstract syntax for which the transfer syntax is needed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the negotiated transfer syntax for the specified abstract syntax </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2046" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1a24d0366e5f3c45e80043473a67252958" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t dicomhero::DimseService::getNextCommandID</definition>
+        <argsstring>()</argsstring>
+        <name>getNextCommandID</name>
+        <briefdescription>
+<para>Retrieves an ID that can be used on the next command sent through this <ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is multithread safe.</para>
+<para><simplesect kind="return"><para>an ID that can be used as command ID on a command sent through this <ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2058" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1a1d924b18f3a2a9c34f77616919057fcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_dimse_command" kindref="compound">DimseCommand</ref></type>
+        <definition>DimseCommand dicomhero::DimseService::getCommand</definition>
+        <argsstring>()</argsstring>
+        <name>getCommand</name>
+        <briefdescription>
+<para>Retrieves the next incoming DICOM command. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The command blocks until the command is available or until the association is closed, either by the connected peer or by other means (e.g because of the DIMSE timeout), in which case the exception <ref refid="classdicomhero_1_1_stream_e_o_f_error" kindref="compound">StreamEOFError</ref> is thrown.</para>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para>This method can be called by several threads at once: each thread will receive a DIMSE command and can reply to the command via <ref refid="classdicomhero_1_1_dimse_service_1ad2da765997f24a3a951522b143179772" kindref="member">sendCommandOrResponse()</ref>.</para>
+<para>The underlying <ref refid="classdicomhero_1_1_association_base" kindref="compound">AssociationBase</ref> object will take care of limiting the number of incoming command according to the maximum number of performed operation negotiated for the association.</para>
+<para>Throws <ref refid="classdicomhero_1_1_stream_e_o_f_error" kindref="compound">StreamEOFError</ref> if the association is closed while the method is waiting for an incoming command.</para>
+<para><simplesect kind="return"><para>the next incoming DICOM command</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2092" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1ad2da765997f24a3a951522b143179772" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::DimseService::sendCommandOrResponse</definition>
+        <argsstring>(const DimseCommandBase &amp;command)</argsstring>
+        <name>sendCommandOrResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dimse_command_base" kindref="compound">DimseCommandBase</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Sends a DICOM command or response through the association. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is multithread safe.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the command or response to send </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2103" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1a309aa79fd4eccb7ceb834a956456c5f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_c_store_response" kindref="compound">CStoreResponse</ref></type>
+        <definition>CStoreResponse dicomhero::DimseService::getCStoreResponse</definition>
+        <argsstring>(const CStoreCommand &amp;command)</argsstring>
+        <name>getCStoreResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_c_store_command" kindref="compound">CStoreCommand</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified C-STORE command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent C-CSTORE command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2123" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1a13345fe0b97ccd4301eecf25bbb55e9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_c_get_response" kindref="compound">CGetResponse</ref></type>
+        <definition>CGetResponse dicomhero::DimseService::getCGetResponse</definition>
+        <argsstring>(const CGetCommand &amp;command)</argsstring>
+        <name>getCGetResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_c_get_command" kindref="compound">CGetCommand</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified C-GET command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent C-GET command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2143" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1a99dc6f00faf379bdbe15d1fc4c30a740" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_c_find_response" kindref="compound">CFindResponse</ref></type>
+        <definition>CFindResponse dicomhero::DimseService::getCFindResponse</definition>
+        <argsstring>(const CFindCommand &amp;command)</argsstring>
+        <name>getCFindResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_c_find_command" kindref="compound">CFindCommand</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified C-FIND command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent C-FIND command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2163" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1a802bb6b06d121e619074f6fef16040bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_c_move_response" kindref="compound">CMoveResponse</ref></type>
+        <definition>CMoveResponse dicomhero::DimseService::getCMoveResponse</definition>
+        <argsstring>(const CMoveCommand &amp;command)</argsstring>
+        <name>getCMoveResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_c_move_command" kindref="compound">CMoveCommand</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified C-MOVE command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent C-MOVE command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2183" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1a86b5645a7e65aced61f822cd19cceaf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_c_echo_response" kindref="compound">CEchoResponse</ref></type>
+        <definition>CEchoResponse dicomhero::DimseService::getCEchoResponse</definition>
+        <argsstring>(const CEchoCommand &amp;command)</argsstring>
+        <name>getCEchoResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_c_echo_command" kindref="compound">CEchoCommand</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified C-ECHO command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent C-ECHO command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2203" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1aea173c0ebca20b58b52457ba67ec14ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_n_event_report_response" kindref="compound">NEventReportResponse</ref></type>
+        <definition>NEventReportResponse dicomhero::DimseService::getNEventReportResponse</definition>
+        <argsstring>(const NEventReportCommand &amp;command)</argsstring>
+        <name>getNEventReportResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_n_event_report_command" kindref="compound">NEventReportCommand</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified N-EVENT-REPORT command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent N-EVENT-REPORT command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2223" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1a9f033648f87db092044922c1914bc1a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_n_get_response" kindref="compound">NGetResponse</ref></type>
+        <definition>NGetResponse dicomhero::DimseService::getNGetResponse</definition>
+        <argsstring>(const NGetCommand &amp;command)</argsstring>
+        <name>getNGetResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_n_get_command" kindref="compound">NGetCommand</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified N-GET command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent N-GET command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2243" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1a5073b7f7e5d7a77c9973f52c300b758b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_n_set_response" kindref="compound">NSetResponse</ref></type>
+        <definition>NSetResponse dicomhero::DimseService::getNSetResponse</definition>
+        <argsstring>(const NSetCommand &amp;command)</argsstring>
+        <name>getNSetResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_n_set_command" kindref="compound">NSetCommand</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified N-SET command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent N-SET command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2263" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1ab4d4fd2ab51406fab4f9b60cc749ae11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_n_action_response" kindref="compound">NActionResponse</ref></type>
+        <definition>NActionResponse dicomhero::DimseService::getNActionResponse</definition>
+        <argsstring>(const NActionCommand &amp;command)</argsstring>
+        <name>getNActionResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_n_action_command" kindref="compound">NActionCommand</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified N-ACTION command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent N-ACTION command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2283" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1a327e55725fc07400f51cfd4ed5471066" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_n_create_response" kindref="compound">NCreateResponse</ref></type>
+        <definition>NCreateResponse dicomhero::DimseService::getNCreateResponse</definition>
+        <argsstring>(const NCreateCommand &amp;command)</argsstring>
+        <name>getNCreateResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_n_create_command" kindref="compound">NCreateCommand</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified N-CREATE command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent N-CREATE command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2303" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_service_1a197c6f9fef85e4d96b9b74c7bcdb5850" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_n_delete_response" kindref="compound">NDeleteResponse</ref></type>
+        <definition>NDeleteResponse dicomhero::DimseService::getNDeleteResponse</definition>
+        <argsstring>(const NDeleteCommand &amp;command)</argsstring>
+        <name>getNDeleteResponse</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_n_delete_command" kindref="compound">NDeleteCommand</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified N-DELETE command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent N-DELETE command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2323" column="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_dimse_service_1a8fc42f3b51281e5a0b566df47328b019" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::shared_ptr&lt; implementation::dimseService &gt; &amp;</type>
+        <definition>const std::shared_ptr&lt;implementation::dimseService&gt;&amp; getDimseServiceImplementation</definition>
+        <argsstring>(const DimseService &amp;service)</argsstring>
+        <name>getDimseServiceImplementation</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref> &amp;</type>
+          <declname>service</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2327" column="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Sends and receives DICOM commands and responses through a <ref refid="classdicomhero_1_1_association_s_c_u" kindref="compound">AssociationSCU</ref> or an <ref refid="classdicomhero_1_1_association_s_c_p" kindref="compound">AssociationSCP</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref> supplies <ref refid="classdicomhero_1_1_dimse_service_1a24d0366e5f3c45e80043473a67252958" kindref="member">getNextCommandID()</ref> in order to obtain the ID for the commands sent through the <ref refid="classdicomhero_1_1_dimse_service" kindref="compound">DimseService</ref> object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>association</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classdicomhero_1_1_association_base" kindref="compound">AssociationBase</ref> derived class through which the DICOM commands and responses are sent and received </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" line="2008" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dimse.h" bodystart="2009" bodyend="2330"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_dimse_service_1a59ff233fc001cf8f36aa76f983be81a0" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>DimseService</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1a891f664a3e9b19ad2d41243fd1a2177c" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>DimseService</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1a86b5645a7e65aced61f822cd19cceaf6" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>getCEchoResponse</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1a99dc6f00faf379bdbe15d1fc4c30a740" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>getCFindResponse</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1a13345fe0b97ccd4301eecf25bbb55e9c" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>getCGetResponse</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1a802bb6b06d121e619074f6fef16040bc" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>getCMoveResponse</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1a1d924b18f3a2a9c34f77616919057fcf" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>getCommand</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1a309aa79fd4eccb7ceb834a956456c5f9" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>getCStoreResponse</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1a8fc42f3b51281e5a0b566df47328b019" prot="private" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>getDimseServiceImplementation</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1ab4d4fd2ab51406fab4f9b60cc749ae11" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>getNActionResponse</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1a327e55725fc07400f51cfd4ed5471066" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>getNCreateResponse</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1a197c6f9fef85e4d96b9b74c7bcdb5850" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>getNDeleteResponse</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1aea173c0ebca20b58b52457ba67ec14ec" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>getNEventReportResponse</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1a24d0366e5f3c45e80043473a67252958" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>getNextCommandID</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1a9f033648f87db092044922c1914bc1a2" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>getNGetResponse</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1a5073b7f7e5d7a77c9973f52c300b758b" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>getNSetResponse</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1aa5b90dbac24d7fed09d0e2b854641a08" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>getTransferSyntax</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1a4a5e6b6c59d908b79da80652a6ac4486" prot="private" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>m_pDimseService</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1a4d609bc407757c954a81b4d17aa2e1dc" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1ad2da765997f24a3a951522b143179772" prot="public" virt="non-virtual"><scope>dicomhero::DimseService</scope><name>sendCommandOrResponse</name></member>
+      <member refid="classdicomhero_1_1_dimse_service_1ab75c5484130faa5b05cb858fb41145da" prot="public" virt="virtual"><scope>dicomhero::DimseService</scope><name>~DimseService</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

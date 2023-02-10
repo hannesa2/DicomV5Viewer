@@ -1,0 +1,410 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dicomhero__exceptions_8h" kind="file" language="C++">
+    <compoundname>dicomhero_exceptions.h</compoundname>
+    <includes local="no">Foundation/Foundation.h</includes>
+    <includedby refid="dicomhero6_8h" local="yes">dicomhero6.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>dicomhero_exceptions.h</label>
+        <link refid="dicomhero__exceptions_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Foundation/Foundation.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="interface_dicomhero_lut_error" prot="public">DicomheroLutError</innerclass>
+    <innerclass refid="interface_dicomhero_lut_corrupted_error" prot="public">DicomheroLutCorruptedError</innerclass>
+    <innerclass refid="interface_dicomhero_missing_data_element_error" prot="public">DicomheroMissingDataElementError</innerclass>
+    <innerclass refid="interface_dicomhero_missing_group_error" prot="public">DicomheroMissingGroupError</innerclass>
+    <innerclass refid="interface_dicomhero_missing_tag_error" prot="public">DicomheroMissingTagError</innerclass>
+    <innerclass refid="interface_dicomhero_missing_buffer_error" prot="public">DicomheroMissingBufferError</innerclass>
+    <innerclass refid="interface_dicomhero_missing_item_error" prot="public">DicomheroMissingItemError</innerclass>
+    <innerclass refid="interface_dicomhero_stream_error" prot="public">DicomheroStreamError</innerclass>
+    <innerclass refid="interface_dicomhero_stream_open_error" prot="public">DicomheroStreamOpenError</innerclass>
+    <innerclass refid="interface_dicomhero_stream_read_error" prot="public">DicomheroStreamReadError</innerclass>
+    <innerclass refid="interface_dicomhero_stream_write_error" prot="public">DicomheroStreamWriteError</innerclass>
+    <innerclass refid="interface_dicomhero_t_c_p_connection_refused" prot="public">DicomheroTCPConnectionRefused</innerclass>
+    <innerclass refid="interface_dicomhero_t_c_p_address_already_in_use" prot="public">DicomheroTCPAddressAlreadyInUse</innerclass>
+    <innerclass refid="interface_dicomhero_permission_denied_error" prot="public">DicomheroPermissionDeniedError</innerclass>
+    <innerclass refid="interface_dicomhero_address_error" prot="public">DicomheroAddressError</innerclass>
+    <innerclass refid="interface_dicomhero_address_try_again_error" prot="public">DicomheroAddressTryAgainError</innerclass>
+    <innerclass refid="interface_dicomhero_address_no_name_error" prot="public">DicomheroAddressNoNameError</innerclass>
+    <innerclass refid="interface_dicomhero_address_service_not_supported_error" prot="public">DicomheroAddressServiceNotSupportedError</innerclass>
+    <innerclass refid="interface_dicomhero_dictionary_error" prot="public">DicomheroDictionaryError</innerclass>
+    <innerclass refid="interface_dicomhero_dictionary_unknown_tag_error" prot="public">DicomheroDictionaryUnknownTagError</innerclass>
+    <innerclass refid="interface_dicomhero_dictionary_unknown_data_type_error" prot="public">DicomheroDictionaryUnknownDataTypeError</innerclass>
+    <innerclass refid="interface_dicomhero_charset_conversion_error" prot="public">DicomheroCharsetConversionError</innerclass>
+    <innerclass refid="interface_dicomhero_charset_conversion_no_table_error" prot="public">DicomheroCharsetConversionNoTableError</innerclass>
+    <innerclass refid="interface_dicomhero_charset_conversion_no_supported_table_error" prot="public">DicomheroCharsetConversionNoSupportedTableError</innerclass>
+    <innerclass refid="interface_dicomhero_charset_conversion_cannot_convert" prot="public">DicomheroCharsetConversionCannotConvert</innerclass>
+    <innerclass refid="interface_dicomhero_codec_error" prot="public">DicomheroCodecError</innerclass>
+    <innerclass refid="interface_dicomhero_codec_wrong_format_error" prot="public">DicomheroCodecWrongFormatError</innerclass>
+    <innerclass refid="interface_dicomhero_codec_corrupted_file_error" prot="public">DicomheroCodecCorruptedFileError</innerclass>
+    <innerclass refid="interface_dicomhero_codec_wrong_transfer_syntax_error" prot="public">DicomheroCodecWrongTransferSyntaxError</innerclass>
+    <innerclass refid="interface_dicomhero_codec_image_too_big_error" prot="public">DicomheroCodecImageTooBigError</innerclass>
+    <innerclass refid="interface_dicomhero_invalid_sequence_item_error" prot="public">DicomheroInvalidSequenceItemError</innerclass>
+    <innerclass refid="interface_dicomhero_data_handler_error" prot="public">DicomheroDataHandlerError</innerclass>
+    <innerclass refid="interface_dicomhero_data_handler_conversion_error" prot="public">DicomheroDataHandlerConversionError</innerclass>
+    <innerclass refid="interface_dicomhero_data_handler_corrupted_buffer_error" prot="public">DicomheroDataHandlerCorruptedBufferError</innerclass>
+    <innerclass refid="interface_dicomhero_data_handler_invalid_data_error" prot="public">DicomheroDataHandlerInvalidDataError</innerclass>
+    <innerclass refid="interface_dicomhero_data_set_error" prot="public">DicomheroDataSetError</innerclass>
+    <innerclass refid="interface_dicomhero_data_set_different_format_error" prot="public">DicomheroDataSetDifferentFormatError</innerclass>
+    <innerclass refid="interface_dicomhero_data_set_unknown_transfer_syntax_error" prot="public">DicomheroDataSetUnknownTransferSyntaxError</innerclass>
+    <innerclass refid="interface_dicomhero_data_set_wrong_frame_error" prot="public">DicomheroDataSetWrongFrameError</innerclass>
+    <innerclass refid="interface_dicomhero_data_set_image_doesnt_exist_error" prot="public">DicomheroDataSetImageDoesntExistError</innerclass>
+    <innerclass refid="interface_dicomhero_data_set_image_palette_color_is_read_only" prot="public">DicomheroDataSetImagePaletteColorIsReadOnly</innerclass>
+    <innerclass refid="interface_dicomhero_data_set_corrupted_offset_table_error" prot="public">DicomheroDataSetCorruptedOffsetTableError</innerclass>
+    <innerclass refid="interface_dicomhero_dicom_dir_error" prot="public">DicomheroDicomDirError</innerclass>
+    <innerclass refid="interface_dicomhero_dicom_dir_circular_reference_error" prot="public">DicomheroDicomDirCircularReferenceError</innerclass>
+    <innerclass refid="interface_dicomhero_image_error" prot="public">DicomheroImageError</innerclass>
+    <innerclass refid="interface_dicomhero_image_unknown_depth_error" prot="public">DicomheroImageUnknownDepthError</innerclass>
+    <innerclass refid="interface_dicomhero_image_unknown_color_space_error" prot="public">DicomheroImageUnknownColorSpaceError</innerclass>
+    <innerclass refid="interface_dicomhero_image_invalid_size_error" prot="public">DicomheroImageInvalidSizeError</innerclass>
+    <innerclass refid="interface_dicomhero_transform_error" prot="public">DicomheroTransformError</innerclass>
+    <innerclass refid="interface_dicomhero_transform_invalid_area_error" prot="public">DicomheroTransformInvalidAreaError</innerclass>
+    <innerclass refid="interface_dicomhero_transform_different_high_bit_error" prot="public">DicomheroTransformDifferentHighBitError</innerclass>
+    <innerclass refid="interface_dicomhero_transform_different_color_spaces_error" prot="public">DicomheroTransformDifferentColorSpacesError</innerclass>
+    <innerclass refid="interface_dicomhero_color_transform_error" prot="public">DicomheroColorTransformError</innerclass>
+    <innerclass refid="interface_dicomhero_color_transform_wrong_color_space_error" prot="public">DicomheroColorTransformWrongColorSpaceError</innerclass>
+    <innerclass refid="interface_dicomhero_color_transforms_factory_error" prot="public">DicomheroColorTransformsFactoryError</innerclass>
+    <innerclass refid="interface_dicomhero_color_transforms_factory_no_transform_error" prot="public">DicomheroColorTransformsFactoryNoTransformError</innerclass>
+    <innerclass refid="interface_dicomhero_stream_e_o_f_error" prot="public">DicomheroStreamEOFError</innerclass>
+    <innerclass refid="interface_dicomhero_stream_closed_error" prot="public">DicomheroStreamClosedError</innerclass>
+    <innerclass refid="interface_dicomhero_modality_v_o_i_l_u_t_error" prot="public">DicomheroModalityVOILUTError</innerclass>
+    <innerclass refid="interface_dicomhero_dicom_codec_error" prot="public">DicomheroDicomCodecError</innerclass>
+    <innerclass refid="interface_dicomhero_dicom_codec_depth_limit_reached_error" prot="public">DicomheroDicomCodecDepthLimitReachedError</innerclass>
+    <innerclass refid="interface_dicomhero_jpeg_codec_error" prot="public">DicomheroJpegCodecError</innerclass>
+    <innerclass refid="interface_dicomhero_jpeg_codec_cannot_handle_syntax_error" prot="public">DicomheroJpegCodecCannotHandleSyntaxError</innerclass>
+    <innerclass refid="interface_dicomhero_bad_alloc" prot="public">DicomheroBadAlloc</innerclass>
+    <innerclass refid="interface_dicomhero_memory_error" prot="public">DicomheroMemoryError</innerclass>
+    <innerclass refid="interface_dicomhero_memory_size_error" prot="public">DicomheroMemorySizeError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_error" prot="public">DicomheroAcseError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_corrupted_message_error" prot="public">DicomheroAcseCorruptedMessageError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_no_transfer_syntax_error" prot="public">DicomheroAcseNoTransferSyntaxError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_presentation_context_not_requested_error" prot="public">DicomheroAcsePresentationContextNotRequestedError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_wrong_role_error" prot="public">DicomheroAcseWrongRoleError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_wrong_id_error" prot="public">DicomheroAcseWrongIdError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_wrong_response_id_error" prot="public">DicomheroAcseWrongResponseIdError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_wrong_command_id_error" prot="public">DicomheroAcseWrongCommandIdError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_rejected_association_error" prot="public">DicomheroAcseRejectedAssociationError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_s_c_u_no_reason_given_error" prot="public">DicomheroAcseSCUNoReasonGivenError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_s_c_u_application_context_name_not_supported_error" prot="public">DicomheroAcseSCUApplicationContextNameNotSupportedError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_s_c_u_calling_a_e_t_not_recognized_error" prot="public">DicomheroAcseSCUCallingAETNotRecognizedError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_s_c_u_called_a_e_t_not_recognized_error" prot="public">DicomheroAcseSCUCalledAETNotRecognizedError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_s_c_p_no_reason_given_error" prot="public">DicomheroAcseSCPNoReasonGivenError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_s_c_p_acse_protocol_version_not_supported_error" prot="public">DicomheroAcseSCPAcseProtocolVersionNotSupportedError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_s_c_p_presentation_reserved_error" prot="public">DicomheroAcseSCPPresentationReservedError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_s_c_p_presentation_temporary_congestion_error" prot="public">DicomheroAcseSCPPresentationTemporaryCongestionError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_s_c_p_presentation_local_limit_exceded_error" prot="public">DicomheroAcseSCPPresentationLocalLimitExcededError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_too_many_operations_performed_error" prot="public">DicomheroAcseTooManyOperationsPerformedError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_too_many_operations_invoked_error" prot="public">DicomheroAcseTooManyOperationsInvokedError</innerclass>
+    <innerclass refid="interface_dicomhero_acse_no_payload_error" prot="public">DicomheroAcseNoPayloadError</innerclass>
+    <innerclass refid="interface_dicomhero_dimse_error" prot="public">DicomheroDimseError</innerclass>
+    <innerclass refid="interface_dicomhero_dimse_invalid_command" prot="public">DicomheroDimseInvalidCommand</innerclass>
+    <innerclass refid="interface_dicomhero_u_i_d_generator_error" prot="public">DicomheroUIDGeneratorError</innerclass>
+    <innerclass refid="interface_dicomhero_non_registered_u_i_d_generator" prot="public">DicomheroNonRegisteredUIDGenerator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>2005<sp/>-<sp/>2021<sp/>by<sp/>Paolo<sp/>Brandoli/Binarno<sp/>s.p.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">DICOMHero/Imebra<sp/>is<sp/>available<sp/>for<sp/>free<sp/>under<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">The<sp/>full<sp/>text<sp/>of<sp/>the<sp/>license<sp/>is<sp/>available<sp/>in<sp/>the<sp/>file<sp/>license.rst</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>in<sp/>the<sp/>project<sp/>root<sp/>folder.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">If<sp/>you<sp/>do<sp/>not<sp/>want<sp/>to<sp/>be<sp/>bound<sp/>by<sp/>the<sp/>GPL<sp/>terms<sp/>(such<sp/>as<sp/>the<sp/>requirement</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>that<sp/>your<sp/>application<sp/>must<sp/>also<sp/>be<sp/>GPL),<sp/>you<sp/>may<sp/>purchase<sp/>a<sp/>commercial</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>license<sp/>for<sp/>DICOMHero/Imebra<sp/>from<sp/>the<sp/>DICOMHero’s<sp/>website<sp/>(https://dicomhero.com).</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(dicomheroObjcExceptions__INCLUDED_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dicomheroObjcExceptions__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Foundation/Foundation.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroLutError:<sp/>NSError</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroLutCorruptedError:<sp/>NSError</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroMissingDataElementError:<sp/>NSError</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroMissingGroupError:<sp/>DicomheroMissingDataElementError</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroMissingTagError:<sp/>DicomheroMissingDataElementError</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroMissingBufferError:<sp/>DicomheroMissingDataElementError</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroMissingItemError:<sp/>DicomheroMissingDataElementError</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroStreamError:<sp/>NSError</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroStreamOpenError<sp/>:<sp/>DicomheroStreamError</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroStreamReadError<sp/>:<sp/>DicomheroStreamError</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroStreamWriteError<sp/>:<sp/>DicomheroStreamError</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroTCPConnectionRefused:<sp/>DicomheroStreamOpenError</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroTCPAddressAlreadyInUse:<sp/>DicomheroStreamOpenError</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroPermissionDeniedError:<sp/>NSError</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAddressError:<sp/>NSError</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAddressTryAgainError:<sp/>DicomheroAddressError</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAddressNoNameError:<sp/>DicomheroAddressError</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAddressServiceNotSupportedError:<sp/>DicomheroAddressError</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDictionaryError:<sp/>NSError</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDictionaryUnknownTagError:<sp/>DicomheroDictionaryError</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDictionaryUnknownDataTypeError:<sp/>DicomheroDictionaryError</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroCharsetConversionError:<sp/>NSError</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroCharsetConversionNoTableError:<sp/>DicomheroCharsetConversionError</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroCharsetConversionNoSupportedTableError:<sp/>DicomheroCharsetConversionError</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroCharsetConversionCannotConvert:<sp/>DicomheroCharsetConversionError</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroCodecError:<sp/>NSError</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroCodecWrongFormatError:<sp/>DicomheroCodecError</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroCodecCorruptedFileError:<sp/>DicomheroCodecError</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroCodecWrongTransferSyntaxError:<sp/>DicomheroCodecError</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroCodecImageTooBigError:<sp/>DicomheroCodecError</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroInvalidSequenceItemError:<sp/>DicomheroCodecError</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDataHandlerError:<sp/>NSError</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDataHandlerConversionError:<sp/>DicomheroDataHandlerError</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDataHandlerCorruptedBufferError:<sp/>DicomheroDataHandlerError</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDataHandlerInvalidDataError:<sp/>DicomheroDataHandlerError</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDataSetError:<sp/>NSError</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDataSetDifferentFormatError:<sp/>DicomheroDataSetError</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDataSetUnknownTransferSyntaxError:<sp/>DicomheroDataSetError</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDataSetWrongFrameError:<sp/>DicomheroDataSetError</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDataSetImageDoesntExistError:<sp/>DicomheroDataSetError</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDataSetImagePaletteColorIsReadOnly:<sp/>DicomheroDataSetError</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDataSetCorruptedOffsetTableError:<sp/>DicomheroDataSetError</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDicomDirError:<sp/>NSError</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDicomDirCircularReferenceError:<sp/>DicomheroDicomDirError</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroImageError:<sp/>NSError</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroImageUnknownDepthError:<sp/>DicomheroImageError</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroImageUnknownColorSpaceError:<sp/>DicomheroImageError</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroImageInvalidSizeError:<sp/>DicomheroImageError</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroTransformError:<sp/>NSError</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroTransformInvalidAreaError:<sp/>DicomheroTransformError</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroTransformDifferentHighBitError:<sp/>DicomheroTransformError</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroTransformDifferentColorSpacesError:<sp/>DicomheroTransformError</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroColorTransformError:<sp/>DicomheroTransformError</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroColorTransformWrongColorSpaceError:<sp/>DicomheroColorTransformError</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroColorTransformsFactoryError:<sp/>DicomheroTransformError</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroColorTransformsFactoryNoTransformError:<sp/>DicomheroColorTransformsFactoryError</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroStreamEOFError<sp/>:<sp/>DicomheroStreamError</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroStreamClosedError:<sp/>DicomheroStreamEOFError</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroModalityVOILUTError:<sp/>DicomheroTransformError</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDicomCodecError:<sp/>DicomheroCodecError</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDicomCodecDepthLimitReachedError:<sp/>DicomheroDicomCodecError</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroJpegCodecError:<sp/>DicomheroCodecError</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroJpegCodecCannotHandleSyntaxError:<sp/>DicomheroJpegCodecError</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroBadAlloc:<sp/>NSError</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroMemoryError:<sp/>NSError</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroMemorySizeError:<sp/>DicomheroMemoryError</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseError:<sp/>NSError</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseCorruptedMessageError:<sp/>DicomheroAcseError</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseNoTransferSyntaxError:<sp/>DicomheroAcseError</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcsePresentationContextNotRequestedError:<sp/>DicomheroAcseError</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseWrongRoleError:<sp/>DicomheroAcseError</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseWrongIdError:<sp/>DicomheroAcseError</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseWrongResponseIdError:<sp/>DicomheroAcseWrongIdError</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseWrongCommandIdError:<sp/>DicomheroAcseWrongIdError</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseRejectedAssociationError:<sp/>DicomheroAcseError</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseSCUNoReasonGivenError:<sp/>DicomheroAcseRejectedAssociationError</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseSCUApplicationContextNameNotSupportedError:<sp/>DicomheroAcseRejectedAssociationError</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseSCUCallingAETNotRecognizedError:<sp/>DicomheroAcseRejectedAssociationError</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseSCUCalledAETNotRecognizedError:<sp/>DicomheroAcseRejectedAssociationError</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseSCPNoReasonGivenError:<sp/>DicomheroAcseRejectedAssociationError</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseSCPAcseProtocolVersionNotSupportedError:<sp/>DicomheroAcseRejectedAssociationError</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseSCPPresentationReservedError:<sp/>DicomheroAcseRejectedAssociationError</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseSCPPresentationTemporaryCongestionError:<sp/>DicomheroAcseRejectedAssociationError</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseSCPPresentationLocalLimitExcededError:<sp/>DicomheroAcseRejectedAssociationError</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseTooManyOperationsPerformedError:<sp/>DicomheroAcseError</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseTooManyOperationsInvokedError:<sp/>DicomheroAcseError</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroAcseNoPayloadError:<sp/>DicomheroAcseError</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDimseError:<sp/>NSError</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroDimseInvalidCommand:<sp/>DicomheroDimseError</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroUIDGeneratorError:<sp/>NSError</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">DicomheroNonRegisteredUIDGenerator:<sp/>DicomheroUIDGeneratorError</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>dicomheroObjcExceptions__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_exceptions.h"/>
+  </compounddef>
+</doxygen>

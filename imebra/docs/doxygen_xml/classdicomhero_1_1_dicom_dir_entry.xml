@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_dicom_dir_entry" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::DicomDirEntry</compoundname>
+    <includes local="no">dicomDirEntry.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_dicom_dir_entry_1a435d1ec40c90f6b11ae3dfbd30114243" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class DicomDir</definition>
+        <argsstring></argsstring>
+        <name>DicomDir</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_dicom_dir" kindref="compound">DicomDir</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="51" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_dicom_dir_entry_1ae2a2bc05478c1945bbc27deaafc2824a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::shared_ptr&lt; implementation::directoryRecord &gt; &amp;</type>
+        <definition>const std::shared_ptr&lt;implementation::directoryRecord&gt;&amp; getDicomDirEntryImplementation</definition>
+        <argsstring>(const DicomDirEntry &amp;dicomDirEntry)</argsstring>
+        <name>getDicomDirEntryImplementation</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> &amp;</type>
+          <declname>dicomDirEntry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="154" column="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdicomhero_1_1_dicom_dir_entry_1a60b023d52362d4264255f9fe4ca9b48a" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; dicomhero::implementation::directoryRecord &gt;</type>
+        <definition>std::shared_ptr&lt;dicomhero::implementation::directoryRecord&gt; dicomhero::DicomDirEntry::m_pDirectoryRecord</definition>
+        <argsstring></argsstring>
+        <name>m_pDirectoryRecord</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="155" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_entry_1a90dc047b0a33c0bd8a523eabb75ca23a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DicomDirEntry::DicomDirEntry</definition>
+        <argsstring>(const DicomDirEntry &amp;source)</argsstring>
+        <name>DicomDirEntry</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source DICOMDIR entry </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="61" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_entry_1ae421df3de2d42508495e1da7614a465c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> &amp;</type>
+        <definition>DicomDirEntry&amp; dicomhero::DicomDirEntry::operator=</definition>
+        <argsstring>(const DicomDirEntry &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_entry_1ac67e9e0071e4280e12ddae5bb44e1a94" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::DicomDirEntry::~DicomDirEntry</definition>
+        <argsstring>()</argsstring>
+        <name>~DicomDirEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="65" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_entry_1af0546763fb8934e20542c74e4b13b119" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        <definition>DataSet dicomhero::DicomDirEntry::getEntryDataSet</definition>
+        <argsstring>() const</argsstring>
+        <name>getEntryDataSet</name>
+        <briefdescription>
+<para>Return the <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> managed by the <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> managed by the <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="72" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_entry_1a79c62453fcd2fa4fdc5d3681f5078dd5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dicomhero::DicomDirEntry::hasNextEntry</definition>
+        <argsstring>() const</argsstring>
+        <name>hasNextEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="74" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_entry_1ac69488ea298f843368ed8cbefba9975f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref></type>
+        <definition>DicomDirEntry dicomhero::DicomDirEntry::getNextEntry</definition>
+        <argsstring>() const</argsstring>
+        <name>getNextEntry</name>
+        <briefdescription>
+<para>Return the next sibling entry (on the same depth level). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the next <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> is missing (this is the last entry) then return a null pointer.</para>
+<para><simplesect kind="return"><para>the next sibling <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> object, or a null pointer if the next sibling <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> does not exist </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="85" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_entry_1ad7074034d894fbaf620f7247f66b18c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dicomhero::DicomDirEntry::hasChildren</definition>
+        <argsstring>() const</argsstring>
+        <name>hasChildren</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="87" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_entry_1ae0aa4592fc673a9fad9890ab3327b540" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref></type>
+        <definition>DicomDirEntry dicomhero::DicomDirEntry::getFirstChildEntry</definition>
+        <argsstring>() const</argsstring>
+        <name>getFirstChildEntry</name>
+        <briefdescription>
+<para>Return the first child entry (one level deeper). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the first child <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> is missing then return a null pointer.</para>
+<para><simplesect kind="return"><para>the first child <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> object, or a null pointer if there aren&apos;t any children </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="97" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_entry_1a0dc0a92413deba66a7d8514a4ecb508c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>fileParts_t</type>
+        <definition>fileParts_t dicomhero::DicomDirEntry::getFileParts</definition>
+        <argsstring>() const</argsstring>
+        <name>getFileParts</name>
+        <briefdescription>
+<para>Returns the parts that form the name of the file referenced by the <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a list of strings that form the name of the file referenced by the <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> object. The last item in the list is the file name, while the preceding items contain the folders names. For instance, on Linux the parts &quot;folder0&quot;, &quot;folder1&quot;, &quot;fileName&quot; represent the path &quot;folder0/folder1/fileName&quot; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="109" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_entry_1af91d88f0aeb61b54cf110c32cf51935b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string dicomhero::DicomDirEntry::getTypeString</definition>
+        <argsstring>() const</argsstring>
+        <name>getTypeString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="111" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_entry_1a500383ee931234a0f0bf492cdddbf8ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        <definition>DataSet dicomhero::DicomDirEntry::getEntryDataSet</definition>
+        <argsstring>()</argsstring>
+        <name>getEntryDataSet</name>
+        <briefdescription>
+<para>Return the <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> managed by the <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> managed by the <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="118" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_entry_1a0e7da0743adff033a5cf610553ca41d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::DicomDirEntry::setNextEntry</definition>
+        <argsstring>(const DicomDirEntry &amp;nextEntry)</argsstring>
+        <name>setNextEntry</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> &amp;</type>
+          <declname>nextEntry</declname>
+        </param>
+        <briefdescription>
+<para>Set the next sibling entry (one the same depth level). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nextEntry</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the next sibling <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="125" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_entry_1aa3a7affe79b47f36a8906aef7ed0bf5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::DicomDirEntry::setFirstChildEntry</definition>
+        <argsstring>(const DicomDirEntry &amp;firstChildEntry)</argsstring>
+        <name>setFirstChildEntry</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> &amp;</type>
+          <declname>firstChildEntry</declname>
+        </param>
+        <briefdescription>
+<para>Set the first child entry (one level deeper). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>firstChildEntry</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first child <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="132" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_entry_1a045d214d9e626c62cea8bd37d2d4dc59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::DicomDirEntry::setFileParts</definition>
+        <argsstring>(const fileParts_t &amp;fileParts)</argsstring>
+        <name>setFileParts</name>
+        <param>
+          <type>const fileParts_t &amp;</type>
+          <declname>fileParts</declname>
+        </param>
+        <briefdescription>
+<para>Set the parts that form the name of the file referenced by the <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileParts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a list of strings that form the name of the file referenced by the <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> object. The last item in the list is the file name, while the preceding items contain the folders names. For instance, on Linux the parts &quot;folder0&quot;, &quot;folder1&quot;, &quot;fileName&quot; represent the path &quot;folder0/folder1/fileName&quot; </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="145" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdicomhero_1_1_dicom_dir_entry_1a84b1c3000b748517aabffe4b64ac3932" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DicomDirEntry::DicomDirEntry</definition>
+        <argsstring>(const std::shared_ptr&lt; dicomhero::implementation::directoryRecord &gt; &amp;pDirectoryRecord)</argsstring>
+        <name>DicomDirEntry</name>
+        <param>
+          <type>const std::shared_ptr&lt; dicomhero::implementation::directoryRecord &gt; &amp;</type>
+          <declname>pDirectoryRecord</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="151" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a single immutable DICOMDIR entry. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Each entry can be followed by a sibling entry (on the same depth level) or can point to its first child entry (one level deeper).</para>
+<para>Each <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> object manages a <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> which is used to store the entry&apos;s data. The <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> objects managed by <ref refid="classdicomhero_1_1_dicom_dir_entry" kindref="compound">DicomDirEntry</ref> objects are inserted as sequence items into the <ref refid="classdicomhero_1_1_dicom_dir" kindref="compound">DicomDir</ref>&apos;s <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>. </para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" line="48" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/dicomDirEntry.h" bodystart="49" bodyend="157"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1a435d1ec40c90f6b11ae3dfbd30114243" prot="private" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>DicomDir</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1a90dc047b0a33c0bd8a523eabb75ca23a" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>DicomDirEntry</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1a84b1c3000b748517aabffe4b64ac3932" prot="protected" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>DicomDirEntry</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1ae2a2bc05478c1945bbc27deaafc2824a" prot="private" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>getDicomDirEntryImplementation</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1af0546763fb8934e20542c74e4b13b119" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>getEntryDataSet</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1a500383ee931234a0f0bf492cdddbf8ad" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>getEntryDataSet</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1a0dc0a92413deba66a7d8514a4ecb508c" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>getFileParts</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1ae0aa4592fc673a9fad9890ab3327b540" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>getFirstChildEntry</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1ac69488ea298f843368ed8cbefba9975f" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>getNextEntry</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1af91d88f0aeb61b54cf110c32cf51935b" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>getTypeString</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1ad7074034d894fbaf620f7247f66b18c4" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>hasChildren</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1a79c62453fcd2fa4fdc5d3681f5078dd5" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>hasNextEntry</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1a60b023d52362d4264255f9fe4ca9b48a" prot="private" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>m_pDirectoryRecord</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1ae421df3de2d42508495e1da7614a465c" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1a045d214d9e626c62cea8bd37d2d4dc59" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>setFileParts</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1aa3a7affe79b47f36a8906aef7ed0bf5e" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>setFirstChildEntry</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1a0e7da0743adff033a5cf610553ca41d0" prot="public" virt="non-virtual"><scope>dicomhero::DicomDirEntry</scope><name>setNextEntry</name></member>
+      <member refid="classdicomhero_1_1_dicom_dir_entry_1ac67e9e0071e4280e12ddae5bb44e1a94" prot="public" virt="virtual"><scope>dicomhero::DicomDirEntry</scope><name>~DicomDirEntry</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

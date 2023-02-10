@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_transforms_chain" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroTransformsChain</compoundname>
+    <basecompoundref refid="interface_dicomhero_transform" prot="public" virt="non-virtual">DicomheroTransform</basecompoundref>
+    <includes local="no">dicomhero_transformsChain.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_transforms_chain_1af023b4e69e7b21075fa331f13821113d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroTransformsChain::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transformsChain.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_transforms_chain_1a8bc54e5539c700d8d8479e0e94eb545d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroTransformsChain::addTransform:</definition>
+        <argsstring>(DicomheroTransform *pTransform)</argsstring>
+        <name>addTransform:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_transform" kindref="compound">DicomheroTransform</ref> *</type>
+          <declname>pTransform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transformsChain.h" line="1" column="0"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="interface_dicomhero_transforms_chain" kindref="compound">DicomheroTransformsChain</ref> applies a series of DicomheroTransforms to the input image. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Transforms can be added to the chain by using addTransform(). </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DicomheroTransformsChain</label>
+        <link refid="interface_dicomhero_transforms_chain"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroTransform</label>
+        <link refid="interface_dicomhero_transform"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DicomheroTransformsChain</label>
+        <link refid="interface_dicomhero_transforms_chain"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroTransform</label>
+        <link refid="interface_dicomhero_transform"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transformsChain.h" line="26" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transformsChain.h" bodystart="27" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_transforms_chain_1a8bc54e5539c700d8d8479e0e94eb545d" prot="public" virt="virtual"><scope>DicomheroTransformsChain</scope><name>addTransform:</name></member>
+      <member refid="interface_dicomhero_transform_1ad9d04a806e4bebe54e24d29ea3da55ae" prot="public" virt="virtual"><scope>DicomheroTransformsChain</scope><name>allocateOutputImage:width:height:error:</name></member>
+      <member refid="interface_dicomhero_transform_1ac5a31bb888afc5b3fd803d8687b13e2c" prot="public" virt="virtual"><scope>DicomheroTransformsChain</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_transforms_chain_1af023b4e69e7b21075fa331f13821113d" prot="public" virt="virtual"><scope>DicomheroTransformsChain</scope><name>init</name></member>
+      <member refid="interface_dicomhero_transform_1a1687c0c599392ae018d492b632a15606" prot="public" virt="virtual"><scope>DicomheroTransformsChain</scope><name>initWithDicomheroTransform:</name></member>
+      <member refid="interface_dicomhero_transform_1ace5bf9d1b55c0da9acc5f4da95a6fac9" prot="public" virt="non-virtual"><scope>DicomheroTransformsChain</scope><name>isEmpty</name></member>
+      <member refid="interface_dicomhero_transform_1ab02bb499ed0d612d635ed38b32222b05" prot="public" virt="non-virtual"><scope>DicomheroTransformsChain</scope><name>m_Transform</name></member>
+      <member refid="interface_dicomhero_transform_1a8496d9da5f64878a1ddd4ebd4cd23149" prot="public" virt="virtual"><scope>DicomheroTransformsChain</scope><name>runTransform:inputTopLeftX:inputTopLeftY:inputWidth:inputHeight:outputImage:outputTopLeftX:outputTopLeftY:error:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

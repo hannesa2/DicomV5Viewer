@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_memory_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::MemoryError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::runtime_error</basecompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_memory_size_error" prot="public" virt="non-virtual">dicomhero::MemorySizeError</derivedcompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_memory_error_1ad3a2675814a552c69c29a435b70d2a0a" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::MemoryError::MemoryError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>MemoryError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1453" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_error_1aaeb362177be0855648676cc3995372b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::MemoryError::MemoryError</definition>
+        <argsstring>(const MemoryError &amp;source)</argsstring>
+        <name>MemoryError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_memory_error" kindref="compound">MemoryError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1455" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_error_1a6ecf0646daf59f5992baf7cecf09b4a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_memory_error" kindref="compound">MemoryError</ref> &amp;</type>
+        <definition>MemoryError&amp; dicomhero::MemoryError::operator=</definition>
+        <argsstring>(const MemoryError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_memory_error" kindref="compound">MemoryError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1457" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_error_1a5d8073c432d93684015b7bd2e910b431" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::MemoryError::~MemoryError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~MemoryError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1459" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base exception for errors in <ref refid="classdicomhero_1_1_memory" kindref="compound">Memory</ref> and <ref refid="classdicomhero_1_1_mutable_memory" kindref="compound">MutableMemory</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dicomhero::MemoryError</label>
+        <link refid="classdicomhero_1_1_memory_error"/>
+      </node>
+      <node id="2">
+        <label>dicomhero::MemorySizeError</label>
+        <link refid="classdicomhero_1_1_memory_size_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1445" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="1446" bodyend="1460"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_memory_error_1ad3a2675814a552c69c29a435b70d2a0a" prot="public" virt="non-virtual"><scope>dicomhero::MemoryError</scope><name>MemoryError</name></member>
+      <member refid="classdicomhero_1_1_memory_error_1aaeb362177be0855648676cc3995372b5" prot="public" virt="non-virtual"><scope>dicomhero::MemoryError</scope><name>MemoryError</name></member>
+      <member refid="classdicomhero_1_1_memory_error_1a6ecf0646daf59f5992baf7cecf09b4a3" prot="public" virt="non-virtual"><scope>dicomhero::MemoryError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_memory_error_1a5d8073c432d93684015b7bd2e910b431" prot="public" virt="virtual"><scope>dicomhero::MemoryError</scope><name>~MemoryError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
