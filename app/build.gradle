@@ -6,7 +6,7 @@ android {
     compileSdk 35
     defaultConfig {
         applicationId "info.hannes.dicom"
-        minSdkVersion 26
+        minSdkVersion 28
         versionCode getGitCommitCount()
         versionName getTag()
         buildConfigField "String", "GIT_REPOSITORY", "\"" + getGitOriginRemote() + "\""
@@ -95,9 +95,9 @@ dependencies {
 
 tasks.register("downloadImebra", Copy) {
     mkdir project.file("libs")
-    def f = project.file("libs/imebrajni5-release.aar")
+    def f = project.file('libs/dicomhero6-release-6.2.0.aar')
     if (!f.exists()) {
-        new URL("https://imebra.com/wp-content/uploads/source_distribution/imebrajni5-release.aar").withInputStream { i -> f.withOutputStream { it << i } }
+        new URL('https://dicomhero.com/wp-content/uploads/dicomhero_6_2_0_0/dicomhero6-release-6.2.0.aar').withInputStream { i -> f.withOutputStream { it << i } }
     }
 }
 
