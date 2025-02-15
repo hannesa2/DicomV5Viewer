@@ -1,8 +1,8 @@
 package info.hannes.dicom
 
-import android.app.Application
+import info.hannes.logcat.LoggingApplication
 
-class DicomApplication : Application() {
+class DicomApplication : LoggingApplication() {
 
     override fun onCreate() {
         super.onCreate()
