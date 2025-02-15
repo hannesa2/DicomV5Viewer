@@ -5,7 +5,6 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageView
@@ -16,6 +15,7 @@ import com.imebra.*
 import info.hannes.dicom.AppUpdater.checkUpdate
 import info.hannes.dicom.AppUpdater.checkUpdateDialog
 import info.hannes.dicom.databinding.ActivityMainBinding
+import timber.log.Timber
 import java.nio.ByteBuffer
 
 
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         binding.seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
                 val documentFile = childDocuments?.get(progress)
-                Log.d("xx file", documentFile?.uri.toString())
+                Timber.d(documentFile?.uri.toString())
                 documentFile?.let { openAsset(it.uri) }
             }
 
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 123 && resultCode == RESULT_OK) {
             data!!.data?.let {
-                Log.d("xx dir", it.toString())
+                Timber.d(it.toString())
                 getFiles(it)?.let { it1 ->
                     binding.seekBar.max = (childDocuments?.count() ?: 1) - 1
                     openAsset(it1)
@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getFiles(data: Uri): Uri? {
         var filePath: Uri? = null
-        Log.d("", "URI = $data")
+        Timber.d("URI = $data")
         if ("content" == data.scheme) {
             val documentsTree = DocumentFile.fromTreeUri(application, data)
             childDocuments = documentsTree?.listFiles()?.toCachingList()
