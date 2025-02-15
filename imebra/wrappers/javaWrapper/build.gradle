@@ -1,0 +1,66 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.4.1"
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    repositories {
+        maven { url 'https://repo1.maven.org/maven2' }
+    }
+
+    compileSdkVersion 33
+    defaultConfig {
+        minSdkVersion 28
+        targetSdkVersion 33
+        versionCode 1
+        versionName "5.3.3.0"
+        externalNativeBuild {
+            ndkBuild {
+                arguments "NDK_APPLICATION_MK:=jni/Application.mk"
+            }
+        }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    externalNativeBuild{
+        ndkBuild{
+            path "jni/Android.mk"
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java {
+                srcDir 'src'
+            }
+        }
+        androidTest {
+            manifest.srcFile 'AndroidManifest.xml'
+            java {
+                srcDir 'javaTests/src'
+            }
+
+        }
+    }
+
+    libraryVariants.all { variant ->
+        variant.outputs.all { output ->
+            if (outputFile != null && outputFileName.endsWith('.aar')) {
+                outputFileName = "imebrajni5-${variant.buildType.name}.aar"
+            }
+        }
+    }
+}
+
+repositories {
+    google()
+    jcenter()
+}

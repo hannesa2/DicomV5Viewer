@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compiling Imebra &mdash; Imebra 5.3.3.0 changeset 2c706290 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="next" title="Logging" href="logging.html" />
+    <link rel="prev" title="Changes log" href="changes_log.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Imebra
+          </a>
+              <div class="version">
+                5.3.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p><span class="caption-text">Download Imebra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Downloading Imebra</a></li>
+</ul>
+<p><span class="caption-text">Legal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gplv2.html">GNU General Public License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Commercial license</a></li>
+</ul>
+<p><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes_log.html">Changes log</a></li>
+</ul>
+<p><span class="caption-text">User documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Compiling Imebra</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#compiling-the-c-version-of-imebra">Compiling the C++ version of Imebra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-imebra">Building Imebra</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#windows-specific-instructions">Windows specific instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#os-x-ios-specific-instructions">OS-X/iOS specific instructions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#compiling-the-android-version-of-imebra">Compiling the Android version of Imebra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Building Imebra</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#compiling-the-java-version-of-imebra-for-linux">Compiling the Java version of Imebra for Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Building Imebra</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#compiling-the-c-code">Compiling the C++ code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compiling-the-java-code">Compiling the Java code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#loading-the-native-library">Loading the native library</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add_to_project.html">Adding Imebra to your project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_tour.html">Tutorial</a></li>
+</ul>
+<p><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="objects_lifecycle.html">Objects lifecycle and Object ownership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_data_classes.html">DICOM dataSet &amp; tags classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_uid_generation_classes.html">UID generation classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stream_classes.html">Stream classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imaging_classes.html">Imaging classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transforms_classes.html">Transforms classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="memory_management_classes.html">Memory management classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acse_classes.html">ACSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dimse_classes.html">DIMSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicomdir_classes.html">DICOMDIR classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_dictionary_classes.html">DICOM dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definition_classes.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exception_classes.html">Exceptions</a></li>
+</ul>
+<p><span class="caption-text">Build distributions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html">Creating the source distribution from the code in the VCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html#versioning">Versioning</a></li>
+</ul>
+<p><span class="caption-text">Requirements &amp; Risks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html#risks">Risks</a></li>
+</ul>
+<p><span class="caption-text">Standard operating procedures</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sop.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sop.html#sops">SOPs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Compiling Imebra</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/compiling_imebra.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="compiling-imebra">
+<span id="compiling-imebra-label"></span><h1>Compiling Imebra<a class="headerlink" href="#compiling-imebra" title="Permalink to this headline">¶</a></h1>
+<p>This section explains how to compile Imebra from the source distribution.
+You can download the source distribution from <a class="reference external" href="https://imebra.com">https://imebra.com</a>, or you can create a source distribution
+by following the instructions at <a class="reference internal" href="build_distribution.html#build-distribution-label"><span class="std std-ref">Creating the source distribution from the code in the VCS</span></a></p>
+<p>The result of the Imebra compilation is a shared library for your operating system of choice.</p>
+<p>The Imebra Source Distribution includes:</p>
+<ul class="simple">
+<li><p>the source code for the library</p></li>
+<li><p>the source code for the tests</p></li>
+<li><p>pre-built documentation</p></li>
+</ul>
+<section id="compiling-the-c-version-of-imebra">
+<h2>Compiling the C++ version of Imebra<a class="headerlink" href="#compiling-the-c-version-of-imebra" title="Permalink to this headline">¶</a></h2>
+<section id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<p>In order to build the library from the Imebra Source Distribution you need:</p>
+<ul class="simple">
+<li><p>the source distribution of Imebra, available here: <a class="reference external" href="https://imebra.com/get-it/">https://imebra.com/get-it/</a></p></li>
+<li><p>a modern C++ compiler (GCC, clang, Visual Studio, etc)</p></li>
+<li><p>CMake version 2.8 or newer (<a class="reference external" href="https://cmake.org/">https://cmake.org/</a>)</p></li>
+</ul>
+</section>
+<section id="building-imebra">
+<h3>Building Imebra<a class="headerlink" href="#building-imebra" title="Permalink to this headline">¶</a></h3>
+<p>The root folder of the source distributions contains a CMakeLists file, which contains the information
+needed by CMake to generate a solution file for your platform (a make file, a VisualStudio solution, etc).</p>
+<p>To generate the Imebra shared library, execute the following steps:</p>
+<ol class="arabic simple">
+<li><p>Create a folder that will contain the result of the compilation (artifacts)</p></li>
+<li><p>cd into the created artifacts folder</p></li>
+<li><p>execute cmake with the path to the Imebra’s distributrion root folder as parameter</p></li>
+<li><p>execute cmake with the –build option, and on Windows optionally specify the build configuration</p></li>
+<li><p>run the tests with ctest -V .</p></li>
+</ol>
+<p>For instance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">md</span> <span class="n">artifacts</span>
+<span class="n">cd</span> <span class="n">artifacts</span>
+<span class="n">cmake</span> <span class="n">imebra_location</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span>
+<span class="n">ctest</span> <span class="o">-</span><span class="n">V</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>The first CMake command will generate a solution file for the your platform: this will be a
+make file on Linux, a VisualStudio solution of Windows, an XCode project on Mac.</p>
+<p>The second CMake command with the –build option will launch make, VisualStudio or the build
+chain defined on your machine.</p>
+<p>The CTest command will launch the test application.</p>
+<section id="windows-specific-instructions">
+<h4>Windows specific instructions<a class="headerlink" href="#windows-specific-instructions" title="Permalink to this headline">¶</a></h4>
+<p>On Windows cmake will, by default, generate a 32 bit solution for the most recent Visual Studio compiler installed on
+the system.</p>
+<p>It is possible to build a 64 bit version of the library by explicitly specifying a 64 bit generator when launching cmake.</p>
+<p>The cmake generators available on Windows include:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Visual Studio 16 2019 [arch] = Generates Visual Studio 2019 project files.</dt><dd><p>Optional [arch] can be “Win64” or “ARM”.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Visual Studio 15 2017 [arch] = Generates Visual Studio 2017 project files.</dt><dd><p>Optional [arch] can be “Win64” or “ARM”.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Visual Studio 14 2015 [arch] = Generates Visual Studio 2015 project files.</dt><dd><p>Optional [arch] can be “Win64” or “ARM”.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Visual Studio 12 2013 [arch] = Generates Visual Studio 2013 project files.</dt><dd><p>Optional [arch] can be “Win64” or “ARM”.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Visual Studio 11 2012 [arch] = Generates Visual Studio 2012 project files.</dt><dd><p>Optional [arch] can be “Win64” or “ARM”.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Visual Studio 10 2010 [arch] = Generates Visual Studio 2010 project files.</dt><dd><p>Optional [arch] can be “Win64” or “IA64”.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Visual Studio 9 2008 [arch]  = Generates Visual Studio 2008 project files.</dt><dd><p>Optional [arch] can be “Win64” or “IA64”.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Visual Studio 8 2005 [arch]  = Generates Visual Studio 2005 project files.</dt><dd><p>Optional [arch] can be “Win64”.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>To generate the 64 bit version of the library just specify the proper generator and architecture.
+For instance the following script will compile a Release 64 bit version of imebra using Visual Studio 14 (2015):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">artifacts_64bit_release</span>
+<span class="n">cd</span> <span class="n">artifacts_64bit_release</span>
+<span class="n">cmake</span> <span class="o">-</span><span class="n">G</span> <span class="s2">&quot;Visual Studio 14 2015 Win64&quot;</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="o">=</span><span class="n">Release</span> <span class="n">imebra_location</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span>
+</pre></div>
+</div>
+<p>The following example will compile a Debug 64 bit version of imebra using Visual Studio 14 (2015):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">artifacts_64bit_debug</span>
+<span class="n">cd</span> <span class="n">artifacts_64bit_debug</span>
+<span class="n">cmake</span> <span class="o">-</span><span class="n">G</span> <span class="s2">&quot;Visual Studio 14 2015 Win64&quot;</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="o">=</span><span class="n">Debug</span> <span class="n">imebra_location</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Debug</span>
+</pre></div>
+</div>
+<p>To generate the 32 bit version of the library, just omit the architecture after the name of the cmake generator:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">artifacts_32bit_debug</span>
+<span class="n">cd</span> <span class="n">artifacts_32bit_debug</span>
+<span class="n">cmake</span> <span class="o">-</span><span class="n">G</span> <span class="s2">&quot;Visual Studio 14 2015&quot;</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="o">=</span><span class="n">Debug</span>  <span class="n">imebra_location</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Debug</span>
+</pre></div>
+</div>
+</section>
+<section id="os-x-ios-specific-instructions">
+<h4>OS-X/iOS specific instructions<a class="headerlink" href="#os-x-ios-specific-instructions" title="Permalink to this headline">¶</a></h4>
+<p>On macOS, CMake will generate a build for macOS or iOS.</p>
+<p>It is recommended to use the CMake Xcode generator when generating the build script.</p>
+<p>The build script for macOS is the default one and can be obtained by running the following commands
+(replace PATH_TO_IMEBRA_DISTRIBUTION with the path to Imebra):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">build_imebra_macos</span>
+<span class="n">cd</span> <span class="n">build_imebra_macos</span>
+<span class="n">cmake</span> <span class="o">-</span><span class="n">GXcode</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="o">=</span><span class="n">Release</span> <span class="n">PATH_TO_IMEBRA_DISTRIBUTION</span>
+</pre></div>
+</div>
+<p>The generated build script can be opened directly with Xcode or can be built by running the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span>
+</pre></div>
+</div>
+<p>In order to generate a build for iOS you have to set the CMAKE_SYSTEM_NAME variable
+(replace PATH_TO_IMEBRA_DISTRIBUTION with the path to Imebra):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">build_imebra_macos</span>
+<span class="n">cd</span> <span class="n">build_imebra_macos</span>
+<span class="n">cmake</span> <span class="o">-</span><span class="n">GXcode</span> <span class="o">-</span><span class="n">DCMAKE_SYSTEM_NAME</span><span class="o">=</span><span class="n">iOS</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="o">=</span><span class="n">Release</span> <span class="n">PATH_TO_IMEBRA_DISTRIBUTION</span>
+</pre></div>
+</div>
+<p>As for the macOS build, the generated script can be opened directly with Xcode or can be built by running one of the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span>
+</pre></div>
+</div>
+<p>or (for the simulator build):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">--</span> <span class="o">-</span><span class="n">sdk</span> <span class="n">iphonesimulator</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>iOS applications based on Imebra need to be linked also with libiconv.a or libiconv.tbd.</p>
+</div>
+<p>More information about the cross compilation for iOS can be found here: <a class="reference external" href="https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html#cross-compiling-for-ios-tvos-or-watchos">https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html#cross-compiling-for-ios-tvos-or-watchos</a></p>
+<section id="using-imebra-with-swift">
+<h5>Using Imebra with Swift<a class="headerlink" href="#using-imebra-with-swift" title="Permalink to this headline">¶</a></h5>
+<p>Imebra can be imported into a Swift project.</p>
+<p>After compiling the library for OS-X or iOS, import the library’s Objective-C header into your Swift project.</p>
+<p>When using the command line add the flag -import-objc-header.
+For instance, the following command line instruction launches the swift compiler and instructs it to load the imebra header and link with Imebra and iconv</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">swiftc</span> <span class="o">-</span><span class="n">import</span><span class="o">-</span><span class="n">objc</span><span class="o">-</span><span class="n">header</span> <span class="n">imebra_location</span><span class="o">/</span><span class="n">wrappers</span><span class="o">/</span><span class="n">objectivec</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">imebraobjc</span><span class="o">/</span><span class="n">imebra</span><span class="o">.</span><span class="n">h</span> <span class="n">myCode</span><span class="o">.</span><span class="n">swift</span> <span class="o">-</span><span class="n">Lbuild_imebra_location</span> <span class="o">-</span><span class="n">liconv</span> <span class="o">-</span><span class="n">lc</span><span class="o">++</span> <span class="o">-</span><span class="n">limebra</span> <span class="o">-</span><span class="n">o</span> <span class="n">myCodeApp</span>
+</pre></div>
+</div>
+<p>When using XCode open the target Build Settings and under “Swift Compiler/ObjectiveC Bridging Header” specify the path to imebra_location/wrappers/objectivec/include/imebraobjc/imebra.h.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="compiling-the-android-version-of-imebra">
+<h2>Compiling the Android version of Imebra<a class="headerlink" href="#compiling-the-android-version-of-imebra" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h3>Prerequisites<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>In order to build the Android version of Imebra you need:</p>
+<ul class="simple">
+<li><p>the source distribution of Imebra, available here: <a class="reference external" href="https://imebra.com/get-it/">https://imebra.com/get-it/</a></p></li>
+<li><p>Android Studio</p></li>
+<li><p>Android SDK</p></li>
+<li><p>Android NDK</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Building Imebra<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>The Android version of the library needs both the Java source code (located in the wrappers/javaWrapper folder) and the C++ source code (located in the library folder)</p>
+<p>To generate the Imebra Jar library:</p>
+<ul class="simple">
+<li><p>Launch Android Studio</p></li>
+<li><p>Open the gradle project in the wrappers/javaWrapper folder</p></li>
+<li><p>Build the project</p></li>
+</ul>
+</section>
+</section>
+<section id="compiling-the-java-version-of-imebra-for-linux">
+<span id="compiling-imebra-java-linux"></span><h2>Compiling the Java version of Imebra for Linux<a class="headerlink" href="#compiling-the-java-version-of-imebra-for-linux" title="Permalink to this headline">¶</a></h2>
+<section id="id3">
+<h3>Prerequisites<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>In order to build the Java version of Imebra you need:</p>
+<ul class="simple">
+<li><p>the source distribution of Imebra, available here: <a class="reference external" href="https://imebra.com/get-it/">https://imebra.com/get-it/</a></p></li>
+<li><p>a modern C++ compiler (GCC or clang)</p></li>
+<li><p>CMake version 2.8 or newer (<a class="reference external" href="https://cmake.org/">https://cmake.org/</a>)</p></li>
+<li><p>the Java JDK</p></li>
+<li><p>the Java JNI headers</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Building Imebra<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>The Java version of the library needs both the Java source code (located in the wrappers/javaWrapper folder) and the C++ source code (located in the library folder).</p>
+<p>The C++ code will be compiled into a dynamic library, while the java code can be added directly to your app or can be compiled into a Jar.</p>
+<section id="compiling-the-c-code">
+<h4>Compiling the C++ code<a class="headerlink" href="#compiling-the-c-code" title="Permalink to this headline">¶</a></h4>
+<p>To generate the native Imebra dynamic library (libimebrajni):</p>
+<ol class="arabic simple">
+<li><p>Create a folder that will contain the result of the compilation (artifacts)</p></li>
+<li><p>cd into the created artifacts folder</p></li>
+<li><p>execute cmake with the path to the Imebra’s “wrappers/javaWrapper” folder as parameter</p></li>
+<li><p>execute cmake with the –build option</p></li>
+</ol>
+<p>For instance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">md</span> <span class="n">artifacts</span>
+<span class="n">cd</span> <span class="n">artifacts</span>
+<span class="n">cmake</span> <span class="n">imebra_location</span><span class="o">/</span><span class="n">wrapper</span><span class="o">/</span><span class="n">javaWrappers</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>The first CMake command will generate a solution file for the your platform, the second CMake command with the –build option will launch make.</p>
+</section>
+<section id="compiling-the-java-code">
+<h4>Compiling the Java code<a class="headerlink" href="#compiling-the-java-code" title="Permalink to this headline">¶</a></h4>
+<p>The Java code is in the source distribution folder “wrappers/javaWrapper/src”. Compile it with the java compiler (javac) and pack it into a Jar
+or add it directly to your Java application.</p>
+</section>
+</section>
+<section id="loading-the-native-library">
+<h3>Loading the native library<a class="headerlink" href="#loading-the-native-library" title="Permalink to this headline">¶</a></h3>
+<p>Before your application can call any method on any Imebra class it must load the native dynamic library.</p>
+<p>In your application startup code add:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="n">loadLibrary</span><span class="p">(</span><span class="s2">&quot;imebrajni&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>When you launch the application, specify the folder containing the native dynamic library by setting the “java.library.path” property.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="changes_log.html" class="btn btn-neutral float-left" title="Changes log" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="logging.html" class="btn btn-neutral float-right" title="Logging" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="copyright.html">Copyright</a> 2019, Paolo Brandoli.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

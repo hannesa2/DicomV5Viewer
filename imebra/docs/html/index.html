@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imebra &mdash; Imebra 5.3.3.0 changeset 2c706290 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="next" title="Downloading Imebra" href="download.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> Imebra
+          </a>
+              <div class="version">
+                5.3.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p><span class="caption-text">Download Imebra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Downloading Imebra</a></li>
+</ul>
+<p><span class="caption-text">Legal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gplv2.html">GNU General Public License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Commercial license</a></li>
+</ul>
+<p><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes_log.html">Changes log</a></li>
+</ul>
+<p><span class="caption-text">User documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="compiling_imebra.html">Compiling Imebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add_to_project.html">Adding Imebra to your project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_tour.html">Tutorial</a></li>
+</ul>
+<p><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="objects_lifecycle.html">Objects lifecycle and Object ownership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_data_classes.html">DICOM dataSet &amp; tags classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_uid_generation_classes.html">UID generation classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stream_classes.html">Stream classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imaging_classes.html">Imaging classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transforms_classes.html">Transforms classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="memory_management_classes.html">Memory management classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acse_classes.html">ACSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dimse_classes.html">DIMSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicomdir_classes.html">DICOMDIR classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_dictionary_classes.html">DICOM dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definition_classes.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exception_classes.html">Exceptions</a></li>
+</ul>
+<p><span class="caption-text">Build distributions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html">Creating the source distribution from the code in the VCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html#versioning">Versioning</a></li>
+</ul>
+<p><span class="caption-text">Requirements &amp; Risks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html#risks">Risks</a></li>
+</ul>
+<p><span class="caption-text">Standard operating procedures</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sop.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sop.html#sops">SOPs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Imebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>Imebra</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="imebra">
+<h1>Imebra<a class="headerlink" href="#imebra" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p><span class="caption-text">Download Imebra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Downloading Imebra</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p><span class="caption-text">Legal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gplv2.html">GNU General Public License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gplv2.html#preamble">Preamble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gplv2.html#terms-and-conditions-for-copying-distribution-and-modification">TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gplv2.html#no-warranty">NO WARRANTY</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Commercial license</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes_log.html">Changes log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changes_log.html#version-release-this-version">Version 5.3.3.0 changeset 2c706290 (this version)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes_log.html#version-5-3-2-0">Version 5.3.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes_log.html#version-5-3-1-0">Version 5.3.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes_log.html#version-5-3-0-0">Version 5.3.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes_log.html#version-5-2-1-2">Version 5.2.1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes_log.html#version-5-2-1-1">Version 5.2.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes_log.html#version-5-2-1-0">Version 5.2.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes_log.html#version-5-2-0-0">Version 5.2.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes_log.html#version-5-1-0-0">Version 5.1.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes_log.html#version-5-0-1-1">Version 5.0.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes_log.html#version-5-0-1-0">Version 5.0.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes_log.html#version-5-0-0-0">Version 5.0.0.0</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p><span class="caption-text">User documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="compiling_imebra.html">Compiling Imebra</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="compiling_imebra.html#compiling-the-c-version-of-imebra">Compiling the C++ version of Imebra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="compiling_imebra.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compiling_imebra.html#building-imebra">Building Imebra</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="compiling_imebra.html#compiling-the-android-version-of-imebra">Compiling the Android version of Imebra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="compiling_imebra.html#id1">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compiling_imebra.html#id2">Building Imebra</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="compiling_imebra.html#compiling-the-java-version-of-imebra-for-linux">Compiling the Java version of Imebra for Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="compiling_imebra.html#id3">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compiling_imebra.html#id4">Building Imebra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compiling_imebra.html#loading-the-native-library">Loading the native library</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="logging.html#linux-specific-instructions">Linux specific instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html#apple-specific-instructions">Apple specific instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html#android-specific-instructions">Android specific instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html#windows-specific-instructions">Windows specific instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="add_to_project.html">Adding Imebra to your project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="add_to_project.html#add-imebra-to-a-c-project">Add Imebra to a C++ project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add_to_project.html#add-imebra-to-an-android-project">Add Imebra to an Android project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add_to_project.html#add-imebra-to-a-java-project">Add Imebra to a Java project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quick_tour.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick_tour.html#include-files">Include files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_tour.html#loading-files">Loading files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_tour.html#reading-the-tag-s-values">Reading the tag’s values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_tour.html#retrieving-an-image">Retrieving an image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_tour.html#displaying-an-image">Displaying an image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_tour.html#creating-an-empty-dataset">Creating an empty DataSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_tour.html#modifying-the-dataset-s-content">Modifying the dataset’s content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_tour.html#embedding-images-into-the-dataset">Embedding images into the dataSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_tour.html#saving-a-dataset">Saving a DataSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_tour.html#sending-a-dicom-command-through-an-scu">Sending a DICOM command through an SCU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_tour.html#implementign-a-dicom-scp">Implementign a DICOM SCP</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound" id="api-docs">
+<p><span class="caption-text">API</span><a class="headerlink" href="#api-docs" title="Permalink to this toctree">¶</a></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="objects_lifecycle.html">Objects lifecycle and Object ownership</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="objects_lifecycle.html#objects-are-handles">Objects are handles</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_data_classes.html">DICOM dataSet &amp; tags classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dicom_data_classes.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dicom_data_classes.html#data-storage">Data storage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dicom_data_classes.html#dataset">DataSet</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dicom_data_classes.html#mutabledataset">MutableDataSet</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id3">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id4">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dicom_data_classes.html#tag">Tag</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id6">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id7">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dicom_data_classes.html#mutabletag">MutableTag</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id9">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id10">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dicom_data_classes.html#data-access">Data access</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dicom_data_classes.html#tagid">TagId</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id12">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id13">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dicom_data_classes.html#readingdatahandler">ReadingDataHandler</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id15">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id16">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dicom_data_classes.html#readingdatahandlernumeric">ReadingDataHandlerNumeric</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id18">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id19">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dicom_data_classes.html#writingdatahandler">WritingDataHandler</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id21">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id22">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dicom_data_classes.html#writingdatahandlernumeric">WritingDataHandlerNumeric</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id24">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id25">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dicom_data_classes.html#date">Date</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id26">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id27">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dicom_data_classes.html#age">Age</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id28">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id29">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dicom_data_classes.html#patientname">PatientName</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id30">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id31">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dicom_data_classes.html#unicodepatientname">UnicodePatientName</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id32">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_data_classes.html#id33">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_uid_generation_classes.html">UID generation classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dicom_uid_generation_classes.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dicom_uid_generation_classes.html#factory">Factory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dicom_uid_generation_classes.html#uidgeneratorfactory">UIDGeneratorFactory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_uid_generation_classes.html#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_uid_generation_classes.html#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dicom_uid_generation_classes.html#generators">Generators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dicom_uid_generation_classes.html#baseuidgenerator">BaseUIDGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_uid_generation_classes.html#id3">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_uid_generation_classes.html#id4">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dicom_uid_generation_classes.html#serialnumberuidgenerator">SerialNumberUIDGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_uid_generation_classes.html#id6">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_uid_generation_classes.html#id7">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dicom_uid_generation_classes.html#randomuidgenerator">RandomUIDGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_uid_generation_classes.html#id9">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_uid_generation_classes.html#id10">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="stream_classes.html">Stream classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="stream_classes.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stream_classes.html#id1">Stream classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stream_classes.html#codecfactory">CodecFactory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stream_classes.html#basestreaminput">BaseStreamInput</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id2">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id3">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stream_classes.html#basestreamoutput">BaseStreamOutput</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id4">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id5">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stream_classes.html#streamreader">StreamReader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id6">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id7">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stream_classes.html#streamwriter">StreamWriter</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id8">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id9">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stream_classes.html#filestreaminput">FileStreamInput</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id10">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id11">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stream_classes.html#filestreamoutput">FileStreamOutput</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id12">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id13">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stream_classes.html#memorystreaminput">MemoryStreamInput</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id14">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id15">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stream_classes.html#memorystreamoutput">MemoryStreamOutput</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id16">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id17">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stream_classes.html#streamtimeout">StreamTimeout</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id18">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id19">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stream_classes.html#pipe-classes">Pipe classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stream_classes.html#pipe">Pipe</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id20">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id21">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stream_classes.html#tcp-classes">TCP classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stream_classes.html#tcpstream">TCPStream</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id23">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id24">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stream_classes.html#tcplistener">TCPListener</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id25">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id26">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stream_classes.html#tcpaddress">TCPAddress</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id27">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id28">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stream_classes.html#tcppassiveaddress">TCPPassiveAddress</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id29">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id30">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stream_classes.html#tcpactiveaddress">TCPActiveAddress</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id31">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream_classes.html#id32">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="imaging_classes.html">Imaging classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="imaging_classes.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imaging_classes.html#image-storage">Image storage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="imaging_classes.html#image">Image</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="imaging_classes.html#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaging_classes.html#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaging_classes.html#mutableimage">MutableImage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="imaging_classes.html#id1">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaging_classes.html#id2">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaging_classes.html#overlay">Overlay</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="imaging_classes.html#id3">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaging_classes.html#id4">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaging_classes.html#mutableoverlay">MutableOverlay</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="imaging_classes.html#id5">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaging_classes.html#id6">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="imaging_classes.html#image-rendering">Image rendering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="imaging_classes.html#drawbitmap">DrawBitmap</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="imaging_classes.html#id7">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaging_classes.html#id8">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="transforms_classes.html">Transforms classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="transforms_classes.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transforms_classes.html#base-transform-class">Base Transform class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="transforms_classes.html#transform">Transform</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="transforms_classes.html#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transforms_classes.html#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="transforms_classes.html#transformschain">TransformsChain</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="transforms_classes.html#id1">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transforms_classes.html#id2">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="transforms_classes.html#modality-and-presentation-transforms">Modality and Presentation transforms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="transforms_classes.html#voilut">VOILUT</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="transforms_classes.html#id3">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transforms_classes.html#id4">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="transforms_classes.html#voidescription">VOIDescription</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="transforms_classes.html#id5">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transforms_classes.html#id6">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="transforms_classes.html#lut">LUT</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="transforms_classes.html#id7">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transforms_classes.html#id8">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="transforms_classes.html#modalityvoilut">ModalityVOILUT</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="transforms_classes.html#id9">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transforms_classes.html#id10">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="transforms_classes.html#rendering-transforms">Rendering transforms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="transforms_classes.html#transformhighbit">TransformHighBit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="transforms_classes.html#id11">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transforms_classes.html#id12">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="transforms_classes.html#colortransformsfactory">ColorTransformsFactory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="transforms_classes.html#id13">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transforms_classes.html#id14">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="memory_management_classes.html">Memory management classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="memory_management_classes.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="memory_management_classes.html#memory-access">Memory access</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="memory_management_classes.html#memory">Memory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="memory_management_classes.html#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="memory_management_classes.html#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="memory_management_classes.html#mutablememory">MutableMemory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="memory_management_classes.html#id1">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="memory_management_classes.html#id2">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="memory_management_classes.html#memory-allocation">Memory allocation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="memory_management_classes.html#memorypool">MemoryPool</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="memory_management_classes.html#id4">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="memory_management_classes.html#id5">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="acse_classes.html">ACSE classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="acse_classes.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acse_classes.html#presentation-context-classes">Presentation context classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="acse_classes.html#presentationcontext">PresentationContext</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="acse_classes.html#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="acse_classes.html#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="acse_classes.html#presentationcontexts">PresentationContexts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="acse_classes.html#id2">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="acse_classes.html#id3">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="acse_classes.html#association-classes">Association classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="acse_classes.html#associationbase">AssociationBase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="acse_classes.html#id5">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="acse_classes.html#id6">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="acse_classes.html#associationscu">AssociationSCU</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="acse_classes.html#id7">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="acse_classes.html#id8">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="acse_classes.html#associationscp">AssociationSCP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="acse_classes.html#id9">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="acse_classes.html#id10">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="acse_classes.html#message-payload-class">Message payload class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="acse_classes.html#associationmessage">AssociationMessage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="acse_classes.html#id11">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="acse_classes.html#id12">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="acse_classes.html#mutableassociationmessage">MutableAssociationMessage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="acse_classes.html#id13">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="acse_classes.html#id14">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dimse_classes.html">DIMSE classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dimse_classes.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dimse_classes.html#commands-and-responses-transmission-and-reception">Commands and responses transmission and reception</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#dimseservice">DimseService</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dimse_classes.html#commands-and-response-classes">Commands and response classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#dimsecommandbase">DimseCommandBase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id2">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id3">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#dimsecommand">DimseCommand</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id4">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id5">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#dimseresponse">DimseResponse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id6">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id7">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dimse_classes.html#c-commands-and-responses">C-Commands and responses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#cstorecommand">CStoreCommand</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id8">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id9">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#cgetcommand">CGetCommand</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id10">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id11">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#cfindcommand">CFindCommand</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id12">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id13">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#cmovecommand">CMoveCommand</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id14">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id15">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#cechocommand">CEchoCommand</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id16">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id17">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#ccancelcommand">CCancelCommand</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id18">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id19">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#cpartialresponse">CPartialResponse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id20">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id21">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#cstoreresponse">CStoreResponse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id22">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id23">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#cgetresponse">CGetResponse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id24">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id25">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#cfindresponse">CFindResponse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id26">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id27">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#cmoveresponse">CMoveResponse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id28">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id29">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#cechoresponse">CEchoResponse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id30">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id31">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dimse_classes.html#n-commands-and-responses">N-Commands and responses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#neventreportcommand">NEventReportCommand</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id32">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id33">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#nsetcommand">NSetCommand</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id34">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id35">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#ngetcommand">NGetCommand</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id36">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id37">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#nactioncommand">NActionCommand</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id38">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id39">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#ncreatecommand">NCreateCommand</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id40">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id41">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#ndeletecommand">NDeleteCommand</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id42">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id43">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#neventreportresponse">NEventReportResponse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id44">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id45">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#nsetresponse">NSetResponse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id46">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id47">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#ngetresponse">NGetResponse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id48">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id49">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#nactionresponse">NActionResponse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id50">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id51">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#ncreateresponse">NCreateResponse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id52">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id53">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dimse_classes.html#ndeleteresponse">NDeleteResponse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id54">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dimse_classes.html#id55">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dicomdir_classes.html">DICOMDIR classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dicomdir_classes.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dicomdir_classes.html#id1">DICOMDIR classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dicomdir_classes.html#dicomdir">DicomDir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicomdir_classes.html#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicomdir_classes.html#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dicomdir_classes.html#mutabledicomdir">MutableDicomDir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicomdir_classes.html#id2">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicomdir_classes.html#id3">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dicomdir_classes.html#dicomdirentry">DicomDirEntry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicomdir_classes.html#id4">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicomdir_classes.html#id5">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dicomdir_classes.html#mutabledicomdirentry">MutableDicomDirEntry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicomdir_classes.html#id6">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicomdir_classes.html#id7">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_dictionary_classes.html">DICOM dictionary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dicom_dictionary_classes.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dicom_dictionary_classes.html#dicom-dictionary-class">Dicom Dictionary class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dicom_dictionary_classes.html#dicomdictionary">DicomDictionary</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dicom_dictionary_classes.html#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dicom_dictionary_classes.html#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="definition_classes.html">Definitions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="definition_classes.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="definition_classes.html#tag-related-definitions">Tag related definitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#tagid-t">tagId_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#c">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#ageunit-t">ageUnit_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id1">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id2">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#tagvr-t">tagVR_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id3">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id4">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="definition_classes.html#image-related-definitions">Image related definitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#imagequality-t">imageQuality_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id5">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id6">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#bitdepth-t">bitDepth_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id7">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id8">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#drawbitmaptype-t">drawBitmapType_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id9">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id10">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#overlaytype-t">overlayType_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id11">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id12">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#dicomvoifunction-t">dicomVOIFunction_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id13">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id14">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="definition_classes.html#dicomdir-related-definitions">DICOMDIR related definitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#fileparts-t">fileParts_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id15">C++</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="definition_classes.html#codec-factory-related-definitions">Codec Factory related definitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#codectype-t">codecType_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id16">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id17">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="definition_classes.html#voi-related-definitions">VOI related definitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#id18">dicomVOIFunction_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id19">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id20">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#vois-t">vois_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id21">C++</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="definition_classes.html#dimse-related-definitions">DIMSE related definitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#dimsecommandtype-t">dimseCommandType_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id22">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id23">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#dimsecommandpriority-t">dimseCommandPriority_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id24">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id25">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#dimsestatuscode-t">dimseStatusCode_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id26">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id27">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#dimsestatus-t">dimseStatus_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id28">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id29">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="definition_classes.html#attributeidentifierlist-t">attributeIdentifierList_t</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="definition_classes.html#id30">C++</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exception_classes.html">Exceptions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#exceptions-manager">Exceptions manager</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#exceptionsmanager">ExceptionsManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#c">C++</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#missing-data-exceptions">Missing data exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#missingdataelementerror">MissingDataElementError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id1">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#objective-c-swift">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#missinggrouperror">MissingGroupError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id2">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id3">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#missingtagerror">MissingTagError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id4">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id5">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#missingbuffererror">MissingBufferError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id6">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id7">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#missingitemerror">MissingItemError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id8">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id9">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#stream-error-exceptions">Stream error exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#streamerror">StreamError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id10">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id11">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#streamopenerror">StreamOpenError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id12">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id13">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#streamreaderror">StreamReadError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id14">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id15">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#streamwriteerror">StreamWriteError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id16">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id17">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#streamclosederror">StreamClosedError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id18">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id19">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#streameoferror">StreamEOFError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id20">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id21">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#tcp-exceptions">TCP exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#tcpconnectionrefused">TCPConnectionRefused</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id22">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id23">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#tcpaddressalreadyinuse">TCPAddressAlreadyInUse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id24">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id25">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#permissiondeniederror">PermissionDeniedError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id26">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id27">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#addresserror">AddressError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id28">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id29">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#addresstryagainerror">AddressTryAgainError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id30">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id31">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#addressnonameerror">AddressNoNameError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id32">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id33">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#addressservicenotsupportederror">AddressServiceNotSupportedError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id34">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id35">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#dictionary-exceptions">Dictionary exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#dictionaryerror">DictionaryError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id36">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id37">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#dictionaryunknowntagerror">DictionaryUnknownTagError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id38">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id39">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#dictionaryunknowndatatypeerror">DictionaryUnknownDataTypeError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id40">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id41">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#charset-conversion-exceptions">Charset conversion exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#charsetconversionerror">CharsetConversionError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id42">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id43">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#charsetconversionnotableerror">CharsetConversionNoTableError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id44">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id45">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#charsetconversionnosupportedtableerror">CharsetConversionNoSupportedTableError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id46">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id47">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#charsetconversioncannotconvert">CharsetConversionCannotConvert</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id48">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id49">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#codec-exceptions">Codec exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#codecerror">CodecError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id50">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id51">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#codecwrongformaterror">CodecWrongFormatError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id52">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id53">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#codeccorruptedfileerror">CodecCorruptedFileError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id54">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id55">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#codecwrongtransfersyntaxerror">CodecWrongTransferSyntaxError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id56">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id57">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#codecimagetoobigerror">CodecImageTooBigError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id58">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id59">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#invalidsequenceitemerror">InvalidSequenceItemError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id60">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id61">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#dicomcodecerror">DicomCodecError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id62">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id63">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#dicomcodecdepthlimitreachederror">DicomCodecDepthLimitReachedError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id64">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id65">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#jpegcodecerror">JpegCodecError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id66">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id67">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#jpegcodeccannothandlesyntaxerror">JpegCodecCannotHandleSyntaxError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id68">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id69">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#data-handler-exceptions">Data handler exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#datahandlererror">DataHandlerError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id70">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id71">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#datahandlerconversionerror">DataHandlerConversionError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id72">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id73">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#datahandlercorruptedbuffererror">DataHandlerCorruptedBufferError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id74">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id75">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#datahandlerinvaliddataerror">DataHandlerInvalidDataError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id76">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id77">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#dataset-exceptions">DataSet exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#dataseterror">DataSetError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id78">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id79">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#datasetdifferentformaterror">DataSetDifferentFormatError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id80">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id81">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#datasetunknowntransfersyntaxerror">DataSetUnknownTransferSyntaxError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id82">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id83">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#datasetwrongframeerror">DataSetWrongFrameError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id84">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id85">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#datasetimagedoesntexisterror">DataSetImageDoesntExistError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id86">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id87">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#datasetimagepalettecolorisreadonly">DataSetImagePaletteColorIsReadOnly</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id88">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id89">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#datasetcorruptedoffsettableerror">DataSetCorruptedOffsetTableError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id90">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id91">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#dicomdir-exceptions">DICOMDIR exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#dicomdirerror">DicomDirError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id92">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id93">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#dicomdircircularreferenceerror">DicomDirCircularReferenceError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id94">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id95">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#image-exceptions">Image exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#imageerror">ImageError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id96">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#imageunknowndeptherror">ImageUnknownDepthError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id97">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id98">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#imageunknowncolorspaceerror">ImageUnknownColorSpaceError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id99">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id100">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#imageinvalidsizeerror">ImageInvalidSizeError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id101">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id102">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#transform-exceptions">Transform exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#transformerror">TransformError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id103">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id104">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#transforminvalidareaerror">TransformInvalidAreaError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id105">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id106">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#transformdifferenthighbiterror">TransformDifferentHighBitError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id107">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id108">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#colortransformerror">ColorTransformError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id109">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id110">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#colortransformwrongcolorspaceerror">ColorTransformWrongColorSpaceError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id111">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id112">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#colortransformsfactoryerror">ColorTransformsFactoryError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id113">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id114">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#colortransformsfactorynotransformerror">ColorTransformsFactoryNoTransformError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id115">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id116">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#transformdifferentcolorspaceserror">TransformDifferentColorSpacesError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id117">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id118">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#modalityvoiluterror">ModalityVOILUTError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id119">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id120">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#memory-exceptions">Memory exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#imebrabadalloc">ImebraBadAlloc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id121">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id122">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#memoryerror">MemoryError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id123">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id124">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#memorysizeerror">MemorySizeError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id125">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id126">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#lut-exceptions">LUT exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#luterror">LutError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id127">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id128">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#lutcorruptederror">LutCorruptedError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id129">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id130">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#acse-exceptions">ACSE exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acseerror">AcseError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id131">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id132">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsecorruptedmessageerror">AcseCorruptedMessageError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id133">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id134">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsenotransfersyntaxerror">AcseNoTransferSyntaxError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id135">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id136">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsepresentationcontextnotrequestederror">AcsePresentationContextNotRequestedError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id137">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id138">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsewrongroleerror">AcseWrongRoleError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id139">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id140">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsewrongiderror">AcseWrongIdError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id141">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id142">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsewrongresponseiderror">AcseWrongResponseIdError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id143">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id144">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsewrongcommandiderror">AcseWrongCommandIdError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id145">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id146">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acserejectedassociationerror">AcseRejectedAssociationError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id147">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id148">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsescunoreasongivenerror">AcseSCUNoReasonGivenError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id149">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id150">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsescuapplicationcontextnamenotsupportederror">AcseSCUApplicationContextNameNotSupportedError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id151">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id152">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsescucallingaetnotrecognizederror">AcseSCUCallingAETNotRecognizedError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id153">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id154">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsescucalledaetnotrecognizederror">AcseSCUCalledAETNotRecognizedError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id155">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id156">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsescpnoreasongivenerror">AcseSCPNoReasonGivenError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id157">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id158">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsescpacseprotocolversionnotsupportederror">AcseSCPAcseProtocolVersionNotSupportedError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id159">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id160">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsescppresentationreservederror">AcseSCPPresentationReservedError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id161">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id162">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsescppresentationtemporarycongestionerror">AcseSCPPresentationTemporaryCongestionError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id163">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id164">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsescppresentationlocallimitexcedederror">AcseSCPPresentationLocalLimitExcededError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id165">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id166">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsetoomanyoperationsperformederror">AcseTooManyOperationsPerformedError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id167">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id168">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsetoomanyoperationsinvokederror">AcseTooManyOperationsInvokedError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id169">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id170">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#acsenopayloaderror">AcseNoPayloadError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id171">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id172">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exception_classes.html#dimse-exceptions">DIMSE exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#dimseerror">DimseError</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id173">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id174">Objective-C/Swift</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="exception_classes.html#dimseinvalidcommand">DimseInvalidCommand</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id175">C++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception_classes.html#id176">Objective-C/Swift</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound" id="build-distribution">
+<p><span class="caption-text">Build distributions</span><a class="headerlink" href="#build-distribution" title="Permalink to this toctree">¶</a></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html">Creating the source distribution from the code in the VCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html#versioning">Versioning</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p><span class="caption-text">Requirements &amp; Risks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html">Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#functional-requirements">Functional requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-read-dicom-files-the-library-must-be-able-to-read-dicom-files-from-a-data-source-and-replicate-their-structure-in-memory">[REQ_READ_DICOM_FILES] The library must be able to read DICOM files from a data source and replicate their structure in memory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-write-dicom-files-the-library-must-be-able-to-write-dicom-files-from-a-dicom-structure-in-memory">[REQ_WRITE_DICOM_FILES] The library must be able to write DICOM files from a DICOM structure in memory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-dimse-the-library-must-be-able-to-send-and-receive-dimse-messages">[REQ_DIMSE] The library must be able to send and receive DIMSE messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-acse-the-library-must-be-able-to-send-and-receive-acse-messages-through-a-generic-transport-mechanism">[REQ_ACSE] The library must be able to send and receive ACSE messages through a generic transport mechanism</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-generic-stream-protocol-there-must-be-a-generic-streaming-protocol-able-to-transport-dimse-messages">[REQ_GENERIC_STREAM_PROTOCOL] There must be a generic streaming protocol able to transport DIMSE messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-tcpip-protocol-imebra-must-supply-a-basic-tcp-streaming-class">[REQ_TCPIP_PROTOCOL] Imebra must supply a basic TCP streaming class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-user-protocol-imebra-must-supply-a-base-class-for-io-streaming">[REQ_USER_PROTOCOL] Imebra must supply a base class for IO streaming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-functional-macros-the-operations-that-get-image-specific-parameters-should-be-aware-of-functional-macros">[REQ_FUNCTIONAL_MACROS] The operations that get image specific parameters should be aware of Functional Macros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-endianess-platform-exposed-memory-with-raw-numerical-data-must-use-the-platform-endianess-to-represent-numbers">[REQ_ENDIANESS_PLATFORM] Exposed memory with raw numerical data must use the platform endianess to represent numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-read-tags-the-library-must-be-able-to-extract-the-information-contained-in-the-dicom-tags">[REQ_READ_TAGS] The library must be able to extract the information contained in the DICOM tags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-write-tags-the-library-must-be-able-to-write-tags-into-the-dicom-structure">[REQ_WRITE_TAGS] The library must be able to write tags into the DICOM structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-decompress-images-imebra-must-be-able-to-decompress-images-contained-in-the-dicom-dataset">[REQ_DECOMPRESS_IMAGES] Imebra must be able to decompress images contained in the DICOM dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-compress-images-imebra-must-be-able-to-compress-images-and-insert-them-in-the-dicom-dataset">[REQ_COMPRESS_IMAGES] Imebra must be able to compress images and insert them in the DICOM dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-parse-dicomdir-the-library-must-be-able-to-parse-dicomdir-structures-and-the-records-they-contain">[REQ_PARSE_DICOMDIR] The library must be able to parse DICOMDIR structures and the records they contain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-build-dicomdir-the-library-must-be-able-to-build-dicomdir-structures-and-the-records-they-contain">[REQ_BUILD_DICOMDIR] The library must be able to build DICOMDIR structures and the records they contain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-voi-function-allow-the-calculation-of-the-voi-transform-using-different-defined-dicom-functions">[REQ_VOI_FUNCTION] Allow the calculation of the VOI transform using different defined DICOM functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-exceptions-all-the-error-should-be-reported-via-c-exceptions">[REQ_EXCEPTIONS] All the error should be reported via C++ exceptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-raw-memory-the-library-must-be-able-to-expose-the-raw-memory-of-numeric-dicom-tags">[REQ_RAW_MEMORY] The library must be able to expose the raw memory of numeric DICOM tags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-extract-lut-the-library-must-be-able-to-extract-lut-information-from-the-dataset">[REQ_EXTRACT_LUT] The library must be able to extract LUT information from the DataSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-delayed-load-the-library-must-be-able-to-delay-the-loading-of-large-chunk-of-data-from-the-dicom-file">[REQ_DELAYED_LOAD] The library must be able to delay the loading of large chunk of data from the DICOM file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-uid-gen-supply-a-mechanism-to-generate-unique-dicom-uids">[REQ_UID_GEN] Supply a mechanism to generate unique DICOM UIDs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-vr-conversion-the-library-must-be-able-to-convert-data-between-different-vrs">[REQ_VR_CONVERSION] The library must be able to convert data between different VRs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-logging-the-library-must-log-the-most-important-tasks-execution">[REQ_LOGGING] The library must log the most important tasks execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-apply-modality-voilut-the-library-must-be-able-to-apply-the-modality-voi-or-lut-to-extracted-images">[REQ_APPLY_MODALITY_VOILUT] The library must be able to apply the modality VOI or LUT to extracted images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-prepare-rgb-image-imebra-must-be-able-to-create-an-image-ready-to-be-displayed-on-the-computer-screen">[REQ_PREPARE_RGB_IMAGE] Imebra must be able to create an image ready to be displayed on the computer screen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-apply-voilut-the-library-must-be-able-to-apply-the-presentation-voi-lut-to-the-extracted-images">[REQ_APPLY_VOILUT] The library must be able to apply the presentation VOI/LUT to the extracted images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-return-default-value-there-has-to-be-a-special-function-able-to-return-a-default-value-for-missing-tags">[REQ_RETURN_DEFAULT_VALUE] There has to be a special function able to return a default value for missing tags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-app-decides-default-value-default-values-must-be-explicitly-set-by-the-application-for-each-tag">[REQ_APP_DECIDES_DEFAULT_VALUE] Default values must be explicitly set by the application for each tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-throw-on-missing-data-the-library-must-throw-an-exception-when-the-client-tries-to-access-data-that-doesn-t-exist">[REQ_THROW_ON_MISSING_DATA] The library must throw an exception when the client tries to access data that doesn’t exist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-dont-return-pointer-the-api-should-not-return-pointers-to-allocated-objects">[REQ_DONT_RETURN_POINTER] The API should not return pointers to allocated objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-insert-files-in-tags-allow-to-insert-reference-to-files-into-dicom-tags">[REQ_INSERT_FILES_IN_TAGS] Allow to insert reference to files into DICOM tags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-immutable-classes-data-classes-should-be-immutable-with-mutable-subclasses">[REQ_IMMUTABLE_CLASSES] Data classes should be immutable, with mutable subclasses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-overlays-the-api-must-supply-methods-to-retrieve-and-set-overlay-bitmaps">[REQ_OVERLAYS] The API must supply methods to retrieve and set overlay bitmaps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#implementation-requirements">Implementation requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-no-callback-user-extensions-should-not-be-achievable-by-extending-imebra-classes-or-by-supplying-callbacks">[REQ_NO_CALLBACK] User extensions should not be achievable by extending Imebra classes or by supplying callbacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-no-multiple-inheritance-multiple-inheritance-is-not-allowed">[REQ_NO_MULTIPLE_INHERITANCE] Multiple inheritance is not allowed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-cpp-the-library-must-be-implemented-in-c-0x">[REQ_CPP] The library must be implemented in C++ 0x</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-binary-compatibility-the-library-should-offer-binary-compatibility-between-minor-revisions">[REQ_BINARY_COMPATIBILITY] The library should offer binary compatibility between minor revisions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-memory-allocation-memory-should-be-allocated-via-cpp-std-arrays-vectors-strings-etc-not-through-new">[REQ_MEMORY_ALLOCATION] Memory should be allocated via cpp std arrays, vectors, strings, etc, not through new</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-object-allocation-objects-should-be-allocated-via-shared-pointers-unique-pointers-or-on-the-stack">[REQ_OBJECT_ALLOCATION] Objects should be allocated via shared pointers, unique pointers or on the stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-throw-wrong-conversion-throw-exception-on-non-allowed-vr-conversions">[REQ_THROW_WRONG_CONVERSION] Throw exception on non allowed VR conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-make-shared-object-inserted-in-shared-pointers-must-be-allocated-via-make-shared">[REQ_MAKE_SHARED] Object inserted in shared pointers must be allocated via make_shared</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-integer-types-the-integer-types-in-the-public-interface-must-be-consistent">[REQ_INTEGER_TYPES] The integer types in the public interface must be consistent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-variable-max-image-size-the-settings-of-the-maximum-image-size-must-be-settable-at-runtime">[REQ_VARIABLE_MAX_IMAGE_SIZE] The settings of the maximum image size must be settable at runtime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-tagid-separate-class-the-tag-id-must-be-specified-using-a-specific-class">[REQ_TAGID_SEPARATE_CLASS] The tag id must be specified using a specific class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-dont-expose-indexed-writing-don-t-expose-methods-that-allow-indexed-writing-into-the-buffer-while-resetting-it">[REQ_DONT_EXPOSE_INDEXED_WRITING] Don’t expose methods that allow indexed writing into the buffer while resetting it</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#performances">Performances</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-wrap-functions-exceptions-info-all-the-functions-must-be-wrapped-by-macros-that-report-the-exception-info">[REQ_WRAP_FUNCTIONS_EXCEPTIONS_INFO] All the functions must be wrapped by macros that report the exception info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-memory-pool-the-library-should-reuse-unused-memory-instead-of-allocating-new-blocks">[REQ_MEMORY_POOL] The library should reuse unused memory instead of allocating new blocks.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-writing-handler-empty-new-writing-handler-that-write-data-to-a-buffer-should-be-initially-empty">[REQ_WRITING_HANDLER_EMPTY] New writing handler that write data to a buffer should be initially empty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-memory-pool-thread-there-should-be-a-memory-pool-per-thread">[REQ_MEMORY_POOL_THREAD] There should be a memory pool per thread</a></li>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-memory-pool-new-handler-provide-a-std-new-handler-that-clears-the-memory-pool-when-necessary">[REQ_MEMORY_POOL_NEW_HANDLER] Provide a std::new_handler that clears the memory pool when necessary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#security">Security</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="risks_requirements.html#req-max-image-size-the-library-must-reject-images-that-are-bigger-than-a-predefined-size">[REQ_MAX_IMAGE_SIZE] The library must reject images that are bigger than a predefined size</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html#risks">Risks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#risk-buffer-overflow-the-library-and-its-client-may-read-or-write-memory-outside-the-allocated-buffer">[RISK_BUFFER_OVERFLOW] The library and its client may read or write memory outside the allocated buffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#risk-receive-default-value-when-receiving-default-values-for-non-existent-data-the-client-may-understand-that-the-tag-is-actually-present">[RISK_RECEIVE_DEFAULT_VALUE] When receiving default values for non-existent data the client may understand that the tag is actually present</a></li>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#risk-vr-conversion-implicit-vr-conversion-may-hide-wrong-tag-s-vr">[RISK_VR_CONVERSION] Implicit VR conversion may hide wrong tag’s VR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#risk-memory-alloc-the-library-may-use-deallocated-memory-or-forget-to-deallocate-memory">[RISK_MEMORY_ALLOC] The library may use deallocated memory or forget to deallocate memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#risk-object-alloc-the-library-and-its-client-may-use-deallocated-objects-or-forget-to-deallocate-objects">[RISK_OBJECT_ALLOC] The library and its client may use deallocated objects or forget to deallocate objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#risk-buffer-reset-when-a-client-wants-to-write-several-values-in-the-buffer-it-may-inadvertently-reset-the-buffer">[RISK_BUFFER_RESET] When a client wants to write several values in the buffer it may inadvertently reset the buffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#risk-shared-ptr-new-out-of-sync-shared-ptr-usage-counter">[RISK_SHARED_PTR_NEW] Out of sync shared_ptr usage counter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#risk-wrong-modality-voilut-dataset-the-client-may-apply-to-the-image-the-modality-voi-lut-from-the-wrong-dataset">[RISK_WRONG_MODALITY_VOILUT_DATASET] The client may apply to the image the modality VOI/LUT from the wrong dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#risk-full-memory-the-memory-retained-in-the-memory-pool-may-cause-an-out-of-memory-error">[RISK_FULL_MEMORY] The memory retained in the memory pool may cause an out-of-memory error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#risk-wrong-voilut-dataset-the-library-client-may-apply-to-an-image-the-voi-lut-from-a-wrong-dataset">[RISK_WRONG_VOILUT_DATASET] The library client may apply to an image the VOI/LUT from a wrong dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#risk-out-of-memory-big-image-big-images-or-corrupted-image-size-tags-may-cause-an-out-of-memory-error">[RISK_OUT_OF_MEMORY_BIG_IMAGE] Big images or corrupted image size tags may cause an out-of-memory error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#risk-long-parameters-list-specifying-the-tag-id-in-the-dataset-methods-may-create-a-long-confusing-list-of-parameters">[RISK_LONG_PARAMETERS_LIST] Specifying the tag id in the dataset methods may create a long confusing list of parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#risk-copy-const-objects-a-const-object-may-be-copied-into-a-non-const-object">[RISK_COPY_CONST_OBJECTS] A const object may be copied into a non-const object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="risks_requirements.html#risk-tags-dont-exist-the-client-may-ask-for-tags-that-don-t-exist">[RISK_TAGS_DONT_EXIST] The client may ask for tags that don’t exist</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p><span class="caption-text">Standard operating procedures</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sop.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sop.html#sops">SOPs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-newsop-1-creating-a-new-sop">SOP NEWSOP/1: Creating a new SOP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-modsop-1-modifying-the-sops">SOP MODSOP/1: Modifying the SOPs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-buguser-1-reporting-a-bug-instructions-for-users">SOP BUGUSER/1: Reporting a bug: instructions for users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-bugdev-1-reporting-a-bug-instructions-for-the-library-developers">SOP BUGDEV/1: Reporting a bug: instructions for the library developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-ackbug-1-acknowledging-a-bug-report-or-a-feature-request">SOP ACKBUG/1 Acknowledging a bug report or a feature request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-fixbug-2-fixing-a-bug">SOP FIXBUG/2 Fixing a bug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-fixbug-1-fixing-a-bug">SOP FIXBUG/1 Fixing a bug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-newreq-1-introducing-a-new-requirement">SOP NEWREQ/1 Introducing a new requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-newfeat-1-announcing-a-new-feature">SOP NEWFEAT/1 Announcing a new feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-newenh-1-announcing-the-enhancement-of-an-existing-feature">SOP NEWENH/1 Announcing the enhancement of an existing feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-devfeat-3-implementing-a-new-feature">SOP DEVFEAT/3 Implementing a new feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-devfeat-2-implementing-a-new-feature">SOP DEVFEAT/2 Implementing a new feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-devfeat-1-implementing-a-new-feature">SOP DEVFEAT/1 Implementing a new feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-devenh-2-implementing-a-new-enhancement">SOP DEVENH/2 Implementing a new enhancement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-devenh-1-implementing-a-new-enhancement">SOP DEVENH/1 Implementing a new enhancement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-chglog-1-preparing-the-changelog">SOP CHGLOG/1 Preparing the changelog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sop.html#step-1">Step 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sop.html#step-2">Step 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sop.html#step-3">Step 3</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-release-3-preparation-of-a-new-release">SOP RELEASE/3 Preparation of a new release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-release-2-preparation-of-a-new-release">SOP RELEASE/2 Preparation of a new release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-release-1-preparation-of-a-new-release">SOP RELEASE/1 Preparation of a new release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-majorversion-2-development-of-a-new-major-version">SOP MAJORVERSION/2 Development of a new major version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sop.html#sop-majorversion-1-development-of-a-new-major-version">SOP MAJORVERSION/1 Development of a new major version</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="download.html" class="btn btn-neutral float-right" title="Downloading Imebra" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="copyright.html">Copyright</a> 2019, Paolo Brandoli.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

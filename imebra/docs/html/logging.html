@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logging &mdash; Imebra 5.3.3.0 changeset 2c706290 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="next" title="Adding Imebra to your project" href="add_to_project.html" />
+    <link rel="prev" title="Compiling Imebra" href="compiling_imebra.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Imebra
+          </a>
+              <div class="version">
+                5.3.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p><span class="caption-text">Download Imebra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Downloading Imebra</a></li>
+</ul>
+<p><span class="caption-text">Legal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gplv2.html">GNU General Public License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Commercial license</a></li>
+</ul>
+<p><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes_log.html">Changes log</a></li>
+</ul>
+<p><span class="caption-text">User documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="compiling_imebra.html">Compiling Imebra</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Logging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#linux-specific-instructions">Linux specific instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#apple-specific-instructions">Apple specific instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#android-specific-instructions">Android specific instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-specific-instructions">Windows specific instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="add_to_project.html">Adding Imebra to your project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_tour.html">Tutorial</a></li>
+</ul>
+<p><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="objects_lifecycle.html">Objects lifecycle and Object ownership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_data_classes.html">DICOM dataSet &amp; tags classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_uid_generation_classes.html">UID generation classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stream_classes.html">Stream classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imaging_classes.html">Imaging classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transforms_classes.html">Transforms classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="memory_management_classes.html">Memory management classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acse_classes.html">ACSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dimse_classes.html">DIMSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicomdir_classes.html">DICOMDIR classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_dictionary_classes.html">DICOM dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definition_classes.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exception_classes.html">Exceptions</a></li>
+</ul>
+<p><span class="caption-text">Build distributions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html">Creating the source distribution from the code in the VCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html#versioning">Versioning</a></li>
+</ul>
+<p><span class="caption-text">Requirements &amp; Risks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="risks_requirements.html#risks">Risks</a></li>
+</ul>
+<p><span class="caption-text">Standard operating procedures</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sop.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sop.html#sops">SOPs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Logging</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/logging.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="logging">
+<span id="logging-label"></span><h1>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h1>
+<p>Imebra can log the most important operations to one of the following logging frameworks:</p>
+<ul class="simple">
+<li><p>log4cxx</p></li>
+<li><p>Android native logging</p></li>
+<li><p>Apple NSLog (MacOS or iOS)</p></li>
+<li><p>syslog (on Posix systems)</p></li>
+<li><p>standard output</p></li>
+</ul>
+<p>The logging is disabled by default and can be enabled during the compilation phase of Imebra by setting IMEBRA_LOG_LEVEL
+to one of the following values when launching cmake:</p>
+<ul class="simple">
+<li><p><em>TRACE</em></p></li>
+<li><p><em>DEBUG</em></p></li>
+<li><p><em>INFO</em></p></li>
+<li><p><em>WARNING</em></p></li>
+<li><p><em>ERROR</em></p></li>
+<li><p><em>TRACE</em></p></li>
+</ul>
+<p>When the logging is enabled then Imebra will decide which logging framework to use, unless you override
+the decision by defining setting IMEBRA_LOG_FRAMEWORK to one of the following values when launching cmake:</p>
+<ul class="simple">
+<li><p><em>LOG4CXX</em></p></li>
+<li><p><em>SYSLOG</em></p></li>
+<li><p><em>COUT</em></p></li>
+<li><p><em>APPLE</em></p></li>
+<li><p><em>ANDROID</em></p></li>
+</ul>
+<p>The following list describes the logging framework used by Imebra, based on the operating system:</p>
+<ul class="simple">
+<li><p>On Apple systems: NSLog</p></li>
+<li><p>On Android: the Android logging system</p></li>
+<li><p>On Posix System (including Linux): syslog</p></li>
+<li><p>On all the other systems (including Windows): standard output</p></li>
+</ul>
+<section id="linux-specific-instructions">
+<h2>Linux specific instructions<a class="headerlink" href="#linux-specific-instructions" title="Permalink to this headline">¶</a></h2>
+<p>When compiled on Linux then Imebra uses the syslog call to output the logs, unless a different logging framework is selected by setting
+the CMAKE variable IMEBRA_LOG_FRAMEWORK to one of the following values:</p>
+<ul class="simple">
+<li><p><em>LOG4CXX</em></p></li>
+<li><p><em>SYSLOG</em></p></li>
+<li><p><em>COUT</em></p></li>
+</ul>
+<p>The following example shows how to compile Imebra on Linux with the INFO logging level enabled. The logs will be produced using the posix syslog call:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">md</span> <span class="n">artifacts</span>
+<span class="n">cd</span> <span class="n">artifacts</span>
+<span class="n">cmake</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">imebra_location</span> <span class="o">-</span><span class="n">DIMEBRA_LOG_LEVEL</span><span class="o">=</span><span class="n">INFO</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span>
+<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+<span class="n">sudo</span> <span class="n">ldconfig</span>
+</pre></div>
+</div>
+<p>The following example shows how to compile Imebra on Linux with the WARNING logging level enabled and output to log4cxx:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">md</span> <span class="n">artifacts</span>
+<span class="n">cd</span> <span class="n">artifacts</span>
+<span class="n">cmake</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">imebra_location</span> <span class="o">-</span><span class="n">DIMEBRA_LOG_LEVEL</span><span class="o">=</span><span class="n">INFO</span> <span class="o">-</span><span class="n">DIMEBRA_LOG_FRAMEWORK</span><span class="o">=</span><span class="n">LOG4CXX</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span>
+<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+<span class="n">sudo</span> <span class="n">ldconfig</span>
+</pre></div>
+</div>
+</section>
+<section id="apple-specific-instructions">
+<h2>Apple specific instructions<a class="headerlink" href="#apple-specific-instructions" title="Permalink to this headline">¶</a></h2>
+<p>The following example shows how to compile Imebra for iPhone with the INFO logging level enabled. The logs will be produced using the NSLog call:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">md</span> <span class="n">artifacts</span>
+<span class="n">cd</span> <span class="n">artifacts</span>
+<span class="n">cmake</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">imebra_location</span> <span class="o">-</span><span class="n">DIMEBRA_LOG_LEVEL</span><span class="o">=</span><span class="n">INFO</span> <span class="o">-</span><span class="n">DIOS</span><span class="o">=</span><span class="n">IPHONE</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span>
+<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+<span class="n">sudo</span> <span class="n">ldconfig</span>
+</pre></div>
+</div>
+</section>
+<section id="android-specific-instructions">
+<h2>Android specific instructions<a class="headerlink" href="#android-specific-instructions" title="Permalink to this headline">¶</a></h2>
+<p>On Android the INFO logging is enabled by default in DEBUG mode while logging is disabled in RELEASE mode.</p>
+<p>To change the LOG settings you have to edit the file wrappers/javaWrapper/jni/Android.mk and replace the
+<em>-DIMEBRA_LOG_LEVEL_INFO</em> with the desired log level.</p>
+<p>The following example set the log level to WARNING:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := imebra_lib
+LOCAL_CPPFLAGS += -fexceptions -pthread -I$(LOCAL_PATH)/../../../library/include
+LOCAL_CPPFLAGS += -DIMEBRA_USE_JAVA -DIMEBRA_MEMORY_POOL_MAX_SIZE=4000000 -DIMEBRA_ANDROID -DIMEBRA_LOG_LEVEL_WARNING
+LOCAL_LDLIBS :=  -llog
+
+FILE_LIST := $(wildcard $(LOCAL_PATH)/../../../library/src/*.cpp)
+FILE_LIST += $(wildcard $(LOCAL_PATH)/../../../library/implementation/*.cpp)
+FILE_LIST += $(LOCAL_PATH)/../java_wrapper.cxx
+LOCAL_SRC_FILES := $(FILE_LIST:$(LOCAL_PATH)/%=%)
+
+include $(BUILD_SHARED_LIBRARY)
+</pre></div>
+</div>
+</section>
+<section id="windows-specific-instructions">
+<h2>Windows specific instructions<a class="headerlink" href="#windows-specific-instructions" title="Permalink to this headline">¶</a></h2>
+<p>When compiled on Windows then Imebra uses the standard output to output the logs, unless a different logging framework is selected by setting
+the CMake variable IMEBRA_LOG_FRAMEWORK to one of the following values:</p>
+<ul class="simple">
+<li><p><em>LOG4CXX</em></p></li>
+<li><p><em>COUT</em></p></li>
+</ul>
+<p>The following example shows how to compile Imebra on Linux with the INFO logging level enabled. The logs will be produced using the standard output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">md</span> <span class="n">artifacts</span>
+<span class="n">cd</span> <span class="n">artifacts</span>
+<span class="n">cmake</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">imebra_location</span> <span class="o">-</span><span class="n">DIMEBRA_LOG_LEVEL</span><span class="o">=</span><span class="n">INFO</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>The following example shows how to compile Imebra on Windows with the WARNING logging level enabled and output to log4cxx:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">md</span> <span class="n">artifacts</span>
+<span class="n">cd</span> <span class="n">artifacts</span>
+<span class="n">cmake</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">imebra_location</span> <span class="o">-</span><span class="n">DIMEBRA_LOG_LEVEL</span><span class="o">=</span><span class="n">WARNING</span> <span class="o">-</span><span class="n">DIMEBRA_LOG_FRAMEWORK</span><span class="o">=</span><span class="n">LOG4CXX</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="compiling_imebra.html" class="btn btn-neutral float-left" title="Compiling Imebra" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="add_to_project.html" class="btn btn-neutral float-right" title="Adding Imebra to your project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="copyright.html">Copyright</a> 2019, Paolo Brandoli.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

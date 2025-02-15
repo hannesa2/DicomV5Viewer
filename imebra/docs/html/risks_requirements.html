@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Requirements &mdash; Imebra 5.3.3.0 changeset 2c706290 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="next" title="Introduction" href="sop.html" />
+    <link rel="prev" title="Creating the source distribution from the code in the VCS" href="build_distribution.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Imebra
+          </a>
+              <div class="version">
+                5.3.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p><span class="caption-text">Download Imebra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Downloading Imebra</a></li>
+</ul>
+<p><span class="caption-text">Legal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gplv2.html">GNU General Public License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commercial.html">Commercial license</a></li>
+</ul>
+<p><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes_log.html">Changes log</a></li>
+</ul>
+<p><span class="caption-text">User documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="compiling_imebra.html">Compiling Imebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add_to_project.html">Adding Imebra to your project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_tour.html">Tutorial</a></li>
+</ul>
+<p><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="objects_lifecycle.html">Objects lifecycle and Object ownership</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_data_classes.html">DICOM dataSet &amp; tags classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_uid_generation_classes.html">UID generation classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stream_classes.html">Stream classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imaging_classes.html">Imaging classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transforms_classes.html">Transforms classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="memory_management_classes.html">Memory management classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acse_classes.html">ACSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dimse_classes.html">DIMSE classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicomdir_classes.html">DICOMDIR classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicom_dictionary_classes.html">DICOM dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definition_classes.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exception_classes.html">Exceptions</a></li>
+</ul>
+<p><span class="caption-text">Build distributions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html">Creating the source distribution from the code in the VCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build_distribution.html#versioning">Versioning</a></li>
+</ul>
+<p><span class="caption-text">Requirements &amp; Risks</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functional-requirements">Functional requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#req-read-dicom-files-the-library-must-be-able-to-read-dicom-files-from-a-data-source-and-replicate-their-structure-in-memory">[REQ_READ_DICOM_FILES] The library must be able to read DICOM files from a data source and replicate their structure in memory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-write-dicom-files-the-library-must-be-able-to-write-dicom-files-from-a-dicom-structure-in-memory">[REQ_WRITE_DICOM_FILES] The library must be able to write DICOM files from a DICOM structure in memory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-dimse-the-library-must-be-able-to-send-and-receive-dimse-messages">[REQ_DIMSE] The library must be able to send and receive DIMSE messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-acse-the-library-must-be-able-to-send-and-receive-acse-messages-through-a-generic-transport-mechanism">[REQ_ACSE] The library must be able to send and receive ACSE messages through a generic transport mechanism</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-generic-stream-protocol-there-must-be-a-generic-streaming-protocol-able-to-transport-dimse-messages">[REQ_GENERIC_STREAM_PROTOCOL] There must be a generic streaming protocol able to transport DIMSE messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-tcpip-protocol-imebra-must-supply-a-basic-tcp-streaming-class">[REQ_TCPIP_PROTOCOL] Imebra must supply a basic TCP streaming class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-user-protocol-imebra-must-supply-a-base-class-for-io-streaming">[REQ_USER_PROTOCOL] Imebra must supply a base class for IO streaming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-functional-macros-the-operations-that-get-image-specific-parameters-should-be-aware-of-functional-macros">[REQ_FUNCTIONAL_MACROS] The operations that get image specific parameters should be aware of Functional Macros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-endianess-platform-exposed-memory-with-raw-numerical-data-must-use-the-platform-endianess-to-represent-numbers">[REQ_ENDIANESS_PLATFORM] Exposed memory with raw numerical data must use the platform endianess to represent numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-read-tags-the-library-must-be-able-to-extract-the-information-contained-in-the-dicom-tags">[REQ_READ_TAGS] The library must be able to extract the information contained in the DICOM tags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-write-tags-the-library-must-be-able-to-write-tags-into-the-dicom-structure">[REQ_WRITE_TAGS] The library must be able to write tags into the DICOM structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-decompress-images-imebra-must-be-able-to-decompress-images-contained-in-the-dicom-dataset">[REQ_DECOMPRESS_IMAGES] Imebra must be able to decompress images contained in the DICOM dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-compress-images-imebra-must-be-able-to-compress-images-and-insert-them-in-the-dicom-dataset">[REQ_COMPRESS_IMAGES] Imebra must be able to compress images and insert them in the DICOM dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-parse-dicomdir-the-library-must-be-able-to-parse-dicomdir-structures-and-the-records-they-contain">[REQ_PARSE_DICOMDIR] The library must be able to parse DICOMDIR structures and the records they contain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-build-dicomdir-the-library-must-be-able-to-build-dicomdir-structures-and-the-records-they-contain">[REQ_BUILD_DICOMDIR] The library must be able to build DICOMDIR structures and the records they contain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-voi-function-allow-the-calculation-of-the-voi-transform-using-different-defined-dicom-functions">[REQ_VOI_FUNCTION] Allow the calculation of the VOI transform using different defined DICOM functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-exceptions-all-the-error-should-be-reported-via-c-exceptions">[REQ_EXCEPTIONS] All the error should be reported via C++ exceptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-raw-memory-the-library-must-be-able-to-expose-the-raw-memory-of-numeric-dicom-tags">[REQ_RAW_MEMORY] The library must be able to expose the raw memory of numeric DICOM tags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-extract-lut-the-library-must-be-able-to-extract-lut-information-from-the-dataset">[REQ_EXTRACT_LUT] The library must be able to extract LUT information from the DataSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-delayed-load-the-library-must-be-able-to-delay-the-loading-of-large-chunk-of-data-from-the-dicom-file">[REQ_DELAYED_LOAD] The library must be able to delay the loading of large chunk of data from the DICOM file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-uid-gen-supply-a-mechanism-to-generate-unique-dicom-uids">[REQ_UID_GEN] Supply a mechanism to generate unique DICOM UIDs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-vr-conversion-the-library-must-be-able-to-convert-data-between-different-vrs">[REQ_VR_CONVERSION] The library must be able to convert data between different VRs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-logging-the-library-must-log-the-most-important-tasks-execution">[REQ_LOGGING] The library must log the most important tasks execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-apply-modality-voilut-the-library-must-be-able-to-apply-the-modality-voi-or-lut-to-extracted-images">[REQ_APPLY_MODALITY_VOILUT] The library must be able to apply the modality VOI or LUT to extracted images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-prepare-rgb-image-imebra-must-be-able-to-create-an-image-ready-to-be-displayed-on-the-computer-screen">[REQ_PREPARE_RGB_IMAGE] Imebra must be able to create an image ready to be displayed on the computer screen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-apply-voilut-the-library-must-be-able-to-apply-the-presentation-voi-lut-to-the-extracted-images">[REQ_APPLY_VOILUT] The library must be able to apply the presentation VOI/LUT to the extracted images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-return-default-value-there-has-to-be-a-special-function-able-to-return-a-default-value-for-missing-tags">[REQ_RETURN_DEFAULT_VALUE] There has to be a special function able to return a default value for missing tags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-app-decides-default-value-default-values-must-be-explicitly-set-by-the-application-for-each-tag">[REQ_APP_DECIDES_DEFAULT_VALUE] Default values must be explicitly set by the application for each tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-throw-on-missing-data-the-library-must-throw-an-exception-when-the-client-tries-to-access-data-that-doesn-t-exist">[REQ_THROW_ON_MISSING_DATA] The library must throw an exception when the client tries to access data that doesn’t exist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-dont-return-pointer-the-api-should-not-return-pointers-to-allocated-objects">[REQ_DONT_RETURN_POINTER] The API should not return pointers to allocated objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-insert-files-in-tags-allow-to-insert-reference-to-files-into-dicom-tags">[REQ_INSERT_FILES_IN_TAGS] Allow to insert reference to files into DICOM tags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-immutable-classes-data-classes-should-be-immutable-with-mutable-subclasses">[REQ_IMMUTABLE_CLASSES] Data classes should be immutable, with mutable subclasses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-overlays-the-api-must-supply-methods-to-retrieve-and-set-overlay-bitmaps">[REQ_OVERLAYS] The API must supply methods to retrieve and set overlay bitmaps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#implementation-requirements">Implementation requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#req-no-callback-user-extensions-should-not-be-achievable-by-extending-imebra-classes-or-by-supplying-callbacks">[REQ_NO_CALLBACK] User extensions should not be achievable by extending Imebra classes or by supplying callbacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-no-multiple-inheritance-multiple-inheritance-is-not-allowed">[REQ_NO_MULTIPLE_INHERITANCE] Multiple inheritance is not allowed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-cpp-the-library-must-be-implemented-in-c-0x">[REQ_CPP] The library must be implemented in C++ 0x</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-binary-compatibility-the-library-should-offer-binary-compatibility-between-minor-revisions">[REQ_BINARY_COMPATIBILITY] The library should offer binary compatibility between minor revisions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-memory-allocation-memory-should-be-allocated-via-cpp-std-arrays-vectors-strings-etc-not-through-new">[REQ_MEMORY_ALLOCATION] Memory should be allocated via cpp std arrays, vectors, strings, etc, not through new</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-object-allocation-objects-should-be-allocated-via-shared-pointers-unique-pointers-or-on-the-stack">[REQ_OBJECT_ALLOCATION] Objects should be allocated via shared pointers, unique pointers or on the stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-throw-wrong-conversion-throw-exception-on-non-allowed-vr-conversions">[REQ_THROW_WRONG_CONVERSION] Throw exception on non allowed VR conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-make-shared-object-inserted-in-shared-pointers-must-be-allocated-via-make-shared">[REQ_MAKE_SHARED] Object inserted in shared pointers must be allocated via make_shared</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-integer-types-the-integer-types-in-the-public-interface-must-be-consistent">[REQ_INTEGER_TYPES] The integer types in the public interface must be consistent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-variable-max-image-size-the-settings-of-the-maximum-image-size-must-be-settable-at-runtime">[REQ_VARIABLE_MAX_IMAGE_SIZE] The settings of the maximum image size must be settable at runtime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-tagid-separate-class-the-tag-id-must-be-specified-using-a-specific-class">[REQ_TAGID_SEPARATE_CLASS] The tag id must be specified using a specific class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-dont-expose-indexed-writing-don-t-expose-methods-that-allow-indexed-writing-into-the-buffer-while-resetting-it">[REQ_DONT_EXPOSE_INDEXED_WRITING] Don’t expose methods that allow indexed writing into the buffer while resetting it</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#performances">Performances</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#req-wrap-functions-exceptions-info-all-the-functions-must-be-wrapped-by-macros-that-report-the-exception-info">[REQ_WRAP_FUNCTIONS_EXCEPTIONS_INFO] All the functions must be wrapped by macros that report the exception info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-memory-pool-the-library-should-reuse-unused-memory-instead-of-allocating-new-blocks">[REQ_MEMORY_POOL] The library should reuse unused memory instead of allocating new blocks.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-writing-handler-empty-new-writing-handler-that-write-data-to-a-buffer-should-be-initially-empty">[REQ_WRITING_HANDLER_EMPTY] New writing handler that write data to a buffer should be initially empty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-memory-pool-thread-there-should-be-a-memory-pool-per-thread">[REQ_MEMORY_POOL_THREAD] There should be a memory pool per thread</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#req-memory-pool-new-handler-provide-a-std-new-handler-that-clears-the-memory-pool-when-necessary">[REQ_MEMORY_POOL_NEW_HANDLER] Provide a std::new_handler that clears the memory pool when necessary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#security">Security</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#req-max-image-size-the-library-must-reject-images-that-are-bigger-than-a-predefined-size">[REQ_MAX_IMAGE_SIZE] The library must reject images that are bigger than a predefined size</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#risks">Risks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#risk-buffer-overflow-the-library-and-its-client-may-read-or-write-memory-outside-the-allocated-buffer">[RISK_BUFFER_OVERFLOW] The library and its client may read or write memory outside the allocated buffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#risk-receive-default-value-when-receiving-default-values-for-non-existent-data-the-client-may-understand-that-the-tag-is-actually-present">[RISK_RECEIVE_DEFAULT_VALUE] When receiving default values for non-existent data the client may understand that the tag is actually present</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#risk-vr-conversion-implicit-vr-conversion-may-hide-wrong-tag-s-vr">[RISK_VR_CONVERSION] Implicit VR conversion may hide wrong tag’s VR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#risk-memory-alloc-the-library-may-use-deallocated-memory-or-forget-to-deallocate-memory">[RISK_MEMORY_ALLOC] The library may use deallocated memory or forget to deallocate memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#risk-object-alloc-the-library-and-its-client-may-use-deallocated-objects-or-forget-to-deallocate-objects">[RISK_OBJECT_ALLOC] The library and its client may use deallocated objects or forget to deallocate objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#risk-buffer-reset-when-a-client-wants-to-write-several-values-in-the-buffer-it-may-inadvertently-reset-the-buffer">[RISK_BUFFER_RESET] When a client wants to write several values in the buffer it may inadvertently reset the buffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#risk-shared-ptr-new-out-of-sync-shared-ptr-usage-counter">[RISK_SHARED_PTR_NEW] Out of sync shared_ptr usage counter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#risk-wrong-modality-voilut-dataset-the-client-may-apply-to-the-image-the-modality-voi-lut-from-the-wrong-dataset">[RISK_WRONG_MODALITY_VOILUT_DATASET] The client may apply to the image the modality VOI/LUT from the wrong dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#risk-full-memory-the-memory-retained-in-the-memory-pool-may-cause-an-out-of-memory-error">[RISK_FULL_MEMORY] The memory retained in the memory pool may cause an out-of-memory error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#risk-wrong-voilut-dataset-the-library-client-may-apply-to-an-image-the-voi-lut-from-a-wrong-dataset">[RISK_WRONG_VOILUT_DATASET] The library client may apply to an image the VOI/LUT from a wrong dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#risk-out-of-memory-big-image-big-images-or-corrupted-image-size-tags-may-cause-an-out-of-memory-error">[RISK_OUT_OF_MEMORY_BIG_IMAGE] Big images or corrupted image size tags may cause an out-of-memory error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#risk-long-parameters-list-specifying-the-tag-id-in-the-dataset-methods-may-create-a-long-confusing-list-of-parameters">[RISK_LONG_PARAMETERS_LIST] Specifying the tag id in the dataset methods may create a long confusing list of parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#risk-copy-const-objects-a-const-object-may-be-copied-into-a-non-const-object">[RISK_COPY_CONST_OBJECTS] A const object may be copied into a non-const object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#risk-tags-dont-exist-the-client-may-ask-for-tags-that-don-t-exist">[RISK_TAGS_DONT_EXIST] The client may ask for tags that don’t exist</a></li>
+</ul>
+</li>
+</ul>
+<p><span class="caption-text">Standard operating procedures</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sop.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sop.html#sops">SOPs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Requirements</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/risks_requirements.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="requirements">
+<span id="id1"></span><h1>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h1>
+<p>This section lists the Imebra v.4 top level requirements and the requirements needed to mitigate the identified risks.</p>
+<section id="functional-requirements">
+<span id="req-func"></span><h2>Functional requirements<a class="headerlink" href="#functional-requirements" title="Permalink to this headline">¶</a></h2>
+<section id="req-read-dicom-files-the-library-must-be-able-to-read-dicom-files-from-a-data-source-and-replicate-their-structure-in-memory">
+<span id="req-read-dicom-files"></span><h3>[REQ_READ_DICOM_FILES] The library must be able to read DICOM files from a data source and replicate their structure in memory<a class="headerlink" href="#req-read-dicom-files-the-library-must-be-able-to-read-dicom-files-from-a-data-source-and-replicate-their-structure-in-memory" title="Permalink to this headline">¶</a></h3>
+<p>The library must be able to read DICOM files from a data source and replicate their structure in
+memory.</p>
+<p>The following transfer syntaxes must be supported:</p>
+<ul class="simple">
+<li><p>jpeg baseline (8 bits per color channel lossy), transfer syntax 1.2.840.10008.1.2.4.50</p></li>
+<li><p>jpeg baseline extended (12 bits per color channel lossy), transfer syntax 1.2.840.10008.1.2.4.51</p></li>
+<li><p>jpeg lossless (up to 16 bits per color channel lossless), transfer syntaxes 1.2.840.10008.1.2.4.57 and 1.2.840.10008.1.2.4.70</p></li>
+<li><p>raw dicom (up to 16 bits per color channel lossless), transfer syntaxes 1.2.840.10008.1.2, 1.2.840.10008.1.2.1 and 1.2.840.10008.1.2.2</p></li>
+<li><p>rle dicom (up to 16 bits per color channel lossless), transfer syntax 1.2.840.10008.1.2.5</p></li>
+</ul>
+</section>
+<section id="req-write-dicom-files-the-library-must-be-able-to-write-dicom-files-from-a-dicom-structure-in-memory">
+<span id="req-write-dicom-files"></span><h3>[REQ_WRITE_DICOM_FILES] The library must be able to write DICOM files from a DICOM structure in memory<a class="headerlink" href="#req-write-dicom-files-the-library-must-be-able-to-write-dicom-files-from-a-dicom-structure-in-memory" title="Permalink to this headline">¶</a></h3>
+<p>The library must be able to write DICOM files from a DICOM structure in memory.</p>
+<p>The following transfer syntaxes must be supported:</p>
+<ul class="simple">
+<li><p>jpeg baseline (8 bits per color channel lossy), transfer syntax 1.2.840.10008.1.2.4.50</p></li>
+<li><p>jpeg baseline extended (12 bits per color channel lossy), transfer syntax 1.2.840.10008.1.2.4.51</p></li>
+<li><p>jpeg lossless (up to 16 bits per color channel lossless), transfer syntaxes 1.2.840.10008.1.2.4.57 and 1.2.840.10008.1.2.4.70</p></li>
+<li><p>raw dicom (up to 16 bits per color channel lossless), transfer syntaxes 1.2.840.10008.1.2, 1.2.840.10008.1.2.1 and 1.2.840.10008.1.2.2</p></li>
+<li><p>rle dicom (up to 16 bits per color channel lossless), transfer syntax 1.2.840.10008.1.2.5</p></li>
+</ul>
+</section>
+<section id="req-dimse-the-library-must-be-able-to-send-and-receive-dimse-messages">
+<span id="req-dimse"></span><h3>[REQ_DIMSE] The library must be able to send and receive DIMSE messages<a class="headerlink" href="#req-dimse-the-library-must-be-able-to-send-and-receive-dimse-messages" title="Permalink to this headline">¶</a></h3>
+<p>The library must be able to build and parse DIMSE messages through an ACSE service.</p>
+<p>The following DIMSE services must be supported:</p>
+<ul class="simple">
+<li><p>C-STORE</p></li>
+<li><p>C-GET</p></li>
+<li><p>C-MOVE</p></li>
+<li><p>C-FIND</p></li>
+<li><p>C-ECHO</p></li>
+<li><p>C-CANCEL</p></li>
+<li><p>N-EVENT-REPORT</p></li>
+<li><p>N-GET</p></li>
+<li><p>N-SET</p></li>
+<li><p>N-ACTION</p></li>
+<li><p>N-CREATE</p></li>
+<li><p>N-DELETE</p></li>
+</ul>
+<p>Children requirements:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-generic-stream-protocol"><span class="std std-ref">[REQ_GENERIC_STREAM_PROTOCOL] There must be a generic streaming protocol able to transport DIMSE messages</span></a></p></li>
+<li><p><a class="reference internal" href="#req-tcpip-protocol"><span class="std std-ref">[REQ_TCPIP_PROTOCOL] Imebra must supply a basic TCP streaming class</span></a></p></li>
+</ul>
+</section>
+<section id="req-acse-the-library-must-be-able-to-send-and-receive-acse-messages-through-a-generic-transport-mechanism">
+<span id="req-acse"></span><h3>[REQ_ACSE] The library must be able to send and receive ACSE messages through a generic transport mechanism<a class="headerlink" href="#req-acse-the-library-must-be-able-to-send-and-receive-acse-messages-through-a-generic-transport-mechanism" title="Permalink to this headline">¶</a></h3>
+<p>The library must be able to send and receive DUL messages through a generic stream oriented
+transport mechanism.</p>
+<p>The ACSE management should not be exposed in the API.</p>
+</section>
+<section id="req-generic-stream-protocol-there-must-be-a-generic-streaming-protocol-able-to-transport-dimse-messages">
+<span id="req-generic-stream-protocol"></span><h3>[REQ_GENERIC_STREAM_PROTOCOL] There must be a generic streaming protocol able to transport DIMSE messages<a class="headerlink" href="#req-generic-stream-protocol-there-must-be-a-generic-streaming-protocol-able-to-transport-dimse-messages" title="Permalink to this headline">¶</a></h3>
+<p>There must be a generic streaming protocol able to transport DIMSE messages.</p>
+<p>The generic streaming protocol must derive from the Imebra base stream class and offer
+timeout capabilities and termination capabilities when waiting for incoming or outgoing data.</p>
+<p>Parent requirements:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-dimse"><span class="std std-ref">[REQ_DIMSE] The library must be able to send and receive DIMSE messages</span></a></p></li>
+</ul>
+</section>
+<section id="req-tcpip-protocol-imebra-must-supply-a-basic-tcp-streaming-class">
+<span id="req-tcpip-protocol"></span><h3>[REQ_TCPIP_PROTOCOL] Imebra must supply a basic TCP streaming class<a class="headerlink" href="#req-tcpip-protocol-imebra-must-supply-a-basic-tcp-streaming-class" title="Permalink to this headline">¶</a></h3>
+<p>A basic TCP streaming class must be provided so that it can be used with DUL.</p>
+<p>TLS is out of the scope of this class.</p>
+<p>Parent requirements:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-dimse"><span class="std std-ref">[REQ_DIMSE] The library must be able to send and receive DIMSE messages</span></a></p></li>
+</ul>
+<p>Children requirements:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-user-protocol"><span class="std std-ref">[REQ_USER_PROTOCOL] Imebra must supply a base class for IO streaming</span></a></p></li>
+</ul>
+</section>
+<section id="req-user-protocol-imebra-must-supply-a-base-class-for-io-streaming">
+<span id="req-user-protocol"></span><h3>[REQ_USER_PROTOCOL] Imebra must supply a base class for IO streaming<a class="headerlink" href="#req-user-protocol-imebra-must-supply-a-base-class-for-io-streaming" title="Permalink to this headline">¶</a></h3>
+<p>Since Imebra does not provide TLS, it must provide a base IO streaming class
+from which the user can build its own streaming class.</p>
+<p>Parent requirements:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-tcpip-protocol"><span class="std std-ref">[REQ_TCPIP_PROTOCOL] Imebra must supply a basic TCP streaming class</span></a></p></li>
+</ul>
+<p>Children requirements:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-no-callback"><span class="std std-ref">[REQ_NO_CALLBACK] User extensions should not be achievable by extending Imebra classes or by supplying callbacks</span></a></p></li>
+</ul>
+</section>
+<section id="req-functional-macros-the-operations-that-get-image-specific-parameters-should-be-aware-of-functional-macros">
+<span id="req-functional-macros"></span><h3>[REQ_FUNCTIONAL_MACROS] The operations that get image specific parameters should be aware of Functional Macros<a class="headerlink" href="#req-functional-macros-the-operations-that-get-image-specific-parameters-should-be-aware-of-functional-macros" title="Permalink to this headline">¶</a></h3>
+<p>Function that retrieve image related information should use also the Functional Macros (global or frame specific).</p>
+</section>
+<section id="req-endianess-platform-exposed-memory-with-raw-numerical-data-must-use-the-platform-endianess-to-represent-numbers">
+<span id="req-endianess-platform"></span><h3>[REQ_ENDIANESS_PLATFORM] Exposed memory with raw numerical data must use the platform endianess to represent numbers<a class="headerlink" href="#req-endianess-platform-exposed-memory-with-raw-numerical-data-must-use-the-platform-endianess-to-represent-numbers" title="Permalink to this headline">¶</a></h3>
+<p>Numbers in the tag’s memory exposed by the library must be represented using the byte endianess of
+the platform on which the library is being used.</p>
+</section>
+<section id="req-read-tags-the-library-must-be-able-to-extract-the-information-contained-in-the-dicom-tags">
+<span id="req-read-tags"></span><h3>[REQ_READ_TAGS] The library must be able to extract the information contained in the DICOM tags<a class="headerlink" href="#req-read-tags-the-library-must-be-able-to-extract-the-information-contained-in-the-dicom-tags" title="Permalink to this headline">¶</a></h3>
+<p>The library must be able to extract the tags information from the DICOM structure in memory.</p>
+<p>The following VRs must be supported: AE, AS, AT, CS, DA, DS, DT, FL, FD, IS, LO, LT,
+OB, OF, OD, OW, PN, SH, SL, SQ, SS, ST, TM, UI, UL, UN, US, UT, IS</p>
+<p>Children requirements:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-vr-conversion"><span class="std std-ref">[REQ_VR_CONVERSION] The library must be able to convert data between different VRs</span></a></p></li>
+<li><p><a class="reference internal" href="#req-return-default-value"><span class="std std-ref">[REQ_RETURN_DEFAULT_VALUE] There has to be a special function able to return a default value for missing tags</span></a></p></li>
+</ul>
+<p>Introduced risks:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-tags-dont-exist"><span class="std std-ref">[RISK_TAGS_DONT_EXIST] The client may ask for tags that don’t exist</span></a></p></li>
+</ul>
+</section>
+<section id="req-write-tags-the-library-must-be-able-to-write-tags-into-the-dicom-structure">
+<span id="req-write-tags"></span><h3>[REQ_WRITE_TAGS] The library must be able to write tags into the DICOM structure<a class="headerlink" href="#req-write-tags-the-library-must-be-able-to-write-tags-into-the-dicom-structure" title="Permalink to this headline">¶</a></h3>
+<p>The library must be able to write tags into the DICOM structure in memory.</p>
+<p>The following VRs must be supported: AE, AS, AT, CS, DA, DS, DT, FL, FD, IS, LO, LT,
+OB, OF, OD, OW, PN, SH, SL, SQ, SS, ST, TM, UI, UL, UN, US, UT, IS</p>
+<p>Children requirements:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-vr-conversion"><span class="std std-ref">[REQ_VR_CONVERSION] The library must be able to convert data between different VRs</span></a></p></li>
+</ul>
+</section>
+<section id="req-decompress-images-imebra-must-be-able-to-decompress-images-contained-in-the-dicom-dataset">
+<span id="req-decompress-images"></span><h3>[REQ_DECOMPRESS_IMAGES] Imebra must be able to decompress images contained in the DICOM dataset<a class="headerlink" href="#req-decompress-images-imebra-must-be-able-to-decompress-images-contained-in-the-dicom-dataset" title="Permalink to this headline">¶</a></h3>
+<p>Imebra must be able to extract decompressed images from the DICOM dataset.
+The recognized transfer syntaxes for the image compression are:</p>
+<ul class="simple">
+<li><p>jpeg baseline (8 bits per color channel lossy), transfer syntax 1.2.840.10008.1.2.4.50</p></li>
+<li><p>jpeg baseline extended (12 bits per color channel lossy), transfer syntax 1.2.840.10008.1.2.4.51</p></li>
+<li><p>jpeg lossless (up to 16 bits per color channel lossless), transfer syntaxes 1.2.840.10008.1.2.4.57 and 1.2.840.10008.1.2.4.70</p></li>
+<li><p>raw dicom (up to 16 bits per color channel lossless), transfer syntaxes 1.2.840.10008.1.2, 1.2.840.10008.1.2.1 and 1.2.840.10008.1.2.2</p></li>
+<li><p>rle dicom (up to 16 bits per color channel lossless), transfer syntax 1.2.840.10008.1.2.5</p></li>
+</ul>
+<p>Introduced risks:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-out-of-memory-big-image"><span class="std std-ref">[RISK_OUT_OF_MEMORY_BIG_IMAGE] Big images or corrupted image size tags may cause an out-of-memory error</span></a></p></li>
+</ul>
+</section>
+<section id="req-compress-images-imebra-must-be-able-to-compress-images-and-insert-them-in-the-dicom-dataset">
+<span id="req-compress-images"></span><h3>[REQ_COMPRESS_IMAGES] Imebra must be able to compress images and insert them in the DICOM dataset<a class="headerlink" href="#req-compress-images-imebra-must-be-able-to-compress-images-and-insert-them-in-the-dicom-dataset" title="Permalink to this headline">¶</a></h3>
+<p>Imebra must be able to compress images and insert them in the DICOM dataset.</p>
+<p>The recognized transfer syntaxes for the image compression are:</p>
+<ul class="simple">
+<li><p>jpeg baseline (8 bits per color channel lossy), transfer syntax 1.2.840.10008.1.2.4.50</p></li>
+<li><p>jpeg baseline extended (12 bits per color channel lossy), transfer syntax 1.2.840.10008.1.2.4.51</p></li>
+<li><p>jpeg lossless (up to 16 bits per color channel lossless), transfer syntaxes 1.2.840.10008.1.2.4.57 and 1.2.840.10008.1.2.4.70</p></li>
+<li><p>raw dicom (up to 16 bits per color channel lossless), transfer syntaxes 1.2.840.10008.1.2, 1.2.840.10008.1.2.1 and 1.2.840.10008.1.2.2</p></li>
+<li><p>rle dicom (up to 16 bits per color channel lossless), transfer syntax 1.2.840.10008.1.2.5</p></li>
+</ul>
+</section>
+<section id="req-parse-dicomdir-the-library-must-be-able-to-parse-dicomdir-structures-and-the-records-they-contain">
+<span id="req-parse-dicomdir"></span><h3>[REQ_PARSE_DICOMDIR] The library must be able to parse DICOMDIR structures and the records they contain<a class="headerlink" href="#req-parse-dicomdir-the-library-must-be-able-to-parse-dicomdir-structures-and-the-records-they-contain" title="Permalink to this headline">¶</a></h3>
+<p>Imebra must be able to parse DICOMDIR structures and the records they contain.</p>
+</section>
+<section id="req-build-dicomdir-the-library-must-be-able-to-build-dicomdir-structures-and-the-records-they-contain">
+<span id="req-build-dicomdir"></span><h3>[REQ_BUILD_DICOMDIR] The library must be able to build DICOMDIR structures and the records they contain<a class="headerlink" href="#req-build-dicomdir-the-library-must-be-able-to-build-dicomdir-structures-and-the-records-they-contain" title="Permalink to this headline">¶</a></h3>
+<p>Imebra must be able to build DICOMDIR structures and the records they contain.</p>
+</section>
+<section id="req-voi-function-allow-the-calculation-of-the-voi-transform-using-different-defined-dicom-functions">
+<span id="req-voi-function"></span><h3>[REQ_VOI_FUNCTION] Allow the calculation of the VOI transform using different defined DICOM functions<a class="headerlink" href="#req-voi-function-allow-the-calculation-of-the-voi-transform-using-different-defined-dicom-functions" title="Permalink to this headline">¶</a></h3>
+<p>Allow the calculation of the VOI transform using the functions LINEAR, LINEAR_EXACT and SIGMOID as defined by DICOM</p>
+</section>
+<section id="req-exceptions-all-the-error-should-be-reported-via-c-exceptions">
+<span id="req-exceptions"></span><h3>[REQ_EXCEPTIONS] All the error should be reported via C++ exceptions<a class="headerlink" href="#req-exceptions-all-the-error-should-be-reported-via-c-exceptions" title="Permalink to this headline">¶</a></h3>
+<p>The library should throw specific C++ exceptions to report errors.</p>
+</section>
+<section id="req-raw-memory-the-library-must-be-able-to-expose-the-raw-memory-of-numeric-dicom-tags">
+<span id="req-raw-memory"></span><h3>[REQ_RAW_MEMORY] The library must be able to expose the raw memory of numeric DICOM tags<a class="headerlink" href="#req-raw-memory-the-library-must-be-able-to-expose-the-raw-memory-of-numeric-dicom-tags" title="Permalink to this headline">¶</a></h3>
+<p>To be able to perform fast image processing, the client application needs access to the images or
+LUTs raw memory data.</p>
+<p>This implies that Imebra must be able to expose the raw memory used to store numeric tags (VRs: AT, FL, FD,
+OF, OW, OD, SS, SL, UL, US).</p>
+<p>Introduced risks:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-buffer-overflow"><span class="std std-ref">[RISK_BUFFER_OVERFLOW] The library and its client may read or write memory outside the allocated buffer</span></a></p></li>
+</ul>
+</section>
+<section id="req-extract-lut-the-library-must-be-able-to-extract-lut-information-from-the-dataset">
+<span id="req-extract-lut"></span><h3>[REQ_EXTRACT_LUT] The library must be able to extract LUT information from the DataSet<a class="headerlink" href="#req-extract-lut-the-library-must-be-able-to-extract-lut-information-from-the-dataset" title="Permalink to this headline">¶</a></h3>
+<p>The library must be able to extract LUT information from the dataset, regardless of the tag where
+it is stored.</p>
+</section>
+<section id="req-delayed-load-the-library-must-be-able-to-delay-the-loading-of-large-chunk-of-data-from-the-dicom-file">
+<span id="req-delayed-load"></span><h3>[REQ_DELAYED_LOAD] The library must be able to delay the loading of large chunk of data from the DICOM file<a class="headerlink" href="#req-delayed-load-the-library-must-be-able-to-delay-the-loading-of-large-chunk-of-data-from-the-dicom-file" title="Permalink to this headline">¶</a></h3>
+<p>In order to minimize the memory footprint of the loaded datasets, the library must be able to load
+the tags data only when necessary.</p>
+<p>It should also release the loaded memory when the data is no longer necessary</p>
+</section>
+<section id="req-uid-gen-supply-a-mechanism-to-generate-unique-dicom-uids">
+<span id="req-uid-gen"></span><h3>[REQ_UID_GEN] Supply a mechanism to generate unique DICOM UIDs<a class="headerlink" href="#req-uid-gen-supply-a-mechanism-to-generate-unique-dicom-uids" title="Permalink to this headline">¶</a></h3>
+<p>The library must be able to generate unique UIDs to be used in DICOM datasets as SOP instance UID.</p>
+</section>
+<section id="req-vr-conversion-the-library-must-be-able-to-convert-data-between-different-vrs">
+<span id="req-vr-conversion"></span><h3>[REQ_VR_CONVERSION] The library must be able to convert data between different VRs<a class="headerlink" href="#req-vr-conversion-the-library-must-be-able-to-convert-data-between-different-vrs" title="Permalink to this headline">¶</a></h3>
+<p>The library must be able to convert data between different VRs, for instance
+from integer to double or string.</p>
+<p>Parent requirements:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-read-tags"><span class="std std-ref">[REQ_READ_TAGS] The library must be able to extract the information contained in the DICOM tags</span></a></p></li>
+<li><p><a class="reference internal" href="#req-write-tags"><span class="std std-ref">[REQ_WRITE_TAGS] The library must be able to write tags into the DICOM structure</span></a></p></li>
+</ul>
+<p>Introduced risks:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-vr-conversion"><span class="std std-ref">[RISK_VR_CONVERSION] Implicit VR conversion may hide wrong tag’s VR</span></a></p></li>
+</ul>
+</section>
+<section id="req-logging-the-library-must-log-the-most-important-tasks-execution">
+<span id="req-logging"></span><h3>[REQ_LOGGING] The library must log the most important tasks execution<a class="headerlink" href="#req-logging-the-library-must-log-the-most-important-tasks-execution" title="Permalink to this headline">¶</a></h3>
+<p>The library must log to the device standard logging the most important steps.</p>
+</section>
+<section id="req-apply-modality-voilut-the-library-must-be-able-to-apply-the-modality-voi-or-lut-to-extracted-images">
+<span id="req-apply-modality-voilut"></span><h3>[REQ_APPLY_MODALITY_VOILUT] The library must be able to apply the modality VOI or LUT to extracted images<a class="headerlink" href="#req-apply-modality-voilut-the-library-must-be-able-to-apply-the-modality-voi-or-lut-to-extracted-images" title="Permalink to this headline">¶</a></h3>
+<p>The library must be able to apply to the images the modality VOI or LUT specified in the dataset.</p>
+<p>Introduced risks:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-wrong-modality-voilut-dataset"><span class="std std-ref">[RISK_WRONG_MODALITY_VOILUT_DATASET] The client may apply to the image the modality VOI/LUT from the wrong dataset</span></a></p></li>
+</ul>
+</section>
+<section id="req-prepare-rgb-image-imebra-must-be-able-to-create-an-image-ready-to-be-displayed-on-the-computer-screen">
+<span id="req-prepare-rgb-image"></span><h3>[REQ_PREPARE_RGB_IMAGE] Imebra must be able to create an image ready to be displayed on the computer screen<a class="headerlink" href="#req-prepare-rgb-image-imebra-must-be-able-to-create-an-image-ready-to-be-displayed-on-the-computer-screen" title="Permalink to this headline">¶</a></h3>
+<p>Imebra must be able to convert the images extracted from DICOM structures into RGBA images ready to
+be displayed into computer screens</p>
+</section>
+<section id="req-apply-voilut-the-library-must-be-able-to-apply-the-presentation-voi-lut-to-the-extracted-images">
+<span id="req-apply-voilut"></span><h3>[REQ_APPLY_VOILUT] The library must be able to apply the presentation VOI/LUT to the extracted images<a class="headerlink" href="#req-apply-voilut-the-library-must-be-able-to-apply-the-presentation-voi-lut-to-the-extracted-images" title="Permalink to this headline">¶</a></h3>
+<p>The library must be able to apply the presentation VOI/LUT to the images extracted from DICOM
+datasets</p>
+<p>Introduced risks:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-wrong-voilut-dataset"><span class="std std-ref">[RISK_WRONG_VOILUT_DATASET] The library client may apply to an image the VOI/LUT from a wrong dataset</span></a></p></li>
+</ul>
+</section>
+<section id="req-return-default-value-there-has-to-be-a-special-function-able-to-return-a-default-value-for-missing-tags">
+<span id="req-return-default-value"></span><h3>[REQ_RETURN_DEFAULT_VALUE] There has to be a special function able to return a default value for missing tags<a class="headerlink" href="#req-return-default-value-there-has-to-be-a-special-function-able-to-return-a-default-value-for-missing-tags" title="Permalink to this headline">¶</a></h3>
+<p>In addition to the functions that throw an exception when the required data is missing, special
+functions able to return a default value for missing data should be present.</p>
+<p>Parent requirements:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-read-tags"><span class="std std-ref">[REQ_READ_TAGS] The library must be able to extract the information contained in the DICOM tags</span></a></p></li>
+</ul>
+<p>Introduced risks:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-receive-default-value"><span class="std std-ref">[RISK_RECEIVE_DEFAULT_VALUE] When receiving default values for non-existent data the client may understand that the tag is actually present</span></a></p></li>
+</ul>
+</section>
+<section id="req-app-decides-default-value-default-values-must-be-explicitly-set-by-the-application-for-each-tag">
+<span id="req-app-decides-default-value"></span><h3>[REQ_APP_DECIDES_DEFAULT_VALUE] Default values must be explicitly set by the application for each tag<a class="headerlink" href="#req-app-decides-default-value-default-values-must-be-explicitly-set-by-the-application-for-each-tag" title="Permalink to this headline">¶</a></h3>
+<p>The library must not decide the default value to return when a tag is missing: the
+client application must specify the default value on each call.</p>
+<p>Mitigates:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-receive-default-value"><span class="std std-ref">[RISK_RECEIVE_DEFAULT_VALUE] When receiving default values for non-existent data the client may understand that the tag is actually present</span></a> by 50% The end application must decide the default value, but there is a chance that it still choose the wrong default valur</p></li>
+</ul>
+</section>
+<section id="req-throw-on-missing-data-the-library-must-throw-an-exception-when-the-client-tries-to-access-data-that-doesn-t-exist">
+<span id="req-throw-on-missing-data"></span><h3>[REQ_THROW_ON_MISSING_DATA] The library must throw an exception when the client tries to access data that doesn’t exist<a class="headerlink" href="#req-throw-on-missing-data-the-library-must-throw-an-exception-when-the-client-tries-to-access-data-that-doesn-t-exist" title="Permalink to this headline">¶</a></h3>
+<p>The library must throw an exception when the client tries to access data that doesn’t exist.</p>
+<p>Mitigates:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-tags-dont-exist"><span class="std std-ref">[RISK_TAGS_DONT_EXIST] The client may ask for tags that don’t exist</span></a> by 100%</p></li>
+</ul>
+</section>
+<section id="req-dont-return-pointer-the-api-should-not-return-pointers-to-allocated-objects">
+<span id="req-dont-return-pointer"></span><h3>[REQ_DONT_RETURN_POINTER] The API should not return pointers to allocated objects<a class="headerlink" href="#req-dont-return-pointer-the-api-should-not-return-pointers-to-allocated-objects" title="Permalink to this headline">¶</a></h3>
+<p>Instead of returning pointers to the allocated objects, the library should return the object instead.
+Because the API allocated objects hold just pointer to the implementation classes, copying them around
+should not impact the performances.</p>
+<p>Introduced risks:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-copy-const-objects"><span class="std std-ref">[RISK_COPY_CONST_OBJECTS] A const object may be copied into a non-const object</span></a></p></li>
+</ul>
+</section>
+<section id="req-insert-files-in-tags-allow-to-insert-reference-to-files-into-dicom-tags">
+<span id="req-insert-files-in-tags"></span><h3>[REQ_INSERT_FILES_IN_TAGS] Allow to insert reference to files into DICOM tags<a class="headerlink" href="#req-insert-files-in-tags-allow-to-insert-reference-to-files-into-dicom-tags" title="Permalink to this headline">¶</a></h3>
+<p>The API client should be able to specify a file as content of a DICOM tag: when the DICOM stream is encoded then
+the specific tag content should be fetched directly from the file.</p>
+</section>
+<section id="req-immutable-classes-data-classes-should-be-immutable-with-mutable-subclasses">
+<span id="req-immutable-classes"></span><h3>[REQ_IMMUTABLE_CLASSES] Data classes should be immutable, with mutable subclasses<a class="headerlink" href="#req-immutable-classes-data-classes-should-be-immutable-with-mutable-subclasses" title="Permalink to this headline">¶</a></h3>
+<p>The data classes should be immutable. Mutable subclasses should be used for objects that need to be modified.</p>
+<p>Mitigates:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-copy-const-objects"><span class="std std-ref">[RISK_COPY_CONST_OBJECTS] A const object may be copied into a non-const object</span></a> by 100% By having separate mutable and immutable classes, the compiler will not allow copying an immutable object into a mutable one.</p></li>
+</ul>
+</section>
+<section id="req-overlays-the-api-must-supply-methods-to-retrieve-and-set-overlay-bitmaps">
+<span id="req-overlays"></span><h3>[REQ_OVERLAYS] The API must supply methods to retrieve and set overlay bitmaps<a class="headerlink" href="#req-overlays-the-api-must-supply-methods-to-retrieve-and-set-overlay-bitmaps" title="Permalink to this headline">¶</a></h3>
+<p>The DataSet class must supply methods to retrieve and set overlay bitmaps.</p>
+</section>
+</section>
+<section id="implementation-requirements">
+<span id="req-impl"></span><h2>Implementation requirements<a class="headerlink" href="#implementation-requirements" title="Permalink to this headline">¶</a></h2>
+<section id="req-no-callback-user-extensions-should-not-be-achievable-by-extending-imebra-classes-or-by-supplying-callbacks">
+<span id="req-no-callback"></span><h3>[REQ_NO_CALLBACK] User extensions should not be achievable by extending Imebra classes or by supplying callbacks<a class="headerlink" href="#req-no-callback-user-extensions-should-not-be-achievable-by-extending-imebra-classes-or-by-supplying-callbacks" title="Permalink to this headline">¶</a></h3>
+<p>Allowing the user to extend Imebra classes or to provide callback functions complicates the separation
+between the Imebra’s interface and its implementation.</p>
+<p>Parent requirements:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-user-protocol"><span class="std std-ref">[REQ_USER_PROTOCOL] Imebra must supply a base class for IO streaming</span></a></p></li>
+</ul>
+</section>
+<section id="req-no-multiple-inheritance-multiple-inheritance-is-not-allowed">
+<span id="req-no-multiple-inheritance"></span><h3>[REQ_NO_MULTIPLE_INHERITANCE] Multiple inheritance is not allowed<a class="headerlink" href="#req-no-multiple-inheritance-multiple-inheritance-is-not-allowed" title="Permalink to this headline">¶</a></h3>
+<p>Some language for which bindings are required don’t support multiple inheritance, therefore it should not be used.</p>
+</section>
+<section id="req-cpp-the-library-must-be-implemented-in-c-0x">
+<span id="req-cpp"></span><h3>[REQ_CPP] The library must be implemented in C++ 0x<a class="headerlink" href="#req-cpp-the-library-must-be-implemented-in-c-0x" title="Permalink to this headline">¶</a></h3>
+<p>The library must be implemented in C++0x</p>
+<p>Introduced risks:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-buffer-overflow"><span class="std std-ref">[RISK_BUFFER_OVERFLOW] The library and its client may read or write memory outside the allocated buffer</span></a></p></li>
+<li><p><a class="reference internal" href="#risk-memory-alloc"><span class="std std-ref">[RISK_MEMORY_ALLOC] The library may use deallocated memory or forget to deallocate memory</span></a></p></li>
+<li><p><a class="reference internal" href="#risk-object-alloc"><span class="std std-ref">[RISK_OBJECT_ALLOC] The library and its client may use deallocated objects or forget to deallocate objects</span></a></p></li>
+</ul>
+</section>
+<section id="req-binary-compatibility-the-library-should-offer-binary-compatibility-between-minor-revisions">
+<span id="req-binary-compatibility"></span><h3>[REQ_BINARY_COMPATIBILITY] The library should offer binary compatibility between minor revisions<a class="headerlink" href="#req-binary-compatibility-the-library-should-offer-binary-compatibility-between-minor-revisions" title="Permalink to this headline">¶</a></h3>
+<p>The library should offer binary compatibility between minor revisions.</p>
+<p>In order to achieve this goal, minimal parts of the library interface should be exposed to the client
+application</p>
+</section>
+<section id="req-memory-allocation-memory-should-be-allocated-via-cpp-std-arrays-vectors-strings-etc-not-through-new">
+<span id="req-memory-allocation"></span><h3>[REQ_MEMORY_ALLOCATION] Memory should be allocated via cpp std arrays, vectors, strings, etc, not through new<a class="headerlink" href="#req-memory-allocation-memory-should-be-allocated-via-cpp-std-arrays-vectors-strings-etc-not-through-new" title="Permalink to this headline">¶</a></h3>
+<p>Memory shold be allocated via c++ provided classes instantiated on the stack or
+shared pointer if they have to be shared.</p>
+<p>Mitigates:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-memory-alloc"><span class="std std-ref">[RISK_MEMORY_ALLOC] The library may use deallocated memory or forget to deallocate memory</span></a> by 80%</p></li>
+</ul>
+</section>
+<section id="req-object-allocation-objects-should-be-allocated-via-shared-pointers-unique-pointers-or-on-the-stack">
+<span id="req-object-allocation"></span><h3>[REQ_OBJECT_ALLOCATION] Objects should be allocated via shared pointers, unique pointers or on the stack<a class="headerlink" href="#req-object-allocation-objects-should-be-allocated-via-shared-pointers-unique-pointers-or-on-the-stack" title="Permalink to this headline">¶</a></h3>
+<p>Objects shared between different components should be allocated via shared pointers,
+while objects used only once should be allocated via unique pointers or, preferably, on the stack</p>
+<p>Mitigates:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-object-alloc"><span class="std std-ref">[RISK_OBJECT_ALLOC] The library and its client may use deallocated objects or forget to deallocate objects</span></a> by 80%</p></li>
+</ul>
+<p>Introduced risks:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-shared-ptr-new"><span class="std std-ref">[RISK_SHARED_PTR_NEW] Out of sync shared_ptr usage counter</span></a></p></li>
+</ul>
+</section>
+<section id="req-throw-wrong-conversion-throw-exception-on-non-allowed-vr-conversions">
+<span id="req-throw-wrong-conversion"></span><h3>[REQ_THROW_WRONG_CONVERSION] Throw exception on non allowed VR conversions<a class="headerlink" href="#req-throw-wrong-conversion-throw-exception-on-non-allowed-vr-conversions" title="Permalink to this headline">¶</a></h3>
+<p>Some VR convenversions cannot be safely executed.
+In particular, the following conversions are forbidden: time and date to/from numbers, age to/from anything else.
+Failed conversion from strings to numbers must throw an exception.</p>
+<p>Mitigates:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-vr-conversion"><span class="std std-ref">[RISK_VR_CONVERSION] Implicit VR conversion may hide wrong tag’s VR</span></a> by 80%</p></li>
+</ul>
+</section>
+<section id="req-make-shared-object-inserted-in-shared-pointers-must-be-allocated-via-make-shared">
+<span id="req-make-shared"></span><h3>[REQ_MAKE_SHARED] Object inserted in shared pointers must be allocated via make_shared<a class="headerlink" href="#req-make-shared-object-inserted-in-shared-pointers-must-be-allocated-via-make-shared" title="Permalink to this headline">¶</a></h3>
+<p>Object that at some point are inserted into shared pointers must be
+allocated via make_shared</p>
+<p>Mitigates:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-shared-ptr-new"><span class="std std-ref">[RISK_SHARED_PTR_NEW] Out of sync shared_ptr usage counter</span></a> by 90%</p></li>
+</ul>
+</section>
+<section id="req-integer-types-the-integer-types-in-the-public-interface-must-be-consistent">
+<span id="req-integer-types"></span><h3>[REQ_INTEGER_TYPES] The integer types in the public interface must be consistent<a class="headerlink" href="#req-integer-types-the-integer-types-in-the-public-interface-must-be-consistent" title="Permalink to this headline">¶</a></h3>
+<p>All the integer that express a size, a file offset or an index must be of type size_t.
+All the other integers must be int32_t or uint32_t</p>
+</section>
+<section id="req-variable-max-image-size-the-settings-of-the-maximum-image-size-must-be-settable-at-runtime">
+<span id="req-variable-max-image-size"></span><h3>[REQ_VARIABLE_MAX_IMAGE_SIZE] The settings of the maximum image size must be settable at runtime<a class="headerlink" href="#req-variable-max-image-size-the-settings-of-the-maximum-image-size-must-be-settable-at-runtime" title="Permalink to this headline">¶</a></h3>
+<p>The client application must be able to modify the maximum acceptable image size.
+The max image size settings must be clearly explained in the documentation.</p>
+<p>Parent requirements:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-max-image-size"><span class="std std-ref">[REQ_MAX_IMAGE_SIZE] The library must reject images that are bigger than a predefined size</span></a></p></li>
+</ul>
+</section>
+<section id="req-tagid-separate-class-the-tag-id-must-be-specified-using-a-specific-class">
+<span id="req-tagid-separate-class"></span><h3>[REQ_TAGID_SEPARATE_CLASS] The tag id must be specified using a specific class<a class="headerlink" href="#req-tagid-separate-class-the-tag-id-must-be-specified-using-a-specific-class" title="Permalink to this headline">¶</a></h3>
+<p>A class must be used to specify a Dicom tag’s id (group, order, id).</p>
+<p>Mitigates:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-long-parameters-list"><span class="std std-ref">[RISK_LONG_PARAMETERS_LIST] Specifying the tag id in the dataset methods may create a long confusing list of parameters</span></a> by 100% Moving the tag’s id outside the parameters list reduces the possibility of errors. Additionally, the tag’s id is isolated and visible.</p></li>
+</ul>
+</section>
+<section id="req-dont-expose-indexed-writing-don-t-expose-methods-that-allow-indexed-writing-into-the-buffer-while-resetting-it">
+<span id="req-dont-expose-indexed-writing"></span><h3>[REQ_DONT_EXPOSE_INDEXED_WRITING] Don’t expose methods that allow indexed writing into the buffer while resetting it<a class="headerlink" href="#req-dont-expose-indexed-writing-don-t-expose-methods-that-allow-indexed-writing-into-the-buffer-while-resetting-it" title="Permalink to this headline">¶</a></h3>
+<p>The library must not expose methods that allow indexed writing into the buffers and
+silently erase its previous content.</p>
+<p>Mitigates:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-buffer-reset"><span class="std std-ref">[RISK_BUFFER_RESET] When a client wants to write several values in the buffer it may inadvertently reset the buffer</span></a> by 90% If there are no functions that enable indexed writing into the buffer while also resetting it, then the client will not be able to do that</p></li>
+</ul>
+</section>
+</section>
+<section id="performances">
+<span id="req-perf"></span><h2>Performances<a class="headerlink" href="#performances" title="Permalink to this headline">¶</a></h2>
+<section id="req-wrap-functions-exceptions-info-all-the-functions-must-be-wrapped-by-macros-that-report-the-exception-info">
+<span id="req-wrap-functions-exceptions-info"></span><h3>[REQ_WRAP_FUNCTIONS_EXCEPTIONS_INFO] All the functions must be wrapped by macros that report the exception info<a class="headerlink" href="#req-wrap-functions-exceptions-info-all-the-functions-must-be-wrapped-by-macros-that-report-the-exception-info" title="Permalink to this headline">¶</a></h3>
+<p>All the functions must be wrapped by special macros that capture
+the information about the exception being thrown or that cause a stack unwind.</p>
+</section>
+<section id="req-memory-pool-the-library-should-reuse-unused-memory-instead-of-allocating-new-blocks">
+<span id="req-memory-pool"></span><h3>[REQ_MEMORY_POOL] The library should reuse unused memory instead of allocating new blocks.<a class="headerlink" href="#req-memory-pool-the-library-should-reuse-unused-memory-instead-of-allocating-new-blocks" title="Permalink to this headline">¶</a></h3>
+<p>When a block of memory is discarded it should be stored in a memory pool
+for a while and reused when the library needs a block of the same size.</p>
+<p>Children requirements:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-memory-pool-thread"><span class="std std-ref">[REQ_MEMORY_POOL_THREAD] There should be a memory pool per thread</span></a></p></li>
+</ul>
+<p>Introduced risks:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-full-memory"><span class="std std-ref">[RISK_FULL_MEMORY] The memory retained in the memory pool may cause an out-of-memory error</span></a></p></li>
+</ul>
+</section>
+<section id="req-writing-handler-empty-new-writing-handler-that-write-data-to-a-buffer-should-be-initially-empty">
+<span id="req-writing-handler-empty"></span><h3>[REQ_WRITING_HANDLER_EMPTY] New writing handler that write data to a buffer should be initially empty<a class="headerlink" href="#req-writing-handler-empty-new-writing-handler-that-write-data-to-a-buffer-should-be-initially-empty" title="Permalink to this headline">¶</a></h3>
+<p>For performance reasons, when a buffer returns a new writing data handler (an object
+used to write data in the tag) the writing data handler should be initially empty</p>
+<p>Introduced risks:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-buffer-reset"><span class="std std-ref">[RISK_BUFFER_RESET] When a client wants to write several values in the buffer it may inadvertently reset the buffer</span></a></p></li>
+</ul>
+</section>
+<section id="req-memory-pool-thread-there-should-be-a-memory-pool-per-thread">
+<span id="req-memory-pool-thread"></span><h3>[REQ_MEMORY_POOL_THREAD] There should be a memory pool per thread<a class="headerlink" href="#req-memory-pool-thread-there-should-be-a-memory-pool-per-thread" title="Permalink to this headline">¶</a></h3>
+<p>A memory pool per thread removes the need for synchronization, increasing the
+speed of the memory pool methods.</p>
+<p>Parent requirements:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-memory-pool"><span class="std std-ref">[REQ_MEMORY_POOL] The library should reuse unused memory instead of allocating new blocks.</span></a></p></li>
+</ul>
+</section>
+<section id="req-memory-pool-new-handler-provide-a-std-new-handler-that-clears-the-memory-pool-when-necessary">
+<span id="req-memory-pool-new-handler"></span><h3>[REQ_MEMORY_POOL_NEW_HANDLER] Provide a std::new_handler that clears the memory pool when necessary<a class="headerlink" href="#req-memory-pool-new-handler-provide-a-std-new-handler-that-clears-the-memory-pool-when-necessary" title="Permalink to this headline">¶</a></h3>
+<p>The std::new_handler function will be automatically called when a new memory
+allocation fails, giving the memory pool an opportunity to clear the unused memory.</p>
+<p>Mitigates:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-full-memory"><span class="std std-ref">[RISK_FULL_MEMORY] The memory retained in the memory pool may cause an out-of-memory error</span></a> by 50% The std::new_handler is able to clear the memory pool when a memory allocation fails. Because there is a memory pool per thread, only the memory in the memory pool of the current thread is cleared when a memory allocation fails.</p></li>
+</ul>
+</section>
+</section>
+<section id="security">
+<span id="req-sec"></span><h2>Security<a class="headerlink" href="#security" title="Permalink to this headline">¶</a></h2>
+<section id="req-max-image-size-the-library-must-reject-images-that-are-bigger-than-a-predefined-size">
+<span id="req-max-image-size"></span><h3>[REQ_MAX_IMAGE_SIZE] The library must reject images that are bigger than a predefined size<a class="headerlink" href="#req-max-image-size-the-library-must-reject-images-that-are-bigger-than-a-predefined-size" title="Permalink to this headline">¶</a></h3>
+<p>The library must have a configurable setting that specifies the maximum
+size of the images that can be loaded. An exception must be thrown if the image
+is bigger than the setting allows.</p>
+<p>Mitigates:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#risk-out-of-memory-big-image"><span class="std std-ref">[RISK_OUT_OF_MEMORY_BIG_IMAGE] Big images or corrupted image size tags may cause an out-of-memory error</span></a> by 80%</p></li>
+</ul>
+<p>Children requirements:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-variable-max-image-size"><span class="std std-ref">[REQ_VARIABLE_MAX_IMAGE_SIZE] The settings of the maximum image size must be settable at runtime</span></a></p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="risks">
+<span id="id2"></span><h1>Risks<a class="headerlink" href="#risks" title="Permalink to this headline">¶</a></h1>
+<p>Your development process should take into account the risks exposed in this section.</p>
+<p>The risks are ordered by their total mitigated risk (severity * likelihood - mitigation). The most severe risks appear first.</p>
+<p>When a risk is mitigated then it contains a link to the mitigating requirement.</p>
+<section id="risk-buffer-overflow-the-library-and-its-client-may-read-or-write-memory-outside-the-allocated-buffer">
+<span id="risk-buffer-overflow"></span><h2>[RISK_BUFFER_OVERFLOW] The library and its client may read or write memory outside the allocated buffer<a class="headerlink" href="#risk-buffer-overflow-the-library-and-its-client-may-read-or-write-memory-outside-the-allocated-buffer" title="Permalink to this headline">¶</a></h2>
+<p>Likelihood: 100%</p>
+<p>Severity: 100 (0 = no impact, 100 = deadly)</p>
+<p>Total risk (Likelyhood by Severity, 0 = no risk, 10000 = maximum risk): 10000</p>
+<p>Mitigated total risk (0 = no risk, 10000 = maximum risk): 10000</p>
+<p>Caused by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-cpp"><span class="std std-ref">[REQ_CPP] The library must be implemented in C++ 0x</span></a></p></li>
+<li><p><a class="reference internal" href="#req-raw-memory"><span class="std std-ref">[REQ_RAW_MEMORY] The library must be able to expose the raw memory of numeric DICOM tags</span></a></p></li>
+</ul>
+</section>
+<section id="risk-receive-default-value-when-receiving-default-values-for-non-existent-data-the-client-may-understand-that-the-tag-is-actually-present">
+<span id="risk-receive-default-value"></span><h2>[RISK_RECEIVE_DEFAULT_VALUE] When receiving default values for non-existent data the client may understand that the tag is actually present<a class="headerlink" href="#risk-receive-default-value-when-receiving-default-values-for-non-existent-data-the-client-may-understand-that-the-tag-is-actually-present" title="Permalink to this headline">¶</a></h2>
+<p>When receiving default values for non-existent data the client may understand that the tag is
+actually present.</p>
+<p>Likelihood: 100% It is really common that a dataset is missing some tags.</p>
+<p>Severity: 100 (0 = no impact, 100 = deadly) If the client application is not aware of the fact that the library may have returned a default value instead of the actual one (that is missing) then it could use it as base for clinical actions or diagnoses.</p>
+<p>Total risk (Likelyhood by Severity, 0 = no risk, 10000 = maximum risk): 10000</p>
+<p>Mitigated total risk (0 = no risk, 10000 = maximum risk): 5000</p>
+<p>Caused by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-return-default-value"><span class="std std-ref">[REQ_RETURN_DEFAULT_VALUE] There has to be a special function able to return a default value for missing tags</span></a></p></li>
+</ul>
+<p>Mitigated by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-app-decides-default-value"><span class="std std-ref">[REQ_APP_DECIDES_DEFAULT_VALUE] Default values must be explicitly set by the application for each tag</span></a> (by 50%)</p></li>
+</ul>
+</section>
+<section id="risk-vr-conversion-implicit-vr-conversion-may-hide-wrong-tag-s-vr">
+<span id="risk-vr-conversion"></span><h2>[RISK_VR_CONVERSION] Implicit VR conversion may hide wrong tag’s VR<a class="headerlink" href="#risk-vr-conversion-implicit-vr-conversion-may-hide-wrong-tag-s-vr" title="Permalink to this headline">¶</a></h2>
+<p>The library or the client may read a tag and assume its type: an implicit VR
+conversion may hide the fact that the tag has in fact the wrong VR and contain a different
+information than the assumed one.</p>
+<p>Likelihood: 100%</p>
+<p>Severity: 100 (0 = no impact, 100 = deadly)</p>
+<p>Total risk (Likelyhood by Severity, 0 = no risk, 10000 = maximum risk): 10000</p>
+<p>Mitigated total risk (0 = no risk, 10000 = maximum risk): 2000</p>
+<p>Caused by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-vr-conversion"><span class="std std-ref">[REQ_VR_CONVERSION] The library must be able to convert data between different VRs</span></a></p></li>
+</ul>
+<p>Mitigated by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-throw-wrong-conversion"><span class="std std-ref">[REQ_THROW_WRONG_CONVERSION] Throw exception on non allowed VR conversions</span></a> (by 80%)</p></li>
+</ul>
+</section>
+<section id="risk-memory-alloc-the-library-may-use-deallocated-memory-or-forget-to-deallocate-memory">
+<span id="risk-memory-alloc"></span><h2>[RISK_MEMORY_ALLOC] The library may use deallocated memory or forget to deallocate memory<a class="headerlink" href="#risk-memory-alloc-the-library-may-use-deallocated-memory-or-forget-to-deallocate-memory" title="Permalink to this headline">¶</a></h2>
+<p>Likelihood: 100%</p>
+<p>Severity: 100 (0 = no impact, 100 = deadly) The usage of deleted objects may lead to wrong images, tags and ultimately diagnosis</p>
+<p>Total risk (Likelyhood by Severity, 0 = no risk, 10000 = maximum risk): 10000</p>
+<p>Mitigated total risk (0 = no risk, 10000 = maximum risk): 2000</p>
+<p>Caused by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-cpp"><span class="std std-ref">[REQ_CPP] The library must be implemented in C++ 0x</span></a></p></li>
+</ul>
+<p>Mitigated by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-memory-allocation"><span class="std std-ref">[REQ_MEMORY_ALLOCATION] Memory should be allocated via cpp std arrays, vectors, strings, etc, not through new</span></a> (by 80%)</p></li>
+</ul>
+</section>
+<section id="risk-object-alloc-the-library-and-its-client-may-use-deallocated-objects-or-forget-to-deallocate-objects">
+<span id="risk-object-alloc"></span><h2>[RISK_OBJECT_ALLOC] The library and its client may use deallocated objects or forget to deallocate objects<a class="headerlink" href="#risk-object-alloc-the-library-and-its-client-may-use-deallocated-objects-or-forget-to-deallocate-objects" title="Permalink to this headline">¶</a></h2>
+<p>Likelihood: 100% In large projects memory leakage or misusage of raw pointer will almost certainly happen.</p>
+<p>Severity: 100 (0 = no impact, 100 = deadly) The usage of deleted objects may lead to wrong images, tags and ultimately diagnosis.</p>
+<p>Total risk (Likelyhood by Severity, 0 = no risk, 10000 = maximum risk): 10000</p>
+<p>Mitigated total risk (0 = no risk, 10000 = maximum risk): 2000</p>
+<p>Caused by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-cpp"><span class="std std-ref">[REQ_CPP] The library must be implemented in C++ 0x</span></a></p></li>
+</ul>
+<p>Mitigated by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-object-allocation"><span class="std std-ref">[REQ_OBJECT_ALLOCATION] Objects should be allocated via shared pointers, unique pointers or on the stack</span></a> (by 80%)</p></li>
+</ul>
+</section>
+<section id="risk-buffer-reset-when-a-client-wants-to-write-several-values-in-the-buffer-it-may-inadvertently-reset-the-buffer">
+<span id="risk-buffer-reset"></span><h2>[RISK_BUFFER_RESET] When a client wants to write several values in the buffer it may inadvertently reset the buffer<a class="headerlink" href="#risk-buffer-reset-when-a-client-wants-to-write-several-values-in-the-buffer-it-may-inadvertently-reset-the-buffer" title="Permalink to this headline">¶</a></h2>
+<p>Because a writing data handler always starts in an empty state, a client
+may inadvertently erase the buffer content when writing new content into it.</p>
+<p>Likelihood: 100% If the library supplies a function able to write in different locations of a buffer then it is very likely that the client will use such function.</p>
+<p>Severity: 100 (0 = no impact, 100 = deadly) The final dicom content may not represent what the client intended.</p>
+<p>Total risk (Likelyhood by Severity, 0 = no risk, 10000 = maximum risk): 10000</p>
+<p>Mitigated total risk (0 = no risk, 10000 = maximum risk): 1000</p>
+<p>Caused by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-writing-handler-empty"><span class="std std-ref">[REQ_WRITING_HANDLER_EMPTY] New writing handler that write data to a buffer should be initially empty</span></a></p></li>
+</ul>
+<p>Mitigated by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-dont-expose-indexed-writing"><span class="std std-ref">[REQ_DONT_EXPOSE_INDEXED_WRITING] Don’t expose methods that allow indexed writing into the buffer while resetting it</span></a> (by 90%)</p></li>
+</ul>
+</section>
+<section id="risk-shared-ptr-new-out-of-sync-shared-ptr-usage-counter">
+<span id="risk-shared-ptr-new"></span><h2>[RISK_SHARED_PTR_NEW] Out of sync shared_ptr usage counter<a class="headerlink" href="#risk-shared-ptr-new-out-of-sync-shared-ptr-usage-counter" title="Permalink to this headline">¶</a></h2>
+<p>When an object is allocated with new and later inserted into a shared pointer
+then the actual object usage counter and the shared pointer usage
+counter may be out of sync.</p>
+<p>Likelihood: 50% Developers will usually avoid this error, but it may happen.</p>
+<p>Severity: 100 (0 = no impact, 100 = deadly) This may lead to usage of memory containing random values, resulting in wrong images, tags and finally diagnoses.</p>
+<p>Total risk (Likelyhood by Severity, 0 = no risk, 10000 = maximum risk): 5000</p>
+<p>Mitigated total risk (0 = no risk, 10000 = maximum risk): 500</p>
+<p>Caused by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-object-allocation"><span class="std std-ref">[REQ_OBJECT_ALLOCATION] Objects should be allocated via shared pointers, unique pointers or on the stack</span></a></p></li>
+</ul>
+<p>Mitigated by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-make-shared"><span class="std std-ref">[REQ_MAKE_SHARED] Object inserted in shared pointers must be allocated via make_shared</span></a> (by 90%)</p></li>
+</ul>
+</section>
+<section id="risk-wrong-modality-voilut-dataset-the-client-may-apply-to-the-image-the-modality-voi-lut-from-the-wrong-dataset">
+<span id="risk-wrong-modality-voilut-dataset"></span><h2>[RISK_WRONG_MODALITY_VOILUT_DATASET] The client may apply to the image the modality VOI/LUT from the wrong dataset<a class="headerlink" href="#risk-wrong-modality-voilut-dataset-the-client-may-apply-to-the-image-the-modality-voi-lut-from-the-wrong-dataset" title="Permalink to this headline">¶</a></h2>
+<p>The client may apply to the image the modality VOI/LUT from the wrong dataset</p>
+<p>Likelihood: 5% It is unlikely that the developer will pass the wrong DataSet to the transform.</p>
+<p>Severity: 100 (0 = no impact, 100 = deadly) Errors in the modality VOILUT may change the meaning of the pixels, resulting in wrong diagnoses.</p>
+<p>Total risk (Likelyhood by Severity, 0 = no risk, 10000 = maximum risk): 500</p>
+<p>Mitigated total risk (0 = no risk, 10000 = maximum risk): 500</p>
+<p>Caused by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-apply-modality-voilut"><span class="std std-ref">[REQ_APPLY_MODALITY_VOILUT] The library must be able to apply the modality VOI or LUT to extracted images</span></a></p></li>
+</ul>
+</section>
+<section id="risk-full-memory-the-memory-retained-in-the-memory-pool-may-cause-an-out-of-memory-error">
+<span id="risk-full-memory"></span><h2>[RISK_FULL_MEMORY] The memory retained in the memory pool may cause an out-of-memory error<a class="headerlink" href="#risk-full-memory-the-memory-retained-in-the-memory-pool-may-cause-an-out-of-memory-error" title="Permalink to this headline">¶</a></h2>
+<p>Likelihood: 50% On embedded or small devices (e.g. mobile phones) the amount of RAM may be limited. The usage of a memory pool causes the accumulation.</p>
+<p>Severity: 10 (0 = no impact, 100 = deadly) This is a low risk error: the software will stop working and report the error.</p>
+<p>Total risk (Likelyhood by Severity, 0 = no risk, 10000 = maximum risk): 500</p>
+<p>Mitigated total risk (0 = no risk, 10000 = maximum risk): 250</p>
+<p>Caused by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-memory-pool"><span class="std std-ref">[REQ_MEMORY_POOL] The library should reuse unused memory instead of allocating new blocks.</span></a></p></li>
+</ul>
+<p>Mitigated by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-memory-pool-new-handler"><span class="std std-ref">[REQ_MEMORY_POOL_NEW_HANDLER] Provide a std::new_handler that clears the memory pool when necessary</span></a> (by 50%)</p></li>
+</ul>
+</section>
+<section id="risk-wrong-voilut-dataset-the-library-client-may-apply-to-an-image-the-voi-lut-from-a-wrong-dataset">
+<span id="risk-wrong-voilut-dataset"></span><h2>[RISK_WRONG_VOILUT_DATASET] The library client may apply to an image the VOI/LUT from a wrong dataset<a class="headerlink" href="#risk-wrong-voilut-dataset-the-library-client-may-apply-to-an-image-the-voi-lut-from-a-wrong-dataset" title="Permalink to this headline">¶</a></h2>
+<p>The client library may apply to an image the VOILUT from the wrong dataset.</p>
+<p>Likelihood: 5% It is unlikely that the developer will pass the wrong DataSet to the transform.</p>
+<p>Severity: 30 (0 = no impact, 100 = deadly) The risk is related to the presentation LUT, which is used only for presentation of the data, not for analysis.</p>
+<p>Total risk (Likelyhood by Severity, 0 = no risk, 10000 = maximum risk): 150</p>
+<p>Mitigated total risk (0 = no risk, 10000 = maximum risk): 150</p>
+<p>Caused by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-apply-voilut"><span class="std std-ref">[REQ_APPLY_VOILUT] The library must be able to apply the presentation VOI/LUT to the extracted images</span></a></p></li>
+</ul>
+</section>
+<section id="risk-out-of-memory-big-image-big-images-or-corrupted-image-size-tags-may-cause-an-out-of-memory-error">
+<span id="risk-out-of-memory-big-image"></span><h2>[RISK_OUT_OF_MEMORY_BIG_IMAGE] Big images or corrupted image size tags may cause an out-of-memory error<a class="headerlink" href="#risk-out-of-memory-big-image-big-images-or-corrupted-image-size-tags-may-cause-an-out-of-memory-error" title="Permalink to this headline">¶</a></h2>
+<p>Big images or corrupted image size tags may cause an out-of-memory error</p>
+<p>Likelihood: 50% This could happen on embedded or small devices (e.g. mobile phones) where the amount of RAM may be limited.</p>
+<p>Severity: 10 (0 = no impact, 100 = deadly) This is a low risk error: the software will stop working and report the error.</p>
+<p>Total risk (Likelyhood by Severity, 0 = no risk, 10000 = maximum risk): 500</p>
+<p>Mitigated total risk (0 = no risk, 10000 = maximum risk): 100</p>
+<p>Caused by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-decompress-images"><span class="std std-ref">[REQ_DECOMPRESS_IMAGES] Imebra must be able to decompress images contained in the DICOM dataset</span></a></p></li>
+</ul>
+<p>Mitigated by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-max-image-size"><span class="std std-ref">[REQ_MAX_IMAGE_SIZE] The library must reject images that are bigger than a predefined size</span></a> (by 80%)</p></li>
+</ul>
+</section>
+<section id="risk-long-parameters-list-specifying-the-tag-id-in-the-dataset-methods-may-create-a-long-confusing-list-of-parameters">
+<span id="risk-long-parameters-list"></span><h2>[RISK_LONG_PARAMETERS_LIST] Specifying the tag id in the dataset methods may create a long confusing list of parameters<a class="headerlink" href="#risk-long-parameters-list-specifying-the-tag-id-in-the-dataset-methods-may-create-a-long-confusing-list-of-parameters" title="Permalink to this headline">¶</a></h2>
+<p>Because the tag id is composed by group id and tag id (and optionally order id),
+the list of parameters in the methods that access a dataset’s tags may become too long
+and confuse the developers that use the library.</p>
+<p>Likelihood: 80% It is very easy to get confused when a long list of parameters is used in a method call, specially when all the parameters are integers (e.g. when setting an integer tag’s value).</p>
+<p>Severity: 100 (0 = no impact, 100 = deadly) Referencing the wrong tag may cause wrong diagnoses or therapies and lead to death.</p>
+<p>Total risk (Likelyhood by Severity, 0 = no risk, 10000 = maximum risk): 8000</p>
+<p>Mitigated total risk (0 = no risk, 10000 = maximum risk): 0</p>
+<p>Mitigated by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-tagid-separate-class"><span class="std std-ref">[REQ_TAGID_SEPARATE_CLASS] The tag id must be specified using a specific class</span></a> (by 100%)</p></li>
+</ul>
+</section>
+<section id="risk-copy-const-objects-a-const-object-may-be-copied-into-a-non-const-object">
+<span id="risk-copy-const-objects"></span><h2>[RISK_COPY_CONST_OBJECTS] A const object may be copied into a non-const object<a class="headerlink" href="#risk-copy-const-objects-a-const-object-may-be-copied-into-a-non-const-object" title="Permalink to this headline">¶</a></h2>
+<p>Because the objects returned by the API are just handlers to implementation objects, the user
+may copy a const object into a non-const one, introducing the possibility that the implementation object
+pointed by the const object may be changed through the non-const object.</p>
+<p>Likelihood: 100%</p>
+<p>Severity: 100 (0 = no impact, 100 = deadly)</p>
+<p>Total risk (Likelyhood by Severity, 0 = no risk, 10000 = maximum risk): 10000</p>
+<p>Mitigated total risk (0 = no risk, 10000 = maximum risk): 0</p>
+<p>Caused by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-dont-return-pointer"><span class="std std-ref">[REQ_DONT_RETURN_POINTER] The API should not return pointers to allocated objects</span></a></p></li>
+</ul>
+<p>Mitigated by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-immutable-classes"><span class="std std-ref">[REQ_IMMUTABLE_CLASSES] Data classes should be immutable, with mutable subclasses</span></a> (by 100%)</p></li>
+</ul>
+</section>
+<section id="risk-tags-dont-exist-the-client-may-ask-for-tags-that-don-t-exist">
+<span id="risk-tags-dont-exist"></span><h2>[RISK_TAGS_DONT_EXIST] The client may ask for tags that don’t exist<a class="headerlink" href="#risk-tags-dont-exist-the-client-may-ask-for-tags-that-don-t-exist" title="Permalink to this headline">¶</a></h2>
+<p>The client may ask for data not included in the dataset</p>
+<p>Likelihood: 100% The chances of requesting a non-existing tag are really high and may happen on every loaded dataset.</p>
+<p>Severity: 100 (0 = no impact, 100 = deadly) Missing tags may be essential in making sense of the image and the information contained in the dataset.</p>
+<p>Total risk (Likelyhood by Severity, 0 = no risk, 10000 = maximum risk): 10000</p>
+<p>Mitigated total risk (0 = no risk, 10000 = maximum risk): 0</p>
+<p>Caused by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-read-tags"><span class="std std-ref">[REQ_READ_TAGS] The library must be able to extract the information contained in the DICOM tags</span></a></p></li>
+</ul>
+<p>Mitigated by:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#req-throw-on-missing-data"><span class="std std-ref">[REQ_THROW_ON_MISSING_DATA] The library must throw an exception when the client tries to access data that doesn’t exist</span></a> (by 100%)</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="build_distribution.html" class="btn btn-neutral float-left" title="Creating the source distribution from the code in the VCS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sop.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="copyright.html">Copyright</a> 2019, Paolo Brandoli.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
