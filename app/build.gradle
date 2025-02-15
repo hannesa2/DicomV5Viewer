@@ -1,19 +1,26 @@
-apply plugin: 'com.android.application'
-apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: "com.android.application"
+apply plugin: "org.jetbrains.kotlin.android"
 
 android {
-    compileSdkVersion 33
+    namespace "info.hannes.dicom"
+    compileSdk 35
     defaultConfig {
         applicationId "info.hannes.dicom"
         minSdkVersion 26
-        targetSdkVersion 33
         versionCode getGitCommitCount()
         versionName getTag()
-        buildConfigField "String", 'GIT_REPOSITORY', "\"" + getGitOriginRemote() + "\""
+        buildConfigField "String", "GIT_REPOSITORY", "\"" + getGitOriginRemote() + "\""
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
     }
     signingConfigs {
         release {
-            storeFile file('../signing/release.keystore')
+            storeFile file("../signing/release.keystore")
             storePassword System.getenv("KEYSTORE_PASS")
             keyAlias System.getenv("ALIAS_NAME")
             keyPassword System.getenv("ALIAS_PASS")
@@ -27,11 +34,11 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             if (System.getenv("CI_SERVER")) { // gitlab
                 println "I run on Gitlab and use RELEASE signing"
                 signingConfig signingConfigs.release
-            } else if (file('../signing/release.keystore').exists()) {
+            } else if (file("../signing/release.keystore").exists()) {
                 if (System.getenv("KEYSTORE_PASS") == null || System.getenv("ALIAS_NAME") == null || System.getenv("ALIAS_PASS") == null) {
                     println "I run somewhere else and I use DEBUG signing because variables are not set !"
                     signingConfig signingConfigs.debug
@@ -55,8 +62,8 @@ android {
         }
     }
 
-    applicationVariants.all { variant ->
-        variant.outputs.all { output ->
+    applicationVariants.configureEach { variant ->
+        variant.outputs.configureEach { output ->
             if (variant.name == "release") {
                 def builtType = variant.buildType.name
                 def vName = variant.versionName
@@ -71,27 +78,26 @@ android {
     }
     buildFeatures {
         viewBinding true
+        buildConfig true
     }
-
-    namespace 'info.hannes.dicom'
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.github.MikeOrtiz:TouchImageView:3.3'
-    implementation 'com.google.android.material:material:1.9.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.github.hannesa2:githubAppUpdate:2.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
-    implementation 'androidx.core:core-ktx:1.10.0'
+    implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+    implementation "androidx.appcompat:appcompat:1.6.1"
+    implementation "com.github.MikeOrtiz:TouchImageView:3.3"
+    implementation "com.google.android.material:material:1.9.0"
+    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+    implementation "com.github.hannesa2:githubAppUpdate:2.3.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+    implementation "androidx.core:core-ktx:1.10.0"
 }
 
-task('downloadImebra', type: Copy) {
+tasks.register("downloadImebra", Copy) {
     mkdir project.file("libs")
-    def f = project.file('libs/imebrajni5-release.aar')
+    def f = project.file("libs/imebrajni5-release.aar")
     if (!f.exists()) {
-        new URL('https://imebra.com/wp-content/uploads/source_distribution/imebrajni5-release.aar').withInputStream { i -> f.withOutputStream { it << i } }
+        new URL("https://imebra.com/wp-content/uploads/source_distribution/imebrajni5-release.aar").withInputStream { i -> f.withOutputStream { it << i } }
     }
 }
 

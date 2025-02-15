@@ -1,14 +1,18 @@
 name: PullRequest
 
-on: [ pull_request ]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
   buildRelease:
-    name: Build Release JDK ${{ matrix.java_version }}
+    name: Build Release
     runs-on: macOS-latest
     strategy:
       matrix:
-        java_version: [ 11 ]
+        java_version: [ 17 ]
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.3
@@ -34,11 +38,11 @@ jobs:
       - name: cleanup keystore
         run: ./signing/cleanup.sh
   buildTest:
-    name: Build & Test JDK ${{ matrix.java_version }}
+    name: Test
     runs-on: macOS-latest
     strategy:
       matrix:
-        java_version: [ 11 ]
+        java_version: [ 17 ]
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.3
@@ -49,6 +53,7 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: ${{ matrix.java_version }}
+      - uses: gradle/actions/wrapper-validation@v4
       - name: Install Android SDK
         uses: malinskiy/action-android/install-sdk@release/0.1.4
       - name: Decrypt keystore
@@ -73,7 +78,7 @@ jobs:
   #          tag: default
   #          abi: x86
   #      - name: Archive Espresso results
-  #        uses: actions/upload-artifact@v2.0.1
+  #        uses: actions/upload-artifact@v4
   #        with:
   #          name: LiveEdgeDetection-Espresso-report
   #          path: app/build/reports/androidTests/connected
@@ -84,7 +89,7 @@ jobs:
   #          name: LiveEdgeDetection-logcat
   #          path: artifacts/logcat.log
   #      - name: Archive screenshots
-  #        uses: actions/upload-artifact@v3
+  #        uses: actions/upload-artifact@v4
   #        with:
   #          name: LiveEdgeDetection-Screenshots
   #          path: screenshots/adb
@@ -100,13 +105,13 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'adopt'
-          java-version: 11
+          java-version: 17
       - name: Install Android SDK
         uses: malinskiy/action-android/install-sdk@release/0.1.4
       - name: Code checks
         run: ./gradlew check
       - name: Archive Lint report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: ${{ always() }}
         with:
           name: DICOM-Lint-report
