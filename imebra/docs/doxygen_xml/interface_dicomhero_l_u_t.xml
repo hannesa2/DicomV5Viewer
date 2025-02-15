@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_l_u_t" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroLUT</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_lut.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_l_u_t_1a6c37a7cda0722cab392287119bb45cc9" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroLUT::m_LUT</definition>
+        <argsstring></argsstring>
+        <name>m_LUT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_lut.h" line="30" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_lut.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_l_u_t_1a715dd0a3eb91dad9937accbd47a43ecb" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroLUT::description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <read></read>
+        <briefdescription>
+<para>Returns the LUT&apos;s description. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_lut.h" line="56" column="15" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_lut.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_l_u_t_1a6fc5830f7f207a6d13721ed29031c9cf" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroLUT::bits</definition>
+        <argsstring></argsstring>
+        <name>bits</name>
+        <read></read>
+        <briefdescription>
+<para>Return the number of bits used to store a LUT value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_lut.h" line="61" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_lut.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_l_u_t_1a24d474f1b9d4dba55c099e8a5a7f1bc2" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroLUT::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <read></read>
+        <briefdescription>
+<para>Return the lut&apos;s size (the number of stored values). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_lut.h" line="66" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_lut.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_l_u_t_1a4f04f737d0fa1f53fe19c598600581fc" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>int</type>
+        <definition>int DicomheroLUT::firstMappedValue</definition>
+        <argsstring></argsstring>
+        <name>firstMappedValue</name>
+        <read></read>
+        <briefdescription>
+<para>Return the first LUT index that has a mapped value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_lut.h" line="71" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_lut.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_l_u_t_1a367af0186b5b2e1f657a0e1dd6a06160" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroLUT::initWithDicomheroLut:</definition>
+        <argsstring>(void *parameter_LUT)</argsstring>
+        <name>initWithDicomheroLut:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_LUT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_lut.h" line="30" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_l_u_t_1af0ad7c92dc94fda295879fcdad9f1140" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroLUT::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_lut.h" line="30" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_l_u_t_1a31fae6981a45a2f943bdfddc3732bea1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_reading_data_handler_numeric" kindref="compound">DicomheroReadingDataHandlerNumeric</ref> *</type>
+        <definition>DicomheroReadingDataHandlerNumeric* DicomheroLUT::getReadingDataHandler</definition>
+        <argsstring>()</argsstring>
+        <name>getReadingDataHandler</name>
+        <briefdescription>
+<para>Return a numeric handler for the memory containing the mapped values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a reading data handler that points to the mapped values </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_lut.h" line="30" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_l_u_t_1a30f1880a3fdab1ad5c1171c1090f8b94" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroLUT::getMappedValue:</definition>
+        <argsstring>(int index)</argsstring>
+        <name>getMappedValue:</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Return the mapped value for a specific index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a LUT index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the mapped value for the requested index </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_lut.h" line="30" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents Lookup Table. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_lut.h" line="26" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_lut.h" bodystart="28" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_l_u_t_1a6fc5830f7f207a6d13721ed29031c9cf" prot="public" virt="non-virtual"><scope>DicomheroLUT</scope><name>bits</name></member>
+      <member refid="interface_dicomhero_l_u_t_1af0ad7c92dc94fda295879fcdad9f1140" prot="public" virt="virtual"><scope>DicomheroLUT</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_l_u_t_1a715dd0a3eb91dad9937accbd47a43ecb" prot="public" virt="non-virtual"><scope>DicomheroLUT</scope><name>description</name></member>
+      <member refid="interface_dicomhero_l_u_t_1a4f04f737d0fa1f53fe19c598600581fc" prot="public" virt="non-virtual"><scope>DicomheroLUT</scope><name>firstMappedValue</name></member>
+      <member refid="interface_dicomhero_l_u_t_1a30f1880a3fdab1ad5c1171c1090f8b94" prot="public" virt="virtual"><scope>DicomheroLUT</scope><name>getMappedValue:</name></member>
+      <member refid="interface_dicomhero_l_u_t_1a31fae6981a45a2f943bdfddc3732bea1" prot="public" virt="virtual"><scope>DicomheroLUT</scope><name>getReadingDataHandler</name></member>
+      <member refid="interface_dicomhero_l_u_t_1a367af0186b5b2e1f657a0e1dd6a06160" prot="public" virt="virtual"><scope>DicomheroLUT</scope><name>initWithDicomheroLut:</name></member>
+      <member refid="interface_dicomhero_l_u_t_1a6c37a7cda0722cab392287119bb45cc9" prot="public" virt="non-virtual"><scope>DicomheroLUT</scope><name>m_LUT</name></member>
+      <member refid="interface_dicomhero_l_u_t_1a24d474f1b9d4dba55c099e8a5a7f1bc2" prot="public" virt="non-virtual"><scope>DicomheroLUT</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_color_transforms_factory" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::ColorTransformsFactory</compoundname>
+    <includes local="no">colorTransformsFactory.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classdicomhero_1_1_color_transforms_factory_1a4e8a164232d6cd857099d6ba347ab4d2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string dicomhero::ColorTransformsFactory::normalizeColorSpace</definition>
+        <argsstring>(const std::string &amp;colorSpace)</argsstring>
+        <name>normalizeColorSpace</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>colorSpace</declname>
+        </param>
+        <briefdescription>
+<para>Normalize the name of a color space. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>DICOM color spaces may contain additional information like the subsampling factor.</para>
+<para>This method removes the additional information contained in the color space name and makes it upper-case, so it can be compared with other normalized color space names.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space name to normalize </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the normalized color space name </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/colorTransformsFactory.h" line="54" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_color_transforms_factory_1a9990f1d5dac74043fcdc1aed9095af4d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool dicomhero::ColorTransformsFactory::isMonochrome</definition>
+        <argsstring>(const std::string &amp;colorSpace)</argsstring>
+        <name>isMonochrome</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>colorSpace</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the specified color space name represents a monochromatic color space. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The method takes care of normalizing the color space before analyzing it.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space to test </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the normalized color space name represents a monochromatic color space </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/colorTransformsFactory.h" line="66" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_color_transforms_factory_1a1ea701fd967d823781bf13e9196995a9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool dicomhero::ColorTransformsFactory::isSubsampledX</definition>
+        <argsstring>(const std::string &amp;colorSpace)</argsstring>
+        <name>isSubsampledX</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>colorSpace</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the specified color space name contains additional information that specifies that the pixels are subsampled horizontally. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space to test for additional information about horizontal subsampling </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the color space name specifies that each pixel is subsampled horizontally </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/colorTransformsFactory.h" line="78" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_color_transforms_factory_1a667a5153bba52082e8872158e8262c4b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool dicomhero::ColorTransformsFactory::isSubsampledY</definition>
+        <argsstring>(const std::string &amp;colorSpace)</argsstring>
+        <name>isSubsampledY</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>colorSpace</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the specified color space name contains additional information that specifies that the pixels are subsampled vertically. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space to test for additional information about vertical subsampling </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the color space name specifies that each pixel is subsampled vertically </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/colorTransformsFactory.h" line="90" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_color_transforms_factory_1a7a116932c7f68eba1003c807bbcff27c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool dicomhero::ColorTransformsFactory::canSubsample</definition>
+        <argsstring>(const std::string &amp;colorSpace)</argsstring>
+        <name>canSubsample</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>colorSpace</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the specified color space name supports subsampling information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space to test </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if subsampling information can be added to the specified color space name </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/colorTransformsFactory.h" line="100" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_color_transforms_factory_1a8691fbb5ad5da44cd4803d2db2d520af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string dicomhero::ColorTransformsFactory::makeSubsampled</definition>
+        <argsstring>(const std::string &amp;colorSpace, bool bSubsampleX, bool bSubsampleY)</argsstring>
+        <name>makeSubsampled</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>colorSpace</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bSubsampleX</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bSubsampleY</declname>
+        </param>
+        <briefdescription>
+<para>Add subsampling information to the specified color space name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space to which the subsampling information must be added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bSubsampleX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if the pixels are subsampled horizontally </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bSubsampleY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if the pixels are subsampled vertically </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the specified color space name with additional information about the pixels subsampling </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/colorTransformsFactory.h" line="112" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_color_transforms_factory_1a546398f65227e531849f62e4a1587cb4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>static std::uint32_t dicomhero::ColorTransformsFactory::getNumberOfChannels</definition>
+        <argsstring>(const std::string &amp;colorSpace)</argsstring>
+        <name>getNumberOfChannels</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>colorSpace</declname>
+        </param>
+        <briefdescription>
+<para>Returns the number of color channels necessary for the specified color space. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the number of color channels necessary to the specified color space </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/colorTransformsFactory.h" line="121" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_color_transforms_factory_1abb444fa01f0479b898557fb12e2de5f5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_transform" kindref="compound">Transform</ref></type>
+        <definition>static Transform dicomhero::ColorTransformsFactory::getTransform</definition>
+        <argsstring>(const std::string &amp;startColorSpace, const std::string &amp;endColorSpace)</argsstring>
+        <name>getTransform</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>startColorSpace</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>endColorSpace</declname>
+        </param>
+        <briefdescription>
+<para>Returns a <ref refid="classdicomhero_1_1_transform" kindref="compound">Transform</ref> object able to transform an image&apos;s content from one color space to another one. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>startColorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space of the input image&apos;s content </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>endColorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space of the output image&apos;s content </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="classdicomhero_1_1_transform" kindref="compound">Transform</ref> object able to transform the image&apos;s content from input color space to output one </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/colorTransformsFactory.h" line="132" column="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classdicomhero_1_1_color_transforms_factory" kindref="compound">ColorTransformsFactory</ref> has the knowledge about the color spaces supported by the library: it can construct <ref refid="classdicomhero_1_1_transform" kindref="compound">Transform</ref> objects that transform images&apos; content from one color space to another and can return specific information about the supported color spaces. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/colorTransformsFactory.h" line="36" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/colorTransformsFactory.h" bodystart="37" bodyend="134"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_color_transforms_factory_1a7a116932c7f68eba1003c807bbcff27c" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformsFactory</scope><name>canSubsample</name></member>
+      <member refid="classdicomhero_1_1_color_transforms_factory_1a546398f65227e531849f62e4a1587cb4" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformsFactory</scope><name>getNumberOfChannels</name></member>
+      <member refid="classdicomhero_1_1_color_transforms_factory_1abb444fa01f0479b898557fb12e2de5f5" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformsFactory</scope><name>getTransform</name></member>
+      <member refid="classdicomhero_1_1_color_transforms_factory_1a9990f1d5dac74043fcdc1aed9095af4d" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformsFactory</scope><name>isMonochrome</name></member>
+      <member refid="classdicomhero_1_1_color_transforms_factory_1a1ea701fd967d823781bf13e9196995a9" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformsFactory</scope><name>isSubsampledX</name></member>
+      <member refid="classdicomhero_1_1_color_transforms_factory_1a667a5153bba52082e8872158e8262c4b" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformsFactory</scope><name>isSubsampledY</name></member>
+      <member refid="classdicomhero_1_1_color_transforms_factory_1a8691fbb5ad5da44cd4803d2db2d520af" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformsFactory</scope><name>makeSubsampled</name></member>
+      <member refid="classdicomhero_1_1_color_transforms_factory_1a4e8a164232d6cd857099d6ba347ab4d2" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformsFactory</scope><name>normalizeColorSpace</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

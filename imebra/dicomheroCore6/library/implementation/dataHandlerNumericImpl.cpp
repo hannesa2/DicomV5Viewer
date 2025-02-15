@@ -1,0 +1,478 @@
+/*
+Copyright 2005 - 2021 by Paolo Brandoli/Binarno s.p.
+
+DICOMHero/Imebra is available for free under the GNU General Public License.
+
+The full text of the license is available in the file license.rst
+ in the project root folder.
+
+If you do not want to be bound by the GPL terms (such as the requirement
+ that your application must also be GPL), you may purchase a commercial
+ license for DICOMHero/Imebra from the DICOMHero’s website (https://dicomhero.com).
+*/
+
+/*! \file dataHandlerNumeric.cpp
+    \brief Implementation of the handler for the numeric tags.
+
+*/
+
+#include "streamControllerImpl.h"
+#include "dataHandlerNumericImpl.h"
+#include "memoryImpl.h"
+#include "bufferImpl.h"
+
+namespace dicomhero
+{
+
+namespace implementation
+{
+
+namespace handlers
+{
+
+readingDataHandlerNumericBase::readingDataHandlerNumericBase(const std::shared_ptr<const memory>& parseMemory, tagVR_t dataType):
+    readingDataHandler(dataType), m_pMemory(parseMemory)
+{
+}
+
+const std::uint8_t* readingDataHandlerNumericBase::getMemoryBuffer() const
+{
+    DICOMHERO_FUNCTION_START();
+
+    return m_pMemory->data();
+
+    DICOMHERO_FUNCTION_END();
+}
+
+size_t readingDataHandlerNumericBase::getMemorySize() const
+{
+    DICOMHERO_FUNCTION_START();
+
+    return m_pMemory->size();
+
+    DICOMHERO_FUNCTION_END();
+}
+
+std::shared_ptr<const memory> readingDataHandlerNumericBase::getMemory() const
+{
+    return m_pMemory;
+}
+
+void readingDataHandlerNumericBase::copyTo(std::shared_ptr<writingDataHandlerNumericBase> pDestination)
+{
+    DICOMHERO_FUNCTION_START();
+
+    if(pDestination->getDataType() == getDataType())
+    {
+        std::shared_ptr<memory> pDestMemory = pDestination->getMemory();
+        std::shared_ptr<const memory> pMemory = getMemory();
+        if(pDestMemory->size() < pMemory->size())
+        {
+            pDestMemory->assignRegion(pMemory->data(), pDestMemory->size(), 0);
+        }
+        else
+        {
+            pDestMemory->assignRegion(pMemory->data(), pMemory->size(), 0);
+        }
+
+        return;
+    }
+
+    dicomhero::implementation::handlers::writingDataHandlerNumericBase* pHandler(pDestination.get());
+    if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::writingDataHandlerNumeric<std::uint8_t>) ||
+        dynamic_cast<dicomhero::implementation::handlers::writingDataHandlerNumeric<std::uint8_t>* >(pHandler) != 0)
+    {
+        copyTo((std::uint8_t*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::writingDataHandlerNumeric<std::int8_t>))
+    {
+        copyTo((std::int8_t*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::writingDataHandlerNumeric<std::uint16_t>))
+    {
+        copyTo((std::uint16_t*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::writingDataHandlerNumeric<std::int16_t>))
+    {
+        copyTo((std::int16_t*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::writingDataHandlerNumeric<std::uint32_t>))
+    {
+        copyTo((std::uint32_t*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::writingDataHandlerNumeric<std::int32_t>))
+    {
+        copyTo((std::int32_t*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::writingDataHandlerNumeric<std::uint64_t>))
+    {
+        copyTo((std::uint64_t*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::writingDataHandlerNumeric<std::int64_t>))
+    {
+        copyTo((std::int64_t*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::writingDataHandlerNumeric<float>))
+    {
+        copyTo((float*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::writingDataHandlerNumeric<double>))
+    {
+        copyTo((double*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else
+    {
+        DICOMHERO_THROW(std::runtime_error, "Data type not valid");
+    }
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+writingDataHandlerNumericBase::writingDataHandlerNumericBase(const std::shared_ptr<buffer> &pBuffer, const size_t initialSize, tagVR_t dataType, size_t unitSize):
+    writingDataHandler(pBuffer, dataType), m_pMemory(std::make_shared<memory>(initialSize * unitSize))
+{
+}
+
+size_t writingDataHandlerNumericBase::getSize() const
+{
+    DICOMHERO_FUNCTION_START();
+
+    return m_pMemory->size() / getUnitSize();
+
+    DICOMHERO_FUNCTION_END();
+}
+
+std::shared_ptr<memory> writingDataHandlerNumericBase::getMemory() const
+{
+    return m_pMemory;
+}
+
+// Set the buffer's size, in data elements
+///////////////////////////////////////////////////////////
+void writingDataHandlerNumericBase::setSize(const size_t elementsNumber)
+{
+    DICOMHERO_FUNCTION_START();
+
+    m_pMemory->resize(elementsNumber * getUnitSize());
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+writingDataHandlerNumericBase::~writingDataHandlerNumericBase()
+{
+    if(m_buffer != 0)
+    {
+        m_buffer->commit(m_pMemory);
+    }
+}
+
+std::uint8_t* writingDataHandlerNumericBase::getMemoryBuffer() const
+{
+    DICOMHERO_FUNCTION_START();
+
+    return m_pMemory->data();
+
+    DICOMHERO_FUNCTION_END();
+}
+
+size_t writingDataHandlerNumericBase::getMemorySize() const
+{
+    DICOMHERO_FUNCTION_START();
+
+    return m_pMemory->size();
+
+    DICOMHERO_FUNCTION_END();
+}
+
+// Copy the data from another handler
+///////////////////////////////////////////////////////////
+void writingDataHandlerNumericBase::copyFrom(std::shared_ptr<readingDataHandlerNumericBase> pSource)
+{
+    DICOMHERO_FUNCTION_START();
+
+    if(pSource->getDataType() == getDataType())
+    {
+        std::shared_ptr<const memory> pMemory = pSource->getMemory();
+        std::shared_ptr<memory> pDestMemory = getMemory();
+        pDestMemory->assign(pMemory->data(), pMemory->size());
+
+        return;
+    }
+
+    dicomhero::implementation::handlers::readingDataHandlerNumericBase* pHandler(pSource.get());
+    if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::readingDataHandlerNumeric<std::uint8_t>) ||
+        dynamic_cast<dicomhero::implementation::handlers::readingDataHandlerNumeric<std::uint8_t>* >(pHandler) != 0)
+    {
+        copyFrom((std::uint8_t*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::readingDataHandlerNumeric<std::int8_t>))
+    {
+        copyFrom((std::int8_t*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::readingDataHandlerNumeric<std::uint16_t>))
+    {
+        copyFrom((std::uint16_t*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::readingDataHandlerNumeric<std::int16_t>))
+    {
+        copyFrom((std::int16_t*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::readingDataHandlerNumeric<std::uint32_t>))
+    {
+        copyFrom((std::uint32_t*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::readingDataHandlerNumeric<std::int32_t>))
+    {
+        copyFrom((std::int32_t*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::readingDataHandlerNumeric<std::uint64_t>))
+    {
+        copyFrom((std::uint64_t*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::readingDataHandlerNumeric<std::int64_t>))
+    {
+        copyFrom((std::int64_t*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::readingDataHandlerNumeric<float>))
+    {
+        copyFrom((float*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else if(typeid(*pHandler) == typeid(dicomhero::implementation::handlers::readingDataHandlerNumeric<double>))
+    {
+        copyFrom((double*)pHandler->getMemoryBuffer(), pHandler->getSize());
+    }
+    else
+    {
+        DICOMHERO_THROW(std::runtime_error, "Data type not valid");
+    }
+
+    DICOMHERO_FUNCTION_END();
+
+}
+
+std::uint64_t readingDataHandlerAT::getUint64(const size_t /* index */) const
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+std::int64_t readingDataHandlerAT::getInt64(const size_t /* index */) const
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+std::uint32_t readingDataHandlerAT::getUint32(const size_t index) const
+{
+    DICOMHERO_FUNCTION_START();
+
+    // In low bit endian machine revert the group and tag part
+    std::uint32_t value = getValue<std::uint32_t>(index);
+    if(streamController::getPlatformEndian() == streamController::tByteOrdering::lowByteEndian)
+    {
+        std::uint32_t group = value & 0x0000ffffu;
+        std::uint32_t id = (value >> 16u) & 0x0000ffffu;
+        value = (group << 16) | id;
+    }
+
+    return value;
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+std::int32_t readingDataHandlerAT::getInt32(const size_t /* index */) const
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+std::int16_t readingDataHandlerAT::getInt16(const size_t /* index */) const
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+std::uint16_t readingDataHandlerAT::getUint16(const size_t /* index */) const
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+std::int8_t readingDataHandlerAT::getInt8(const size_t /* index */) const
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+std::uint8_t readingDataHandlerAT::getUint8(const size_t /* index */) const
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+double readingDataHandlerAT::getDouble(const size_t /* index */) const
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+float readingDataHandlerAT::getFloat(const size_t /* index */) const
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+void writingDataHandlerAT::setInt64(const size_t /* index */, const std::int64_t /* value */)
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+void writingDataHandlerAT::setUint64(const size_t /* index */, const std::uint64_t /* value */)
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+void writingDataHandlerAT::setUint32(const size_t index, const std::uint32_t value)
+{
+    DICOMHERO_FUNCTION_START();
+
+    // In low bit endian machine revert the group and tag part
+    if(streamController::getPlatformEndian() == streamController::tByteOrdering::lowByteEndian)
+    {
+        std::uint32_t id = value & 0x0000ffffu;
+        std::uint32_t group = (value >> 16u) & 0x0000ffffu;
+        setValue<std::uint32_t>(index, id << 16 | group);
+    }
+    else
+    {
+        setValue<std::uint32_t>(index, value);
+    }
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+void writingDataHandlerAT::setInt32(const size_t /* index */, const std::int32_t /* value */)
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+void writingDataHandlerAT::setInt16(const size_t /* index */, const std::int16_t /* value */)
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+void writingDataHandlerAT::setUint16(const size_t /* index */, const std::uint16_t /* value */)
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+void writingDataHandlerAT::setInt8(const size_t /* index */, const std::int8_t /* value */)
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+void writingDataHandlerAT::setUint8(const size_t /* index */, const std::uint8_t /* value */)
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+void writingDataHandlerAT::setDouble(const size_t /* index */, const double /* value */)
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+void writingDataHandlerAT::setFloat(const size_t /* index */, const float /* value */)
+{
+    DICOMHERO_FUNCTION_START();
+
+    DICOMHERO_THROW(DataHandlerConversionError, "AT tag can handle only uint32 values");
+
+    DICOMHERO_FUNCTION_END();
+}
+
+
+}
+
+}
+
+}

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_image_error" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroImageError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSError</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_image_invalid_size_error" prot="public" virt="non-virtual">DicomheroImageInvalidSizeError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_image_unknown_color_space_error" prot="public" virt="non-virtual">DicomheroImageUnknownColorSpaceError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_image_unknown_depth_error" prot="public" virt="non-virtual">DicomheroImageUnknownDepthError</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_exceptions.h" line="152" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_exceptions.h" bodystart="153" bodyend="-1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

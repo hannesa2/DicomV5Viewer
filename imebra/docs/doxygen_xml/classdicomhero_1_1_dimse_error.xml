@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_dimse_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::DimseError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::runtime_error</basecompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_dimse_invalid_command" prot="public" virt="non-virtual">dicomhero::DimseInvalidCommand</derivedcompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_error_1af59035f83f39cc4b51181209f4a5ede8" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DimseError::DimseError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>DimseError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1901" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_error_1a05c29769c0b05cc5cf443168102fc34c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DimseError::DimseError</definition>
+        <argsstring>(const DimseError &amp;source)</argsstring>
+        <name>DimseError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dimse_error" kindref="compound">DimseError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1903" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_error_1a5a00526d88c5063a73ab2aa1d71118d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_dimse_error" kindref="compound">DimseError</ref> &amp;</type>
+        <definition>DimseError&amp; dicomhero::DimseError::operator=</definition>
+        <argsstring>(const DimseError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_dimse_error" kindref="compound">DimseError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1905" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dimse_error_1ab7552d3a503c75a8b35192017cf8c76b" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::DimseError::~DimseError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~DimseError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1907" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class for the exceptions thrown by the DIMSE services. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dicomhero::DimseError</label>
+        <link refid="classdicomhero_1_1_dimse_error"/>
+      </node>
+      <node id="2">
+        <label>dicomhero::DimseInvalidCommand</label>
+        <link refid="classdicomhero_1_1_dimse_invalid_command"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1898" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="1899" bodyend="1908"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_dimse_error_1af59035f83f39cc4b51181209f4a5ede8" prot="public" virt="non-virtual"><scope>dicomhero::DimseError</scope><name>DimseError</name></member>
+      <member refid="classdicomhero_1_1_dimse_error_1a05c29769c0b05cc5cf443168102fc34c" prot="public" virt="non-virtual"><scope>dicomhero::DimseError</scope><name>DimseError</name></member>
+      <member refid="classdicomhero_1_1_dimse_error_1a5a00526d88c5063a73ab2aa1d71118d4" prot="public" virt="non-virtual"><scope>dicomhero::DimseError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_dimse_error_1ab7552d3a503c75a8b35192017cf8c76b" prot="public" virt="virtual"><scope>dicomhero::DimseError</scope><name>~DimseError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

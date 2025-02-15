@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_dicomhero_bad_alloc" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::DicomheroBadAlloc</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::bad_alloc</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_dicomhero_bad_alloc_1a6ccccf6d1b8376ea55b8fb6c01cac6f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DicomheroBadAlloc::DicomheroBadAlloc</definition>
+        <argsstring>()</argsstring>
+        <name>DicomheroBadAlloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1432" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicomhero_bad_alloc_1ade54aded754bbeabf78a7ecb1d83eb78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DicomheroBadAlloc::DicomheroBadAlloc</definition>
+        <argsstring>(const DicomheroBadAlloc &amp;source)</argsstring>
+        <name>DicomheroBadAlloc</name>
+        <param>
+          <type>const DicomheroBadAlloc &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1434" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicomhero_bad_alloc_1aa78379246299de8356473a3ad9cddf24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DicomheroBadAlloc &amp;</type>
+        <definition>DicomheroBadAlloc&amp; dicomhero::DicomheroBadAlloc::operator=</definition>
+        <argsstring>(const DicomheroBadAlloc &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const DicomheroBadAlloc &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1436" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_dicomhero_bad_alloc_1a0acdd30ffbde0eade78ecd6bd2208854" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::DicomheroBadAlloc::~DicomheroBadAlloc</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~DicomheroBadAlloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1438" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1429" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="1430" bodyend="1439"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_dicomhero_bad_alloc_1a6ccccf6d1b8376ea55b8fb6c01cac6f0" prot="public" virt="non-virtual"><scope>dicomhero::DicomheroBadAlloc</scope><name>DicomheroBadAlloc</name></member>
+      <member refid="classdicomhero_1_1_dicomhero_bad_alloc_1ade54aded754bbeabf78a7ecb1d83eb78" prot="public" virt="non-virtual"><scope>dicomhero::DicomheroBadAlloc</scope><name>DicomheroBadAlloc</name></member>
+      <member refid="classdicomhero_1_1_dicomhero_bad_alloc_1aa78379246299de8356473a3ad9cddf24" prot="public" virt="non-virtual"><scope>dicomhero::DicomheroBadAlloc</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_dicomhero_bad_alloc_1a0acdd30ffbde0eade78ecd6bd2208854" prot="public" virt="virtual"><scope>dicomhero::DicomheroBadAlloc</scope><name>~DicomheroBadAlloc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

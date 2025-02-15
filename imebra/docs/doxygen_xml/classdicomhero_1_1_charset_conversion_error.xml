@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_charset_conversion_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::CharsetConversionError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::runtime_error</basecompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_charset_conversion_cannot_convert" prot="public" virt="non-virtual">dicomhero::CharsetConversionCannotConvert</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_charset_conversion_no_supported_table_error" prot="public" virt="non-virtual">dicomhero::CharsetConversionNoSupportedTableError</derivedcompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_charset_conversion_no_table_error" prot="public" virt="non-virtual">dicomhero::CharsetConversionNoTableError</derivedcompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_charset_conversion_error_1acd63f0ae47a5e0857c4723dc481a3a5e" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::CharsetConversionError::CharsetConversionError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>CharsetConversionError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="502" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_charset_conversion_error_1a2eefc9a52cc1b00bb78aff24a24ac384" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::CharsetConversionError::CharsetConversionError</definition>
+        <argsstring>(const CharsetConversionError &amp;source)</argsstring>
+        <name>CharsetConversionError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_charset_conversion_error" kindref="compound">CharsetConversionError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="504" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_charset_conversion_error_1afc8b3738b32e4694125d88a95fdc96f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_charset_conversion_error" kindref="compound">CharsetConversionError</ref> &amp;</type>
+        <definition>CharsetConversionError&amp; dicomhero::CharsetConversionError::operator=</definition>
+        <argsstring>(const CharsetConversionError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_charset_conversion_error" kindref="compound">CharsetConversionError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="506" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_charset_conversion_error_1a32014349323ed101f59e3d0d459c7e1f" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::CharsetConversionError::~CharsetConversionError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~CharsetConversionError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="508" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class for the exceptions thrown by charsetConversion. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>dicomhero::CharsetConversionNoTableError</label>
+        <link refid="classdicomhero_1_1_charset_conversion_no_table_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::CharsetConversionCannotConvert</label>
+        <link refid="classdicomhero_1_1_charset_conversion_cannot_convert"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dicomhero::CharsetConversionError</label>
+        <link refid="classdicomhero_1_1_charset_conversion_error"/>
+      </node>
+      <node id="3">
+        <label>dicomhero::CharsetConversionNoSupportedTableError</label>
+        <link refid="classdicomhero_1_1_charset_conversion_no_supported_table_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="494" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="495" bodyend="509"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_charset_conversion_error_1acd63f0ae47a5e0857c4723dc481a3a5e" prot="public" virt="non-virtual"><scope>dicomhero::CharsetConversionError</scope><name>CharsetConversionError</name></member>
+      <member refid="classdicomhero_1_1_charset_conversion_error_1a2eefc9a52cc1b00bb78aff24a24ac384" prot="public" virt="non-virtual"><scope>dicomhero::CharsetConversionError</scope><name>CharsetConversionError</name></member>
+      <member refid="classdicomhero_1_1_charset_conversion_error_1afc8b3738b32e4694125d88a95fdc96f1" prot="public" virt="non-virtual"><scope>dicomhero::CharsetConversionError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_charset_conversion_error_1a32014349323ed101f59e3d0d459c7e1f" prot="public" virt="virtual"><scope>dicomhero::CharsetConversionError</scope><name>~CharsetConversionError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

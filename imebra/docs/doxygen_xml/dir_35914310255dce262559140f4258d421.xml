@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_35914310255dce262559140f4258d421" kind="dir">
+    <compoundname>c++</compoundname>
+    <innerdir refid="dir_0f6b833526da2a5d51b90275755b4cfd">changeTransferSyntax</innerdir>
+    <innerdir refid="dir_3b04cd602e65e3ac2d50e202171cba9d">dicom2jpeg</innerdir>
+    <innerdir refid="dir_a8e26f4b8f077311ddcb54456f5aaec6">dicomdirItems</innerdir>
+    <innerdir refid="dir_274cb2d3ce11172e57c36f0b41fdc8b4">scpExample</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/examples/c++/"/>
+  </compounddef>
+</doxygen>

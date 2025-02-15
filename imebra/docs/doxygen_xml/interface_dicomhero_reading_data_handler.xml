@@ -1,0 +1,780 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_reading_data_handler" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroReadingDataHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_reading_data_handler_numeric" prot="public" virt="non-virtual">DicomheroReadingDataHandlerNumeric</derivedcompoundref>
+    <includes local="no">dicomhero_readingDataHandler.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_reading_data_handler_1adc15cb7b6523be7afc07457d2132aaa0" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroReadingDataHandler::m_ReadingDataHandler</definition>
+        <argsstring></argsstring>
+        <name>m_ReadingDataHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="46" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_reading_data_handler_1af4a70594667e51c0ff893136a2f26566" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroReadingDataHandler::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <read></read>
+        <briefdescription>
+<para>Returns the number of elements in the tag&apos;s buffer handled by the data handler. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the <ref refid="interface_dicomhero_reading_data_handler" kindref="compound">DicomheroReadingDataHandler</ref> object is related to a buffer that contains strings then it returns the number of strings stored in the buffer. Multiple strings are separated by a separator char. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1a04fa9724e33158261f912db770337f9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroReadingDataHandler::initWithDicomheroReadingDataHandler:</definition>
+        <argsstring>(void *parameter_ReadingDataHandler)</argsstring>
+        <name>initWithDicomheroReadingDataHandler:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_ReadingDataHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="46" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1a77feac1f6c5315e31be5c09ed1ca20d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroReadingDataHandler::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="46" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1ab1334752dd185301d46ea4f1255dc76a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>signed long long</type>
+        <definition>signed long long DicomheroReadingDataHandler::getInt64:error:</definition>
+        <argsstring>(unsigned int index,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getInt64:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as signed very long integer (64 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a signed very long integer then set pError to ImebraDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than getSize() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a signed 364 bit integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1a04c1ad83d6b56749fd97f5a1f0af7109" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>signed int</type>
+        <definition>signed int DicomheroReadingDataHandler::getInt32:error:</definition>
+        <argsstring>(unsigned int index,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getInt32:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as signed long integer (32 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a signed long integer then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than getSize() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a signed 32 bit integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1a12c63ba368746266f2a5185469e46f0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>signed int</type>
+        <definition>signed int DicomheroReadingDataHandler::getSignedLong:error:</definition>
+        <argsstring>(unsigned int index,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getSignedLong:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Deprecated. Use getInt32() instead. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1acbe89b4130e51aad6daee138b7b55f9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>signed short</type>
+        <definition>signed short DicomheroReadingDataHandler::getInt16:error:</definition>
+        <argsstring>(unsigned int index,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getInt16:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as signed short integer (16 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a signed long integer then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than getSize() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a signed 16 bit integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1a9473ada3390084fc65b4f7e206def84b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>signed char</type>
+        <definition>signed char DicomheroReadingDataHandler::getInt8:error:</definition>
+        <argsstring>(unsigned int index,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getInt8:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as signed char integer (8 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a signed long integer then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than getSize() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a signed 8 bit integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1a170afe12c635604c885c2154c66d58a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned long long</type>
+        <definition>unsigned long long DicomheroReadingDataHandler::getUint64:error:</definition>
+        <argsstring>(unsigned int index,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getUint64:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as an unsigned very long integer (64 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a unsigned very long integer then set pError to ImebraDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than getSize() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as an unsigned 64 bit integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1a2f9cd9b41e5ba3d929076cd756a9b6ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroReadingDataHandler::getUint32:error:</definition>
+        <argsstring>(unsigned int index,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getUint32:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as an unsigned long integer (32 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When calling getUint32() on an AT tag (Attribute Tag) then the tag group is always in the high word of the returned value.</para>
+<para>If the buffer&apos;s value cannot be converted to a unsigned long integer then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than getSize() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as an unsigned 32 bit integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1a5934c5750d158c14ffef54ff2040924b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroReadingDataHandler::getUnsignedLong:error:</definition>
+        <argsstring>(unsigned int index,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getUnsignedLong:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Deprecated. Use getUint32() instead. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1a644deeb626a13ef066f4c6c00d737763" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short DicomheroReadingDataHandler::getUint16:error:</definition>
+        <argsstring>(unsigned int index,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getUint16:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as an unsigned short integer (16 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a unsigned long integer then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than getSize() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as an unsigned 16 bit integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1a86cc817df8790aecf843d759ce5750e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char DicomheroReadingDataHandler::getUint8:error:</definition>
+        <argsstring>(unsigned int index,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getUint8:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as an unsigned char integer (8 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a unsigned long integer then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than getSize() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as an unsigned 8 bit integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1aa299f4f149d6835db6ee96f6a1f37c7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double DicomheroReadingDataHandler::getDouble:error:</definition>
+        <argsstring>(unsigned int index,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getDouble:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as a double floating point value (64 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a double floating point then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than getSize() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a double floating point value (64 bit) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1aba1e063a0caf83c032e29c439ec40878" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>float</type>
+        <definition>float DicomheroReadingDataHandler::getFloat:error:</definition>
+        <argsstring>(unsigned int index,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getFloat:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as a floating point value (32 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a double floating point then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than getSize() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a floating point value (32 bit) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1a30522eca8619466aed06e42d4d459aa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroReadingDataHandler::getString:error:</definition>
+        <argsstring>(unsigned int index,[error] NSError **pError)</argsstring>
+        <name>getString:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as a string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a string then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than getSize() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1ab4d229effe903c76ad0fd29d0aad4417" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>DicomheroDate *</type>
+        <definition>DicomheroDate* DicomheroReadingDataHandler::getDate:error:</definition>
+        <argsstring>(unsigned int index,[error] NSError **pError)</argsstring>
+        <name>getDate:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as date or time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a date or time then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than getSize() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a date or time </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1a43834d450f16d69be37d774c92ba179e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>DicomheroPatientName *</type>
+        <definition>DicomheroPatientName* DicomheroReadingDataHandler::getPatientName:error:</definition>
+        <argsstring>(unsigned int index,[error] NSError **pError)</argsstring>
+        <name>getPatientName:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as patient name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a patient name then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than getSize() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a date or time </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_reading_data_handler_1a3f4340b2e681a948cdd77d0c5bb69704" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_age" kindref="compound">DicomheroAge</ref> *</type>
+        <definition>DicomheroAge* DicomheroReadingDataHandler::getAge:error:</definition>
+        <argsstring>(unsigned int index,[error] NSError **pError)</argsstring>
+        <name>getAge:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as an age. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to an age then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than getSize() </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as an Age </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="61" column="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="interface_dicomhero_reading_data_handler" kindref="compound">DicomheroReadingDataHandler</ref> allows reading the content of a Dicom Tag. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="interface_dicomhero_reading_data_handler" kindref="compound">DicomheroReadingDataHandler</ref> is able to return the Tag&apos;s content as a string, a number, a date/time or an age.</para>
+<para>In order to obtain a <ref refid="interface_dicomhero_reading_data_handler" kindref="compound">DicomheroReadingDataHandler</ref> object for a specific <ref refid="interface_dicomhero_tag" kindref="compound">DicomheroTag</ref> stored in a <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>, call DicomheroDataSet::getReadingDataHandler() or DicomheroTag::getReadingDataHandler().</para>
+<para><ref refid="interface_dicomhero_reading_data_handler" kindref="compound">DicomheroReadingDataHandler</ref> keeps a reference to the buffer&apos;s memory: the buffer&apos;s memory is never modified but only replaced by a new memory area, therefore the ReadingDataHandler client does not need to worry about other clients modifying the memory being read. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>DicomheroReadingDataHandlerNumeric</label>
+        <link refid="interface_dicomhero_reading_data_handler_numeric"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DicomheroReadingDataHandler</label>
+        <link refid="interface_dicomhero_reading_data_handler"/>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" line="42" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readingDataHandler.h" bodystart="44" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_reading_data_handler_1a77feac1f6c5315e31be5c09ed1ca20d7" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a3f4340b2e681a948cdd77d0c5bb69704" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>getAge:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1ab4d229effe903c76ad0fd29d0aad4417" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>getDate:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1aa299f4f149d6835db6ee96f6a1f37c7d" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>getDouble:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1aba1e063a0caf83c032e29c439ec40878" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>getFloat:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1acbe89b4130e51aad6daee138b7b55f9a" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>getInt16:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a04c1ad83d6b56749fd97f5a1f0af7109" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>getInt32:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1ab1334752dd185301d46ea4f1255dc76a" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>getInt64:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a9473ada3390084fc65b4f7e206def84b" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>getInt8:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a43834d450f16d69be37d774c92ba179e" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>getPatientName:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a12c63ba368746266f2a5185469e46f0e" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>getSignedLong:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a30522eca8619466aed06e42d4d459aa3" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>getString:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a644deeb626a13ef066f4c6c00d737763" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>getUint16:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a2f9cd9b41e5ba3d929076cd756a9b6ae" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>getUint32:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a170afe12c635604c885c2154c66d58a9" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>getUint64:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a86cc817df8790aecf843d759ce5750e0" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>getUint8:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a5934c5750d158c14ffef54ff2040924b" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>getUnsignedLong:error:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1a04fa9724e33158261f912db770337f9e" prot="public" virt="virtual"><scope>DicomheroReadingDataHandler</scope><name>initWithDicomheroReadingDataHandler:</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1adc15cb7b6523be7afc07457d2132aaa0" prot="public" virt="non-virtual"><scope>DicomheroReadingDataHandler</scope><name>m_ReadingDataHandler</name></member>
+      <member refid="interface_dicomhero_reading_data_handler_1af4a70594667e51c0ff893136a2f26566" prot="public" virt="non-virtual"><scope>DicomheroReadingDataHandler</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

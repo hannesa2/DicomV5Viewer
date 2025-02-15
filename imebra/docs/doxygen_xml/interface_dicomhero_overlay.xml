@@ -1,0 +1,556 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_overlay" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroOverlay</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_overlay.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_overlay_1a9f19355e70f39890c0f30b080f26eac1" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroOverlay::m_Overlay</definition>
+        <argsstring></argsstring>
+        <name>m_Overlay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="42" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_overlay_1a71a45b5bf2739fc2c168099c62332001" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>DicomheroOverlayType</type>
+        <definition>DicomheroOverlayType DicomheroOverlay::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <read></read>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The overlay type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="72" column="27" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_overlay_1a71557a188f49ccc3b3d2cade59685585" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroOverlay::subType</definition>
+        <argsstring></argsstring>
+        <name>subType</name>
+        <read></read>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The overlay subtype.</para>
+<para>Defined Term that identifies the intended purpose of the Overlay Type. See Section C.9.2.1.3 for further explanation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="81" column="15" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_overlay_1afa173315d130bdaad222bd25aaba00ad" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroOverlay::label</definition>
+        <argsstring></argsstring>
+        <name>label</name>
+        <read></read>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overlay label. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="87" column="15" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_overlay_1ab39ff66098b41ba183c84167791abcde" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroOverlay::description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <read></read>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overlay description. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="93" column="15" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_overlay_1a6134e7a068a14b317b65afd7e8a66668" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroOverlay::firstFrame</definition>
+        <argsstring></argsstring>
+        <name>firstFrame</name>
+        <read></read>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The zero based number of the first frame (Image) related to this overlay, </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="100" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_overlay_1a828f748a1f5dfe89fa0ce11d4a2ef6ab" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroOverlay::framesCount</definition>
+        <argsstring></argsstring>
+        <name>framesCount</name>
+        <read></read>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of bitmaps stored in the overlay. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="106" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_overlay_1a99d9092c60f5666833fc6b022ab62d46" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>int</type>
+        <definition>int DicomheroOverlay::zeroBasedOriginX</definition>
+        <argsstring></argsstring>
+        <name>zeroBasedOriginX</name>
+        <read></read>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The zero-based horizontal position of the overlay bitmap into the related DICOM image. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="113" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_overlay_1a46f1da587b78da2f0e11827ebcbfb78b" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>int</type>
+        <definition>int DicomheroOverlay::zeroBasedOriginY</definition>
+        <argsstring></argsstring>
+        <name>zeroBasedOriginY</name>
+        <read></read>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The zero-based vertical position of the overlay bitmap into the related DICOM image. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="120" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_overlay_1a876616f724a070bda423c12327290746" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroOverlay::initWithDicomheroOverlay:</definition>
+        <argsstring>(void *parameter_Overlay)</argsstring>
+        <name>initWithDicomheroOverlay:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_Overlay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="42" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_overlay_1ae3b72dab4577b36cf16213329996c2d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroOverlay::initWithType:subType:firstFrame:zeroBasedOriginX:zeroBasedOriginY:label:description:</definition>
+        <argsstring>(DicomheroOverlayType type,[subType] NSString *subType,[firstFrame] unsigned int firstFrame,[zeroBasedOriginX] int zeroBasedOriginX,[zeroBasedOriginY] int zeroBasedOriginY,[label] NSString *label,[description] NSString *description)</argsstring>
+        <name>initWithType:subType:firstFrame:zeroBasedOriginX:zeroBasedOriginY:label:description:</name>
+        <param>
+          <type>DicomheroOverlayType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <attributes>[subType]</attributes>
+          <type>NSString *</type>
+          <declname>subType</declname>
+        </param>
+        <param>
+          <attributes>[firstFrame]</attributes>
+          <type>unsigned int</type>
+          <declname>firstFrame</declname>
+        </param>
+        <param>
+          <attributes>[zeroBasedOriginX]</attributes>
+          <type>int</type>
+          <declname>zeroBasedOriginX</declname>
+        </param>
+        <param>
+          <attributes>[zeroBasedOriginY]</attributes>
+          <type>int</type>
+          <declname>zeroBasedOriginY</declname>
+        </param>
+        <param>
+          <attributes>[label]</attributes>
+          <type>NSString *</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <attributes>[description]</attributes>
+          <type>NSString *</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the overlay type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the overlay sub type. Defined Term that identifies the intended purpose of the Overlay Type. See Section C.9.2.1.3 for further explanation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>firstFrame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first DICOM image related to this overlay (zero-based) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zeroBasedOriginX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the zero based horizontal position within the DICOM image </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zeroBasedOriginY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the zero based vertical position within the DICOM image </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>label</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>overlay label </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>overlay description </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="42" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_overlay_1a44080817c9cb4bac063be3202033e8b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroOverlay::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="42" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_overlay_1aaad44df72e7b546182435e6543aa143a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroOverlay::getROIArea:</definition>
+        <argsstring>((swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getROIArea:</name>
+        <param>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Return the ROI area if present, otherwise set pError to DicomheroMissingTagError. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the ROI area in pixels </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="120" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_overlay_1a59c66c777c3a75f42aec974678f712e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double DicomheroOverlay::getROIMean:</definition>
+        <argsstring>((swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getROIMean:</name>
+        <param>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Return the ROI mean if present, otherwise set pError to DicomheroMissingTagError. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the ROI mean value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="120" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_overlay_1a693afb1d3ccb52a692c10064c5900372" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double DicomheroOverlay::getROIStandardDeviation:</definition>
+        <argsstring>((swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>getROIStandardDeviation:</name>
+        <param>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Return the ROI standard deviation if present, otherwise set pError to DicomheroMissingTagError. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the ROI standard deviation </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="120" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_overlay_1ad871a3d72154e41248a26fed5c48b0ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref> *</type>
+        <definition>DicomheroImage* DicomheroOverlay::getImage:error:</definition>
+        <argsstring>(unsigned int frameNumber,[error] NSError **pError)</argsstring>
+        <name>getImage:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>frameNumber</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Return one of the overlay bitmaps if present, otherwise set pError DicomheroDataSetImageDoesntExistError. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frameNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of frame to retrieve (zero based) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to an error class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the requested overlay image </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="120" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_overlay_1a411b67031cdffedeaae4e497f6b5a677" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroOverlay::setROIArea:</definition>
+        <argsstring>(unsigned int roiArea)</argsstring>
+        <name>setROIArea:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>roiArea</declname>
+        </param>
+        <briefdescription>
+<para>Set the number of pixels in the ROI area. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>roiArea</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of pixels in the ROI area </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="120" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_overlay_1a9cf7a7d3e4ad75dcc01b60550f749f8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroOverlay::setROIMean:</definition>
+        <argsstring>(double roiMean)</argsstring>
+        <name>setROIMean:</name>
+        <param>
+          <type>double</type>
+          <declname>roiMean</declname>
+        </param>
+        <briefdescription>
+<para>Set the mean value of the pixels in the ROI area. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>roiMean</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mean value of the pixels in the ROI area </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="120" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_overlay_1a1851af9e30dd0991d193361bf9d3b359" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroOverlay::setROIStandardDeviation:</definition>
+        <argsstring>(double standardDeviation)</argsstring>
+        <name>setROIStandardDeviation:</name>
+        <param>
+          <type>double</type>
+          <declname>standardDeviation</declname>
+        </param>
+        <briefdescription>
+<para>Set the standard deviation of the value of the pixels in the ROI area. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>standardDeviation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>standard deviation of the value of the pixels in the ROI area </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="120" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_overlay_1af7a09ece862c3959c0a71884ee451636" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroOverlay::setImage:image:error:</definition>
+        <argsstring>(unsigned int frameNumber,[image] DicomheroImage *image,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setImage:image:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>frameNumber</declname>
+        </param>
+        <param>
+          <attributes>[image]</attributes>
+          <type><ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref> *</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Add a bitmap to the overlay. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frameNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a zero based frame (relative to the overlay frames) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the image for the overlay </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to an error object if an error occurs </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="120" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a DICOM overlay. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="38" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" bodystart="40" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_overlay_1a44080817c9cb4bac063be3202033e8b1" prot="public" virt="virtual"><scope>DicomheroOverlay</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_overlay_1ab39ff66098b41ba183c84167791abcde" prot="public" virt="non-virtual"><scope>DicomheroOverlay</scope><name>description</name></member>
+      <member refid="interface_dicomhero_overlay_1a6134e7a068a14b317b65afd7e8a66668" prot="public" virt="non-virtual"><scope>DicomheroOverlay</scope><name>firstFrame</name></member>
+      <member refid="interface_dicomhero_overlay_1a828f748a1f5dfe89fa0ce11d4a2ef6ab" prot="public" virt="non-virtual"><scope>DicomheroOverlay</scope><name>framesCount</name></member>
+      <member refid="interface_dicomhero_overlay_1ad871a3d72154e41248a26fed5c48b0ed" prot="public" virt="virtual"><scope>DicomheroOverlay</scope><name>getImage:error:</name></member>
+      <member refid="interface_dicomhero_overlay_1aaad44df72e7b546182435e6543aa143a" prot="public" virt="virtual"><scope>DicomheroOverlay</scope><name>getROIArea:</name></member>
+      <member refid="interface_dicomhero_overlay_1a59c66c777c3a75f42aec974678f712e9" prot="public" virt="virtual"><scope>DicomheroOverlay</scope><name>getROIMean:</name></member>
+      <member refid="interface_dicomhero_overlay_1a693afb1d3ccb52a692c10064c5900372" prot="public" virt="virtual"><scope>DicomheroOverlay</scope><name>getROIStandardDeviation:</name></member>
+      <member refid="interface_dicomhero_overlay_1a876616f724a070bda423c12327290746" prot="public" virt="virtual"><scope>DicomheroOverlay</scope><name>initWithDicomheroOverlay:</name></member>
+      <member refid="interface_dicomhero_overlay_1ae3b72dab4577b36cf16213329996c2d0" prot="public" virt="virtual"><scope>DicomheroOverlay</scope><name>initWithType:subType:firstFrame:zeroBasedOriginX:zeroBasedOriginY:label:description:</name></member>
+      <member refid="interface_dicomhero_overlay_1afa173315d130bdaad222bd25aaba00ad" prot="public" virt="non-virtual"><scope>DicomheroOverlay</scope><name>label</name></member>
+      <member refid="interface_dicomhero_overlay_1a9f19355e70f39890c0f30b080f26eac1" prot="public" virt="non-virtual"><scope>DicomheroOverlay</scope><name>m_Overlay</name></member>
+      <member refid="interface_dicomhero_overlay_1af7a09ece862c3959c0a71884ee451636" prot="public" virt="virtual"><scope>DicomheroOverlay</scope><name>setImage:image:error:</name></member>
+      <member refid="interface_dicomhero_overlay_1a411b67031cdffedeaae4e497f6b5a677" prot="public" virt="virtual"><scope>DicomheroOverlay</scope><name>setROIArea:</name></member>
+      <member refid="interface_dicomhero_overlay_1a9cf7a7d3e4ad75dcc01b60550f749f8e" prot="public" virt="virtual"><scope>DicomheroOverlay</scope><name>setROIMean:</name></member>
+      <member refid="interface_dicomhero_overlay_1a1851af9e30dd0991d193361bf9d3b359" prot="public" virt="virtual"><scope>DicomheroOverlay</scope><name>setROIStandardDeviation:</name></member>
+      <member refid="interface_dicomhero_overlay_1a71557a188f49ccc3b3d2cade59685585" prot="public" virt="non-virtual"><scope>DicomheroOverlay</scope><name>subType</name></member>
+      <member refid="interface_dicomhero_overlay_1a71a45b5bf2739fc2c168099c62332001" prot="public" virt="non-virtual"><scope>DicomheroOverlay</scope><name>type</name></member>
+      <member refid="interface_dicomhero_overlay_1a99d9092c60f5666833fc6b022ab62d46" prot="public" virt="non-virtual"><scope>DicomheroOverlay</scope><name>zeroBasedOriginX</name></member>
+      <member refid="interface_dicomhero_overlay_1a46f1da587b78da2f0e11827ebcbfb78b" prot="public" virt="non-virtual"><scope>DicomheroOverlay</scope><name>zeroBasedOriginY</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

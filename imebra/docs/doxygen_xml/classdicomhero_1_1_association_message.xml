@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_association_message" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::AssociationMessage</compoundname>
+    <includes local="no">acse.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_association_message_1a1abec8a1a5cc3e312e3d2f311c83ae0e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class AssociationBase</definition>
+        <argsstring></argsstring>
+        <name>AssociationBase</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_association_base" kindref="compound">AssociationBase</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="245" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_association_message_1a0fd4acff2ea79e5731826882f45ea3b0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::shared_ptr&lt; implementation::associationMessage &gt; &amp;</type>
+        <definition>const std::shared_ptr&lt;implementation::associationMessage&gt;&amp; getAssociationMessageImplementation</definition>
+        <argsstring>(const AssociationMessage &amp;message)</argsstring>
+        <name>getAssociationMessageImplementation</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_association_message" kindref="compound">AssociationMessage</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="246" column="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdicomhero_1_1_association_message_1a773894f118ca27c02dcc919582f3227c" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; implementation::associationMessage &gt;</type>
+        <definition>std::shared_ptr&lt;implementation::associationMessage&gt; dicomhero::AssociationMessage::m_pMessage</definition>
+        <argsstring></argsstring>
+        <name>m_pMessage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="247" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_association_message_1a08f397fde85d8e38fa8f1a7449997831" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AssociationMessage::AssociationMessage</definition>
+        <argsstring>(const std::string &amp;abstractSyntax)</argsstring>
+        <name>AssociationMessage</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>abstractSyntax</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>abstractSyntax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the abstract syntax of the message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="175" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_association_message_1aa2a13a11f30aa046e726d2a30b2bebb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AssociationMessage::AssociationMessage</definition>
+        <argsstring>(const AssociationMessage &amp;source)</argsstring>
+        <name>AssociationMessage</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_association_message" kindref="compound">AssociationMessage</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source association message </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="183" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_association_message_1ad89d6d65cea0829277f1ff35a0e79697" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_association_message" kindref="compound">AssociationMessage</ref> &amp;</type>
+        <definition>AssociationMessage&amp; dicomhero::AssociationMessage::operator=</definition>
+        <argsstring>(const AssociationMessage &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_association_message" kindref="compound">AssociationMessage</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="185" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_association_message_1adeca671b59bf8c0b2e6f83e9d9c1f073" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::AssociationMessage::~AssociationMessage</definition>
+        <argsstring>()</argsstring>
+        <name>~AssociationMessage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="187" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_association_message_1ac351d307fb9e1b054ffcbb1adc3e145a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::AssociationMessage::addDataSet</definition>
+        <argsstring>(const DataSet &amp;dataSet)</argsstring>
+        <name>addDataSet</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> &amp;</type>
+          <declname>dataSet</declname>
+        </param>
+        <briefdescription>
+<para>Add a command <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> to the message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Two datasets can be transmitted at once: the first <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> is the DICOM command, while the second optional one is the command payload.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> to add to the message </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="198" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_association_message_1a6257d707c50ba87c40856d3cd80bd657" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string dicomhero::AssociationMessage::getAbstractSyntax</definition>
+        <argsstring>() const</argsstring>
+        <name>getAbstractSyntax</name>
+        <briefdescription>
+<para>Retrieve the message&apos;s abstract syntax. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the message&apos;s abstract syntax </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="206" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_association_message_1a8bbf678b9cdc582c9410c4a211e46e9b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        <definition>DataSet dicomhero::AssociationMessage::getCommand</definition>
+        <argsstring>() const</argsstring>
+        <name>getCommand</name>
+        <briefdescription>
+<para>Return the command stored in the message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the command <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="218" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_association_message_1adcbc3845d700d08ed63bf81f396bafc3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        <definition>DataSet dicomhero::AssociationMessage::getPayload</definition>
+        <argsstring>() const</argsstring>
+        <name>getPayload</name>
+        <briefdescription>
+<para>Return the payload stored in the message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the payload <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="230" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_association_message_1aa18c6fbdbf9dc3fee52e46be18025e1b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dicomhero::AssociationMessage::hasPayload</definition>
+        <argsstring>() const</argsstring>
+        <name>hasPayload</name>
+        <briefdescription>
+<para>Return true if the message has a payload. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the message has a payload, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="238" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdicomhero_1_1_association_message_1a78de9da16780d87e79302fe422381be0" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AssociationMessage::AssociationMessage</definition>
+        <argsstring>(const std::shared_ptr&lt; implementation::associationMessage &gt; &amp;pMessage)</argsstring>
+        <name>AssociationMessage</name>
+        <param>
+          <type>const std::shared_ptr&lt; implementation::associationMessage &gt; &amp;</type>
+          <declname>pMessage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="242" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An ACSE message composed by one or two datasets. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>When sending a message through an <ref refid="classdicomhero_1_1_association_base" kindref="compound">AssociationBase</ref> derived object then up to two dataset can be included into the message: the first dataset is be the command dataset, while the optional second one is the command&apos;s payload.</para>
+<para>Use <ref refid="classdicomhero_1_1_association_message_1a8bbf678b9cdc582c9410c4a211e46e9b" kindref="member">getCommand()</ref> and <ref refid="classdicomhero_1_1_association_message_1adcbc3845d700d08ed63bf81f396bafc3" kindref="member">getPayload()</ref> to retrieve the command and the payload <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> objects. </para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="165" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" bodystart="166" bodyend="249"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_association_message_1ac351d307fb9e1b054ffcbb1adc3e145a" prot="public" virt="non-virtual"><scope>dicomhero::AssociationMessage</scope><name>addDataSet</name></member>
+      <member refid="classdicomhero_1_1_association_message_1a1abec8a1a5cc3e312e3d2f311c83ae0e" prot="private" virt="non-virtual"><scope>dicomhero::AssociationMessage</scope><name>AssociationBase</name></member>
+      <member refid="classdicomhero_1_1_association_message_1a08f397fde85d8e38fa8f1a7449997831" prot="public" virt="non-virtual"><scope>dicomhero::AssociationMessage</scope><name>AssociationMessage</name></member>
+      <member refid="classdicomhero_1_1_association_message_1aa2a13a11f30aa046e726d2a30b2bebb3" prot="public" virt="non-virtual"><scope>dicomhero::AssociationMessage</scope><name>AssociationMessage</name></member>
+      <member refid="classdicomhero_1_1_association_message_1a78de9da16780d87e79302fe422381be0" prot="protected" virt="non-virtual"><scope>dicomhero::AssociationMessage</scope><name>AssociationMessage</name></member>
+      <member refid="classdicomhero_1_1_association_message_1a6257d707c50ba87c40856d3cd80bd657" prot="public" virt="non-virtual"><scope>dicomhero::AssociationMessage</scope><name>getAbstractSyntax</name></member>
+      <member refid="classdicomhero_1_1_association_message_1a0fd4acff2ea79e5731826882f45ea3b0" prot="private" virt="non-virtual"><scope>dicomhero::AssociationMessage</scope><name>getAssociationMessageImplementation</name></member>
+      <member refid="classdicomhero_1_1_association_message_1a8bbf678b9cdc582c9410c4a211e46e9b" prot="public" virt="non-virtual"><scope>dicomhero::AssociationMessage</scope><name>getCommand</name></member>
+      <member refid="classdicomhero_1_1_association_message_1adcbc3845d700d08ed63bf81f396bafc3" prot="public" virt="non-virtual"><scope>dicomhero::AssociationMessage</scope><name>getPayload</name></member>
+      <member refid="classdicomhero_1_1_association_message_1aa18c6fbdbf9dc3fee52e46be18025e1b" prot="public" virt="non-virtual"><scope>dicomhero::AssociationMessage</scope><name>hasPayload</name></member>
+      <member refid="classdicomhero_1_1_association_message_1a773894f118ca27c02dcc919582f3227c" prot="private" virt="non-virtual"><scope>dicomhero::AssociationMessage</scope><name>m_pMessage</name></member>
+      <member refid="classdicomhero_1_1_association_message_1ad89d6d65cea0829277f1ff35a0e79697" prot="public" virt="non-virtual"><scope>dicomhero::AssociationMessage</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_association_message_1adeca671b59bf8c0b2e6f83e9d9c1f073" prot="public" virt="virtual"><scope>dicomhero::AssociationMessage</scope><name>~AssociationMessage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

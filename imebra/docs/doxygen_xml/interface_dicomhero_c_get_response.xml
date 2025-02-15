@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_c_get_response" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroCGetResponse</compoundname>
+    <basecompoundref refid="interface_dicomhero_c_partial_response" prot="public" virt="non-virtual">DicomheroCPartialResponse</basecompoundref>
+    <includes local="no">dicomhero_dimse.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_c_get_response_1a9d75a7b8cdaa50ff9a1b2870fcc90373" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroCGetResponse::initWithCommand:responseCode:remainingSubOperations:completedSubOperations:failedSubOperations:warningSubOperations:identifier:</definition>
+        <argsstring>(DicomheroCGetCommand *pReceivedCommand,[responseCode] DicomheroDimseStatusCode responseCode,[remainingSubOperations] unsigned int remainingSubOperations,[completedSubOperations] unsigned int completedSubOperations,[failedSubOperations] unsigned int failedSubOperations,[warningSubOperations] unsigned int warningSubOperations,[identifier] DicomheroDataSet *pIdentifier)</argsstring>
+        <name>initWithCommand:responseCode:remainingSubOperations:completedSubOperations:failedSubOperations:warningSubOperations:identifier:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_c_get_command" kindref="compound">DicomheroCGetCommand</ref> *</type>
+          <declname>pReceivedCommand</declname>
+        </param>
+        <param>
+          <attributes>[responseCode]</attributes>
+          <type>DicomheroDimseStatusCode</type>
+          <declname>responseCode</declname>
+        </param>
+        <param>
+          <attributes>[remainingSubOperations]</attributes>
+          <type>unsigned int</type>
+          <declname>remainingSubOperations</declname>
+        </param>
+        <param>
+          <attributes>[completedSubOperations]</attributes>
+          <type>unsigned int</type>
+          <declname>completedSubOperations</declname>
+        </param>
+        <param>
+          <attributes>[failedSubOperations]</attributes>
+          <type>unsigned int</type>
+          <declname>failedSubOperations</declname>
+        </param>
+        <param>
+          <attributes>[warningSubOperations]</attributes>
+          <type>unsigned int</type>
+          <declname>warningSubOperations</declname>
+        </param>
+        <param>
+          <attributes>[identifier]</attributes>
+          <type><ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> *</type>
+          <declname>pIdentifier</declname>
+        </param>
+        <briefdescription>
+<para>Initializer to use when failed C-STORE operations are present. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This constructor should be used when the response code identifies a canceled operation, a failure, a refused operation or a warning.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pReceivedCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the C-GET command for which this response is being constructed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>responseCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the response code. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>remainingSubOperations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of remaining C-STORE operations </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>completedSubOperations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of completed C-STORE operations </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>failedSubOperations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of failed C-STORE operations </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>warningSubOperations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of C-STORE operations completed with warnings </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pIdentifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DataSet with the list of failed instance UIDs in the tag FailedSOPInstanceUIDList (0008,0058) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="344" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_c_get_response_1a9a75e5e23bf6a66ca5b90cc9fc374950" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroCGetResponse::initWithcommand:responseCode:remainingSubOperations:completedSubOperations:failedSubOperations:warningSubOperations:</definition>
+        <argsstring>(DicomheroCGetCommand *pReceivedCommand,[responseCode] DicomheroDimseStatusCode responseCode,[remainingSubOperations] unsigned int remainingSubOperations,[completedSubOperations] unsigned int completedSubOperations,[failedSubOperations] unsigned int failedSubOperations,[warningSubOperations] unsigned int warningSubOperations)</argsstring>
+        <name>initWithcommand:responseCode:remainingSubOperations:completedSubOperations:failedSubOperations:warningSubOperations:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_c_get_command" kindref="compound">DicomheroCGetCommand</ref> *</type>
+          <declname>pReceivedCommand</declname>
+        </param>
+        <param>
+          <attributes>[responseCode]</attributes>
+          <type>DicomheroDimseStatusCode</type>
+          <declname>responseCode</declname>
+        </param>
+        <param>
+          <attributes>[remainingSubOperations]</attributes>
+          <type>unsigned int</type>
+          <declname>remainingSubOperations</declname>
+        </param>
+        <param>
+          <attributes>[completedSubOperations]</attributes>
+          <type>unsigned int</type>
+          <declname>completedSubOperations</declname>
+        </param>
+        <param>
+          <attributes>[failedSubOperations]</attributes>
+          <type>unsigned int</type>
+          <declname>failedSubOperations</declname>
+        </param>
+        <param>
+          <attributes>[warningSubOperations]</attributes>
+          <type>unsigned int</type>
+          <declname>warningSubOperations</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pReceivedCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the C-GET command for which this response is being constructed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>responseCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the response code. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>remainingSubOperations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of remaining C-STORE operations </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>completedSubOperations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of completed C-STORE operations </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>failedSubOperations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of failed C-STORE operations </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>warningSubOperations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of C-STORE operations completed with warnings </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="344" column="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a C-GET response. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>DicomheroDimseResponse</label>
+        <link refid="interface_dicomhero_dimse_response"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroCPartialResponse</label>
+        <link refid="interface_dicomhero_c_partial_response"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DicomheroDimseCommandBase</label>
+        <link refid="interface_dicomhero_dimse_command_base"/>
+      </node>
+      <node id="1">
+        <label>DicomheroCGetResponse</label>
+        <link refid="interface_dicomhero_c_get_response"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>DicomheroDimseResponse</label>
+        <link refid="interface_dicomhero_dimse_response"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroCPartialResponse</label>
+        <link refid="interface_dicomhero_c_partial_response"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DicomheroDimseCommandBase</label>
+        <link refid="interface_dicomhero_dimse_command_base"/>
+      </node>
+      <node id="1">
+        <label>DicomheroCGetResponse</label>
+        <link refid="interface_dicomhero_c_get_response"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="412" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="413" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_dimse_command_base_1aa6e7648457444127f82ded7dd4aa891d" prot="public" virt="virtual"><scope>DicomheroCGetResponse</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a68d97c939e669901c372557fca25cf34" prot="public" virt="virtual"><scope>DicomheroCGetResponse</scope><name>getAbstractSyntax</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a77cfd3acdf766f5ec85c9075bfc68902" prot="public" virt="virtual"><scope>DicomheroCGetResponse</scope><name>getAffectedSopClassUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a960b3c03c3d2952f920977b6c45032b6" prot="public" virt="virtual"><scope>DicomheroCGetResponse</scope><name>getAffectedSopInstanceUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a478b7f0930cc6fad1fe0a12cb20f6193" prot="public" virt="virtual"><scope>DicomheroCGetResponse</scope><name>getCommandDataSet:</name></member>
+      <member refid="interface_dicomhero_c_partial_response_1aab34dce6bf1e8fc656c7fd3c8cd0a7a9" prot="public" virt="virtual"><scope>DicomheroCGetResponse</scope><name>getCompletedSubOperations:</name></member>
+      <member refid="interface_dicomhero_c_partial_response_1a1430da7aa7ae5089cfb11ddb20695cbe" prot="public" virt="virtual"><scope>DicomheroCGetResponse</scope><name>getFailedSubOperations:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a62a22fdadc33eb68b0a87c2095acc239" prot="public" virt="virtual"><scope>DicomheroCGetResponse</scope><name>getPayloadDataSet:</name></member>
+      <member refid="interface_dicomhero_c_partial_response_1aef784193e02cfbe0fa3ed4d4c8b1009a" prot="public" virt="virtual"><scope>DicomheroCGetResponse</scope><name>getRemainingSubOperations:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a11da81e00cc6f99977de4a53d5573256" prot="public" virt="virtual"><scope>DicomheroCGetResponse</scope><name>getRequestedSopClassUid:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1a3881cedfd1df5f2b0843763b15183adf" prot="public" virt="virtual"><scope>DicomheroCGetResponse</scope><name>getRequestedSopInstanceUid:</name></member>
+      <member refid="interface_dicomhero_c_partial_response_1aca1fc9198d7358c1a9c3943f4a4c72b2" prot="public" virt="virtual"><scope>DicomheroCGetResponse</scope><name>getWarningSubOperations:</name></member>
+      <member refid="interface_dicomhero_c_get_response_1a9a75e5e23bf6a66ca5b90cc9fc374950" prot="public" virt="virtual"><scope>DicomheroCGetResponse</scope><name>initWithcommand:responseCode:remainingSubOperations:completedSubOperations:failedSubOperations:warningSubOperations:</name></member>
+      <member refid="interface_dicomhero_c_get_response_1a9d75a7b8cdaa50ff9a1b2870fcc90373" prot="public" virt="virtual"><scope>DicomheroCGetResponse</scope><name>initWithCommand:responseCode:remainingSubOperations:completedSubOperations:failedSubOperations:warningSubOperations:identifier:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1aee56566e403c56fe35de6057b9cafde7" prot="public" virt="virtual"><scope>DicomheroCGetResponse</scope><name>initWithDicomheroCommand:</name></member>
+      <member refid="interface_dicomhero_dimse_command_base_1ae5022fe1e9373e80bc857936d1e03f39" prot="public" virt="non-virtual"><scope>DicomheroCGetResponse</scope><name>m_DimseCommandBase</name></member>
+      <member refid="interface_dicomhero_dimse_response_1a2fc1a634d755b2aff0dda3cfaf577141" prot="public" virt="non-virtual"><scope>DicomheroCGetResponse</scope><name>status</name></member>
+      <member refid="interface_dicomhero_dimse_response_1a617e27193ec87cf5d1656293120db7ab" prot="public" virt="non-virtual"><scope>DicomheroCGetResponse</scope><name>statusCode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

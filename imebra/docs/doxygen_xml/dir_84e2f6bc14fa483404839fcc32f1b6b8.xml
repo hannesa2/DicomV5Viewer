@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_84e2f6bc14fa483404839fcc32f1b6b8" kind="dir">
+    <compoundname>dicomhero6_objc</compoundname>
+    <innerfile refid="wrappers_2objectivec_2include_2dicomhero6__objc_2dicomhero_8h">wrappers/objectivec/include/dicomhero6_objc/dicomhero.h</innerfile>
+    <innerfile refid="dicomhero6_8h">dicomhero6.h</innerfile>
+    <innerfile refid="dicomhero__acse_8h">dicomhero_acse.h</innerfile>
+    <innerfile refid="dicomhero__base_stream_input_8h">dicomhero_baseStreamInput.h</innerfile>
+    <innerfile refid="dicomhero__base_stream_output_8h">dicomhero_baseStreamOutput.h</innerfile>
+    <innerfile refid="dicomhero__base_uid_generator_8h">dicomhero_baseUidGenerator.h</innerfile>
+    <innerfile refid="dicomhero__codec_factory_8h">dicomhero_codecFactory.h</innerfile>
+    <innerfile refid="dicomhero__color_transforms_factory_8h">dicomhero_colorTransformsFactory.h</innerfile>
+    <innerfile refid="dicomhero__dataset_8h">dicomhero_dataset.h</innerfile>
+    <innerfile refid="dicomhero__date_age_8h">dicomhero_dateAge.h</innerfile>
+    <innerfile refid="dicomhero__dicom_dictionary_8h">dicomhero_dicomDictionary.h</innerfile>
+    <innerfile refid="dicomhero__dicom_dir_8h">dicomhero_dicomDir.h</innerfile>
+    <innerfile refid="dicomhero__dimse_8h">dicomhero_dimse.h</innerfile>
+    <innerfile refid="dicomhero__draw_bitmap_8h">dicomhero_drawBitmap.h</innerfile>
+    <innerfile refid="dicomhero__exceptions_8h">dicomhero_exceptions.h</innerfile>
+    <innerfile refid="dicomhero__file_stream_input_8h">dicomhero_fileStreamInput.h</innerfile>
+    <innerfile refid="dicomhero__file_stream_output_8h">dicomhero_fileStreamOutput.h</innerfile>
+    <innerfile refid="dicomhero__image_8h">dicomhero_image.h</innerfile>
+    <innerfile refid="dicomhero__lut_8h">dicomhero_lut.h</innerfile>
+    <innerfile refid="dicomhero__macros_8h">dicomhero_macros.h</innerfile>
+    <innerfile refid="dicomhero__memory_pool_8h">dicomhero_memoryPool.h</innerfile>
+    <innerfile refid="dicomhero__memory_stream_input_8h">dicomhero_memoryStreamInput.h</innerfile>
+    <innerfile refid="dicomhero__memory_stream_output_8h">dicomhero_memoryStreamOutput.h</innerfile>
+    <innerfile refid="dicomhero__modality_v_o_i_l_u_t_8h">dicomhero_modalityVOILUT.h</innerfile>
+    <innerfile refid="dicomhero__overlay_8h">dicomhero_overlay.h</innerfile>
+    <innerfile refid="dicomhero__patient_name_8h">dicomhero_patientName.h</innerfile>
+    <innerfile refid="dicomhero__pipe_8h">dicomhero_pipe.h</innerfile>
+    <innerfile refid="dicomhero__random_uid_generator_8h">dicomhero_randomUidGenerator.h</innerfile>
+    <innerfile refid="dicomhero__reading_data_handler_8h">dicomhero_readingDataHandler.h</innerfile>
+    <innerfile refid="dicomhero__reading_data_handler_numeric_8h">dicomhero_readingDataHandlerNumeric.h</innerfile>
+    <innerfile refid="dicomhero__read_memory_8h">dicomhero_readMemory.h</innerfile>
+    <innerfile refid="dicomhero__read_write_memory_8h">dicomhero_readWriteMemory.h</innerfile>
+    <innerfile refid="dicomhero__serial_number_uid_generator_8h">dicomhero_serialNumberUidGenerator.h</innerfile>
+    <innerfile refid="dicomhero__stream_reader_8h">dicomhero_streamReader.h</innerfile>
+    <innerfile refid="dicomhero__stream_writer_8h">dicomhero_streamWriter.h</innerfile>
+    <innerfile refid="dicomhero__tag_8h">dicomhero_tag.h</innerfile>
+    <innerfile refid="dicomhero__tag_id_8h">dicomhero_tagId.h</innerfile>
+    <innerfile refid="dicomhero__tcp_address_8h">dicomhero_tcpAddress.h</innerfile>
+    <innerfile refid="dicomhero__tcp_listener_8h">dicomhero_tcpListener.h</innerfile>
+    <innerfile refid="dicomhero__tcp_stream_8h">dicomhero_tcpStream.h</innerfile>
+    <innerfile refid="dicomhero__transform_8h">dicomhero_transform.h</innerfile>
+    <innerfile refid="dicomhero__transform_high_bit_8h">dicomhero_transformHighBit.h</innerfile>
+    <innerfile refid="dicomhero__transforms_chain_8h">dicomhero_transformsChain.h</innerfile>
+    <innerfile refid="dicomhero__uid_generator_factory_8h">dicomhero_uidGeneratorFactory.h</innerfile>
+    <innerfile refid="dicomhero__version_8h">dicomhero_version.h</innerfile>
+    <innerfile refid="dicomhero___v_o_i_description_8h">dicomhero_VOIDescription.h</innerfile>
+    <innerfile refid="dicomhero___v_o_i_l_u_t_8h">dicomhero_VOILUT.h</innerfile>
+    <innerfile refid="dicomhero__writing_data_handler_8h">dicomhero_writingDataHandler.h</innerfile>
+    <innerfile refid="dicomhero__writing_data_handler_numeric_8h">dicomhero_writingDataHandlerNumeric.h</innerfile>
+    <innerfile refid="tags_enumeration_8h">tagsEnumeration.h</innerfile>
+    <innerfile refid="wrappers_2objectivec_2include_2dicomhero6__objc_2uids_enumeration_8h">wrappers/objectivec/include/dicomhero6_objc/uidsEnumeration.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_color_transforms_factory_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::ColorTransformsFactoryError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_transform_error" prot="public" virt="non-virtual">dicomhero::TransformError</basecompoundref>
+    <derivedcompoundref refid="classdicomhero_1_1_color_transforms_factory_no_transform_error" prot="public" virt="non-virtual">dicomhero::ColorTransformsFactoryNoTransformError</derivedcompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_color_transforms_factory_error_1aa1a706f31c95217f0ce128c653d0665a" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::ColorTransformsFactoryError::ColorTransformsFactoryError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>ColorTransformsFactoryError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1226" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_color_transforms_factory_error_1a443326844581c4b3d030f301c7c80722" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::ColorTransformsFactoryError::ColorTransformsFactoryError</definition>
+        <argsstring>(const ColorTransformsFactoryError &amp;source)</argsstring>
+        <name>ColorTransformsFactoryError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_color_transforms_factory_error" kindref="compound">ColorTransformsFactoryError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1228" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_color_transforms_factory_error_1a289432e5e5783a1a9e83452096651e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_color_transforms_factory_error" kindref="compound">ColorTransformsFactoryError</ref> &amp;</type>
+        <definition>ColorTransformsFactoryError&amp; dicomhero::ColorTransformsFactoryError::operator=</definition>
+        <argsstring>(const ColorTransformsFactoryError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_color_transforms_factory_error" kindref="compound">ColorTransformsFactoryError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1230" column="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_color_transforms_factory_error_1aa6e65144475b7012b34cd229a53e5f07" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::ColorTransformsFactoryError::~ColorTransformsFactoryError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~ColorTransformsFactoryError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1232" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is the base class for the exceptions thrown by colorTransformsFactory. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>dicomhero::ColorTransformsFactoryNoTransformError</label>
+        <link refid="classdicomhero_1_1_color_transforms_factory_no_transform_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dicomhero::ColorTransformsFactoryError</label>
+        <link refid="classdicomhero_1_1_color_transforms_factory_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::TransformError</label>
+        <link refid="classdicomhero_1_1_transform_error"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dicomhero::ColorTransformsFactoryError</label>
+        <link refid="classdicomhero_1_1_color_transforms_factory_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::TransformError</label>
+        <link refid="classdicomhero_1_1_transform_error"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1218" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="1219" bodyend="1233"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_color_transforms_factory_error_1aa1a706f31c95217f0ce128c653d0665a" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformsFactoryError</scope><name>ColorTransformsFactoryError</name></member>
+      <member refid="classdicomhero_1_1_color_transforms_factory_error_1a443326844581c4b3d030f301c7c80722" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformsFactoryError</scope><name>ColorTransformsFactoryError</name></member>
+      <member refid="classdicomhero_1_1_color_transforms_factory_error_1a289432e5e5783a1a9e83452096651e80" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformsFactoryError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_transform_error_1a21afa7b157385103baf786b1781bb1d7" prot="public" virt="non-virtual" ambiguityscope="dicomhero::TransformError::"><scope>dicomhero::ColorTransformsFactoryError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_transform_error_1ab09af38e1f790b059c8753486d086a04" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformsFactoryError</scope><name>TransformError</name></member>
+      <member refid="classdicomhero_1_1_transform_error_1a17e27567b75da6d3fb1795c96c9f486c" prot="public" virt="non-virtual"><scope>dicomhero::ColorTransformsFactoryError</scope><name>TransformError</name></member>
+      <member refid="classdicomhero_1_1_color_transforms_factory_error_1aa6e65144475b7012b34cd229a53e5f07" prot="public" virt="virtual"><scope>dicomhero::ColorTransformsFactoryError</scope><name>~ColorTransformsFactoryError</name></member>
+      <member refid="classdicomhero_1_1_transform_error_1a6d990b96293194cd521500a6fde9d89d" prot="public" virt="virtual"><scope>dicomhero::ColorTransformsFactoryError</scope><name>~TransformError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

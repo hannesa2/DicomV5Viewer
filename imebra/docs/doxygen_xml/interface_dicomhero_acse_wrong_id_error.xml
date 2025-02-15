@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_acse_wrong_id_error" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroAcseWrongIdError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">DicomheroAcseError</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_wrong_command_id_error" prot="public" virt="non-virtual">DicomheroAcseWrongCommandIdError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_wrong_response_id_error" prot="public" virt="non-virtual">DicomheroAcseWrongResponseIdError</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_exceptions.h" line="233" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_exceptions.h" bodystart="234" bodyend="-1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

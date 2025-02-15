@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dicomhero__overlay_8h" kind="file" language="C++">
+    <compoundname>dicomhero_overlay.h</compoundname>
+    <includes local="no">Foundation/Foundation.h</includes>
+    <includes refid="dicomhero__macros_8h" local="yes">dicomhero_macros.h</includes>
+    <includedby refid="dicomhero6_8h" local="yes">dicomhero6.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>dicomhero_overlay.h</label>
+        <link refid="dicomhero__overlay_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Foundation/Foundation.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="interface_dicomhero_overlay" prot="public">DicomheroOverlay</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="dicomhero__overlay_8h_1aba4acbd30c6c4ba64948ec325afc5ae1" prot="public" static="no" strong="no">
+        <type></type>
+        <name>DicomheroOverlayType</name>
+        <enumvalue id="dicomhero__overlay_8h_1aba4acbd30c6c4ba64948ec325afc5ae1a58123bdda77851299ad76c0fad513476" prot="public">
+          <name>DicomheroOverlayTypeGraphic</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>The overlay is a superimposed graphic. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__overlay_8h_1aba4acbd30c6c4ba64948ec325afc5ae1a0844a95f715e190edbf53d0618495ccc" prot="public">
+          <name>DicomheroOverlayTypeROI</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>8The overlay specifies a region of interest </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Defines the Overlay type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" line="25" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h" bodystart="26" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>2005<sp/>-<sp/>2019<sp/>by<sp/>Paolo<sp/>Brandoli/Binarno<sp/>s.p.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">DICOMHero/Imebra<sp/>is<sp/>available<sp/>for<sp/>free<sp/>under<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">The<sp/>full<sp/>text<sp/>of<sp/>the<sp/>license<sp/>is<sp/>available<sp/>in<sp/>the<sp/>file<sp/>license.rst</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>in<sp/>the<sp/>project<sp/>root<sp/>folder.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">If<sp/>you<sp/>do<sp/>not<sp/>want<sp/>to<sp/>be<sp/>bound<sp/>by<sp/>the<sp/>GPL<sp/>terms<sp/>(such<sp/>as<sp/>the<sp/>requirement</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>that<sp/>your<sp/>application<sp/>must<sp/>also<sp/>be<sp/>GPL),<sp/>you<sp/>may<sp/>purchase<sp/>a<sp/>commercial</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>license<sp/>for<sp/>DICOMHero/Imebra<sp/>from<sp/>the<sp/>DICOMHero’s<sp/>website<sp/>(https://dicomhero.com).</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(dicomheroObjcOverlay__INCLUDED_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dicomheroObjcOverlay__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Foundation/Foundation.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dicomhero_macros.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>NS_ENUM(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>DicomheroOverlayType)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroOverlayTypeGraphic<sp/>=<sp/>0,<sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroOverlayTypeROI<sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="interface_dicomhero_overlay" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_overlay" kindref="compound">DicomheroOverlay</ref>:<sp/>NSObject</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@public</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>define_dicomhero_object_holder(Overlay);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithDicomheroOverlay:define_dicomhero_parameter(Overlay);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithType:(DicomheroOverlayType)type<sp/>subType:(NSString*)subType<sp/>firstFrame:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)firstFrame<sp/>zeroBasedOriginX:(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)zeroBasedOriginX<sp/>zeroBasedOriginY:(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)zeroBasedOriginY<sp/>label:(NSString*)label<sp/>description:(NSString*)description;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)dealloc;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/>DicomheroOverlayType<sp/>type;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/>NSString*<sp/>subType;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/>NSString*<sp/>label;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/>NSString*<sp/>description;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>firstFrame;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>framesCount;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>zeroBasedOriginX;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>zeroBasedOriginY;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)<sp/>getROIArea:(NSError**)pError</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>-(double)<sp/>getROIMean:(NSError**)pError</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>-(double)<sp/>getROIStandardDeviation:(NSError**)pError</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref>*)<sp/>getImage:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)frameNumber<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)<sp/>setROIArea:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)roiArea;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)<sp/>setROIMean:(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)roiMean;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)<sp/>setROIStandardDeviation:(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)standardDeviation;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)<sp/>setImage:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)frameNumber<sp/>image:(<ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref>*)image<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>dicomheroObjcOverlay__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_overlay.h"/>
+  </compounddef>
+</doxygen>

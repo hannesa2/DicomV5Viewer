@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_memory" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroMemory</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_mutable_memory" prot="public" virt="non-virtual">DicomheroMutableMemory</derivedcompoundref>
+    <includes local="no">dicomhero_readMemory.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_memory_1a653a971e7ed721dc4cb9ff571e7da46a" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroMemory::m_Memory</definition>
+        <argsstring></argsstring>
+        <name>m_Memory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readMemory.h" line="33" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readMemory.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_memory_1a5b821f224720b874771ea49b6e6d0f06" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>bool</type>
+        <definition>bool DicomheroMemory::empty</definition>
+        <argsstring></argsstring>
+        <name>empty</name>
+        <read></read>
+        <briefdescription>
+<para>Return true if the referenced memory is zero bytes long or hasn&apos;t been allocated yet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readMemory.h" line="60" column="11" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readMemory.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_memory_1ad449001d63b011e205b064e20be5d194" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroMemory::initWithDicomheroMemory:</definition>
+        <argsstring>(void *parameter_Memory)</argsstring>
+        <name>initWithDicomheroMemory:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_Memory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readMemory.h" line="33" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_memory_1ac00cf6ca27290d246b21888a6c3446d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroMemory::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <reimplementedby refid="interface_dicomhero_mutable_memory_1af36a49aa6a64ad177f5b4581b61fa754">init</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readMemory.h" line="33" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_memory_1ae84feeec37f63bbf348d9a8d3bfde17c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroMemory::initWithData:</definition>
+        <argsstring>(NSData *source)</argsstring>
+        <name>initWithData:</name>
+        <reimplementedby refid="interface_dicomhero_mutable_memory_1aa028be3f7d5e64ec00eae0baaa289f03">initWithData:</reimplementedby>
+        <param>
+          <type>NSData *</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Construct a buffer of memory and copy the specified content into it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to the source data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readMemory.h" line="33" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_memory_1a09c669eb3cee22348d4f3b5cd72e98c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSData *</type>
+        <definition>NSData* DicomheroMemory::data</definition>
+        <argsstring>()</argsstring>
+        <name>data</name>
+        <briefdescription>
+<para>Copies the raw memory content into a NSData object and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a NSData containing a copy of the memory managed by ImebraReadMemory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readMemory.h" line="33" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_memory_1afac8922dc268f2646e31c8b0e0b7a8a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroMemory::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readMemory.h" line="33" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Manages a read-only buffer of memory. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The buffer of memory is usually associated with a <ref refid="interface_dicomhero_tag" kindref="compound">DicomheroTag</ref> buffer content.</para>
+<para>The memory used by ImebraReadMemory and <ref refid="interface_dicomhero_mutable_memory" kindref="compound">DicomheroMutableMemory</ref> is managed by DicomheroMemoryPool. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>DicomheroMutableMemory</label>
+        <link refid="interface_dicomhero_mutable_memory"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DicomheroMemory</label>
+        <link refid="interface_dicomhero_memory"/>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readMemory.h" line="29" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_readMemory.h" bodystart="31" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_memory_1a09c669eb3cee22348d4f3b5cd72e98c3" prot="public" virt="virtual"><scope>DicomheroMemory</scope><name>data</name></member>
+      <member refid="interface_dicomhero_memory_1afac8922dc268f2646e31c8b0e0b7a8a9" prot="public" virt="virtual"><scope>DicomheroMemory</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_memory_1a5b821f224720b874771ea49b6e6d0f06" prot="public" virt="non-virtual"><scope>DicomheroMemory</scope><name>empty</name></member>
+      <member refid="interface_dicomhero_memory_1ac00cf6ca27290d246b21888a6c3446d2" prot="public" virt="virtual"><scope>DicomheroMemory</scope><name>init</name></member>
+      <member refid="interface_dicomhero_memory_1ae84feeec37f63bbf348d9a8d3bfde17c" prot="public" virt="virtual"><scope>DicomheroMemory</scope><name>initWithData:</name></member>
+      <member refid="interface_dicomhero_memory_1ad449001d63b011e205b064e20be5d194" prot="public" virt="virtual"><scope>DicomheroMemory</scope><name>initWithDicomheroMemory:</name></member>
+      <member refid="interface_dicomhero_memory_1a653a971e7ed721dc4cb9ff571e7da46a" prot="public" virt="non-virtual"><scope>DicomheroMemory</scope><name>m_Memory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

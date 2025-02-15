@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_l_u_t" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::LUT</compoundname>
+    <includes local="no">lut.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_l_u_t_1a65aee544f477122410d0c7d5635764a7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>DataSet</definition>
+        <argsstring></argsstring>
+        <name>DataSet</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" line="42" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_l_u_t_1aad275a608610ae32c72cbc09d139a828" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class VOILUT</definition>
+        <argsstring></argsstring>
+        <name>VOILUT</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_v_o_i_l_u_t" kindref="compound">VOILUT</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" line="44" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_l_u_t_1a824cf7e802a369522ae214174510f898" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::shared_ptr&lt; dicomhero::implementation::lut &gt; &amp;</type>
+        <definition>const std::shared_ptr&lt;dicomhero::implementation::lut&gt;&amp; getLUTImplementation</definition>
+        <argsstring>(const LUT &amp;lut)</argsstring>
+        <name>getLUTImplementation</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_l_u_t" kindref="compound">LUT</ref> &amp;</type>
+          <declname>lut</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" line="91" column="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdicomhero_1_1_l_u_t_1a5cf16c3ff931fdaa7323afb1f5224067" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; dicomhero::implementation::lut &gt;</type>
+        <definition>std::shared_ptr&lt;dicomhero::implementation::lut&gt; dicomhero::LUT::m_pLut</definition>
+        <argsstring></argsstring>
+        <name>m_pLut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" line="92" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_l_u_t_1aeba50781021f24cf9185c2f7fcd69b3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::LUT::LUT</definition>
+        <argsstring>(const LUT &amp;source)</argsstring>
+        <name>LUT</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_l_u_t" kindref="compound">LUT</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_l_u_t" kindref="compound">LUT</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" line="53" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_l_u_t_1a3df0903c0cb4daf52eb61c946ca832ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_l_u_t" kindref="compound">LUT</ref> &amp;</type>
+        <definition>LUT&amp; dicomhero::LUT::operator=</definition>
+        <argsstring>(const LUT &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_l_u_t" kindref="compound">LUT</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" line="55" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_l_u_t_1aa1c4e02fd9deaef7481d6efe54e98948" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::LUT::~LUT</definition>
+        <argsstring>()</argsstring>
+        <name>~LUT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" line="57" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_l_u_t_1adfd8f91b891cdecaeb8ac6c9ee47f651" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::wstring</type>
+        <definition>std::wstring dicomhero::LUT::getDescription</definition>
+        <argsstring>() const</argsstring>
+        <name>getDescription</name>
+        <briefdescription>
+<para>Returns the <ref refid="classdicomhero_1_1_l_u_t" kindref="compound">LUT</ref>&apos;s description. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_l_u_t" kindref="compound">LUT</ref>&apos;s description </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" line="64" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_l_u_t_1a27264bc4e32f6b3ce4b520fb30e0b7e1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_reading_data_handler_numeric" kindref="compound">ReadingDataHandlerNumeric</ref></type>
+        <definition>ReadingDataHandlerNumeric dicomhero::LUT::getReadingDataHandler</definition>
+        <argsstring>() const</argsstring>
+        <name>getReadingDataHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" line="66" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_l_u_t_1a42f6a5143c5edb580c241e0673da7e23" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t dicomhero::LUT::getBits</definition>
+        <argsstring>() const</argsstring>
+        <name>getBits</name>
+        <briefdescription>
+<para>Return the number of bits used to store a <ref refid="classdicomhero_1_1_l_u_t" kindref="compound">LUT</ref> value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the number of bits used to store a mapped value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" line="73" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_l_u_t_1af18fa3fe8e1801f87e9a1bf0fdd5bca8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t dicomhero::LUT::getSize</definition>
+        <argsstring>() const</argsstring>
+        <name>getSize</name>
+        <briefdescription>
+<para>Return the lut&apos;s size (the number of stored values). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the number of mapped values stored in the lut </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" line="80" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_l_u_t_1a6b67536282fc23f7284276d612d780bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::int32_t</type>
+        <definition>std::int32_t dicomhero::LUT::getFirstMapped</definition>
+        <argsstring>() const</argsstring>
+        <name>getFirstMapped</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" line="82" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_l_u_t_1a8b1776fd66d045a4cc608c7254c37779" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t dicomhero::LUT::getMappedValue</definition>
+        <argsstring>(std::int32_t index) const</argsstring>
+        <name>getMappedValue</name>
+        <param>
+          <type>std::int32_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" line="84" column="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdicomhero_1_1_l_u_t_1a316c6f7eef923f4267d46f278d098ea2" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::LUT::LUT</definition>
+        <argsstring>(const std::shared_ptr&lt; dicomhero::implementation::lut &gt; &amp;pLut)</argsstring>
+        <name>LUT</name>
+        <param>
+          <type>const std::shared_ptr&lt; dicomhero::implementation::lut &gt; &amp;</type>
+          <declname>pLut</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" line="88" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents Lookup Table. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" line="39" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/lut.h" bodystart="40" bodyend="94"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_l_u_t_1a65aee544f477122410d0c7d5635764a7" prot="private" virt="non-virtual"><scope>dicomhero::LUT</scope><name>DataSet</name></member>
+      <member refid="classdicomhero_1_1_l_u_t_1a42f6a5143c5edb580c241e0673da7e23" prot="public" virt="non-virtual"><scope>dicomhero::LUT</scope><name>getBits</name></member>
+      <member refid="classdicomhero_1_1_l_u_t_1adfd8f91b891cdecaeb8ac6c9ee47f651" prot="public" virt="non-virtual"><scope>dicomhero::LUT</scope><name>getDescription</name></member>
+      <member refid="classdicomhero_1_1_l_u_t_1a6b67536282fc23f7284276d612d780bd" prot="public" virt="non-virtual"><scope>dicomhero::LUT</scope><name>getFirstMapped</name></member>
+      <member refid="classdicomhero_1_1_l_u_t_1a824cf7e802a369522ae214174510f898" prot="private" virt="non-virtual"><scope>dicomhero::LUT</scope><name>getLUTImplementation</name></member>
+      <member refid="classdicomhero_1_1_l_u_t_1a8b1776fd66d045a4cc608c7254c37779" prot="public" virt="non-virtual"><scope>dicomhero::LUT</scope><name>getMappedValue</name></member>
+      <member refid="classdicomhero_1_1_l_u_t_1a27264bc4e32f6b3ce4b520fb30e0b7e1" prot="public" virt="non-virtual"><scope>dicomhero::LUT</scope><name>getReadingDataHandler</name></member>
+      <member refid="classdicomhero_1_1_l_u_t_1af18fa3fe8e1801f87e9a1bf0fdd5bca8" prot="public" virt="non-virtual"><scope>dicomhero::LUT</scope><name>getSize</name></member>
+      <member refid="classdicomhero_1_1_l_u_t_1aeba50781021f24cf9185c2f7fcd69b3b" prot="public" virt="non-virtual"><scope>dicomhero::LUT</scope><name>LUT</name></member>
+      <member refid="classdicomhero_1_1_l_u_t_1a316c6f7eef923f4267d46f278d098ea2" prot="protected" virt="non-virtual"><scope>dicomhero::LUT</scope><name>LUT</name></member>
+      <member refid="classdicomhero_1_1_l_u_t_1a5cf16c3ff931fdaa7323afb1f5224067" prot="private" virt="non-virtual"><scope>dicomhero::LUT</scope><name>m_pLut</name></member>
+      <member refid="classdicomhero_1_1_l_u_t_1a3df0903c0cb4daf52eb61c946ca832ac" prot="public" virt="non-virtual"><scope>dicomhero::LUT</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_l_u_t_1aad275a608610ae32c72cbc09d139a828" prot="private" virt="non-virtual"><scope>dicomhero::LUT</scope><name>VOILUT</name></member>
+      <member refid="classdicomhero_1_1_l_u_t_1aa1c4e02fd9deaef7481d6efe54e98948" prot="public" virt="virtual"><scope>dicomhero::LUT</scope><name>~LUT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

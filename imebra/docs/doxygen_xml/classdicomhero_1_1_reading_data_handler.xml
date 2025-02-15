@@ -1,0 +1,800 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_reading_data_handler" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::ReadingDataHandler</compoundname>
+    <derivedcompoundref refid="classdicomhero_1_1_reading_data_handler_numeric" prot="public" virt="non-virtual">dicomhero::ReadingDataHandlerNumeric</derivedcompoundref>
+    <includes local="no">readingDataHandler.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_reading_data_handler_1aef648af6c56fa8ee0738c93629e725dc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class DataSet</definition>
+        <argsstring></argsstring>
+        <name>DataSet</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="65" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_reading_data_handler_1afc8c1b0e7f1fedf25715bd33b74eb56c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Tag</definition>
+        <argsstring></argsstring>
+        <name>Tag</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="66" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_reading_data_handler_1a571c31fbbdf3a58ea29b85720d37d1bf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::shared_ptr&lt; implementation::handlers::readingDataHandler &gt; &amp;</type>
+        <definition>const std::shared_ptr&lt;implementation::handlers::readingDataHandler&gt;&amp; getReadingDataHandlerImplementation</definition>
+        <argsstring>(const ReadingDataHandler &amp;readingDataHandler)</argsstring>
+        <name>getReadingDataHandlerImplementation</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> &amp;</type>
+          <declname>readingDataHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="369" column="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdicomhero_1_1_reading_data_handler_1a5e2d5efeefe2d094870dae579ff739ed" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; dicomhero::implementation::handlers::readingDataHandler &gt;</type>
+        <definition>std::shared_ptr&lt;dicomhero::implementation::handlers::readingDataHandler&gt; dicomhero::ReadingDataHandler::m_pDataHandler</definition>
+        <argsstring></argsstring>
+        <name>m_pDataHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="370" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" bodystart="370" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1a2e048b7b4f5563d28d2885a11fa436fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::ReadingDataHandler::ReadingDataHandler</definition>
+        <argsstring>(const ReadingDataHandler &amp;source)</argsstring>
+        <name>ReadingDataHandler</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="75" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1a97c7edd2c342526cf5567f38033a912b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> &amp;</type>
+        <definition>ReadingDataHandler&amp; dicomhero::ReadingDataHandler::operator=</definition>
+        <argsstring>(const ReadingDataHandler &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="77" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1a70a633852ac19773e1acc48185ad3f43" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::ReadingDataHandler::~ReadingDataHandler</definition>
+        <argsstring>()</argsstring>
+        <name>~ReadingDataHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="79" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t dicomhero::ReadingDataHandler::getSize</definition>
+        <argsstring>() const</argsstring>
+        <name>getSize</name>
+        <briefdescription>
+<para>Returns the number of elements in the <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>&apos;s buffer handled by the data handler. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> object is related to a buffer that contains strings then it returns the number of strings stored in the buffer. Multiple strings are separated by a separator char.</para>
+<para><simplesect kind="return"><para>the number of elements stored in the handled Dicom buffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="91" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1a840efd8b211d566527e976b8c4e03c5f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1" kindref="member">tagVR_t</ref></type>
+        <definition>tagVR_t dicomhero::ReadingDataHandler::getDataType</definition>
+        <argsstring>() const</argsstring>
+        <name>getDataType</name>
+        <briefdescription>
+<para>Returns the data type (VR) of the data handled by the data handler. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the data type of the handled data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="98" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1a1dddcd26ec4bb6ec54ede7ab431e56b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::int64_t</type>
+        <definition>std::int64_t dicomhero::ReadingDataHandler::getInt64</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getInt64</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as signed 64 bit integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a signed 64 bit integer then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para>Throws <ref refid="classdicomhero_1_1_missing_item_error" kindref="compound">MissingItemError</ref> if the requested index does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a signed 64 bit integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="112" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1a028d5bda8f76a5fb1715d4c9a16527c5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::int32_t</type>
+        <definition>std::int32_t dicomhero::ReadingDataHandler::getInt32</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getInt32</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as signed long integer (32 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a signed long integer then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para>Throws <ref refid="classdicomhero_1_1_missing_item_error" kindref="compound">MissingItemError</ref> if the requested index does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a signed 32 bit integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="126" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1a3ed5b8cffdfaf11e1f678345b13734e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::int32_t</type>
+        <definition>std::int32_t dicomhero::ReadingDataHandler::getSignedLong</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getSignedLong</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Deprecated. Use <ref refid="classdicomhero_1_1_reading_data_handler_1a028d5bda8f76a5fb1715d4c9a16527c5" kindref="member">getInt32()</ref> instead. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="131" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1ac214f05823a70d8a60e0dad09b7d7fa0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint64_t</type>
+        <definition>std::uint64_t dicomhero::ReadingDataHandler::getUint64</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getUint64</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as an unsigned 64 bit integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to an unsigned 64 bit integer then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para>Throws <ref refid="classdicomhero_1_1_missing_item_error" kindref="compound">MissingItemError</ref> if the requested index does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as an unsigned 64 bit integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="145" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1afb450138c499d96904ea806e23c84c73" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t dicomhero::ReadingDataHandler::getUint32</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getUint32</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as an unsigned long integer (32 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When calling <ref refid="classdicomhero_1_1_reading_data_handler_1afb450138c499d96904ea806e23c84c73" kindref="member">getUint32()</ref> on an AT tag (Attribute <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>) then the tag group is always in the high word of the returned value.</para>
+<para>If the buffer&apos;s value cannot be converted to an unsigned long integer then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para>Throws <ref refid="classdicomhero_1_1_missing_item_error" kindref="compound">MissingItemError</ref> if the requested index does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as an unsigned 32 bit integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="162" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1ac5103ebc303b4f941236f83b04f44864" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t dicomhero::ReadingDataHandler::getUnsignedLong</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getUnsignedLong</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Deprecated. Use <ref refid="classdicomhero_1_1_reading_data_handler_1afb450138c499d96904ea806e23c84c73" kindref="member">getUint32()</ref> instead. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="167" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1a61c5305f264599a192bbebb27335220c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::int16_t</type>
+        <definition>std::int16_t dicomhero::ReadingDataHandler::getInt16</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getInt16</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as signed long integer (16 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a signed long integer then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para>Throws <ref refid="classdicomhero_1_1_missing_item_error" kindref="compound">MissingItemError</ref> if the requested index does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a signed 32 bit integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="181" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1a5de0959856883f938e0bebb293e23fc7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t dicomhero::ReadingDataHandler::getUint16</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getUint16</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as an unsigned long integer (16 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to an unsigned long integer then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para>Throws <ref refid="classdicomhero_1_1_missing_item_error" kindref="compound">MissingItemError</ref> if the requested index does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as an unsigned 32 bit integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="195" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1a073bc840e2591df6b2fa74367de56428" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::int8_t</type>
+        <definition>std::int8_t dicomhero::ReadingDataHandler::getInt8</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getInt8</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as signed long integer (8 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a signed long integer then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para>Throws <ref refid="classdicomhero_1_1_missing_item_error" kindref="compound">MissingItemError</ref> if the requested index does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a signed 32 bit integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="209" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1aa6d2a368bd175599ebb0da8d9e736614" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t dicomhero::ReadingDataHandler::getUint8</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getUint8</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as an unsigned long integer (8 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to an unsigned long integer then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para>Throws <ref refid="classdicomhero_1_1_missing_item_error" kindref="compound">MissingItemError</ref> if the requested index does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as an unsigned 32 bit integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="223" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1a91a48d68d49cdaa56f2291a290801580" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dicomhero::ReadingDataHandler::getDouble</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getDouble</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as a double floating point value (64 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a double value then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para>Throws <ref refid="classdicomhero_1_1_missing_item_error" kindref="compound">MissingItemError</ref> if the requested index does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a double floating point value (64 bit) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="237" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1a679245318e7cdf45227e79d2f4216c13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float dicomhero::ReadingDataHandler::getFloat</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getFloat</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as a floating point value (32 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a float value then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para>Throws <ref refid="classdicomhero_1_1_missing_item_error" kindref="compound">MissingItemError</ref> if the requested index does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a floating point value (32 bit) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="251" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1aa4db9fe489327105dd4d4a82f3bbfb90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string dicomhero::ReadingDataHandler::getString</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getString</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as a UTF8 string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a string then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para>Throws <ref refid="classdicomhero_1_1_missing_item_error" kindref="compound">MissingItemError</ref> if the requested index does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as an ASCII string</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="269" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1abdf27aebe0fc2f95d47736124ea90a19" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::wstring</type>
+        <definition>std::wstring dicomhero::ReadingDataHandler::getUnicodeString</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getUnicodeString</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as a Unicode string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a string then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para>Throws <ref refid="classdicomhero_1_1_missing_item_error" kindref="compound">MissingItemError</ref> if the requested index does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a Unicode string</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="288" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1a720fe0f17276f4a7333f783cca1370ea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_date" kindref="compound">Date</ref></type>
+        <definition>Date dicomhero::ReadingDataHandler::getDate</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getDate</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value a date or time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to a date or time then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para>Throws <ref refid="classdicomhero_1_1_missing_item_error" kindref="compound">MissingItemError</ref> if the requested index does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a date or time</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="307" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1a783cf4a24e36b0caef897319fae29f13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_age" kindref="compound">Age</ref></type>
+        <definition>Age dicomhero::ReadingDataHandler::getAge</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getAge</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a buffer&apos;s value as an <ref refid="classdicomhero_1_1_age" kindref="compound">Age</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer&apos;s value cannot be converted to an <ref refid="classdicomhero_1_1_age" kindref="compound">Age</ref> then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para>Throws <ref refid="classdicomhero_1_1_missing_item_error" kindref="compound">MissingItemError</ref> if the requested index does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as an <ref refid="classdicomhero_1_1_age" kindref="compound">Age</ref></para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="325" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1a9a78b746621ca9070e00573a7b0dace6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_patient_name" kindref="compound">PatientName</ref></type>
+        <definition>PatientName dicomhero::ReadingDataHandler::getPatientName</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getPatientName</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a tag&apos;s value as a Patient Name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the tag&apos;s value cannot be converted to a patient name then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para>Throws <ref refid="classdicomhero_1_1_missing_item_error" kindref="compound">MissingItemError</ref> if the requested index does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a Patient Name</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="343" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1a82c233699604a4afaa779684bdde5e21" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_unicode_patient_name" kindref="compound">UnicodePatientName</ref></type>
+        <definition>UnicodePatientName dicomhero::ReadingDataHandler::getUnicodePatientName</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>getUnicodePatientName</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a tag&apos;s value as a Unicode Patient Name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the tag&apos;s value cannot be converted to a patient name then throws <ref refid="classdicomhero_1_1_data_handler_conversion_error" kindref="compound">DataHandlerConversionError</ref>.</para>
+<para>Throws <ref refid="classdicomhero_1_1_missing_item_error" kindref="compound">MissingItemError</ref> if the requested index does not exist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" kindref="member">getSize()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the tag&apos;s value as a Unicode Patient Name</para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="363" column="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdicomhero_1_1_reading_data_handler_1afbcf3044e18e12dfd8b52031903734e3" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::ReadingDataHandler::ReadingDataHandler</definition>
+        <argsstring>(const std::shared_ptr&lt; implementation::handlers::readingDataHandler &gt; &amp;pDataHandler)</argsstring>
+        <name>ReadingDataHandler</name>
+        <param>
+          <type>const std::shared_ptr&lt; implementation::handlers::readingDataHandler &gt; &amp;</type>
+          <declname>pDataHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="366" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> class allows reading the content of a Dicom <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> is able to return the <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>&apos;s content as a string, a number, a date/time or an age.</para>
+<para>In order to obtain a <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> object for a specific <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref> stored in a <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>, call <ref refid="classdicomhero_1_1_data_set_1afbf1d647fd892740fb171d42470934d7" kindref="member">DataSet::getReadingDataHandler()</ref> or <ref refid="classdicomhero_1_1_tag_1a490ff60339f092893360227ef00322ec" kindref="member">Tag::getReadingDataHandler()</ref>.</para>
+<para>The <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> object keeps a reference to the buffer&apos;s memory: the buffer&apos;s memory is never modified but only replaced by a new memory area, therefore the <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> client does not need to worry about other clients modifying the memory being read. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dicomhero::ReadingDataHandlerNumeric</label>
+        <link refid="classdicomhero_1_1_reading_data_handler_numeric"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dicomhero::ReadingDataHandler</label>
+        <link refid="classdicomhero_1_1_reading_data_handler"/>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" line="62" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/readingDataHandler.h" bodystart="63" bodyend="372"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_reading_data_handler_1aef648af6c56fa8ee0738c93629e725dc" prot="private" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>DataSet</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a783cf4a24e36b0caef897319fae29f13" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getAge</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a840efd8b211d566527e976b8c4e03c5f" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getDataType</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a720fe0f17276f4a7333f783cca1370ea" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getDate</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a91a48d68d49cdaa56f2291a290801580" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getDouble</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a679245318e7cdf45227e79d2f4216c13" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getFloat</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a61c5305f264599a192bbebb27335220c" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getInt16</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a028d5bda8f76a5fb1715d4c9a16527c5" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getInt32</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a1dddcd26ec4bb6ec54ede7ab431e56b1" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getInt64</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a073bc840e2591df6b2fa74367de56428" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getInt8</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a9a78b746621ca9070e00573a7b0dace6" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getPatientName</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a571c31fbbdf3a58ea29b85720d37d1bf" prot="private" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getReadingDataHandlerImplementation</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a3ed5b8cffdfaf11e1f678345b13734e4" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getSignedLong</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1aa2e33ec9d6a0bfe0d35c419f5d684fdb" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getSize</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1aa4db9fe489327105dd4d4a82f3bbfb90" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getString</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a5de0959856883f938e0bebb293e23fc7" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getUint16</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1afb450138c499d96904ea806e23c84c73" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getUint32</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1ac214f05823a70d8a60e0dad09b7d7fa0" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getUint64</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1aa6d2a368bd175599ebb0da8d9e736614" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getUint8</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a82c233699604a4afaa779684bdde5e21" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getUnicodePatientName</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1abdf27aebe0fc2f95d47736124ea90a19" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getUnicodeString</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1ac5103ebc303b4f941236f83b04f44864" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>getUnsignedLong</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a5e2d5efeefe2d094870dae579ff739ed" prot="private" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>m_pDataHandler</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a97c7edd2c342526cf5567f38033a912b" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a2e048b7b4f5563d28d2885a11fa436fa" prot="public" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>ReadingDataHandler</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1afbcf3044e18e12dfd8b52031903734e3" prot="protected" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>ReadingDataHandler</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1afc8c1b0e7f1fedf25715bd33b74eb56c" prot="private" virt="non-virtual"><scope>dicomhero::ReadingDataHandler</scope><name>Tag</name></member>
+      <member refid="classdicomhero_1_1_reading_data_handler_1a70a633852ac19773e1acc48185ad3f43" prot="public" virt="virtual"><scope>dicomhero::ReadingDataHandler</scope><name>~ReadingDataHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

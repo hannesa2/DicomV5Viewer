@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_memory_stream_input" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroMemoryStreamInput</compoundname>
+    <basecompoundref refid="interface_dicomhero_base_stream_input" prot="public" virt="non-virtual">DicomheroBaseStreamInput</basecompoundref>
+    <includes local="no">dicomhero_memoryStreamInput.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_memory_stream_input_1a896a64de561caa612f054644be503b1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroMemoryStreamInput::initWithReadMemory:</definition>
+        <argsstring>(DicomheroMemory *pMemory)</argsstring>
+        <name>initWithReadMemory:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_memory" kindref="compound">DicomheroMemory</ref> *</type>
+          <declname>pMemory</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pMemory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the memory region from which the stream will read the data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_memoryStreamInput.h" line="1" column="0"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An input stream that reads data from a memory region. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DicomheroMemoryStreamInput</label>
+        <link refid="interface_dicomhero_memory_stream_input"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroBaseStreamInput</label>
+        <link refid="interface_dicomhero_base_stream_input"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DicomheroMemoryStreamInput</label>
+        <link refid="interface_dicomhero_memory_stream_input"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroBaseStreamInput</label>
+        <link refid="interface_dicomhero_base_stream_input"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_memoryStreamInput.h" line="26" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_memoryStreamInput.h" bodystart="27" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_base_stream_input_1ac418885ff6dc16dc55323e242c5fed8c" prot="public" virt="virtual"><scope>DicomheroMemoryStreamInput</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_base_stream_input_1ac491f2638c6e3412bef6739a9c461982" prot="public" virt="virtual"><scope>DicomheroMemoryStreamInput</scope><name>initWithDicomheroBaseStreamInput:</name></member>
+      <member refid="interface_dicomhero_memory_stream_input_1a896a64de561caa612f054644be503b1f" prot="public" virt="virtual"><scope>DicomheroMemoryStreamInput</scope><name>initWithReadMemory:</name></member>
+      <member refid="interface_dicomhero_base_stream_input_1a261395c795087db1033f3414aa242f5e" prot="public" virt="non-virtual"><scope>DicomheroMemoryStreamInput</scope><name>m_BaseStreamInput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

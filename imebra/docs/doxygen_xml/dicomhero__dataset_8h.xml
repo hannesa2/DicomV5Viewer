@@ -1,0 +1,779 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dicomhero__dataset_8h" kind="file" language="C++">
+    <compoundname>dicomhero_dataset.h</compoundname>
+    <includes local="no">Foundation/Foundation.h</includes>
+    <includes refid="dicomhero__macros_8h" local="yes">dicomhero_macros.h</includes>
+    <includedby refid="dicomhero6_8h" local="yes">dicomhero6.h</includedby>
+    <includedby refid="dicomhero__acse_8h" local="yes">dicomhero_acse.h</includedby>
+    <includedby refid="dicomhero__dicom_dictionary_8h" local="yes">dicomhero_dicomDictionary.h</includedby>
+    <includedby refid="dicomhero__tag_8h" local="yes">dicomhero_tag.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>dicomhero_dataset.h</label>
+        <link refid="dicomhero__dataset_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Foundation/Foundation.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="interface_dicomhero_data_set" prot="public">DicomheroDataSet</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797" prot="public" static="no" strong="no">
+        <type></type>
+        <name>DicomheroTagType</name>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a4e8d3bf1b2841d90f486855acdc7e422" prot="public">
+          <name>DicomheroTagTypeAE</name>
+          <initializer>= 0x4145</initializer>
+          <briefdescription>
+<para>Application Entity. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797aad9b96cd831ea8f8e16daf6f9d2bfaab" prot="public">
+          <name>DicomheroTagTypeAS</name>
+          <initializer>= 0x4153</initializer>
+          <briefdescription>
+<para>Age String. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a6c69846c95ad4f927a710c71be299dc5" prot="public">
+          <name>DicomheroTagTypeAT</name>
+          <initializer>= 0x4154</initializer>
+          <briefdescription>
+<para>Attribute Tag. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a5105f4db5fd6062e07007ee9a5f751cf" prot="public">
+          <name>DicomheroTagTypeCS</name>
+          <initializer>= 0x4353</initializer>
+          <briefdescription>
+<para>Code String. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a1c4279111277ebf6142aba4f38da6248" prot="public">
+          <name>DicomheroTagTypeDA</name>
+          <initializer>= 0x4441</initializer>
+          <briefdescription>
+<para>Date. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797ac7acaba6fec379c49915ecca622bdb0b" prot="public">
+          <name>DicomheroTagTypeDS</name>
+          <initializer>= 0x4453</initializer>
+          <briefdescription>
+<para>Decimal String. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797ad1d88ec939cb41c2fbbc8ab9c753aa04" prot="public">
+          <name>DicomheroTagTypeDT</name>
+          <initializer>= 0x4454</initializer>
+          <briefdescription>
+<para>Date Time. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a623f1425232d5d8c9e8e4283d555e298" prot="public">
+          <name>DicomheroTagTypeFL</name>
+          <initializer>= 0x464c</initializer>
+          <briefdescription>
+<para>Floating Point Single. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797aa0e475ee4b80e44e952e043daf64c979" prot="public">
+          <name>DicomheroTagTypeFD</name>
+          <initializer>= 0x4644</initializer>
+          <briefdescription>
+<para>Floating Point Double. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a02a508ef50d8756297e4598572ba9166" prot="public">
+          <name>DicomheroTagTypeIS</name>
+          <initializer>= 0x4953</initializer>
+          <briefdescription>
+<para>Integer String. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a806c5a33c7db6e417b66f911dda873aa" prot="public">
+          <name>DicomheroTagTypeLO</name>
+          <initializer>= 0x4c4f</initializer>
+          <briefdescription>
+<para>Long String. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a012b9c3e8f5781ed6cae777f3ace611d" prot="public">
+          <name>DicomheroTagTypeLT</name>
+          <initializer>= 0x4c54</initializer>
+          <briefdescription>
+<para>Long Text. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a371fd39d368d9e8f0c9ec4b950fd488b" prot="public">
+          <name>DicomheroTagTypeOB</name>
+          <initializer>= 0x4f42</initializer>
+          <briefdescription>
+<para>Other Byte String. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a9c07ba53787a6ec2ff721b3a0545c4bb" prot="public">
+          <name>DicomheroTagTypeSB</name>
+          <initializer>= 0x5342</initializer>
+          <briefdescription>
+<para>Non standard. Used internally for signed bytes. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a4dda6da1f3f3f4b2145e0e7e651af99c" prot="public">
+          <name>DicomheroTagTypeOD</name>
+          <initializer>= 0x4f44</initializer>
+          <briefdescription>
+<para>Other Double String. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797adba3ca8c7c36ad441fc46e497d457bad" prot="public">
+          <name>DicomheroTagTypeOF</name>
+          <initializer>= 0x4f46</initializer>
+          <briefdescription>
+<para>Other Float String. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797aae8ef772419e3503c0f1d13f8605f525" prot="public">
+          <name>DicomheroTagTypeOL</name>
+          <initializer>= 0x4f4c</initializer>
+          <briefdescription>
+<para>Other Long String. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797ac896d3e19050f10979dc17fd6f99b94a" prot="public">
+          <name>DicomheroTagTypeOV</name>
+          <initializer>= 0x4f56</initializer>
+          <briefdescription>
+<para>Other Very long. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a9e8010aa4c3dfe1fad9ea8b2f9de801b" prot="public">
+          <name>DicomheroTagTypeOW</name>
+          <initializer>= 0x4f57</initializer>
+          <briefdescription>
+<para>Other Word String. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797ae3586c1490793b3046845d027e1cb9d7" prot="public">
+          <name>DicomheroTagTypePN</name>
+          <initializer>= 0x504e</initializer>
+          <briefdescription>
+<para>Person Name. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a7ed9c67c4abfcc43ac8b688573eb7c80" prot="public">
+          <name>DicomheroTagTypeSH</name>
+          <initializer>= 0x5348</initializer>
+          <briefdescription>
+<para>Short String. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a1dfdce1f7bae3b9c3aafe5655f6da287" prot="public">
+          <name>DicomheroTagTypeSL</name>
+          <initializer>= 0x534c</initializer>
+          <briefdescription>
+<para>Signed Long. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797ade3006dd524c4e66d21baacecbe12b5f" prot="public">
+          <name>DicomheroTagTypeSQ</name>
+          <initializer>= 0x5351</initializer>
+          <briefdescription>
+<para>Sequence of Items. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797abe590e7eb143bb20d5a36409e0a7cd5e" prot="public">
+          <name>DicomheroTagTypeSS</name>
+          <initializer>= 0x5353</initializer>
+          <briefdescription>
+<para>Signed Short. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a13defcd7eafa8dc1f4e25eaf0232331b" prot="public">
+          <name>DicomheroTagTypeST</name>
+          <initializer>= 0x5354</initializer>
+          <briefdescription>
+<para>Short Text. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797ab1dff592e228308db326b4b7faba7547" prot="public">
+          <name>DicomheroTagTypeSV</name>
+          <initializer>= 0x5356</initializer>
+          <briefdescription>
+<para>Signed Very Long. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797ac4347fc9f7d79b11b4fa3ca80d8f1a1f" prot="public">
+          <name>DicomheroTagTypeTM</name>
+          <initializer>= 0x544d</initializer>
+          <briefdescription>
+<para>Time. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a584dd8ccdeb01a135079edaec303a8e9" prot="public">
+          <name>DicomheroTagTypeUC</name>
+          <initializer>= 0x5543</initializer>
+          <briefdescription>
+<para>Unlimited characters. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797afbe0d286fdbac6dafdecf9a43ebf5116" prot="public">
+          <name>DicomheroTagTypeUI</name>
+          <initializer>= 0x5549</initializer>
+          <briefdescription>
+<para>Unique Identifier. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a1a4419dacecfc5e477e828dd43e2c78d" prot="public">
+          <name>DicomheroTagTypeUL</name>
+          <initializer>= 0x554c</initializer>
+          <briefdescription>
+<para>Unsigned Long. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a5b9fac89d8b6607680f9aa26f6aef358" prot="public">
+          <name>DicomheroTagTypeUN</name>
+          <initializer>= 0x554e</initializer>
+          <briefdescription>
+<para>Unknown. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797afb4868263ad7c8fedf6014e4158a1c76" prot="public">
+          <name>DicomheroTagTypeUR</name>
+          <initializer>= 0x5552</initializer>
+          <briefdescription>
+<para>Unified Resource Identifier. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a2b92f81cc89fc23dd89ddac1eea67ebd" prot="public">
+          <name>DicomheroTagTypeUS</name>
+          <initializer>= 0x5553</initializer>
+          <briefdescription>
+<para>Unsigned Short. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797ab71d6fc98b6825cdc2e227d24b378bb8" prot="public">
+          <name>DicomheroTagTypeUT</name>
+          <initializer>= 0x5554</initializer>
+          <briefdescription>
+<para>Unlimited Text. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1af4ef475d2b78d4ff453f832a4031c797a115fe6894abe36af9dcc6e99af72ad2e" prot="public">
+          <name>DicomheroTagTypeUV</name>
+          <initializer>= 0x5556</initializer>
+          <briefdescription>
+<para>Unsigned Very Long. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumerates the DICOM VRs (data types). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dataset.h" line="40" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dataset.h" bodystart="41" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="enum" id="dicomhero__dataset_8h_1aaf2ed950335d7ebfdff9fa7f6e4e1185" prot="public" static="no" strong="no">
+        <type></type>
+        <name>DicomheroImageQuality</name>
+        <enumvalue id="dicomhero__dataset_8h_1aaf2ed950335d7ebfdff9fa7f6e4e1185ad73f8ababfdd1193415d21e767284ca1" prot="public">
+          <name>DicomheroImageQualityVeryHigh</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>the image is saved with very high quality. No subsampling is performed and no quantization </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1aaf2ed950335d7ebfdff9fa7f6e4e1185a5886de87529576e6dab7aeb75b434ffe" prot="public">
+          <name>DicomheroImageQualityHigh</name>
+          <initializer>= 100</initializer>
+          <briefdescription>
+<para>the image is saved with high quality. No subsampling is performed. Quantization ratios are low </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1aaf2ed950335d7ebfdff9fa7f6e4e1185a68ad719aa4ab9a2939c64a247ca24b47" prot="public">
+          <name>DicomheroImageQualityAboveMedium</name>
+          <initializer>= 200</initializer>
+          <briefdescription>
+<para>the image is saved in medium quality. Horizontal subsampling is applied. Quantization ratios are low </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1aaf2ed950335d7ebfdff9fa7f6e4e1185a7a18fdc736fd1d3a3644e67a759ff553" prot="public">
+          <name>DicomheroImageQualityMedium</name>
+          <initializer>= 300</initializer>
+          <briefdescription>
+<para>the image is saved in medium quality. Horizontal subsampling is applied. Quantization ratios are medium </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1aaf2ed950335d7ebfdff9fa7f6e4e1185a8ee22cf8515b75fda0cc6211922dff9e" prot="public">
+          <name>DicomheroImageQualityBelowMedium</name>
+          <initializer>= 400</initializer>
+          <briefdescription>
+<para>the image is saved in medium quality. Horizontal and vertical subsampling are applied. Quantization ratios are medium </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1aaf2ed950335d7ebfdff9fa7f6e4e1185a63fbfda5ca833561624d41a094839cb0" prot="public">
+          <name>DicomheroImageQualityLow</name>
+          <initializer>= 500</initializer>
+          <briefdescription>
+<para>the image is saved in low quality. Horizontal and vertical subsampling are applied. Quantization ratios are higher than the ratios used in the belowMedium quality </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dataset_8h_1aaf2ed950335d7ebfdff9fa7f6e4e1185adac2cba0c272126c86d47d5953fbd869" prot="public">
+          <name>DicomheroImageQualityVeryLow</name>
+          <initializer>= 600</initializer>
+          <briefdescription>
+<para>the image is saved in low quality. Horizontal and vertical subsampling are applied. Quantization ratios are high </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>This enumeration specifies the quality of the compressed image when a lossy compression format is used. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dataset.h" line="85" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dataset.h" bodystart="86" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>2005<sp/>-<sp/>2021<sp/>by<sp/>Paolo<sp/>Brandoli/Binarno<sp/>s.p.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">DICOMHero/Imebra<sp/>is<sp/>available<sp/>for<sp/>free<sp/>under<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">The<sp/>full<sp/>text<sp/>of<sp/>the<sp/>license<sp/>is<sp/>available<sp/>in<sp/>the<sp/>file<sp/>license.rst</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>in<sp/>the<sp/>project<sp/>root<sp/>folder.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">If<sp/>you<sp/>do<sp/>not<sp/>want<sp/>to<sp/>be<sp/>bound<sp/>by<sp/>the<sp/>GPL<sp/>terms<sp/>(such<sp/>as<sp/>the<sp/>requirement</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>that<sp/>your<sp/>application<sp/>must<sp/>also<sp/>be<sp/>GPL),<sp/>you<sp/>may<sp/>purchase<sp/>a<sp/>commercial</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>license<sp/>for<sp/>DICOMHero/Imebra<sp/>from<sp/>the<sp/>DICOMHero’s<sp/>website<sp/>(https://dicomhero.com).</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(dicomheroObjcDataSet__INCLUDED_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dicomheroObjcDataSet__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Foundation/Foundation.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dicomhero_macros.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_age" kindref="compound">DicomheroAge</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/>DicomheroDate;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/>DicomheroPatientName;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_l_u_t" kindref="compound">DicomheroLUT</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_reading_data_handler" kindref="compound">DicomheroReadingDataHandler</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_writing_data_handler" kindref="compound">DicomheroWritingDataHandler</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_reading_data_handler_numeric" kindref="compound">DicomheroReadingDataHandlerNumeric</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_writing_data_handler_numeric" kindref="compound">DicomheroWritingDataHandlerNumeric</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_tag" kindref="compound">DicomheroTag</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_v_o_i_description" kindref="compound">DicomheroVOIDescription</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_stream_writer" kindref="compound">DicomheroStreamWriter</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_overlay" kindref="compound">DicomheroOverlay</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>NS_ENUM(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">,<sp/>DicomheroTagType)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeAE<sp/>=<sp/>0x4145,<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeAS<sp/>=<sp/>0x4153,<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeAT<sp/>=<sp/>0x4154,<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeCS<sp/>=<sp/>0x4353,<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeDA<sp/>=<sp/>0x4441,<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeDS<sp/>=<sp/>0x4453,<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeDT<sp/>=<sp/>0x4454,<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeFL<sp/>=<sp/>0x464c,<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeFD<sp/>=<sp/>0x4644,<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeIS<sp/>=<sp/>0x4953,<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeLO<sp/>=<sp/>0x4c4f,<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeLT<sp/>=<sp/>0x4c54,<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeOB<sp/>=<sp/>0x4f42,<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeSB<sp/>=<sp/>0x5342,<sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeOD<sp/>=<sp/>0x4f44,<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeOF<sp/>=<sp/>0x4f46,<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeOL<sp/>=<sp/>0x4f4c,<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeOV<sp/>=<sp/>0x4f56,<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeOW<sp/>=<sp/>0x4f57,<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypePN<sp/>=<sp/>0x504e,<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeSH<sp/>=<sp/>0x5348,<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeSL<sp/>=<sp/>0x534c,<sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeSQ<sp/>=<sp/>0x5351,<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeSS<sp/>=<sp/>0x5353,<sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeST<sp/>=<sp/>0x5354,<sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeSV<sp/>=<sp/>0x5356,<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeTM<sp/>=<sp/>0x544d,<sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeUC<sp/>=<sp/>0x5543,<sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeUI<sp/>=<sp/>0x5549,<sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeUL<sp/>=<sp/>0x554c,<sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeUN<sp/>=<sp/>0x554e,<sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeUR<sp/>=<sp/>0x5552,<sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeUS<sp/>=<sp/>0x5553,<sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeUT<sp/>=<sp/>0x5554,<sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroTagTypeUV<sp/>=<sp/>0x5556<sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>NS_ENUM(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>DicomheroImageQuality)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroImageQualityVeryHigh<sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroImageQualityHigh<sp/>=<sp/>100,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroImageQualityAboveMedium<sp/>=<sp/>200,<sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroImageQualityMedium<sp/>=<sp/>300,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroImageQualityBelowMedium<sp/>=<sp/>400,<sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroImageQualityLow<sp/>=<sp/>500,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroImageQualityVeryLow<sp/>=<sp/>600<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="interface_dicomhero_data_set" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>:<sp/>NSObject</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@public</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>define_dicomhero_object_holder(DataSet);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithDicomheroDataSet:define_dicomhero_parameter(DataSet);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)init;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithTransferSyntax:(NSString*)transferSyntax;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithTransferSyntax:(NSString*)transferSyntax<sp/>charsets:(NSArray*)pCharsets;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)dealloc;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>-(NSArray*)getTags;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_tag" kindref="compound">DicomheroTag</ref>*)<sp/>getTag:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref>*)<sp/>getImage:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>frameNumber<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_overlay" kindref="compound">DicomheroOverlay</ref>*)<sp/>getOverlay:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>overlayNumber<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref>*)<sp/>getImageApplyModalityTransform:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>frameNumber<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>-(NSArray*)<sp/>getVOIs:(NSError**)pError;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)<sp/>getFunctionalGroupDataSet:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)frameNumber<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref>*)<sp/>getStreamReader:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>bufferId:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)bufferId<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)<sp/>getSequenceItem:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)pTagId<sp/>item:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)itemId<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_l_u_t" kindref="compound">DicomheroLUT</ref>*)<sp/>getLUT:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)pTagId<sp/>item:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)itemId<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_reading_data_handler" kindref="compound">DicomheroReadingDataHandler</ref>*)<sp/>getReadingDataHandler:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>bufferId:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)bufferId<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_reading_data_handler_numeric" kindref="compound">DicomheroReadingDataHandlerNumeric</ref>*)<sp/>getReadingDataHandlerNumeric:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>bufferId:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)bufferId<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_reading_data_handler_numeric" kindref="compound">DicomheroReadingDataHandlerNumeric</ref>*)<sp/>getReadingDataHandlerRaw:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>bufferId:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)bufferId<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>long)getInt64:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"></highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/>int)getInt32:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"></highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/>int)getSignedLong:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"></highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/>short)getInt16:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"></highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/>char)getInt8:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"></highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>long)getInt64:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)defaultValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/>int)getInt32:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)defaultValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"></highlight></codeline>
+<codeline lineno="559"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/>int)getSignedLong:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)defaultValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="561"><highlight class="normal"></highlight></codeline>
+<codeline lineno="578"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/>short)getInt16:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)defaultValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="579"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="580"><highlight class="normal"></highlight></codeline>
+<codeline lineno="597"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/>char)getInt8:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)defaultValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="598"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="599"><highlight class="normal"></highlight></codeline>
+<codeline lineno="615"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>long)getUint64:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="616"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="617"><highlight class="normal"></highlight></codeline>
+<codeline lineno="636"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)getUint32:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="637"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="638"><highlight class="normal"></highlight></codeline>
+<codeline lineno="642"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)getUnsignedLong:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="643"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="644"><highlight class="normal"></highlight></codeline>
+<codeline lineno="660"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>short)getUint16:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="661"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="662"><highlight class="normal"></highlight></codeline>
+<codeline lineno="678"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>char)getUint8:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="680"><highlight class="normal"></highlight></codeline>
+<codeline lineno="697"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>long)getUint64:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)defaultValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="698"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="699"><highlight class="normal"></highlight></codeline>
+<codeline lineno="719"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)getUint32:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)defaultValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="720"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="721"><highlight class="normal"></highlight></codeline>
+<codeline lineno="725"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)getUnsignedLong:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)defaultValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="726"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="727"><highlight class="normal"></highlight></codeline>
+<codeline lineno="744"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>short)getUint16:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)defaultValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="745"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="746"><highlight class="normal"></highlight></codeline>
+<codeline lineno="763"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>char)getUint8:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)defaultValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="764"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="765"><highlight class="normal"></highlight></codeline>
+<codeline lineno="781"><highlight class="normal"><sp/><sp/><sp/><sp/>-(double)getDouble:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="782"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="783"><highlight class="normal"></highlight></codeline>
+<codeline lineno="799"><highlight class="normal"><sp/><sp/><sp/><sp/>-(float)getFloat:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="800"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="801"><highlight class="normal"></highlight></codeline>
+<codeline lineno="818"><highlight class="normal"><sp/><sp/><sp/><sp/>-(double)getDouble:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)defaultValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="819"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="820"><highlight class="normal"></highlight></codeline>
+<codeline lineno="837"><highlight class="normal"><sp/><sp/><sp/><sp/>-(float)getFloat:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)defaultValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="838"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="839"><highlight class="normal"></highlight></codeline>
+<codeline lineno="855"><highlight class="normal"><sp/><sp/><sp/><sp/>-(NSString*)getString:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="856"><highlight class="normal"></highlight></codeline>
+<codeline lineno="873"><highlight class="normal"><sp/><sp/><sp/><sp/>-(NSString*)getString:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(NSString*)defaultValue<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="874"><highlight class="normal"></highlight></codeline>
+<codeline lineno="890"><highlight class="normal"><sp/><sp/><sp/><sp/>-(DicomheroPatientName*)<sp/>getPatientName:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="891"><highlight class="normal"></highlight></codeline>
+<codeline lineno="908"><highlight class="normal"><sp/><sp/><sp/><sp/>-(DicomheroPatientName*)<sp/>getPatientName:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(DicomheroPatientName*)defaultValue<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="909"><highlight class="normal"></highlight></codeline>
+<codeline lineno="925"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_age" kindref="compound">DicomheroAge</ref>*)getAge:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="926"><highlight class="normal"></highlight></codeline>
+<codeline lineno="943"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_age" kindref="compound">DicomheroAge</ref>*)getAge:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(<ref refid="interface_dicomhero_age" kindref="compound">DicomheroAge</ref>*)defaultValue<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="944"><highlight class="normal"></highlight></codeline>
+<codeline lineno="960"><highlight class="normal"><sp/><sp/><sp/><sp/>-(DicomheroDate*)getDate:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="961"><highlight class="normal"></highlight></codeline>
+<codeline lineno="978"><highlight class="normal"><sp/><sp/><sp/><sp/>-(DicomheroDate*)getDate:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(DicomheroDate*)defaultValue<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="979"><highlight class="normal"></highlight></codeline>
+<codeline lineno="995"><highlight class="normal"><sp/><sp/><sp/><sp/>-(DicomheroPatientName*)getPatientName:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="996"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1013"><highlight class="normal"><sp/><sp/><sp/><sp/>-(DicomheroPatientName*)getPatientName:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>elementNumber:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)elementNumber<sp/>defaultValue:(DicomheroPatientName*)defaultValue<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1014"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1026"><highlight class="normal"><sp/><sp/><sp/><sp/>-(DicomheroTagType)getDataType:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1027"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1028"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1038"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_tag" kindref="compound">DicomheroTag</ref>*)<sp/>getTagCreate:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1039"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1048"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_tag" kindref="compound">DicomheroTag</ref>*)<sp/>getTagCreate:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1049"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1073"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)<sp/>setImage:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)frameNumber<sp/>image:(<ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref>*)image<sp/>quality:(DicomheroImageQuality)quality<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1074"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1075"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1084"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)<sp/>setOverlay:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)overlayNumber<sp/>overlay:(<ref refid="interface_dicomhero_overlay" kindref="compound">DicomheroOverlay</ref>*)overlay<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1085"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1086"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1099"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_stream_writer" kindref="compound">DicomheroStreamWriter</ref>*)<sp/>getStreamWriter:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)pTagId<sp/>bufferId:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)bufferId<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1113"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_stream_writer" kindref="compound">DicomheroStreamWriter</ref>*)<sp/>getStreamWriter:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)pTagId<sp/>bufferId:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)bufferId<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1126"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)<sp/>appendSequenceItem:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)pTagId<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1147"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_writing_data_handler" kindref="compound">DicomheroWritingDataHandler</ref>*)<sp/>getWritingDataHandler:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>bufferId:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)bufferId<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1167"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_writing_data_handler" kindref="compound">DicomheroWritingDataHandler</ref>*)<sp/>getWritingDataHandler:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>bufferId:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)bufferId<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1191"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_writing_data_handler_numeric" kindref="compound">DicomheroWritingDataHandlerNumeric</ref>*)<sp/>getWritingDataHandlerNumeric:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>bufferId:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)bufferId<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1214"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_writing_data_handler_numeric" kindref="compound">DicomheroWritingDataHandlerNumeric</ref>*)<sp/>getWritingDataHandlerNumeric:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>bufferId:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)bufferId<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1232"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setInt64:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)newValue<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1251"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setInt32:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)newValue<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1257"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setSignedLong:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)newValue<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1276"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setInt16:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)newValue<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1295"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setInt8:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)newValue<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1314"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setInt64:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)newValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1333"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setInt32:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)newValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1339"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setSignedLong:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)newValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1358"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setInt16:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)newValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1377"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setInt8:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)newValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1396"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setUint64:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)newValue<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1418"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setUint32:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)newValue<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1424"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setUnsignedLong:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)newValue<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1443"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setUint16:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)newValue<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1445"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1462"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setUint8:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)newValue<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1464"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1481"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setUint64:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)newValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1482"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1483"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1503"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setUint32:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)newValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1504"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1505"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1509"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setUnsignedLong:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)newValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1510"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1511"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1528"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setUint16:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)newValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1529"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1530"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1547"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setUint8:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)newValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1548"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1549"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1566"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setDouble:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)newValue<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1567"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1568"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1585"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setFloat:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)newValue<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1586"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1587"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1604"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setDouble:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)newValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1605"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1606"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1623"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setFloat:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)newValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1624"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1625"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1642"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setString:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(NSString*)newValue<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1643"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1644"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1661"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setString:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(NSString*)newValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1662"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1663"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1679"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setAge:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(<ref refid="interface_dicomhero_age" kindref="compound">DicomheroAge</ref>*)newValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1680"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1681"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1698"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setDate:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(DicomheroDate*)newValue<sp/>tagVR:(DicomheroTagType)tagVR<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1699"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1700"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1717"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setDate:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(DicomheroDate*)newValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1718"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1719"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1735"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)setPatientName:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>newValue:(DicomheroPatientName*)newValue<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1736"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1737"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1738"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1739"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1740"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>dicomheroObjcDataSet__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1741"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1742"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dataset.h"/>
+  </compounddef>
+</doxygen>

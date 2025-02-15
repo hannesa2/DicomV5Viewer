@@ -1,0 +1,961 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_writing_data_handler" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroWritingDataHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_writing_data_handler_numeric" prot="public" virt="non-virtual">DicomheroWritingDataHandlerNumeric</derivedcompoundref>
+    <includes local="no">dicomhero_writingDataHandler.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_writing_data_handler_1a2ce07711789e002e2ee189c0c1f20c67" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroWritingDataHandler::m_WritingDataHandler</definition>
+        <argsstring></argsstring>
+        <name>m_WritingDataHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="49" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_writing_data_handler_1af43b318942635266d2db99a3f754a2d6" prot="public" static="no" readable="yes" writable="yes" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroWritingDataHandler::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+<para>Resize the memory to contain the specified number of elements or return the current number of elements when read. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>By default, <ref refid="interface_dicomhero_writing_data_handler" kindref="compound">DicomheroWritingDataHandler</ref> allocates an empty memory block that must be resized in order to be filled with data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1a8b06bd664549021b5685907ad461c3b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroWritingDataHandler::initWithDicomheroWritingDataHandler:</definition>
+        <argsstring>(void *parameter_WritingDataHandler)</argsstring>
+        <name>initWithDicomheroWritingDataHandler:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_WritingDataHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="49" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1a2a4a0eb6f256e2f7c33cfc4125a41a76" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="49" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1a1cca0ecdaa4e823651b4a56b39dd6f85" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::setInt64:newValue:error:</definition>
+        <argsstring>(unsigned int index,[newValue] signed long long value,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setInt64:newValue:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[newValue]</attributes>
+          <type>signed long long</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Write a signed very long integer (64 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a signed very long integer then set pError to ImebraDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="interface_dicomhero_writing_data_handler_1af43b318942635266d2db99a3f754a2d6" kindref="member">size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1a9078aa88bf70ba6346ced641f413af87" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::setInt32:newValue:error:</definition>
+        <argsstring>(unsigned int index,[newValue] signed int value,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setInt32:newValue:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[newValue]</attributes>
+          <type>signed int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Write a signed long integer (32 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a signed long integer then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="interface_dicomhero_writing_data_handler_1af43b318942635266d2db99a3f754a2d6" kindref="member">size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1adb73f2ff4b5f91f47c50cc1b489faafb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::setSignedLong:newValue:error:</definition>
+        <argsstring>(unsigned int index,[newValue] signed int value,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setSignedLong:newValue:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[newValue]</attributes>
+          <type>signed int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>\bried Deprecated. Use setInt32() instead. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1a1079e947a992c7b7eb54b8dc153eb26c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::setInt16:newValue:error:</definition>
+        <argsstring>(unsigned int index,[newValue] signed short value,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setInt16:newValue:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[newValue]</attributes>
+          <type>signed short</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Write a signed short integer (16 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a signed long integer then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="interface_dicomhero_writing_data_handler_1af43b318942635266d2db99a3f754a2d6" kindref="member">size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1aa1b4815a17e131062e15c6c2651185b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::setInt8:newValue:error:</definition>
+        <argsstring>(unsigned int index,[newValue] signed char value,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setInt8:newValue:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[newValue]</attributes>
+          <type>signed char</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Write a signed char integer (8 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a signed long integer then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="interface_dicomhero_writing_data_handler_1af43b318942635266d2db99a3f754a2d6" kindref="member">size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1a635e14c42feb644d73b380b2996ecb9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::setUint64:newValue:error:</definition>
+        <argsstring>(unsigned int index,[newValue] unsigned long long value,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setUint64:newValue:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[newValue]</attributes>
+          <type>unsigned long long</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Write an unsigned very long integer (64 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from an unsigned very long integer then set pError to ImebraDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="interface_dicomhero_writing_data_handler_1af43b318942635266d2db99a3f754a2d6" kindref="member">size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1a97aea4327ec63e098f85cad2879a55f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::setUint32:newValue:error:</definition>
+        <argsstring>(unsigned int index,[newValue] unsigned int value,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setUint32:newValue:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[newValue]</attributes>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Write an unsigned long integer (32 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When setting a value for an AT tag (Attribute Tag) then the tag&apos;s group must always be in the higher 16 bits of the value.</para>
+<para>If the value cannot be converted from an unsigned long integer then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="interface_dicomhero_writing_data_handler_1af43b318942635266d2db99a3f754a2d6" kindref="member">size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1a1bc5ada414918f617e71e3c640958b11" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::setUnsignedLong:newValue:error:</definition>
+        <argsstring>(unsigned int index,[newValue] unsigned int value,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setUnsignedLong:newValue:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[newValue]</attributes>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Deprecated. Use setUint32() instead. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1af945f4228fbc1c1cc3ca9cf548e998fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::setUint16:newValue:error:</definition>
+        <argsstring>(unsigned int index,[newValue] unsigned short value,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setUint16:newValue:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[newValue]</attributes>
+          <type>unsigned short</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Write an unsigned short integer (16 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from an unsigned long integer then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="interface_dicomhero_writing_data_handler_1af43b318942635266d2db99a3f754a2d6" kindref="member">size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1a1e27b14564578a06fdfc82dfec102c64" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::setUint8:newValue:error:</definition>
+        <argsstring>(unsigned int index,[newValue] unsigned char value,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setUint8:newValue:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[newValue]</attributes>
+          <type>unsigned char</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Write an unsigned char integer (8 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from an unsigned long integer then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="interface_dicomhero_writing_data_handler_1af43b318942635266d2db99a3f754a2d6" kindref="member">size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1a13983b6ad2abe07cd974e8ea3145b2da" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::setDouble:newValue:error:</definition>
+        <argsstring>(unsigned int index,[newValue] double value,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setDouble:newValue:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[newValue]</attributes>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Write a double floating point value (64 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a double floating point then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="interface_dicomhero_writing_data_handler_1af43b318942635266d2db99a3f754a2d6" kindref="member">size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1a8fa3e91a6c2ff5ac0778a7e3f0cde75b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::setFloat:newValue:error:</definition>
+        <argsstring>(unsigned int index,[newValue] float value,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setFloat:newValue:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[newValue]</attributes>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Write a floating point value (32 bit). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a double floating point then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="interface_dicomhero_writing_data_handler_1af43b318942635266d2db99a3f754a2d6" kindref="member">size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1a09cddd7d6ca3815e6e605027b6abbe86" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::setString:newValue:error:</definition>
+        <argsstring>(unsigned int index,[newValue] NSString *value,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setString:newValue:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[newValue]</attributes>
+          <type>NSString *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Write a string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a string then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="interface_dicomhero_writing_data_handler_1af43b318942635266d2db99a3f754a2d6" kindref="member">size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1aa865f7d4478151657f728b17e2c398c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::setDate:newValue:error:</definition>
+        <argsstring>(unsigned int index,[newValue] DicomheroDate *value,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setDate:newValue:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[newValue]</attributes>
+          <type>DicomheroDate *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Write a date and/or a time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from a Date then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="interface_dicomhero_writing_data_handler_1af43b318942635266d2db99a3f754a2d6" kindref="member">size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1a58f491b851c567d8b6549968177feeaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::setAge:newValue:error:</definition>
+        <argsstring>(unsigned int index,[newValue] DicomheroAge *value,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setAge:newValue:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[newValue]</attributes>
+          <type><ref refid="interface_dicomhero_age" kindref="compound">DicomheroAge</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Write an Age value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted from an Age then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="interface_dicomhero_writing_data_handler_1af43b318942635266d2db99a3f754a2d6" kindref="member">size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1a1fbb7c048ec9f1c6b186632f025f0341" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::setPatientName:newValue:error:</definition>
+        <argsstring>(unsigned int index,[newValue] DicomheroPatientName *value,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setPatientName:newValue:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <attributes>[newValue]</attributes>
+          <type>DicomheroPatientName *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Write a patient name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the value cannot be converted to a patient name then set pError to DicomheroDataHandlerConversionError.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element number within the buffer. Must be smaller than <ref refid="interface_dicomhero_writing_data_handler_1af43b318942635266d2db99a3f754a2d6" kindref="member">size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_writing_data_handler_1a7ad10a20681d36e36ef0126136de96bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroWritingDataHandler::commit</definition>
+        <argsstring>()</argsstring>
+        <name>commit</name>
+        <briefdescription>
+<para>Commit the changes to the handler&apos;s memory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="63" column="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="interface_dicomhero_writing_data_handler" kindref="compound">DicomheroWritingDataHandler</ref> allows to write the content of a Dicom tag&apos;s buffer. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="interface_dicomhero_writing_data_handler" kindref="compound">DicomheroWritingDataHandler</ref> is able to write strings, numbers, date/time or ages.</para>
+<para>In order to obtain a <ref refid="interface_dicomhero_writing_data_handler" kindref="compound">DicomheroWritingDataHandler</ref> object for a specific tag call DicomheroDataSet::getWritingDataHandler() or DicomheroTag::getWritingDataHandler().</para>
+<para>The <ref refid="interface_dicomhero_writing_data_handler" kindref="compound">DicomheroWritingDataHandler</ref> object always works on a new and clean memory area. Once the data has been written into the data handler then call <ref refid="interface_dicomhero_writing_data_handler_1a7ad10a20681d36e36ef0126136de96bb" kindref="member">commit (DicomheroWritingDataHandler)</ref> in order to commit the data. The data is committed also when the data handler is deallocated.</para>
+<para>Once the data has been committed then the data handler does not respond to further data modifications. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>DicomheroWritingDataHandlerNumeric</label>
+        <link refid="interface_dicomhero_writing_data_handler_numeric"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DicomheroWritingDataHandler</label>
+        <link refid="interface_dicomhero_writing_data_handler"/>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" line="46" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandler.h" bodystart="47" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_writing_data_handler_1a7ad10a20681d36e36ef0126136de96bb" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>commit</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1a2a4a0eb6f256e2f7c33cfc4125a41a76" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1a8b06bd664549021b5685907ad461c3b8" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>initWithDicomheroWritingDataHandler:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1a2ce07711789e002e2ee189c0c1f20c67" prot="public" virt="non-virtual"><scope>DicomheroWritingDataHandler</scope><name>m_WritingDataHandler</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1a58f491b851c567d8b6549968177feeaa" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>setAge:newValue:error:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1aa865f7d4478151657f728b17e2c398c3" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>setDate:newValue:error:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1a13983b6ad2abe07cd974e8ea3145b2da" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>setDouble:newValue:error:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1a8fa3e91a6c2ff5ac0778a7e3f0cde75b" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>setFloat:newValue:error:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1a1079e947a992c7b7eb54b8dc153eb26c" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>setInt16:newValue:error:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1a9078aa88bf70ba6346ced641f413af87" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>setInt32:newValue:error:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1a1cca0ecdaa4e823651b4a56b39dd6f85" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>setInt64:newValue:error:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1aa1b4815a17e131062e15c6c2651185b3" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>setInt8:newValue:error:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1a1fbb7c048ec9f1c6b186632f025f0341" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>setPatientName:newValue:error:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1adb73f2ff4b5f91f47c50cc1b489faafb" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>setSignedLong:newValue:error:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1a09cddd7d6ca3815e6e605027b6abbe86" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>setString:newValue:error:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1af945f4228fbc1c1cc3ca9cf548e998fc" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>setUint16:newValue:error:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1a97aea4327ec63e098f85cad2879a55f5" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>setUint32:newValue:error:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1a635e14c42feb644d73b380b2996ecb9c" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>setUint64:newValue:error:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1a1e27b14564578a06fdfc82dfec102c64" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>setUint8:newValue:error:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1a1bc5ada414918f617e71e3c640958b11" prot="public" virt="virtual"><scope>DicomheroWritingDataHandler</scope><name>setUnsignedLong:newValue:error:</name></member>
+      <member refid="interface_dicomhero_writing_data_handler_1af43b318942635266d2db99a3f754a2d6" prot="public" virt="non-virtual"><scope>DicomheroWritingDataHandler</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

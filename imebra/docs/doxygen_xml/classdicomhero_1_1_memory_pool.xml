@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_memory_pool" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::MemoryPool</compoundname>
+    <includes local="no">memoryPool.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classdicomhero_1_1_memory_pool_1a1661c5cb72e315c51a20962bc7572017" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dicomhero::MemoryPool::flush</definition>
+        <argsstring>()</argsstring>
+        <name>flush</name>
+        <briefdescription>
+<para>Release all the unused memory regions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memoryPool.h" line="49" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_pool_1ad5e35adec302d2c9fde5afa6e1482b20" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>static size_t dicomhero::MemoryPool::getUnusedMemorySize</definition>
+        <argsstring>()</argsstring>
+        <name>getUnusedMemorySize</name>
+        <briefdescription>
+<para>Return the total size of the memory that has been released but not yet freed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the total size of the memory released but not yet freed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memoryPool.h" line="57" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_memory_pool_1ade7907562251cea591b0a90d60ff8d8d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dicomhero::MemoryPool::setMemoryPoolSize</definition>
+        <argsstring>(size_t minMemoryBlockSize, size_t maxMemoryPoolSize)</argsstring>
+        <name>setMemoryPoolSize</name>
+        <param>
+          <type>size_t</type>
+          <declname>minMemoryBlockSize</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maxMemoryPoolSize</declname>
+        </param>
+        <briefdescription>
+<para>Set the maximum size of the kept unused memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>minMemoryBlockSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if a memory region is smaller than this size then when it is released it is deleted immediately, otherwise it is kept in the memory pool </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxMemoryPoolSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum size of the sum of all the unused memory regions. When the total size of the unused memory regions is greater than this parameter then the oldest memory regions are deleted permanently </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memoryPool.h" line="72" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Used by Imebra to allocate memory. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classdicomhero_1_1_memory_pool" kindref="compound">MemoryPool</ref> keeps around recently deleted memory regions so they can be repurposed quickly when new memory regions are requested.</para>
+<para>Each thread has its own <ref refid="classdicomhero_1_1_memory_pool" kindref="compound">MemoryPool</ref> object. </para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memoryPool.h" line="43" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/memoryPool.h" bodystart="44" bodyend="73"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_memory_pool_1a1661c5cb72e315c51a20962bc7572017" prot="public" virt="non-virtual"><scope>dicomhero::MemoryPool</scope><name>flush</name></member>
+      <member refid="classdicomhero_1_1_memory_pool_1ad5e35adec302d2c9fde5afa6e1482b20" prot="public" virt="non-virtual"><scope>dicomhero::MemoryPool</scope><name>getUnusedMemorySize</name></member>
+      <member refid="classdicomhero_1_1_memory_pool_1ade7907562251cea591b0a90d60ff8d8d" prot="public" virt="non-virtual"><scope>dicomhero::MemoryPool</scope><name>setMemoryPoolSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="writing_data_handler_8h" kind="file" language="C++">
+    <compoundname>writingDataHandler.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">memory</includes>
+    <includes refid="definitions_8h" local="yes">definitions.h</includes>
+    <includedby refid="library_2include_2dicomhero6_2dicomhero_8h" local="yes">dicomhero.h</includedby>
+    <includedby refid="get_version_8h" local="yes">getVersion.h</includedby>
+    <includedby refid="writing_data_handler_numeric_8h" local="yes">writingDataHandlerNumeric.h</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>writingDataHandler.h</label>
+        <link refid="writing_data_handler_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>definitions.h</label>
+        <link refid="definitions_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>writingDataHandlerNumeric.h</label>
+        <link refid="writing_data_handler_numeric_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>codecFactory.h</label>
+        <link refid="codec_factory_8h"/>
+      </node>
+      <node id="3">
+        <label>dataSet.h</label>
+        <link refid="data_set_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>image.h</label>
+        <link refid="image_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>modalityVOILUT.h</label>
+        <link refid="modality_v_o_i_l_u_t_8h"/>
+      </node>
+      <node id="5">
+        <label>dicomDictionary.h</label>
+        <link refid="dicom_dictionary_8h"/>
+      </node>
+      <node id="1">
+        <label>writingDataHandler.h</label>
+        <link refid="writing_data_handler_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classdicomhero_1_1_writing_data_handler" prot="public">dicomhero::WritingDataHandler</innerclass>
+    <innernamespace refid="namespacedicomhero">dicomhero</innernamespace>
+    <innernamespace refid="namespacedicomhero_1_1implementation">dicomhero::implementation</innernamespace>
+    <innernamespace refid="namespacedicomhero_1_1implementation_1_1handlers">dicomhero::implementation::handlers</innernamespace>
+    <briefdescription>
+<para>Declaration of the class WritingDataHandler. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>2005<sp/>-<sp/>2021<sp/>by<sp/>Paolo<sp/>Brandoli/Binarno<sp/>s.p.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">DICOMHero/Imebra<sp/>is<sp/>available<sp/>for<sp/>free<sp/>under<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">The<sp/>full<sp/>text<sp/>of<sp/>the<sp/>license<sp/>is<sp/>available<sp/>in<sp/>the<sp/>file<sp/>license.rst</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>in<sp/>the<sp/>project<sp/>root<sp/>folder.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">If<sp/>you<sp/>do<sp/>not<sp/>want<sp/>to<sp/>be<sp/>bound<sp/>by<sp/>the<sp/>GPL<sp/>terms<sp/>(such<sp/>as<sp/>the<sp/>requirement</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>that<sp/>your<sp/>application<sp/>must<sp/>also<sp/>be<sp/>GPL),<sp/>you<sp/>may<sp/>purchase<sp/>a<sp/>commercial</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>license<sp/>for<sp/>DICOMHero/Imebra<sp/>from<sp/>the<sp/>DICOMHero’s<sp/>website<sp/>(https://dicomhero.com).</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(imebraWritingDataHandler__INCLUDED_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>imebraWritingDataHandler__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="definitions_8h" kindref="compound">definitions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">dicomhero</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Date;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Age;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">PatientName;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UnicodePatientName;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">implementation</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">handlers</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">writingDataHandler;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classdicomhero_1_1_writing_data_handler" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">DICOMHERO_API<sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>source)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setSize(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>elementsNumber);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>getSize()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1" kindref="member">tagVR_t</ref><sp/>getDataType()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setInt64(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/>std::int64_t<sp/>value);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setInt32(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/>std::int32_t<sp/>value);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setSignedLong(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/>std::int32_t<sp/>value);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setUint64(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/>std::uint64_t<sp/>value);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setUint32(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/>std::uint32_t<sp/>value);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setUnsignedLong(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/>std::uint32_t<sp/>value);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setInt16(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/>std::int16_t<sp/>value);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setUint16(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/>std::uint16_t<sp/>value);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setInt8(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/>std::int8_t<sp/>value);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setUint8(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/>std::uint8_t<sp/>value);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setDouble(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setFloat(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setString(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setUnicodeString(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::wstring&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setDate(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_date" kindref="compound">Date</ref>&amp;<sp/>date);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setAge(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_age" kindref="compound">Age</ref>&amp;<sp/>age);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setPatientName(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_patient_name" kindref="compound">PatientName</ref>&amp;<sp/>patientName);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SWIG<sp/></highlight><highlight class="comment">//<sp/>Use<sp/>UTF8<sp/>strings<sp/>only<sp/>with<sp/>SWIG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>setUnicodePatientName(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_unicode_patient_name" kindref="compound">UnicodePatientName</ref>&amp;<sp/>patientName);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::handlers::writingDataHandler&gt;&amp;<sp/>pDataHandler);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;implementation::handlers::writingDataHandler&gt;&amp;<sp/>getWritingDataHandlerImplementation(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref>&amp;<sp/>writingHandler);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;implementation::handlers::writingDataHandler&gt;<sp/>m_pDataHandler;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!defined(imebraWritingDataHandler__INCLUDED_)</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/writingDataHandler.h"/>
+  </compounddef>
+</doxygen>

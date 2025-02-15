@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_transform" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroTransform</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_modality_v_o_i_l_u_t" prot="public" virt="non-virtual">DicomheroModalityVOILUT</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_transform_high_bit" prot="public" virt="non-virtual">DicomheroTransformHighBit</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_transforms_chain" prot="public" virt="non-virtual">DicomheroTransformsChain</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_v_o_i_l_u_t" prot="public" virt="non-virtual">DicomheroVOILUT</derivedcompoundref>
+    <includes local="no">dicomhero_transform.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_transform_1ab02bb499ed0d612d635ed38b32222b05" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroTransform::m_Transform</definition>
+        <argsstring></argsstring>
+        <name>m_Transform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transform.h" line="33" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transform.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_transform_1ace5bf9d1b55c0da9acc5f4da95a6fac9" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>BOOL</type>
+        <definition>BOOL DicomheroTransform::isEmpty</definition>
+        <argsstring></argsstring>
+        <name>isEmpty</name>
+        <read></read>
+        <briefdescription>
+<para>Returns true if the transform doesn&apos;t perform any processing (the output image will be identical to the input one). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transform.h" line="90" column="11" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transform.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_transform_1a1687c0c599392ae018d492b632a15606" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroTransform::initWithDicomheroTransform:</definition>
+        <argsstring>(void *parameter_Transform)</argsstring>
+        <name>initWithDicomheroTransform:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_Transform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transform.h" line="33" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_transform_1ac5a31bb888afc5b3fd803d8687b13e2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroTransform::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transform.h" line="33" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_transform_1ad9d04a806e4bebe54e24d29ea3da55ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref> *</type>
+        <definition>DicomheroImage* DicomheroTransform::allocateOutputImage:width:height:error:</definition>
+        <argsstring>(DicomheroImage *pInputImage,[width] unsigned int width,[height] unsigned int height,[error] NSError **pError)</argsstring>
+        <name>allocateOutputImage:width:height:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref> *</type>
+          <declname>pInputImage</declname>
+        </param>
+        <param>
+          <attributes>[width]</attributes>
+          <type>unsigned int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <attributes>[height]</attributes>
+          <type>unsigned int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Allocate an image ready to accomodate the result of the image processing performed by the runTransform() method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pInputImage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the image that will be set as the input of the runTransform() method </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the width of the output image </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the height of the output image </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an image ready to be passed as outputImage to runTransform() </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transform.h" line="33" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_transform_1a8496d9da5f64878a1ddd4ebd4cd23149" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroTransform::runTransform:inputTopLeftX:inputTopLeftY:inputWidth:inputHeight:outputImage:outputTopLeftX:outputTopLeftY:error:</definition>
+        <argsstring>(DicomheroImage *pInputImage,[inputTopLeftX] unsigned int inputTopLeftX,[inputTopLeftY] unsigned int inputTopLeftY,[inputWidth] unsigned int inputWidth,[inputHeight] unsigned int inputHeight,[outputImage] DicomheroImage *pOutputImage,[outputTopLeftX] unsigned int outputTopLeftX,[outputTopLeftY] unsigned int outputTopLeftY,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>runTransform:inputTopLeftX:inputTopLeftY:inputWidth:inputHeight:outputImage:outputTopLeftX:outputTopLeftY:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref> *</type>
+          <declname>pInputImage</declname>
+        </param>
+        <param>
+          <attributes>[inputTopLeftX]</attributes>
+          <type>unsigned int</type>
+          <declname>inputTopLeftX</declname>
+        </param>
+        <param>
+          <attributes>[inputTopLeftY]</attributes>
+          <type>unsigned int</type>
+          <declname>inputTopLeftY</declname>
+        </param>
+        <param>
+          <attributes>[inputWidth]</attributes>
+          <type>unsigned int</type>
+          <declname>inputWidth</declname>
+        </param>
+        <param>
+          <attributes>[inputHeight]</attributes>
+          <type>unsigned int</type>
+          <declname>inputHeight</declname>
+        </param>
+        <param>
+          <attributes>[outputImage]</attributes>
+          <type><ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref> *</type>
+          <declname>pOutputImage</declname>
+        </param>
+        <param>
+          <attributes>[outputTopLeftX]</attributes>
+          <type>unsigned int</type>
+          <declname>outputTopLeftX</declname>
+        </param>
+        <param>
+          <attributes>[outputTopLeftY]</attributes>
+          <type>unsigned int</type>
+          <declname>outputTopLeftY</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Run the processing function of the <ref refid="interface_dicomhero_transform" kindref="compound">DicomheroTransform</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputImage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the image to use as input </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inputTopLeftX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the horizontal position of the top-left pixel to process </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inputTopLeftY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vertical position of the top-left pixel to process </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inputWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the horizontal number of pixels to process </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inputHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vertical number of pixels to process </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputTopLeftX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the horizontal position on the output image of the top left processed pixel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputTopLeftY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vertical position on the output image of the top left processed pixel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transform.h" line="33" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a transform: a transform takes one <ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref> as input, processes it and outputs the processed <ref refid="interface_dicomhero_image" kindref="compound">DicomheroImage</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>DicomheroVOILUT</label>
+        <link refid="interface_dicomhero_v_o_i_l_u_t"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DicomheroTransformsChain</label>
+        <link refid="interface_dicomhero_transforms_chain"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroModalityVOILUT</label>
+        <link refid="interface_dicomhero_modality_v_o_i_l_u_t"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DicomheroTransform</label>
+        <link refid="interface_dicomhero_transform"/>
+      </node>
+      <node id="3">
+        <label>DicomheroTransformHighBit</label>
+        <link refid="interface_dicomhero_transform_high_bit"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transform.h" line="29" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transform.h" bodystart="31" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_transform_1ad9d04a806e4bebe54e24d29ea3da55ae" prot="public" virt="virtual"><scope>DicomheroTransform</scope><name>allocateOutputImage:width:height:error:</name></member>
+      <member refid="interface_dicomhero_transform_1ac5a31bb888afc5b3fd803d8687b13e2c" prot="public" virt="virtual"><scope>DicomheroTransform</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_transform_1a1687c0c599392ae018d492b632a15606" prot="public" virt="virtual"><scope>DicomheroTransform</scope><name>initWithDicomheroTransform:</name></member>
+      <member refid="interface_dicomhero_transform_1ace5bf9d1b55c0da9acc5f4da95a6fac9" prot="public" virt="non-virtual"><scope>DicomheroTransform</scope><name>isEmpty</name></member>
+      <member refid="interface_dicomhero_transform_1ab02bb499ed0d612d635ed38b32222b05" prot="public" virt="non-virtual"><scope>DicomheroTransform</scope><name>m_Transform</name></member>
+      <member refid="interface_dicomhero_transform_1a8496d9da5f64878a1ddd4ebd4cd23149" prot="public" virt="virtual"><scope>DicomheroTransform</scope><name>runTransform:inputTopLeftX:inputTopLeftY:inputWidth:inputHeight:outputImage:outputTopLeftX:outputTopLeftY:error:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

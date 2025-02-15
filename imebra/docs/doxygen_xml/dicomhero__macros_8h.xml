@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dicomhero__macros_8h" kind="file" language="C++">
+    <compoundname>dicomhero_macros.h</compoundname>
+    <includedby refid="dicomhero__acse_8h" local="yes">dicomhero_acse.h</includedby>
+    <includedby refid="dicomhero__base_stream_input_8h" local="yes">dicomhero_baseStreamInput.h</includedby>
+    <includedby refid="dicomhero__base_stream_output_8h" local="yes">dicomhero_baseStreamOutput.h</includedby>
+    <includedby refid="dicomhero__base_uid_generator_8h" local="yes">dicomhero_baseUidGenerator.h</includedby>
+    <includedby refid="dicomhero__dataset_8h" local="yes">dicomhero_dataset.h</includedby>
+    <includedby refid="dicomhero__date_age_8h" local="yes">dicomhero_dateAge.h</includedby>
+    <includedby refid="dicomhero__dicom_dir_8h" local="yes">dicomhero_dicomDir.h</includedby>
+    <includedby refid="dicomhero__dimse_8h" local="yes">dicomhero_dimse.h</includedby>
+    <includedby refid="dicomhero__draw_bitmap_8h" local="yes">dicomhero_drawBitmap.h</includedby>
+    <includedby refid="dicomhero__image_8h" local="yes">dicomhero_image.h</includedby>
+    <includedby refid="dicomhero__lut_8h" local="yes">dicomhero_lut.h</includedby>
+    <includedby refid="dicomhero__overlay_8h" local="yes">dicomhero_overlay.h</includedby>
+    <includedby refid="dicomhero__patient_name_8h" local="yes">dicomhero_patientName.h</includedby>
+    <includedby refid="dicomhero__pipe_8h" local="yes">dicomhero_pipe.h</includedby>
+    <includedby refid="dicomhero__random_uid_generator_8h" local="yes">dicomhero_randomUidGenerator.h</includedby>
+    <includedby refid="dicomhero__reading_data_handler_8h" local="yes">dicomhero_readingDataHandler.h</includedby>
+    <includedby refid="dicomhero__read_memory_8h" local="yes">dicomhero_readMemory.h</includedby>
+    <includedby refid="dicomhero__serial_number_uid_generator_8h" local="yes">dicomhero_serialNumberUidGenerator.h</includedby>
+    <includedby refid="dicomhero__stream_reader_8h" local="yes">dicomhero_streamReader.h</includedby>
+    <includedby refid="dicomhero__stream_writer_8h" local="yes">dicomhero_streamWriter.h</includedby>
+    <includedby refid="dicomhero__tag_8h" local="yes">dicomhero_tag.h</includedby>
+    <includedby refid="dicomhero__tag_id_8h" local="yes">dicomhero_tagId.h</includedby>
+    <includedby refid="dicomhero__tcp_address_8h" local="yes">dicomhero_tcpAddress.h</includedby>
+    <includedby refid="dicomhero__tcp_listener_8h" local="yes">dicomhero_tcpListener.h</includedby>
+    <includedby refid="dicomhero__tcp_stream_8h" local="yes">dicomhero_tcpStream.h</includedby>
+    <includedby refid="dicomhero__transform_8h" local="yes">dicomhero_transform.h</includedby>
+    <includedby refid="dicomhero___v_o_i_description_8h" local="yes">dicomhero_VOIDescription.h</includedby>
+    <includedby refid="dicomhero___v_o_i_l_u_t_8h" local="yes">dicomhero_VOILUT.h</includedby>
+    <includedby refid="dicomhero__writing_data_handler_8h" local="yes">dicomhero_writingDataHandler.h</includedby>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="dicomhero__macros_8h_1a62ff58313fabeeb94f9063d67c0b860d" prot="public" static="no">
+        <name>define_dicomhero_object_holder</name>
+        <param><defname>Type</defname></param>
+        <initializer>void* m_##Type</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_macros.h" line="17" column="9" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_macros.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dicomhero__macros_8h_1a9fcdb2cf8acd4595f67fbddae46ef5ea" prot="public" static="no">
+        <name>define_dicomhero_parameter</name>
+        <param><defname>Type</defname></param>
+        <initializer>(void*)parameter_##Type</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_macros.h" line="18" column="9" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_macros.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>2005<sp/>-<sp/>2021<sp/>by<sp/>Paolo<sp/>Brandoli/Binarno<sp/>s.p.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">DICOMHero/Imebra<sp/>is<sp/>available<sp/>for<sp/>free<sp/>under<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">The<sp/>full<sp/>text<sp/>of<sp/>the<sp/>license<sp/>is<sp/>available<sp/>in<sp/>the<sp/>file<sp/>license.rst</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>in<sp/>the<sp/>project<sp/>root<sp/>folder.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">If<sp/>you<sp/>do<sp/>not<sp/>want<sp/>to<sp/>be<sp/>bound<sp/>by<sp/>the<sp/>GPL<sp/>terms<sp/>(such<sp/>as<sp/>the<sp/>requirement</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>that<sp/>your<sp/>application<sp/>must<sp/>also<sp/>be<sp/>GPL),<sp/>you<sp/>may<sp/>purchase<sp/>a<sp/>commercial</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>license<sp/>for<sp/>DICOMHero/Imebra<sp/>from<sp/>the<sp/>DICOMHero’s<sp/>website<sp/>(https://dicomhero.com).</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(imebraMacros__INCLUDED_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>imebraMacros__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>define_dicomhero_object_holder(Type)<sp/>void*<sp/>m_##Type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>define_dicomhero_parameter(Type)<sp/>(void*)parameter_##Type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>imebraMacros__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_macros.h"/>
+  </compounddef>
+</doxygen>

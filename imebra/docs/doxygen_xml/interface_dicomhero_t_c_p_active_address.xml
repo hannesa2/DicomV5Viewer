@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_t_c_p_active_address" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroTCPActiveAddress</compoundname>
+    <basecompoundref refid="interface_dicomhero_t_c_p_address" prot="public" virt="non-virtual">DicomheroTCPAddress</basecompoundref>
+    <includes local="no">dicomhero_tcpAddress.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_t_c_p_active_address_1a9559017bd8627c618295cf9bad572063" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroTCPActiveAddress::initWithNode:service:error:</definition>
+        <argsstring>(NSString *node,[service] NSString *service,[error] NSError **pError)</argsstring>
+        <name>initWithNode:service:error:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <attributes>[service]</attributes>
+          <type>NSString *</type>
+          <declname>service</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs an active TCP address from a node and a service description.</para>
+<para>The node may be a host name or address (both IPv4 and IPv6) while the service name may be a port number (in string format) or name (e.g. &quot;FTP&quot;).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the host name or address (e.g. &quot;192.168.10.20&quot; or &quot;example.com&quot;). Use an empty string to refer to the local host. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>service</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the service port (in string format) or name (e.g. &quot;140&quot; or &quot;ftp&quot;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of errors </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpAddress.h" line="55" column="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents an address of an active socket (a socket that initiates the connection with the peer). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DicomheroTCPActiveAddress</label>
+        <link refid="interface_dicomhero_t_c_p_active_address"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroTCPAddress</label>
+        <link refid="interface_dicomhero_t_c_p_address"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DicomheroTCPActiveAddress</label>
+        <link refid="interface_dicomhero_t_c_p_active_address"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroTCPAddress</label>
+        <link refid="interface_dicomhero_t_c_p_address"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpAddress.h" line="65" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpAddress.h" bodystart="66" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_t_c_p_address_1acea6ba7622197117798f23fc64d599c6" prot="public" virt="virtual"><scope>DicomheroTCPActiveAddress</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_t_c_p_address_1a51de551717e5fc8ba49ef84d6ced5a79" prot="public" virt="virtual"><scope>DicomheroTCPActiveAddress</scope><name>initWithDicomheroTCPAddress:</name></member>
+      <member refid="interface_dicomhero_t_c_p_active_address_1a9559017bd8627c618295cf9bad572063" prot="public" virt="virtual"><scope>DicomheroTCPActiveAddress</scope><name>initWithNode:service:error:</name></member>
+      <member refid="interface_dicomhero_t_c_p_address_1adf49caf31eff756bf7291397916124a8" prot="public" virt="non-virtual"><scope>DicomheroTCPActiveAddress</scope><name>m_TCPAddress</name></member>
+      <member refid="interface_dicomhero_t_c_p_address_1a69ac023dd41b74649ea83eff191df192" prot="public" virt="non-virtual"><scope>DicomheroTCPActiveAddress</scope><name>node</name></member>
+      <member refid="interface_dicomhero_t_c_p_address_1a8963c1383c5e1df5594cd4c49ccc742d" prot="public" virt="non-virtual"><scope>DicomheroTCPActiveAddress</scope><name>service</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

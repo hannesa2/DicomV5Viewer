@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_dicom_dir" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroDicomDir</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_dicomDir.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_dicom_dir_1aed3e934a824922347a4b3d221b99a1a5" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroDicomDir::m_DicomDir</definition>
+        <argsstring></argsstring>
+        <name>m_DicomDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDir.h" line="143" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDir.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_dicom_dir_1a6235900d4dd4fcf459273834ce5e5990" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroDicomDir::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>Construct an empty DicomDir. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDir.h" line="143" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dicom_dir_1a48e99437549725a237fbb950cc88196b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroDicomDir::initWithDicomheroDicomDir:</definition>
+        <argsstring>(void *parameter_DicomDir)</argsstring>
+        <name>initWithDicomheroDicomDir:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_DicomDir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDir.h" line="143" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dicom_dir_1afee886591fca48fcb8713d4b8c486d2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroDicomDir::initWithDataSet:error:</definition>
+        <argsstring>(DicomheroDataSet *pDataSet,[error] NSError **pError)</argsstring>
+        <name>initWithDataSet:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> *</type>
+          <declname>pDataSet</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Construct an <ref refid="interface_dicomhero_dicom_dir" kindref="compound">DicomheroDicomDir</ref> from an <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pDataSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> created from reading a DICOMDIR file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to an NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDir.h" line="143" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dicom_dir_1a280dae7d0c22eec269e7aa0df5eb6f56" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroDicomDir::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDir.h" line="143" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dicom_dir_1a8b839d1664de8e24f9718a9f288c70ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_dicom_dir_entry" kindref="compound">DicomheroDicomDirEntry</ref> *</type>
+        <definition>DicomheroDicomDirEntry* DicomheroDicomDir::getFirstRootEntry:</definition>
+        <argsstring>(NSError **pError)</argsstring>
+        <name>getFirstRootEntry:</name>
+        <param>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve the first <ref refid="interface_dicomhero_dicom_dir" kindref="compound">DicomheroDicomDir</ref>&apos;s root entry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the root entry is missing then return a null pointer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the root <ref refid="interface_dicomhero_dicom_dir_entry" kindref="compound">DicomheroDicomDirEntry</ref> or a null pointer if the root <ref refid="interface_dicomhero_dicom_dir_entry" kindref="compound">DicomheroDicomDirEntry</ref> does noot exist </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDir.h" line="143" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dicom_dir_1a4a219262aa38654279ba56dc0f697f56" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_dicom_dir_entry" kindref="compound">DicomheroDicomDirEntry</ref> *</type>
+        <definition>DicomheroDicomDirEntry* DicomheroDicomDir::getNewEntry:error:</definition>
+        <argsstring>(NSString *recordType,[error] NSError **pError)</argsstring>
+        <name>getNewEntry:error:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>recordType</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Return a new <ref refid="interface_dicomhero_dicom_dir_entry" kindref="compound">DicomheroDicomDirEntry</ref> record for the DICOMDIR. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>recordType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of the new entry </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a new <ref refid="interface_dicomhero_dicom_dir_entry" kindref="compound">DicomheroDicomDirEntry</ref> object that can be inserted into the <ref refid="interface_dicomhero_dicom_dir" kindref="compound">DicomheroDicomDir</ref> object or one of its children <ref refid="interface_dicomhero_dicom_dir_entry" kindref="compound">DicomheroDicomDirEntry</ref> entries. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDir.h" line="143" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dicom_dir_1a9a87fdaa6c6bd41cc6030f95b99870bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroDicomDir::setFirstRootEntry:error:</definition>
+        <argsstring>(DicomheroDicomDirEntry *firstEntryRecord,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>setFirstRootEntry:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_dicom_dir_entry" kindref="compound">DicomheroDicomDirEntry</ref> *</type>
+          <declname>firstEntryRecord</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Set the specified entry as the first <ref refid="interface_dicomhero_dicom_dir" kindref="compound">DicomheroDicomDir</ref>&apos;s root record. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>firstEntryRecord</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the DicomDirEntry object to set as the first root entry </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDir.h" line="143" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dicom_dir_1a71d63a9102a8b75d998e208d2962ac77" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> *</type>
+        <definition>DicomheroDataSet* DicomheroDicomDir::updateDataSet:</definition>
+        <argsstring>(NSError **pError)</argsstring>
+        <name>updateDataSet:</name>
+        <param>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>This method has to be called to update the managed DataSet after the <ref refid="interface_dicomhero_dicom_dir" kindref="compound">DicomheroDicomDir</ref>&apos;s content has been updated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It is not necessary to call updateDataSet() after every <ref refid="interface_dicomhero_dicom_dir" kindref="compound">DicomheroDicomDir</ref> update, just call it when the updated <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> object is needed.</para>
+<para><simplesect kind="return"><para>the updated managed <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDir.h" line="143" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a DICOMDIR structure. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>In order to work <ref refid="interface_dicomhero_dicom_dir" kindref="compound">DicomheroDicomDir</ref> needs a <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>, which embeds the DICOMDIR&apos;s entries.</para>
+<para>If the <ref refid="interface_dicomhero_dicom_dir" kindref="compound">DicomheroDicomDir</ref>&apos;s content is modified then the method updateDataSet() has to be called to obtain a dataset that can be stored as a DICOMDIR file. </para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDir.h" line="139" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDir.h" bodystart="141" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_dicom_dir_1a280dae7d0c22eec269e7aa0df5eb6f56" prot="public" virt="virtual"><scope>DicomheroDicomDir</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_dicom_dir_1a8b839d1664de8e24f9718a9f288c70ea" prot="public" virt="virtual"><scope>DicomheroDicomDir</scope><name>getFirstRootEntry:</name></member>
+      <member refid="interface_dicomhero_dicom_dir_1a4a219262aa38654279ba56dc0f697f56" prot="public" virt="virtual"><scope>DicomheroDicomDir</scope><name>getNewEntry:error:</name></member>
+      <member refid="interface_dicomhero_dicom_dir_1a6235900d4dd4fcf459273834ce5e5990" prot="public" virt="virtual"><scope>DicomheroDicomDir</scope><name>init</name></member>
+      <member refid="interface_dicomhero_dicom_dir_1afee886591fca48fcb8713d4b8c486d2b" prot="public" virt="virtual"><scope>DicomheroDicomDir</scope><name>initWithDataSet:error:</name></member>
+      <member refid="interface_dicomhero_dicom_dir_1a48e99437549725a237fbb950cc88196b" prot="public" virt="virtual"><scope>DicomheroDicomDir</scope><name>initWithDicomheroDicomDir:</name></member>
+      <member refid="interface_dicomhero_dicom_dir_1aed3e934a824922347a4b3d221b99a1a5" prot="public" virt="non-virtual"><scope>DicomheroDicomDir</scope><name>m_DicomDir</name></member>
+      <member refid="interface_dicomhero_dicom_dir_1a9a87fdaa6c6bd41cc6030f95b99870bc" prot="public" virt="virtual"><scope>DicomheroDicomDir</scope><name>setFirstRootEntry:error:</name></member>
+      <member refid="interface_dicomhero_dicom_dir_1a71d63a9102a8b75d998e208d2962ac77" prot="public" virt="virtual"><scope>DicomheroDicomDir</scope><name>updateDataSet:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

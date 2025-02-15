@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_modality_v_o_i_l_u_t" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroModalityVOILUT</compoundname>
+    <basecompoundref refid="interface_dicomhero_transform" prot="public" virt="non-virtual">DicomheroTransform</basecompoundref>
+    <includes local="no">dicomhero_modalityVOILUT.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_modality_v_o_i_l_u_t_1a3c4b4306e0211641af617dff4cf07e06" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroModalityVOILUT::initWithDataSet:</definition>
+        <argsstring>(DicomheroDataSet *pDataSet)</argsstring>
+        <name>initWithDataSet:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> *</type>
+          <declname>pDataSet</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref> from which the modality VOI or LUT data is retrieved. If the modality VOI/LUT information is stored in a functional group, then first use DicomheroDataSet::getFunctionalGroupDataSet() to retrieve the sequence item containing the modality VOI/LUT information and pass that item as parameter to this constructor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_modalityVOILUT.h" line="1" column="0"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="interface_dicomhero_modality_v_o_i_l_u_t" kindref="compound">DicomheroModalityVOILUT</ref> transform applies the Modality VOI or LUT to the input image. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The Modality VOI/LUT applies a rescale intercept and a slope to transform the pixel values of the image into values that are meaningful to the application.</para>
+<para>For instance, the original pixel values could store a device specific value that has a meaning only when used by the device that generated it: applying the rescale slope/intercept to pixel value converts the original values into optical density or other known measurement units (e.g. Hounsfield).</para>
+<para>When the transformation is not linear, then a LUT (lookup table) is applied. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DicomheroModalityVOILUT</label>
+        <link refid="interface_dicomhero_modality_v_o_i_l_u_t"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroTransform</label>
+        <link refid="interface_dicomhero_transform"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DicomheroModalityVOILUT</label>
+        <link refid="interface_dicomhero_modality_v_o_i_l_u_t"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DicomheroTransform</label>
+        <link refid="interface_dicomhero_transform"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_modalityVOILUT.h" line="39" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_modalityVOILUT.h" bodystart="40" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_transform_1ad9d04a806e4bebe54e24d29ea3da55ae" prot="public" virt="virtual"><scope>DicomheroModalityVOILUT</scope><name>allocateOutputImage:width:height:error:</name></member>
+      <member refid="interface_dicomhero_transform_1ac5a31bb888afc5b3fd803d8687b13e2c" prot="public" virt="virtual"><scope>DicomheroModalityVOILUT</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_modality_v_o_i_l_u_t_1a3c4b4306e0211641af617dff4cf07e06" prot="public" virt="virtual"><scope>DicomheroModalityVOILUT</scope><name>initWithDataSet:</name></member>
+      <member refid="interface_dicomhero_transform_1a1687c0c599392ae018d492b632a15606" prot="public" virt="virtual"><scope>DicomheroModalityVOILUT</scope><name>initWithDicomheroTransform:</name></member>
+      <member refid="interface_dicomhero_transform_1ace5bf9d1b55c0da9acc5f4da95a6fac9" prot="public" virt="non-virtual"><scope>DicomheroModalityVOILUT</scope><name>isEmpty</name></member>
+      <member refid="interface_dicomhero_transform_1ab02bb499ed0d612d635ed38b32222b05" prot="public" virt="non-virtual"><scope>DicomheroModalityVOILUT</scope><name>m_Transform</name></member>
+      <member refid="interface_dicomhero_transform_1a8496d9da5f64878a1ddd4ebd4cd23149" prot="public" virt="virtual"><scope>DicomheroModalityVOILUT</scope><name>runTransform:inputTopLeftX:inputTopLeftY:inputWidth:inputHeight:outputImage:outputTopLeftX:outputTopLeftY:error:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

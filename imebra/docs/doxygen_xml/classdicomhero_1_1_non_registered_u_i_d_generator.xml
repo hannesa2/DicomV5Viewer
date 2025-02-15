@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_non_registered_u_i_d_generator" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::NonRegisteredUIDGenerator</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_u_i_d_generator_error" prot="public" virt="non-virtual">dicomhero::UIDGeneratorError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_non_registered_u_i_d_generator_1a3b63e3961fc0362182c3104de0c42fe4" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::NonRegisteredUIDGenerator::NonRegisteredUIDGenerator</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>NonRegisteredUIDGenerator</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1952" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_non_registered_u_i_d_generator_1aad88e775852537b67f9ce3aadff40fce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::NonRegisteredUIDGenerator::NonRegisteredUIDGenerator</definition>
+        <argsstring>(const NonRegisteredUIDGenerator &amp;source)</argsstring>
+        <name>NonRegisteredUIDGenerator</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_non_registered_u_i_d_generator" kindref="compound">NonRegisteredUIDGenerator</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1954" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_non_registered_u_i_d_generator_1a13869bfb783bfda4806e03ecc412c4ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_non_registered_u_i_d_generator" kindref="compound">NonRegisteredUIDGenerator</ref> &amp;</type>
+        <definition>NonRegisteredUIDGenerator&amp; dicomhero::NonRegisteredUIDGenerator::operator=</definition>
+        <argsstring>(const NonRegisteredUIDGenerator &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_non_registered_u_i_d_generator" kindref="compound">NonRegisteredUIDGenerator</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1956" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_non_registered_u_i_d_generator_1a32e65086e992e41fe5c1bff88cc318d3" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::NonRegisteredUIDGenerator::~NonRegisteredUIDGenerator</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~NonRegisteredUIDGenerator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1958" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Exception thrown when the <ref refid="classdicomhero_1_1_u_i_d_generator_factory" kindref="compound">UIDGeneratorFactory</ref> class is trying to retrieve a non registered UID generator. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dicomhero::NonRegisteredUIDGenerator</label>
+        <link refid="classdicomhero_1_1_non_registered_u_i_d_generator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::UIDGeneratorError</label>
+        <link refid="classdicomhero_1_1_u_i_d_generator_error"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dicomhero::NonRegisteredUIDGenerator</label>
+        <link refid="classdicomhero_1_1_non_registered_u_i_d_generator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::UIDGeneratorError</label>
+        <link refid="classdicomhero_1_1_u_i_d_generator_error"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1949" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="1950" bodyend="1959"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_non_registered_u_i_d_generator_1a3b63e3961fc0362182c3104de0c42fe4" prot="public" virt="non-virtual"><scope>dicomhero::NonRegisteredUIDGenerator</scope><name>NonRegisteredUIDGenerator</name></member>
+      <member refid="classdicomhero_1_1_non_registered_u_i_d_generator_1aad88e775852537b67f9ce3aadff40fce" prot="public" virt="non-virtual"><scope>dicomhero::NonRegisteredUIDGenerator</scope><name>NonRegisteredUIDGenerator</name></member>
+      <member refid="classdicomhero_1_1_non_registered_u_i_d_generator_1a13869bfb783bfda4806e03ecc412c4ed" prot="public" virt="non-virtual"><scope>dicomhero::NonRegisteredUIDGenerator</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_u_i_d_generator_error_1a03d3157f783b1ab2702c752518c3dbef" prot="public" virt="non-virtual" ambiguityscope="dicomhero::UIDGeneratorError::"><scope>dicomhero::NonRegisteredUIDGenerator</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_u_i_d_generator_error_1a3343cb0be1399e9201c99ef30c08a255" prot="public" virt="non-virtual"><scope>dicomhero::NonRegisteredUIDGenerator</scope><name>UIDGeneratorError</name></member>
+      <member refid="classdicomhero_1_1_u_i_d_generator_error_1a4b9872192139d280ec391f3ed0fe5ba1" prot="public" virt="non-virtual"><scope>dicomhero::NonRegisteredUIDGenerator</scope><name>UIDGeneratorError</name></member>
+      <member refid="classdicomhero_1_1_non_registered_u_i_d_generator_1a32e65086e992e41fe5c1bff88cc318d3" prot="public" virt="virtual"><scope>dicomhero::NonRegisteredUIDGenerator</scope><name>~NonRegisteredUIDGenerator</name></member>
+      <member refid="classdicomhero_1_1_u_i_d_generator_error_1a5b1ee834e891ca1b631f051ad81dda41" prot="public" virt="virtual"><scope>dicomhero::NonRegisteredUIDGenerator</scope><name>~UIDGeneratorError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

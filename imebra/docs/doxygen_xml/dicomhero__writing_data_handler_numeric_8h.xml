@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dicomhero__writing_data_handler_numeric_8h" kind="file" language="C++">
+    <compoundname>dicomhero_writingDataHandlerNumeric.h</compoundname>
+    <includes refid="dicomhero__writing_data_handler_8h" local="yes">dicomhero_writingDataHandler.h</includes>
+    <includes local="no">Foundation/Foundation.h</includes>
+    <includedby refid="dicomhero6_8h" local="yes">dicomhero6.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>dicomhero_writingDataHandlerNumeric.h</label>
+        <link refid="dicomhero__writing_data_handler_numeric_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Foundation/Foundation.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="interface_dicomhero_writing_data_handler_numeric" prot="public">DicomheroWritingDataHandlerNumeric</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>2005<sp/>-<sp/>2021<sp/>by<sp/>Paolo<sp/>Brandoli/Binarno<sp/>s.p.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">DICOMHero/Imebra<sp/>is<sp/>available<sp/>for<sp/>free<sp/>under<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">The<sp/>full<sp/>text<sp/>of<sp/>the<sp/>license<sp/>is<sp/>available<sp/>in<sp/>the<sp/>file<sp/>license.rst</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>in<sp/>the<sp/>project<sp/>root<sp/>folder.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">If<sp/>you<sp/>do<sp/>not<sp/>want<sp/>to<sp/>be<sp/>bound<sp/>by<sp/>the<sp/>GPL<sp/>terms<sp/>(such<sp/>as<sp/>the<sp/>requirement</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>that<sp/>your<sp/>application<sp/>must<sp/>also<sp/>be<sp/>GPL),<sp/>you<sp/>may<sp/>purchase<sp/>a<sp/>commercial</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>license<sp/>for<sp/>DICOMHero/Imebra<sp/>from<sp/>the<sp/>DICOMHero’s<sp/>website<sp/>(https://dicomhero.com).</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(dicomheroObjcWritingDataHandlerNumeric__INCLUDED_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dicomheroObjcWritingDataHandlerNumeric__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_writingDataHandler.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Foundation/Foundation.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_reading_data_handler_numeric" kindref="compound">DicomheroReadingDataHandlerNumeric</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_mutable_memory" kindref="compound">DicomheroMutableMemory</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="interface_dicomhero_writing_data_handler_numeric" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_writing_data_handler_numeric" kindref="compound">DicomheroWritingDataHandlerNumeric</ref>:<sp/><ref refid="interface_dicomhero_writing_data_handler" kindref="compound">DicomheroWritingDataHandler</ref></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_mutable_memory" kindref="compound">DicomheroMutableMemory</ref>*)getMemory:(NSError**)pError;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)assign:(NSData*)pSource<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)copyFrom:(<ref refid="interface_dicomhero_reading_data_handler_numeric" kindref="compound">DicomheroReadingDataHandlerNumeric</ref>*)pSource<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_writing_data_handler_numeric_1a051c3b2c37a090b900c1701ff0261410" kindref="member">unitSize</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_writing_data_handler_numeric_1aa7acbdb40669b7c6c28a563e559b27cb" kindref="member">isSigned</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_writing_data_handler_numeric_1a17357b82af9973a49daf84849c7add8e" kindref="member">isFloat</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!defined(dicomheroObjcWritingDataHandlerNumeric__INCLUDED_)</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_writingDataHandlerNumeric.h"/>
+  </compounddef>
+</doxygen>

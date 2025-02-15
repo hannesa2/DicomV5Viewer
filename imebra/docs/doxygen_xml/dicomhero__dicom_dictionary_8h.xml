@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dicomhero__dicom_dictionary_8h" kind="file" language="C++">
+    <compoundname>dicomhero_dicomDictionary.h</compoundname>
+    <includes local="no">Foundation/Foundation.h</includes>
+    <includes refid="dicomhero__dataset_8h" local="yes">dicomhero_dataset.h</includes>
+    <includedby refid="dicomhero6_8h" local="yes">dicomhero6.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>dicomhero_dicomDictionary.h</label>
+        <link refid="dicomhero__dicom_dictionary_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Foundation/Foundation.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="interface_dicomhero_dicom_dictionary" prot="public">DicomheroDicomDictionary</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>2005<sp/>-<sp/>2021<sp/>by<sp/>Paolo<sp/>Brandoli/Binarno<sp/>s.p.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">DICOMHero/Imebra<sp/>is<sp/>available<sp/>for<sp/>free<sp/>under<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">The<sp/>full<sp/>text<sp/>of<sp/>the<sp/>license<sp/>is<sp/>available<sp/>in<sp/>the<sp/>file<sp/>license.rst</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>in<sp/>the<sp/>project<sp/>root<sp/>folder.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">If<sp/>you<sp/>do<sp/>not<sp/>want<sp/>to<sp/>be<sp/>bound<sp/>by<sp/>the<sp/>GPL<sp/>terms<sp/>(such<sp/>as<sp/>the<sp/>requirement</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>that<sp/>your<sp/>application<sp/>must<sp/>also<sp/>be<sp/>GPL),<sp/>you<sp/>may<sp/>purchase<sp/>a<sp/>commercial</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>license<sp/>for<sp/>DICOMHero/Imebra<sp/>from<sp/>the<sp/>DICOMHero’s<sp/>website<sp/>(https://dicomhero.com).</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(dicomheroObjcDicomDictionary__INCLUDED_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dicomheroObjcDicomDictionary__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Foundation/Foundation.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;dicomhero_dataset.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="interface_dicomhero_dicom_dictionary" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_dicom_dictionary" kindref="compound">DicomheroDicomDictionary</ref>:<sp/>NSObject</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>+(NSString*)getTagDescription:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>+(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)getMultiplicityMin:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>+(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)getMultiplicityMax:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>+(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)getMultiplicityStep:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>+(DicomheroTagType)getTagType:(<ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>*)tagId<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>+(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)getWordSize:(DicomheroTagType)dataType;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>+(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)getMaxSize:(DicomheroTagType)dataType;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>dicomheroObjcDicomDictionary__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dicomDictionary.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_lut_corrupted_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::LutCorruptedError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_lut_error" prot="public" virt="non-virtual">dicomhero::LutError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_lut_corrupted_error_1af9f64abdbeeb9adb394955e374908246" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::LutCorruptedError::LutCorruptedError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>LutCorruptedError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="77" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_lut_corrupted_error_1ae66b0fccd4c6ca6aa0e85ba368d90be5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::LutCorruptedError::LutCorruptedError</definition>
+        <argsstring>(const LutCorruptedError &amp;source)</argsstring>
+        <name>LutCorruptedError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_lut_corrupted_error" kindref="compound">LutCorruptedError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="79" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_lut_corrupted_error_1a5d3f4a65b67d59481e140bb707c8bc84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_lut_corrupted_error" kindref="compound">LutCorruptedError</ref> &amp;</type>
+        <definition>LutCorruptedError&amp; dicomhero::LutCorruptedError::operator=</definition>
+        <argsstring>(const LutCorruptedError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_lut_corrupted_error" kindref="compound">LutCorruptedError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="81" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_lut_corrupted_error_1ae37cd86485cfc98a51d044ffa7242389" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::LutCorruptedError::~LutCorruptedError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~LutCorruptedError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="83" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This exception is thrown by the lut class when the the <ref refid="classdicomhero_1_1_l_u_t" kindref="compound">LUT</ref> information is corrupted. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dicomhero::LutCorruptedError</label>
+        <link refid="classdicomhero_1_1_lut_corrupted_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::LutError</label>
+        <link refid="classdicomhero_1_1_lut_error"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dicomhero::LutCorruptedError</label>
+        <link refid="classdicomhero_1_1_lut_corrupted_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::LutError</label>
+        <link refid="classdicomhero_1_1_lut_error"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="69" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="70" bodyend="84"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_lut_corrupted_error_1af9f64abdbeeb9adb394955e374908246" prot="public" virt="non-virtual"><scope>dicomhero::LutCorruptedError</scope><name>LutCorruptedError</name></member>
+      <member refid="classdicomhero_1_1_lut_corrupted_error_1ae66b0fccd4c6ca6aa0e85ba368d90be5" prot="public" virt="non-virtual"><scope>dicomhero::LutCorruptedError</scope><name>LutCorruptedError</name></member>
+      <member refid="classdicomhero_1_1_lut_error_1a370ac400d9851964bd44d725d12b4d3a" prot="public" virt="non-virtual"><scope>dicomhero::LutCorruptedError</scope><name>LutError</name></member>
+      <member refid="classdicomhero_1_1_lut_error_1aab9e77db9b19b0cf8da2816bb8663d6f" prot="public" virt="non-virtual"><scope>dicomhero::LutCorruptedError</scope><name>LutError</name></member>
+      <member refid="classdicomhero_1_1_lut_corrupted_error_1a5d3f4a65b67d59481e140bb707c8bc84" prot="public" virt="non-virtual"><scope>dicomhero::LutCorruptedError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_lut_error_1abecc6147acfdbf00e77494a3224e1c90" prot="public" virt="non-virtual" ambiguityscope="dicomhero::LutError::"><scope>dicomhero::LutCorruptedError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_lut_corrupted_error_1ae37cd86485cfc98a51d044ffa7242389" prot="public" virt="virtual"><scope>dicomhero::LutCorruptedError</scope><name>~LutCorruptedError</name></member>
+      <member refid="classdicomhero_1_1_lut_error_1a8a7e26e9b26ce8d548977fcb58822c90" prot="public" virt="virtual"><scope>dicomhero::LutCorruptedError</scope><name>~LutError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

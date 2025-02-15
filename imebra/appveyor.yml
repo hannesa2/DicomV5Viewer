@@ -1,0 +1,143 @@
+
+version: 1.0.{build}
+configuration: Debug
+platform: x64
+image:
+  - macos-monterey
+  - Visual Studio 2022
+  - Visual Studio 2015
+
+for:
+  -
+    matrix:
+      only:
+        - image: macos-monterey
+
+    build_script:
+      # Build macOS x86-64 debug and run the tests
+      - mkdir build_dicomhero_macos_x86_64_debug
+      - cd build_dicomhero_macos_x86_64_debug
+      - cmake -GXcode -DCMAKE_BUILD_TYPE=Debug -DDICOMHERO_LOG_LEVEL=FATAL -DCMAKE_OSX_ARCHITECTURES="x86_64" ..
+      - cmake --build . --config Debug
+      - ctest -V .
+      - cd ..
+      # Build macOS x86-64
+      - mkdir build_dicomhero_macos_x86_64
+      - cd build_dicomhero_macos_x86_64
+      - cmake -GXcode -DCMAKE_BUILD_TYPE=Release -DDICOMHERO_LOG_LEVEL=FATAL -DCMAKE_OSX_ARCHITECTURES="x86_64" ..
+      - cmake --build . --config Release 
+      - cd ..
+      # Build macOS arm64
+      - mkdir build_dicomhero_macos_arm64
+      - cd build_dicomhero_macos_arm64
+      - cmake -GXcode -DCMAKE_BUILD_TYPE=Release -DDICOMHERO_LOG_LEVEL=FATAL -DCMAKE_OSX_ARCHITECTURES="arm64" ..
+      - cmake --build . --config Release
+      - cd ..
+      # Build iOS arm64
+      - mkdir build_dicomhero_iphoneos
+      - cd build_dicomhero_iphoneos
+      - cmake -GXcode -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_ARCHITECTURES="arm64" -DCMAKE_OSX_SYSROOT=iphoneos -DDICOMHERO_LOG_LEVEL=FATAL -DCMAKE_BUILD_TYPE=Release ..
+      - cmake --build . --config Release -- sdk=iphoneos
+      - cd ..
+      # Build iOS simulator arm64
+      - mkdir build_dicomhero_iphonesimulator_arm64
+      - cd build_dicomhero_iphonesimulator_arm64
+      - cmake -GXcode -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_ARCHITECTURES="arm64" -DCMAKE_OSX_SYSROOT=iphonesimulator -DDICOMHERO_LOG_LEVEL=FATAL -DCMAKE_BUILD_TYPE=Release ..
+      - cmake --build . --config Release -- sdk=iphonesimulator
+      - cd ..
+      # Build iOS simulator x86-64
+      - mkdir build_dicomhero_iphonesimulator_x86_64
+      - cd build_dicomhero_iphonesimulator_x86_64
+      - cmake -GXcode -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_ARCHITECTURES="x86_64" -DCMAKE_OSX_SYSROOT=iphonesimulator -DDICOMHERO_LOG_LEVEL=FATAL -DCMAKE_BUILD_TYPE=Release ..
+      - cmake --build . --config Release -- sdk=iphonesimulator
+      - cd ..
+      # Build the framework
+      - lipo build_dicomhero_macos_x86_64/dicomheroCore6/Release/dicomhero6.framework/dicomhero6 build_dicomhero_macos_arm64/dicomheroCore6/Release/dicomhero6.framework/dicomhero6 -create -output dicomhero6
+      - mv -f dicomhero6 $(python3 -c "import os; print(os.path.realpath('build_dicomhero_macos_x86_64/dicomheroCore6/Release/dicomhero6.framework/dicomhero6'))")
+      - lipo build_dicomhero_iphonesimulator_arm64/dicomheroCore6/Release-iphonesimulator/dicomhero6.framework/dicomhero6 build_dicomhero_iphonesimulator_x86_64/dicomheroCore6/Release-iphonesimulator/dicomhero6.framework/dicomhero6 -create -output dicomhero6
+      - mv -f dicomhero6 $(python3 -c "import os; print(os.path.realpath('build_dicomhero_iphonesimulator_arm64/dicomheroCore6/Release-iphonesimulator/dicomhero6.framework/dicomhero6'))")
+      - mkdir xcframework
+      - mkdir xcframework/dicomhero_framework_distribution
+      - xcodebuild -create-xcframework -framework build_dicomhero_iphonesimulator_arm64/dicomheroCore6/Release-iphonesimulator/dicomhero6.framework/ -framework build_dicomhero_iphoneos/dicomheroCore6/Release-iphoneos/dicomhero6.framework/ -framework build_dicomhero_macos_x86_64/dicomheroCore6/Release/dicomhero6.framework/ -output xcframework/dicomhero_framework_distribution/dicomhero6.xcframework
+      - echo "Run <b>xattr -r -d com.apple.quarantine dicomhero6.xcframework</b> to remove the quarantine flag from the framework." > xcframework/dicomhero_framework_distribution/instructions.html
+      - hdiutil create -volname dicomhero6_framework -srcfolder xcframework/dicomhero_framework_distribution -ov -format UDZO dicomhero6_framework.dmz
+    
+    artifacts:
+      - path: dicomhero6_framework.dmz.dmg
+        name: dicomhero6_framework
+
+  -
+    matrix:
+      only:
+        - image: Visual Studio 2015
+
+    build_script:
+      - cmd: >-
+
+          mkdir build_dicomhero_release
+
+          cd build_dicomhero_release
+    
+          cmake -DCMAKE_BUILD_TYPE=Release -DDICOMHERO_LOG_LEVEL=FATAL ..
+    
+          cmake --build . --config Release
+
+          ctest -V .
+
+          cd ..
+
+          mkdir build_dicomhero_release\Release\include
+    
+          mkdir build_dicomhero_debug\Debug\include
+
+          xcopy dicomheroCore6\library\include build_dicomhero_release\Release\include /s /e
+
+          xcopy dicomheroCore6\library\include build_dicomhero_debug\Debug\include /s /e
+
+    artifacts:
+      - path: build_dicomhero_release/Release
+        name: dicomhero_release
+
+  -
+    matrix:
+      only:
+        - image: Visual Studio 2022
+
+    build_script:
+    - cmd: >-
+
+        mkdir build_dicomhero_release
+
+        mkdir build_dicomhero_debug
+
+        cd build_dicomhero_debug
+    
+        cmake -DCMAKE_BUILD_TYPE=Debug ..
+    
+        cmake --build . --config Debug
+
+        cd ..
+
+        cd build_dicomhero_release
+    
+        cmake -DCMAKE_BUILD_TYPE=Release -DDICOMHERO_LOG_LEVEL=FATAL ..
+    
+        cmake --build . --config Release
+
+        ctest -V .
+
+        cd ..
+
+        mkdir build_dicomhero_release\dicomheroCore6\Release\include
+    
+        mkdir build_dicomhero_debug\dicomheroCore6\Debug\include
+
+        xcopy dicomheroCore6\library\include build_dicomhero_release\dicomheroCore6\Release\include /s /e
+
+        xcopy dicomheroCore6\library\include build_dicomhero_debug\dicomheroCore6\Debug\include /s /e
+
+    artifacts:
+    - path: build_dicomhero_release/dicomheroCore6/Release
+      name: dicomhero_release
+    - path: build_dicomhero_debug/dicomheroCore6/Debug
+      name: dicomhero_debug

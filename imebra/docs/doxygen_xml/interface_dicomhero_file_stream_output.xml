@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_file_stream_output" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroFileStreamOutput</compoundname>
+    <basecompoundref refid="interface_dicomhero_base_stream_output" prot="public" virt="non-virtual">DicomheroBaseStreamOutput</basecompoundref>
+    <includes local="no">dicomhero_fileStreamOutput.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_file_stream_output_1aab8dedd35da4d8027f0ae78d0a8bb73f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroFileStreamOutput::initWithName:error:</definition>
+        <argsstring>(NSString *fileName,[error] NSError **pError)</argsstring>
+        <name>initWithName:error:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the path to the file to open in write mode </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_fileStreamOutput.h" line="1" column="0"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents an output file stream. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>DicomheroBaseStreamOutput</label>
+        <link refid="interface_dicomhero_base_stream_output"/>
+      </node>
+      <node id="1">
+        <label>DicomheroFileStreamOutput</label>
+        <link refid="interface_dicomhero_file_stream_output"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>DicomheroBaseStreamOutput</label>
+        <link refid="interface_dicomhero_base_stream_output"/>
+      </node>
+      <node id="1">
+        <label>DicomheroFileStreamOutput</label>
+        <link refid="interface_dicomhero_file_stream_output"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_fileStreamOutput.h" line="24" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_fileStreamOutput.h" bodystart="25" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_base_stream_output_1ad370d6d9d6866aad74d44473e7607bd8" prot="public" virt="virtual"><scope>DicomheroFileStreamOutput</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_base_stream_output_1a19fe318f69903181d652fbb7586d0667" prot="public" virt="virtual"><scope>DicomheroFileStreamOutput</scope><name>initWithDicomheroBaseStreamOutput:</name></member>
+      <member refid="interface_dicomhero_file_stream_output_1aab8dedd35da4d8027f0ae78d0a8bb73f" prot="public" virt="virtual"><scope>DicomheroFileStreamOutput</scope><name>initWithName:error:</name></member>
+      <member refid="interface_dicomhero_base_stream_output_1a05269da80232530f5aa4b0f920031a15" prot="public" virt="non-virtual"><scope>DicomheroFileStreamOutput</scope><name>m_BaseStreamOutput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

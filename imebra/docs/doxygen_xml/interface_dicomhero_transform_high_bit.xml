@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_transform_high_bit" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroTransformHighBit</compoundname>
+    <basecompoundref refid="interface_dicomhero_transform" prot="public" virt="non-virtual">DicomheroTransform</basecompoundref>
+    <includes local="no">dicomhero_transformHighBit.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_transform_high_bit_1affbbd712632f33c2374ed850e64d3f66" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroTransformHighBit::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transformHighBit.h" line="1" column="0"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="interface_dicomhero_transform_high_bit" kindref="compound">DicomheroTransformHighBit</ref> shifts the input image&apos;s values so they match the high-bit settings of the output image. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>DicomheroTransform</label>
+        <link refid="interface_dicomhero_transform"/>
+      </node>
+      <node id="1">
+        <label>DicomheroTransformHighBit</label>
+        <link refid="interface_dicomhero_transform_high_bit"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>DicomheroTransform</label>
+        <link refid="interface_dicomhero_transform"/>
+      </node>
+      <node id="1">
+        <label>DicomheroTransformHighBit</label>
+        <link refid="interface_dicomhero_transform_high_bit"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transformHighBit.h" line="24" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_transformHighBit.h" bodystart="25" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_transform_1ad9d04a806e4bebe54e24d29ea3da55ae" prot="public" virt="virtual"><scope>DicomheroTransformHighBit</scope><name>allocateOutputImage:width:height:error:</name></member>
+      <member refid="interface_dicomhero_transform_1ac5a31bb888afc5b3fd803d8687b13e2c" prot="public" virt="virtual"><scope>DicomheroTransformHighBit</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_transform_high_bit_1affbbd712632f33c2374ed850e64d3f66" prot="public" virt="virtual"><scope>DicomheroTransformHighBit</scope><name>init</name></member>
+      <member refid="interface_dicomhero_transform_1a1687c0c599392ae018d492b632a15606" prot="public" virt="virtual"><scope>DicomheroTransformHighBit</scope><name>initWithDicomheroTransform:</name></member>
+      <member refid="interface_dicomhero_transform_1ace5bf9d1b55c0da9acc5f4da95a6fac9" prot="public" virt="non-virtual"><scope>DicomheroTransformHighBit</scope><name>isEmpty</name></member>
+      <member refid="interface_dicomhero_transform_1ab02bb499ed0d612d635ed38b32222b05" prot="public" virt="non-virtual"><scope>DicomheroTransformHighBit</scope><name>m_Transform</name></member>
+      <member refid="interface_dicomhero_transform_1a8496d9da5f64878a1ddd4ebd4cd23149" prot="public" virt="virtual"><scope>DicomheroTransformHighBit</scope><name>runTransform:inputTopLeftX:inputTopLeftY:inputWidth:inputHeight:outputImage:outputTopLeftX:outputTopLeftY:error:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_tag_id" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::TagId</compoundname>
+    <includes local="no">tagId.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdicomhero_1_1_tag_id_1af314ccae3c3c2b7ad3eb792cf379e9ed" prot="private" static="no" mutable="no">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t dicomhero::TagId::m_groupId</definition>
+        <argsstring></argsstring>
+        <name>m_groupId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" line="115" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdicomhero_1_1_tag_id_1aadede2652278f2f96ddae80b8d8d28f9" prot="private" static="no" mutable="no">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t dicomhero::TagId::m_groupOrder</definition>
+        <argsstring></argsstring>
+        <name>m_groupOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" line="116" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdicomhero_1_1_tag_id_1a11f3e1266eda08b20398dfb5b626093c" prot="private" static="no" mutable="no">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t dicomhero::TagId::m_tagId</definition>
+        <argsstring></argsstring>
+        <name>m_tagId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" line="117" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_tag_id_1ac03868172655e8d279aae2c78c46e2af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::TagId::TagId</definition>
+        <argsstring>()</argsstring>
+        <name>TagId</name>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the group id and the tag id to 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" line="42" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_id_1af6c030deb15b366ed02c36b12e51029c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::TagId::TagId</definition>
+        <argsstring>(std::uint16_t groupId, std::uint16_t tagId)</argsstring>
+        <name>TagId</name>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>groupId</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>tagId</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>groupId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the group id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tagId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" line="50" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_id_1a5dca8d430cb58b20d55fc5488ace68da" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::TagId::TagId</definition>
+        <argsstring>(std::uint16_t groupId, std::uint32_t groupOrder, std::uint16_t tagId)</argsstring>
+        <name>TagId</name>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>groupId</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>groupOrder</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>tagId</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>groupId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the group id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>groupOrder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>old DICOM files may have several groups with the same id. This parameter specifies which of the groups with the same id must be taken into consideration </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tagId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" line="61" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_id_1a42ff3f3daf250ce56f75c3e1401ae285" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::TagId::TagId</definition>
+        <argsstring>(const TagId &amp;source)</argsstring>
+        <name>TagId</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_tag_id" kindref="compound">TagId</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" line="63" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_id_1a16d0db27ed19de677223eccb2d32141b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_tag_id" kindref="compound">TagId</ref> &amp;</type>
+        <definition>TagId&amp; dicomhero::TagId::operator=</definition>
+        <argsstring>(const TagId &amp;source)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_tag_id" kindref="compound">TagId</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" line="65" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_id_1acedc5c1ea7f269856edd7245487271fd" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::TagId::TagId</definition>
+        <argsstring>(tagId_t id)</argsstring>
+        <name>TagId</name>
+        <param>
+          <type>tagId_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an enumeration representing a tag group and id</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>Very large enumeration classes cause an error in Java, therefore the tagId_t enumeration is not supported in Java. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" line="76" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_id_1aa165da1920213bea7052bb495a402a3f" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::TagId::TagId</definition>
+        <argsstring>(tagId_t id, std::uint32_t groupOrder)</argsstring>
+        <name>TagId</name>
+        <param>
+          <type>tagId_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>groupOrder</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an enumeration representing a tag group and id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>groupOrder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>old DICOM files may have several groups with the same id. This parameter specifies which of the groups with the same id must be taken into consideration </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" line="86" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_id_1a4fb746fca398693ea93bf0a15836087e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::TagId::~TagId</definition>
+        <argsstring>()</argsstring>
+        <name>~TagId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" line="89" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_id_1ac9e1ffbef91c7484097cbf2a323254bc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t dicomhero::TagId::getGroupId</definition>
+        <argsstring>() const</argsstring>
+        <name>getGroupId</name>
+        <briefdescription>
+<para>Retrieve the group id. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the group id </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" line="96" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_id_1ac8099ca807082d21be89c2583b3d0bbe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t dicomhero::TagId::getGroupOrder</definition>
+        <argsstring>() const</argsstring>
+        <name>getGroupOrder</name>
+        <briefdescription>
+<para>Return the group order. Old DICOM files may have several groups with the same id. This value specifies which of the groups with the same id has been taken into consideration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the group order </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" line="105" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_id_1ab901f27ea3b8c4204e5324616b2c0b27" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t dicomhero::TagId::getTagId</definition>
+        <argsstring>() const</argsstring>
+        <name>getTagId</name>
+        <briefdescription>
+<para>Retrieve the tag id. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the tag id </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" line="112" column="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a Dicom tag&apos;s identification. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" line="33" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tagId.h" bodystart="34" bodyend="118"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_tag_id_1ac9e1ffbef91c7484097cbf2a323254bc" prot="public" virt="non-virtual"><scope>dicomhero::TagId</scope><name>getGroupId</name></member>
+      <member refid="classdicomhero_1_1_tag_id_1ac8099ca807082d21be89c2583b3d0bbe" prot="public" virt="non-virtual"><scope>dicomhero::TagId</scope><name>getGroupOrder</name></member>
+      <member refid="classdicomhero_1_1_tag_id_1ab901f27ea3b8c4204e5324616b2c0b27" prot="public" virt="non-virtual"><scope>dicomhero::TagId</scope><name>getTagId</name></member>
+      <member refid="classdicomhero_1_1_tag_id_1af314ccae3c3c2b7ad3eb792cf379e9ed" prot="private" virt="non-virtual"><scope>dicomhero::TagId</scope><name>m_groupId</name></member>
+      <member refid="classdicomhero_1_1_tag_id_1aadede2652278f2f96ddae80b8d8d28f9" prot="private" virt="non-virtual"><scope>dicomhero::TagId</scope><name>m_groupOrder</name></member>
+      <member refid="classdicomhero_1_1_tag_id_1a11f3e1266eda08b20398dfb5b626093c" prot="private" virt="non-virtual"><scope>dicomhero::TagId</scope><name>m_tagId</name></member>
+      <member refid="classdicomhero_1_1_tag_id_1a16d0db27ed19de677223eccb2d32141b" prot="public" virt="non-virtual"><scope>dicomhero::TagId</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_tag_id_1ac03868172655e8d279aae2c78c46e2af" prot="public" virt="non-virtual"><scope>dicomhero::TagId</scope><name>TagId</name></member>
+      <member refid="classdicomhero_1_1_tag_id_1af6c030deb15b366ed02c36b12e51029c" prot="public" virt="non-virtual"><scope>dicomhero::TagId</scope><name>TagId</name></member>
+      <member refid="classdicomhero_1_1_tag_id_1a5dca8d430cb58b20d55fc5488ace68da" prot="public" virt="non-virtual"><scope>dicomhero::TagId</scope><name>TagId</name></member>
+      <member refid="classdicomhero_1_1_tag_id_1a42ff3f3daf250ce56f75c3e1401ae285" prot="public" virt="non-virtual"><scope>dicomhero::TagId</scope><name>TagId</name></member>
+      <member refid="classdicomhero_1_1_tag_id_1acedc5c1ea7f269856edd7245487271fd" prot="public" virt="non-virtual"><scope>dicomhero::TagId</scope><name>TagId</name></member>
+      <member refid="classdicomhero_1_1_tag_id_1aa165da1920213bea7052bb495a402a3f" prot="public" virt="non-virtual"><scope>dicomhero::TagId</scope><name>TagId</name></member>
+      <member refid="classdicomhero_1_1_tag_id_1a4fb746fca398693ea93bf0a15836087e" prot="public" virt="virtual"><scope>dicomhero::TagId</scope><name>~TagId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

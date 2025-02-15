@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_file_stream_output" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::FileStreamOutput</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_base_stream_output" prot="public" virt="non-virtual">dicomhero::BaseStreamOutput</basecompoundref>
+    <includes local="no">fileStreamOutput.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_file_stream_output_1a476eecfa463b60e57f80a46da873a87b" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::FileStreamOutput::FileStreamOutput</definition>
+        <argsstring>(const std::wstring &amp;name)</argsstring>
+        <name>FileStreamOutput</name>
+        <param>
+          <type>const std::wstring &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the path to the file to open in write mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/fileStreamOutput.h" line="43" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_file_stream_output_1a24e77a10c1258c9ce08f26c73b58ba32" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::FileStreamOutput::FileStreamOutput</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>FileStreamOutput</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the path to the file to open in write mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/fileStreamOutput.h" line="51" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_file_stream_output_1a2e901c9e9a092944babca815fecb4d0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::FileStreamOutput::FileStreamOutput</definition>
+        <argsstring>(const FileStreamOutput &amp;source)</argsstring>
+        <name>FileStreamOutput</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_file_stream_output" kindref="compound">FileStreamOutput</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_file_stream_output" kindref="compound">FileStreamOutput</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/fileStreamOutput.h" line="59" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_file_stream_output_1aabd5a4394e23f07ac94c1c0ac9d02285" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_file_stream_output" kindref="compound">FileStreamOutput</ref> &amp;</type>
+        <definition>FileStreamOutput&amp; dicomhero::FileStreamOutput::operator=</definition>
+        <argsstring>(const FileStreamOutput &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_file_stream_output" kindref="compound">FileStreamOutput</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/fileStreamOutput.h" line="61" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_file_stream_output_1af0e5a8ce1eb07211b6a1455ad5e0e6d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::FileStreamOutput::~FileStreamOutput</definition>
+        <argsstring>()</argsstring>
+        <name>~FileStreamOutput</name>
+        <briefdescription>
+<para>Destructor. Closes the file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/fileStreamOutput.h" line="66" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents an output file stream. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dicomhero::BaseStreamOutput</label>
+        <link refid="classdicomhero_1_1_base_stream_output"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::FileStreamOutput</label>
+        <link refid="classdicomhero_1_1_file_stream_output"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dicomhero::BaseStreamOutput</label>
+        <link refid="classdicomhero_1_1_base_stream_output"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::FileStreamOutput</label>
+        <link refid="classdicomhero_1_1_file_stream_output"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/fileStreamOutput.h" line="33" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/fileStreamOutput.h" bodystart="34" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_base_stream_output_1a1c0189d9dcd95aa57eb0e7303e58d097" prot="public" virt="non-virtual"><scope>dicomhero::FileStreamOutput</scope><name>BaseStreamOutput</name></member>
+      <member refid="classdicomhero_1_1_base_stream_output_1acfead4cb4f56f4a4cd9288a5edb8b9c8" prot="protected" virt="non-virtual"><scope>dicomhero::FileStreamOutput</scope><name>BaseStreamOutput</name></member>
+      <member refid="classdicomhero_1_1_file_stream_output_1a476eecfa463b60e57f80a46da873a87b" prot="public" virt="non-virtual"><scope>dicomhero::FileStreamOutput</scope><name>FileStreamOutput</name></member>
+      <member refid="classdicomhero_1_1_file_stream_output_1a24e77a10c1258c9ce08f26c73b58ba32" prot="public" virt="non-virtual"><scope>dicomhero::FileStreamOutput</scope><name>FileStreamOutput</name></member>
+      <member refid="classdicomhero_1_1_file_stream_output_1a2e901c9e9a092944babca815fecb4d0a" prot="public" virt="non-virtual"><scope>dicomhero::FileStreamOutput</scope><name>FileStreamOutput</name></member>
+      <member refid="classdicomhero_1_1_file_stream_output_1aabd5a4394e23f07ac94c1c0ac9d02285" prot="public" virt="non-virtual"><scope>dicomhero::FileStreamOutput</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_base_stream_output_1a25c762e8fcc0cc17e5ae1a3a16636954" prot="public" virt="non-virtual" ambiguityscope="dicomhero::BaseStreamOutput::"><scope>dicomhero::FileStreamOutput</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_base_stream_output_1a93db7dd4fec5ee560ce61667e66da891" prot="public" virt="virtual"><scope>dicomhero::FileStreamOutput</scope><name>~BaseStreamOutput</name></member>
+      <member refid="classdicomhero_1_1_file_stream_output_1af0e5a8ce1eb07211b6a1455ad5e0e6d4" prot="public" virt="non-virtual"><scope>dicomhero::FileStreamOutput</scope><name>~FileStreamOutput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

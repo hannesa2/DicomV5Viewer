@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_u_i_d_generator_factory" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::UIDGeneratorFactory</compoundname>
+    <includes local="no">uidGeneratorFactory.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classdicomhero_1_1_u_i_d_generator_factory_1a6f6b2279554defe256fae9a5ed6cb906" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dicomhero::UIDGeneratorFactory::registerUIDGenerator</definition>
+        <argsstring>(const std::string &amp;name, const BaseUIDGenerator &amp;uidGenerator)</argsstring>
+        <name>registerUIDGenerator</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_base_u_i_d_generator" kindref="compound">BaseUIDGenerator</ref> &amp;</type>
+          <declname>uidGenerator</declname>
+        </param>
+        <briefdescription>
+<para>Register an UID generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>UID generators should be registered when the application starts.</para>
+<para>Registered UID generators can be retrieved using <ref refid="classdicomhero_1_1_u_i_d_generator_factory_1a02219b60724d2a588e6e06d8b40bbdec" kindref="member">getUIDGenerator()</ref> or <ref refid="classdicomhero_1_1_u_i_d_generator_factory_1a68b279c168ec2cfef6907aa0b5b192c5" kindref="member">getDefaultUIDGenerator()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name under which the UID generator is registered </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uidGenerator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the UID generator to register </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/uidGeneratorFactory.h" line="58" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_u_i_d_generator_factory_1a02219b60724d2a588e6e06d8b40bbdec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_base_u_i_d_generator" kindref="compound">BaseUIDGenerator</ref></type>
+        <definition>static BaseUIDGenerator dicomhero::UIDGeneratorFactory::getUIDGenerator</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>getUIDGenerator</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Retrieved a registered UID generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classdicomhero_1_1_non_registered_u_i_d_generator" kindref="compound">NonRegisteredUIDGenerator</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the requested UID generator was not register via <ref refid="classdicomhero_1_1_u_i_d_generator_factory_1a6f6b2279554defe256fae9a5ed6cb906" kindref="member">registerUIDGenerator()</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the generator to retrieve </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the requested UID generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/uidGeneratorFactory.h" line="69" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_u_i_d_generator_factory_1a68b279c168ec2cfef6907aa0b5b192c5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_base_u_i_d_generator" kindref="compound">BaseUIDGenerator</ref></type>
+        <definition>static BaseUIDGenerator dicomhero::UIDGeneratorFactory::getDefaultUIDGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>getDefaultUIDGenerator</name>
+        <briefdescription>
+<para>Retrieve the first UID generator registered in the factory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classdicomhero_1_1_non_registered_u_i_d_generator" kindref="compound">NonRegisteredUIDGenerator</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if no UID generator was not register via <ref refid="classdicomhero_1_1_u_i_d_generator_factory_1a6f6b2279554defe256fae9a5ed6cb906" kindref="member">registerUIDGenerator()</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the first registered UID generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/uidGeneratorFactory.h" line="79" column="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classdicomhero_1_1_u_i_d_generator_factory" kindref="compound">UIDGeneratorFactory</ref> class manages a global collection of DICOM UID generators. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>In order to generate different UIDs, the UID generators maintain an internal state that must be preserved between UID generations. Ideally, UID generators should be allocated when the application starts and should be reused every time a new UID is needed.</para>
+<para>The <ref refid="classdicomhero_1_1_u_i_d_generator_factory" kindref="compound">UIDGeneratorFactory</ref> class helps with the reuse of the allocated generators. </para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/uidGeneratorFactory.h" line="44" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/uidGeneratorFactory.h" bodystart="45" bodyend="82"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_u_i_d_generator_factory_1a68b279c168ec2cfef6907aa0b5b192c5" prot="public" virt="non-virtual"><scope>dicomhero::UIDGeneratorFactory</scope><name>getDefaultUIDGenerator</name></member>
+      <member refid="classdicomhero_1_1_u_i_d_generator_factory_1a02219b60724d2a588e6e06d8b40bbdec" prot="public" virt="non-virtual"><scope>dicomhero::UIDGeneratorFactory</scope><name>getUIDGenerator</name></member>
+      <member refid="classdicomhero_1_1_u_i_d_generator_factory_1a6f6b2279554defe256fae9a5ed6cb906" prot="public" virt="non-virtual"><scope>dicomhero::UIDGeneratorFactory</scope><name>registerUIDGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

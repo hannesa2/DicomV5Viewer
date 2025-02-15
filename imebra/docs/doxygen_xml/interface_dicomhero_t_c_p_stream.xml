@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_t_c_p_stream" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroTCPStream</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_tcpStream.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_t_c_p_stream_1a454aebf9033d8100a399cfb6dc389425" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroTCPStream::m_TCPStream</definition>
+        <argsstring></argsstring>
+        <name>m_TCPStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpStream.h" line="35" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpStream.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_t_c_p_stream_1abc42899bed57567903d760e13313cd30" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroTCPStream::initWithDicomheroTcpStream:</definition>
+        <argsstring>(void *parameter_TCPStream)</argsstring>
+        <name>initWithDicomheroTcpStream:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_TCPStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpStream.h" line="35" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_t_c_p_stream_1a6011848a2196ee3998a1efc25c1b9160" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroTCPStream::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpStream.h" line="35" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_t_c_p_stream_1a1dafb1b5ab945660728c1717a284f060" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroTCPStream::initWithAddress:error:</definition>
+        <argsstring>(DicomheroTCPActiveAddress *pAddress,[error] NSError **pError)</argsstring>
+        <name>initWithAddress:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_t_c_p_active_address" kindref="compound">DicomheroTCPActiveAddress</ref> *</type>
+          <declname>pAddress</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Construct a TCP socket and connects it to the destination address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a non-blocking operation (the connection proceed after the constructor returns). Connection errors will be reported later while the communication happens.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the address to which the socket has to be connected. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a StreamError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpStream.h" line="35" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_t_c_p_stream_1a92ab59e28eb51047ae12a5e44249ffb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_t_c_p_address" kindref="compound">DicomheroTCPAddress</ref> *</type>
+        <definition>DicomheroTCPAddress* DicomheroTCPStream::getPeerAddress:</definition>
+        <argsstring>(NSError **pError)</argsstring>
+        <name>getPeerAddress:</name>
+        <param>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Returns the address of the connected peer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a StreamError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the address of the connected peer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpStream.h" line="35" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_t_c_p_stream_1ac7122537e498e6bdc8ffea3932718f13" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_base_stream_input" kindref="compound">DicomheroBaseStreamInput</ref> *</type>
+        <definition>DicomheroBaseStreamInput* DicomheroTCPStream::getStreamInput</definition>
+        <argsstring>()</argsstring>
+        <name>getStreamInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpStream.h" line="35" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_t_c_p_stream_1a4d93e72f81608582e185c9b5a52a6916" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_base_stream_output" kindref="compound">DicomheroBaseStreamOutput</ref> *</type>
+        <definition>DicomheroBaseStreamOutput* DicomheroTCPStream::getStreamOutput</definition>
+        <argsstring>()</argsstring>
+        <name>getStreamOutput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpStream.h" line="35" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a TCP stream. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpStream.h" line="31" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_tcpStream.h" bodystart="33" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_t_c_p_stream_1a6011848a2196ee3998a1efc25c1b9160" prot="public" virt="virtual"><scope>DicomheroTCPStream</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_t_c_p_stream_1a92ab59e28eb51047ae12a5e44249ffb9" prot="public" virt="virtual"><scope>DicomheroTCPStream</scope><name>getPeerAddress:</name></member>
+      <member refid="interface_dicomhero_t_c_p_stream_1ac7122537e498e6bdc8ffea3932718f13" prot="public" virt="virtual"><scope>DicomheroTCPStream</scope><name>getStreamInput</name></member>
+      <member refid="interface_dicomhero_t_c_p_stream_1a4d93e72f81608582e185c9b5a52a6916" prot="public" virt="virtual"><scope>DicomheroTCPStream</scope><name>getStreamOutput</name></member>
+      <member refid="interface_dicomhero_t_c_p_stream_1a1dafb1b5ab945660728c1717a284f060" prot="public" virt="virtual"><scope>DicomheroTCPStream</scope><name>initWithAddress:error:</name></member>
+      <member refid="interface_dicomhero_t_c_p_stream_1abc42899bed57567903d760e13313cd30" prot="public" virt="virtual"><scope>DicomheroTCPStream</scope><name>initWithDicomheroTcpStream:</name></member>
+      <member refid="interface_dicomhero_t_c_p_stream_1a454aebf9033d8100a399cfb6dc389425" prot="public" virt="non-virtual"><scope>DicomheroTCPStream</scope><name>m_TCPStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_image" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroImage</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_image.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_image_1abfe20388d0aab4821548aed86385cea6" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroImage::m_Image</definition>
+        <argsstring></argsstring>
+        <name>m_Image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" line="63" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_image_1a23dca0b70c64849712b294ca241eb735" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroImage::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <read></read>
+        <briefdescription>
+<para>Retrieve the image&apos;s width, in pixels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" line="99" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_image_1af1903dfe04cf9ed5207dbeb4ffb43f6d" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroImage::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <read></read>
+        <briefdescription>
+<para>Retrieve the image&apos;s height, in pixels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" line="104" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_image_1a7aaa0f4808c2d6104fed9c2b67f4cd51" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroImage::colorSpace</definition>
+        <argsstring></argsstring>
+        <name>colorSpace</name>
+        <read></read>
+        <briefdescription>
+<para>Retrieve the Image&apos;s color space. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" line="109" column="15" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_image_1acc13cb40fc63acb01a68406b9a0ced2f" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroImage::channelsNumber</definition>
+        <argsstring></argsstring>
+        <name>channelsNumber</name>
+        <read></read>
+        <briefdescription>
+<para>Return the number of color channels contained by the image. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" line="114" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_image_1a59363f8bbba3bb3a76d601abf1669ab0" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>DicomheroBitDepth</type>
+        <definition>DicomheroBitDepth DicomheroImage::depth</definition>
+        <argsstring></argsstring>
+        <name>depth</name>
+        <read></read>
+        <briefdescription>
+<para>Return the type of the channels&apos; values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" line="119" column="24" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_image_1a43191f7462886cd55631d31f5dc39f36" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroImage::highBit</definition>
+        <argsstring></argsstring>
+        <name>highBit</name>
+        <read></read>
+        <briefdescription>
+<para>Return the highest bit occupied by the channels&apos; values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" line="124" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_image_1a01f7b4e92c81f2e0024f946819784a0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroImage::initWithDicomheroImage:</definition>
+        <argsstring>(void *parameter_Image)</argsstring>
+        <name>initWithDicomheroImage:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_Image</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" line="63" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_image_1a1ad238ed6ac64cd95f1f86197c2f5ec2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroImage::initWithWidth:height:depth:colorSpace:highBit:</definition>
+        <argsstring>(unsigned int width,[height] unsigned int height,[depth] DicomheroBitDepth depth,[colorSpace] NSString *colorSpace,[highBit] unsigned int highBit)</argsstring>
+        <name>initWithWidth:height:depth:colorSpace:highBit:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <attributes>[height]</attributes>
+          <type>unsigned int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <attributes>[depth]</attributes>
+          <type>DicomheroBitDepth</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <attributes>[colorSpace]</attributes>
+          <type>NSString *</type>
+          <declname>colorSpace</declname>
+        </param>
+        <param>
+          <attributes>[highBit]</attributes>
+          <type>unsigned int</type>
+          <declname>highBit</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The memory for the image is not allocated by the constructor but only when a WritingDataHandler is requested with getWritingDataHandler().</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the image width, in pixels </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the image height, in pixels </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel values data types </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>colorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Image&apos;s color space </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>highBit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the highest bit occupied by the channels&apos; values </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" line="63" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_image_1ad76d99dd3618035b60b4c65f813d0290" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroImage::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" line="63" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_image_1a4f39c6f48d0f3ee531cde47e96e8f9cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_reading_data_handler_numeric" kindref="compound">DicomheroReadingDataHandlerNumeric</ref> *</type>
+        <definition>DicomheroReadingDataHandlerNumeric* DicomheroImage::getReadingDataHandler:</definition>
+        <argsstring>(NSError **pError)</argsstring>
+        <name>getReadingDataHandler:</name>
+        <param>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a <ref refid="interface_dicomhero_reading_data_handler_numeric" kindref="compound">DicomheroReadingDataHandlerNumeric</ref> object referencing the image&apos;s memory (read only). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The memory referenced by ImageReadingDataHandlerNumeric contains all the image&apos;s pixels. The color channels are interleaved.</para>
+<para><simplesect kind="return"><para>a <ref refid="interface_dicomhero_reading_data_handler_numeric" kindref="compound">DicomheroReadingDataHandlerNumeric</ref> object referencing the Image&apos;s memory in read-only mode </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" line="63" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_image_1a2b1343f9bdea980757bfdabe5e242f64" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_writing_data_handler_numeric" kindref="compound">DicomheroWritingDataHandlerNumeric</ref> *</type>
+        <definition>DicomheroWritingDataHandlerNumeric* DicomheroImage::getWritingDataHandler:</definition>
+        <argsstring>(NSError **pError)</argsstring>
+        <name>getWritingDataHandler:</name>
+        <param>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a <ref refid="interface_dicomhero_writing_data_handler_numeric" kindref="compound">DicomheroWritingDataHandlerNumeric</ref> object referencing the image&apos;s memory (mutable). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The memory referenced by the <ref refid="interface_dicomhero_writing_data_handler_numeric" kindref="compound">DicomheroWritingDataHandlerNumeric</ref> object is uninitialized.</para>
+<para>When the <ref refid="interface_dicomhero_writing_data_handler_numeric" kindref="compound">DicomheroWritingDataHandlerNumeric</ref> object is destroyed then the memory managed by the handler replaces the old image&apos;s memory.</para>
+<para><simplesect kind="return"><para>a <ref refid="interface_dicomhero_writing_data_handler_numeric" kindref="compound">DicomheroWritingDataHandlerNumeric</ref> object referencing an uninitialized memory buffer that the client has to fill the the image&apos;s data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" line="124" column="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a DICOM image. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The class manages an uncompressed DICOM image. Images are compressed when they are inserted into the DataSet via DataSet::setImage() and are decompressed when they are referenced by the Image class.</para>
+<para>The image is stored in a contiguous area of memory: each channel&apos;s value can occupy 1, 2 or 4 bytes, according to the Image&apos;s data type.</para>
+<para>Channels&apos; values are always interleaved in the Image class, regardless of how they are stored in the DataSet object. </para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" line="59" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_image.h" bodystart="61" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_image_1acc13cb40fc63acb01a68406b9a0ced2f" prot="public" virt="non-virtual"><scope>DicomheroImage</scope><name>channelsNumber</name></member>
+      <member refid="interface_dicomhero_image_1a7aaa0f4808c2d6104fed9c2b67f4cd51" prot="public" virt="non-virtual"><scope>DicomheroImage</scope><name>colorSpace</name></member>
+      <member refid="interface_dicomhero_image_1ad76d99dd3618035b60b4c65f813d0290" prot="public" virt="virtual"><scope>DicomheroImage</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_image_1a59363f8bbba3bb3a76d601abf1669ab0" prot="public" virt="non-virtual"><scope>DicomheroImage</scope><name>depth</name></member>
+      <member refid="interface_dicomhero_image_1a4f39c6f48d0f3ee531cde47e96e8f9cb" prot="public" virt="virtual"><scope>DicomheroImage</scope><name>getReadingDataHandler:</name></member>
+      <member refid="interface_dicomhero_image_1a2b1343f9bdea980757bfdabe5e242f64" prot="public" virt="virtual"><scope>DicomheroImage</scope><name>getWritingDataHandler:</name></member>
+      <member refid="interface_dicomhero_image_1af1903dfe04cf9ed5207dbeb4ffb43f6d" prot="public" virt="non-virtual"><scope>DicomheroImage</scope><name>height</name></member>
+      <member refid="interface_dicomhero_image_1a43191f7462886cd55631d31f5dc39f36" prot="public" virt="non-virtual"><scope>DicomheroImage</scope><name>highBit</name></member>
+      <member refid="interface_dicomhero_image_1a01f7b4e92c81f2e0024f946819784a0a" prot="public" virt="virtual"><scope>DicomheroImage</scope><name>initWithDicomheroImage:</name></member>
+      <member refid="interface_dicomhero_image_1a1ad238ed6ac64cd95f1f86197c2f5ec2" prot="public" virt="virtual"><scope>DicomheroImage</scope><name>initWithWidth:height:depth:colorSpace:highBit:</name></member>
+      <member refid="interface_dicomhero_image_1abfe20388d0aab4821548aed86385cea6" prot="public" virt="non-virtual"><scope>DicomheroImage</scope><name>m_Image</name></member>
+      <member refid="interface_dicomhero_image_1a23dca0b70c64849712b294ca241eb735" prot="public" virt="non-virtual"><scope>DicomheroImage</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

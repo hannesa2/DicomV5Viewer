@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_stream_reader" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroStreamReader</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_streamReader.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_stream_reader_1a59ccce891bb3259a7407672342dedb07" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroStreamReader::m_StreamReader</definition>
+        <argsstring></argsstring>
+        <name>m_StreamReader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamReader.h" line="39" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamReader.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_stream_reader_1a3279e329b7bfe75586c0cb92bd0db3f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroStreamReader::initWithDicomheroStreamReader:</definition>
+        <argsstring>(void *parameter_StreamReader)</argsstring>
+        <name>initWithDicomheroStreamReader:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_StreamReader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamReader.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_stream_reader_1a0d2910d240d20d62b960d856c7ac849f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroStreamReader::initWithInputStream:</definition>
+        <argsstring>(DicomheroBaseStreamInput *pInput)</argsstring>
+        <name>initWithInputStream:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_base_stream_input" kindref="compound">DicomheroBaseStreamInput</ref> *</type>
+          <declname>pInput</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="interface_dicomhero_base_stream_input" kindref="compound">DicomheroBaseStreamInput</ref> object from which the ž <ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> will read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamReader.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_stream_reader_1a95670993d25bc44e1ca66f46e7d18d6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroStreamReader::initWithInputStream:virtualStart:virtualEnd:</definition>
+        <argsstring>(DicomheroBaseStreamInput *pInput,[virtualStart] unsigned int virtualStart,[virtualEnd] unsigned int virtualEnd)</argsstring>
+        <name>initWithInputStream:virtualStart:virtualEnd:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_base_stream_input" kindref="compound">DicomheroBaseStreamInput</ref> *</type>
+          <declname>pInput</declname>
+        </param>
+        <param>
+          <attributes>[virtualStart]</attributes>
+          <type>unsigned int</type>
+          <declname>virtualStart</declname>
+        </param>
+        <param>
+          <attributes>[virtualEnd]</attributes>
+          <type>unsigned int</type>
+          <declname>virtualEnd</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This version of the constructor limits the portion of the stream that the <ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> will see.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="interface_dicomhero_base_stream_input" kindref="compound">DicomheroBaseStreamInput</ref> object from which the ž <ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> will read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>virtualStart</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first visible byte of the managed stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>virtualLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of visible bytes in the managed stream </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamReader.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_stream_reader_1af9e303e51ac4e6e1dfc1f14827c271dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroStreamReader::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamReader.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_stream_reader_1abf262cbb08d774c56d5dcf39f8d17f48" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> *</type>
+        <definition>DicomheroStreamReader* DicomheroStreamReader::getVirtualStream:error:</definition>
+        <argsstring>(unsigned int virtualSize,[error] NSError **pError)</argsstring>
+        <name>getVirtualStream:error:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>virtualSize</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Returns a virtual stream that has a restricted view into the stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The reading position of this stream advances to the end of the virtual stream.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>virtualSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of bytes that the virtual stream can read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a virtual stream that sees a limited number of bytes of this stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamReader.h" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_stream_reader_1acfed06e398cc118a45d3fb2a3841c70d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroStreamReader::terminate</definition>
+        <argsstring>()</argsstring>
+        <name>terminate</name>
+        <briefdescription>
+<para>Cause the controlled stream to set the DicomheroStreamClosedError during the next read operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This can be used to cause reading threads to terminate. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamReader.h" line="39" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> is used to read data from a <ref refid="interface_dicomhero_base_stream_input" kindref="compound">DicomheroBaseStreamInput</ref> object. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> can be mapped to only a portion of the <ref refid="interface_dicomhero_base_stream_input" kindref="compound">DicomheroBaseStreamInput</ref> it manages: for instance this is used by the Imebra classes to read Jpeg streams embedded into a DICOM stream.</para>
+<para><simplesect kind="warning"><para>The dicomheroStreamReader object IS NOT THREAD-SAFE: however, several <ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> objects from different threads can be connected to the same <ref refid="interface_dicomhero_base_stream_input" kindref="compound">DicomheroBaseStreamInput</ref> object. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamReader.h" line="35" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_streamReader.h" bodystart="37" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_stream_reader_1af9e303e51ac4e6e1dfc1f14827c271dc" prot="public" virt="virtual"><scope>DicomheroStreamReader</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_stream_reader_1abf262cbb08d774c56d5dcf39f8d17f48" prot="public" virt="virtual"><scope>DicomheroStreamReader</scope><name>getVirtualStream:error:</name></member>
+      <member refid="interface_dicomhero_stream_reader_1a3279e329b7bfe75586c0cb92bd0db3f6" prot="public" virt="virtual"><scope>DicomheroStreamReader</scope><name>initWithDicomheroStreamReader:</name></member>
+      <member refid="interface_dicomhero_stream_reader_1a0d2910d240d20d62b960d856c7ac849f" prot="public" virt="virtual"><scope>DicomheroStreamReader</scope><name>initWithInputStream:</name></member>
+      <member refid="interface_dicomhero_stream_reader_1a95670993d25bc44e1ca66f46e7d18d6a" prot="public" virt="virtual"><scope>DicomheroStreamReader</scope><name>initWithInputStream:virtualStart:virtualEnd:</name></member>
+      <member refid="interface_dicomhero_stream_reader_1a59ccce891bb3259a7407672342dedb07" prot="public" virt="non-virtual"><scope>DicomheroStreamReader</scope><name>m_StreamReader</name></member>
+      <member refid="interface_dicomhero_stream_reader_1acfed06e398cc118a45d3fb2a3841c70d" prot="public" virt="virtual"><scope>DicomheroStreamReader</scope><name>terminate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_memory_pool" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroMemoryPool</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_dicomhero_memory_pool_1a390d6b1715be666e1304b4b2bea67888" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroMemoryPool::flush</definition>
+        <argsstring>()</argsstring>
+        <name>flush</name>
+        <briefdescription>
+<para>Release all the unused memory regions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_memoryPool.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_memory_pool_1a9a2060851f014fadbc2faa6158f5e538" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroMemoryPool::getUnusedMemorySize</definition>
+        <argsstring>()</argsstring>
+        <name>getUnusedMemorySize</name>
+        <briefdescription>
+<para>Return the total size of the memory that has been released but not yet freed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the total size of the memory released but not yet freed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_memoryPool.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_memory_pool_1aa41368062743eab64c581a5f6d28f956" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroMemoryPool::setMemoryPoolSize:maxSize:</definition>
+        <argsstring>(unsigned int minMemoryBlockSize,[maxSize] unsigned int maxMemoryPoolSize)</argsstring>
+        <name>setMemoryPoolSize:maxSize:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>minMemoryBlockSize</declname>
+        </param>
+        <param>
+          <attributes>[maxSize]</attributes>
+          <type>unsigned int</type>
+          <declname>maxMemoryPoolSize</declname>
+        </param>
+        <briefdescription>
+<para>Set the maximum size of the kept unused memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>minMemoryBlockSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if a memory region is smaller than this size then when it is released it is deleted immediately, otherwise it is kept in the memory pool </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxMemoryPoolSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum size of the sum of all the unused memory regions. When the total size of the unused memory regions is greater than this parameter then the oldest memory regions are deleted permanently </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_memoryPool.h" line="1" column="0"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_memoryPool.h" line="19" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_memoryPool.h" bodystart="20" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_memory_pool_1a390d6b1715be666e1304b4b2bea67888" prot="public" virt="virtual"><scope>DicomheroMemoryPool</scope><name>flush</name></member>
+      <member refid="interface_dicomhero_memory_pool_1a9a2060851f014fadbc2faa6158f5e538" prot="public" virt="virtual"><scope>DicomheroMemoryPool</scope><name>getUnusedMemorySize</name></member>
+      <member refid="interface_dicomhero_memory_pool_1aa41368062743eab64c581a5f6d28f956" prot="public" virt="virtual"><scope>DicomheroMemoryPool</scope><name>setMemoryPoolSize:maxSize:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

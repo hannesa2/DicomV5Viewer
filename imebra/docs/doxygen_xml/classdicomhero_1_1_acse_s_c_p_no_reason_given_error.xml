@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_acse_s_c_p_no_reason_given_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::AcseSCPNoReasonGivenError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_acse_rejected_association_error" prot="public" virt="non-virtual">dicomhero::AcseRejectedAssociationError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_acse_s_c_p_no_reason_given_error_1a810eb9378556a3e7d8ae84994f1cde50" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AcseSCPNoReasonGivenError::AcseSCPNoReasonGivenError</definition>
+        <argsstring>(const std::string &amp;message, bool bPermanent)</argsstring>
+        <name>AcseSCPNoReasonGivenError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bPermanent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1758" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_s_c_p_no_reason_given_error_1a7a80b39c0eb3235fd3922f826f50b859" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AcseSCPNoReasonGivenError::AcseSCPNoReasonGivenError</definition>
+        <argsstring>(const AcseSCPNoReasonGivenError &amp;source)</argsstring>
+        <name>AcseSCPNoReasonGivenError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_acse_s_c_p_no_reason_given_error" kindref="compound">AcseSCPNoReasonGivenError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1760" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_s_c_p_no_reason_given_error_1afc09a951706a76cf30ac99ea3c82f8f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_acse_s_c_p_no_reason_given_error" kindref="compound">AcseSCPNoReasonGivenError</ref> &amp;</type>
+        <definition>AcseSCPNoReasonGivenError&amp; dicomhero::AcseSCPNoReasonGivenError::operator=</definition>
+        <argsstring>(const AcseSCPNoReasonGivenError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_acse_s_c_p_no_reason_given_error" kindref="compound">AcseSCPNoReasonGivenError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1762" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_s_c_p_no_reason_given_error_1a5fed386c10ee5717ea7169412ced439a" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::AcseSCPNoReasonGivenError::~AcseSCPNoReasonGivenError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~AcseSCPNoReasonGivenError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1764" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Exception thrown when the association is rejected by the SCP without any particular reason given. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dicomhero::AcseRejectedAssociationError</label>
+        <link refid="classdicomhero_1_1_acse_rejected_association_error"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dicomhero::AcseError</label>
+        <link refid="classdicomhero_1_1_acse_error"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::AcseSCPNoReasonGivenError</label>
+        <link refid="classdicomhero_1_1_acse_s_c_p_no_reason_given_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dicomhero::AcseRejectedAssociationError</label>
+        <link refid="classdicomhero_1_1_acse_rejected_association_error"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dicomhero::AcseError</label>
+        <link refid="classdicomhero_1_1_acse_error"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::AcseSCPNoReasonGivenError</label>
+        <link refid="classdicomhero_1_1_acse_s_c_p_no_reason_given_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1755" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="1756" bodyend="1765"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_acse_error_1adbb42aa40c7a143809c083a281f49e7d" prot="public" virt="non-virtual"><scope>dicomhero::AcseSCPNoReasonGivenError</scope><name>AcseError</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1a6becca8ff22e9b1719d2856af94a8417" prot="public" virt="non-virtual"><scope>dicomhero::AcseSCPNoReasonGivenError</scope><name>AcseError</name></member>
+      <member refid="classdicomhero_1_1_acse_rejected_association_error_1acc909b5c71cf72c403cda3e2103dddf2" prot="public" virt="non-virtual"><scope>dicomhero::AcseSCPNoReasonGivenError</scope><name>AcseRejectedAssociationError</name></member>
+      <member refid="classdicomhero_1_1_acse_rejected_association_error_1a921a9149e500a23c4893e1459d98a907" prot="public" virt="non-virtual"><scope>dicomhero::AcseSCPNoReasonGivenError</scope><name>AcseRejectedAssociationError</name></member>
+      <member refid="classdicomhero_1_1_acse_s_c_p_no_reason_given_error_1a810eb9378556a3e7d8ae84994f1cde50" prot="public" virt="non-virtual"><scope>dicomhero::AcseSCPNoReasonGivenError</scope><name>AcseSCPNoReasonGivenError</name></member>
+      <member refid="classdicomhero_1_1_acse_s_c_p_no_reason_given_error_1a7a80b39c0eb3235fd3922f826f50b859" prot="public" virt="non-virtual"><scope>dicomhero::AcseSCPNoReasonGivenError</scope><name>AcseSCPNoReasonGivenError</name></member>
+      <member refid="classdicomhero_1_1_acse_rejected_association_error_1a1a71e09482c2efabe81192f43aab1690" prot="public" virt="non-virtual"><scope>dicomhero::AcseSCPNoReasonGivenError</scope><name>isPermanent</name></member>
+      <member refid="classdicomhero_1_1_acse_rejected_association_error_1af1e9ec69b49404e38ebd77f9cbb8a7c6" prot="public" virt="non-virtual"><scope>dicomhero::AcseSCPNoReasonGivenError</scope><name>isTemporary</name></member>
+      <member refid="classdicomhero_1_1_acse_rejected_association_error_1a55214d43a36ee1ab8863226372807ab9" prot="protected" virt="non-virtual"><scope>dicomhero::AcseSCPNoReasonGivenError</scope><name>m_bPermanent</name></member>
+      <member refid="classdicomhero_1_1_acse_s_c_p_no_reason_given_error_1afc09a951706a76cf30ac99ea3c82f8f1" prot="public" virt="non-virtual"><scope>dicomhero::AcseSCPNoReasonGivenError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_acse_rejected_association_error_1aa6f5a908903816f08b36f7c5c82ac2af" prot="public" virt="non-virtual" ambiguityscope="dicomhero::AcseRejectedAssociationError::"><scope>dicomhero::AcseSCPNoReasonGivenError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1a4f961f17b47823241f64229459c21c50" prot="public" virt="non-virtual" ambiguityscope="dicomhero::AcseError::"><scope>dicomhero::AcseSCPNoReasonGivenError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1ab574eff3cad5081bbae7325330357201" prot="public" virt="virtual"><scope>dicomhero::AcseSCPNoReasonGivenError</scope><name>~AcseError</name></member>
+      <member refid="classdicomhero_1_1_acse_rejected_association_error_1a8720b88b00bba1c55f032c4a19905eba" prot="public" virt="virtual"><scope>dicomhero::AcseSCPNoReasonGivenError</scope><name>~AcseRejectedAssociationError</name></member>
+      <member refid="classdicomhero_1_1_acse_s_c_p_no_reason_given_error_1a5fed386c10ee5717ea7169412ced439a" prot="public" virt="virtual"><scope>dicomhero::AcseSCPNoReasonGivenError</scope><name>~AcseSCPNoReasonGivenError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

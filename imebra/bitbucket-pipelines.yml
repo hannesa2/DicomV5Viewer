@@ -1,0 +1,73 @@
+pipelines:
+  default:
+    - step:
+        name: Build for Ubuntu 20.04
+        image: binarno/imebra_docker_build_git
+        script:
+          - alias python=python3
+          - mkdir build
+          - cd build
+          - cmake  ..
+          - cmake --build .
+          - ctest -V .
+          - cd ..
+
+    - step:
+        name: Build for Ubuntu 22.04
+        image: binarno/imebra_docker_ubuntu_2204_build_git
+        script:
+          - export SOURCE_DIR=$(pwd)
+          - cd ..
+          - export BASE_DIR=$(pwd)
+          - alias python=python3
+          #
+          # Test everything, including exceptions tracking
+          #-----------------------------------------------
+          - mkdir $BASE_DIR/cmake_build_test_exception
+          - cd $BASE_DIR/cmake_build_test_exception
+          - cmake -DCMAKE_CXX_STANDARD=17 -DDICOMHERO_LOG_FRAMEWORK=LOG4CXX -DDICOMHERO_LOG_LEVEL=INFO -DDICOMHERO_BUILD_DOCUMENTATION=OFF -DDICOMHERO_EXCEPTION_TRACKING=ON $SOURCE_DIR
+          - cmake --build .
+          - cmake --build . --target dicomheroTests
+          - ctest -R RunDicomheroTestsExceptions -V .
+          - cd $BASE_DIR
+          #
+          # Test without exceptions tracking, to generate a coverage report closer to the real status of branch coverage
+          #-------------------------------------------------------------------------------------------------------------
+          - mkdir $BASE_DIR/cmake_build
+          - cd $BASE_DIR/cmake_build
+          - cmake -DCMAKE_CXX_STANDARD=17 -DDICOMHERO_LOG_FRAMEWORK=LOG4CXX -DDICOMHERO_LOG_LEVEL=INFO -DDICOMHERO_BUILD_DOCUMENTATION=ON -DDICOMHERO_EXCEPTION_TRACKING=OFF $SOURCE_DIR
+          - cmake --build .
+          - cmake --build . --target dicomhero_source_distribution
+          - lcov --zerocounters --directory $BASE_DIR/cmake_build --rc lcov_branch_coverage=1
+          - lcov --capture --initial --directory $BASE_DIR/cmake_build --output-file $BASE_DIR/cmake_build/test.info --rc lcov_branch_coverage=1
+          - ctest -R RunDicomheroTestsNoExceptions -V .
+          - ctest -R RunDicomheroTestsNOASAN -V .
+          - lcov --capture --no-checksum --directory $BASE_DIR/cmake_build --output-file $BASE_DIR/cmake_build/test.info --rc lcov_branch_coverage=1
+          - lcov --extract $BASE_DIR/cmake_build/test.info $SOURCE_DIR/dicomheroCore6/library/*/*.* $SOURCE_DIR/dicomheroCore6/library/*/*/*.* --output-file $BASE_DIR/cmake_build/extracted.info --rc lcov_branch_coverage=1
+          - cd $SOURCE_DIR
+          - mkdir -p $SOURCE_DIR/artifacts/documentation/dicomhero_$(python3 getVersion.py)/coverage
+          - genhtml --rc lcov_branch_coverage=1 --output-directory $SOURCE_DIR/artifacts/documentation/dicomhero_$(python3 getVersion.py)/coverage $BASE_DIR/cmake_build/extracted.info
+          - cp -r $BASE_DIR/cmake_build/docs/html $SOURCE_DIR/artifacts/documentation/dicomhero_$(python3 getVersion.py)/html
+          - echo '<!DOCTYPE html><html><body><h1>Dicomhero</h1><p><a href="html/index.html">Documentation</a></p><p><a href="coverage/index.html">Code coverage</a></p></body></html>' > $SOURCE_DIR/artifacts/documentation/dicomhero_$(python3 getVersion.py)/index.html
+          - cp $BASE_DIR/cmake_build/*.gz $SOURCE_DIR/artifacts
+          - cd $BASE_DIR
+          #
+          # Create a bundle of the repository
+          #----------------------------------
+          - mkdir $BASE_DIR/dicomhero_repo_bundle
+          - cd $BASE_DIR/dicomhero_repo_bundle
+          - git clone --mirror git@bitbucket.org:binarno/imebra_git.git
+          - cd imebra_git.git
+          - git bundle create ../dicomhero.bundle --all
+          - cd $SOURCE_DIR
+          - export bundle_date=$(date +"%Y%m%d-%H%M%S")
+          - mkdir -p $SOURCE_DIR/artifacts/dicomhero_bundle/dicomhero_repo_bundle_$bundle_date
+          - cp $BASE_DIR/dicomhero_repo_bundle/dicomhero.bundle $SOURCE_DIR/artifacts/dicomhero_bundle/dicomhero_repo_bundle_$bundle_date
+          - echo "This is a git bundle. Use <b>git clone dicomhero.bundle</b> to get a working dir.<br/>" >> $SOURCE_DIR/artifacts/dicomhero_bundle/dicomhero_repo_bundle_$bundle_date/instructions.html
+          - cd $BASE_DIR
+
+        artifacts:
+          - artifacts/documentation/**
+          - artifacts/*.gz
+          - artifacts/dicomhero_bundle/**
+          

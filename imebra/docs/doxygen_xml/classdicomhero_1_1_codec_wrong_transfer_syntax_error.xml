@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_codec_wrong_transfer_syntax_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::CodecWrongTransferSyntaxError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_codec_error" prot="public" virt="non-virtual">dicomhero::CodecError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_codec_wrong_transfer_syntax_error_1ac758f491627c84938cd75b513a26d016" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::CodecWrongTransferSyntaxError::CodecWrongTransferSyntaxError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>CodecWrongTransferSyntaxError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="654" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_codec_wrong_transfer_syntax_error_1a671f4356b5b999cfb2f33b5b9bda2bd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::CodecWrongTransferSyntaxError::CodecWrongTransferSyntaxError</definition>
+        <argsstring>(const CodecWrongTransferSyntaxError &amp;source)</argsstring>
+        <name>CodecWrongTransferSyntaxError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_codec_wrong_transfer_syntax_error" kindref="compound">CodecWrongTransferSyntaxError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="656" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_codec_wrong_transfer_syntax_error_1ab7bda3dcee439d1a40423fcee64257c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_codec_wrong_transfer_syntax_error" kindref="compound">CodecWrongTransferSyntaxError</ref> &amp;</type>
+        <definition>CodecWrongTransferSyntaxError&amp; dicomhero::CodecWrongTransferSyntaxError::operator=</definition>
+        <argsstring>(const CodecWrongTransferSyntaxError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_codec_wrong_transfer_syntax_error" kindref="compound">CodecWrongTransferSyntaxError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="658" column="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_codec_wrong_transfer_syntax_error_1ad9a0a1bc84ed560f0600f4a3ab8c932f" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::CodecWrongTransferSyntaxError::~CodecWrongTransferSyntaxError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~CodecWrongTransferSyntaxError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="660" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This exception is thrown when the transfer syntax is not recognized by the codec. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dicomhero::CodecError</label>
+        <link refid="classdicomhero_1_1_codec_error"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::CodecWrongTransferSyntaxError</label>
+        <link refid="classdicomhero_1_1_codec_wrong_transfer_syntax_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dicomhero::CodecError</label>
+        <link refid="classdicomhero_1_1_codec_error"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::CodecWrongTransferSyntaxError</label>
+        <link refid="classdicomhero_1_1_codec_wrong_transfer_syntax_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="646" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="647" bodyend="661"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_codec_error_1aa45cac1a20d58181456f129e237cdfa3" prot="public" virt="non-virtual"><scope>dicomhero::CodecWrongTransferSyntaxError</scope><name>CodecError</name></member>
+      <member refid="classdicomhero_1_1_codec_error_1a0a70b95ba0045ba4c1f0a000e973303a" prot="public" virt="non-virtual"><scope>dicomhero::CodecWrongTransferSyntaxError</scope><name>CodecError</name></member>
+      <member refid="classdicomhero_1_1_codec_wrong_transfer_syntax_error_1ac758f491627c84938cd75b513a26d016" prot="public" virt="non-virtual"><scope>dicomhero::CodecWrongTransferSyntaxError</scope><name>CodecWrongTransferSyntaxError</name></member>
+      <member refid="classdicomhero_1_1_codec_wrong_transfer_syntax_error_1a671f4356b5b999cfb2f33b5b9bda2bd6" prot="public" virt="non-virtual"><scope>dicomhero::CodecWrongTransferSyntaxError</scope><name>CodecWrongTransferSyntaxError</name></member>
+      <member refid="classdicomhero_1_1_codec_wrong_transfer_syntax_error_1ab7bda3dcee439d1a40423fcee64257c8" prot="public" virt="non-virtual"><scope>dicomhero::CodecWrongTransferSyntaxError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_codec_error_1abeae1a2fb36ddd53a8323131a490a3b9" prot="public" virt="non-virtual" ambiguityscope="dicomhero::CodecError::"><scope>dicomhero::CodecWrongTransferSyntaxError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_codec_error_1a6faa1ea3bd39b5ca09c0843f10a2db4f" prot="public" virt="virtual"><scope>dicomhero::CodecWrongTransferSyntaxError</scope><name>~CodecError</name></member>
+      <member refid="classdicomhero_1_1_codec_wrong_transfer_syntax_error_1ad9a0a1bc84ed560f0600f4a3ab8c932f" prot="public" virt="virtual"><scope>dicomhero::CodecWrongTransferSyntaxError</scope><name>~CodecWrongTransferSyntaxError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

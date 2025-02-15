@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_presentation_context" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroPresentationContext</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_acse.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_presentation_context_1ad70d37ea329c1c614f1eca21db28c028" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroPresentationContext::m_PresentationContext</definition>
+        <argsstring></argsstring>
+        <name>m_PresentationContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="33" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_presentation_context_1a5c4c8fc640e5a96f99d96b2a5feb62a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroPresentationContext::initWithAbstractSyntax:</definition>
+        <argsstring>(NSString *abstractSyntax)</argsstring>
+        <name>initWithAbstractSyntax:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>abstractSyntax</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The SCU will act as SCU and the SCP will act as SCP when using this presentation context. To specify the roles of the SCU and the SCP use the initializer which includes the roles parameters.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>abstractSyntax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the abstract syntax described by this presentation context </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="33" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_presentation_context_1ab42389e68dc31fcfa9c2c581cca3c6be" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroPresentationContext::initWithAbstractSyntax:scuRole:scpRole:</definition>
+        <argsstring>(NSString *abstractSyntax,[scuRole] BOOL bSCURole,[scpRole] BOOL bSCPRole)</argsstring>
+        <name>initWithAbstractSyntax:scuRole:scpRole:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>abstractSyntax</declname>
+        </param>
+        <param>
+          <attributes>[scuRole]</attributes>
+          <type>BOOL</type>
+          <declname>bSCURole</declname>
+        </param>
+        <param>
+          <attributes>[scpRole]</attributes>
+          <type>BOOL</type>
+          <declname>bSCPRole</declname>
+        </param>
+        <briefdescription>
+<para>Initializer that specifies the SCU/SCP roles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>abstractSyntax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the abstract syntax described by this presentation context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bSCURole</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true then the SCU will act as an SCU. The SCU and SCP can be both an SCU and an SCP for the same abstract syntax </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bSCPRole</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true then the SCU will act as an SCP The SCU and SCP can be both an SCU and an SCP for the same abstract syntax </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="33" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_presentation_context_1a9406584c9281deed7b930e2aa7697c26" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroPresentationContext::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="33" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_presentation_context_1ace1c0bbfbcb5373f2757a83ae6033397" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroPresentationContext::addTransferSyntax:</definition>
+        <argsstring>(NSString *transferSyntax)</argsstring>
+        <name>addTransferSyntax:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>transferSyntax</declname>
+        </param>
+        <briefdescription>
+<para>Add a supported transfer syntax to the presentation context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>transferSyntax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the transfer syntax to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="33" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A presentation context defines which transfer syntaxes are supported for a specific abstract syntax. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" line="30" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_acse.h" bodystart="31" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_presentation_context_1ace1c0bbfbcb5373f2757a83ae6033397" prot="public" virt="virtual"><scope>DicomheroPresentationContext</scope><name>addTransferSyntax:</name></member>
+      <member refid="interface_dicomhero_presentation_context_1a9406584c9281deed7b930e2aa7697c26" prot="public" virt="virtual"><scope>DicomheroPresentationContext</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_presentation_context_1a5c4c8fc640e5a96f99d96b2a5feb62a5" prot="public" virt="virtual"><scope>DicomheroPresentationContext</scope><name>initWithAbstractSyntax:</name></member>
+      <member refid="interface_dicomhero_presentation_context_1ab42389e68dc31fcfa9c2c581cca3c6be" prot="public" virt="virtual"><scope>DicomheroPresentationContext</scope><name>initWithAbstractSyntax:scuRole:scpRole:</name></member>
+      <member refid="interface_dicomhero_presentation_context_1ad70d37ea329c1c614f1eca21db28c028" prot="public" virt="non-virtual"><scope>DicomheroPresentationContext</scope><name>m_PresentationContext</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

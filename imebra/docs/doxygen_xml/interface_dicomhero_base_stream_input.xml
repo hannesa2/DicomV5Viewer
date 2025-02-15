@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_base_stream_input" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroBaseStreamInput</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_file_stream_input" prot="public" virt="non-virtual">DicomheroFileStreamInput</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_memory_stream_input" prot="public" virt="non-virtual">DicomheroMemoryStreamInput</derivedcompoundref>
+    <includes local="no">dicomhero_baseStreamInput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_base_stream_input_1a261395c795087db1033f3414aa242f5e" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroBaseStreamInput::m_BaseStreamInput</definition>
+        <argsstring></argsstring>
+        <name>m_BaseStreamInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamInput.h" line="41" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamInput.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_base_stream_input_1ac491f2638c6e3412bef6739a9c461982" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroBaseStreamInput::initWithDicomheroBaseStreamInput:</definition>
+        <argsstring>(void *parameter_BaseStreamInput)</argsstring>
+        <name>initWithDicomheroBaseStreamInput:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_BaseStreamInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamInput.h" line="41" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_base_stream_input_1ac418885ff6dc16dc55323e242c5fed8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroBaseStreamInput::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamInput.h" line="41" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents a generic input stream. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Specialized classes derived from this one can read data from files stored on the computer&apos;s disks (<ref refid="interface_dicomhero_file_stream_input" kindref="compound">DicomheroFileStreamInput</ref>) or from memory (<ref refid="interface_dicomhero_memory_stream_input" kindref="compound">DicomheroMemoryStreamInput</ref>).</para>
+<para>The client application cannot read the data directly from a <ref refid="interface_dicomhero_base_stream_input" kindref="compound">DicomheroBaseStreamInput</ref> but must use a <ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref>. Several <ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> objects can read data from the same <ref refid="interface_dicomhero_base_stream_input" kindref="compound">DicomheroBaseStreamInput</ref> object.</para>
+<para>The <ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> class is not thread-safe, but different <ref refid="interface_dicomhero_stream_reader" kindref="compound">DicomheroStreamReader</ref> objects in different threads can access the same <ref refid="interface_dicomhero_base_stream_input" kindref="compound">DicomheroBaseStreamInput</ref> object. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>DicomheroFileStreamInput</label>
+        <link refid="interface_dicomhero_file_stream_input"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DicomheroMemoryStreamInput</label>
+        <link refid="interface_dicomhero_memory_stream_input"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DicomheroBaseStreamInput</label>
+        <link refid="interface_dicomhero_base_stream_input"/>
+      </node>
+    </inheritancegraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamInput.h" line="37" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_baseStreamInput.h" bodystart="39" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_base_stream_input_1ac418885ff6dc16dc55323e242c5fed8c" prot="public" virt="virtual"><scope>DicomheroBaseStreamInput</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_base_stream_input_1ac491f2638c6e3412bef6739a9c461982" prot="public" virt="virtual"><scope>DicomheroBaseStreamInput</scope><name>initWithDicomheroBaseStreamInput:</name></member>
+      <member refid="interface_dicomhero_base_stream_input_1a261395c795087db1033f3414aa242f5e" prot="public" virt="non-virtual"><scope>DicomheroBaseStreamInput</scope><name>m_BaseStreamInput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

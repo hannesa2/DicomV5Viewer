@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_acse_error" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroAcseError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSError</basecompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_corrupted_message_error" prot="public" virt="non-virtual">DicomheroAcseCorruptedMessageError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_no_payload_error" prot="public" virt="non-virtual">DicomheroAcseNoPayloadError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_no_transfer_syntax_error" prot="public" virt="non-virtual">DicomheroAcseNoTransferSyntaxError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_presentation_context_not_requested_error" prot="public" virt="non-virtual">DicomheroAcsePresentationContextNotRequestedError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_rejected_association_error" prot="public" virt="non-virtual">DicomheroAcseRejectedAssociationError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_too_many_operations_invoked_error" prot="public" virt="non-virtual">DicomheroAcseTooManyOperationsInvokedError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_too_many_operations_performed_error" prot="public" virt="non-virtual">DicomheroAcseTooManyOperationsPerformedError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_wrong_id_error" prot="public" virt="non-virtual">DicomheroAcseWrongIdError</derivedcompoundref>
+    <derivedcompoundref refid="interface_dicomhero_acse_wrong_role_error" prot="public" virt="non-virtual">DicomheroAcseWrongRoleError</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_exceptions.h" line="218" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_exceptions.h" bodystart="219" bodyend="-1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

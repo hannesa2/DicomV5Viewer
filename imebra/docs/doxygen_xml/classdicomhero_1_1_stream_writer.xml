@@ -1,0 +1,391 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_stream_writer" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::StreamWriter</compoundname>
+    <includes local="no">streamWriter.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_stream_writer_1a23c0ade62d1edf18d9097d5ffda4417f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class CodecFactory</definition>
+        <argsstring></argsstring>
+        <name>CodecFactory</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_codec_factory" kindref="compound">CodecFactory</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="52" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_stream_writer_1afc8c1b0e7f1fedf25715bd33b74eb56c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Tag</definition>
+        <argsstring></argsstring>
+        <name>Tag</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="53" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_stream_writer_1ac9e4ca3c0328ebf261d76d2682c5e08a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class AssociationSCU</definition>
+        <argsstring></argsstring>
+        <name>AssociationSCU</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_association_s_c_u" kindref="compound">AssociationSCU</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="54" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_stream_writer_1a2fcfe6ae31ee4e920f8cdbfb7dfce204" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class AssociationSCP</definition>
+        <argsstring></argsstring>
+        <name>AssociationSCP</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_association_s_c_p" kindref="compound">AssociationSCP</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="55" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_stream_writer_1aef648af6c56fa8ee0738c93629e725dc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class DataSet</definition>
+        <argsstring></argsstring>
+        <name>DataSet</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="56" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_stream_writer_1a3f93c668d5f0877b6a497168c488e689" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::shared_ptr&lt; implementation::streamWriter &gt; &amp;</type>
+        <definition>const std::shared_ptr&lt;implementation::streamWriter&gt;&amp; getStreamWriterImplementation</definition>
+        <argsstring>(const StreamWriter &amp;streamWriter)</argsstring>
+        <name>getStreamWriterImplementation</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> &amp;</type>
+          <declname>streamWriter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="121" column="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdicomhero_1_1_stream_writer_1ac29e59448f07a346f1f3a3a5bbb88e37" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; implementation::streamWriter &gt;</type>
+        <definition>std::shared_ptr&lt;implementation::streamWriter&gt; dicomhero::StreamWriter::m_pWriter</definition>
+        <argsstring></argsstring>
+        <name>m_pWriter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="122" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_stream_writer_1a1cfa9efa542d0f0354e01d15edda7f5c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::StreamWriter::StreamWriter</definition>
+        <argsstring>(const BaseStreamOutput &amp;stream)</argsstring>
+        <name>StreamWriter</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_base_stream_output" kindref="compound">BaseStreamOutput</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classdicomhero_1_1_base_stream_output" kindref="compound">BaseStreamOutput</ref> object on which the <ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> will write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="65" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_writer_1ae4b4936906b262cfce4c1bfa416d3a97" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::StreamWriter::StreamWriter</definition>
+        <argsstring>(const BaseStreamOutput &amp;stream, size_t virtualStart, size_t virtualLength)</argsstring>
+        <name>StreamWriter</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_base_stream_output" kindref="compound">BaseStreamOutput</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>virtualStart</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>virtualLength</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This version of the constructor limits the portion of the stream that the <ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> will be able to use.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classdicomhero_1_1_base_stream_output" kindref="compound">BaseStreamOutput</ref> object on which the <ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> will write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>virtualStart</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first visible byte of the managed stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>virtualLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of visible bytes in the managed stream </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="78" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_writer_1afe3165d928d01b67cddcf244c535befe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::StreamWriter::StreamWriter</definition>
+        <argsstring>(const StreamWriter &amp;source)</argsstring>
+        <name>StreamWriter</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="86" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_writer_1a72142129291f5460a0d9e06f4a2b4c60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> &amp;</type>
+        <definition>StreamWriter&amp; dicomhero::StreamWriter::operator=</definition>
+        <argsstring>(const StreamWriter &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="88" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_writer_1a35143e1eb074d23df0b30bf775fa5d37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::StreamWriter::write</definition>
+        <argsstring>(const char *data, size_t dataSize)</argsstring>
+        <name>write</name>
+        <param>
+          <type>const char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dataSize</declname>
+        </param>
+        <briefdescription>
+<para>Write raw data into the stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to the buffer which stores the data that must be written intothe stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bufferLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of bytes that must be written to the stream </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="98" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_writer_1aab5a40fdff89588007bbde68db4648b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::StreamWriter::write</definition>
+        <argsstring>(const Memory &amp;memory)</argsstring>
+        <name>write</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_memory" kindref="compound">Memory</ref> &amp;</type>
+          <declname>memory</declname>
+        </param>
+        <briefdescription>
+<para>Write raw data into the stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>memory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a <ref refid="classdicomhero_1_1_memory" kindref="compound">Memory</ref> object containing the data to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="106" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_writer_1ae99b2376aa6004a43af1073e0222789f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::StreamWriter::flush</definition>
+        <argsstring>()</argsstring>
+        <name>flush</name>
+        <briefdescription>
+<para>Flush all the unwritten data into the controlled stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="112" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_writer_1a6401597720efddaffa19a337adb7f228" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::StreamWriter::~StreamWriter</definition>
+        <argsstring>()</argsstring>
+        <name>~StreamWriter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="114" column="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdicomhero_1_1_stream_writer_1a1674db37db642c77aa2763c24cfe790e" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::StreamWriter::StreamWriter</definition>
+        <argsstring>(const std::shared_ptr&lt; implementation::streamWriter &gt; &amp;pWriter)</argsstring>
+        <name>StreamWriter</name>
+        <param>
+          <type>const std::shared_ptr&lt; implementation::streamWriter &gt; &amp;</type>
+          <declname>pWriter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="118" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> is used to write data into a <ref refid="classdicomhero_1_1_base_stream_output" kindref="compound">BaseStreamOutput</ref> object. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A <ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> can be mapped to only a portion of the <ref refid="classdicomhero_1_1_base_stream_output" kindref="compound">BaseStreamOutput</ref> it manages.</para>
+<para><simplesect kind="warning"><para>: The <ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> object IS NOT THREAD-SAFE: however, several <ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> objects from different threads can be connected to the same <ref refid="classdicomhero_1_1_base_stream_output" kindref="compound">BaseStreamOutput</ref> object. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" line="49" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/streamWriter.h" bodystart="50" bodyend="124"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_stream_writer_1a2fcfe6ae31ee4e920f8cdbfb7dfce204" prot="private" virt="non-virtual"><scope>dicomhero::StreamWriter</scope><name>AssociationSCP</name></member>
+      <member refid="classdicomhero_1_1_stream_writer_1ac9e4ca3c0328ebf261d76d2682c5e08a" prot="private" virt="non-virtual"><scope>dicomhero::StreamWriter</scope><name>AssociationSCU</name></member>
+      <member refid="classdicomhero_1_1_stream_writer_1a23c0ade62d1edf18d9097d5ffda4417f" prot="private" virt="non-virtual"><scope>dicomhero::StreamWriter</scope><name>CodecFactory</name></member>
+      <member refid="classdicomhero_1_1_stream_writer_1aef648af6c56fa8ee0738c93629e725dc" prot="private" virt="non-virtual"><scope>dicomhero::StreamWriter</scope><name>DataSet</name></member>
+      <member refid="classdicomhero_1_1_stream_writer_1ae99b2376aa6004a43af1073e0222789f" prot="public" virt="non-virtual"><scope>dicomhero::StreamWriter</scope><name>flush</name></member>
+      <member refid="classdicomhero_1_1_stream_writer_1a3f93c668d5f0877b6a497168c488e689" prot="private" virt="non-virtual"><scope>dicomhero::StreamWriter</scope><name>getStreamWriterImplementation</name></member>
+      <member refid="classdicomhero_1_1_stream_writer_1ac29e59448f07a346f1f3a3a5bbb88e37" prot="private" virt="non-virtual"><scope>dicomhero::StreamWriter</scope><name>m_pWriter</name></member>
+      <member refid="classdicomhero_1_1_stream_writer_1a72142129291f5460a0d9e06f4a2b4c60" prot="public" virt="non-virtual"><scope>dicomhero::StreamWriter</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_stream_writer_1a1cfa9efa542d0f0354e01d15edda7f5c" prot="public" virt="non-virtual"><scope>dicomhero::StreamWriter</scope><name>StreamWriter</name></member>
+      <member refid="classdicomhero_1_1_stream_writer_1ae4b4936906b262cfce4c1bfa416d3a97" prot="public" virt="non-virtual"><scope>dicomhero::StreamWriter</scope><name>StreamWriter</name></member>
+      <member refid="classdicomhero_1_1_stream_writer_1afe3165d928d01b67cddcf244c535befe" prot="public" virt="non-virtual"><scope>dicomhero::StreamWriter</scope><name>StreamWriter</name></member>
+      <member refid="classdicomhero_1_1_stream_writer_1a1674db37db642c77aa2763c24cfe790e" prot="protected" virt="non-virtual"><scope>dicomhero::StreamWriter</scope><name>StreamWriter</name></member>
+      <member refid="classdicomhero_1_1_stream_writer_1afc8c1b0e7f1fedf25715bd33b74eb56c" prot="private" virt="non-virtual"><scope>dicomhero::StreamWriter</scope><name>Tag</name></member>
+      <member refid="classdicomhero_1_1_stream_writer_1a35143e1eb074d23df0b30bf775fa5d37" prot="public" virt="non-virtual"><scope>dicomhero::StreamWriter</scope><name>write</name></member>
+      <member refid="classdicomhero_1_1_stream_writer_1aab5a40fdff89588007bbde68db4648b4" prot="public" virt="non-virtual"><scope>dicomhero::StreamWriter</scope><name>write</name></member>
+      <member refid="classdicomhero_1_1_stream_writer_1a6401597720efddaffa19a337adb7f228" prot="public" virt="virtual"><scope>dicomhero::StreamWriter</scope><name>~StreamWriter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

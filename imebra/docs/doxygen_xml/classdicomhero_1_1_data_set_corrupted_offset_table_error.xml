@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_data_set_corrupted_offset_table_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::DataSetCorruptedOffsetTableError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_data_set_error" prot="public" virt="non-virtual">dicomhero::DataSetError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_data_set_corrupted_offset_table_error_1aae61e37c190f7d7cb8ae78dc5bb50ed4" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DataSetCorruptedOffsetTableError::DataSetCorruptedOffsetTableError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>DataSetCorruptedOffsetTableError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="941" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_data_set_corrupted_offset_table_error_1a7b800c4db57577e1055edc0ed43f78de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::DataSetCorruptedOffsetTableError::DataSetCorruptedOffsetTableError</definition>
+        <argsstring>(const DataSetCorruptedOffsetTableError &amp;source)</argsstring>
+        <name>DataSetCorruptedOffsetTableError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_data_set_corrupted_offset_table_error" kindref="compound">DataSetCorruptedOffsetTableError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="943" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_data_set_corrupted_offset_table_error_1aa3d570c4af58af0204e4b2146b83f865" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_data_set_corrupted_offset_table_error" kindref="compound">DataSetCorruptedOffsetTableError</ref> &amp;</type>
+        <definition>DataSetCorruptedOffsetTableError&amp; dicomhero::DataSetCorruptedOffsetTableError::operator=</definition>
+        <argsstring>(const DataSetCorruptedOffsetTableError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_data_set_corrupted_offset_table_error" kindref="compound">DataSetCorruptedOffsetTableError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="945" column="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_data_set_corrupted_offset_table_error_1a88820a8b23460eb8e9b1001dff5eccdc" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::DataSetCorruptedOffsetTableError::~DataSetCorruptedOffsetTableError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~DataSetCorruptedOffsetTableError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="947" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This exception is thrown when the basic offset table is corrupted. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dicomhero::DataSetError</label>
+        <link refid="classdicomhero_1_1_data_set_error"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::DataSetCorruptedOffsetTableError</label>
+        <link refid="classdicomhero_1_1_data_set_corrupted_offset_table_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dicomhero::DataSetError</label>
+        <link refid="classdicomhero_1_1_data_set_error"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::DataSetCorruptedOffsetTableError</label>
+        <link refid="classdicomhero_1_1_data_set_corrupted_offset_table_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="933" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="934" bodyend="948"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_data_set_corrupted_offset_table_error_1aae61e37c190f7d7cb8ae78dc5bb50ed4" prot="public" virt="non-virtual"><scope>dicomhero::DataSetCorruptedOffsetTableError</scope><name>DataSetCorruptedOffsetTableError</name></member>
+      <member refid="classdicomhero_1_1_data_set_corrupted_offset_table_error_1a7b800c4db57577e1055edc0ed43f78de" prot="public" virt="non-virtual"><scope>dicomhero::DataSetCorruptedOffsetTableError</scope><name>DataSetCorruptedOffsetTableError</name></member>
+      <member refid="classdicomhero_1_1_data_set_error_1a3f9440d04c8321299c38bf9a777e38c3" prot="public" virt="non-virtual"><scope>dicomhero::DataSetCorruptedOffsetTableError</scope><name>DataSetError</name></member>
+      <member refid="classdicomhero_1_1_data_set_error_1aad232fafaa597cb682694cdcd6fc9386" prot="public" virt="non-virtual"><scope>dicomhero::DataSetCorruptedOffsetTableError</scope><name>DataSetError</name></member>
+      <member refid="classdicomhero_1_1_data_set_corrupted_offset_table_error_1aa3d570c4af58af0204e4b2146b83f865" prot="public" virt="non-virtual"><scope>dicomhero::DataSetCorruptedOffsetTableError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_data_set_error_1ada61ee44f80e6c62ef611012b2448a80" prot="public" virt="non-virtual" ambiguityscope="dicomhero::DataSetError::"><scope>dicomhero::DataSetCorruptedOffsetTableError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_data_set_corrupted_offset_table_error_1a88820a8b23460eb8e9b1001dff5eccdc" prot="public" virt="virtual"><scope>dicomhero::DataSetCorruptedOffsetTableError</scope><name>~DataSetCorruptedOffsetTableError</name></member>
+      <member refid="classdicomhero_1_1_data_set_error_1a8b0d3a41be2b5d810a76b3403919eb6d" prot="public" virt="virtual"><scope>dicomhero::DataSetCorruptedOffsetTableError</scope><name>~DataSetError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

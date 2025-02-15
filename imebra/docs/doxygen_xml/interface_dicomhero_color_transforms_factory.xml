@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_color_transforms_factory" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroColorTransformsFactory</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_colorTransformsFactory.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_dicomhero_color_transforms_factory_1a68049f539920707331797d2f1f7dddf0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroColorTransformsFactory::normalizeColorSpace:</definition>
+        <argsstring>(NSString *colorSpace)</argsstring>
+        <name>normalizeColorSpace:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>colorSpace</declname>
+        </param>
+        <briefdescription>
+<para>Normalize the name of a color space. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>DICOM color spaces may contain additional information like the subsampling factor.</para>
+<para>This method removes the additional information contained in the color space name and makes it upper-case, so it can be compared with other normalized color space names.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space name to normalize </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the normalized color space name </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_colorTransformsFactory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_color_transforms_factory_1ab25ae5a1b051b9754c69c585b7e60561" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>BOOL DicomheroColorTransformsFactory::isMonochrome:</definition>
+        <argsstring>(NSString *colorSpace)</argsstring>
+        <name>isMonochrome:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>colorSpace</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the specified color space name represents a monochromatic color space. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The method takes care of normalizing the color space before analyzing it.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space to test </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the normalized color space name represents a monochromatic color space </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_colorTransformsFactory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_color_transforms_factory_1a22a875da9621b90faecc5ae7d23f54e2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>BOOL DicomheroColorTransformsFactory::isSubsampledX:</definition>
+        <argsstring>(NSString *colorSpace)</argsstring>
+        <name>isSubsampledX:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>colorSpace</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the specified color space name contains additional information that specifies that the pixels are subsampled horizontally. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space to test for additional information about horizontal subsampling </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the color space name specifies that each pixel is subsampled horizontally </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_colorTransformsFactory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_color_transforms_factory_1a0e46a059424419a8a590ae42090143dd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>BOOL DicomheroColorTransformsFactory::isSubsampledY:</definition>
+        <argsstring>(NSString *colorSpace)</argsstring>
+        <name>isSubsampledY:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>colorSpace</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the specified color space name contains additional information that specifies that the pixels are subsampled vertically. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space to test for additional information about vertical subsampling </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the color space name specifies that each pixel is subsampled vertically </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_colorTransformsFactory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_color_transforms_factory_1a9e82b5de0b5fb0122dce3fe519ba2bb6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>BOOL DicomheroColorTransformsFactory::canSubsample:</definition>
+        <argsstring>(NSString *colorSpace)</argsstring>
+        <name>canSubsample:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>colorSpace</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the specified color space name supports subsampling information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space to test </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if subsampling information can be added to the specified color space name </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_colorTransformsFactory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_color_transforms_factory_1a75c7c4c6c6c958b9170aa39dc1fda1d6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroColorTransformsFactory::makeSubsampled:subSampleX:subSampleY:</definition>
+        <argsstring>(NSString *colorSpace,[subSampleX] BOOL bSubSampleX,[subSampleY] BOOL bSubSampleY)</argsstring>
+        <name>makeSubsampled:subSampleX:subSampleY:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>colorSpace</declname>
+        </param>
+        <param>
+          <attributes>[subSampleX]</attributes>
+          <type>BOOL</type>
+          <declname>bSubSampleX</declname>
+        </param>
+        <param>
+          <attributes>[subSampleY]</attributes>
+          <type>BOOL</type>
+          <declname>bSubSampleY</declname>
+        </param>
+        <briefdescription>
+<para>Add subsampling information to the specified color space name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space to which the subsampling information must be added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bSubSampleX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if the pixels are subsampled horizontally </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bSubSampleY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if the pixels are subsampled vertically </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the specified color space name with additional information about the pixels subsampling </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_colorTransformsFactory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_color_transforms_factory_1ae8a61ac55def8282ebe3b5c9a0868460" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroColorTransformsFactory::getNumberOfChannels:</definition>
+        <argsstring>(NSString *colorSpace)</argsstring>
+        <name>getNumberOfChannels:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>colorSpace</declname>
+        </param>
+        <briefdescription>
+<para>Returns the number of color channels necessary for the specified color space. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the number of color channels necessary to the specified color space </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_colorTransformsFactory.h" line="1" column="0"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_color_transforms_factory_1a8c331d6c7e92d78f9276496992dce02b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_transform" kindref="compound">DicomheroTransform</ref> *</type>
+        <definition>DicomheroTransform* DicomheroColorTransformsFactory::getTransform:finalColorSpace:error:</definition>
+        <argsstring>(NSString *startColorSpace,[finalColorSpace] NSString *endColorSpace,[error] NSError **pError)</argsstring>
+        <name>getTransform:finalColorSpace:error:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>startColorSpace</declname>
+        </param>
+        <param>
+          <attributes>[finalColorSpace]</attributes>
+          <type>NSString *</type>
+          <declname>endColorSpace</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Returns a <ref refid="interface_dicomhero_transform" kindref="compound">DicomheroTransform</ref> object able to transform an image&apos;s content from one color space to another one. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>startColorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space of the input image&apos;s content </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>endColorSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color space of the output image&apos;s content </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set if an error occurs </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="interface_dicomhero_transform" kindref="compound">DicomheroTransform</ref> object able to transform the image&apos;s content from input color space to output one </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_colorTransformsFactory.h" line="1" column="0"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="interface_dicomhero_color_transforms_factory" kindref="compound">DicomheroColorTransformsFactory</ref> has the knowledge about the color spaces supported by the library: it can construct <ref refid="interface_dicomhero_transform" kindref="compound">DicomheroTransform</ref> objects that transform images&apos; content from one color space to another and can return specific information about the supported color spaces. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_colorTransformsFactory.h" line="29" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_colorTransformsFactory.h" bodystart="30" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_color_transforms_factory_1a9e82b5de0b5fb0122dce3fe519ba2bb6" prot="public" virt="virtual"><scope>DicomheroColorTransformsFactory</scope><name>canSubsample:</name></member>
+      <member refid="interface_dicomhero_color_transforms_factory_1ae8a61ac55def8282ebe3b5c9a0868460" prot="public" virt="virtual"><scope>DicomheroColorTransformsFactory</scope><name>getNumberOfChannels:</name></member>
+      <member refid="interface_dicomhero_color_transforms_factory_1a8c331d6c7e92d78f9276496992dce02b" prot="public" virt="virtual"><scope>DicomheroColorTransformsFactory</scope><name>getTransform:finalColorSpace:error:</name></member>
+      <member refid="interface_dicomhero_color_transforms_factory_1ab25ae5a1b051b9754c69c585b7e60561" prot="public" virt="virtual"><scope>DicomheroColorTransformsFactory</scope><name>isMonochrome:</name></member>
+      <member refid="interface_dicomhero_color_transforms_factory_1a22a875da9621b90faecc5ae7d23f54e2" prot="public" virt="virtual"><scope>DicomheroColorTransformsFactory</scope><name>isSubsampledX:</name></member>
+      <member refid="interface_dicomhero_color_transforms_factory_1a0e46a059424419a8a590ae42090143dd" prot="public" virt="virtual"><scope>DicomheroColorTransformsFactory</scope><name>isSubsampledY:</name></member>
+      <member refid="interface_dicomhero_color_transforms_factory_1a75c7c4c6c6c958b9170aa39dc1fda1d6" prot="public" virt="virtual"><scope>DicomheroColorTransformsFactory</scope><name>makeSubsampled:subSampleX:subSampleY:</name></member>
+      <member refid="interface_dicomhero_color_transforms_factory_1a68049f539920707331797d2f1f7dddf0" prot="public" virt="virtual"><scope>DicomheroColorTransformsFactory</scope><name>normalizeColorSpace:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

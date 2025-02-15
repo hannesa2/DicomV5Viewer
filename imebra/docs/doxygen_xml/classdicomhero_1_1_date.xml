@@ -1,0 +1,420 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_date" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::Date</compoundname>
+    <includes local="no">date.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_date_1aef648af6c56fa8ee0738c93629e725dc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class DataSet</definition>
+        <argsstring></argsstring>
+        <name>DataSet</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="39" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_date_1ae1ea50596c7f32686e702701c5570157" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class ReadingDataHandler</definition>
+        <argsstring></argsstring>
+        <name>ReadingDataHandler</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="40" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_date_1ada8a573f99ab133269062717d739a1b3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::shared_ptr&lt; implementation::date &gt; &amp;</type>
+        <definition>const std::shared_ptr&lt;implementation::date&gt;&amp; getDateImplementation</definition>
+        <argsstring>(const Date &amp;date)</argsstring>
+        <name>getDateImplementation</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_date" kindref="compound">Date</ref> &amp;</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="94" column="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdicomhero_1_1_date_1af7c270ebd17b05a92f7333ee30949a33" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; implementation::date &gt;</type>
+        <definition>std::shared_ptr&lt;implementation::date&gt; dicomhero::Date::m_pDate</definition>
+        <argsstring></argsstring>
+        <name>m_pDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="95" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_date_1a676ce381c5a3e2757a9ce29f62de032c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::Date::Date</definition>
+        <argsstring>(const Date &amp;source)</argsstring>
+        <name>Date</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_date" kindref="compound">Date</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_date" kindref="compound">Date</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="49" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_date_1a6cad2f54ae5780be6e7fd08252ee436e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_date" kindref="compound">Date</ref> &amp;</type>
+        <definition>Date&amp; dicomhero::Date::operator=</definition>
+        <argsstring>(const Date &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_date" kindref="compound">Date</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="51" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_date_1a95f474c4e7e95ec8a5f1b98ac53f0b0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::Date::~Date</definition>
+        <argsstring>()</argsstring>
+        <name>~Date</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="53" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_date_1a0f86301b971e71a586e1309d482e2061" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::Date::Date</definition>
+        <argsstring>(const std::uint32_t initialYear, const std::uint32_t initialMonth, const std::uint32_t initialDay, const std::uint32_t initialHour, const std::uint32_t initialMinutes, const std::uint32_t initialSeconds, const std::uint32_t initialNanoseconds, const std::int32_t initialOffsetHours, const std::int32_t initialOffsetMinutes)</argsstring>
+        <name>Date</name>
+        <param>
+          <type>const std::uint32_t</type>
+          <declname>initialYear</declname>
+        </param>
+        <param>
+          <type>const std::uint32_t</type>
+          <declname>initialMonth</declname>
+        </param>
+        <param>
+          <type>const std::uint32_t</type>
+          <declname>initialDay</declname>
+        </param>
+        <param>
+          <type>const std::uint32_t</type>
+          <declname>initialHour</declname>
+        </param>
+        <param>
+          <type>const std::uint32_t</type>
+          <declname>initialMinutes</declname>
+        </param>
+        <param>
+          <type>const std::uint32_t</type>
+          <declname>initialSeconds</declname>
+        </param>
+        <param>
+          <type>const std::uint32_t</type>
+          <declname>initialNanoseconds</declname>
+        </param>
+        <param>
+          <type>const std::int32_t</type>
+          <declname>initialOffsetHours</declname>
+        </param>
+        <param>
+          <type>const std::int32_t</type>
+          <declname>initialOffsetMinutes</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize the <ref refid="classdicomhero_1_1_date" kindref="compound">Date</ref> structure with the specified values.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initialYear</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>year (0 = unused) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialMonth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>month (1...12, 0 = unused) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialDay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>day of the month (1...31, 0 = unused) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialHour</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hour (0...23) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialMinutes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minutes (0...59) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialSeconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>seconds (0...59) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialNanoseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nanoseconds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialOffsetHours</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hours offset from UTC </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialOffsetMinutes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minutes offset from UTC </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="69" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_date_1accb4addf86d4ae58cd67f5e89862c77d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t dicomhero::Date::getYear</definition>
+        <argsstring>() const</argsstring>
+        <name>getYear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="79" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_date_1adb5bca65a270e49515e86f5318bcd5fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t dicomhero::Date::getMonth</definition>
+        <argsstring>() const</argsstring>
+        <name>getMonth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="80" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_date_1a4ed04cf42a4972420dcde8a54387cf9e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t dicomhero::Date::getDay</definition>
+        <argsstring>() const</argsstring>
+        <name>getDay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="81" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_date_1a5ad34cec83495aff435df22fc82146c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t dicomhero::Date::getHour</definition>
+        <argsstring>() const</argsstring>
+        <name>getHour</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="82" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_date_1a0e30343798be23ab34cd12fd681b3a61" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t dicomhero::Date::getMinutes</definition>
+        <argsstring>() const</argsstring>
+        <name>getMinutes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="83" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_date_1a7faf45415dee5c988addc6b407bbe049" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t dicomhero::Date::getSeconds</definition>
+        <argsstring>() const</argsstring>
+        <name>getSeconds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="84" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_date_1a007865a1dd2cd29515a612454f45de4d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t dicomhero::Date::getNanoseconds</definition>
+        <argsstring>() const</argsstring>
+        <name>getNanoseconds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="85" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_date_1a472a22f7840edc842fd3eaa2b6f281a0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::int32_t</type>
+        <definition>std::int32_t dicomhero::Date::getOffsetHours</definition>
+        <argsstring>() const</argsstring>
+        <name>getOffsetHours</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="86" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_date_1af8b3da5308213168edb1cf5886409bd5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::int32_t</type>
+        <definition>std::int32_t dicomhero::Date::getOffsetMinutes</definition>
+        <argsstring>() const</argsstring>
+        <name>getOffsetMinutes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="87" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdicomhero_1_1_date_1a526af4f6636a7866aa2635f837fe10da" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::Date::Date</definition>
+        <argsstring>(const std::shared_ptr&lt; implementation::date &gt; &amp;pDate)</argsstring>
+        <name>Date</name>
+        <param>
+          <type>const std::shared_ptr&lt; implementation::date &gt; &amp;</type>
+          <declname>pDate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="91" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Stores a <ref refid="classdicomhero_1_1_date" kindref="compound">Date</ref>, Time or Date/Time value. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" line="37" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/date.h" bodystart="38" bodyend="98"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_date_1aef648af6c56fa8ee0738c93629e725dc" prot="private" virt="non-virtual"><scope>dicomhero::Date</scope><name>DataSet</name></member>
+      <member refid="classdicomhero_1_1_date_1a676ce381c5a3e2757a9ce29f62de032c" prot="public" virt="non-virtual"><scope>dicomhero::Date</scope><name>Date</name></member>
+      <member refid="classdicomhero_1_1_date_1a0f86301b971e71a586e1309d482e2061" prot="public" virt="non-virtual"><scope>dicomhero::Date</scope><name>Date</name></member>
+      <member refid="classdicomhero_1_1_date_1a526af4f6636a7866aa2635f837fe10da" prot="protected" virt="non-virtual"><scope>dicomhero::Date</scope><name>Date</name></member>
+      <member refid="classdicomhero_1_1_date_1ada8a573f99ab133269062717d739a1b3" prot="private" virt="non-virtual"><scope>dicomhero::Date</scope><name>getDateImplementation</name></member>
+      <member refid="classdicomhero_1_1_date_1a4ed04cf42a4972420dcde8a54387cf9e" prot="public" virt="non-virtual"><scope>dicomhero::Date</scope><name>getDay</name></member>
+      <member refid="classdicomhero_1_1_date_1a5ad34cec83495aff435df22fc82146c9" prot="public" virt="non-virtual"><scope>dicomhero::Date</scope><name>getHour</name></member>
+      <member refid="classdicomhero_1_1_date_1a0e30343798be23ab34cd12fd681b3a61" prot="public" virt="non-virtual"><scope>dicomhero::Date</scope><name>getMinutes</name></member>
+      <member refid="classdicomhero_1_1_date_1adb5bca65a270e49515e86f5318bcd5fa" prot="public" virt="non-virtual"><scope>dicomhero::Date</scope><name>getMonth</name></member>
+      <member refid="classdicomhero_1_1_date_1a007865a1dd2cd29515a612454f45de4d" prot="public" virt="non-virtual"><scope>dicomhero::Date</scope><name>getNanoseconds</name></member>
+      <member refid="classdicomhero_1_1_date_1a472a22f7840edc842fd3eaa2b6f281a0" prot="public" virt="non-virtual"><scope>dicomhero::Date</scope><name>getOffsetHours</name></member>
+      <member refid="classdicomhero_1_1_date_1af8b3da5308213168edb1cf5886409bd5" prot="public" virt="non-virtual"><scope>dicomhero::Date</scope><name>getOffsetMinutes</name></member>
+      <member refid="classdicomhero_1_1_date_1a7faf45415dee5c988addc6b407bbe049" prot="public" virt="non-virtual"><scope>dicomhero::Date</scope><name>getSeconds</name></member>
+      <member refid="classdicomhero_1_1_date_1accb4addf86d4ae58cd67f5e89862c77d" prot="public" virt="non-virtual"><scope>dicomhero::Date</scope><name>getYear</name></member>
+      <member refid="classdicomhero_1_1_date_1af7c270ebd17b05a92f7333ee30949a33" prot="private" virt="non-virtual"><scope>dicomhero::Date</scope><name>m_pDate</name></member>
+      <member refid="classdicomhero_1_1_date_1a6cad2f54ae5780be6e7fd08252ee436e" prot="public" virt="non-virtual"><scope>dicomhero::Date</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_date_1ae1ea50596c7f32686e702701c5570157" prot="private" virt="non-virtual"><scope>dicomhero::Date</scope><name>ReadingDataHandler</name></member>
+      <member refid="classdicomhero_1_1_date_1a95f474c4e7e95ec8a5f1b98ac53f0b0a" prot="public" virt="virtual"><scope>dicomhero::Date</scope><name>~Date</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

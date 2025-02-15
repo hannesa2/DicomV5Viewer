@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_age" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroAge</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_dateAge.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_age_1ad38a55fa09f705e0557c5cccb981ad28" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroAge::m_Age</definition>
+        <argsstring></argsstring>
+        <name>m_Age</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="41" column="10" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_dicomhero_age_1a8882d9c19753d53070c1fe1f203d0785" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>double</type>
+        <definition>double DicomheroAge::years</definition>
+        <argsstring></argsstring>
+        <name>years</name>
+        <read></read>
+        <briefdescription>
+<para>Return the age in years. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the stored age converted to years. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="63" column="13" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_age_1ae324707b5e9112adccaa6d20c7e64c7c" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int DicomheroAge::age</definition>
+        <argsstring></argsstring>
+        <name>age</name>
+        <read></read>
+        <briefdescription>
+<para>Return the age in the units returned by the property units. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the stored age, speficied using the stored units. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="70" column="19" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_dicomhero_age_1a0d8abd03168823f39b7e77bb20b7ffdb" prot="public" static="no" readable="yes" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no" accessor="assign">
+        <type>DicomheroAgeUnit</type>
+        <definition>DicomheroAgeUnit DicomheroAge::units</definition>
+        <argsstring></argsstring>
+        <name>units</name>
+        <read></read>
+        <briefdescription>
+<para>Return the age&apos;s units. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the age&apos;s units </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="77" column="23" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_age_1ae93f7b309c7d79d4d408763398ef198a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroAge::initWithDicomheroAge:</definition>
+        <argsstring>(void *parameter_Age)</argsstring>
+        <name>initWithDicomheroAge:</name>
+        <param>
+          <type>void *</type>
+          <declname>parameter_Age</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="41" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_age_1a1f382e2513afb2baa117a1ecc0ceb0cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroAge::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="41" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_age_1a68cc342aaa62a5d7b5dc6cec12c0d9c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroAge::initWithAge:units:</definition>
+        <argsstring>(unsigned int initialAge,[units] DicomheroAgeUnit initialUnits)</argsstring>
+        <name>initWithAge:units:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>initialAge</declname>
+        </param>
+        <param>
+          <attributes>[units]</attributes>
+          <type>DicomheroAgeUnit</type>
+          <declname>initialUnits</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initialAge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the initial age to assign to the object, in days, weeks, months or years, depending on the parameter initialUnits </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialUnits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the units of the value in initialAge </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="41" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Specifies an age, in days, weeks, months or years. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" line="37" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dateAge.h" bodystart="39" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_age_1ae324707b5e9112adccaa6d20c7e64c7c" prot="public" virt="non-virtual"><scope>DicomheroAge</scope><name>age</name></member>
+      <member refid="interface_dicomhero_age_1a1f382e2513afb2baa117a1ecc0ceb0cd" prot="public" virt="virtual"><scope>DicomheroAge</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_age_1a68cc342aaa62a5d7b5dc6cec12c0d9c8" prot="public" virt="virtual"><scope>DicomheroAge</scope><name>initWithAge:units:</name></member>
+      <member refid="interface_dicomhero_age_1ae93f7b309c7d79d4d408763398ef198a" prot="public" virt="virtual"><scope>DicomheroAge</scope><name>initWithDicomheroAge:</name></member>
+      <member refid="interface_dicomhero_age_1ad38a55fa09f705e0557c5cccb981ad28" prot="public" virt="non-virtual"><scope>DicomheroAge</scope><name>m_Age</name></member>
+      <member refid="interface_dicomhero_age_1a0d8abd03168823f39b7e77bb20b7ffdb" prot="public" virt="non-virtual"><scope>DicomheroAge</scope><name>units</name></member>
+      <member refid="interface_dicomhero_age_1a8882d9c19753d53070c1fe1f203d0785" prot="public" virt="non-virtual"><scope>DicomheroAge</scope><name>years</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_stream_read_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::StreamReadError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_stream_error" prot="public" virt="non-virtual">dicomhero::StreamError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_stream_read_error_1a859b731d8243cd1e6c94f84b2241f446" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::StreamReadError::StreamReadError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>StreamReadError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to store into the exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="253" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_read_error_1a95d28cd0cce272faba4babbc3d78536c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::StreamReadError::StreamReadError</definition>
+        <argsstring>(const StreamReadError &amp;source)</argsstring>
+        <name>StreamReadError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_stream_read_error" kindref="compound">StreamReadError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="255" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_read_error_1a8faa09baa8eea5b3f1cd3c40ac43f94a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_stream_read_error" kindref="compound">StreamReadError</ref> &amp;</type>
+        <definition>StreamReadError&amp; dicomhero::StreamReadError::operator=</definition>
+        <argsstring>(const StreamReadError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_stream_read_error" kindref="compound">StreamReadError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="257" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_stream_read_error_1a405b5bcda358afbc0cfc1736c8782836" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::StreamReadError::~StreamReadError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~StreamReadError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="259" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Exception thrown when there is an error during the read phase. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dicomhero::StreamError</label>
+        <link refid="classdicomhero_1_1_stream_error"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::StreamReadError</label>
+        <link refid="classdicomhero_1_1_stream_read_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dicomhero::StreamError</label>
+        <link refid="classdicomhero_1_1_stream_error"/>
+      </node>
+      <node id="1">
+        <label>dicomhero::StreamReadError</label>
+        <link refid="classdicomhero_1_1_stream_read_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="245" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="246" bodyend="260"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_stream_read_error_1a8faa09baa8eea5b3f1cd3c40ac43f94a" prot="public" virt="non-virtual"><scope>dicomhero::StreamReadError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_stream_error_1a5155379db6579b15c059ddedc506ad84" prot="public" virt="non-virtual" ambiguityscope="dicomhero::StreamError::"><scope>dicomhero::StreamReadError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_stream_error_1a3ec19970ae5ec71a543aa90e1ba2bf47" prot="public" virt="non-virtual"><scope>dicomhero::StreamReadError</scope><name>StreamError</name></member>
+      <member refid="classdicomhero_1_1_stream_error_1ac79e5f7d0ac6d829048f7efd400603bf" prot="public" virt="non-virtual"><scope>dicomhero::StreamReadError</scope><name>StreamError</name></member>
+      <member refid="classdicomhero_1_1_stream_read_error_1a859b731d8243cd1e6c94f84b2241f446" prot="public" virt="non-virtual"><scope>dicomhero::StreamReadError</scope><name>StreamReadError</name></member>
+      <member refid="classdicomhero_1_1_stream_read_error_1a95d28cd0cce272faba4babbc3d78536c" prot="public" virt="non-virtual"><scope>dicomhero::StreamReadError</scope><name>StreamReadError</name></member>
+      <member refid="classdicomhero_1_1_stream_error_1aee0ffa47313fbe5951d1bcc529fdf2f8" prot="public" virt="virtual"><scope>dicomhero::StreamReadError</scope><name>~StreamError</name></member>
+      <member refid="classdicomhero_1_1_stream_read_error_1a405b5bcda358afbc0cfc1736c8782836" prot="public" virt="virtual"><scope>dicomhero::StreamReadError</scope><name>~StreamReadError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

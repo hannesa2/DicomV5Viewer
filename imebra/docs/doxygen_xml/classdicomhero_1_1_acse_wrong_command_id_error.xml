@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_acse_wrong_command_id_error" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::AcseWrongCommandIdError</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_acse_wrong_id_error" prot="public" virt="non-virtual">dicomhero::AcseWrongIdError</basecompoundref>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_acse_wrong_command_id_error_1a7910b135176b44c619a18cd82846181f" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AcseWrongCommandIdError::AcseWrongCommandIdError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>AcseWrongCommandIdError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1633" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_wrong_command_id_error_1a02280ef026d74445696cf142de984097" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AcseWrongCommandIdError::AcseWrongCommandIdError</definition>
+        <argsstring>(const AcseWrongCommandIdError &amp;source)</argsstring>
+        <name>AcseWrongCommandIdError</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_acse_wrong_command_id_error" kindref="compound">AcseWrongCommandIdError</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1635" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_wrong_command_id_error_1ad19607e83f9ca0e8a4fe5c523e6a3b6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_acse_wrong_command_id_error" kindref="compound">AcseWrongCommandIdError</ref> &amp;</type>
+        <definition>AcseWrongCommandIdError&amp; dicomhero::AcseWrongCommandIdError::operator=</definition>
+        <argsstring>(const AcseWrongCommandIdError &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_acse_wrong_command_id_error" kindref="compound">AcseWrongCommandIdError</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1637" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_acse_wrong_command_id_error_1a9ec0cf1bbec6c583a4f6dc78a440b9c9" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::AcseWrongCommandIdError::~AcseWrongCommandIdError</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~AcseWrongCommandIdError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1639" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Exception thrown when a command has a wrong message ID. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dicomhero::AcseWrongCommandIdError</label>
+        <link refid="classdicomhero_1_1_acse_wrong_command_id_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::AcseWrongIdError</label>
+        <link refid="classdicomhero_1_1_acse_wrong_id_error"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dicomhero::AcseError</label>
+        <link refid="classdicomhero_1_1_acse_error"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dicomhero::AcseWrongCommandIdError</label>
+        <link refid="classdicomhero_1_1_acse_wrong_command_id_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::AcseWrongIdError</label>
+        <link refid="classdicomhero_1_1_acse_wrong_id_error"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dicomhero::AcseError</label>
+        <link refid="classdicomhero_1_1_acse_error"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="1630" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="1631" bodyend="1640"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_acse_error_1adbb42aa40c7a143809c083a281f49e7d" prot="public" virt="non-virtual"><scope>dicomhero::AcseWrongCommandIdError</scope><name>AcseError</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1a6becca8ff22e9b1719d2856af94a8417" prot="public" virt="non-virtual"><scope>dicomhero::AcseWrongCommandIdError</scope><name>AcseError</name></member>
+      <member refid="classdicomhero_1_1_acse_wrong_command_id_error_1a7910b135176b44c619a18cd82846181f" prot="public" virt="non-virtual"><scope>dicomhero::AcseWrongCommandIdError</scope><name>AcseWrongCommandIdError</name></member>
+      <member refid="classdicomhero_1_1_acse_wrong_command_id_error_1a02280ef026d74445696cf142de984097" prot="public" virt="non-virtual"><scope>dicomhero::AcseWrongCommandIdError</scope><name>AcseWrongCommandIdError</name></member>
+      <member refid="classdicomhero_1_1_acse_wrong_id_error_1a2783f4c0d23f74bd62e512a12cb1206e" prot="public" virt="non-virtual"><scope>dicomhero::AcseWrongCommandIdError</scope><name>AcseWrongIdError</name></member>
+      <member refid="classdicomhero_1_1_acse_wrong_id_error_1aabdeb8575082905fba75bb989aa760a8" prot="public" virt="non-virtual"><scope>dicomhero::AcseWrongCommandIdError</scope><name>AcseWrongIdError</name></member>
+      <member refid="classdicomhero_1_1_acse_wrong_command_id_error_1ad19607e83f9ca0e8a4fe5c523e6a3b6e" prot="public" virt="non-virtual"><scope>dicomhero::AcseWrongCommandIdError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_acse_wrong_id_error_1a834c3aaf55bac92059bfaf24e61bb73a" prot="public" virt="non-virtual" ambiguityscope="dicomhero::AcseWrongIdError::"><scope>dicomhero::AcseWrongCommandIdError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1a4f961f17b47823241f64229459c21c50" prot="public" virt="non-virtual" ambiguityscope="dicomhero::AcseError::"><scope>dicomhero::AcseWrongCommandIdError</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_acse_error_1ab574eff3cad5081bbae7325330357201" prot="public" virt="virtual"><scope>dicomhero::AcseWrongCommandIdError</scope><name>~AcseError</name></member>
+      <member refid="classdicomhero_1_1_acse_wrong_command_id_error_1a9ec0cf1bbec6c583a4f6dc78a440b9c9" prot="public" virt="virtual"><scope>dicomhero::AcseWrongCommandIdError</scope><name>~AcseWrongCommandIdError</name></member>
+      <member refid="classdicomhero_1_1_acse_wrong_id_error_1ab906b8d2ab6e9ac793914b843893b64e" prot="public" virt="virtual"><scope>dicomhero::AcseWrongCommandIdError</scope><name>~AcseWrongIdError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

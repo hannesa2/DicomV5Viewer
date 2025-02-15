@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_association_s_c_u" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::AssociationSCU</compoundname>
+    <basecompoundref refid="classdicomhero_1_1_association_base" prot="public" virt="non-virtual">dicomhero::AssociationBase</basecompoundref>
+    <includes local="no">acse.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_association_s_c_u_1a13becd12b0cc40448bf362b7826f318d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AssociationSCU::AssociationSCU</definition>
+        <argsstring>(const std::string &amp;thisAET, const std::string &amp;otherAET, std::uint32_t invokedOperations, std::uint32_t performedOperations, const PresentationContexts &amp;presentationContexts, StreamReader &amp;pInput, StreamWriter &amp;pOutput, std::uint32_t dimseTimeoutSeconds)</argsstring>
+        <name>AssociationSCU</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>thisAET</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>otherAET</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>invokedOperations</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>performedOperations</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_presentation_contexts" kindref="compound">PresentationContexts</ref> &amp;</type>
+          <declname>presentationContexts</declname>
+        </param>
+        <param>
+          <type><ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> &amp;</type>
+          <declname>pInput</declname>
+        </param>
+        <param>
+          <type><ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> &amp;</type>
+          <declname>pOutput</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>dimseTimeoutSeconds</declname>
+        </param>
+        <briefdescription>
+<para>Initiates an association request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Blocks until the association has been negotiated successfully or an error occurs (an exception is thrown).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>thisAET</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the AET of the SCU </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>otherAET</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the AET of the SCP with wich the association is negotiated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>invokedOperations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum number of parallel operations we intend to invoke when acting as a SCU </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>performedOperations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum number of parallel operations we can perform when acting as a SCP </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>presentationContexts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of proposed presentation contexts </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input stream from which the SCP receives data. When using a <ref refid="classdicomhero_1_1_t_c_p_stream" kindref="compound">TCPStream</ref> the same object can act as both input and output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pOutput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output stream into which the SCP writes data. When using a <ref refid="classdicomhero_1_1_t_c_p_stream" kindref="compound">TCPStream</ref> the same object can act as both input and output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dimseTimeoutSeconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DIMSE timeout, in seconds. 0 means infinite</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor blocks until an association has been successfully negotiated or until an error happens (an exception is thrown).</para>
+<para>Throws:<itemizedlist>
+<listitem><para>CorruptedAcseMessageError</para>
+</listitem><listitem><para><ref refid="classdicomhero_1_1_acse_s_c_u_application_context_name_not_supported_error" kindref="compound">AcseSCUApplicationContextNameNotSupportedError</ref></para>
+</listitem><listitem><para><ref refid="classdicomhero_1_1_acse_s_c_u_called_a_e_t_not_recognized_error" kindref="compound">AcseSCUCalledAETNotRecognizedError</ref></para>
+</listitem><listitem><para><ref refid="classdicomhero_1_1_codec_wrong_format_error" kindref="compound">CodecWrongFormatError</ref></para>
+</listitem><listitem><para><ref refid="classdicomhero_1_1_dicom_codec_depth_limit_reached_error" kindref="compound">DicomCodecDepthLimitReachedError</ref> </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="444" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_association_s_c_u_1aeb9d1e44c6dc491483cf610ca877f074" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::AssociationSCU::AssociationSCU</definition>
+        <argsstring>(const AssociationSCU &amp;source)</argsstring>
+        <name>AssociationSCU</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_association_s_c_u" kindref="compound">AssociationSCU</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source SCU association </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="460" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_association_s_c_u_1aeb063463b6d221ea223f313a8c298c92" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::AssociationSCU::~AssociationSCU</definition>
+        <argsstring>()</argsstring>
+        <name>~AssociationSCU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="462" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_association_s_c_u_1ac70b826b277d9680dce84c1357cbdf6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_association_s_c_u" kindref="compound">AssociationSCU</ref> &amp;</type>
+        <definition>AssociationSCU&amp; dicomhero::AssociationSCU::operator=</definition>
+        <argsstring>(const AssociationSCU &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_association_s_c_u" kindref="compound">AssociationSCU</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="464" column="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents the SCU part of an association. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The constructor tries to create an association with an SCP via the <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> and the <ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> passed as parameter; when communicating through the <ref refid="classdicomhero_1_1_t_c_p_stream" kindref="compound">TCPStream</ref> then the same object is used as reader and writer. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dicomhero::AssociationSCU</label>
+        <link refid="classdicomhero_1_1_association_s_c_u"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::AssociationBase</label>
+        <link refid="classdicomhero_1_1_association_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dicomhero::AssociationSCU</label>
+        <link refid="classdicomhero_1_1_association_s_c_u"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dicomhero::AssociationBase</label>
+        <link refid="classdicomhero_1_1_association_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" line="407" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/acse.h" bodystart="408" bodyend="465"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_association_base_1a68e9e3baea45c66c89c0f89ec518e18f" prot="public" virt="non-virtual"><scope>dicomhero::AssociationSCU</scope><name>abort</name></member>
+      <member refid="classdicomhero_1_1_association_base_1a6dcb03aaaaffcf782a540b7e7ef622ce" prot="protected" virt="non-virtual"><scope>dicomhero::AssociationSCU</scope><name>AssociationBase</name></member>
+      <member refid="classdicomhero_1_1_association_s_c_u_1a13becd12b0cc40448bf362b7826f318d" prot="public" virt="non-virtual"><scope>dicomhero::AssociationSCU</scope><name>AssociationSCU</name></member>
+      <member refid="classdicomhero_1_1_association_s_c_u_1aeb9d1e44c6dc491483cf610ca877f074" prot="public" virt="non-virtual"><scope>dicomhero::AssociationSCU</scope><name>AssociationSCU</name></member>
+      <member refid="classdicomhero_1_1_association_base_1ab068896e6d8011d69d619bae4e222d0f" prot="public" virt="non-virtual"><scope>dicomhero::AssociationSCU</scope><name>getCommand</name></member>
+      <member refid="classdicomhero_1_1_association_base_1a6b7930b252695a541e830caec7ed03f8" prot="public" virt="non-virtual"><scope>dicomhero::AssociationSCU</scope><name>getOtherAET</name></member>
+      <member refid="classdicomhero_1_1_association_base_1a2cab2955e7a9171e96ba2044a0ecf4c8" prot="public" virt="non-virtual"><scope>dicomhero::AssociationSCU</scope><name>getResponse</name></member>
+      <member refid="classdicomhero_1_1_association_base_1a9f610ca0f1411190fd213e2831dbaaa1" prot="public" virt="non-virtual"><scope>dicomhero::AssociationSCU</scope><name>getThisAET</name></member>
+      <member refid="classdicomhero_1_1_association_base_1a7baa15d3740f90aedb050cb07d6bd101" prot="public" virt="non-virtual"><scope>dicomhero::AssociationSCU</scope><name>getTransferSyntax</name></member>
+      <member refid="classdicomhero_1_1_association_base_1ac69b0ec7917dd83cdc418729b0455aef" prot="public" virt="non-virtual"><scope>dicomhero::AssociationSCU</scope><name>getTransferSyntaxes</name></member>
+      <member refid="classdicomhero_1_1_association_s_c_u_1ac70b826b277d9680dce84c1357cbdf6a" prot="public" virt="non-virtual"><scope>dicomhero::AssociationSCU</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_association_base_1a4f715ac618f5a35aae23e1776d5e29be" prot="public" virt="non-virtual" ambiguityscope="dicomhero::AssociationBase::"><scope>dicomhero::AssociationSCU</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_association_base_1af58cadfa5789f31d02056c26da2b60a8" prot="public" virt="non-virtual"><scope>dicomhero::AssociationSCU</scope><name>release</name></member>
+      <member refid="classdicomhero_1_1_association_base_1ae17f8e4076883f9f830547b638c3b699" prot="public" virt="non-virtual"><scope>dicomhero::AssociationSCU</scope><name>sendMessage</name></member>
+      <member refid="classdicomhero_1_1_association_base_1a35a266feb6cefe55e4843b5b379455fb" prot="public" virt="virtual"><scope>dicomhero::AssociationSCU</scope><name>~AssociationBase</name></member>
+      <member refid="classdicomhero_1_1_association_s_c_u_1aeb063463b6d221ea223f313a8c298c92" prot="public" virt="virtual"><scope>dicomhero::AssociationSCU</scope><name>~AssociationSCU</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

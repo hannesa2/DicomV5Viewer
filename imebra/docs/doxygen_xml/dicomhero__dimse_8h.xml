@@ -1,0 +1,1131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dicomhero__dimse_8h" kind="file" language="C++">
+    <compoundname>dicomhero_dimse.h</compoundname>
+    <includes local="no">Foundation/Foundation.h</includes>
+    <includes local="no">Foundation/NSArray.h</includes>
+    <includes local="no">Foundation/NSString.h</includes>
+    <includes refid="dicomhero__macros_8h" local="yes">dicomhero_macros.h</includes>
+    <includedby refid="dicomhero6_8h" local="yes">dicomhero6.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Foundation/NSArray.h</label>
+      </node>
+      <node id="4">
+        <label>Foundation/NSString.h</label>
+      </node>
+      <node id="2">
+        <label>Foundation/Foundation.h</label>
+      </node>
+      <node id="1">
+        <label>dicomhero_dimse.h</label>
+        <link refid="dicomhero__dimse_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="interface_dicomhero_dimse_command_base" prot="public">DicomheroDimseCommandBase</innerclass>
+    <innerclass refid="interface_dicomhero_dimse_command" prot="public">DicomheroDimseCommand</innerclass>
+    <innerclass refid="interface_dicomhero_dimse_response" prot="public">DicomheroDimseResponse</innerclass>
+    <innerclass refid="interface_dicomhero_c_partial_response" prot="public">DicomheroCPartialResponse</innerclass>
+    <innerclass refid="interface_dicomhero_c_store_command" prot="public">DicomheroCStoreCommand</innerclass>
+    <innerclass refid="interface_dicomhero_c_store_response" prot="public">DicomheroCStoreResponse</innerclass>
+    <innerclass refid="interface_dicomhero_c_get_command" prot="public">DicomheroCGetCommand</innerclass>
+    <innerclass refid="interface_dicomhero_c_get_response" prot="public">DicomheroCGetResponse</innerclass>
+    <innerclass refid="interface_dicomhero_c_find_command" prot="public">DicomheroCFindCommand</innerclass>
+    <innerclass refid="interface_dicomhero_c_find_response" prot="public">DicomheroCFindResponse</innerclass>
+    <innerclass refid="interface_dicomhero_c_move_command" prot="public">DicomheroCMoveCommand</innerclass>
+    <innerclass refid="interface_dicomhero_c_move_response" prot="public">DicomheroCMoveResponse</innerclass>
+    <innerclass refid="interface_dicomhero_c_echo_command" prot="public">DicomheroCEchoCommand</innerclass>
+    <innerclass refid="interface_dicomhero_c_echo_response" prot="public">DicomheroCEchoResponse</innerclass>
+    <innerclass refid="interface_dicomhero_c_cancel_command" prot="public">DicomheroCCancelCommand</innerclass>
+    <innerclass refid="interface_dicomhero_n_event_report_command" prot="public">DicomheroNEventReportCommand</innerclass>
+    <innerclass refid="interface_dicomhero_n_event_report_response" prot="public">DicomheroNEventReportResponse</innerclass>
+    <innerclass refid="interface_dicomhero_n_get_command" prot="public">DicomheroNGetCommand</innerclass>
+    <innerclass refid="interface_dicomhero_n_get_response" prot="public">DicomheroNGetResponse</innerclass>
+    <innerclass refid="interface_dicomhero_n_set_command" prot="public">DicomheroNSetCommand</innerclass>
+    <innerclass refid="interface_dicomhero_n_set_response" prot="public">DicomheroNSetResponse</innerclass>
+    <innerclass refid="interface_dicomhero_n_action_command" prot="public">DicomheroNActionCommand</innerclass>
+    <innerclass refid="interface_dicomhero_n_action_response" prot="public">DicomheroNActionResponse</innerclass>
+    <innerclass refid="interface_dicomhero_n_create_command" prot="public">DicomheroNCreateCommand</innerclass>
+    <innerclass refid="interface_dicomhero_n_create_response" prot="public">DicomheroNCreateResponse</innerclass>
+    <innerclass refid="interface_dicomhero_n_delete_command" prot="public">DicomheroNDeleteCommand</innerclass>
+    <innerclass refid="interface_dicomhero_n_delete_response" prot="public">DicomheroNDeleteResponse</innerclass>
+    <innerclass refid="interface_dicomhero_dimse_service" prot="public">DicomheroDimseService</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="dicomhero__dimse_8h_1a15e35f6228719670974b10a44793e89d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>DicomheroDimseCommandType</name>
+        <enumvalue id="dicomhero__dimse_8h_1a15e35f6228719670974b10a44793e89daa5956fcafdace8b713b115f2337cc8c1" prot="public">
+          <name>DicomheroDimseCommandTypeCStore</name>
+          <initializer>= 0x1</initializer>
+          <briefdescription>
+<para>C-STORE. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a15e35f6228719670974b10a44793e89da3e743234dfcfc07c13f2f1704805d7bb" prot="public">
+          <name>DicomheroDimseCommandTypeCGet</name>
+          <initializer>= 0x10</initializer>
+          <briefdescription>
+<para>C-GET. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a15e35f6228719670974b10a44793e89da21e7dcbfdede3c3c932b9a664e84c9ff" prot="public">
+          <name>DicomheroDimseCommandTypeCFind</name>
+          <initializer>= 0x20</initializer>
+          <briefdescription>
+<para>C-FIND. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a15e35f6228719670974b10a44793e89daa29b96f154dd369dfc369c294641bb31" prot="public">
+          <name>DicomheroDimseCommandTypeCMove</name>
+          <initializer>= 0x21</initializer>
+          <briefdescription>
+<para>C-MOVE. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a15e35f6228719670974b10a44793e89da318c855b243b6e0f2c59935e740ae49c" prot="public">
+          <name>DicomheroDimseCommandTypeCCancel</name>
+          <initializer>= 0xfff</initializer>
+          <briefdescription>
+<para>C-CANCEL. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a15e35f6228719670974b10a44793e89dab00d7ef60f91f4c3e3ce31910713042d" prot="public">
+          <name>DicomheroDimseCommandTypeCEcho</name>
+          <initializer>= 0x30</initializer>
+          <briefdescription>
+<para>C-ECHO. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a15e35f6228719670974b10a44793e89dade9bff150a7bfd19fcff950d7fb45d6b" prot="public">
+          <name>DicomheroDimseCommandTypeNEventReport</name>
+          <initializer>= 0x100</initializer>
+          <briefdescription>
+<para>N-EVENT_REPORT. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a15e35f6228719670974b10a44793e89dad5a69c500157494c76aa3fc63514e27d" prot="public">
+          <name>DicomheroDimseCommandTypeNGet</name>
+          <initializer>= 0x110</initializer>
+          <briefdescription>
+<para>N-GET. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a15e35f6228719670974b10a44793e89dad95d6a1220a6320195bfdbe0d046e766" prot="public">
+          <name>DicomheroDimseCommandTypeNSet</name>
+          <initializer>= 0x120</initializer>
+          <briefdescription>
+<para>N-SET. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a15e35f6228719670974b10a44793e89da4ba92618ed9e40016f79b55d684ebbe4" prot="public">
+          <name>DicomheroDimseCommandTypeNAction</name>
+          <initializer>= 0x130</initializer>
+          <briefdescription>
+<para>N-ACTION. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a15e35f6228719670974b10a44793e89da7e606067e74653d2478ef403e2455896" prot="public">
+          <name>DicomheroDimseCommandTypeNCreate</name>
+          <initializer>= 0x140</initializer>
+          <briefdescription>
+<para>N-CREATE. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a15e35f6228719670974b10a44793e89da074e4aa3425073c1e3c555371bfee2ef" prot="public">
+          <name>DicomheroDimseCommandTypeNDelete</name>
+          <initializer>= 0x150</initializer>
+          <briefdescription>
+<para>N-DELETE. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>DIMSE command types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="26" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="27" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="enum" id="dicomhero__dimse_8h_1a68c25b9011218c140696e501e6c9c123" prot="public" static="no" strong="no">
+        <type></type>
+        <name>DicomheroDimseCommandPriority</name>
+        <enumvalue id="dicomhero__dimse_8h_1a68c25b9011218c140696e501e6c9c123aff467acdf019bac52d718fb831e75048" prot="public">
+          <name>DicomheroDimseCommandPriorityLow</name>
+          <initializer>= 0x2</initializer>
+          <briefdescription>
+<para>Low priority. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a68c25b9011218c140696e501e6c9c123a8b2627b57fca48980429dc6ebd478c42" prot="public">
+          <name>DicomheroDimseCommandPriorityMedium</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Medium priority. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a68c25b9011218c140696e501e6c9c123a64d508b85fc177c46eed5b87e03d0eff" prot="public">
+          <name>DicomheroDimseCommandPriorityHigh</name>
+          <initializer>= 0x1</initializer>
+          <briefdescription>
+<para>High priority. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="43" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="44" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="enum" id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2ce" prot="public" static="no" strong="no">
+        <type></type>
+        <name>DicomheroDimseStatusCode</name>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2ceacadd83c34f43cacbb6ed6311018de6cf" prot="public">
+          <name>DicomheroDimseStatusCodeSuccess</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Success. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea3443badc19006f528ab94ef6a8c0e9c3" prot="public">
+          <name>DicomheroDimseStatusCodeUnsupportedOptionalAttributes</name>
+          <initializer>= 0x0001</initializer>
+          <briefdescription>
+<para>Requested optional Attributes are not supported. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea6747302180983d8dbed151f78e98fefd" prot="public">
+          <name>DicomheroDimseStatusCodeCannotUpdateperformedProcedureStepObject</name>
+          <initializer>= 0x0110</initializer>
+          <briefdescription>
+<para>Performed Procedure Step Object may no longer be updated. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2ceab8579f8261aa68568d343edcb4c4469d" prot="public">
+          <name>DicomheroDimseStatusCodeUnsupportedSOPClass</name>
+          <initializer>= 0x0122</initializer>
+          <briefdescription>
+<para>SOP Class not Supported. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea3cfd1d9df5688306bfe16049ceedbc53" prot="public">
+          <name>DicomheroDimseStatusCodeOutOfResources</name>
+          <initializer>= 0xa700</initializer>
+          <briefdescription>
+<para>Refused: Out of resources. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea6375597c93433ef75a1807c92334f9ad" prot="public">
+          <name>DicomheroDimseStatusCodeOutOfResourcesCannotCalculateNumberOfMatches</name>
+          <initializer>= 0xa701</initializer>
+          <briefdescription>
+<para>Refused: Out of Resources - Unable to calculate number of matches. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea3bd6b379076f21c41740f11fbf25590e" prot="public">
+          <name>DicomheroDimseStatusCodeOutOfResourcesCannotPerformSubOperations</name>
+          <initializer>= 0xa702</initializer>
+          <briefdescription>
+<para>Refused: Out of Resources - Unable to perform sub-operations. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea06353ddcf81e6cb5e544461b095f7f04" prot="public">
+          <name>DicomheroDimseStatusCodeMoveDestinationUnknown</name>
+          <initializer>= 0xa801</initializer>
+          <briefdescription>
+<para>Refused: Move Destination unknown. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2ceabc352bb036847353937d7c15033c9df1" prot="public">
+          <name>DicomheroDimseStatusCodeIdentifierDoesNotMatchSOPClass</name>
+          <initializer>= 0xa900</initializer>
+          <briefdescription>
+<para>Identifier does not match SOP Class. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2ceaaadafb1edd6ac8a3ac81ee93c3fa5c23" prot="public">
+          <name>DicomheroDimseStatusCodeSubOperationCompletedWithErrors</name>
+          <initializer>= 0xb000</initializer>
+          <briefdescription>
+<para>Sub-operations Complete - One or more Failures. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea08b229ac3bd9719c135af5aeb19ae189" prot="public">
+          <name>DicomheroDimseStatusCodeElementDiscarded</name>
+          <initializer>= 0xb006</initializer>
+          <briefdescription>
+<para>Element discarded. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2ceaf06154b76040e25505a04ef572bb9e10" prot="public">
+          <name>DicomheroDimseStatusCodeDatasetDoesNotMatchSOPClass</name>
+          <initializer>= 0xb007</initializer>
+          <briefdescription>
+<para>Data Set does not match SOP Class. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea89c3aea8f16bb40d2c48020173dcfcfb" prot="public">
+          <name>DicomheroDimseStatusCodeUPSAlreadyCanceled</name>
+          <initializer>= 0xb304</initializer>
+          <briefdescription>
+<para>The UPS is already in the requested state of CANCELED. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea857645bacfd8dc531d4621172031910d" prot="public">
+          <name>DicomheroDimseStatusCodeCoercedInvalidValuesToValidValues</name>
+          <initializer>= 0xb305</initializer>
+          <briefdescription>
+<para>Coerced invalid values to valid values. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea288bd63feb14e9c9359b6d27f7deaf50" prot="public">
+          <name>DicomheroDimseStatusCodeUPSStateAlreadyCompleted</name>
+          <initializer>= 0xb306</initializer>
+          <briefdescription>
+<para>The UPS is already in the requested state of COMPLETED. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2ceaa70bb2cff12709c30ce06a4514b75247" prot="public">
+          <name>DicomheroDimseStatusCodeUnableToProcess</name>
+          <initializer>= 0xc000</initializer>
+          <briefdescription>
+<para>Unable to process. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea2239d610933756526a28ca4ab35602ce" prot="public">
+          <name>DicomheroDimseStatusCodeMoreThanOneMatchFound</name>
+          <initializer>= 0xc100</initializer>
+          <briefdescription>
+<para>More than one match found,. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea6b2dab2ce06ad2a8cdb533f1bac3f482" prot="public">
+          <name>DicomheroDimseStatusCodeCannotSupportRequestedTemplate</name>
+          <initializer>= 0xc200</initializer>
+          <briefdescription>
+<para>Unable to support requested template. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea2a97267eca377eb4fdb465813db401be" prot="public">
+          <name>DicomheroDimseStatusCodeUPSNotUpdated</name>
+          <initializer>= 0xc300</initializer>
+          <briefdescription>
+<para>Refused: The UPS may no longer be updated. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea2e3c1d993b92527660cd1ab3dfdaafbb" prot="public">
+          <name>DicomheroDimseStatusCodeTransactionUIDNotProvided</name>
+          <initializer>= 0xc301</initializer>
+          <briefdescription>
+<para>Refused: The correct Transaction UID was not provided. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea8d7219b20e3b3ba136cf82c4020d9b53" prot="public">
+          <name>DicomheroDimseStatusCodeUPSAlreadyInProgress</name>
+          <initializer>= 0xc302</initializer>
+          <briefdescription>
+<para>Refused: The UPS is already IN PROGRESS. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea64f1347bf9517d08f990b5a87fc2158e" prot="public">
+          <name>DicomheroDimseStatusCodeCanScheduleOnlyWithNCreate</name>
+          <initializer>= 0xc303</initializer>
+          <briefdescription>
+<para>Refused: The UPS may only become SCHEDULED via N-CREATE, not N-SET or N-ACTION. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea5617add170e256dcdfc87206912e8ca8" prot="public">
+          <name>DicomheroDimseStatusCodeUPSCannotChangeState</name>
+          <initializer>= 0xc304</initializer>
+          <briefdescription>
+<para>Refused: The UPS has not met final state requirements for the requested state change. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea4a47757791a8bc2c6e63ba2bb0dd1eae" prot="public">
+          <name>DicomheroDimseStatusCodeInstanceUIDDoesNotExist</name>
+          <initializer>= 0xc307</initializer>
+          <briefdescription>
+<para>Specified SOP Instance UID does not exist or is not a UPS Instance managed by this SCP. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea95b318e4fafac64181feb78f35c4355d" prot="public">
+          <name>DicomheroDimseStatusCodeUnknownAETitle</name>
+          <initializer>= 0xc308</initializer>
+          <briefdescription>
+<para>Receiving AE-TITLE is Unknown to this SCP. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea723d6452cd97f4933373fedc1c332820" prot="public">
+          <name>DicomheroDimseStatusCodeUPSNotSchedule</name>
+          <initializer>= 0xc309</initializer>
+          <briefdescription>
+<para>Refused: The provided value of UPS State was not SCHEDULED. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2ceaebffe89bca69b4a5858de8cf25b74fa1" prot="public">
+          <name>DicomheroDimseStatusCodeUPSNotInProgress</name>
+          <initializer>= 0xc310</initializer>
+          <briefdescription>
+<para>Refused: The UPS is not yet in the &quot;IN PROGRESS&quot; state. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea7beab728aa58dc9f3ee4519005ab23fb" prot="public">
+          <name>DicomheroDimseStatusCodeUPSAlreadyCompleted</name>
+          <initializer>= 0xc311</initializer>
+          <briefdescription>
+<para>Refused: The UPS is already COMPLETED. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2ceaa59b5adcc118ec721e9b4e1b18a8952f" prot="public">
+          <name>DicomheroDimseStatusCodePerformerCannotBeContacted</name>
+          <initializer>= 0xc312</initializer>
+          <briefdescription>
+<para>Refused: The performer cannot be contacted. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea4f1f24ab6940e19c8eb442ddc63e783e" prot="public">
+          <name>DicomheroDimseStatusCodePerformerDoesNotCancel</name>
+          <initializer>= 0xc313</initializer>
+          <briefdescription>
+<para>Refused: Performer chooses not to cancel. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea13fbd1b8d03aff4ac6329e41bbf200c5" prot="public">
+          <name>DicomheroDimseStatusCodeUnappropriateActionForInstance</name>
+          <initializer>= 0xc314</initializer>
+          <briefdescription>
+<para>Refused: Specified action not appropriate for specified instance. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea60374c82534726265405d6f68c14fd81" prot="public">
+          <name>DicomheroDimseStatusCodeSCPDoesNotSupportEventReports</name>
+          <initializer>= 0xc315</initializer>
+          <briefdescription>
+<para>Refused: SCP does not support Event Reports. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea949288a2d70108cc8f7ce1bbe3380276" prot="public">
+          <name>DicomheroDimseStatusCodeCanceled</name>
+          <initializer>= 0xfe00</initializer>
+          <briefdescription>
+<para>Terminated due to Cancel request. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea7be36d97effc3354cb4d97d20bb3eb69" prot="public">
+          <name>DicomheroDimseStatusCodePending</name>
+          <initializer>= 0xff00</initializer>
+          <briefdescription>
+<para>Pending. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a3fd335e1dc6083ae994cd17bff05d2cea0b1cbc608a56615d01878d6b77d25a78" prot="public">
+          <name>DicomheroDimseStatusCodePendingWithWarnings</name>
+          <initializer>= 0xff01</initializer>
+          <briefdescription>
+<para>Pending with warnings. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The DICOM response status code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="57" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="58" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="enum" id="dicomhero__dimse_8h_1a2286344b19b7aea6c50c6ee382248fb5" prot="public" static="no" strong="no">
+        <type></type>
+        <name>DicomheroDimseStatus</name>
+        <enumvalue id="dicomhero__dimse_8h_1a2286344b19b7aea6c50c6ee382248fb5a5380ce14e14fb777670ee2bc1e12d1bf" prot="public">
+          <name>DicomheroDimseStatusSuccess</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>The operation was completed succesfully. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a2286344b19b7aea6c50c6ee382248fb5abbe34aebdae19700a23f7603789dc0cb" prot="public">
+          <name>DicomheroDimseStatusWarning</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>The operation was completed with warnings. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a2286344b19b7aea6c50c6ee382248fb5a963e56b4df29fcfd2fbbd0e0426a3b78" prot="public">
+          <name>DicomheroDimseStatusFailure</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>The operation failed. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a2286344b19b7aea6c50c6ee382248fb5a415b973c70e4cf2df9f91f8130a5b9b0" prot="public">
+          <name>DicomheroDimseStatusCancel</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>The operation was canceled. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dicomhero__dimse_8h_1a2286344b19b7aea6c50c6ee382248fb5aaefdb605dfdeeffabe837ceeb45438fc" prot="public">
+          <name>DicomheroDimseStatusPending</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>The operation is still running. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Simplified DIMSE response status code, derived from dimseStatusCode_t. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="102" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="103" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>2005<sp/>-<sp/>2021<sp/>by<sp/>Paolo<sp/>Brandoli/Binarno<sp/>s.p.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">DICOMHero/Imebra<sp/>is<sp/>available<sp/>for<sp/>free<sp/>under<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">The<sp/>full<sp/>text<sp/>of<sp/>the<sp/>license<sp/>is<sp/>available<sp/>in<sp/>the<sp/>file<sp/>license.rst</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>in<sp/>the<sp/>project<sp/>root<sp/>folder.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">If<sp/>you<sp/>do<sp/>not<sp/>want<sp/>to<sp/>be<sp/>bound<sp/>by<sp/>the<sp/>GPL<sp/>terms<sp/>(such<sp/>as<sp/>the<sp/>requirement</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>that<sp/>your<sp/>application<sp/>must<sp/>also<sp/>be<sp/>GPL),<sp/>you<sp/>may<sp/>purchase<sp/>a<sp/>commercial</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>license<sp/>for<sp/>DICOMHero/Imebra<sp/>from<sp/>the<sp/>DICOMHero’s<sp/>website<sp/>(https://dicomhero.com).</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(dicomheroObjcDimse__INCLUDED_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dicomheroObjcDimse__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Foundation/Foundation.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Foundation/NSArray.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Foundation/NSString.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dicomhero_macros.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>NS_ENUM(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">,<sp/>DicomheroDimseCommandType)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseCommandTypeCStore<sp/>=<sp/>0x1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseCommandTypeCGet<sp/>=<sp/>0x10,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseCommandTypeCFind<sp/>=<sp/>0x20,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseCommandTypeCMove<sp/>=<sp/>0x21,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseCommandTypeCCancel<sp/>=<sp/>0xfff,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseCommandTypeCEcho<sp/>=<sp/>0x30,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseCommandTypeNEventReport<sp/>=<sp/>0x100,<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseCommandTypeNGet<sp/>=<sp/>0x110,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseCommandTypeNSet<sp/>=<sp/>0x120,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseCommandTypeNAction<sp/>=<sp/>0x130,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseCommandTypeNCreate<sp/>=<sp/>0x140,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseCommandTypeNDelete<sp/>=<sp/>0x150<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>NS_ENUM(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">,<sp/>DicomheroDimseCommandPriority)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseCommandPriorityLow<sp/>=<sp/>0x2,<sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseCommandPriorityMedium<sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseCommandPriorityHigh<sp/>=<sp/>0x1<sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>NS_ENUM(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">,<sp/>DicomheroDimseStatusCode)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeSuccess<sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeUnsupportedOptionalAttributes<sp/>=<sp/>0x0001,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeCannotUpdateperformedProcedureStepObject<sp/>=<sp/>0x0110,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeUnsupportedSOPClass<sp/>=<sp/>0x0122,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeOutOfResources<sp/>=<sp/>0xa700,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeOutOfResourcesCannotCalculateNumberOfMatches<sp/>=<sp/>0xa701,<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeOutOfResourcesCannotPerformSubOperations<sp/>=<sp/>0xa702,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeMoveDestinationUnknown<sp/>=<sp/>0xa801,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeIdentifierDoesNotMatchSOPClass<sp/>=<sp/>0xa900,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeSubOperationCompletedWithErrors<sp/>=<sp/>0xb000,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeElementDiscarded<sp/>=<sp/>0xb006,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeDatasetDoesNotMatchSOPClass<sp/>=<sp/>0xb007,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeUPSAlreadyCanceled<sp/>=<sp/>0xb304,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeCoercedInvalidValuesToValidValues<sp/>=<sp/>0xb305,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeUPSStateAlreadyCompleted<sp/>=<sp/>0xb306,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeUnableToProcess<sp/>=<sp/>0xc000,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeMoreThanOneMatchFound<sp/>=<sp/>0xc100,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeCannotSupportRequestedTemplate<sp/>=<sp/>0xc200,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeUPSNotUpdated<sp/>=<sp/>0xc300,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeTransactionUIDNotProvided<sp/>=<sp/>0xc301,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeUPSAlreadyInProgress<sp/>=<sp/>0xc302,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeCanScheduleOnlyWithNCreate<sp/>=<sp/>0xc303,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeUPSCannotChangeState<sp/>=<sp/>0xc304,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeInstanceUIDDoesNotExist<sp/>=<sp/>0xc307,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeUnknownAETitle<sp/>=<sp/>0xc308,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeUPSNotSchedule<sp/>=<sp/>0xc309,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeUPSNotInProgress<sp/>=<sp/>0xc310,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeUPSAlreadyCompleted<sp/>=<sp/>0xc311,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodePerformerCannotBeContacted<sp/>=<sp/>0xc312,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodePerformerDoesNotCancel<sp/>=<sp/>0xc313,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeUnappropriateActionForInstance<sp/>=<sp/>0xc314,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeSCPDoesNotSupportEventReports<sp/>=<sp/>0xc315,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodeCanceled<sp/>=<sp/>0xfe00,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodePending<sp/>=<sp/>0xff00,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCodePendingWithWarnings<sp/>=<sp/>0xff01<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>NS_ENUM(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">,<sp/>DicomheroDimseStatus)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusSuccess<sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusWarning<sp/>=<sp/>1,<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusFailure<sp/>=<sp/>2,<sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusCancel<sp/><sp/>=<sp/>3,<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>DicomheroDimseStatusPending<sp/>=<sp/>4<sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_tag_id" kindref="compound">DicomheroTagId</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_association_base" kindref="compound">DicomheroAssociationBase</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="interface_dicomhero_dimse_command_base" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_dimse_command_base" kindref="compound">DicomheroDimseCommandBase</ref>:<sp/>NSObject</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">@public</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/>define_dicomhero_object_holder(DimseCommandBase);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithDicomheroCommand:define_dicomhero_parameter(DimseCommandBase);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)dealloc;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)getCommandDataSet:(NSError**)pError;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)getPayloadDataSet:(NSError**)pError;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>-(NSString*)getAbstractSyntax;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>-(NSString*)getAffectedSopInstanceUid:(NSError**)pError;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>-(NSString*)getAffectedSopClassUid:(NSError**)pError;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>-(NSString*)getRequestedSopInstanceUid:(NSError**)pError;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>-(NSString*)getRequestedSopClassUid:(NSError**)pError;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="interface_dicomhero_dimse_command" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_dimse_command" kindref="compound">DicomheroDimseCommand</ref>:<sp/><ref refid="interface_dicomhero_dimse_command_base" kindref="compound">DicomheroDimseCommandBase</ref></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_dimse_command_1a4aaa4fa728da2426b7b15b9be68166c3" kindref="member">ID</ref>;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/>DicomheroDimseCommandType<sp/><ref refid="interface_dicomhero_dimse_command_1a76136966e014566dc921bf330a4ef335" kindref="member">commandType</ref>;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="interface_dicomhero_dimse_response" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_dimse_response" kindref="compound">DicomheroDimseResponse</ref>:<sp/><ref refid="interface_dicomhero_dimse_command_base" kindref="compound">DicomheroDimseCommandBase</ref></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/>DicomheroDimseStatus<sp/>status;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>statusCode;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243" refid="interface_dicomhero_c_partial_response" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_c_partial_response" kindref="compound">DicomheroCPartialResponse</ref>:<sp/><ref refid="interface_dicomhero_dimse_response" kindref="compound">DicomheroDimseResponse</ref></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)getRemainingSubOperations:(NSError**)pError</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)getCompletedSubOperations:(NSError**)pError</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)getFailedSubOperations:(NSError**)pError</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)getWarningSubOperations:(NSError**)pError</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298" refid="interface_dicomhero_c_store_command" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_c_store_command" kindref="compound">DicomheroCStoreCommand</ref>:<sp/><ref refid="interface_dicomhero_dimse_command" kindref="compound">DicomheroDimseCommand</ref></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithAbstractSyntax:(NSString*)abstractSyntax</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)messageID</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>priority:(DicomheroDimseCommandPriority)priority</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectedSopClassUid:(NSString*)affectedSopClassUid</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectedSopInstanceUid:(NSString*)affectedSopInstanceUid</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>originatorAET:(NSString*)originatorAET</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>originatorMessageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)originatorMessageID</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>payload:(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)pPayload;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/>NSString*<sp/><ref refid="interface_dicomhero_c_store_command_1a238e072061bd0a1e84b7e44c81a5c50e" kindref="member">originatorAET</ref>;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_c_store_command_1a6b830d681baf4f9edf1daa177c0a0dd4" kindref="member">originatorMessageID</ref>;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353" refid="interface_dicomhero_c_store_response" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_c_store_response" kindref="compound">DicomheroCStoreResponse</ref>:<sp/><ref refid="interface_dicomhero_dimse_response" kindref="compound">DicomheroDimseResponse</ref></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithcommand:(<ref refid="interface_dicomhero_c_store_command" kindref="compound">DicomheroCStoreCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responseCode:(DicomheroDimseStatusCode)responseCode;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379" refid="interface_dicomhero_c_get_command" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_c_get_command" kindref="compound">DicomheroCGetCommand</ref>:<sp/><ref refid="interface_dicomhero_dimse_command" kindref="compound">DicomheroDimseCommand</ref></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithAbstractSyntax:(NSString*)abstractSyntax</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)messageID</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>priority:(DicomheroDimseCommandPriority)priority</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectedSopClassUid:(NSString*)affectedSopClassUid</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>identifier:(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)pIdentifier;</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412" refid="interface_dicomhero_c_get_response" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_c_get_response" kindref="compound">DicomheroCGetResponse</ref>:<sp/><ref refid="interface_dicomhero_c_partial_response" kindref="compound">DicomheroCPartialResponse</ref></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithCommand:(<ref refid="interface_dicomhero_c_get_command" kindref="compound">DicomheroCGetCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responseCode:(DicomheroDimseStatusCode)responseCode</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remainingSubOperations:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)remainingSubOperations</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>completedSubOperations:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)completedSubOperations</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>failedSubOperations:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)failedSubOperations</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>warningSubOperations:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)warningSubOperations</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>identifier:(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)pIdentifier;</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"></highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithcommand:(<ref refid="interface_dicomhero_c_get_command" kindref="compound">DicomheroCGetCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responseCode:(DicomheroDimseStatusCode)responseCode</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remainingSubOperations:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)remainingSubOperations</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>completedSubOperations:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)completedSubOperations</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>failedSubOperations:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)failedSubOperations</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>warningSubOperations:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)warningSubOperations;</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"></highlight></codeline>
+<codeline lineno="472"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="473"><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"></highlight></codeline>
+<codeline lineno="479" refid="interface_dicomhero_c_find_command" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_c_find_command" kindref="compound">DicomheroCFindCommand</ref>:<sp/><ref refid="interface_dicomhero_dimse_command" kindref="compound">DicomheroDimseCommand</ref></highlight></codeline>
+<codeline lineno="480"><highlight class="normal"></highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithAbstractSyntax:(NSString*)abstractSyntax</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)messageID</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>priority:(DicomheroDimseCommandPriority)priority</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectedSopClassUid:(NSString*)affectedSopClassUid</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>identifier:(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)pIdentifier;</highlight></codeline>
+<codeline lineno="505"><highlight class="normal"></highlight></codeline>
+<codeline lineno="506"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"></highlight></codeline>
+<codeline lineno="508"><highlight class="normal"></highlight></codeline>
+<codeline lineno="513" refid="interface_dicomhero_c_find_response" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_c_find_response" kindref="compound">DicomheroCFindResponse</ref>:<sp/><ref refid="interface_dicomhero_dimse_response" kindref="compound">DicomheroDimseResponse</ref></highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithCommand:(<ref refid="interface_dicomhero_c_find_command" kindref="compound">DicomheroCFindCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>identifier:(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)pIdentifier;</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"></highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithcommand:(<ref refid="interface_dicomhero_c_find_command" kindref="compound">DicomheroCFindCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responseCode:(DicomheroDimseStatusCode)responseCode;</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="541"><highlight class="normal"></highlight></codeline>
+<codeline lineno="542"><highlight class="normal"></highlight></codeline>
+<codeline lineno="547" refid="interface_dicomhero_c_move_command" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_c_move_command" kindref="compound">DicomheroCMoveCommand</ref>:<sp/><ref refid="interface_dicomhero_dimse_command" kindref="compound">DicomheroDimseCommand</ref></highlight></codeline>
+<codeline lineno="548"><highlight class="normal"></highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithAbstractSyntax:(NSString*)abstractSyntax</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)messageID</highlight></codeline>
+<codeline lineno="571"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>priority:(DicomheroDimseCommandPriority)priority</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectedSopClassUid:(NSString*)affectedSopClassUid</highlight></codeline>
+<codeline lineno="573"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>destinationAET:(NSString*)destinationAET</highlight></codeline>
+<codeline lineno="574"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>identifier:(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)pIdentifier;</highlight></codeline>
+<codeline lineno="575"><highlight class="normal"></highlight></codeline>
+<codeline lineno="584"><highlight class="normal"><sp/><sp/><sp/><sp/>-(NSString*)getDestinationAET:(NSError**)pError</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="586"><highlight class="normal"></highlight></codeline>
+<codeline lineno="587"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="588"><highlight class="normal"></highlight></codeline>
+<codeline lineno="589"><highlight class="normal"></highlight></codeline>
+<codeline lineno="594" refid="interface_dicomhero_c_move_response" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_c_move_response" kindref="compound">DicomheroCMoveResponse</ref>:<sp/><ref refid="interface_dicomhero_c_partial_response" kindref="compound">DicomheroCPartialResponse</ref></highlight></codeline>
+<codeline lineno="595"><highlight class="normal"></highlight></codeline>
+<codeline lineno="621"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithCommand:(<ref refid="interface_dicomhero_c_move_command" kindref="compound">DicomheroCMoveCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="622"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responseCode:(DicomheroDimseStatusCode)responseCode</highlight></codeline>
+<codeline lineno="623"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remainingSubOperations:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)remainingSubOperations</highlight></codeline>
+<codeline lineno="624"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>completedSubOperations:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)completedSubOperations</highlight></codeline>
+<codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>failedSubOperations:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)failedSubOperations</highlight></codeline>
+<codeline lineno="626"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>warningSubOperations:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)warningSubOperations</highlight></codeline>
+<codeline lineno="627"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>identifier:(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)pIdentifier;</highlight></codeline>
+<codeline lineno="628"><highlight class="normal"></highlight></codeline>
+<codeline lineno="646"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithcommand:(<ref refid="interface_dicomhero_c_move_command" kindref="compound">DicomheroCMoveCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="647"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responseCode:(DicomheroDimseStatusCode)responseCode</highlight></codeline>
+<codeline lineno="648"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remainingSubOperations:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)remainingSubOperations</highlight></codeline>
+<codeline lineno="649"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>completedSubOperations:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)completedSubOperations</highlight></codeline>
+<codeline lineno="650"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>failedSubOperations:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)failedSubOperations</highlight></codeline>
+<codeline lineno="651"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>warningSubOperations:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)warningSubOperations;</highlight></codeline>
+<codeline lineno="652"><highlight class="normal"></highlight></codeline>
+<codeline lineno="653"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="654"><highlight class="normal"></highlight></codeline>
+<codeline lineno="655"><highlight class="normal"></highlight></codeline>
+<codeline lineno="660" refid="interface_dicomhero_c_echo_command" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_c_echo_command" kindref="compound">DicomheroCEchoCommand</ref>:<sp/><ref refid="interface_dicomhero_dimse_command" kindref="compound">DicomheroDimseCommand</ref></highlight></codeline>
+<codeline lineno="661"><highlight class="normal"></highlight></codeline>
+<codeline lineno="678"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithAbstractSyntax:(NSString*)abstractSyntax</highlight></codeline>
+<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)messageID</highlight></codeline>
+<codeline lineno="680"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>priority:(DicomheroDimseCommandPriority)priority</highlight></codeline>
+<codeline lineno="681"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectedSopClassUid:(NSString*)affectedSopClassUid;</highlight></codeline>
+<codeline lineno="682"><highlight class="normal"></highlight></codeline>
+<codeline lineno="683"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="684"><highlight class="normal"></highlight></codeline>
+<codeline lineno="685"><highlight class="normal"></highlight></codeline>
+<codeline lineno="690" refid="interface_dicomhero_c_echo_response" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_c_echo_response" kindref="compound">DicomheroCEchoResponse</ref>:<sp/><ref refid="interface_dicomhero_dimse_response" kindref="compound">DicomheroDimseResponse</ref></highlight></codeline>
+<codeline lineno="691"><highlight class="normal"></highlight></codeline>
+<codeline lineno="700"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithcommand:(<ref refid="interface_dicomhero_c_echo_command" kindref="compound">DicomheroCEchoCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="701"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responseCode:(DicomheroDimseStatusCode)responseCode;</highlight></codeline>
+<codeline lineno="702"><highlight class="normal"></highlight></codeline>
+<codeline lineno="703"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="704"><highlight class="normal"></highlight></codeline>
+<codeline lineno="705"><highlight class="normal"></highlight></codeline>
+<codeline lineno="710" refid="interface_dicomhero_c_cancel_command" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_c_cancel_command" kindref="compound">DicomheroCCancelCommand</ref>:<sp/><ref refid="interface_dicomhero_dimse_command" kindref="compound">DicomheroDimseCommand</ref></highlight></codeline>
+<codeline lineno="711"><highlight class="normal"></highlight></codeline>
+<codeline lineno="728"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithAbstractSyntax:(NSString*)abstractSyntax</highlight></codeline>
+<codeline lineno="729"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)messageID</highlight></codeline>
+<codeline lineno="730"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>priority:(DicomheroDimseCommandPriority)priority</highlight></codeline>
+<codeline lineno="731"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cancelMessageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)cancelMessageID;</highlight></codeline>
+<codeline lineno="732"><highlight class="normal"></highlight></codeline>
+<codeline lineno="733"><highlight class="normal"></highlight></codeline>
+<codeline lineno="738"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_c_cancel_command_1a370e195d60b9126918912f4b0a470844" kindref="member">cancelMessageID</ref>;</highlight></codeline>
+<codeline lineno="739"><highlight class="normal"></highlight></codeline>
+<codeline lineno="740"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="741"><highlight class="normal"></highlight></codeline>
+<codeline lineno="742"><highlight class="normal"></highlight></codeline>
+<codeline lineno="747" refid="interface_dicomhero_n_event_report_command" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_n_event_report_command" kindref="compound">DicomheroNEventReportCommand</ref>:<sp/><ref refid="interface_dicomhero_dimse_command" kindref="compound">DicomheroDimseCommand</ref></highlight></codeline>
+<codeline lineno="748"><highlight class="normal"></highlight></codeline>
+<codeline lineno="766"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithAbstractSyntax:(NSString*)abstractSyntax</highlight></codeline>
+<codeline lineno="767"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)messageID</highlight></codeline>
+<codeline lineno="768"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectedSopClassUid:(NSString*)affectedSopClassUid</highlight></codeline>
+<codeline lineno="769"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectedSopInstanceUid:(NSString*)affectedSopInstanceUid</highlight></codeline>
+<codeline lineno="770"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)eventID;</highlight></codeline>
+<codeline lineno="771"><highlight class="normal"></highlight></codeline>
+<codeline lineno="791"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithAbstractSyntax:(NSString*)abstractSyntax</highlight></codeline>
+<codeline lineno="792"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)messageID</highlight></codeline>
+<codeline lineno="793"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectedSopClassUid:(NSString*)affectedSopClassUid</highlight></codeline>
+<codeline lineno="794"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectedSopInstanceUid:(NSString*)affectedSopInstanceUid</highlight></codeline>
+<codeline lineno="795"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)eventID</highlight></codeline>
+<codeline lineno="796"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventInformation:(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)pEventInformation;</highlight></codeline>
+<codeline lineno="797"><highlight class="normal"></highlight></codeline>
+<codeline lineno="802"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_n_event_report_command_1a70ecd506975325facd666f00511a6694" kindref="member">eventID</ref>;</highlight></codeline>
+<codeline lineno="803"><highlight class="normal"></highlight></codeline>
+<codeline lineno="804"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="805"><highlight class="normal"></highlight></codeline>
+<codeline lineno="806"><highlight class="normal"></highlight></codeline>
+<codeline lineno="811" refid="interface_dicomhero_n_event_report_response" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_n_event_report_response" kindref="compound">DicomheroNEventReportResponse</ref>:<sp/><ref refid="interface_dicomhero_dimse_response" kindref="compound">DicomheroDimseResponse</ref></highlight></codeline>
+<codeline lineno="812"><highlight class="normal"></highlight></codeline>
+<codeline lineno="822"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithCommand:(<ref refid="interface_dicomhero_n_event_report_command" kindref="compound">DicomheroNEventReportCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="823"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventReply:(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)pEventReply;</highlight></codeline>
+<codeline lineno="824"><highlight class="normal"></highlight></codeline>
+<codeline lineno="833"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithcommand:(<ref refid="interface_dicomhero_n_event_report_command" kindref="compound">DicomheroNEventReportCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="834"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responseCode:(DicomheroDimseStatusCode)responseCode;</highlight></codeline>
+<codeline lineno="835"><highlight class="normal"></highlight></codeline>
+<codeline lineno="841"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_n_event_report_response_1aaddf4424baf388197791e3eacf8756f3" kindref="member">eventID</ref>;</highlight></codeline>
+<codeline lineno="842"><highlight class="normal"></highlight></codeline>
+<codeline lineno="843"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="844"><highlight class="normal"></highlight></codeline>
+<codeline lineno="845"><highlight class="normal"></highlight></codeline>
+<codeline lineno="850" refid="interface_dicomhero_n_get_command" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_n_get_command" kindref="compound">DicomheroNGetCommand</ref>:<sp/><ref refid="interface_dicomhero_dimse_command" kindref="compound">DicomheroDimseCommand</ref></highlight></codeline>
+<codeline lineno="851"><highlight class="normal"></highlight></codeline>
+<codeline lineno="874"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithAbstractSyntax:(NSString*)abstractSyntax</highlight></codeline>
+<codeline lineno="875"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)messageID</highlight></codeline>
+<codeline lineno="876"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestedSopClassUid:(NSString*)requestedSopClassUid</highlight></codeline>
+<codeline lineno="877"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestedSopInstanceUid:(NSString*)requestedSopInstanceUid</highlight></codeline>
+<codeline lineno="878"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attributeIdentifierList:(NSArray*)attributeIdentifierList;</highlight></codeline>
+<codeline lineno="879"><highlight class="normal"></highlight></codeline>
+<codeline lineno="888"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/>NSArray*<sp/><ref refid="interface_dicomhero_n_get_command_1aa2ba09a8c9ab49ad8debced50357d287" kindref="member">attributeList</ref>;</highlight></codeline>
+<codeline lineno="889"><highlight class="normal"></highlight></codeline>
+<codeline lineno="890"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="891"><highlight class="normal"></highlight></codeline>
+<codeline lineno="892"><highlight class="normal"></highlight></codeline>
+<codeline lineno="897" refid="interface_dicomhero_n_get_response" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_n_get_response" kindref="compound">DicomheroNGetResponse</ref>:<sp/><ref refid="interface_dicomhero_dimse_response" kindref="compound">DicomheroDimseResponse</ref></highlight></codeline>
+<codeline lineno="898"><highlight class="normal"></highlight></codeline>
+<codeline lineno="909"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithCommand:(<ref refid="interface_dicomhero_n_get_command" kindref="compound">DicomheroNGetCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="910"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responseCode:(DicomheroDimseStatusCode)responseCode</highlight></codeline>
+<codeline lineno="911"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attributeList:(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)pAttributeList;</highlight></codeline>
+<codeline lineno="912"><highlight class="normal"></highlight></codeline>
+<codeline lineno="921"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithcommand:(<ref refid="interface_dicomhero_n_get_command" kindref="compound">DicomheroNGetCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="922"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responseCode:(DicomheroDimseStatusCode)responseCode;</highlight></codeline>
+<codeline lineno="923"><highlight class="normal"></highlight></codeline>
+<codeline lineno="924"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="925"><highlight class="normal"></highlight></codeline>
+<codeline lineno="926"><highlight class="normal"></highlight></codeline>
+<codeline lineno="931" refid="interface_dicomhero_n_set_command" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_n_set_command" kindref="compound">DicomheroNSetCommand</ref>:<sp/><ref refid="interface_dicomhero_dimse_command" kindref="compound">DicomheroDimseCommand</ref></highlight></codeline>
+<codeline lineno="932"><highlight class="normal"></highlight></codeline>
+<codeline lineno="952"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithAbstractSyntax:(NSString*)abstractSyntax</highlight></codeline>
+<codeline lineno="953"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)messageID</highlight></codeline>
+<codeline lineno="954"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestedSopClassUid:(NSString*)requestedSopClassUid</highlight></codeline>
+<codeline lineno="955"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestedSopInstanceUid:(NSString*)requestedSopInstanceUid</highlight></codeline>
+<codeline lineno="956"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>modificationList:(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)pModificationList;</highlight></codeline>
+<codeline lineno="957"><highlight class="normal"></highlight></codeline>
+<codeline lineno="958"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="959"><highlight class="normal"></highlight></codeline>
+<codeline lineno="960"><highlight class="normal"></highlight></codeline>
+<codeline lineno="965" refid="interface_dicomhero_n_set_response" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_n_set_response" kindref="compound">DicomheroNSetResponse</ref>:<sp/><ref refid="interface_dicomhero_dimse_response" kindref="compound">DicomheroDimseResponse</ref></highlight></codeline>
+<codeline lineno="966"><highlight class="normal"></highlight></codeline>
+<codeline lineno="976"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithCommand:(<ref refid="interface_dicomhero_n_set_command" kindref="compound">DicomheroNSetCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="977"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>modifiedAttributes:(NSArray*)pModifiedAttributes;</highlight></codeline>
+<codeline lineno="978"><highlight class="normal"></highlight></codeline>
+<codeline lineno="987"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithcommand:(<ref refid="interface_dicomhero_n_set_command" kindref="compound">DicomheroNSetCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="988"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responseCode:(DicomheroDimseStatusCode)responseCode;</highlight></codeline>
+<codeline lineno="989"><highlight class="normal"></highlight></codeline>
+<codeline lineno="995"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/>NSArray*<sp/><ref refid="interface_dicomhero_n_set_response_1a55dc2228f1123421cd6e18c179d77459" kindref="member">modifiedAttributes</ref>;</highlight></codeline>
+<codeline lineno="996"><highlight class="normal"></highlight></codeline>
+<codeline lineno="997"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="998"><highlight class="normal"></highlight></codeline>
+<codeline lineno="999"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1004" refid="interface_dicomhero_n_action_command" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_n_action_command" kindref="compound">DicomheroNActionCommand</ref>:<sp/><ref refid="interface_dicomhero_dimse_command" kindref="compound">DicomheroDimseCommand</ref></highlight></codeline>
+<codeline lineno="1005"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1026"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithAbstractSyntax:(NSString*)abstractSyntax</highlight></codeline>
+<codeline lineno="1027"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)messageID</highlight></codeline>
+<codeline lineno="1028"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestedSopClassUid:(NSString*)requestedSopClassUid</highlight></codeline>
+<codeline lineno="1029"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestedSopInstanceUid:(NSString*)requestedSopInstanceUid</highlight></codeline>
+<codeline lineno="1030"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actionID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)actionID</highlight></codeline>
+<codeline lineno="1031"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actionInformation:(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)pActionInformation;</highlight></codeline>
+<codeline lineno="1032"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1051"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithAbstractSyntax:(NSString*)abstractSyntax</highlight></codeline>
+<codeline lineno="1052"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)messageID</highlight></codeline>
+<codeline lineno="1053"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestedSopClassUid:(NSString*)requestedSopClassUid</highlight></codeline>
+<codeline lineno="1054"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestedSopInstanceUid:(NSString*)requestedSopInstanceUid</highlight></codeline>
+<codeline lineno="1055"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actionID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)actionID;</highlight></codeline>
+<codeline lineno="1056"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1061"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_n_action_command_1ac1d7467267e80f99bc6b780b251bc5a6" kindref="member">actionID</ref>;</highlight></codeline>
+<codeline lineno="1062"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1063"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1064"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1065"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1070" refid="interface_dicomhero_n_action_response" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_n_action_response" kindref="compound">DicomheroNActionResponse</ref>:<sp/><ref refid="interface_dicomhero_dimse_response" kindref="compound">DicomheroDimseResponse</ref></highlight></codeline>
+<codeline lineno="1071"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1081"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithCommand:(<ref refid="interface_dicomhero_n_action_command" kindref="compound">DicomheroNActionCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="1082"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actionReply:(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)pActionReply;</highlight></codeline>
+<codeline lineno="1083"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1092"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithcommand:(<ref refid="interface_dicomhero_n_action_command" kindref="compound">DicomheroNActionCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="1093"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responseCode:(DicomheroDimseStatusCode)responseCode;</highlight></codeline>
+<codeline lineno="1094"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1099"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(readonly)<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="interface_dicomhero_n_action_response_1adcc4dd42124ea7fabb08d8344b67117f" kindref="member">actionID</ref>;</highlight></codeline>
+<codeline lineno="1100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1101"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1108" refid="interface_dicomhero_n_create_command" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_n_create_command" kindref="compound">DicomheroNCreateCommand</ref>:<sp/><ref refid="interface_dicomhero_dimse_command" kindref="compound">DicomheroDimseCommand</ref></highlight></codeline>
+<codeline lineno="1109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1128"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithAbstractSyntax:(NSString*)abstractSyntax</highlight></codeline>
+<codeline lineno="1129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)messageID</highlight></codeline>
+<codeline lineno="1130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectedSopClassUid:(NSString*)affectedSopClassUid</highlight></codeline>
+<codeline lineno="1131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectedSopInstanceUid:(NSString*)affectedSopInstanceUid</highlight></codeline>
+<codeline lineno="1132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attributeList:(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)pAttributeList;</highlight></codeline>
+<codeline lineno="1133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1150"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithAbstractSyntax:(NSString*)abstractSyntax</highlight></codeline>
+<codeline lineno="1151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)messageID</highlight></codeline>
+<codeline lineno="1152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectedSopClassUid:(NSString*)affectedSopClassUid</highlight></codeline>
+<codeline lineno="1153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectedSopInstanceUid:(NSString*)affectedSopInstanceUid;</highlight></codeline>
+<codeline lineno="1154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1155"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1162" refid="interface_dicomhero_n_create_response" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_n_create_response" kindref="compound">DicomheroNCreateResponse</ref>:<sp/><ref refid="interface_dicomhero_dimse_response" kindref="compound">DicomheroDimseResponse</ref></highlight></codeline>
+<codeline lineno="1163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1172"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithCommand:(<ref refid="interface_dicomhero_n_create_command" kindref="compound">DicomheroNCreateCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="1173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attributeList:(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)pAttributeList;</highlight></codeline>
+<codeline lineno="1174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1184"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithCommand:(<ref refid="interface_dicomhero_n_create_command" kindref="compound">DicomheroNCreateCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="1185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectedSopInstanceUid:(NSString*)affectedSopInstanceUid</highlight></codeline>
+<codeline lineno="1186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attributeList:(<ref refid="interface_dicomhero_data_set" kindref="compound">DicomheroDataSet</ref>*)pAttributeList;</highlight></codeline>
+<codeline lineno="1187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1196"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithCommand:(<ref refid="interface_dicomhero_n_create_command" kindref="compound">DicomheroNCreateCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="1197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectedSopInstanceUid:(NSString*)affectedSopInstanceUid;</highlight></codeline>
+<codeline lineno="1198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1207"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithcommand:(<ref refid="interface_dicomhero_n_create_command" kindref="compound">DicomheroNCreateCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="1208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responseCode:(DicomheroDimseStatusCode)responseCode;</highlight></codeline>
+<codeline lineno="1209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1210"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1217" refid="interface_dicomhero_n_delete_command" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_n_delete_command" kindref="compound">DicomheroNDeleteCommand</ref>:<sp/><ref refid="interface_dicomhero_dimse_command" kindref="compound">DicomheroDimseCommand</ref></highlight></codeline>
+<codeline lineno="1218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1235"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithAbstractSyntax:(NSString*)abstractSyntax</highlight></codeline>
+<codeline lineno="1236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messageID:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">)messageID</highlight></codeline>
+<codeline lineno="1237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestedSopClassUid:(NSString*)requestedSopClassUid</highlight></codeline>
+<codeline lineno="1238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestedSopInstanceUid:(NSString*)requestedSopInstanceUid;</highlight></codeline>
+<codeline lineno="1239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1240"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1247" refid="interface_dicomhero_n_delete_response" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_n_delete_response" kindref="compound">DicomheroNDeleteResponse</ref>:<sp/><ref refid="interface_dicomhero_dimse_response" kindref="compound">DicomheroDimseResponse</ref></highlight></codeline>
+<codeline lineno="1248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1257"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithcommand:(<ref refid="interface_dicomhero_n_delete_command" kindref="compound">DicomheroNDeleteCommand</ref>*)pReceivedCommand</highlight></codeline>
+<codeline lineno="1258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responseCode:(DicomheroDimseStatusCode)responseCode;</highlight></codeline>
+<codeline lineno="1259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1260"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1272" refid="interface_dicomhero_dimse_service" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_dicomhero_dimse_service" kindref="compound">DicomheroDimseService</ref>:<sp/>NSObject</highlight></codeline>
+<codeline lineno="1273"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1274"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">@public</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1275"><highlight class="normal"><sp/><sp/><sp/>define_dicomhero_object_holder(DimseService);</highlight></codeline>
+<codeline lineno="1276"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1286"><highlight class="normal"><sp/><sp/><sp/><sp/>-(id)initWithAssociation:(<ref refid="interface_dicomhero_association_base" kindref="compound">DicomheroAssociationBase</ref>*)pAssociation;</highlight></codeline>
+<codeline lineno="1287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1288"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)dealloc;</highlight></codeline>
+<codeline lineno="1289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1302"><highlight class="normal"><sp/><sp/><sp/><sp/>-(NSString*)getTransferSyntax:(NSString*)abstractSyntax<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1314"><highlight class="normal"><sp/><sp/><sp/><sp/>-(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>short)getNextCommandID;</highlight></codeline>
+<codeline lineno="1315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1346"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_dimse_command" kindref="compound">DicomheroDimseCommand</ref>*)getCommand:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1358"><highlight class="normal"><sp/><sp/><sp/><sp/>-(void)sendCommandOrResponse:(<ref refid="interface_dicomhero_dimse_command_base" kindref="compound">DicomheroDimseCommandBase</ref>*)pCommand<sp/>error:(NSError**)pError</highlight></codeline>
+<codeline lineno="1359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((swift_error(nonnull_error)));</highlight></codeline>
+<codeline lineno="1360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1380"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_c_store_response" kindref="compound">DicomheroCStoreResponse</ref>*)getCStoreResponse:(<ref refid="interface_dicomhero_c_store_command" kindref="compound">DicomheroCStoreCommand</ref>*)pCommand<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1401"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_c_get_response" kindref="compound">DicomheroCGetResponse</ref>*)getCGetResponse:(<ref refid="interface_dicomhero_c_get_command" kindref="compound">DicomheroCGetCommand</ref>*)pCommand<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1422"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_c_find_response" kindref="compound">DicomheroCFindResponse</ref>*)getCFindResponse:(<ref refid="interface_dicomhero_c_find_command" kindref="compound">DicomheroCFindCommand</ref>*)pCommand<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1423"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1443"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_c_move_response" kindref="compound">DicomheroCMoveResponse</ref>*)getCMoveResponse:(<ref refid="interface_dicomhero_c_move_command" kindref="compound">DicomheroCMoveCommand</ref>*)pCommand<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1444"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1464"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_c_echo_response" kindref="compound">DicomheroCEchoResponse</ref>*)getCEchoResponse:(<ref refid="interface_dicomhero_c_echo_command" kindref="compound">DicomheroCEchoCommand</ref>*)pCommand<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1465"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1485"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_n_event_report_response" kindref="compound">DicomheroNEventReportResponse</ref>*)getNEventReportResponse:(<ref refid="interface_dicomhero_n_event_report_command" kindref="compound">DicomheroNEventReportCommand</ref>*)pCommand<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1486"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1506"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_n_get_response" kindref="compound">DicomheroNGetResponse</ref>*)getNGetResponse:(<ref refid="interface_dicomhero_n_get_command" kindref="compound">DicomheroNGetCommand</ref>*)pCommand<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1507"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1527"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_n_set_response" kindref="compound">DicomheroNSetResponse</ref>*)getNSetResponse:(<ref refid="interface_dicomhero_n_set_command" kindref="compound">DicomheroNSetCommand</ref>*)pCommand<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1528"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1548"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_n_action_response" kindref="compound">DicomheroNActionResponse</ref>*)getNActionResponse:(<ref refid="interface_dicomhero_n_action_command" kindref="compound">DicomheroNActionCommand</ref>*)pCommand<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1549"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1569"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_n_create_response" kindref="compound">DicomheroNCreateResponse</ref>*)getNCreateResponse:(<ref refid="interface_dicomhero_n_create_command" kindref="compound">DicomheroNCreateCommand</ref>*)pCommand<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1570"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1590"><highlight class="normal"><sp/><sp/><sp/><sp/>-(<ref refid="interface_dicomhero_n_delete_response" kindref="compound">DicomheroNDeleteResponse</ref>*)getNDeleteResponse:(<ref refid="interface_dicomhero_n_delete_command" kindref="compound">DicomheroNDeleteCommand</ref>*)pCommand<sp/>error:(NSError**)pError;</highlight></codeline>
+<codeline lineno="1591"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1592"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1593"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1594"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>dicomheroObjcDimse__INCLUDED_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h"/>
+  </compounddef>
+</doxygen>

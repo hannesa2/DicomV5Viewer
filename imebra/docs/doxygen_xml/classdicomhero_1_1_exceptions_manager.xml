@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_exceptions_manager" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::ExceptionsManager</compoundname>
+    <includes local="no">exceptions.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classdicomhero_1_1_exceptions_manager_1a916471fcbaac1fffdd5c104d97dcc170" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string dicomhero::ExceptionsManager::getExceptionTrace</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>getExceptionTrace</name>
+        <briefdescription>
+<para>Return a message containing the stack trace for the last exception thrown in the current thread. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a message containing the stack trace </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="38" column="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Return the stack trace for the last exception thrown in the current thread. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" line="29" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/exceptions.h" bodystart="30" bodyend="39"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_exceptions_manager_1a916471fcbaac1fffdd5c104d97dcc170" prot="public" virt="non-virtual"><scope>dicomhero::ExceptionsManager</scope><name>getExceptionTrace</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

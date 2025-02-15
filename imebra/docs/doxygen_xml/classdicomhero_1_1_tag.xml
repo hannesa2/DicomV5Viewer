@@ -1,0 +1,636 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdicomhero_1_1_tag" kind="class" language="C++" prot="public">
+    <compoundname>dicomhero::Tag</compoundname>
+    <includes local="no">tag.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdicomhero_1_1_tag_1aef648af6c56fa8ee0738c93629e725dc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class DataSet</definition>
+        <argsstring></argsstring>
+        <name>DataSet</name>
+        <param>
+          <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="55" column="5" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdicomhero_1_1_tag_1a79d90ed14871742058b3fec89762ab41" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::shared_ptr&lt; dicomhero::implementation::data &gt; &amp;</type>
+        <definition>const std::shared_ptr&lt;dicomhero::implementation::data&gt;&amp; getTagImplementation</definition>
+        <argsstring>(const Tag &amp;tag)</argsstring>
+        <name>getTagImplementation</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref> &amp;</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="267" column="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdicomhero_1_1_tag_1a07c8b8d93739715639ddd4bb98376074" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; dicomhero::implementation::data &gt;</type>
+        <definition>std::shared_ptr&lt;dicomhero::implementation::data&gt; dicomhero::Tag::m_pData</definition>
+        <argsstring></argsstring>
+        <name>m_pData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="268" column="21" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1ad7c695a51aede70704e262212272b486" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::Tag::Tag</definition>
+        <argsstring>(const Tag &amp;source)</argsstring>
+        <name>Tag</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="64" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1ac49d6ccfc9b1cbfacb80e364a288df6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref> &amp;</type>
+        <definition>Tag&amp; dicomhero::Tag::operator=</definition>
+        <argsstring>(const Tag &amp;source)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="66" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1a6c63a6588c0e4179391449cf90ef6c91" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dicomhero::Tag::~Tag</definition>
+        <argsstring>()</argsstring>
+        <name>~Tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="68" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1affa90e70af4b7430145f5c87cee189ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref></type>
+        <definition>WritingDataHandler dicomhero::Tag::getWritingDataHandler</definition>
+        <argsstring>(size_t bufferId)</argsstring>
+        <name>getWritingDataHandler</name>
+        <param>
+          <type>size_t</type>
+          <declname>bufferId</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> object connected to a specific tag&apos;s buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the specified <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref> does not exist then it creates a new tag with the VR specified in the tagVR parameter</para>
+<para>The returned <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> is connected to a new buffer which is updated and stored in the tag when <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> is destroyed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the position where the new buffer has to be stored into the tag. The first buffer position is 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="classdicomhero_1_1_writing_data_handler" kindref="compound">WritingDataHandler</ref> object connected to a new <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>&apos;s buffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="84" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1af86ef6737fd06ab7fb553f871cb2a2b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref></type>
+        <definition>WritingDataHandlerNumeric dicomhero::Tag::getWritingDataHandlerNumeric</definition>
+        <argsstring>(size_t bufferId)</argsstring>
+        <name>getWritingDataHandlerNumeric</name>
+        <param>
+          <type>size_t</type>
+          <declname>bufferId</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a <ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref> object connected to the <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>&apos;s buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the tag&apos;s VR is not a numeric type then throws std::bad_cast.</para>
+<para>The returned <ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref> is connected to a new buffer which is updated and stored into the tag when <ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref> is destroyed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the position where the new buffer has to be stored in the tag. The first buffer position is 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref> object connected to a new <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>&apos;s buffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="100" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1ac72bcc306b05d9ae9fa210a6dc6a1c82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref></type>
+        <definition>WritingDataHandlerNumeric dicomhero::Tag::getWritingDataHandlerRaw</definition>
+        <argsstring>(size_t bufferId)</argsstring>
+        <name>getWritingDataHandlerRaw</name>
+        <param>
+          <type>size_t</type>
+          <declname>bufferId</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a <ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref> object connected to the <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>&apos;s raw data buffer (8 bit unsigned integers). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the tag&apos;s VR is not a numeric type then throws std::bad_cast.</para>
+<para>The returned <ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref> is connected to a new buffer which is updated and stored into the tag when <ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref> is destroyed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the position where the new buffer has to be stored in the tag. The first buffer position is 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="classdicomhero_1_1_writing_data_handler_numeric" kindref="compound">WritingDataHandlerNumeric</ref> object connected to a new <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>&apos;s buffer (the buffer contains raw data of 8 bit integers) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="117" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1a4e027e211f13922bdb2e24c600a7bb96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref></type>
+        <definition>StreamWriter dicomhero::Tag::getStreamWriter</definition>
+        <argsstring>(size_t bufferId)</argsstring>
+        <name>getStreamWriter</name>
+        <param>
+          <type>size_t</type>
+          <declname>bufferId</declname>
+        </param>
+        <briefdescription>
+<para>Get a <ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> connected to a buffer&apos;s data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the id of the buffer for which the <ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> is required. This parameter is usually 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_stream_writer" kindref="compound">StreamWriter</ref> connected to the buffer&apos;s data. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="126" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1a641088c8f3e73543a0bd9cff3ccef80a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        <definition>DataSet dicomhero::Tag::appendSequenceItem</definition>
+        <argsstring>()</argsstring>
+        <name>appendSequenceItem</name>
+        <briefdescription>
+<para>Append a sequence item into the <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Several sequence items can be nested one inside each other. When a sequence item is embedded into a <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>, then the tag will have a sequence VR (VR = SQ).</para>
+<para><simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref> representing the added sequence item </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="137" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1a94def557065c310a35f424fc70955bc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dicomhero::Tag::setStream</definition>
+        <argsstring>(size_t bufferId, FileStreamInput &amp;streamInput)</argsstring>
+        <name>setStream</name>
+        <param>
+          <type>size_t</type>
+          <declname>bufferId</declname>
+        </param>
+        <param>
+          <type><ref refid="classdicomhero_1_1_file_stream_input" kindref="compound">FileStreamInput</ref> &amp;</type>
+          <declname>streamInput</declname>
+        </param>
+        <briefdescription>
+<para>Set the tag&apos;s content to the content of a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The tag will just keep a reference to the file content.</para>
+<para>This is useful when embedding large objects into a dataset (e.g. a MPEG file acquired by the device).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the id of the buffer to which the content is added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>streamInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the file into which the tag&apos;s content is stored </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="150" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1af1e229b7b2fccc92a3106bd0f0f4df35" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t dicomhero::Tag::getBuffersCount</definition>
+        <argsstring>() const</argsstring>
+        <name>getBuffersCount</name>
+        <briefdescription>
+<para>Returns the number of buffers in the tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the number of buffers in the tag </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="157" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1a67413863c7fc3eb0e03a78fe227429c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dicomhero::Tag::bufferExists</definition>
+        <argsstring>(size_t bufferId) const</argsstring>
+        <name>bufferExists</name>
+        <param>
+          <type>size_t</type>
+          <declname>bufferId</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the specified buffer exists, otherwise it returns false. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the zero-based buffer&apos;s id the function has to check for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the buffer exists, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="167" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1a80a5183f122b8a416c5f08c3f2dc5f72" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t dicomhero::Tag::getBufferSize</definition>
+        <argsstring>(size_t bufferId) const</argsstring>
+        <name>getBufferSize</name>
+        <param>
+          <type>size_t</type>
+          <declname>bufferId</declname>
+        </param>
+        <briefdescription>
+<para>Returns the size of a buffer, in bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the buffer doesn&apos;t exist then throws <ref refid="classdicomhero_1_1_missing_buffer_error" kindref="compound">MissingBufferError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the zero-based buffer&apos;s id the function has to check for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the buffer&apos;s size in bytes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="178" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1a490ff60339f092893360227ef00322ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref></type>
+        <definition>ReadingDataHandler dicomhero::Tag::getReadingDataHandler</definition>
+        <argsstring>(size_t bufferId) const</argsstring>
+        <name>getReadingDataHandler</name>
+        <param>
+          <type>size_t</type>
+          <declname>bufferId</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> object connected to a specific buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the specified buffer does not exist then throws or <ref refid="classdicomhero_1_1_missing_buffer_error" kindref="compound">MissingBufferError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the buffer to connect to the <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> object. The first buffer has an Id = 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> object connected to the requested buffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="190" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1aa81aaa623d4872a7ff1b7700dddd4b81" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_reading_data_handler_numeric" kindref="compound">ReadingDataHandlerNumeric</ref></type>
+        <definition>ReadingDataHandlerNumeric dicomhero::Tag::getReadingDataHandlerNumeric</definition>
+        <argsstring>(size_t bufferId) const</argsstring>
+        <name>getReadingDataHandlerNumeric</name>
+        <param>
+          <type>size_t</type>
+          <declname>bufferId</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a <ref refid="classdicomhero_1_1_reading_data_handler_numeric" kindref="compound">ReadingDataHandlerNumeric</ref> object connected to the <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>&apos;s numeric buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the tag&apos;s VR is not a numeric type then throws std::bad_cast.</para>
+<para>If the specified <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref> does not contain the specified buffer then throws <ref refid="classdicomhero_1_1_missing_buffer_error" kindref="compound">MissingBufferError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the buffer to connect to the <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> object. The first buffer has an Id = 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="classdicomhero_1_1_reading_data_handler_numeric" kindref="compound">ReadingDataHandlerNumeric</ref> object connected to the <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>&apos;s buffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="205" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1ad51b2a61b8486b7bd4b817545b0fd1bc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_reading_data_handler_numeric" kindref="compound">ReadingDataHandlerNumeric</ref></type>
+        <definition>ReadingDataHandlerNumeric dicomhero::Tag::getReadingDataHandlerRaw</definition>
+        <argsstring>(size_t bufferId) const</argsstring>
+        <name>getReadingDataHandlerRaw</name>
+        <param>
+          <type>size_t</type>
+          <declname>bufferId</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a <ref refid="classdicomhero_1_1_reading_data_handler_numeric" kindref="compound">ReadingDataHandlerNumeric</ref> object connected to the <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>&apos;s raw data buffer (8 bit unsigned integers). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the tag&apos;s VR is not a numeric type then throws std::bad_cast.</para>
+<para>If the specified <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref> does not contain the specified buffer then throws <ref refid="classdicomhero_1_1_missing_buffer_error" kindref="compound">MissingBufferError</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the buffer to connect to the <ref refid="classdicomhero_1_1_reading_data_handler" kindref="compound">ReadingDataHandler</ref> object. The first buffer has an Id = 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="classdicomhero_1_1_reading_data_handler_numeric" kindref="compound">ReadingDataHandlerNumeric</ref> object connected to the <ref refid="classdicomhero_1_1_tag" kindref="compound">Tag</ref>&apos;s buffer (raw content represented by 8 bit unsigned integers) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="221" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1a487ed7dcc2d13e3338ac44ef29438e13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref></type>
+        <definition>StreamReader dicomhero::Tag::getStreamReader</definition>
+        <argsstring>(size_t bufferId) const</argsstring>
+        <name>getStreamReader</name>
+        <param>
+          <type>size_t</type>
+          <declname>bufferId</declname>
+        </param>
+        <briefdescription>
+<para>Get a <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> connected to a buffer&apos;s data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the id of the buffer for which the <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> is required. This parameter is usually 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the <ref refid="classdicomhero_1_1_stream_reader" kindref="compound">StreamReader</ref> connected to the buffer&apos;s data. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="230" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1a0145cbf4ebd2c33dee2d8bb4d90a402a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></type>
+        <definition>DataSet dicomhero::Tag::getSequenceItem</definition>
+        <argsstring>(size_t dataSetId) const</argsstring>
+        <name>getSequenceItem</name>
+        <param>
+          <type>size_t</type>
+          <declname>dataSetId</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve an embedded <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sequence tags (VR=SQ) store embedded dicom structures.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataSetId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ID of the sequence item to retrieve. Several sequence items can be embedded in one tag. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the sequence <ref refid="classdicomhero_1_1_data_set" kindref="compound">DataSet</ref></para>
+</simplesect>
+<simplesect kind="warning"><para>[REQ_CONST_COPY_DOCUMENTATION] the value returned by this method should not be modified and therefore should be assigned to a const qualified variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="245" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1a46569aaf6364f44f99a2fe20e8863f56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dicomhero::Tag::sequenceItemExists</definition>
+        <argsstring>(size_t dataSetId) const</argsstring>
+        <name>sequenceItemExists</name>
+        <param>
+          <type>size_t</type>
+          <declname>dataSetId</declname>
+        </param>
+        <briefdescription>
+<para>Check for the existance of a sequence item. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataSetId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ID of the sequence item to check for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the sequence item exists, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="253" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1a75ea106d0e1fc49a8b54fd3b57ca2a32" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="definitions_8h_1a68ed174f363e2d8f54f8e122040d03d1" kindref="member">tagVR_t</ref></type>
+        <definition>tagVR_t dicomhero::Tag::getDataType</definition>
+        <argsstring>() const</argsstring>
+        <name>getDataType</name>
+        <briefdescription>
+<para>Get the tag&apos;s data type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the tag&apos;s data type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="260" column="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdicomhero_1_1_tag_1a226121401bcfcd02bd6da12ff393913b" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dicomhero::Tag::Tag</definition>
+        <argsstring>(const std::shared_ptr&lt; dicomhero::implementation::data &gt; &amp;pData)</argsstring>
+        <name>Tag</name>
+        <param>
+          <type>const std::shared_ptr&lt; dicomhero::implementation::data &gt; &amp;</type>
+          <declname>pData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="264" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents an immutable DICOM tag. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" line="52" column="1" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/library/include/dicomhero6/tag.h" bodystart="53" bodyend="270"/>
+    <listofallmembers>
+      <member refid="classdicomhero_1_1_tag_1a641088c8f3e73543a0bd9cff3ccef80a" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>appendSequenceItem</name></member>
+      <member refid="classdicomhero_1_1_tag_1a67413863c7fc3eb0e03a78fe227429c8" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>bufferExists</name></member>
+      <member refid="classdicomhero_1_1_tag_1aef648af6c56fa8ee0738c93629e725dc" prot="private" virt="non-virtual"><scope>dicomhero::Tag</scope><name>DataSet</name></member>
+      <member refid="classdicomhero_1_1_tag_1af1e229b7b2fccc92a3106bd0f0f4df35" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>getBuffersCount</name></member>
+      <member refid="classdicomhero_1_1_tag_1a80a5183f122b8a416c5f08c3f2dc5f72" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>getBufferSize</name></member>
+      <member refid="classdicomhero_1_1_tag_1a75ea106d0e1fc49a8b54fd3b57ca2a32" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>getDataType</name></member>
+      <member refid="classdicomhero_1_1_tag_1a490ff60339f092893360227ef00322ec" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>getReadingDataHandler</name></member>
+      <member refid="classdicomhero_1_1_tag_1aa81aaa623d4872a7ff1b7700dddd4b81" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>getReadingDataHandlerNumeric</name></member>
+      <member refid="classdicomhero_1_1_tag_1ad51b2a61b8486b7bd4b817545b0fd1bc" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>getReadingDataHandlerRaw</name></member>
+      <member refid="classdicomhero_1_1_tag_1a0145cbf4ebd2c33dee2d8bb4d90a402a" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>getSequenceItem</name></member>
+      <member refid="classdicomhero_1_1_tag_1a487ed7dcc2d13e3338ac44ef29438e13" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>getStreamReader</name></member>
+      <member refid="classdicomhero_1_1_tag_1a4e027e211f13922bdb2e24c600a7bb96" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>getStreamWriter</name></member>
+      <member refid="classdicomhero_1_1_tag_1a79d90ed14871742058b3fec89762ab41" prot="private" virt="non-virtual"><scope>dicomhero::Tag</scope><name>getTagImplementation</name></member>
+      <member refid="classdicomhero_1_1_tag_1affa90e70af4b7430145f5c87cee189ae" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>getWritingDataHandler</name></member>
+      <member refid="classdicomhero_1_1_tag_1af86ef6737fd06ab7fb553f871cb2a2b6" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>getWritingDataHandlerNumeric</name></member>
+      <member refid="classdicomhero_1_1_tag_1ac72bcc306b05d9ae9fa210a6dc6a1c82" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>getWritingDataHandlerRaw</name></member>
+      <member refid="classdicomhero_1_1_tag_1a07c8b8d93739715639ddd4bb98376074" prot="private" virt="non-virtual"><scope>dicomhero::Tag</scope><name>m_pData</name></member>
+      <member refid="classdicomhero_1_1_tag_1ac49d6ccfc9b1cbfacb80e364a288df6a" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>operator=</name></member>
+      <member refid="classdicomhero_1_1_tag_1a46569aaf6364f44f99a2fe20e8863f56" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>sequenceItemExists</name></member>
+      <member refid="classdicomhero_1_1_tag_1a94def557065c310a35f424fc70955bc1" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>setStream</name></member>
+      <member refid="classdicomhero_1_1_tag_1ad7c695a51aede70704e262212272b486" prot="public" virt="non-virtual"><scope>dicomhero::Tag</scope><name>Tag</name></member>
+      <member refid="classdicomhero_1_1_tag_1a226121401bcfcd02bd6da12ff393913b" prot="protected" virt="non-virtual"><scope>dicomhero::Tag</scope><name>Tag</name></member>
+      <member refid="classdicomhero_1_1_tag_1a6c63a6588c0e4179391449cf90ef6c91" prot="public" virt="virtual"><scope>dicomhero::Tag</scope><name>~Tag</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

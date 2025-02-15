@@ -1,0 +1,719 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_dicomhero_dimse_service" kind="class" language="Objective-C" prot="public">
+    <compoundname>DicomheroDimseService</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes local="no">dicomhero_dimse.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="interface_dicomhero_dimse_service_1a60ef0221e2941dfa168e0cf16d3c3303" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DicomheroDimseService::m_DimseService</definition>
+        <argsstring></argsstring>
+        <name>m_DimseService</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="1275" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1a3cbd7710d2cc7725969c30a01a1e62fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id DicomheroDimseService::initWithAssociation:</definition>
+        <argsstring>(DicomheroAssociationBase *pAssociation)</argsstring>
+        <name>initWithAssociation:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_association_base" kindref="compound">DicomheroAssociationBase</ref> *</type>
+          <declname>pAssociation</declname>
+        </param>
+        <briefdescription>
+<para>Initializer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pAssociation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the AssociationBase derived class through which the DICOM commands and responses are sent and received </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1a8e1257a06bc42fdbf8a4ce8baa8891bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroDimseService::dealloc</definition>
+        <argsstring>()</argsstring>
+        <name>dealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1a3e74012528fdd57e19cce2a02c99ac8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString* DicomheroDimseService::getTransferSyntax:error:</definition>
+        <argsstring>(NSString *abstractSyntax,[error] NSError **pError)</argsstring>
+        <name>getTransferSyntax:error:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>abstractSyntax</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Returns the negotiated transfer syntax for a specific abstract syntax. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is multithread safe.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>abstractSyntax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the abstract syntax for which the transfer syntax is needed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the negotiated transfer syntax for the specified abstract syntax </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1a89cba6d75cdef2b02e88bdba583808bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short DicomheroDimseService::getNextCommandID</definition>
+        <argsstring>()</argsstring>
+        <name>getNextCommandID</name>
+        <briefdescription>
+<para>Retrieves an ID that can be used on the next command sent through this DimseService object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is multithread safe.</para>
+<para><simplesect kind="return"><para>an ID that can be used as command ID on a command sent through this DimseService object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1a3f440b371f8242d8361ae596428c4663" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_dimse_command" kindref="compound">DicomheroDimseCommand</ref> *</type>
+        <definition>DicomheroDimseCommand* DicomheroDimseService::getCommand:</definition>
+        <argsstring>(NSError **pError)</argsstring>
+        <name>getCommand:</name>
+        <param>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves the next incoming DICOM command. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The method blocks until the command is available or until the association is closed, either by the connected peer or by other means (e.g because of the DIMSE timeout), in which case the exception DicomheroStreamEOFError is set in pError.</para>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para>This method can be called by several threads at once: each thread will receive a DIMSE command and can reply to the command via sendCommandOrResponse().</para>
+<para>The underlying AssociationBase object will take care of limiting the number of incoming command according to the maximum number of performed operation negotiated for the association.</para>
+<para>Set pError to StreamEOFError if the association is closed while the method is waiting for an incoming command or response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the next incoming DICOM command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1a8e0d2c80981bb9823513d498381f390d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DicomheroDimseService::sendCommandOrResponse:error:</definition>
+        <argsstring>(DicomheroDimseCommandBase *pCommand,[error](swift_error(nonnull_error)) __attribute__)</argsstring>
+        <name>sendCommandOrResponse:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_dimse_command_base" kindref="compound">DicomheroDimseCommandBase</ref> *</type>
+          <declname>pCommand</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>(swift_error(nonnull_error))</type>
+          <declname>__attribute__</declname>
+        </param>
+        <briefdescription>
+<para>Sends a DICOM command or response through the association. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is multithread safe.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the command or response to send </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1a55abc8b9822198a3385a4afa6cf07fe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_c_store_response" kindref="compound">DicomheroCStoreResponse</ref> *</type>
+        <definition>DicomheroCStoreResponse* DicomheroDimseService::getCStoreResponse:error:</definition>
+        <argsstring>(DicomheroCStoreCommand *pCommand,[error] NSError **pError)</argsstring>
+        <name>getCStoreResponse:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_c_store_command" kindref="compound">DicomheroCStoreCommand</ref> *</type>
+          <declname>pCommand</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified C-STORE command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para>Set pError to StreamEOFError if the association is closed while the method is waiting for an incoming command or response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent C-CSTORE command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1af90e95fde1b387fcd4cb42ae234427f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_c_get_response" kindref="compound">DicomheroCGetResponse</ref> *</type>
+        <definition>DicomheroCGetResponse* DicomheroDimseService::getCGetResponse:error:</definition>
+        <argsstring>(DicomheroCGetCommand *pCommand,[error] NSError **pError)</argsstring>
+        <name>getCGetResponse:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_c_get_command" kindref="compound">DicomheroCGetCommand</ref> *</type>
+          <declname>pCommand</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified C-GET command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para>Set pError to StreamEOFError if the association is closed while the method is waiting for an incoming command or response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent C-GET command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1af7d9788556b8c9c1f07588135708eea7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_c_find_response" kindref="compound">DicomheroCFindResponse</ref> *</type>
+        <definition>DicomheroCFindResponse* DicomheroDimseService::getCFindResponse:error:</definition>
+        <argsstring>(DicomheroCFindCommand *pCommand,[error] NSError **pError)</argsstring>
+        <name>getCFindResponse:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_c_find_command" kindref="compound">DicomheroCFindCommand</ref> *</type>
+          <declname>pCommand</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified C-FIND command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para>Set pError to StreamEOFError if the association is closed while the method is waiting for an incoming command or response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent C-FIND command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1a92802890c225d07a4d9c08d46bcc1c5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_c_move_response" kindref="compound">DicomheroCMoveResponse</ref> *</type>
+        <definition>DicomheroCMoveResponse* DicomheroDimseService::getCMoveResponse:error:</definition>
+        <argsstring>(DicomheroCMoveCommand *pCommand,[error] NSError **pError)</argsstring>
+        <name>getCMoveResponse:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_c_move_command" kindref="compound">DicomheroCMoveCommand</ref> *</type>
+          <declname>pCommand</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified C-MOVE command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para>Set pError to StreamEOFError if the association is closed while the method is waiting for an incoming command or response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent C-MOVE command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1ad938c2d57cff5e8aefa4b67310bedcc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_c_echo_response" kindref="compound">DicomheroCEchoResponse</ref> *</type>
+        <definition>DicomheroCEchoResponse* DicomheroDimseService::getCEchoResponse:error:</definition>
+        <argsstring>(DicomheroCEchoCommand *pCommand,[error] NSError **pError)</argsstring>
+        <name>getCEchoResponse:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_c_echo_command" kindref="compound">DicomheroCEchoCommand</ref> *</type>
+          <declname>pCommand</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified C-ECHO command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para>Set pError to StreamEOFError if the association is closed while the method is waiting for an incoming command or response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent C-ECHO command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1aa95558410846e8c46aaa4d3c32cc0028" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_n_event_report_response" kindref="compound">DicomheroNEventReportResponse</ref> *</type>
+        <definition>DicomheroNEventReportResponse* DicomheroDimseService::getNEventReportResponse:error:</definition>
+        <argsstring>(DicomheroNEventReportCommand *pCommand,[error] NSError **pError)</argsstring>
+        <name>getNEventReportResponse:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_n_event_report_command" kindref="compound">DicomheroNEventReportCommand</ref> *</type>
+          <declname>pCommand</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified N-EVENT-REPORT command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para>Set pError to StreamEOFError if the association is closed while the method is waiting for an incoming command or response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent N-EVENT-REPORT command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1aa8bd72370b7f344f760a2b54783b5cfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_n_get_response" kindref="compound">DicomheroNGetResponse</ref> *</type>
+        <definition>DicomheroNGetResponse* DicomheroDimseService::getNGetResponse:error:</definition>
+        <argsstring>(DicomheroNGetCommand *pCommand,[error] NSError **pError)</argsstring>
+        <name>getNGetResponse:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_n_get_command" kindref="compound">DicomheroNGetCommand</ref> *</type>
+          <declname>pCommand</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified N-GET command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para>Set pError to StreamEOFError if the association is closed while the method is waiting for an incoming command or response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent N-GET command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1a69f18b9584d15b6f7ab8c7c629431d89" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_n_set_response" kindref="compound">DicomheroNSetResponse</ref> *</type>
+        <definition>DicomheroNSetResponse* DicomheroDimseService::getNSetResponse:error:</definition>
+        <argsstring>(DicomheroNSetCommand *pCommand,[error] NSError **pError)</argsstring>
+        <name>getNSetResponse:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_n_set_command" kindref="compound">DicomheroNSetCommand</ref> *</type>
+          <declname>pCommand</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified N-SET command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para>Set pError to StreamEOFError if the association is closed while the method is waiting for an incoming command or response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent N-SET command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1af229a6f815357f57eb0d9b37154da14d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_n_action_response" kindref="compound">DicomheroNActionResponse</ref> *</type>
+        <definition>DicomheroNActionResponse* DicomheroDimseService::getNActionResponse:error:</definition>
+        <argsstring>(DicomheroNActionCommand *pCommand,[error] NSError **pError)</argsstring>
+        <name>getNActionResponse:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_n_action_command" kindref="compound">DicomheroNActionCommand</ref> *</type>
+          <declname>pCommand</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified N-ACTION command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para>Set pError to StreamEOFError if the association is closed while the method is waiting for an incoming command or response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent N-ACTION command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1a4f5ce0ce4f61036697992814fd92c728" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_n_create_response" kindref="compound">DicomheroNCreateResponse</ref> *</type>
+        <definition>DicomheroNCreateResponse* DicomheroDimseService::getNCreateResponse:error:</definition>
+        <argsstring>(DicomheroNCreateCommand *pCommand,[error] NSError **pError)</argsstring>
+        <name>getNCreateResponse:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_n_create_command" kindref="compound">DicomheroNCreateCommand</ref> *</type>
+          <declname>pCommand</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified N-CREATE command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para>Set pError to StreamEOFError if the association is closed while the method is waiting for an incoming command or response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent N-CREATE command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_dicomhero_dimse_service_1a564998aeaa940c75f3fb51c66b123415" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="interface_dicomhero_n_delete_response" kindref="compound">DicomheroNDeleteResponse</ref> *</type>
+        <definition>DicomheroNDeleteResponse* DicomheroDimseService::getNDeleteResponse:error:</definition>
+        <argsstring>(DicomheroNDeleteCommand *pCommand,[error] NSError **pError)</argsstring>
+        <name>getNDeleteResponse:error:</name>
+        <param>
+          <type><ref refid="interface_dicomhero_n_delete_command" kindref="compound">DicomheroNDeleteCommand</ref> *</type>
+          <declname>pCommand</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+<para>Wait for the response for the specified N-DELETE command and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Other threads can wait for other commands or responses from the same DIMSE service. All the commands and responses are received by a secondary thread and distributed to all the listener waiting for a command or a response.</para>
+<para>Set pError to StreamEOFError if the association is closed while the method is waiting for an incoming command or response.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCommand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent N-DELETE command for which to wait for a response </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to a NSError derived class in case of error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the response for the specified command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1275" column="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Sends and receives DICOM commands and responses through an <ref refid="interface_dicomhero_association_s_c_u" kindref="compound">DicomheroAssociationSCU</ref> or an <ref refid="interface_dicomhero_association_s_c_p" kindref="compound">DicomheroAssociationSCP</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="interface_dicomhero_dimse_service" kindref="compound">DicomheroDimseService</ref> supplies <ref refid="interface_dicomhero_dimse_service_1a89cba6d75cdef2b02e88bdba583808bc" kindref="member">getNextCommandID (DicomheroDimseService)</ref> in order to obtain the ID for the commands sent through the <ref refid="interface_dicomhero_dimse_service" kindref="compound">DicomheroDimseService</ref> object. </para>
+    </detaileddescription>
+    <location file="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" line="1272" column="12" bodyfile="/opt/atlassian/pipelines/agent/build/dicomheroCore6/wrappers/objectivec/include/dicomhero6_objc/dicomhero_dimse.h" bodystart="1273" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_dicomhero_dimse_service_1a8e1257a06bc42fdbf8a4ce8baa8891bc" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>dealloc</name></member>
+      <member refid="interface_dicomhero_dimse_service_1ad938c2d57cff5e8aefa4b67310bedcc2" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>getCEchoResponse:error:</name></member>
+      <member refid="interface_dicomhero_dimse_service_1af7d9788556b8c9c1f07588135708eea7" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>getCFindResponse:error:</name></member>
+      <member refid="interface_dicomhero_dimse_service_1af90e95fde1b387fcd4cb42ae234427f3" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>getCGetResponse:error:</name></member>
+      <member refid="interface_dicomhero_dimse_service_1a92802890c225d07a4d9c08d46bcc1c5b" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>getCMoveResponse:error:</name></member>
+      <member refid="interface_dicomhero_dimse_service_1a3f440b371f8242d8361ae596428c4663" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>getCommand:</name></member>
+      <member refid="interface_dicomhero_dimse_service_1a55abc8b9822198a3385a4afa6cf07fe8" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>getCStoreResponse:error:</name></member>
+      <member refid="interface_dicomhero_dimse_service_1af229a6f815357f57eb0d9b37154da14d" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>getNActionResponse:error:</name></member>
+      <member refid="interface_dicomhero_dimse_service_1a4f5ce0ce4f61036697992814fd92c728" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>getNCreateResponse:error:</name></member>
+      <member refid="interface_dicomhero_dimse_service_1a564998aeaa940c75f3fb51c66b123415" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>getNDeleteResponse:error:</name></member>
+      <member refid="interface_dicomhero_dimse_service_1aa95558410846e8c46aaa4d3c32cc0028" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>getNEventReportResponse:error:</name></member>
+      <member refid="interface_dicomhero_dimse_service_1a89cba6d75cdef2b02e88bdba583808bc" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>getNextCommandID</name></member>
+      <member refid="interface_dicomhero_dimse_service_1aa8bd72370b7f344f760a2b54783b5cfb" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>getNGetResponse:error:</name></member>
+      <member refid="interface_dicomhero_dimse_service_1a69f18b9584d15b6f7ab8c7c629431d89" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>getNSetResponse:error:</name></member>
+      <member refid="interface_dicomhero_dimse_service_1a3e74012528fdd57e19cce2a02c99ac8a" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>getTransferSyntax:error:</name></member>
+      <member refid="interface_dicomhero_dimse_service_1a3cbd7710d2cc7725969c30a01a1e62fb" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>initWithAssociation:</name></member>
+      <member refid="interface_dicomhero_dimse_service_1a60ef0221e2941dfa168e0cf16d3c3303" prot="public" virt="non-virtual"><scope>DicomheroDimseService</scope><name>m_DimseService</name></member>
+      <member refid="interface_dicomhero_dimse_service_1a8e0d2c80981bb9823513d498381f390d" prot="public" virt="virtual"><scope>DicomheroDimseService</scope><name>sendCommandOrResponse:error:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
